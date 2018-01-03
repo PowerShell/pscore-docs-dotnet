@@ -1,0 +1,309 @@
+﻿<Type Name="CoreCommandBase" FullName="Microsoft.PowerShell.Commands.CoreCommandBase">
+  <TypeSignature Language="C#" Value="public abstract class CoreCommandBase : System.Management.Automation.PSCmdlet, System.Management.Automation.IDynamicParameters" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit CoreCommandBase extends System.Management.Automation.PSCmdlet implements class System.Management.Automation.IDynamicParameters" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.PowerShell.Commands.CoreCommandBase" />
+  <TypeSignature Language="VB.NET" Value="Public MustInherit Class CoreCommandBase&#xA;Inherits PSCmdlet&#xA;Implements IDynamicParameters" />
+  <TypeSignature Language="F#" Value="type CoreCommandBase = class&#xA;    inherit PSCmdlet&#xA;    interface IDynamicParameters" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.PowerShell.Commands.Management</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Management.Automation.PSCmdlet</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Management.Automation.IDynamicParameters</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>
+            The base command for the core commands.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected CoreCommandBase ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Commands.CoreCommandBase.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Protected Sub New ()" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Commands.Management</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DoesProviderSupportShouldProcess">
+      <MemberSignature Language="C#" Value="protected bool DoesProviderSupportShouldProcess (string[] paths);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance bool DoesProviderSupportShouldProcess(string[] paths) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Commands.CoreCommandBase.DoesProviderSupportShouldProcess(System.String[])" />
+      <MemberSignature Language="VB.NET" Value="Protected Function DoesProviderSupportShouldProcess (paths As String()) As Boolean" />
+      <MemberSignature Language="F#" Value="member this.DoesProviderSupportShouldProcess : string[] -&gt; bool" Usage="coreCommandBase.DoesProviderSupportShouldProcess paths" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Commands.Management</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="paths" Type="System.String[]" />
+      </Parameters>
+      <Docs>
+        <param name="paths">
+             The paths to check to see if the providers support ShouldProcess.
+             </param>
+        <summary>
+             A helper for derived classes to call to determine if the paths specified
+             are for a provider that supports ShouldProcess
+             </summary>
+        <returns>
+             If the paths are to different providers, and any don't support
+             ShouldProcess, then the return value is false. If they all
+             support ShouldProcess then the return value is true.
+             </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Exclude">
+      <MemberSignature Language="C#" Value="public virtual string[] Exclude { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string[] Exclude" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.CoreCommandBase.Exclude" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Property Exclude As String()" />
+      <MemberSignature Language="F#" Value="member this.Exclude : string[] with get, set" Usage="Microsoft.PowerShell.Commands.CoreCommandBase.Exclude" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Commands.Management</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+             Gets or sets the exclude property
+             </summary>
+        <value>To be added.</value>
+        <remarks>
+             This is meant to be overridden by derived classes if
+             they support the Exclude parameter. This property is on
+             the base class to simplify the creation of the CmdletProviderContext.
+             </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Filter">
+      <MemberSignature Language="C#" Value="public virtual string Filter { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Filter" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.CoreCommandBase.Filter" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Property Filter As String" />
+      <MemberSignature Language="F#" Value="member this.Filter : string with get, set" Usage="Microsoft.PowerShell.Commands.CoreCommandBase.Filter" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Commands.Management</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+             Gets or sets the filter property
+             </summary>
+        <value>To be added.</value>
+        <remarks>
+             This is meant to be overridden by derived classes if
+             they support the Filter parameter. This property is on
+             the base class to simplify the creation of the CmdletProviderContext.
+             </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Force">
+      <MemberSignature Language="C#" Value="public virtual System.Management.Automation.SwitchParameter Force { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Management.Automation.SwitchParameter Force" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.CoreCommandBase.Force" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Property Force As SwitchParameter" />
+      <MemberSignature Language="F#" Value="member this.Force : System.Management.Automation.SwitchParameter with get, set" Usage="Microsoft.PowerShell.Commands.CoreCommandBase.Force" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Commands.Management</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.SwitchParameter</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+             Gets or sets the force property
+             </summary>
+        <value>To be added.</value>
+        <remarks>
+             Gives the provider guidance on how vigorous it should be about performing
+             the operation. If true, the provider should do everything possible to perform
+             the operation. If false, the provider should attempt the operation but allow
+             even simple errors to terminate the operation.
+             For example, if the user tries to copy a file to a path that already exists and
+             the destination is read-only, if force is true, the provider should copy over
+             the existing read-only file. If force is false, the provider should write an error.
+            
+             This is meant to be overridden by derived classes if
+             they support the Force parameter. This property is on
+             the base class to simplify the creation of the CmdletProviderContext.
+             </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetDynamicParameters">
+      <MemberSignature Language="C#" Value="public object GetDynamicParameters ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object GetDynamicParameters() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Commands.CoreCommandBase.GetDynamicParameters" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetDynamicParameters () As Object" />
+      <MemberSignature Language="F#" Value="abstract member GetDynamicParameters : unit -&gt; obj&#xA;override this.GetDynamicParameters : unit -&gt; obj" Usage="coreCommandBase.GetDynamicParameters " />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.Management.Automation.IDynamicParameters.GetDynamicParameters</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Commands.Management</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+             Retrieves the dynamic parameters for the command from
+             the provider.
+             </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Include">
+      <MemberSignature Language="C#" Value="public virtual string[] Include { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string[] Include" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.CoreCommandBase.Include" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Property Include As String()" />
+      <MemberSignature Language="F#" Value="member this.Include : string[] with get, set" Usage="Microsoft.PowerShell.Commands.CoreCommandBase.Include" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Commands.Management</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+             Gets or sets the include property
+             </summary>
+        <value>To be added.</value>
+        <remarks>
+             This is meant to be overridden by derived classes if
+             they support the Include parameter. This property is on
+             the base class to simplify the creation of the CmdletProviderContext.
+             </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ProviderSupportsShouldProcess">
+      <MemberSignature Language="C#" Value="protected virtual bool ProviderSupportsShouldProcess { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ProviderSupportsShouldProcess" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.CoreCommandBase.ProviderSupportsShouldProcess" />
+      <MemberSignature Language="VB.NET" Value="Protected Overridable ReadOnly Property ProviderSupportsShouldProcess As Boolean" />
+      <MemberSignature Language="F#" Value="member this.ProviderSupportsShouldProcess : bool" Usage="Microsoft.PowerShell.Commands.CoreCommandBase.ProviderSupportsShouldProcess" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Commands.Management</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Called by the base implementation that checks the SupportShouldProcess provider
+            capability. This virtual method gives the
+            derived cmdlet a chance query the CmdletProvider capabilities to determine
+            if the provider supports ShouldProcess
+            </summary>
+        <value />
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RetrievedDynamicParameters">
+      <MemberSignature Language="C#" Value="protected internal object RetrievedDynamicParameters { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object RetrievedDynamicParameters" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.CoreCommandBase.RetrievedDynamicParameters" />
+      <MemberSignature Language="VB.NET" Value="Protected Friend ReadOnly Property RetrievedDynamicParameters As Object" />
+      <MemberSignature Language="F#" Value="member this.RetrievedDynamicParameters : obj" Usage="Microsoft.PowerShell.Commands.CoreCommandBase.RetrievedDynamicParameters" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Commands.Management</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+             The dynamic parameters which have already been retrieved from the provider
+             and bound by the command processor.
+             </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StopProcessing">
+      <MemberSignature Language="C#" Value="protected override void StopProcessing ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void StopProcessing() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Commands.CoreCommandBase.StopProcessing" />
+      <MemberSignature Language="VB.NET" Value="Protected Overrides Sub StopProcessing ()" />
+      <MemberSignature Language="F#" Value="override this.StopProcessing : unit -&gt; unit" Usage="coreCommandBase.StopProcessing " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Commands.Management</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+             Stops the processing of the provider by using the
+             CmdletProviderContext to tunnel the stop message to
+             the provider instance.
+             </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SupportsShouldProcess">
+      <MemberSignature Language="C#" Value="public bool SupportsShouldProcess { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool SupportsShouldProcess" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.CoreCommandBase.SupportsShouldProcess" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property SupportsShouldProcess As Boolean" />
+      <MemberSignature Language="F#" Value="member this.SupportsShouldProcess : bool" Usage="Microsoft.PowerShell.Commands.CoreCommandBase.SupportsShouldProcess" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Commands.Management</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+             Determines if the cmdlet and CmdletProvider supports ShouldProcess
+             </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

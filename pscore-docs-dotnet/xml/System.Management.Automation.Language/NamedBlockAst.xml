@@ -1,0 +1,178 @@
+﻿<Type Name="NamedBlockAst" FullName="System.Management.Automation.Language.NamedBlockAst">
+  <TypeSignature Language="C#" Value="public class NamedBlockAst : System.Management.Automation.Language.Ast" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit NamedBlockAst extends System.Management.Automation.Language.Ast" />
+  <TypeSignature Language="DocId" Value="T:System.Management.Automation.Language.NamedBlockAst" />
+  <TypeSignature Language="VB.NET" Value="Public Class NamedBlockAst&#xA;Inherits Ast" />
+  <TypeSignature Language="F#" Value="type NamedBlockAst = class&#xA;    inherit Ast" />
+  <AssemblyInfo>
+    <AssemblyName>System.Management.Automation</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Management.Automation.Language.Ast</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            The ast representing a begin, process, end, or dynamicparam block in a scriptblock.  This ast is used even
+            when the block is unnamed, in which case the block is either an end block (for functions) or process block (for filters).
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public NamedBlockAst (System.Management.Automation.Language.IScriptExtent extent, System.Management.Automation.Language.TokenKind blockName, System.Management.Automation.Language.StatementBlockAst statementBlock, bool unnamed);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Management.Automation.Language.IScriptExtent extent, valuetype System.Management.Automation.Language.TokenKind blockName, class System.Management.Automation.Language.StatementBlockAst statementBlock, bool unnamed) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Language.NamedBlockAst.#ctor(System.Management.Automation.Language.IScriptExtent,System.Management.Automation.Language.TokenKind,System.Management.Automation.Language.StatementBlockAst,System.Boolean)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (extent As IScriptExtent, blockName As TokenKind, statementBlock As StatementBlockAst, unnamed As Boolean)" />
+      <MemberSignature Language="F#" Value="new System.Management.Automation.Language.NamedBlockAst : System.Management.Automation.Language.IScriptExtent * System.Management.Automation.Language.TokenKind * System.Management.Automation.Language.StatementBlockAst * bool -&gt; System.Management.Automation.Language.NamedBlockAst" Usage="new System.Management.Automation.Language.NamedBlockAst (extent, blockName, statementBlock, unnamed)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="extent" Type="System.Management.Automation.Language.IScriptExtent" />
+        <Parameter Name="blockName" Type="System.Management.Automation.Language.TokenKind" />
+        <Parameter Name="statementBlock" Type="System.Management.Automation.Language.StatementBlockAst" />
+        <Parameter Name="unnamed" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="extent">
+            The extent of the block.  If <paramref name="unnamed" /> is false, the extent includes
+            the keyword through the closing curly, otherwise the extent is the as the extent of <paramref name="statementBlock" />.
+            </param>
+        <param name="blockName">
+            The kind of block, must be one of:
+            <list type="bullet"><item><see cref="F:System.Management.Automation.Language.TokenKind.Begin" /></item><item><see cref="F:System.Management.Automation.Language.TokenKind.Process" /></item><item><see cref="F:System.Management.Automation.Language.TokenKind.End" /></item><item><see cref="F:System.Management.Automation.Language.TokenKind.Dynamicparam" /></item></list></param>
+        <param name="statementBlock">The ast for the statements in this named block.</param>
+        <param name="unnamed">True if the block was not explicitly named.</param>
+        <summary>
+            Construct the ast for a begin, process, end, or dynamic param block.
+            </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.Management.Automation.PSArgumentNullException">
+            If <paramref name="extent" /> or <paramref name="statementBlock" /> is null.
+            </exception>
+        <exception cref="T:System.Management.Automation.PSArgumentException">
+            If <paramref name="blockName" /> is not one of the valid kinds for a named block,
+            or if <paramref name="unnamed" /> is <c>true</c> and <paramref name="blockName" /> is neither
+            <see cref="F:System.Management.Automation.Language.TokenKind.Process" /> nor <see cref="F:System.Management.Automation.Language.TokenKind.End" />.
+            </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="BlockKind">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.Language.TokenKind BlockKind { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Management.Automation.Language.TokenKind BlockKind" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.Language.NamedBlockAst.BlockKind" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property BlockKind As TokenKind" />
+      <MemberSignature Language="F#" Value="member this.BlockKind : System.Management.Automation.Language.TokenKind" Usage="System.Management.Automation.Language.NamedBlockAst.BlockKind" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.Language.TokenKind</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The kind of block, always one of:
+            <list type="bullet"><item><see cref="F:System.Management.Automation.Language.TokenKind.Begin" /></item><item><see cref="F:System.Management.Automation.Language.TokenKind.Process" /></item><item><see cref="F:System.Management.Automation.Language.TokenKind.End" /></item><item><see cref="F:System.Management.Automation.Language.TokenKind.Dynamicparam" /></item></list></summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Copy">
+      <MemberSignature Language="C#" Value="public override System.Management.Automation.Language.Ast Copy ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Management.Automation.Language.Ast Copy() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Language.NamedBlockAst.Copy" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Function Copy () As Ast" />
+      <MemberSignature Language="F#" Value="override this.Copy : unit -&gt; System.Management.Automation.Language.Ast" Usage="namedBlockAst.Copy " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.Language.Ast</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Copy the NamedBlockAst instance
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Statements">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.ReadOnlyCollection&lt;System.Management.Automation.Language.StatementAst&gt; Statements { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ObjectModel.ReadOnlyCollection`1&lt;class System.Management.Automation.Language.StatementAst&gt; Statements" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.Language.NamedBlockAst.Statements" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Statements As ReadOnlyCollection(Of StatementAst)" />
+      <MemberSignature Language="F#" Value="member this.Statements : System.Collections.ObjectModel.ReadOnlyCollection&lt;System.Management.Automation.Language.StatementAst&gt;" Usage="System.Management.Automation.Language.NamedBlockAst.Statements" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.ReadOnlyCollection&lt;System.Management.Automation.Language.StatementAst&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The asts for all of the statements represented by this statement block.  This property is never null.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Traps">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.ReadOnlyCollection&lt;System.Management.Automation.Language.TrapStatementAst&gt; Traps { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ObjectModel.ReadOnlyCollection`1&lt;class System.Management.Automation.Language.TrapStatementAst&gt; Traps" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.Language.NamedBlockAst.Traps" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Traps As ReadOnlyCollection(Of TrapStatementAst)" />
+      <MemberSignature Language="F#" Value="member this.Traps : System.Collections.ObjectModel.ReadOnlyCollection&lt;System.Management.Automation.Language.TrapStatementAst&gt;" Usage="System.Management.Automation.Language.NamedBlockAst.Traps" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.ReadOnlyCollection&lt;System.Management.Automation.Language.TrapStatementAst&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The asts for all of the trap statements specified by this statement block, or null if no trap statements were
+            specified in this block.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Unnamed">
+      <MemberSignature Language="C#" Value="public bool Unnamed { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Unnamed" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.Language.NamedBlockAst.Unnamed" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Unnamed As Boolean" />
+      <MemberSignature Language="F#" Value="member this.Unnamed : bool" Usage="System.Management.Automation.Language.NamedBlockAst.Unnamed" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            For a function/filter that did not explicitly name the end/process block (which is quite common),
+            this property will return true.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

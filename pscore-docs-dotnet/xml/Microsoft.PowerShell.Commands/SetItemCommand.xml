@@ -1,0 +1,317 @@
+﻿<Type Name="SetItemCommand" FullName="Microsoft.PowerShell.Commands.SetItemCommand">
+  <TypeSignature Language="C#" Value="public class SetItemCommand : Microsoft.PowerShell.Commands.CoreCommandWithCredentialsBase" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit SetItemCommand extends Microsoft.PowerShell.Commands.CoreCommandWithCredentialsBase" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.PowerShell.Commands.SetItemCommand" />
+  <TypeSignature Language="VB.NET" Value="Public Class SetItemCommand&#xA;Inherits CoreCommandWithCredentialsBase" />
+  <TypeSignature Language="F#" Value="type SetItemCommand = class&#xA;    inherit CoreCommandWithCredentialsBase" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.PowerShell.Commands.Management</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Microsoft.PowerShell.Commands.CoreCommandWithCredentialsBase</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Management.Automation.Cmdlet("Set", "Item", DefaultParameterSetName="Path", HelpUri="https://go.microsoft.com/fwlink/?LinkID=113395", SupportsShouldProcess=true, SupportsTransactions=true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>
+            Sets the specified item using the namespace providers.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SetItemCommand ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Commands.SetItemCommand.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New ()" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Commands.Management</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Exclude">
+      <MemberSignature Language="C#" Value="public override string[] Exclude { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string[] Exclude" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.SetItemCommand.Exclude" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Property Exclude As String()" />
+      <MemberSignature Language="F#" Value="member this.Exclude : string[] with get, set" Usage="Microsoft.PowerShell.Commands.SetItemCommand.Exclude" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Commands.Management</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets the exclude property
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Filter">
+      <MemberSignature Language="C#" Value="public override string Filter { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Filter" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.SetItemCommand.Filter" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Property Filter As String" />
+      <MemberSignature Language="F#" Value="member this.Filter : string with get, set" Usage="Microsoft.PowerShell.Commands.SetItemCommand.Filter" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Commands.Management</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets the filter property
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Force">
+      <MemberSignature Language="C#" Value="public override System.Management.Automation.SwitchParameter Force { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Management.Automation.SwitchParameter Force" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.SetItemCommand.Force" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Property Force As SwitchParameter" />
+      <MemberSignature Language="F#" Value="member this.Force : System.Management.Automation.SwitchParameter with get, set" Usage="Microsoft.PowerShell.Commands.SetItemCommand.Force" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Commands.Management</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.SwitchParameter</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+             Gets or sets the force property
+             </summary>
+        <value>To be added.</value>
+        <remarks>
+             Gives the provider guidance on how vigorous it should be about performing
+             the operation. If true, the provider should do everything possible to perform
+             the operation. If false, the provider should attempt the operation but allow
+             even simple errors to terminate the operation.
+             For example, if the user tries to copy a file to a path that already exists and
+             the destination is read-only, if force is true, the provider should copy over
+             the existing read-only file. If force is false, the provider should write an error.
+             </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Include">
+      <MemberSignature Language="C#" Value="public override string[] Include { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string[] Include" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.SetItemCommand.Include" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Property Include As String()" />
+      <MemberSignature Language="F#" Value="member this.Include : string[] with get, set" Usage="Microsoft.PowerShell.Commands.SetItemCommand.Include" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Commands.Management</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets the include property
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LiteralPath">
+      <MemberSignature Language="C#" Value="public string[] LiteralPath { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string[] LiteralPath" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.SetItemCommand.LiteralPath" />
+      <MemberSignature Language="VB.NET" Value="Public Property LiteralPath As String()" />
+      <MemberSignature Language="F#" Value="member this.LiteralPath : string[] with get, set" Usage="Microsoft.PowerShell.Commands.SetItemCommand.LiteralPath" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Commands.Management</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Alias(Mono.Cecil.CustomAttributeArgument[])</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(Mandatory=true, ParameterSetName="LiteralPath", ValueFromPipeline=false, ValueFromPipelineByPropertyName=true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets the literal path parameter to the command
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PassThru">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.SwitchParameter PassThru { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Management.Automation.SwitchParameter PassThru" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.SetItemCommand.PassThru" />
+      <MemberSignature Language="VB.NET" Value="Public Property PassThru As SwitchParameter" />
+      <MemberSignature Language="F#" Value="member this.PassThru : System.Management.Automation.SwitchParameter with get, set" Usage="Microsoft.PowerShell.Commands.SetItemCommand.PassThru" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Commands.Management</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.SwitchParameter</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+             Gets or sets the pass through property which determines
+             if the object that is set should be written to the pipeline.
+             Defaults to false.
+             </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Path">
+      <MemberSignature Language="C#" Value="public string[] Path { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string[] Path" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.SetItemCommand.Path" />
+      <MemberSignature Language="VB.NET" Value="Public Property Path As String()" />
+      <MemberSignature Language="F#" Value="member this.Path : string[] with get, set" Usage="Microsoft.PowerShell.Commands.SetItemCommand.Path" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Commands.Management</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(Mandatory=true, ParameterSetName="Path", Position=0, ValueFromPipelineByPropertyName=true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets the path to item to set.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ProcessRecord">
+      <MemberSignature Language="C#" Value="protected override void ProcessRecord ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void ProcessRecord() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Commands.SetItemCommand.ProcessRecord" />
+      <MemberSignature Language="VB.NET" Value="Protected Overrides Sub ProcessRecord ()" />
+      <MemberSignature Language="F#" Value="override this.ProcessRecord : unit -&gt; unit" Usage="setItemCommand.ProcessRecord " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Commands.Management</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Sets the specified item.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ProviderSupportsShouldProcess">
+      <MemberSignature Language="C#" Value="protected override bool ProviderSupportsShouldProcess { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ProviderSupportsShouldProcess" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.SetItemCommand.ProviderSupportsShouldProcess" />
+      <MemberSignature Language="VB.NET" Value="Protected Overrides ReadOnly Property ProviderSupportsShouldProcess As Boolean" />
+      <MemberSignature Language="F#" Value="member this.ProviderSupportsShouldProcess : bool" Usage="Microsoft.PowerShell.Commands.SetItemCommand.ProviderSupportsShouldProcess" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Commands.Management</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Determines if the provider for the specified path supports ShouldProcess
+            </summary>
+        <value />
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Value">
+      <MemberSignature Language="C#" Value="public object Value { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object Value" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.SetItemCommand.Value" />
+      <MemberSignature Language="VB.NET" Value="Public Property Value As Object" />
+      <MemberSignature Language="F#" Value="member this.Value : obj with get, set" Usage="Microsoft.PowerShell.Commands.SetItemCommand.Value" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Commands.Management</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(Position=1, ValueFromPipeline=true, ValueFromPipelineByPropertyName=true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets the value of the item to be set
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

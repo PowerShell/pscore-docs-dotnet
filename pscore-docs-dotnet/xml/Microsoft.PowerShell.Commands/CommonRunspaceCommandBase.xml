@@ -1,0 +1,403 @@
+﻿<Type Name="CommonRunspaceCommandBase" FullName="Microsoft.PowerShell.Commands.CommonRunspaceCommandBase">
+  <TypeSignature Language="C#" Value="public abstract class CommonRunspaceCommandBase : System.Management.Automation.PSCmdlet" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit CommonRunspaceCommandBase extends System.Management.Automation.PSCmdlet" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.PowerShell.Commands.CommonRunspaceCommandBase" />
+  <TypeSignature Language="VB.NET" Value="Public MustInherit Class CommonRunspaceCommandBase&#xA;Inherits PSCmdlet" />
+  <TypeSignature Language="F#" Value="type CommonRunspaceCommandBase = class&#xA;    inherit PSCmdlet" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.PowerShell.Commands.Utility</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Management.Automation.PSCmdlet</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Abstract class that defines common Runspace Command parameters.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected CommonRunspaceCommandBase ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Commands.CommonRunspaceCommandBase.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Protected Sub New ()" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Commands.Utility</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AppDomainName">
+      <MemberSignature Language="C#" Value="public string[] AppDomainName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string[] AppDomainName" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.CommonRunspaceCommandBase.AppDomainName" />
+      <MemberSignature Language="VB.NET" Value="Public Property AppDomainName As String()" />
+      <MemberSignature Language="F#" Value="member this.AppDomainName : string[] with get, set" Usage="Microsoft.PowerShell.Commands.CommonRunspaceCommandBase.AppDomainName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Commands.Utility</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="ProcessNameParameterSet", Position=1)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.ValidateNotNullOrEmpty</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or Sets the AppDomain Names for which runspace debugging has to be enabled or disabled.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetDebuggerFromRunspace">
+      <MemberSignature Language="C#" Value="protected System.Management.Automation.Debugger GetDebuggerFromRunspace (System.Management.Automation.Runspaces.Runspace runspace);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance class System.Management.Automation.Debugger GetDebuggerFromRunspace(class System.Management.Automation.Runspaces.Runspace runspace) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Commands.CommonRunspaceCommandBase.GetDebuggerFromRunspace(System.Management.Automation.Runspaces.Runspace)" />
+      <MemberSignature Language="F#" Value="member this.GetDebuggerFromRunspace : System.Management.Automation.Runspaces.Runspace -&gt; System.Management.Automation.Debugger" Usage="commonRunspaceCommandBase.GetDebuggerFromRunspace runspace" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Commands.Utility</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.Debugger</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="runspace" Type="System.Management.Automation.Runspaces.Runspace" />
+      </Parameters>
+      <Docs>
+        <param name="runspace">Runspace</param>
+        <summary>
+            Returns Runspace Debugger
+            </summary>
+        <returns>Debugger</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetRunspaces">
+      <MemberSignature Language="C#" Value="protected System.Collections.Generic.IReadOnlyList&lt;System.Management.Automation.Runspaces.Runspace&gt; GetRunspaces ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance class System.Collections.Generic.IReadOnlyList`1&lt;class System.Management.Automation.Runspaces.Runspace&gt; GetRunspaces() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Commands.CommonRunspaceCommandBase.GetRunspaces" />
+      <MemberSignature Language="VB.NET" Value="Protected Function GetRunspaces () As IReadOnlyList(Of Runspace)" />
+      <MemberSignature Language="F#" Value="member this.GetRunspaces : unit -&gt; System.Collections.Generic.IReadOnlyList&lt;System.Management.Automation.Runspaces.Runspace&gt;" Usage="commonRunspaceCommandBase.GetRunspaces " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Commands.Utility</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IReadOnlyList&lt;System.Management.Automation.Runspaces.Runspace&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Returns a list of valid runspaces based on current parameter set.
+            </summary>
+        <returns>IReadOnlyList</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ProcessName">
+      <MemberSignature Language="C#" Value="public string ProcessName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ProcessName" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.CommonRunspaceCommandBase.ProcessName" />
+      <MemberSignature Language="VB.NET" Value="Public Property ProcessName As String" />
+      <MemberSignature Language="F#" Value="member this.ProcessName : string with get, set" Usage="Microsoft.PowerShell.Commands.CommonRunspaceCommandBase.ProcessName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Commands.Utility</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="ProcessNameParameterSet", Position=0)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.ValidateNotNullOrEmpty</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or Sets the ProcessName for which runspace debugging has to be enabled or disabled.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ProcessNameParameterSet">
+      <MemberSignature Language="C#" Value="protected const string ProcessNameParameterSet;" />
+      <MemberSignature Language="ILAsm" Value=".field family static literal string ProcessNameParameterSet" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.PowerShell.Commands.CommonRunspaceCommandBase.ProcessNameParameterSet" />
+      <MemberSignature Language="VB.NET" Value="Protected Const ProcessNameParameterSet As String " />
+      <MemberSignature Language="F#" Value="val mutable ProcessNameParameterSet : string" Usage="Microsoft.PowerShell.Commands.CommonRunspaceCommandBase.ProcessNameParameterSet" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Commands.Utility</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            ProcessNameParameterSet
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Runspace">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.Runspaces.Runspace[] Runspace { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Management.Automation.Runspaces.Runspace[] Runspace" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.CommonRunspaceCommandBase.Runspace" />
+      <MemberSignature Language="VB.NET" Value="Public Property Runspace As Runspace()" />
+      <MemberSignature Language="F#" Value="member this.Runspace : System.Management.Automation.Runspaces.Runspace[] with get, set" Usage="Microsoft.PowerShell.Commands.CommonRunspaceCommandBase.Runspace" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Commands.Utility</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(Mandatory=true, ParameterSetName="RunspaceParameterSet", Position=0, ValueFromPipeline=true, ValueFromPipelineByPropertyName=true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.ValidateNotNullOrEmpty</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.Runspaces.Runspace[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Runspace
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RunspaceId">
+      <MemberSignature Language="C#" Value="public int[] RunspaceId { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32[] RunspaceId" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.CommonRunspaceCommandBase.RunspaceId" />
+      <MemberSignature Language="VB.NET" Value="Public Property RunspaceId As Integer()" />
+      <MemberSignature Language="F#" Value="member this.RunspaceId : int[] with get, set" Usage="Microsoft.PowerShell.Commands.CommonRunspaceCommandBase.RunspaceId" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Commands.Utility</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(Mandatory=true, ParameterSetName="RunspaceIdParameterSet", Position=0)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.ValidateNotNullOrEmpty</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Runspace Id
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RunspaceIdParameterSet">
+      <MemberSignature Language="C#" Value="protected const string RunspaceIdParameterSet;" />
+      <MemberSignature Language="ILAsm" Value=".field family static literal string RunspaceIdParameterSet" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.PowerShell.Commands.CommonRunspaceCommandBase.RunspaceIdParameterSet" />
+      <MemberSignature Language="VB.NET" Value="Protected Const RunspaceIdParameterSet As String " />
+      <MemberSignature Language="F#" Value="val mutable RunspaceIdParameterSet : string" Usage="Microsoft.PowerShell.Commands.CommonRunspaceCommandBase.RunspaceIdParameterSet" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Commands.Utility</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            RunspaceIdParameterSet
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RunspaceInstanceId">
+      <MemberSignature Language="C#" Value="public Guid[] RunspaceInstanceId { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Guid[] RunspaceInstanceId" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.CommonRunspaceCommandBase.RunspaceInstanceId" />
+      <MemberSignature Language="VB.NET" Value="Public Property RunspaceInstanceId As Guid()" />
+      <MemberSignature Language="F#" Value="member this.RunspaceInstanceId : Guid[] with get, set" Usage="Microsoft.PowerShell.Commands.CommonRunspaceCommandBase.RunspaceInstanceId" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Commands.Utility</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(Mandatory=true, ParameterSetName="RunspaceInstanceIdParameterSet", Position=0)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.ValidateNotNullOrEmpty</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Guid[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            RunspaceInstanceId
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RunspaceInstanceIdParameterSet">
+      <MemberSignature Language="C#" Value="protected const string RunspaceInstanceIdParameterSet;" />
+      <MemberSignature Language="ILAsm" Value=".field family static literal string RunspaceInstanceIdParameterSet" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.PowerShell.Commands.CommonRunspaceCommandBase.RunspaceInstanceIdParameterSet" />
+      <MemberSignature Language="VB.NET" Value="Protected Const RunspaceInstanceIdParameterSet As String " />
+      <MemberSignature Language="F#" Value="val mutable RunspaceInstanceIdParameterSet : string" Usage="Microsoft.PowerShell.Commands.CommonRunspaceCommandBase.RunspaceInstanceIdParameterSet" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Commands.Utility</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            RunspaceInstanceIdParameterSet
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RunspaceName">
+      <MemberSignature Language="C#" Value="public string[] RunspaceName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string[] RunspaceName" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.CommonRunspaceCommandBase.RunspaceName" />
+      <MemberSignature Language="VB.NET" Value="Public Property RunspaceName As String()" />
+      <MemberSignature Language="F#" Value="member this.RunspaceName : string[] with get, set" Usage="Microsoft.PowerShell.Commands.CommonRunspaceCommandBase.RunspaceName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Commands.Utility</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="RunspaceNameParameterSet", Position=0)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.ValidateNotNullOrEmpty</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Runspace Name
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RunspaceNameParameterSet">
+      <MemberSignature Language="C#" Value="protected const string RunspaceNameParameterSet;" />
+      <MemberSignature Language="ILAsm" Value=".field family static literal string RunspaceNameParameterSet" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.PowerShell.Commands.CommonRunspaceCommandBase.RunspaceNameParameterSet" />
+      <MemberSignature Language="VB.NET" Value="Protected Const RunspaceNameParameterSet As String " />
+      <MemberSignature Language="F#" Value="val mutable RunspaceNameParameterSet : string" Usage="Microsoft.PowerShell.Commands.CommonRunspaceCommandBase.RunspaceNameParameterSet" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Commands.Utility</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            RunspaceNameParameterSet
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RunspaceParameterSet">
+      <MemberSignature Language="C#" Value="protected const string RunspaceParameterSet;" />
+      <MemberSignature Language="ILAsm" Value=".field family static literal string RunspaceParameterSet" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.PowerShell.Commands.CommonRunspaceCommandBase.RunspaceParameterSet" />
+      <MemberSignature Language="VB.NET" Value="Protected Const RunspaceParameterSet As String " />
+      <MemberSignature Language="F#" Value="val mutable RunspaceParameterSet : string" Usage="Microsoft.PowerShell.Commands.CommonRunspaceCommandBase.RunspaceParameterSet" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Commands.Utility</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            RunspaceParameterSet
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetDebugPreferenceHelper">
+      <MemberSignature Language="C#" Value="protected void SetDebugPreferenceHelper (string processName, string[] appDomainName, bool enable, string fullyQualifiedErrorId);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void SetDebugPreferenceHelper(string processName, string[] appDomainName, bool enable, string fullyQualifiedErrorId) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Commands.CommonRunspaceCommandBase.SetDebugPreferenceHelper(System.String,System.String[],System.Boolean,System.String)" />
+      <MemberSignature Language="VB.NET" Value="Protected Sub SetDebugPreferenceHelper (processName As String, appDomainName As String(), enable As Boolean, fullyQualifiedErrorId As String)" />
+      <MemberSignature Language="F#" Value="member this.SetDebugPreferenceHelper : string * string[] * bool * string -&gt; unit" Usage="commonRunspaceCommandBase.SetDebugPreferenceHelper (processName, appDomainName, enable, fullyQualifiedErrorId)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Commands.Utility</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="processName" Type="System.String" />
+        <Parameter Name="appDomainName" Type="System.String[]" />
+        <Parameter Name="enable" Type="System.Boolean" />
+        <Parameter Name="fullyQualifiedErrorId" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="processName">Process Name</param>
+        <param name="appDomainName">App Domain Name</param>
+        <param name="enable">Indicates if debug preference has to be enabled or disabled.</param>
+        <param name="fullyQualifiedErrorId">FullyQualifiedErrorId to be used on error.</param>
+        <summary>
+            SetDebugPreferenceHelper is a helper method used to enable/disable debug preference.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,245 @@
+﻿<Type Name="SetAclCommand" FullName="Microsoft.PowerShell.Commands.SetAclCommand">
+  <TypeSignature Language="C#" Value="public sealed class SetAclCommand : Microsoft.PowerShell.Commands.SecurityDescriptorCommandsBase" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit SetAclCommand extends Microsoft.PowerShell.Commands.SecurityDescriptorCommandsBase" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.PowerShell.Commands.SetAclCommand" />
+  <TypeSignature Language="VB.NET" Value="Public NotInheritable Class SetAclCommand&#xA;Inherits SecurityDescriptorCommandsBase" />
+  <TypeSignature Language="F#" Value="type SetAclCommand = class&#xA;    inherit SecurityDescriptorCommandsBase" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.PowerShell.Security</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Microsoft.PowerShell.Commands.SecurityDescriptorCommandsBase</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Management.Automation.Cmdlet("Set", "Acl", DefaultParameterSetName="ByPath", HelpUri="https://go.microsoft.com/fwlink/?LinkID=113389", SupportsShouldProcess=true, SupportsTransactions=true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>
+            Defines the implementation of the 'set-acl' cmdlet.
+            This cmdlet sets the security descriptor of an item at the specified path.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SetAclCommand ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Commands.SetAclCommand.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New ()" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Security</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AclObject">
+      <MemberSignature Language="C#" Value="public object AclObject { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object AclObject" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.SetAclCommand.AclObject" />
+      <MemberSignature Language="VB.NET" Value="Public Property AclObject As Object" />
+      <MemberSignature Language="F#" Value="member this.AclObject : obj with get, set" Usage="Microsoft.PowerShell.Commands.SetAclCommand.AclObject" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Security</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(Mandatory=true, ParameterSetName="ByPath", Position=1, ValueFromPipeline=true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(Mandatory=true, ParameterSetName="ByLiteralPath", Position=1, ValueFromPipeline=true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(Mandatory=true, ParameterSetName="ByInputObject", Position=1, ValueFromPipeline=true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets the security descriptor object to be
+            set on the target item(s).
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ClearCentralAccessPolicy">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.SwitchParameter ClearCentralAccessPolicy { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Management.Automation.SwitchParameter ClearCentralAccessPolicy" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.SetAclCommand.ClearCentralAccessPolicy" />
+      <MemberSignature Language="VB.NET" Value="Public Property ClearCentralAccessPolicy As SwitchParameter" />
+      <MemberSignature Language="F#" Value="member this.ClearCentralAccessPolicy : System.Management.Automation.SwitchParameter with get, set" Usage="Microsoft.PowerShell.Commands.SetAclCommand.ClearCentralAccessPolicy" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Security</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(Mandatory=false, ParameterSetName="ByPath")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(Mandatory=false, ParameterSetName="ByLiteralPath")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.SwitchParameter</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Clears the central access policy applied on the target item(s).
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InputObject">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.PSObject InputObject { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Management.Automation.PSObject InputObject" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.SetAclCommand.InputObject" />
+      <MemberSignature Language="VB.NET" Value="Public Property InputObject As PSObject" />
+      <MemberSignature Language="F#" Value="member this.InputObject : System.Management.Automation.PSObject with get, set" Usage="Microsoft.PowerShell.Commands.SetAclCommand.InputObject" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Security</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(Mandatory=true, ParameterSetName="ByInputObject", Position=0, ValueFromPipelineByPropertyName=true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.PSObject</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            InputObject Parameter
+            Gets or sets the inputObject for which to set the security descriptor
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LiteralPath">
+      <MemberSignature Language="C#" Value="public string[] LiteralPath { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string[] LiteralPath" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.SetAclCommand.LiteralPath" />
+      <MemberSignature Language="VB.NET" Value="Public Property LiteralPath As String()" />
+      <MemberSignature Language="F#" Value="member this.LiteralPath : string[] with get, set" Usage="Microsoft.PowerShell.Commands.SetAclCommand.LiteralPath" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Security</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Alias(Mono.Cecil.CustomAttributeArgument[])</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(Mandatory=true, ParameterSetName="ByLiteralPath", ValueFromPipelineByPropertyName=true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets the literal path of the item for which to set the
+            security descriptor.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Passthru">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.SwitchParameter Passthru { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Management.Automation.SwitchParameter Passthru" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.SetAclCommand.Passthru" />
+      <MemberSignature Language="VB.NET" Value="Public Property Passthru As SwitchParameter" />
+      <MemberSignature Language="F#" Value="member this.Passthru : System.Management.Automation.SwitchParameter with get, set" Usage="Microsoft.PowerShell.Commands.SetAclCommand.Passthru" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Security</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.SwitchParameter</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets the Passthru flag for the operation.
+            If true, the security descriptor is also passed
+            down the output pipeline.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Path">
+      <MemberSignature Language="C#" Value="public string[] Path { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string[] Path" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.SetAclCommand.Path" />
+      <MemberSignature Language="VB.NET" Value="Public Property Path As String()" />
+      <MemberSignature Language="F#" Value="member this.Path : string[] with get, set" Usage="Microsoft.PowerShell.Commands.SetAclCommand.Path" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Security</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(Mandatory=true, ParameterSetName="ByPath", Position=0, ValueFromPipelineByPropertyName=true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets the path of the item for which to set the
+            security descriptor.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ProcessRecord">
+      <MemberSignature Language="C#" Value="protected override void ProcessRecord ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void ProcessRecord() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Commands.SetAclCommand.ProcessRecord" />
+      <MemberSignature Language="VB.NET" Value="Protected Overrides Sub ProcessRecord ()" />
+      <MemberSignature Language="F#" Value="override this.ProcessRecord : unit -&gt; unit" Usage="setAclCommand.ProcessRecord " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Security</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

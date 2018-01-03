@@ -1,0 +1,1220 @@
+﻿<Type Name="PSPrimitiveDictionary" FullName="System.Management.Automation.PSPrimitiveDictionary">
+  <TypeSignature Language="C#" Value="public sealed class PSPrimitiveDictionary : System.Collections.Hashtable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable sealed beforefieldinit PSPrimitiveDictionary extends System.Collections.Hashtable" />
+  <TypeSignature Language="DocId" Value="T:System.Management.Automation.PSPrimitiveDictionary" />
+  <TypeSignature Language="VB.NET" Value="Public NotInheritable Class PSPrimitiveDictionary&#xA;Inherits Hashtable" />
+  <TypeSignature Language="F#" Value="type PSPrimitiveDictionary = class&#xA;    inherit Hashtable" />
+  <AssemblyInfo>
+    <AssemblyName>System.Management.Automation</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Collections.Hashtable</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+      <see cref="T:System.Management.Automation.PSPrimitiveDictionary" /> is a <see cref="T:System.Collections.Hashtable" /> that is limited to
+            1) case-insensitive strings as keys and
+            2) values that can be serialized and deserialized during PowerShell remoting handshake
+               (in major-version compatible versions of PowerShell remoting)
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public PSPrimitiveDictionary ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.PSPrimitiveDictionary.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New ()" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>
+            Initializes a new empty instance of the <see cref="T:System.Management.Automation.PSPrimitiveDictionary" /> class
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public PSPrimitiveDictionary (System.Collections.Hashtable other);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Collections.Hashtable other) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.PSPrimitiveDictionary.#ctor(System.Collections.Hashtable)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (other As Hashtable)" />
+      <MemberSignature Language="F#" Value="new System.Management.Automation.PSPrimitiveDictionary : System.Collections.Hashtable -&gt; System.Management.Automation.PSPrimitiveDictionary" Usage="new System.Management.Automation.PSPrimitiveDictionary other" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="other" Type="System.Collections.Hashtable" />
+      </Parameters>
+      <Docs>
+        <param name="other">hashtable to copy into the new instance of <see cref="T:System.Management.Automation.PSPrimitiveDictionary" /></param>
+        <summary>
+            Initializes a new instance of the <see cref="T:System.Management.Automation.PSPrimitiveDictionary" /> class with contents
+            copied from the <paramref name="other" /> hashtable.
+            </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">
+            This constructor will throw if the <paramref name="other" /> hashtable contains keys that are not a strings
+            or values that are not one of primitive types that will work during PowerShell remoting handshake.
+            </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public override void Add (object key, object value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Add(object key, object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.PSPrimitiveDictionary.Add(System.Object,System.Object)" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Sub Add (key As Object, value As Object)" />
+      <MemberSignature Language="F#" Value="abstract member Add : obj * obj -&gt; unit&#xA;override this.Add : obj * obj -&gt; unit" Usage="pSPrimitiveDictionary.Add (key, value)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.Object" />
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="key">The key of the element to add</param>
+        <param name="value">The value of the element to add</param>
+        <summary>
+            Adds an element with the specified key and value into the Hashtable
+            </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">
+            This method will throw if the <paramref name="key" /> is not a string and the <paramref name="value" />
+            is not one of primitive types that will work during PowerShell remoting handshake.
+            Use of strongly-typed overloads of this method is suggested if throwing an exception is not acceptable.
+            </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public void Add (string key, bool value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Add(string key, bool value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.PSPrimitiveDictionary.Add(System.String,System.Boolean)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Add (key As String, value As Boolean)" />
+      <MemberSignature Language="F#" Value="member this.Add : string * bool -&gt; unit" Usage="pSPrimitiveDictionary.Add (key, value)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.String" />
+        <Parameter Name="value" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="key">The key of the element to add</param>
+        <param name="value">The value of the element to add</param>
+        <summary>
+            Adds an element with the specified key and value into the Hashtable
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public void Add (string key, bool[] value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Add(string key, bool[] value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.PSPrimitiveDictionary.Add(System.String,System.Boolean[])" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Add (key As String, value As Boolean())" />
+      <MemberSignature Language="F#" Value="member this.Add : string * bool[] -&gt; unit" Usage="pSPrimitiveDictionary.Add (key, value)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.String" />
+        <Parameter Name="value" Type="System.Boolean[]" />
+      </Parameters>
+      <Docs>
+        <param name="key">The key of the element to add</param>
+        <param name="value">The value of the element to add</param>
+        <summary>
+            Adds an element with the specified key and value into the Hashtable
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public void Add (string key, byte value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Add(string key, unsigned int8 value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.PSPrimitiveDictionary.Add(System.String,System.Byte)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Add (key As String, value As Byte)" />
+      <MemberSignature Language="F#" Value="member this.Add : string * byte -&gt; unit" Usage="pSPrimitiveDictionary.Add (key, value)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.String" />
+        <Parameter Name="value" Type="System.Byte" />
+      </Parameters>
+      <Docs>
+        <param name="key">The key of the element to add</param>
+        <param name="value">The value of the element to add</param>
+        <summary>
+            Adds an element with the specified key and value into the Hashtable
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public void Add (string key, byte[] value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Add(string key, unsigned int8[] value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.PSPrimitiveDictionary.Add(System.String,System.Byte[])" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Add (key As String, value As Byte())" />
+      <MemberSignature Language="F#" Value="member this.Add : string * byte[] -&gt; unit" Usage="pSPrimitiveDictionary.Add (key, value)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.String" />
+        <Parameter Name="value" Type="System.Byte[]" />
+      </Parameters>
+      <Docs>
+        <param name="key">The key of the element to add</param>
+        <param name="value">The value of the element to add</param>
+        <summary>
+            Adds an element with the specified key and value into the Hashtable
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public void Add (string key, char value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Add(string key, char value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.PSPrimitiveDictionary.Add(System.String,System.Char)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Add (key As String, value As Char)" />
+      <MemberSignature Language="F#" Value="member this.Add : string * char -&gt; unit" Usage="pSPrimitiveDictionary.Add (key, value)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.String" />
+        <Parameter Name="value" Type="System.Char" />
+      </Parameters>
+      <Docs>
+        <param name="key">The key of the element to add</param>
+        <param name="value">The value of the element to add</param>
+        <summary>
+            Adds an element with the specified key and value into the Hashtable
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public void Add (string key, char[] value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Add(string key, char[] value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.PSPrimitiveDictionary.Add(System.String,System.Char[])" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Add (key As String, value As Char())" />
+      <MemberSignature Language="F#" Value="member this.Add : string * char[] -&gt; unit" Usage="pSPrimitiveDictionary.Add (key, value)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.String" />
+        <Parameter Name="value" Type="System.Char[]" />
+      </Parameters>
+      <Docs>
+        <param name="key">The key of the element to add</param>
+        <param name="value">The value of the element to add</param>
+        <summary>
+            Adds an element with the specified key and value into the Hashtable
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public void Add (string key, DateTime value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Add(string key, valuetype System.DateTime value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.PSPrimitiveDictionary.Add(System.String,System.DateTime)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Add (key As String, value As DateTime)" />
+      <MemberSignature Language="F#" Value="member this.Add : string * DateTime -&gt; unit" Usage="pSPrimitiveDictionary.Add (key, value)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.String" />
+        <Parameter Name="value" Type="System.DateTime" />
+      </Parameters>
+      <Docs>
+        <param name="key">The key of the element to add</param>
+        <param name="value">The value of the element to add</param>
+        <summary>
+            Adds an element with the specified key and value into the Hashtable
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public void Add (string key, DateTime[] value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Add(string key, valuetype System.DateTime[] value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.PSPrimitiveDictionary.Add(System.String,System.DateTime[])" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Add (key As String, value As DateTime())" />
+      <MemberSignature Language="F#" Value="member this.Add : string * DateTime[] -&gt; unit" Usage="pSPrimitiveDictionary.Add (key, value)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.String" />
+        <Parameter Name="value" Type="System.DateTime[]" />
+      </Parameters>
+      <Docs>
+        <param name="key">The key of the element to add</param>
+        <param name="value">The value of the element to add</param>
+        <summary>
+            Adds an element with the specified key and value into the Hashtable
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public void Add (string key, decimal value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Add(string key, valuetype System.Decimal value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.PSPrimitiveDictionary.Add(System.String,System.Decimal)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Add (key As String, value As Decimal)" />
+      <MemberSignature Language="F#" Value="member this.Add : string * decimal -&gt; unit" Usage="pSPrimitiveDictionary.Add (key, value)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.String" />
+        <Parameter Name="value" Type="System.Decimal" />
+      </Parameters>
+      <Docs>
+        <param name="key">The key of the element to add</param>
+        <param name="value">The value of the element to add</param>
+        <summary>
+            Adds an element with the specified key and value into the Hashtable
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public void Add (string key, decimal[] value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Add(string key, valuetype System.Decimal[] value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.PSPrimitiveDictionary.Add(System.String,System.Decimal[])" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Add (key As String, value As Decimal())" />
+      <MemberSignature Language="F#" Value="member this.Add : string * decimal[] -&gt; unit" Usage="pSPrimitiveDictionary.Add (key, value)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.String" />
+        <Parameter Name="value" Type="System.Decimal[]" />
+      </Parameters>
+      <Docs>
+        <param name="key">The key of the element to add</param>
+        <param name="value">The value of the element to add</param>
+        <summary>
+            Adds an element with the specified key and value into the Hashtable
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public void Add (string key, double value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Add(string key, float64 value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.PSPrimitiveDictionary.Add(System.String,System.Double)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Add (key As String, value As Double)" />
+      <MemberSignature Language="F#" Value="member this.Add : string * double -&gt; unit" Usage="pSPrimitiveDictionary.Add (key, value)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.String" />
+        <Parameter Name="value" Type="System.Double" />
+      </Parameters>
+      <Docs>
+        <param name="key">The key of the element to add</param>
+        <param name="value">The value of the element to add</param>
+        <summary>
+            Adds an element with the specified key and value into the Hashtable
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public void Add (string key, double[] value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Add(string key, float64[] value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.PSPrimitiveDictionary.Add(System.String,System.Double[])" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Add (key As String, value As Double())" />
+      <MemberSignature Language="F#" Value="member this.Add : string * double[] -&gt; unit" Usage="pSPrimitiveDictionary.Add (key, value)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.String" />
+        <Parameter Name="value" Type="System.Double[]" />
+      </Parameters>
+      <Docs>
+        <param name="key">The key of the element to add</param>
+        <param name="value">The value of the element to add</param>
+        <summary>
+            Adds an element with the specified key and value into the Hashtable
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public void Add (string key, Guid value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Add(string key, valuetype System.Guid value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.PSPrimitiveDictionary.Add(System.String,System.Guid)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Add (key As String, value As Guid)" />
+      <MemberSignature Language="F#" Value="member this.Add : string * Guid -&gt; unit" Usage="pSPrimitiveDictionary.Add (key, value)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.String" />
+        <Parameter Name="value" Type="System.Guid" />
+      </Parameters>
+      <Docs>
+        <param name="key">The key of the element to add</param>
+        <param name="value">The value of the element to add</param>
+        <summary>
+            Adds an element with the specified key and value into the Hashtable
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public void Add (string key, Guid[] value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Add(string key, valuetype System.Guid[] value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.PSPrimitiveDictionary.Add(System.String,System.Guid[])" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Add (key As String, value As Guid())" />
+      <MemberSignature Language="F#" Value="member this.Add : string * Guid[] -&gt; unit" Usage="pSPrimitiveDictionary.Add (key, value)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.String" />
+        <Parameter Name="value" Type="System.Guid[]" />
+      </Parameters>
+      <Docs>
+        <param name="key">The key of the element to add</param>
+        <param name="value">The value of the element to add</param>
+        <summary>
+            Adds an element with the specified key and value into the Hashtable
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public void Add (string key, int value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Add(string key, int32 value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.PSPrimitiveDictionary.Add(System.String,System.Int32)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Add (key As String, value As Integer)" />
+      <MemberSignature Language="F#" Value="member this.Add : string * int -&gt; unit" Usage="pSPrimitiveDictionary.Add (key, value)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.String" />
+        <Parameter Name="value" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="key">The key of the element to add</param>
+        <param name="value">The value of the element to add</param>
+        <summary>
+            Adds an element with the specified key and value into the Hashtable
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public void Add (string key, int[] value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Add(string key, int32[] value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.PSPrimitiveDictionary.Add(System.String,System.Int32[])" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Add (key As String, value As Integer())" />
+      <MemberSignature Language="F#" Value="member this.Add : string * int[] -&gt; unit" Usage="pSPrimitiveDictionary.Add (key, value)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.String" />
+        <Parameter Name="value" Type="System.Int32[]" />
+      </Parameters>
+      <Docs>
+        <param name="key">The key of the element to add</param>
+        <param name="value">The value of the element to add</param>
+        <summary>
+            Adds an element with the specified key and value into the Hashtable
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public void Add (string key, long value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Add(string key, int64 value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.PSPrimitiveDictionary.Add(System.String,System.Int64)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Add (key As String, value As Long)" />
+      <MemberSignature Language="F#" Value="member this.Add : string * int64 -&gt; unit" Usage="pSPrimitiveDictionary.Add (key, value)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.String" />
+        <Parameter Name="value" Type="System.Int64" />
+      </Parameters>
+      <Docs>
+        <param name="key">The key of the element to add</param>
+        <param name="value">The value of the element to add</param>
+        <summary>
+            Adds an element with the specified key and value into the Hashtable
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public void Add (string key, long[] value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Add(string key, int64[] value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.PSPrimitiveDictionary.Add(System.String,System.Int64[])" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Add (key As String, value As Long())" />
+      <MemberSignature Language="F#" Value="member this.Add : string * int64[] -&gt; unit" Usage="pSPrimitiveDictionary.Add (key, value)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.String" />
+        <Parameter Name="value" Type="System.Int64[]" />
+      </Parameters>
+      <Docs>
+        <param name="key">The key of the element to add</param>
+        <param name="value">The value of the element to add</param>
+        <summary>
+            Adds an element with the specified key and value into the Hashtable
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public void Add (string key, System.Management.Automation.PSPrimitiveDictionary value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Add(string key, class System.Management.Automation.PSPrimitiveDictionary value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.PSPrimitiveDictionary.Add(System.String,System.Management.Automation.PSPrimitiveDictionary)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Add (key As String, value As PSPrimitiveDictionary)" />
+      <MemberSignature Language="F#" Value="member this.Add : string * System.Management.Automation.PSPrimitiveDictionary -&gt; unit" Usage="pSPrimitiveDictionary.Add (key, value)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.String" />
+        <Parameter Name="value" Type="System.Management.Automation.PSPrimitiveDictionary" />
+      </Parameters>
+      <Docs>
+        <param name="key">The key of the element to add</param>
+        <param name="value">The value of the element to add</param>
+        <summary>
+            Adds an element with the specified key and value into the Hashtable
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public void Add (string key, System.Management.Automation.PSPrimitiveDictionary[] value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Add(string key, class System.Management.Automation.PSPrimitiveDictionary[] value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.PSPrimitiveDictionary.Add(System.String,System.Management.Automation.PSPrimitiveDictionary[])" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Add (key As String, value As PSPrimitiveDictionary())" />
+      <MemberSignature Language="F#" Value="member this.Add : string * System.Management.Automation.PSPrimitiveDictionary[] -&gt; unit" Usage="pSPrimitiveDictionary.Add (key, value)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.String" />
+        <Parameter Name="value" Type="System.Management.Automation.PSPrimitiveDictionary[]" />
+      </Parameters>
+      <Docs>
+        <param name="key">The key of the element to add</param>
+        <param name="value">The value of the element to add</param>
+        <summary>
+            Adds an element with the specified key and value into the Hashtable
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public void Add (string key, sbyte value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Add(string key, int8 value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.PSPrimitiveDictionary.Add(System.String,System.SByte)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Add (key As String, value As SByte)" />
+      <MemberSignature Language="F#" Value="member this.Add : string * sbyte -&gt; unit" Usage="pSPrimitiveDictionary.Add (key, value)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.String" />
+        <Parameter Name="value" Type="System.SByte" />
+      </Parameters>
+      <Docs>
+        <param name="key">The key of the element to add</param>
+        <param name="value">The value of the element to add</param>
+        <summary>
+            Adds an element with the specified key and value into the Hashtable
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public void Add (string key, sbyte[] value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Add(string key, int8[] value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.PSPrimitiveDictionary.Add(System.String,System.SByte[])" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Add (key As String, value As SByte())" />
+      <MemberSignature Language="F#" Value="member this.Add : string * sbyte[] -&gt; unit" Usage="pSPrimitiveDictionary.Add (key, value)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.String" />
+        <Parameter Name="value" Type="System.SByte[]" />
+      </Parameters>
+      <Docs>
+        <param name="key">The key of the element to add</param>
+        <param name="value">The value of the element to add</param>
+        <summary>
+            Adds an element with the specified key and value into the Hashtable
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public void Add (string key, float value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Add(string key, float32 value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.PSPrimitiveDictionary.Add(System.String,System.Single)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Add (key As String, value As Single)" />
+      <MemberSignature Language="F#" Value="member this.Add : string * single -&gt; unit" Usage="pSPrimitiveDictionary.Add (key, value)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.String" />
+        <Parameter Name="value" Type="System.Single" />
+      </Parameters>
+      <Docs>
+        <param name="key">The key of the element to add</param>
+        <param name="value">The value of the element to add</param>
+        <summary>
+            Adds an element with the specified key and value into the Hashtable
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public void Add (string key, float[] value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Add(string key, float32[] value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.PSPrimitiveDictionary.Add(System.String,System.Single[])" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Add (key As String, value As Single())" />
+      <MemberSignature Language="F#" Value="member this.Add : string * single[] -&gt; unit" Usage="pSPrimitiveDictionary.Add (key, value)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.String" />
+        <Parameter Name="value" Type="System.Single[]" />
+      </Parameters>
+      <Docs>
+        <param name="key">The key of the element to add</param>
+        <param name="value">The value of the element to add</param>
+        <summary>
+            Adds an element with the specified key and value into the Hashtable
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public void Add (string key, string value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Add(string key, string value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.PSPrimitiveDictionary.Add(System.String,System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Add (key As String, value As String)" />
+      <MemberSignature Language="F#" Value="member this.Add : string * string -&gt; unit" Usage="pSPrimitiveDictionary.Add (key, value)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.String" />
+        <Parameter Name="value" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="key">The key of the element to add</param>
+        <param name="value">The value of the element to add</param>
+        <summary>
+            Adds an element with the specified key and value into the Hashtable
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public void Add (string key, string[] value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Add(string key, string[] value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.PSPrimitiveDictionary.Add(System.String,System.String[])" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Add (key As String, value As String())" />
+      <MemberSignature Language="F#" Value="member this.Add : string * string[] -&gt; unit" Usage="pSPrimitiveDictionary.Add (key, value)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.String" />
+        <Parameter Name="value" Type="System.String[]" />
+      </Parameters>
+      <Docs>
+        <param name="key">The key of the element to add</param>
+        <param name="value">The value of the element to add</param>
+        <summary>
+            Adds an element with the specified key and value into the Hashtable
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public void Add (string key, TimeSpan value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Add(string key, valuetype System.TimeSpan value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.PSPrimitiveDictionary.Add(System.String,System.TimeSpan)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Add (key As String, value As TimeSpan)" />
+      <MemberSignature Language="F#" Value="member this.Add : string * TimeSpan -&gt; unit" Usage="pSPrimitiveDictionary.Add (key, value)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.String" />
+        <Parameter Name="value" Type="System.TimeSpan" />
+      </Parameters>
+      <Docs>
+        <param name="key">The key of the element to add</param>
+        <param name="value">The value of the element to add</param>
+        <summary>
+            Adds an element with the specified key and value into the Hashtable
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public void Add (string key, TimeSpan[] value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Add(string key, valuetype System.TimeSpan[] value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.PSPrimitiveDictionary.Add(System.String,System.TimeSpan[])" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Add (key As String, value As TimeSpan())" />
+      <MemberSignature Language="F#" Value="member this.Add : string * TimeSpan[] -&gt; unit" Usage="pSPrimitiveDictionary.Add (key, value)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.String" />
+        <Parameter Name="value" Type="System.TimeSpan[]" />
+      </Parameters>
+      <Docs>
+        <param name="key">The key of the element to add</param>
+        <param name="value">The value of the element to add</param>
+        <summary>
+            Adds an element with the specified key and value into the Hashtable
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public void Add (string key, ushort value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Add(string key, unsigned int16 value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.PSPrimitiveDictionary.Add(System.String,System.UInt16)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Add (key As String, value As UShort)" />
+      <MemberSignature Language="F#" Value="member this.Add : string * uint16 -&gt; unit" Usage="pSPrimitiveDictionary.Add (key, value)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.String" />
+        <Parameter Name="value" Type="System.UInt16" />
+      </Parameters>
+      <Docs>
+        <param name="key">The key of the element to add</param>
+        <param name="value">The value of the element to add</param>
+        <summary>
+            Adds an element with the specified key and value into the Hashtable
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public void Add (string key, ushort[] value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Add(string key, unsigned int16[] value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.PSPrimitiveDictionary.Add(System.String,System.UInt16[])" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Add (key As String, value As UShort())" />
+      <MemberSignature Language="F#" Value="member this.Add : string * uint16[] -&gt; unit" Usage="pSPrimitiveDictionary.Add (key, value)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.String" />
+        <Parameter Name="value" Type="System.UInt16[]" />
+      </Parameters>
+      <Docs>
+        <param name="key">The key of the element to add</param>
+        <param name="value">The value of the element to add</param>
+        <summary>
+            Adds an element with the specified key and value into the Hashtable
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public void Add (string key, uint value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Add(string key, unsigned int32 value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.PSPrimitiveDictionary.Add(System.String,System.UInt32)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Add (key As String, value As UInteger)" />
+      <MemberSignature Language="F#" Value="member this.Add : string * uint32 -&gt; unit" Usage="pSPrimitiveDictionary.Add (key, value)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.String" />
+        <Parameter Name="value" Type="System.UInt32" />
+      </Parameters>
+      <Docs>
+        <param name="key">The key of the element to add</param>
+        <param name="value">The value of the element to add</param>
+        <summary>
+            Adds an element with the specified key and value into the Hashtable
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public void Add (string key, uint[] value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Add(string key, unsigned int32[] value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.PSPrimitiveDictionary.Add(System.String,System.UInt32[])" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Add (key As String, value As UInteger())" />
+      <MemberSignature Language="F#" Value="member this.Add : string * uint32[] -&gt; unit" Usage="pSPrimitiveDictionary.Add (key, value)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.String" />
+        <Parameter Name="value" Type="System.UInt32[]" />
+      </Parameters>
+      <Docs>
+        <param name="key">The key of the element to add</param>
+        <param name="value">The value of the element to add</param>
+        <summary>
+            Adds an element with the specified key and value into the Hashtable
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public void Add (string key, ulong value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Add(string key, unsigned int64 value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.PSPrimitiveDictionary.Add(System.String,System.UInt64)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Add (key As String, value As ULong)" />
+      <MemberSignature Language="F#" Value="member this.Add : string * uint64 -&gt; unit" Usage="pSPrimitiveDictionary.Add (key, value)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.String" />
+        <Parameter Name="value" Type="System.UInt64" />
+      </Parameters>
+      <Docs>
+        <param name="key">The key of the element to add</param>
+        <param name="value">The value of the element to add</param>
+        <summary>
+            Adds an element with the specified key and value into the Hashtable
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public void Add (string key, ulong[] value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Add(string key, unsigned int64[] value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.PSPrimitiveDictionary.Add(System.String,System.UInt64[])" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Add (key As String, value As ULong())" />
+      <MemberSignature Language="F#" Value="member this.Add : string * uint64[] -&gt; unit" Usage="pSPrimitiveDictionary.Add (key, value)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.String" />
+        <Parameter Name="value" Type="System.UInt64[]" />
+      </Parameters>
+      <Docs>
+        <param name="key">The key of the element to add</param>
+        <param name="value">The value of the element to add</param>
+        <summary>
+            Adds an element with the specified key and value into the Hashtable
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public void Add (string key, Uri value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Add(string key, class System.Uri value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.PSPrimitiveDictionary.Add(System.String,System.Uri)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Add (key As String, value As Uri)" />
+      <MemberSignature Language="F#" Value="member this.Add : string * Uri -&gt; unit" Usage="pSPrimitiveDictionary.Add (key, value)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.String" />
+        <Parameter Name="value" Type="System.Uri" />
+      </Parameters>
+      <Docs>
+        <param name="key">The key of the element to add</param>
+        <param name="value">The value of the element to add</param>
+        <summary>
+            Adds an element with the specified key and value into the Hashtable
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public void Add (string key, Uri[] value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Add(string key, class System.Uri[] value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.PSPrimitiveDictionary.Add(System.String,System.Uri[])" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Add (key As String, value As Uri())" />
+      <MemberSignature Language="F#" Value="member this.Add : string * Uri[] -&gt; unit" Usage="pSPrimitiveDictionary.Add (key, value)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.String" />
+        <Parameter Name="value" Type="System.Uri[]" />
+      </Parameters>
+      <Docs>
+        <param name="key">The key of the element to add</param>
+        <param name="value">The value of the element to add</param>
+        <summary>
+            Adds an element with the specified key and value into the Hashtable
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public void Add (string key, Version value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Add(string key, class System.Version value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.PSPrimitiveDictionary.Add(System.String,System.Version)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Add (key As String, value As Version)" />
+      <MemberSignature Language="F#" Value="member this.Add : string * Version -&gt; unit" Usage="pSPrimitiveDictionary.Add (key, value)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.String" />
+        <Parameter Name="value" Type="System.Version" />
+      </Parameters>
+      <Docs>
+        <param name="key">The key of the element to add</param>
+        <param name="value">The value of the element to add</param>
+        <summary>
+            Adds an element with the specified key and value into the Hashtable
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public void Add (string key, Version[] value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Add(string key, class System.Version[] value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.PSPrimitiveDictionary.Add(System.String,System.Version[])" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Add (key As String, value As Version())" />
+      <MemberSignature Language="F#" Value="member this.Add : string * Version[] -&gt; unit" Usage="pSPrimitiveDictionary.Add (key, value)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.String" />
+        <Parameter Name="value" Type="System.Version[]" />
+      </Parameters>
+      <Docs>
+        <param name="key">The key of the element to add</param>
+        <param name="value">The value of the element to add</param>
+        <summary>
+            Adds an element with the specified key and value into the Hashtable
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Clone">
+      <MemberSignature Language="C#" Value="public override object Clone ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance object Clone() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.PSPrimitiveDictionary.Clone" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Function Clone () As Object" />
+      <MemberSignature Language="F#" Value="abstract member Clone : unit -&gt; obj&#xA;override this.Clone : unit -&gt; obj" Usage="pSPrimitiveDictionary.Clone " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Creates a new instance by doing a shallow copy of the current instance.
+            </summary>
+        <returns />
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public override object this[object key] { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object Item(object)" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.PSPrimitiveDictionary.Item(System.Object)" />
+      <MemberSignature Language="VB.NET" Value="Default Public Overrides Property Item(key As Object) As Object" />
+      <MemberSignature Language="F#" Value="member this.Item(obj) : obj with get, set" Usage="System.Management.Automation.PSPrimitiveDictionary.Item" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="key">The key whose value to get or set</param>
+        <summary>
+            Gets or sets the value associated with the specified key.
+            </summary>
+        <value>The value associated with the specified key.</value>
+        <remarks>
+            If the specified key is not found, attempting to get it returns <c>null</c>
+            and attempting to set it creates a new element using the specified key.
+            </remarks>
+        <exception cref="T:System.ArgumentException">
+            The setter will throw if the <paramref name="key" /> is not a string and the value
+            is not one of primitive types that will work during PowerShell remoting handshake.
+            Use of strongly-typed overloads of Add method is suggested if throwing an exception is not acceptable.
+            </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public object this[string key] { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object Item(string)" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.PSPrimitiveDictionary.Item(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Default Public Property Item(key As String) As Object" />
+      <MemberSignature Language="F#" Value="member this.Item(string) : obj with get, set" Usage="System.Management.Automation.PSPrimitiveDictionary.Item" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="key">The key whose value to get or set</param>
+        <summary>
+            Gets or sets the value associated with the specified key.
+            </summary>
+        <value>The value associated with the specified key.</value>
+        <remarks>
+            If the specified key is not found, attempting to get it returns <c>null</c>
+            and attempting to set it creates a new element using the specified key.
+            </remarks>
+        <exception cref="T:System.ArgumentException">
+            The setter will throw if the value
+            is not one of primitive types that will work during PowerShell remoting handshake.
+            Use of strongly-typed overloads of Add method is suggested if throwing an exception is not acceptable.
+            </exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

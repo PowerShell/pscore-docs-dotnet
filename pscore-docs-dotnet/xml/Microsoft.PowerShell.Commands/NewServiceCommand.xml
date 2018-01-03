@@ -1,0 +1,275 @@
+﻿<Type Name="NewServiceCommand" FullName="Microsoft.PowerShell.Commands.NewServiceCommand">
+  <TypeSignature Language="C#" Value="public class NewServiceCommand : Microsoft.PowerShell.Commands.ServiceBaseCommand" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit NewServiceCommand extends Microsoft.PowerShell.Commands.ServiceBaseCommand" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.PowerShell.Commands.NewServiceCommand" />
+  <TypeSignature Language="VB.NET" Value="Public Class NewServiceCommand&#xA;Inherits ServiceBaseCommand" />
+  <TypeSignature Language="F#" Value="type NewServiceCommand = class&#xA;    inherit ServiceBaseCommand" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.PowerShell.Commands.Management</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Microsoft.PowerShell.Commands.ServiceBaseCommand</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Management.Automation.Cmdlet("New", "Service", HelpUri="https://go.microsoft.com/fwlink/?LinkID=113359", SupportsShouldProcess=true)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Management.Automation.OutputType(typeof(System.ServiceProcess.ServiceController))</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>
+            This class implements the set-service command
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public NewServiceCommand ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Commands.NewServiceCommand.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New ()" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Commands.Management</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginProcessing">
+      <MemberSignature Language="C#" Value="protected override void BeginProcessing ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void BeginProcessing() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Commands.NewServiceCommand.BeginProcessing" />
+      <MemberSignature Language="VB.NET" Value="Protected Overrides Sub BeginProcessing ()" />
+      <MemberSignature Language="F#" Value="override this.BeginProcessing : unit -&gt; unit" Usage="newServiceCommand.BeginProcessing " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Commands.Management</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Internal.ArchitectureSensitive</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Create the service
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BinaryPathName">
+      <MemberSignature Language="C#" Value="public string BinaryPathName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string BinaryPathName" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.NewServiceCommand.BinaryPathName" />
+      <MemberSignature Language="VB.NET" Value="Public Property BinaryPathName As String" />
+      <MemberSignature Language="F#" Value="member this.BinaryPathName : string with get, set" Usage="Microsoft.PowerShell.Commands.NewServiceCommand.BinaryPathName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Commands.Management</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(Mandatory=true, Position=1)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The executable which implements this service
+            </summary>
+        <value />
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Credential">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.PSCredential Credential { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Management.Automation.PSCredential Credential" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.NewServiceCommand.Credential" />
+      <MemberSignature Language="VB.NET" Value="Public Property Credential As PSCredential" />
+      <MemberSignature Language="F#" Value="member this.Credential : System.Management.Automation.PSCredential with get, set" Usage="Microsoft.PowerShell.Commands.NewServiceCommand.Credential" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Commands.Management</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Credential</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.PSCredential</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Account under which the service should run
+            </summary>
+        <value />
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DependsOn">
+      <MemberSignature Language="C#" Value="public string[] DependsOn { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string[] DependsOn" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.NewServiceCommand.DependsOn" />
+      <MemberSignature Language="VB.NET" Value="Public Property DependsOn As String()" />
+      <MemberSignature Language="F#" Value="member this.DependsOn : string[] with get, set" Usage="Microsoft.PowerShell.Commands.NewServiceCommand.DependsOn" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Commands.Management</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Other services on which the new service depends
+            </summary>
+        <value />
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Description">
+      <MemberSignature Language="C#" Value="public string Description { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Description" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.NewServiceCommand.Description" />
+      <MemberSignature Language="VB.NET" Value="Public Property Description As String" />
+      <MemberSignature Language="F#" Value="member this.Description : string with get, set" Usage="Microsoft.PowerShell.Commands.NewServiceCommand.Description" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Commands.Management</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.ValidateNotNullOrEmpty</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Description of the service to create
+            </summary>
+        <value />
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DisplayName">
+      <MemberSignature Language="C#" Value="public string DisplayName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string DisplayName" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.NewServiceCommand.DisplayName" />
+      <MemberSignature Language="VB.NET" Value="Public Property DisplayName As String" />
+      <MemberSignature Language="F#" Value="member this.DisplayName : string with get, set" Usage="Microsoft.PowerShell.Commands.NewServiceCommand.DisplayName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Commands.Management</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.ValidateNotNullOrEmpty</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            DisplayName of the service to create
+            </summary>
+        <value />
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public string Name { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.NewServiceCommand.Name" />
+      <MemberSignature Language="VB.NET" Value="Public Property Name As String" />
+      <MemberSignature Language="F#" Value="member this.Name : string with get, set" Usage="Microsoft.PowerShell.Commands.NewServiceCommand.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Commands.Management</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Alias(Mono.Cecil.CustomAttributeArgument[])</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(Mandatory=true, Position=0)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Name of the service to create
+            </summary>
+        <value />
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StartupType">
+      <MemberSignature Language="C#" Value="public Microsoft.PowerShell.Commands.ServiceStartupType StartupType { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.PowerShell.Commands.ServiceStartupType StartupType" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.NewServiceCommand.StartupType" />
+      <MemberSignature Language="VB.NET" Value="Public Property StartupType As ServiceStartupType" />
+      <MemberSignature Language="F#" Value="member this.StartupType : Microsoft.PowerShell.Commands.ServiceStartupType with get, set" Usage="Microsoft.PowerShell.Commands.NewServiceCommand.StartupType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Commands.Management</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Microsoft.PowerShell.Commands.ServiceStartupType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Should the service start automatically?
+            </summary>
+        <value />
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

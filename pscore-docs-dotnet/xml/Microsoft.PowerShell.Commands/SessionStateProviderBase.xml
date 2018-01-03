@@ -1,0 +1,607 @@
+﻿<Type Name="SessionStateProviderBase" FullName="Microsoft.PowerShell.Commands.SessionStateProviderBase">
+  <TypeSignature Language="C#" Value="public abstract class SessionStateProviderBase : System.Management.Automation.Provider.ContainerCmdletProvider, System.Management.Automation.Provider.IContentCmdletProvider" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit SessionStateProviderBase extends System.Management.Automation.Provider.ContainerCmdletProvider implements class System.Management.Automation.Provider.IContentCmdletProvider" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.PowerShell.Commands.SessionStateProviderBase" />
+  <TypeSignature Language="VB.NET" Value="Public MustInherit Class SessionStateProviderBase&#xA;Inherits ContainerCmdletProvider&#xA;Implements IContentCmdletProvider" />
+  <TypeSignature Language="F#" Value="type SessionStateProviderBase = class&#xA;    inherit ContainerCmdletProvider&#xA;    interface IContentCmdletProvider" />
+  <AssemblyInfo>
+    <AssemblyName>System.Management.Automation</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Management.Automation.Provider.ContainerCmdletProvider</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Management.Automation.Provider.IContentCmdletProvider</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>
+            This is the base class for all the providers that produce a view
+            on session state data (Variables, Aliases, and Functions)
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected SessionStateProviderBase ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Commands.SessionStateProviderBase.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Protected Sub New ()" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ClearContent">
+      <MemberSignature Language="C#" Value="public void ClearContent (string path);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void ClearContent(string path) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Commands.SessionStateProviderBase.ClearContent(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub ClearContent (path As String)" />
+      <MemberSignature Language="F#" Value="override this.ClearContent : string -&gt; unit" Usage="sessionStateProviderBase.ClearContent path" />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.Management.Automation.Provider.IContentCmdletProvider.ClearContent(System.String)</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="path">
+             ignored.
+             </param>
+        <summary>
+             Always throws a NotSupportedException
+             </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NotSupportedException">
+             This exception is always thrown.
+             </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ClearContentDynamicParameters">
+      <MemberSignature Language="C#" Value="public object ClearContentDynamicParameters (string path);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object ClearContentDynamicParameters(string path) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Commands.SessionStateProviderBase.ClearContentDynamicParameters(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Function ClearContentDynamicParameters (path As String) As Object" />
+      <MemberSignature Language="F#" Value="override this.ClearContentDynamicParameters : string -&gt; obj" Usage="sessionStateProviderBase.ClearContentDynamicParameters path" />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.Management.Automation.Provider.IContentCmdletProvider.ClearContentDynamicParameters(System.String)</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="path"></param>
+        <summary>
+             Always returns null
+             </summary>
+        <returns>null</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ClearItem">
+      <MemberSignature Language="C#" Value="protected override void ClearItem (string path);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void ClearItem(string path) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Commands.SessionStateProviderBase.ClearItem(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Protected Overrides Sub ClearItem (path As String)" />
+      <MemberSignature Language="F#" Value="override this.ClearItem : string -&gt; unit" Usage="sessionStateProviderBase.ClearItem path" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="path"></param>
+        <summary />
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CopyItem">
+      <MemberSignature Language="C#" Value="protected override void CopyItem (string path, string copyPath, bool recurse);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void CopyItem(string path, string copyPath, bool recurse) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Commands.SessionStateProviderBase.CopyItem(System.String,System.String,System.Boolean)" />
+      <MemberSignature Language="VB.NET" Value="Protected Overrides Sub CopyItem (path As String, copyPath As String, recurse As Boolean)" />
+      <MemberSignature Language="F#" Value="override this.CopyItem : string * string * bool -&gt; unit" Usage="sessionStateProviderBase.CopyItem (path, copyPath, recurse)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+        <Parameter Name="copyPath" Type="System.String" />
+        <Parameter Name="recurse" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="path">
+             The name of the item to copy.
+             </param>
+        <param name="copyPath">
+             The name of the item to create.
+             </param>
+        <param name="recurse">
+             Ignored.
+             </param>
+        <summary>
+             Copies the specified item.
+             </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetChildItems">
+      <MemberSignature Language="C#" Value="protected override void GetChildItems (string path, bool recurse);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void GetChildItems(string path, bool recurse) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Commands.SessionStateProviderBase.GetChildItems(System.String,System.Boolean)" />
+      <MemberSignature Language="VB.NET" Value="Protected Overrides Sub GetChildItems (path As String, recurse As Boolean)" />
+      <MemberSignature Language="F#" Value="override this.GetChildItems : string * bool -&gt; unit" Usage="sessionStateProviderBase.GetChildItems (path, recurse)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+        <Parameter Name="recurse" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="path">
+             The name of the item to retrieve, or all if empty or null.
+             </param>
+        <param name="recurse">
+             Ignored.
+             </param>
+        <summary>
+             Gets the item(s) at the given path
+             </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetChildNames">
+      <MemberSignature Language="C#" Value="protected override void GetChildNames (string path, System.Management.Automation.ReturnContainers returnContainers);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void GetChildNames(string path, valuetype System.Management.Automation.ReturnContainers returnContainers) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Commands.SessionStateProviderBase.GetChildNames(System.String,System.Management.Automation.ReturnContainers)" />
+      <MemberSignature Language="F#" Value="override this.GetChildNames : string * System.Management.Automation.ReturnContainers -&gt; unit" Usage="sessionStateProviderBase.GetChildNames (path, returnContainers)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+        <Parameter Name="returnContainers" Type="System.Management.Automation.ReturnContainers" />
+      </Parameters>
+      <Docs>
+        <param name="path">
+             The name of the item to retrieve, or all if empty or null.
+             </param>
+        <param name="returnContainers">
+             Ignored.
+             </param>
+        <summary>
+             Gets the name(s) of the item(s) at the given path
+             </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetContentReader">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.Provider.IContentReader GetContentReader (string path);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Management.Automation.Provider.IContentReader GetContentReader(string path) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Commands.SessionStateProviderBase.GetContentReader(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetContentReader (path As String) As IContentReader" />
+      <MemberSignature Language="F#" Value="override this.GetContentReader : string -&gt; System.Management.Automation.Provider.IContentReader" Usage="sessionStateProviderBase.GetContentReader path" />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.Management.Automation.Provider.IContentCmdletProvider.GetContentReader(System.String)</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.Provider.IContentReader</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="path">
+             The path to get the content reader for.
+             </param>
+        <summary>
+             Gets an instance of the content reader for this provider for the
+             specified path.
+             </summary>
+        <returns>
+             An instance of an IContentReader for the given path.
+             </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetContentReaderDynamicParameters">
+      <MemberSignature Language="C#" Value="public object GetContentReaderDynamicParameters (string path);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object GetContentReaderDynamicParameters(string path) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Commands.SessionStateProviderBase.GetContentReaderDynamicParameters(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetContentReaderDynamicParameters (path As String) As Object" />
+      <MemberSignature Language="F#" Value="override this.GetContentReaderDynamicParameters : string -&gt; obj" Usage="sessionStateProviderBase.GetContentReaderDynamicParameters path" />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.Management.Automation.Provider.IContentCmdletProvider.GetContentReaderDynamicParameters(System.String)</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="path"></param>
+        <summary>
+             Always returns null
+             </summary>
+        <returns>null</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetContentWriter">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.Provider.IContentWriter GetContentWriter (string path);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Management.Automation.Provider.IContentWriter GetContentWriter(string path) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Commands.SessionStateProviderBase.GetContentWriter(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetContentWriter (path As String) As IContentWriter" />
+      <MemberSignature Language="F#" Value="override this.GetContentWriter : string -&gt; System.Management.Automation.Provider.IContentWriter" Usage="sessionStateProviderBase.GetContentWriter path" />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.Management.Automation.Provider.IContentCmdletProvider.GetContentWriter(System.String)</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.Provider.IContentWriter</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="path">
+             The path to get the content writer for.
+             </param>
+        <summary>
+             Gets an instance of the content writer for this provider for the
+             specified path.
+             </summary>
+        <returns>
+             An instance of an IContentWriter for the given path.
+             </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetContentWriterDynamicParameters">
+      <MemberSignature Language="C#" Value="public object GetContentWriterDynamicParameters (string path);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object GetContentWriterDynamicParameters(string path) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Commands.SessionStateProviderBase.GetContentWriterDynamicParameters(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetContentWriterDynamicParameters (path As String) As Object" />
+      <MemberSignature Language="F#" Value="override this.GetContentWriterDynamicParameters : string -&gt; obj" Usage="sessionStateProviderBase.GetContentWriterDynamicParameters path" />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.Management.Automation.Provider.IContentCmdletProvider.GetContentWriterDynamicParameters(System.String)</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="path"></param>
+        <summary>
+             Always returns null
+             </summary>
+        <returns>null</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetItem">
+      <MemberSignature Language="C#" Value="protected override void GetItem (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void GetItem(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Commands.SessionStateProviderBase.GetItem(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Protected Overrides Sub GetItem (name As String)" />
+      <MemberSignature Language="F#" Value="override this.GetItem : string -&gt; unit" Usage="sessionStateProviderBase.GetItem name" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">
+             Name of the item to get.
+             </param>
+        <summary>
+             Gets an item from session state.
+             </summary>
+        <remarks>
+             The item instance is written to the WriteObject
+             method.
+             </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HasChildItems">
+      <MemberSignature Language="C#" Value="protected override bool HasChildItems (string path);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance bool HasChildItems(string path) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Commands.SessionStateProviderBase.HasChildItems(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Protected Overrides Function HasChildItems (path As String) As Boolean" />
+      <MemberSignature Language="F#" Value="override this.HasChildItems : string -&gt; bool" Usage="sessionStateProviderBase.HasChildItems path" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="path">
+             The container to check to see if there are any children.
+             </param>
+        <summary>
+             Determines if there are any items
+             </summary>
+        <returns>
+             True if path is empty or null, false otherwise.
+             </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsValidPath">
+      <MemberSignature Language="C#" Value="protected override bool IsValidPath (string path);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance bool IsValidPath(string path) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Commands.SessionStateProviderBase.IsValidPath(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Protected Overrides Function IsValidPath (path As String) As Boolean" />
+      <MemberSignature Language="F#" Value="override this.IsValidPath : string -&gt; bool" Usage="sessionStateProviderBase.IsValidPath path" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="path">
+             The path to validate.
+             </param>
+        <summary>
+             Determines if the specified path is syntactically and semantically valid.
+             </summary>
+        <returns>
+             True if the path is valid, or false otherwise.
+             </returns>
+        <remarks>
+             The path may not contain the following characters:
+             . ( ) :
+             </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ItemExists">
+      <MemberSignature Language="C#" Value="protected override bool ItemExists (string path);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance bool ItemExists(string path) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Commands.SessionStateProviderBase.ItemExists(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Protected Overrides Function ItemExists (path As String) As Boolean" />
+      <MemberSignature Language="F#" Value="override this.ItemExists : string -&gt; bool" Usage="sessionStateProviderBase.ItemExists path" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="path">
+             The path to the item to check. If this is null or empty, the item
+             container is used (and always exists).
+             </param>
+        <summary>
+             Determines if the specified item exists
+             </summary>
+        <returns>
+             True if the item exists, false otherwise.
+             </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NewItem">
+      <MemberSignature Language="C#" Value="protected override void NewItem (string path, string type, object newItem);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void NewItem(string path, string type, object newItem) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Commands.SessionStateProviderBase.NewItem(System.String,System.String,System.Object)" />
+      <MemberSignature Language="VB.NET" Value="Protected Overrides Sub NewItem (path As String, type As String, newItem As Object)" />
+      <MemberSignature Language="F#" Value="override this.NewItem : string * string * obj -&gt; unit" Usage="sessionStateProviderBase.NewItem (path, type, newItem)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+        <Parameter Name="type" Type="System.String" />
+        <Parameter Name="newItem" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="path">
+             The name of the item to create.
+             </param>
+        <param name="type">
+             Ignored.
+             </param>
+        <param name="newItem">
+             The value of the new item.
+             </param>
+        <summary>
+             Creates a new item if one of the same name doesn't already exist.
+             </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveItem">
+      <MemberSignature Language="C#" Value="protected override void RemoveItem (string path, bool recurse);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void RemoveItem(string path, bool recurse) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Commands.SessionStateProviderBase.RemoveItem(System.String,System.Boolean)" />
+      <MemberSignature Language="VB.NET" Value="Protected Overrides Sub RemoveItem (path As String, recurse As Boolean)" />
+      <MemberSignature Language="F#" Value="override this.RemoveItem : string * bool -&gt; unit" Usage="sessionStateProviderBase.RemoveItem (path, recurse)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+        <Parameter Name="recurse" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="path">
+             The name of the item to be removed.
+             </param>
+        <param name="recurse">
+             Ignored.
+             </param>
+        <summary>
+             Removes the item at the specified path.
+             </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RenameItem">
+      <MemberSignature Language="C#" Value="protected override void RenameItem (string name, string newName);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void RenameItem(string name, string newName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Commands.SessionStateProviderBase.RenameItem(System.String,System.String)" />
+      <MemberSignature Language="VB.NET" Value="Protected Overrides Sub RenameItem (name As String, newName As String)" />
+      <MemberSignature Language="F#" Value="override this.RenameItem : string * string -&gt; unit" Usage="sessionStateProviderBase.RenameItem (name, newName)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="newName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">
+             The name of the item to copy.
+             </param>
+        <param name="newName">
+             The new name of the item.
+             </param>
+        <summary>
+             Copies the specified item.
+             </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetItem">
+      <MemberSignature Language="C#" Value="protected override void SetItem (string name, object value);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void SetItem(string name, object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Commands.SessionStateProviderBase.SetItem(System.String,System.Object)" />
+      <MemberSignature Language="VB.NET" Value="Protected Overrides Sub SetItem (name As String, value As Object)" />
+      <MemberSignature Language="F#" Value="override this.SetItem : string * obj -&gt; unit" Usage="sessionStateProviderBase.SetItem (name, value)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="name">
+             Name of the item to set
+             </param>
+        <param name="value">
+             The value to which to set the item
+             </param>
+        <summary>
+             Sets a session state item to a given value
+             </summary>
+        <returns>
+             Nothing. The item that was set is written to the
+             WriteObject method.
+             </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

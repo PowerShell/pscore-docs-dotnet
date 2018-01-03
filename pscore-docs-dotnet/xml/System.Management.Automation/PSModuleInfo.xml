@@ -1,0 +1,1381 @@
+﻿<Type Name="PSModuleInfo" FullName="System.Management.Automation.PSModuleInfo">
+  <TypeSignature Language="C#" Value="public sealed class PSModuleInfo" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit PSModuleInfo extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Management.Automation.PSModuleInfo" />
+  <TypeSignature Language="VB.NET" Value="Public NotInheritable Class PSModuleInfo" />
+  <TypeSignature Language="F#" Value="type PSModuleInfo = class" />
+  <AssemblyInfo>
+    <AssemblyName>System.Management.Automation</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Class describing a PowerShell module...
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public PSModuleInfo (bool linkToGlobal);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(bool linkToGlobal) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.PSModuleInfo.#ctor(System.Boolean)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (linkToGlobal As Boolean)" />
+      <MemberSignature Language="F#" Value="new System.Management.Automation.PSModuleInfo : bool -&gt; System.Management.Automation.PSModuleInfo" Usage="new System.Management.Automation.PSModuleInfo linkToGlobal" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="linkToGlobal" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="linkToGlobal">To be added.</param>
+        <summary>
+            Default constructor to create an empty module info.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public PSModuleInfo (System.Management.Automation.ScriptBlock scriptBlock);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Management.Automation.ScriptBlock scriptBlock) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.PSModuleInfo.#ctor(System.Management.Automation.ScriptBlock)" />
+      <MemberSignature Language="F#" Value="new System.Management.Automation.PSModuleInfo : System.Management.Automation.ScriptBlock -&gt; System.Management.Automation.PSModuleInfo" Usage="new System.Management.Automation.PSModuleInfo scriptBlock" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="scriptBlock" Type="System.Management.Automation.ScriptBlock" />
+      </Parameters>
+      <Docs>
+        <param name="scriptBlock">The scriptblock to use to initialize the module.</param>
+        <summary>
+            Construct a PSModuleInfo instance initializing it from a scriptblock instead of a script file.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AccessMode">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.ModuleAccessMode AccessMode { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Management.Automation.ModuleAccessMode AccessMode" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.PSModuleInfo.AccessMode" />
+      <MemberSignature Language="VB.NET" Value="Public Property AccessMode As ModuleAccessMode" />
+      <MemberSignature Language="F#" Value="member this.AccessMode : System.Management.Automation.ModuleAccessMode with get, set" Usage="System.Management.Automation.PSModuleInfo.AccessMode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.ModuleAccessMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Controls the module access mode...
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AsCustomObject">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.PSObject AsCustomObject ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Management.Automation.PSObject AsCustomObject() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.PSModuleInfo.AsCustomObject" />
+      <MemberSignature Language="VB.NET" Value="Public Function AsCustomObject () As PSObject" />
+      <MemberSignature Language="F#" Value="member this.AsCustomObject : unit -&gt; System.Management.Automation.PSObject" Usage="pSModuleInfo.AsCustomObject " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.PSObject</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Build a custom object out of this module...
+            </summary>
+        <returns>A custom object</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Author">
+      <MemberSignature Language="C#" Value="public string Author { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Author" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.PSModuleInfo.Author" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Author As String" />
+      <MemberSignature Language="F#" Value="member this.Author : string" Usage="System.Management.Automation.PSModuleInfo.Author" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Module Author
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ClearAppDomainLevelModulePathCache">
+      <MemberSignature Language="C#" Value="public static void ClearAppDomainLevelModulePathCache ();" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void ClearAppDomainLevelModulePathCache() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.PSModuleInfo.ClearAppDomainLevelModulePathCache" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Sub ClearAppDomainLevelModulePathCache ()" />
+      <MemberSignature Language="F#" Value="static member ClearAppDomainLevelModulePathCache : unit -&gt; unit" Usage="System.Management.Automation.PSModuleInfo.ClearAppDomainLevelModulePathCache " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Clear out the appdomain-level module path cache.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Clone">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.PSModuleInfo Clone ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Management.Automation.PSModuleInfo Clone() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.PSModuleInfo.Clone" />
+      <MemberSignature Language="VB.NET" Value="Public Function Clone () As PSModuleInfo" />
+      <MemberSignature Language="F#" Value="member this.Clone : unit -&gt; System.Management.Automation.PSModuleInfo" Usage="pSModuleInfo.Clone " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.PSModuleInfo</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Implements deep copy of a PSModuleInfo instance.
+            <returns>A new PSModuleInfo instance</returns></summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ClrVersion">
+      <MemberSignature Language="C#" Value="public Version ClrVersion { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Version ClrVersion" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.PSModuleInfo.ClrVersion" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ClrVersion As Version" />
+      <MemberSignature Language="F#" Value="member this.ClrVersion : Version" Usage="System.Management.Automation.PSModuleInfo.ClrVersion" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Version</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            CLR Version
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CompanyName">
+      <MemberSignature Language="C#" Value="public string CompanyName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string CompanyName" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.PSModuleInfo.CompanyName" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property CompanyName As String" />
+      <MemberSignature Language="F#" Value="member this.CompanyName : string" Usage="System.Management.Automation.PSModuleInfo.CompanyName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Company Name
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CompatiblePSEditions">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IEnumerable&lt;string&gt; CompatiblePSEditions { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IEnumerable`1&lt;string&gt; CompatiblePSEditions" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.PSModuleInfo.CompatiblePSEditions" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property CompatiblePSEditions As IEnumerable(Of String)" />
+      <MemberSignature Language="F#" Value="member this.CompatiblePSEditions : seq&lt;string&gt;" Usage="System.Management.Automation.PSModuleInfo.CompatiblePSEditions" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerable&lt;System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            CompatiblePSEditions
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Copyright">
+      <MemberSignature Language="C#" Value="public string Copyright { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Copyright" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.PSModuleInfo.Copyright" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Copyright As String" />
+      <MemberSignature Language="F#" Value="member this.Copyright : string" Usage="System.Management.Automation.PSModuleInfo.Copyright" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Copyright
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Definition">
+      <MemberSignature Language="C#" Value="public string Definition { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Definition" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.PSModuleInfo.Definition" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Definition As String" />
+      <MemberSignature Language="F#" Value="member this.Definition : string" Usage="System.Management.Automation.PSModuleInfo.Definition" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            If this is a script module, then this property will contain
+            the PowerShell source text that was used to define this module.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Description">
+      <MemberSignature Language="C#" Value="public string Description { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Description" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.PSModuleInfo.Description" />
+      <MemberSignature Language="VB.NET" Value="Public Property Description As String" />
+      <MemberSignature Language="F#" Value="member this.Description : string with get, set" Usage="System.Management.Automation.PSModuleInfo.Description" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            A description of this module...
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DotNetFrameworkVersion">
+      <MemberSignature Language="C#" Value="public Version DotNetFrameworkVersion { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Version DotNetFrameworkVersion" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.PSModuleInfo.DotNetFrameworkVersion" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property DotNetFrameworkVersion As Version" />
+      <MemberSignature Language="F#" Value="member this.DotNetFrameworkVersion : Version" Usage="System.Management.Automation.PSModuleInfo.DotNetFrameworkVersion" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Version</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            .NET Framework Version
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ExportedAliases">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.Dictionary&lt;string,System.Management.Automation.AliasInfo&gt; ExportedAliases { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.Dictionary`2&lt;string, class System.Management.Automation.AliasInfo&gt; ExportedAliases" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.PSModuleInfo.ExportedAliases" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ExportedAliases As Dictionary(Of String, AliasInfo)" />
+      <MemberSignature Language="F#" Value="member this.ExportedAliases : System.Collections.Generic.Dictionary&lt;string, System.Management.Automation.AliasInfo&gt;" Usage="System.Management.Automation.PSModuleInfo.ExportedAliases" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.Dictionary&lt;System.String,System.Management.Automation.AliasInfo&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Lists the aliases exported by this module.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ExportedCmdlets">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.Dictionary&lt;string,System.Management.Automation.CmdletInfo&gt; ExportedCmdlets { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.Dictionary`2&lt;string, class System.Management.Automation.CmdletInfo&gt; ExportedCmdlets" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.PSModuleInfo.ExportedCmdlets" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ExportedCmdlets As Dictionary(Of String, CmdletInfo)" />
+      <MemberSignature Language="F#" Value="member this.ExportedCmdlets : System.Collections.Generic.Dictionary&lt;string, System.Management.Automation.CmdletInfo&gt;" Usage="System.Management.Automation.PSModuleInfo.ExportedCmdlets" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.Dictionary&lt;System.String,System.Management.Automation.CmdletInfo&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Lists the functions exported by this module...
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ExportedCommands">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.Dictionary&lt;string,System.Management.Automation.CommandInfo&gt; ExportedCommands { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.Dictionary`2&lt;string, class System.Management.Automation.CommandInfo&gt; ExportedCommands" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.PSModuleInfo.ExportedCommands" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ExportedCommands As Dictionary(Of String, CommandInfo)" />
+      <MemberSignature Language="F#" Value="member this.ExportedCommands : System.Collections.Generic.Dictionary&lt;string, System.Management.Automation.CommandInfo&gt;" Usage="System.Management.Automation.PSModuleInfo.ExportedCommands" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.Dictionary&lt;System.String,System.Management.Automation.CommandInfo&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the aggregated list of visible commands exported from the module. If there are two
+            commands of different types exported with the same name (e.g. alias 'foo' and cmdlet 'foo') the
+            combined dictionary will only contain the highest precedence cmdlet (e.g. the alias 'foo' since
+            aliases shadow cmdlets.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ExportedDscResources">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.ReadOnlyCollection&lt;string&gt; ExportedDscResources { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ObjectModel.ReadOnlyCollection`1&lt;string&gt; ExportedDscResources" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.PSModuleInfo.ExportedDscResources" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ExportedDscResources As ReadOnlyCollection(Of String)" />
+      <MemberSignature Language="F#" Value="member this.ExportedDscResources : System.Collections.ObjectModel.ReadOnlyCollection&lt;string&gt;" Usage="System.Management.Automation.PSModuleInfo.ExportedDscResources" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.ReadOnlyCollection&lt;System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary />
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ExportedFormatFiles">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.ReadOnlyCollection&lt;string&gt; ExportedFormatFiles { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ObjectModel.ReadOnlyCollection`1&lt;string&gt; ExportedFormatFiles" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.PSModuleInfo.ExportedFormatFiles" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ExportedFormatFiles As ReadOnlyCollection(Of String)" />
+      <MemberSignature Language="F#" Value="member this.ExportedFormatFiles : System.Collections.ObjectModel.ReadOnlyCollection&lt;string&gt;" Usage="System.Management.Automation.PSModuleInfo.ExportedFormatFiles" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.ReadOnlyCollection&lt;System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The list of Format files imported by this module.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ExportedFunctions">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.Dictionary&lt;string,System.Management.Automation.FunctionInfo&gt; ExportedFunctions { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.Dictionary`2&lt;string, class System.Management.Automation.FunctionInfo&gt; ExportedFunctions" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.PSModuleInfo.ExportedFunctions" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ExportedFunctions As Dictionary(Of String, FunctionInfo)" />
+      <MemberSignature Language="F#" Value="member this.ExportedFunctions : System.Collections.Generic.Dictionary&lt;string, System.Management.Automation.FunctionInfo&gt;" Usage="System.Management.Automation.PSModuleInfo.ExportedFunctions" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.Dictionary&lt;System.String,System.Management.Automation.FunctionInfo&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Lists the functions exported by this module...
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ExportedTypeFiles">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.ReadOnlyCollection&lt;string&gt; ExportedTypeFiles { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ObjectModel.ReadOnlyCollection`1&lt;string&gt; ExportedTypeFiles" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.PSModuleInfo.ExportedTypeFiles" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ExportedTypeFiles As ReadOnlyCollection(Of String)" />
+      <MemberSignature Language="F#" Value="member this.ExportedTypeFiles : System.Collections.ObjectModel.ReadOnlyCollection&lt;string&gt;" Usage="System.Management.Automation.PSModuleInfo.ExportedTypeFiles" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.ReadOnlyCollection&lt;System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The list of types files imported by this module.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ExportedVariables">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.Dictionary&lt;string,System.Management.Automation.PSVariable&gt; ExportedVariables { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.Dictionary`2&lt;string, class System.Management.Automation.PSVariable&gt; ExportedVariables" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.PSModuleInfo.ExportedVariables" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ExportedVariables As Dictionary(Of String, PSVariable)" />
+      <MemberSignature Language="F#" Value="member this.ExportedVariables : System.Collections.Generic.Dictionary&lt;string, System.Management.Automation.PSVariable&gt;" Usage="System.Management.Automation.PSModuleInfo.ExportedVariables" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.Dictionary&lt;System.String,System.Management.Automation.PSVariable&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Lists the variables exported by this module.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ExportedWorkflows">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.Dictionary&lt;string,System.Management.Automation.FunctionInfo&gt; ExportedWorkflows { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.Dictionary`2&lt;string, class System.Management.Automation.FunctionInfo&gt; ExportedWorkflows" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.PSModuleInfo.ExportedWorkflows" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ExportedWorkflows As Dictionary(Of String, FunctionInfo)" />
+      <MemberSignature Language="F#" Value="member this.ExportedWorkflows : System.Collections.Generic.Dictionary&lt;string, System.Management.Automation.FunctionInfo&gt;" Usage="System.Management.Automation.PSModuleInfo.ExportedWorkflows" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.Dictionary&lt;System.String,System.Management.Automation.FunctionInfo&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Lists the workflows exported by this module.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FileList">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IEnumerable&lt;string&gt; FileList { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IEnumerable`1&lt;string&gt; FileList" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.PSModuleInfo.FileList" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property FileList As IEnumerable(Of String)" />
+      <MemberSignature Language="F#" Value="member this.FileList : seq&lt;string&gt;" Usage="System.Management.Automation.PSModuleInfo.FileList" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerable&lt;System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            FileList
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetAppDomainLevelModuleCache">
+      <MemberSignature Language="C#" Value="public static object GetAppDomainLevelModuleCache ();" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig object GetAppDomainLevelModuleCache() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.PSModuleInfo.GetAppDomainLevelModuleCache" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function GetAppDomainLevelModuleCache () As Object" />
+      <MemberSignature Language="F#" Value="static member GetAppDomainLevelModuleCache : unit -&gt; obj" Usage="System.Management.Automation.PSModuleInfo.GetAppDomainLevelModuleCache " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            A method available in debug mode providing access to the module path cache.
+            </summary>
+        <returns />
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetExportedTypeDefinitions">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.ReadOnlyDictionary&lt;string,System.Management.Automation.Language.TypeDefinitionAst&gt; GetExportedTypeDefinitions ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Collections.ObjectModel.ReadOnlyDictionary`2&lt;string, class System.Management.Automation.Language.TypeDefinitionAst&gt; GetExportedTypeDefinitions() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.PSModuleInfo.GetExportedTypeDefinitions" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetExportedTypeDefinitions () As ReadOnlyDictionary(Of String, TypeDefinitionAst)" />
+      <MemberSignature Language="F#" Value="member this.GetExportedTypeDefinitions : unit -&gt; System.Collections.ObjectModel.ReadOnlyDictionary&lt;string, System.Management.Automation.Language.TypeDefinitionAst&gt;" Usage="pSModuleInfo.GetExportedTypeDefinitions " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.ReadOnlyDictionary&lt;System.String,System.Management.Automation.Language.TypeDefinitionAst&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Lists the types (PowerShell classes, enums, interfaces) exported by this module.
+            This returns ASTs for types, created in parse time.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetVariableFromCallersModule">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.PSVariable GetVariableFromCallersModule (string variableName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Management.Automation.PSVariable GetVariableFromCallersModule(string variableName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.PSModuleInfo.GetVariableFromCallersModule(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetVariableFromCallersModule (variableName As String) As PSVariable" />
+      <MemberSignature Language="F#" Value="member this.GetVariableFromCallersModule : string -&gt; System.Management.Automation.PSVariable" Usage="pSModuleInfo.GetVariableFromCallersModule variableName" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.PSVariable</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="variableName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="variableName"></param>
+        <summary>
+            This routine allows you to get access variable objects in the callers module
+            or from the toplevel sessionstate if there is no calling module.
+            </summary>
+        <returns />
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Guid">
+      <MemberSignature Language="C#" Value="public Guid Guid { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Guid Guid" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.PSModuleInfo.Guid" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Guid As Guid" />
+      <MemberSignature Language="F#" Value="member this.Guid : Guid" Usage="System.Management.Automation.PSModuleInfo.Guid" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Guid</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The guid for this module if one was defined in the module manifest.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HelpInfoUri">
+      <MemberSignature Language="C#" Value="public string HelpInfoUri { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string HelpInfoUri" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.PSModuleInfo.HelpInfoUri" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property HelpInfoUri As String" />
+      <MemberSignature Language="F#" Value="member this.HelpInfoUri : string" Usage="System.Management.Automation.PSModuleInfo.HelpInfoUri" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The HelpInfo for this module if one was defined in the module manifest.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IconUri">
+      <MemberSignature Language="C#" Value="public Uri IconUri { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Uri IconUri" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.PSModuleInfo.IconUri" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property IconUri As Uri" />
+      <MemberSignature Language="F#" Value="member this.IconUri : Uri" Usage="System.Management.Automation.PSModuleInfo.IconUri" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Uri</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            IconUri of this module.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ImplementingAssembly">
+      <MemberSignature Language="C#" Value="public System.Reflection.Assembly ImplementingAssembly { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Reflection.Assembly ImplementingAssembly" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.PSModuleInfo.ImplementingAssembly" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ImplementingAssembly As Assembly" />
+      <MemberSignature Language="F#" Value="member this.ImplementingAssembly : System.Reflection.Assembly" Usage="System.Management.Automation.PSModuleInfo.ImplementingAssembly" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.Assembly</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            If the module is a binary module or a script module that defines
+            classes, this property if a reference to the assembly, otherwise
+            it is null.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Invoke">
+      <MemberSignature Language="C#" Value="public object Invoke (System.Management.Automation.ScriptBlock sb, params object[] args);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance object Invoke(class System.Management.Automation.ScriptBlock sb, object[] args) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.PSModuleInfo.Invoke(System.Management.Automation.ScriptBlock,System.Object[])" />
+      <MemberSignature Language="VB.NET" Value="Public Function Invoke (sb As ScriptBlock, ParamArray args As Object()) As Object" />
+      <MemberSignature Language="F#" Value="member this.Invoke : System.Management.Automation.ScriptBlock * obj[] -&gt; obj" Usage="pSModuleInfo.Invoke (sb, args)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sb" Type="System.Management.Automation.ScriptBlock" />
+        <Parameter Name="args" Type="System.Object[]">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.ParamArray</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="sb">The scriptblock to invoke</param>
+        <param name="args">Arguments to the scriptblock</param>
+        <summary>
+            Invoke a scriptblock in the context of this module...
+            </summary>
+        <returns>The result of the invocation</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LicenseUri">
+      <MemberSignature Language="C#" Value="public Uri LicenseUri { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Uri LicenseUri" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.PSModuleInfo.LicenseUri" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property LicenseUri As Uri" />
+      <MemberSignature Language="F#" Value="member this.LicenseUri : Uri" Usage="System.Management.Automation.PSModuleInfo.LicenseUri" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Uri</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            LicenseUri of this module.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LogPipelineExecutionDetails">
+      <MemberSignature Language="C#" Value="public bool LogPipelineExecutionDetails { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool LogPipelineExecutionDetails" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.PSModuleInfo.LogPipelineExecutionDetails" />
+      <MemberSignature Language="VB.NET" Value="Public Property LogPipelineExecutionDetails As Boolean" />
+      <MemberSignature Language="F#" Value="member this.LogPipelineExecutionDetails : bool with get, set" Usage="System.Management.Automation.PSModuleInfo.LogPipelineExecutionDetails" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Get/set whether to log Pipeline Execution Detail events.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ModuleBase">
+      <MemberSignature Language="C#" Value="public string ModuleBase { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ModuleBase" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.PSModuleInfo.ModuleBase" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ModuleBase As String" />
+      <MemberSignature Language="F#" Value="member this.ModuleBase : string" Usage="System.Management.Automation.PSModuleInfo.ModuleBase" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Get the module base directory for this module. For modules loaded via a module
+            manifest, this will be the directory containing the manifest file rather than
+            the directory containing the actual module file. This is particularly useful
+            when loading a GAC'ed assembly.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ModuleList">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IEnumerable&lt;object&gt; ModuleList { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IEnumerable`1&lt;object&gt; ModuleList" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.PSModuleInfo.ModuleList" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ModuleList As IEnumerable(Of Object)" />
+      <MemberSignature Language="F#" Value="member this.ModuleList : seq&lt;obj&gt;" Usage="System.Management.Automation.PSModuleInfo.ModuleList" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerable&lt;System.Object&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            ModuleList
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ModuleType">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.ModuleType ModuleType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Management.Automation.ModuleType ModuleType" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.PSModuleInfo.ModuleType" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ModuleType As ModuleType" />
+      <MemberSignature Language="F#" Value="member this.ModuleType : System.Management.Automation.ModuleType" Usage="System.Management.Automation.PSModuleInfo.ModuleType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.ModuleType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            True if the module was compiled (i.e. a .DLL) instead of
+            being in PowerShell script...
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public string Name { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.PSModuleInfo.Name" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Name As String" />
+      <MemberSignature Language="F#" Value="member this.Name : string" Usage="System.Management.Automation.PSModuleInfo.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The name of this module.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NestedModules">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.ReadOnlyCollection&lt;System.Management.Automation.PSModuleInfo&gt; NestedModules { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ObjectModel.ReadOnlyCollection`1&lt;class System.Management.Automation.PSModuleInfo&gt; NestedModules" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.PSModuleInfo.NestedModules" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property NestedModules As ReadOnlyCollection(Of PSModuleInfo)" />
+      <MemberSignature Language="F#" Value="member this.NestedModules : System.Collections.ObjectModel.ReadOnlyCollection&lt;System.Management.Automation.PSModuleInfo&gt;" Usage="System.Management.Automation.PSModuleInfo.NestedModules" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.ReadOnlyCollection&lt;System.Management.Automation.PSModuleInfo&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Returns the list of child modules of this module. This will only
+            be non-empty for module manifests.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NewBoundScriptBlock">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.ScriptBlock NewBoundScriptBlock (System.Management.Automation.ScriptBlock scriptBlockToBind);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Management.Automation.ScriptBlock NewBoundScriptBlock(class System.Management.Automation.ScriptBlock scriptBlockToBind) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.PSModuleInfo.NewBoundScriptBlock(System.Management.Automation.ScriptBlock)" />
+      <MemberSignature Language="VB.NET" Value="Public Function NewBoundScriptBlock (scriptBlockToBind As ScriptBlock) As ScriptBlock" />
+      <MemberSignature Language="F#" Value="member this.NewBoundScriptBlock : System.Management.Automation.ScriptBlock -&gt; System.Management.Automation.ScriptBlock" Usage="pSModuleInfo.NewBoundScriptBlock scriptBlockToBind" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.ScriptBlock</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="scriptBlockToBind" Type="System.Management.Automation.ScriptBlock" />
+      </Parameters>
+      <Docs>
+        <param name="scriptBlockToBind">The original scriptblock</param>
+        <summary>
+            Returns a new scriptblock bound to this module instance.
+            </summary>
+        <returns>The new bound scriptblock</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnRemove">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.ScriptBlock OnRemove { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Management.Automation.ScriptBlock OnRemove" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.PSModuleInfo.OnRemove" />
+      <MemberSignature Language="VB.NET" Value="Public Property OnRemove As ScriptBlock" />
+      <MemberSignature Language="F#" Value="member this.OnRemove : System.Management.Automation.ScriptBlock with get, set" Usage="System.Management.Automation.PSModuleInfo.OnRemove" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.ScriptBlock</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Optional script that is going to be called just before Remove-Module cmdlet removes the module
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Path">
+      <MemberSignature Language="C#" Value="public string Path { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Path" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.PSModuleInfo.Path" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Path As String" />
+      <MemberSignature Language="F#" Value="member this.Path : string" Usage="System.Management.Automation.PSModuleInfo.Path" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The path to the file that defined this module...
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PowerShellHostName">
+      <MemberSignature Language="C#" Value="public string PowerShellHostName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string PowerShellHostName" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.PSModuleInfo.PowerShellHostName" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property PowerShellHostName As String" />
+      <MemberSignature Language="F#" Value="member this.PowerShellHostName : string" Usage="System.Management.Automation.PSModuleInfo.PowerShellHostName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            PowerShell Host Name
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PowerShellHostVersion">
+      <MemberSignature Language="C#" Value="public Version PowerShellHostVersion { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Version PowerShellHostVersion" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.PSModuleInfo.PowerShellHostVersion" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property PowerShellHostVersion As Version" />
+      <MemberSignature Language="F#" Value="member this.PowerShellHostVersion : Version" Usage="System.Management.Automation.PSModuleInfo.PowerShellHostVersion" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Version</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            PowerShell Host Version
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PowerShellVersion">
+      <MemberSignature Language="C#" Value="public Version PowerShellVersion { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Version PowerShellVersion" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.PSModuleInfo.PowerShellVersion" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property PowerShellVersion As Version" />
+      <MemberSignature Language="F#" Value="member this.PowerShellVersion : Version" Usage="System.Management.Automation.PSModuleInfo.PowerShellVersion" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Version</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            PowerShell Version
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Prefix">
+      <MemberSignature Language="C#" Value="public string Prefix { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Prefix" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.PSModuleInfo.Prefix" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Prefix As String" />
+      <MemberSignature Language="F#" Value="member this.Prefix : string" Usage="System.Management.Automation.PSModuleInfo.Prefix" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Prefix
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PrivateData">
+      <MemberSignature Language="C#" Value="public object PrivateData { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object PrivateData" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.PSModuleInfo.PrivateData" />
+      <MemberSignature Language="VB.NET" Value="Public Property PrivateData As Object" />
+      <MemberSignature Language="F#" Value="member this.PrivateData : obj with get, set" Usage="System.Management.Automation.PSModuleInfo.PrivateData" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            This value is set from the PrivateData member in the module manifest.
+            It allows implementor specific data to be passed to the module
+            via the manifest file.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ProcessorArchitecture">
+      <MemberSignature Language="C#" Value="public System.Reflection.ProcessorArchitecture ProcessorArchitecture { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Reflection.ProcessorArchitecture ProcessorArchitecture" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.PSModuleInfo.ProcessorArchitecture" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ProcessorArchitecture As ProcessorArchitecture" />
+      <MemberSignature Language="F#" Value="member this.ProcessorArchitecture : System.Reflection.ProcessorArchitecture" Usage="System.Management.Automation.PSModuleInfo.ProcessorArchitecture" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.ProcessorArchitecture</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Processor Architecture
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ProjectUri">
+      <MemberSignature Language="C#" Value="public Uri ProjectUri { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Uri ProjectUri" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.PSModuleInfo.ProjectUri" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ProjectUri As Uri" />
+      <MemberSignature Language="F#" Value="member this.ProjectUri : Uri" Usage="System.Management.Automation.PSModuleInfo.ProjectUri" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Uri</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            ProjectUri of this module.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReleaseNotes">
+      <MemberSignature Language="C#" Value="public string ReleaseNotes { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ReleaseNotes" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.PSModuleInfo.ReleaseNotes" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ReleaseNotes As String" />
+      <MemberSignature Language="F#" Value="member this.ReleaseNotes : string" Usage="System.Management.Automation.PSModuleInfo.ReleaseNotes" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            ReleaseNotes of this module.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RepositorySourceLocation">
+      <MemberSignature Language="C#" Value="public Uri RepositorySourceLocation { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Uri RepositorySourceLocation" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.PSModuleInfo.RepositorySourceLocation" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property RepositorySourceLocation As Uri" />
+      <MemberSignature Language="F#" Value="member this.RepositorySourceLocation : Uri" Usage="System.Management.Automation.PSModuleInfo.RepositorySourceLocation" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Uri</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Repository SourceLocation of this module.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RequiredAssemblies">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IEnumerable&lt;string&gt; RequiredAssemblies { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IEnumerable`1&lt;string&gt; RequiredAssemblies" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.PSModuleInfo.RequiredAssemblies" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property RequiredAssemblies As IEnumerable(Of String)" />
+      <MemberSignature Language="F#" Value="member this.RequiredAssemblies : seq&lt;string&gt;" Usage="System.Management.Automation.PSModuleInfo.RequiredAssemblies" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerable&lt;System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Required Assemblies
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RequiredModules">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.ReadOnlyCollection&lt;System.Management.Automation.PSModuleInfo&gt; RequiredModules { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ObjectModel.ReadOnlyCollection`1&lt;class System.Management.Automation.PSModuleInfo&gt; RequiredModules" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.PSModuleInfo.RequiredModules" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property RequiredModules As ReadOnlyCollection(Of PSModuleInfo)" />
+      <MemberSignature Language="F#" Value="member this.RequiredModules : System.Collections.ObjectModel.ReadOnlyCollection&lt;System.Management.Automation.PSModuleInfo&gt;" Usage="System.Management.Automation.PSModuleInfo.RequiredModules" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.ReadOnlyCollection&lt;System.Management.Automation.PSModuleInfo&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Returns the list of required modules of this module. This will only
+            be non-empty for module manifests.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RootModule">
+      <MemberSignature Language="C#" Value="public string RootModule { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string RootModule" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.PSModuleInfo.RootModule" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property RootModule As String" />
+      <MemberSignature Language="F#" Value="member this.RootModule : string" Usage="System.Management.Automation.PSModuleInfo.RootModule" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Root Module
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Scripts">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IEnumerable&lt;string&gt; Scripts { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IEnumerable`1&lt;string&gt; Scripts" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.PSModuleInfo.Scripts" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Scripts As IEnumerable(Of String)" />
+      <MemberSignature Language="F#" Value="member this.Scripts : seq&lt;string&gt;" Usage="System.Management.Automation.PSModuleInfo.Scripts" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerable&lt;System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Scripts to Process
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SessionState">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.SessionState SessionState { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Management.Automation.SessionState SessionState" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.PSModuleInfo.SessionState" />
+      <MemberSignature Language="VB.NET" Value="Public Property SessionState As SessionState" />
+      <MemberSignature Language="F#" Value="member this.SessionState : System.Management.Automation.SessionState with get, set" Usage="System.Management.Automation.PSModuleInfo.SessionState" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.SessionState</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The session state instance associated with this module.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Tags">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IEnumerable&lt;string&gt; Tags { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IEnumerable`1&lt;string&gt; Tags" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.PSModuleInfo.Tags" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Tags As IEnumerable(Of String)" />
+      <MemberSignature Language="F#" Value="member this.Tags : seq&lt;string&gt;" Usage="System.Management.Automation.PSModuleInfo.Tags" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerable&lt;System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Tags of this module.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.PSModuleInfo.ToString" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Function ToString () As String" />
+      <MemberSignature Language="F#" Value="override this.ToString : unit -&gt; string" Usage="pSModuleInfo.ToString " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            ToString() implementation which returns the name of the module.
+            </summary>
+        <returns>The name of the module</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UseAppDomainLevelModuleCache">
+      <MemberSignature Language="C#" Value="public static bool UseAppDomainLevelModuleCache { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property bool UseAppDomainLevelModuleCache" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.PSModuleInfo.UseAppDomainLevelModuleCache" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Property UseAppDomainLevelModuleCache As Boolean" />
+      <MemberSignature Language="F#" Value="member this.UseAppDomainLevelModuleCache : bool with get, set" Usage="System.Management.Automation.PSModuleInfo.UseAppDomainLevelModuleCache" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Enables or disables the appdomain module path cache
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Version">
+      <MemberSignature Language="C#" Value="public Version Version { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Version Version" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.PSModuleInfo.Version" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Version As Version" />
+      <MemberSignature Language="F#" Value="member this.Version : Version" Usage="System.Management.Automation.PSModuleInfo.Version" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Version</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The version of this module
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

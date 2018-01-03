@@ -1,0 +1,95 @@
+﻿<Type Name="ReturnStatementAst" FullName="System.Management.Automation.Language.ReturnStatementAst">
+  <TypeSignature Language="C#" Value="public class ReturnStatementAst : System.Management.Automation.Language.StatementAst" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ReturnStatementAst extends System.Management.Automation.Language.StatementAst" />
+  <TypeSignature Language="DocId" Value="T:System.Management.Automation.Language.ReturnStatementAst" />
+  <TypeSignature Language="VB.NET" Value="Public Class ReturnStatementAst&#xA;Inherits StatementAst" />
+  <TypeSignature Language="F#" Value="type ReturnStatementAst = class&#xA;    inherit StatementAst" />
+  <AssemblyInfo>
+    <AssemblyName>System.Management.Automation</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Management.Automation.Language.StatementAst</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            The ast representing the return statement.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ReturnStatementAst (System.Management.Automation.Language.IScriptExtent extent, System.Management.Automation.Language.PipelineBaseAst pipeline);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Management.Automation.Language.IScriptExtent extent, class System.Management.Automation.Language.PipelineBaseAst pipeline) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Language.ReturnStatementAst.#ctor(System.Management.Automation.Language.IScriptExtent,System.Management.Automation.Language.PipelineBaseAst)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (extent As IScriptExtent, pipeline As PipelineBaseAst)" />
+      <MemberSignature Language="F#" Value="new System.Management.Automation.Language.ReturnStatementAst : System.Management.Automation.Language.IScriptExtent * System.Management.Automation.Language.PipelineBaseAst -&gt; System.Management.Automation.Language.ReturnStatementAst" Usage="new System.Management.Automation.Language.ReturnStatementAst (extent, pipeline)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="extent" Type="System.Management.Automation.Language.IScriptExtent" />
+        <Parameter Name="pipeline" Type="System.Management.Automation.Language.PipelineBaseAst" />
+      </Parameters>
+      <Docs>
+        <param name="extent">The extent of the statement including the optional return value.</param>
+        <param name="pipeline">The optional return value.</param>
+        <summary>
+            Construct a return statement.
+            </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.Management.Automation.PSArgumentNullException">
+            If <paramref name="extent" /> is null.
+            </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Copy">
+      <MemberSignature Language="C#" Value="public override System.Management.Automation.Language.Ast Copy ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Management.Automation.Language.Ast Copy() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Language.ReturnStatementAst.Copy" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Function Copy () As Ast" />
+      <MemberSignature Language="F#" Value="override this.Copy : unit -&gt; System.Management.Automation.Language.Ast" Usage="returnStatementAst.Copy " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.Language.Ast</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Copy the ReturnStatementAst instance
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Pipeline">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.Language.PipelineBaseAst Pipeline { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Management.Automation.Language.PipelineBaseAst Pipeline" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.Language.ReturnStatementAst.Pipeline" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Pipeline As PipelineBaseAst" />
+      <MemberSignature Language="F#" Value="member this.Pipeline : System.Management.Automation.Language.PipelineBaseAst" Usage="System.Management.Automation.Language.ReturnStatementAst.Pipeline" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.Language.PipelineBaseAst</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The pipeline specified in the return statement, or null if none was specified.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

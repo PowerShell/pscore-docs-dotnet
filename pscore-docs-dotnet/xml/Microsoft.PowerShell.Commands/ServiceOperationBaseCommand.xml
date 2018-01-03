@@ -1,0 +1,131 @@
+﻿<Type Name="ServiceOperationBaseCommand" FullName="Microsoft.PowerShell.Commands.ServiceOperationBaseCommand">
+  <TypeSignature Language="C#" Value="public abstract class ServiceOperationBaseCommand : Microsoft.PowerShell.Commands.MultipleServiceCommandBase" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit ServiceOperationBaseCommand extends Microsoft.PowerShell.Commands.MultipleServiceCommandBase" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.PowerShell.Commands.ServiceOperationBaseCommand" />
+  <TypeSignature Language="VB.NET" Value="Public MustInherit Class ServiceOperationBaseCommand&#xA;Inherits MultipleServiceCommandBase" />
+  <TypeSignature Language="F#" Value="type ServiceOperationBaseCommand = class&#xA;    inherit MultipleServiceCommandBase" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.PowerShell.Commands.Management</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Microsoft.PowerShell.Commands.MultipleServiceCommandBase</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            This class implements the base for service commands which actually
+            act on the service(s).
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected ServiceOperationBaseCommand ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Commands.ServiceOperationBaseCommand.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Protected Sub New ()" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Commands.Management</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InputObject">
+      <MemberSignature Language="C#" Value="public System.ServiceProcess.ServiceController[] InputObject { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ServiceProcess.ServiceController[] InputObject" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.ServiceOperationBaseCommand.InputObject" />
+      <MemberSignature Language="VB.NET" Value="Public Property InputObject As ServiceController()" />
+      <MemberSignature Language="F#" Value="member this.InputObject : System.ServiceProcess.ServiceController[] with get, set" Usage="Microsoft.PowerShell.Commands.ServiceOperationBaseCommand.InputObject" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Commands.Management</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(Mandatory=true, ParameterSetName="InputObject", Position=0, ValueFromPipeline=true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.ValidateNotNullOrEmpty</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.ServiceProcess.ServiceController[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Service controller objects
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public string[] Name { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string[] Name" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.ServiceOperationBaseCommand.Name" />
+      <MemberSignature Language="VB.NET" Value="Public Property Name As String()" />
+      <MemberSignature Language="F#" Value="member this.Name : string[] with get, set" Usage="Microsoft.PowerShell.Commands.ServiceOperationBaseCommand.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Commands.Management</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Alias(Mono.Cecil.CustomAttributeArgument[])</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(Mandatory=true, ParameterSetName="Default", Position=0, ValueFromPipeline=true, ValueFromPipelineByPropertyName=true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            gets/sets an array of service names
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+            The ServiceName parameter is declared in subclasses,
+            since it is optional for GetService and mandatory otherwise.
+            </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PassThru">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.SwitchParameter PassThru { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Management.Automation.SwitchParameter PassThru" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.ServiceOperationBaseCommand.PassThru" />
+      <MemberSignature Language="VB.NET" Value="Public Property PassThru As SwitchParameter" />
+      <MemberSignature Language="F#" Value="member this.PassThru : System.Management.Automation.SwitchParameter with get, set" Usage="Microsoft.PowerShell.Commands.ServiceOperationBaseCommand.PassThru" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Commands.Management</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.SwitchParameter</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Specifies whether to write the objects successfully operated upon
+            to the success stream.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

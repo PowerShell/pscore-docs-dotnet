@@ -1,0 +1,151 @@
+﻿<Type Name="PSConsoleLoadException" FullName="System.Management.Automation.Runspaces.PSConsoleLoadException">
+  <TypeSignature Language="C#" Value="public class PSConsoleLoadException : SystemException, System.Management.Automation.IContainsErrorRecord" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable beforefieldinit PSConsoleLoadException extends System.SystemException implements class System.Management.Automation.IContainsErrorRecord" />
+  <TypeSignature Language="DocId" Value="T:System.Management.Automation.Runspaces.PSConsoleLoadException" />
+  <TypeSignature Language="VB.NET" Value="Public Class PSConsoleLoadException&#xA;Inherits SystemException&#xA;Implements IContainsErrorRecord" />
+  <TypeSignature Language="F#" Value="type PSConsoleLoadException = class&#xA;    inherit SystemException&#xA;    interface IContainsErrorRecord" />
+  <AssemblyInfo>
+    <AssemblyName>System.Management.Automation</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.SystemException</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Management.Automation.IContainsErrorRecord</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>
+             Defines exception thrown when a PSSnapin was not able to load into current runspace.
+             </summary>
+    <remarks>To be added.</remarks>
+    <!--
+             Implementation of PSConsoleLoadException requires it to
+                 1. Implement IContainsErrorRecord,
+                 2. ISerializable
+            
+             Basic information for this exception includes,
+                 1. PSSnapin name
+                 2. Inner exception.
+             -->
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public PSConsoleLoadException ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Runspaces.PSConsoleLoadException.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New ()" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>
+            Initiate an instance of PSConsoleLoadException.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public PSConsoleLoadException (string message);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string message) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Runspaces.PSConsoleLoadException.#ctor(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (message As String)" />
+      <MemberSignature Language="F#" Value="new System.Management.Automation.Runspaces.PSConsoleLoadException : string -&gt; System.Management.Automation.Runspaces.PSConsoleLoadException" Usage="new System.Management.Automation.Runspaces.PSConsoleLoadException message" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="message">Error message</param>
+        <summary>
+            Initiate an instance of PSConsoleLoadException.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public PSConsoleLoadException (string message, Exception innerException);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string message, class System.Exception innerException) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Runspaces.PSConsoleLoadException.#ctor(System.String,System.Exception)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (message As String, innerException As Exception)" />
+      <MemberSignature Language="F#" Value="new System.Management.Automation.Runspaces.PSConsoleLoadException : string * Exception -&gt; System.Management.Automation.Runspaces.PSConsoleLoadException" Usage="new System.Management.Automation.Runspaces.PSConsoleLoadException (message, innerException)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+        <Parameter Name="innerException" Type="System.Exception" />
+      </Parameters>
+      <Docs>
+        <param name="message">Error message</param>
+        <param name="innerException">Inner exception</param>
+        <summary>
+            Initiate an instance of PSConsoleLoadException.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ErrorRecord">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.ErrorRecord ErrorRecord { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Management.Automation.ErrorRecord ErrorRecord" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.Runspaces.PSConsoleLoadException.ErrorRecord" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ErrorRecord As ErrorRecord" />
+      <MemberSignature Language="F#" Value="member this.ErrorRecord : System.Management.Automation.ErrorRecord" Usage="System.Management.Automation.Runspaces.PSConsoleLoadException.ErrorRecord" />
+      <MemberType>Property</MemberType>
+      <Implements>
+        <InterfaceMember>P:System.Management.Automation.IContainsErrorRecord.ErrorRecord</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.ErrorRecord</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets error record embedded in this exception.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+        <!--
+            This property is required as part of IErrorRecordContainer
+            interface.
+            -->
+      </Docs>
+    </Member>
+    <Member MemberName="Message">
+      <MemberSignature Language="C#" Value="public override string Message { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Message" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.Runspaces.PSConsoleLoadException.Message" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides ReadOnly Property Message As String" />
+      <MemberSignature Language="F#" Value="member this.Message : string" Usage="System.Management.Automation.Runspaces.PSConsoleLoadException.Message" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets message for this exception.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

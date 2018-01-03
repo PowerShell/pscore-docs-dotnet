@@ -1,0 +1,72 @@
+﻿<Type Name="CommandBaseAst" FullName="System.Management.Automation.Language.CommandBaseAst">
+  <TypeSignature Language="C#" Value="public abstract class CommandBaseAst : System.Management.Automation.Language.StatementAst" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit CommandBaseAst extends System.Management.Automation.Language.StatementAst" />
+  <TypeSignature Language="DocId" Value="T:System.Management.Automation.Language.CommandBaseAst" />
+  <TypeSignature Language="VB.NET" Value="Public MustInherit Class CommandBaseAst&#xA;Inherits StatementAst" />
+  <TypeSignature Language="F#" Value="type CommandBaseAst = class&#xA;    inherit StatementAst" />
+  <AssemblyInfo>
+    <AssemblyName>System.Management.Automation</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Management.Automation.Language.StatementAst</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            An abstract base class for a command and an expression wrapper that allows an expression as a command in a pipeline.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected CommandBaseAst (System.Management.Automation.Language.IScriptExtent extent, System.Collections.Generic.IEnumerable&lt;System.Management.Automation.Language.RedirectionAst&gt; redirections);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(class System.Management.Automation.Language.IScriptExtent extent, class System.Collections.Generic.IEnumerable`1&lt;class System.Management.Automation.Language.RedirectionAst&gt; redirections) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Language.CommandBaseAst.#ctor(System.Management.Automation.Language.IScriptExtent,System.Collections.Generic.IEnumerable{System.Management.Automation.Language.RedirectionAst})" />
+      <MemberSignature Language="VB.NET" Value="Protected Sub New (extent As IScriptExtent, redirections As IEnumerable(Of RedirectionAst))" />
+      <MemberSignature Language="F#" Value="new System.Management.Automation.Language.CommandBaseAst : System.Management.Automation.Language.IScriptExtent * seq&lt;System.Management.Automation.Language.RedirectionAst&gt; -&gt; System.Management.Automation.Language.CommandBaseAst" Usage="new System.Management.Automation.Language.CommandBaseAst (extent, redirections)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="extent" Type="System.Management.Automation.Language.IScriptExtent" />
+        <Parameter Name="redirections" Type="System.Collections.Generic.IEnumerable&lt;System.Management.Automation.Language.RedirectionAst&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="extent">The extent of the command.</param>
+        <param name="redirections">The redirections for the command, may be null.</param>
+        <summary>
+            Initialize the common fields of a command.
+            </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.Management.Automation.PSArgumentNullException">
+            If <paramref name="extent" /> is null.
+            </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Redirections">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.ReadOnlyCollection&lt;System.Management.Automation.Language.RedirectionAst&gt; Redirections { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ObjectModel.ReadOnlyCollection`1&lt;class System.Management.Automation.Language.RedirectionAst&gt; Redirections" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.Language.CommandBaseAst.Redirections" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Redirections As ReadOnlyCollection(Of RedirectionAst)" />
+      <MemberSignature Language="F#" Value="member this.Redirections : System.Collections.ObjectModel.ReadOnlyCollection&lt;System.Management.Automation.Language.RedirectionAst&gt;" Usage="System.Management.Automation.Language.CommandBaseAst.Redirections" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.ReadOnlyCollection&lt;System.Management.Automation.Language.RedirectionAst&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The possibly empty collection of redirections for this command.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

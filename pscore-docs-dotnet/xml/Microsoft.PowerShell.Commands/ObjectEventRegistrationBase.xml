@@ -1,0 +1,316 @@
+﻿<Type Name="ObjectEventRegistrationBase" FullName="Microsoft.PowerShell.Commands.ObjectEventRegistrationBase">
+  <TypeSignature Language="C#" Value="public abstract class ObjectEventRegistrationBase : System.Management.Automation.PSCmdlet" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit ObjectEventRegistrationBase extends System.Management.Automation.PSCmdlet" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.PowerShell.Commands.ObjectEventRegistrationBase" />
+  <TypeSignature Language="VB.NET" Value="Public MustInherit Class ObjectEventRegistrationBase&#xA;Inherits PSCmdlet" />
+  <TypeSignature Language="F#" Value="type ObjectEventRegistrationBase = class&#xA;    inherit PSCmdlet" />
+  <AssemblyInfo>
+    <AssemblyName>System.Management.Automation</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Management.Automation.PSCmdlet</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Base class for object-based event registration.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected ObjectEventRegistrationBase ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Commands.ObjectEventRegistrationBase.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Protected Sub New ()" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Action">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.ScriptBlock Action { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Management.Automation.ScriptBlock Action" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.ObjectEventRegistrationBase.Action" />
+      <MemberSignature Language="VB.NET" Value="Public Property Action As ScriptBlock" />
+      <MemberSignature Language="F#" Value="member this.Action : System.Management.Automation.ScriptBlock with get, set" Usage="Microsoft.PowerShell.Commands.ObjectEventRegistrationBase.Action" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(Position=101)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.ScriptBlock</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Parameter for any action to be invoked when the event arrives
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginProcessing">
+      <MemberSignature Language="C#" Value="protected override void BeginProcessing ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void BeginProcessing() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Commands.ObjectEventRegistrationBase.BeginProcessing" />
+      <MemberSignature Language="VB.NET" Value="Protected Overrides Sub BeginProcessing ()" />
+      <MemberSignature Language="F#" Value="override this.BeginProcessing : unit -&gt; unit" Usage="objectEventRegistrationBase.BeginProcessing " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Check arguments
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EndProcessing">
+      <MemberSignature Language="C#" Value="protected override void EndProcessing ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void EndProcessing() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Commands.ObjectEventRegistrationBase.EndProcessing" />
+      <MemberSignature Language="VB.NET" Value="Protected Overrides Sub EndProcessing ()" />
+      <MemberSignature Language="F#" Value="override this.EndProcessing : unit -&gt; unit" Usage="objectEventRegistrationBase.EndProcessing " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Subscribe to the event on the object
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Forward">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.SwitchParameter Forward { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Management.Automation.SwitchParameter Forward" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.ObjectEventRegistrationBase.Forward" />
+      <MemberSignature Language="VB.NET" Value="Public Property Forward As SwitchParameter" />
+      <MemberSignature Language="F#" Value="member this.Forward : System.Management.Automation.SwitchParameter with get, set" Usage="Microsoft.PowerShell.Commands.ObjectEventRegistrationBase.Forward" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.SwitchParameter</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Parameter for the flag that determines whether this
+            subscription will forward its events to the PowerShell client during remote executions
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetSourceObject">
+      <MemberSignature Language="C#" Value="protected abstract object GetSourceObject ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance object GetSourceObject() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Commands.ObjectEventRegistrationBase.GetSourceObject" />
+      <MemberSignature Language="VB.NET" Value="Protected MustOverride Function GetSourceObject () As Object" />
+      <MemberSignature Language="F#" Value="abstract member GetSourceObject : unit -&gt; obj" Usage="objectEventRegistrationBase.GetSourceObject " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Returns the object that generates events to be monitored
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetSourceObjectEventName">
+      <MemberSignature Language="C#" Value="protected abstract string GetSourceObjectEventName ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance string GetSourceObjectEventName() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Commands.ObjectEventRegistrationBase.GetSourceObjectEventName" />
+      <MemberSignature Language="VB.NET" Value="Protected MustOverride Function GetSourceObjectEventName () As String" />
+      <MemberSignature Language="F#" Value="abstract member GetSourceObjectEventName : unit -&gt; string" Usage="objectEventRegistrationBase.GetSourceObjectEventName " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Returns the event name to be monitored on the input object
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MaxTriggerCount">
+      <MemberSignature Language="C#" Value="public int MaxTriggerCount { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 MaxTriggerCount" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.ObjectEventRegistrationBase.MaxTriggerCount" />
+      <MemberSignature Language="VB.NET" Value="Public Property MaxTriggerCount As Integer" />
+      <MemberSignature Language="F#" Value="member this.MaxTriggerCount : int with get, set" Usage="Microsoft.PowerShell.Commands.ObjectEventRegistrationBase.MaxTriggerCount" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Parameter to indicate that the subscriber should be auto-unregistered after being triggered for specified times.
+            If the value is equal or less than zero, there is no limit on the number of times the event can be triggered without being unregistered
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MessageData">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.PSObject MessageData { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Management.Automation.PSObject MessageData" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.ObjectEventRegistrationBase.MessageData" />
+      <MemberSignature Language="VB.NET" Value="Public Property MessageData As PSObject" />
+      <MemberSignature Language="F#" Value="member this.MessageData : System.Management.Automation.PSObject with get, set" Usage="Microsoft.PowerShell.Commands.ObjectEventRegistrationBase.MessageData" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.PSObject</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Parameter for additional data to be associated with this event subscription
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NewSubscriber">
+      <MemberSignature Language="C#" Value="protected System.Management.Automation.PSEventSubscriber NewSubscriber { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Management.Automation.PSEventSubscriber NewSubscriber" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.ObjectEventRegistrationBase.NewSubscriber" />
+      <MemberSignature Language="VB.NET" Value="Protected ReadOnly Property NewSubscriber As PSEventSubscriber" />
+      <MemberSignature Language="F#" Value="member this.NewSubscriber : System.Management.Automation.PSEventSubscriber" Usage="Microsoft.PowerShell.Commands.ObjectEventRegistrationBase.NewSubscriber" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.PSEventSubscriber</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the subscriber generated by this command
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SourceIdentifier">
+      <MemberSignature Language="C#" Value="public string SourceIdentifier { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string SourceIdentifier" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.ObjectEventRegistrationBase.SourceIdentifier" />
+      <MemberSignature Language="VB.NET" Value="Public Property SourceIdentifier As String" />
+      <MemberSignature Language="F#" Value="member this.SourceIdentifier : string with get, set" Usage="Microsoft.PowerShell.Commands.ObjectEventRegistrationBase.SourceIdentifier" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(Position=100)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Parameter for an identifier for this event subscription
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SupportEvent">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.SwitchParameter SupportEvent { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Management.Automation.SwitchParameter SupportEvent" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.ObjectEventRegistrationBase.SupportEvent" />
+      <MemberSignature Language="VB.NET" Value="Public Property SupportEvent As SwitchParameter" />
+      <MemberSignature Language="F#" Value="member this.SupportEvent : System.Management.Automation.SwitchParameter with get, set" Usage="Microsoft.PowerShell.Commands.ObjectEventRegistrationBase.SupportEvent" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.SwitchParameter</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Parameter for the flag that determines if this subscription is used to support
+            other subscriptions
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

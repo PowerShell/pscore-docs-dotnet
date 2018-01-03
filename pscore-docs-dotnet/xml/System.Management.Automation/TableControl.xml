@@ -1,0 +1,191 @@
+﻿<Type Name="TableControl" FullName="System.Management.Automation.TableControl">
+  <TypeSignature Language="C#" Value="public sealed class TableControl : System.Management.Automation.PSControl" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit TableControl extends System.Management.Automation.PSControl" />
+  <TypeSignature Language="DocId" Value="T:System.Management.Automation.TableControl" />
+  <TypeSignature Language="VB.NET" Value="Public NotInheritable Class TableControl&#xA;Inherits PSControl" />
+  <TypeSignature Language="F#" Value="type TableControl = class&#xA;    inherit PSControl" />
+  <AssemblyInfo>
+    <AssemblyName>System.Management.Automation</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Management.Automation.PSControl</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Defines a table control
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TableControl ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.TableControl.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New ()" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Public default constructor for TableControl</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TableControl (System.Management.Automation.TableControlRow tableControlRow);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Management.Automation.TableControlRow tableControlRow) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.TableControl.#ctor(System.Management.Automation.TableControlRow)" />
+      <MemberSignature Language="F#" Value="new System.Management.Automation.TableControl : System.Management.Automation.TableControlRow -&gt; System.Management.Automation.TableControl" Usage="new System.Management.Automation.TableControl tableControlRow" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="tableControlRow" Type="System.Management.Automation.TableControlRow" />
+      </Parameters>
+      <Docs>
+        <param name="tableControlRow"></param>
+        <summary>
+            public constructor for TableControl that only takes 'tableControlRows'.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TableControl (System.Management.Automation.TableControlRow tableControlRow, System.Collections.Generic.IEnumerable&lt;System.Management.Automation.TableControlColumnHeader&gt; tableControlColumnHeaders);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Management.Automation.TableControlRow tableControlRow, class System.Collections.Generic.IEnumerable`1&lt;class System.Management.Automation.TableControlColumnHeader&gt; tableControlColumnHeaders) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.TableControl.#ctor(System.Management.Automation.TableControlRow,System.Collections.Generic.IEnumerable{System.Management.Automation.TableControlColumnHeader})" />
+      <MemberSignature Language="F#" Value="new System.Management.Automation.TableControl : System.Management.Automation.TableControlRow * seq&lt;System.Management.Automation.TableControlColumnHeader&gt; -&gt; System.Management.Automation.TableControl" Usage="new System.Management.Automation.TableControl (tableControlRow, tableControlColumnHeaders)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="tableControlRow" Type="System.Management.Automation.TableControlRow" />
+        <Parameter Name="tableControlColumnHeaders" Type="System.Collections.Generic.IEnumerable&lt;System.Management.Automation.TableControlColumnHeader&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="tableControlRow"></param>
+        <param name="tableControlColumnHeaders"></param>
+        <summary>
+            public constructor for TableControl that takes both 'tableControlRows' and 'tableControlColumnHeaders'.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AutoSize">
+      <MemberSignature Language="C#" Value="public bool AutoSize { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool AutoSize" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.TableControl.AutoSize" />
+      <MemberSignature Language="VB.NET" Value="Public Property AutoSize As Boolean" />
+      <MemberSignature Language="F#" Value="member this.AutoSize : bool with get, set" Usage="System.Management.Automation.TableControl.AutoSize" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>When true, column widths are calculated based on more than the first object.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Create">
+      <MemberSignature Language="C#" Value="public static System.Management.Automation.TableControlBuilder Create (bool outOfBand = false, bool autoSize = false, bool hideTableHeaders = false);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Management.Automation.TableControlBuilder Create(bool outOfBand, bool autoSize, bool hideTableHeaders) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.TableControl.Create(System.Boolean,System.Boolean,System.Boolean)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function Create (Optional outOfBand As Boolean = false, Optional autoSize As Boolean = false, Optional hideTableHeaders As Boolean = false) As TableControlBuilder" />
+      <MemberSignature Language="F#" Value="static member Create : bool * bool * bool -&gt; System.Management.Automation.TableControlBuilder" Usage="System.Management.Automation.TableControl.Create (outOfBand, autoSize, hideTableHeaders)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.TableControlBuilder</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="outOfBand" Type="System.Boolean" />
+        <Parameter Name="autoSize" Type="System.Boolean" />
+        <Parameter Name="hideTableHeaders" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="outOfBand">To be added.</param>
+        <param name="autoSize">To be added.</param>
+        <param name="hideTableHeaders">To be added.</param>
+        <summary>Create a default TableControl</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Headers">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.List&lt;System.Management.Automation.TableControlColumnHeader&gt; Headers { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.List`1&lt;class System.Management.Automation.TableControlColumnHeader&gt; Headers" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.TableControl.Headers" />
+      <MemberSignature Language="VB.NET" Value="Public Property Headers As List(Of TableControlColumnHeader)" />
+      <MemberSignature Language="F#" Value="member this.Headers : System.Collections.Generic.List&lt;System.Management.Automation.TableControlColumnHeader&gt; with get, set" Usage="System.Management.Automation.TableControl.Headers" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.List&lt;System.Management.Automation.TableControlColumnHeader&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Collection of column header definitions for this table control</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HideTableHeaders">
+      <MemberSignature Language="C#" Value="public bool HideTableHeaders { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool HideTableHeaders" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.TableControl.HideTableHeaders" />
+      <MemberSignature Language="VB.NET" Value="Public Property HideTableHeaders As Boolean" />
+      <MemberSignature Language="F#" Value="member this.HideTableHeaders : bool with get, set" Usage="System.Management.Automation.TableControl.HideTableHeaders" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>When true, table headers are not displayed</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Rows">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.List&lt;System.Management.Automation.TableControlRow&gt; Rows { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.List`1&lt;class System.Management.Automation.TableControlRow&gt; Rows" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.TableControl.Rows" />
+      <MemberSignature Language="VB.NET" Value="Public Property Rows As List(Of TableControlRow)" />
+      <MemberSignature Language="F#" Value="member this.Rows : System.Collections.Generic.List&lt;System.Management.Automation.TableControlRow&gt; with get, set" Usage="System.Management.Automation.TableControl.Rows" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.List&lt;System.Management.Automation.TableControlRow&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Collection of row definitions for this table control</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

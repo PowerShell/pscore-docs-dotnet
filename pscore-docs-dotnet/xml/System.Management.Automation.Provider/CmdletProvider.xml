@@ -1,0 +1,1036 @@
+﻿<Type Name="CmdletProvider" FullName="System.Management.Automation.Provider.CmdletProvider">
+  <TypeSignature Language="C#" Value="public abstract class CmdletProvider : System.Management.Automation.IResourceSupplier" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit CmdletProvider extends System.Object implements class System.Management.Automation.IResourceSupplier" />
+  <TypeSignature Language="DocId" Value="T:System.Management.Automation.Provider.CmdletProvider" />
+  <TypeSignature Language="VB.NET" Value="Public MustInherit Class CmdletProvider&#xA;Implements IResourceSupplier" />
+  <TypeSignature Language="F#" Value="type CmdletProvider = class&#xA;    interface IResourceSupplier" />
+  <AssemblyInfo>
+    <AssemblyName>System.Management.Automation</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Management.Automation.IResourceSupplier</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>
+             The base class for Cmdlet provider.
+             </summary>
+    <remarks>
+             Although it is possible to derive from this base class to implement a Cmdlet Provider, in most
+             cases one should derive from <see cref="T:System.Management.Automation.Provider.ItemCmdletProvider" />,
+             <see cref="T:System.Management.Automation.Provider.ContainerCmdletProvider" />, or
+             <see cref="T:System.Management.Automation.Provider.NavigationCmdletProvider" /></remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected CmdletProvider ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Provider.CmdletProvider.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Protected Sub New ()" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Credential">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.PSCredential Credential { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Management.Automation.PSCredential Credential" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.Provider.CmdletProvider.Credential" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Credential As PSCredential" />
+      <MemberSignature Language="F#" Value="member this.Credential : System.Management.Automation.PSCredential" Usage="System.Management.Automation.Provider.CmdletProvider.Credential" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.PSCredential</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the credentials under which the operation should run.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CurrentPSTransaction">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.PSTransactionContext CurrentPSTransaction { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Management.Automation.PSTransactionContext CurrentPSTransaction" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.Provider.CmdletProvider.CurrentPSTransaction" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property CurrentPSTransaction As PSTransactionContext" />
+      <MemberSignature Language="F#" Value="member this.CurrentPSTransaction : System.Management.Automation.PSTransactionContext" Usage="System.Management.Automation.Provider.CmdletProvider.CurrentPSTransaction" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.PSTransactionContext</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets an object that surfaces the current PowerShell transaction.
+            When this object is disposed, PowerShell resets the active transaction
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DynamicParameters">
+      <MemberSignature Language="C#" Value="protected object DynamicParameters { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object DynamicParameters" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.Provider.CmdletProvider.DynamicParameters" />
+      <MemberSignature Language="VB.NET" Value="Protected ReadOnly Property DynamicParameters As Object" />
+      <MemberSignature Language="F#" Value="member this.DynamicParameters : obj" Usage="System.Management.Automation.Provider.CmdletProvider.DynamicParameters" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The dynamic parameters object populated with the values as specified
+            by the user.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Exclude">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.Collection&lt;string&gt; Exclude { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ObjectModel.Collection`1&lt;string&gt; Exclude" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.Provider.CmdletProvider.Exclude" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Exclude As Collection(Of String)" />
+      <MemberSignature Language="F#" Value="member this.Exclude : System.Collections.ObjectModel.Collection&lt;string&gt;" Usage="System.Management.Automation.Provider.CmdletProvider.Exclude" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.Collection&lt;System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the exclude wildcard patterns which is used to determine which items
+            will be excluded when taking an action.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Filter">
+      <MemberSignature Language="C#" Value="public string Filter { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Filter" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.Provider.CmdletProvider.Filter" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Filter As String" />
+      <MemberSignature Language="F#" Value="member this.Filter : string" Usage="System.Management.Automation.Provider.CmdletProvider.Filter" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the provider specific filter that was supplied by the caller.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Force">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.SwitchParameter Force { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Management.Automation.SwitchParameter Force" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.Provider.CmdletProvider.Force" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Force As SwitchParameter" />
+      <MemberSignature Language="F#" Value="member this.Force : System.Management.Automation.SwitchParameter" Usage="System.Management.Automation.Provider.CmdletProvider.Force" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.SwitchParameter</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+             Gets the force property.
+             </summary>
+        <value>To be added.</value>
+        <remarks>
+             Gives the provider guidance on how vigorous it should be about performing
+             the operation. If true, the provider should do everything possible to perform
+             the operation. If false, the provider should attempt the operation but allow
+             even simple errors to terminate the operation.
+             For example, if the user tries to copy a file to a path that already exists and
+             the destination is read-only, if force is true, the provider should copy over
+             the existing read-only file. If force is false, the provider should write an error.
+             </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetResourceString">
+      <MemberSignature Language="C#" Value="public virtual string GetResourceString (string baseName, string resourceId);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance string GetResourceString(string baseName, string resourceId) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Provider.CmdletProvider.GetResourceString(System.String,System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function GetResourceString (baseName As String, resourceId As String) As String" />
+      <MemberSignature Language="F#" Value="abstract member GetResourceString : string * string -&gt; string&#xA;override this.GetResourceString : string * string -&gt; string" Usage="cmdletProvider.GetResourceString (baseName, resourceId)" />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.Management.Automation.IResourceSupplier.GetResourceString(System.String,System.String)</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="baseName" Type="System.String" />
+        <Parameter Name="resourceId" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="baseName">
+             the base resource name
+             </param>
+        <param name="resourceId">
+             the resource id
+             </param>
+        <summary>
+             Gets the resource string corresponding to baseName and
+             resourceId from the current assembly. You should override
+             this if you require a different behavior.
+             </summary>
+        <returns>
+             the resource string corresponding to baseName and resourceId
+             </returns>
+        <remarks>
+             When overriding this method, the resource string for the specified
+             resource should be retrieved from a localized resource assembly.
+             </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Host">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.Host.PSHost Host { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Management.Automation.Host.PSHost Host" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.Provider.CmdletProvider.Host" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Host As PSHost" />
+      <MemberSignature Language="F#" Value="member this.Host : System.Management.Automation.Host.PSHost" Usage="System.Management.Automation.Provider.CmdletProvider.Host" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.Host.PSHost</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the host interaction APIs.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Include">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.Collection&lt;string&gt; Include { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ObjectModel.Collection`1&lt;string&gt; Include" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.Provider.CmdletProvider.Include" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Include As Collection(Of String)" />
+      <MemberSignature Language="F#" Value="member this.Include : System.Collections.ObjectModel.Collection&lt;string&gt;" Usage="System.Management.Automation.Provider.CmdletProvider.Include" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.Collection&lt;System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the include wildcard patterns which is used to determine which items
+            will be included when taking an action.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InvokeCommand">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.CommandInvocationIntrinsics InvokeCommand { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Management.Automation.CommandInvocationIntrinsics InvokeCommand" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.Provider.CmdletProvider.InvokeCommand" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property InvokeCommand As CommandInvocationIntrinsics" />
+      <MemberSignature Language="F#" Value="member this.InvokeCommand : System.Management.Automation.CommandInvocationIntrinsics" Usage="System.Management.Automation.Provider.CmdletProvider.InvokeCommand" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.CommandInvocationIntrinsics</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the instance of the command invocation APIs for the current runspace.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InvokeProvider">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.ProviderIntrinsics InvokeProvider { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Management.Automation.ProviderIntrinsics InvokeProvider" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.Provider.CmdletProvider.InvokeProvider" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property InvokeProvider As ProviderIntrinsics" />
+      <MemberSignature Language="F#" Value="member this.InvokeProvider : System.Management.Automation.ProviderIntrinsics" Usage="System.Management.Automation.Provider.CmdletProvider.InvokeProvider" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.ProviderIntrinsics</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the instance of the provider interface APIs for the current runspace.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ProviderInfo">
+      <MemberSignature Language="C#" Value="protected internal System.Management.Automation.ProviderInfo ProviderInfo { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Management.Automation.ProviderInfo ProviderInfo" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.Provider.CmdletProvider.ProviderInfo" />
+      <MemberSignature Language="VB.NET" Value="Protected Friend ReadOnly Property ProviderInfo As ProviderInfo" />
+      <MemberSignature Language="F#" Value="member this.ProviderInfo : System.Management.Automation.ProviderInfo" Usage="System.Management.Automation.Provider.CmdletProvider.ProviderInfo" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.ProviderInfo</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+             The information about the provider that is stored in the runspace
+             on behalf of the provider.
+             </summary>
+        <value>To be added.</value>
+        <remarks>
+             If a derived type of ProviderInfo was returned from the Start method, it
+             will be set here in all subsequent calls to the provider.
+             </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PSDriveInfo">
+      <MemberSignature Language="C#" Value="protected System.Management.Automation.PSDriveInfo PSDriveInfo { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Management.Automation.PSDriveInfo PSDriveInfo" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.Provider.CmdletProvider.PSDriveInfo" />
+      <MemberSignature Language="VB.NET" Value="Protected ReadOnly Property PSDriveInfo As PSDriveInfo" />
+      <MemberSignature Language="F#" Value="member this.PSDriveInfo : System.Management.Automation.PSDriveInfo" Usage="System.Management.Automation.Provider.CmdletProvider.PSDriveInfo" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.PSDriveInfo</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The drive information associated with the context of the current operation.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SessionState">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.SessionState SessionState { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Management.Automation.SessionState SessionState" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.Provider.CmdletProvider.SessionState" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property SessionState As SessionState" />
+      <MemberSignature Language="F#" Value="member this.SessionState : System.Management.Automation.SessionState" Usage="System.Management.Automation.Provider.CmdletProvider.SessionState" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.SessionState</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the instance of session state for the current runspace.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ShouldContinue">
+      <MemberSignature Language="C#" Value="public bool ShouldContinue (string query, string caption);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool ShouldContinue(string query, string caption) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Provider.CmdletProvider.ShouldContinue(System.String,System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Function ShouldContinue (query As String, caption As String) As Boolean" />
+      <MemberSignature Language="F#" Value="member this.ShouldContinue : string * string -&gt; bool" Usage="cmdletProvider.ShouldContinue (query, caption)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="query" Type="System.String" />
+        <Parameter Name="caption" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="query">To be added.</param>
+        <param name="caption">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+        <Content contentref="System.Management.Automation.Cmdlet.ShouldContinue" />
+      </Docs>
+    </Member>
+    <Member MemberName="ShouldContinue">
+      <MemberSignature Language="C#" Value="public bool ShouldContinue (string query, string caption, ref bool yesToAll, ref bool noToAll);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool ShouldContinue(string query, string caption, bool&amp; yesToAll, bool&amp; noToAll) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Provider.CmdletProvider.ShouldContinue(System.String,System.String,System.Boolean@,System.Boolean@)" />
+      <MemberSignature Language="VB.NET" Value="Public Function ShouldContinue (query As String, caption As String, ByRef yesToAll As Boolean, ByRef noToAll As Boolean) As Boolean" />
+      <MemberSignature Language="F#" Value="member this.ShouldContinue : string * string *  *  -&gt; bool" Usage="cmdletProvider.ShouldContinue (query, caption, yesToAll, noToAll)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="query" Type="System.String" />
+        <Parameter Name="caption" Type="System.String" />
+        <Parameter Name="yesToAll" Type="System.Boolean&amp;" RefType="ref" />
+        <Parameter Name="noToAll" Type="System.Boolean&amp;" RefType="ref" />
+      </Parameters>
+      <Docs>
+        <param name="query">To be added.</param>
+        <param name="caption">To be added.</param>
+        <param name="yesToAll">To be added.</param>
+        <param name="noToAll">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+        <Content contentref="System.Management.Automation.Cmdlet.ShouldContinue" />
+      </Docs>
+    </Member>
+    <Member MemberName="ShouldProcess">
+      <MemberSignature Language="C#" Value="public bool ShouldProcess (string target);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool ShouldProcess(string target) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Provider.CmdletProvider.ShouldProcess(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Function ShouldProcess (target As String) As Boolean" />
+      <MemberSignature Language="F#" Value="member this.ShouldProcess : string -&gt; bool" Usage="cmdletProvider.ShouldProcess target" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="target" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="target">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+        <Content contentref="System.Management.Automation.Cmdlet.ShouldProcess" />
+      </Docs>
+    </Member>
+    <Member MemberName="ShouldProcess">
+      <MemberSignature Language="C#" Value="public bool ShouldProcess (string target, string action);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool ShouldProcess(string target, string action) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Provider.CmdletProvider.ShouldProcess(System.String,System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Function ShouldProcess (target As String, action As String) As Boolean" />
+      <MemberSignature Language="F#" Value="member this.ShouldProcess : string * string -&gt; bool" Usage="cmdletProvider.ShouldProcess (target, action)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="target" Type="System.String" />
+        <Parameter Name="action" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="target">To be added.</param>
+        <param name="action">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+        <Content contentref="System.Management.Automation.Cmdlet.ShouldProcess" />
+      </Docs>
+    </Member>
+    <Member MemberName="ShouldProcess">
+      <MemberSignature Language="C#" Value="public bool ShouldProcess (string verboseDescription, string verboseWarning, string caption);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool ShouldProcess(string verboseDescription, string verboseWarning, string caption) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Provider.CmdletProvider.ShouldProcess(System.String,System.String,System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Function ShouldProcess (verboseDescription As String, verboseWarning As String, caption As String) As Boolean" />
+      <MemberSignature Language="F#" Value="member this.ShouldProcess : string * string * string -&gt; bool" Usage="cmdletProvider.ShouldProcess (verboseDescription, verboseWarning, caption)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="verboseDescription" Type="System.String" />
+        <Parameter Name="verboseWarning" Type="System.String" />
+        <Parameter Name="caption" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="verboseDescription">To be added.</param>
+        <param name="verboseWarning">To be added.</param>
+        <param name="caption">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+        <Content contentref="System.Management.Automation.Cmdlet.ShouldProcess" />
+      </Docs>
+    </Member>
+    <Member MemberName="ShouldProcess">
+      <MemberSignature Language="C#" Value="public bool ShouldProcess (string verboseDescription, string verboseWarning, string caption, out System.Management.Automation.ShouldProcessReason shouldProcessReason);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool ShouldProcess(string verboseDescription, string verboseWarning, string caption, [out] valuetype System.Management.Automation.ShouldProcessReason&amp; shouldProcessReason) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Provider.CmdletProvider.ShouldProcess(System.String,System.String,System.String,System.Management.Automation.ShouldProcessReason@)" />
+      <MemberSignature Language="VB.NET" Value="Public Function ShouldProcess (verboseDescription As String, verboseWarning As String, caption As String, ByRef shouldProcessReason As ShouldProcessReason) As Boolean" />
+      <MemberSignature Language="F#" Value="member this.ShouldProcess : string * string * string *  -&gt; bool" Usage="cmdletProvider.ShouldProcess (verboseDescription, verboseWarning, caption, shouldProcessReason)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="verboseDescription" Type="System.String" />
+        <Parameter Name="verboseWarning" Type="System.String" />
+        <Parameter Name="caption" Type="System.String" />
+        <Parameter Name="shouldProcessReason" Type="System.Management.Automation.ShouldProcessReason&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="verboseDescription">To be added.</param>
+        <param name="verboseWarning">To be added.</param>
+        <param name="caption">To be added.</param>
+        <param name="shouldProcessReason">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+        <Content contentref="System.Management.Automation.Cmdlet.ShouldProcess" />
+      </Docs>
+    </Member>
+    <Member MemberName="Start">
+      <MemberSignature Language="C#" Value="protected virtual System.Management.Automation.ProviderInfo Start (System.Management.Automation.ProviderInfo providerInfo);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class System.Management.Automation.ProviderInfo Start(class System.Management.Automation.ProviderInfo providerInfo) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Provider.CmdletProvider.Start(System.Management.Automation.ProviderInfo)" />
+      <MemberSignature Language="F#" Value="abstract member Start : System.Management.Automation.ProviderInfo -&gt; System.Management.Automation.ProviderInfo&#xA;override this.Start : System.Management.Automation.ProviderInfo -&gt; System.Management.Automation.ProviderInfo" Usage="cmdletProvider.Start providerInfo" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.ProviderInfo</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="providerInfo" Type="System.Management.Automation.ProviderInfo" />
+      </Parameters>
+      <Docs>
+        <param name="providerInfo">
+             The information about the provider that is being started.
+             </param>
+        <summary>
+             Gives the provider the opportunity to initialize itself.
+             </summary>
+        <returns>To be added.</returns>
+        <remarks>
+             The default implementation returns the ProviderInfo instance that
+             was passed.
+            
+             To have session state maintain persisted data on behalf of the provider,
+             the provider should derive from <see cref="T:System.Management.Automation.ProviderInfo" />
+             and add any properties or
+             methods for the data it wishes to persist.  When Start gets called the
+             provider should construct an instance of its derived ProviderInfo using the
+             providerInfo that is passed in and return that new instance.
+             </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StartDynamicParameters">
+      <MemberSignature Language="C#" Value="protected virtual object StartDynamicParameters ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance object StartDynamicParameters() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Provider.CmdletProvider.StartDynamicParameters" />
+      <MemberSignature Language="VB.NET" Value="Protected Overridable Function StartDynamicParameters () As Object" />
+      <MemberSignature Language="F#" Value="abstract member StartDynamicParameters : unit -&gt; obj&#xA;override this.StartDynamicParameters : unit -&gt; obj" Usage="cmdletProvider.StartDynamicParameters " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+             Gets an object that defines the additional parameters for the Start implementation
+             for a provider.
+             </summary>
+        <returns>
+             Overrides of this method should return an object that has properties and fields decorated with
+             parsing attributes similar to a cmdlet class or a
+             <see cref="T:System.Management.Automation.RuntimeDefinedParameterDictionary" />.
+            
+             The default implementation returns null. (no additional parameters)
+             </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Stop">
+      <MemberSignature Language="C#" Value="protected virtual void Stop ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void Stop() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Provider.CmdletProvider.Stop" />
+      <MemberSignature Language="VB.NET" Value="Protected Overridable Sub Stop ()" />
+      <MemberSignature Language="F#" Value="abstract member Stop : unit -&gt; unit&#xA;override this.Stop : unit -&gt; unit" Usage="cmdletProvider.Stop " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+             Called by session state when the provider is being removed.
+             </summary>
+        <remarks>
+             A provider should override this method to free up any resources that the provider
+             was using.
+            
+             The default implementation does nothing.
+             </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Stopping">
+      <MemberSignature Language="C#" Value="public bool Stopping { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Stopping" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.Provider.CmdletProvider.Stopping" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Stopping As Boolean" />
+      <MemberSignature Language="F#" Value="member this.Stopping : bool" Usage="System.Management.Automation.Provider.CmdletProvider.Stopping" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Indicates whether stop has been requested on this provider.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StopProcessing">
+      <MemberSignature Language="C#" Value="protected internal virtual void StopProcessing ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig newslot virtual instance void StopProcessing() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Provider.CmdletProvider.StopProcessing" />
+      <MemberSignature Language="VB.NET" Value="Protected Friend Overridable Sub StopProcessing ()" />
+      <MemberSignature Language="F#" Value="abstract member StopProcessing : unit -&gt; unit&#xA;override this.StopProcessing : unit -&gt; unit" Usage="cmdletProvider.StopProcessing " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+        <Content contentref="System.Management.Automation.Cmdlet.StopProcessing" />
+      </Docs>
+    </Member>
+    <Member MemberName="ThrowTerminatingError">
+      <MemberSignature Language="C#" Value="public void ThrowTerminatingError (System.Management.Automation.ErrorRecord errorRecord);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void ThrowTerminatingError(class System.Management.Automation.ErrorRecord errorRecord) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Provider.CmdletProvider.ThrowTerminatingError(System.Management.Automation.ErrorRecord)" />
+      <MemberSignature Language="F#" Value="member this.ThrowTerminatingError : System.Management.Automation.ErrorRecord -&gt; unit" Usage="cmdletProvider.ThrowTerminatingError errorRecord" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="errorRecord" Type="System.Management.Automation.ErrorRecord" />
+      </Parameters>
+      <Docs>
+        <param name="errorRecord">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+        <Content contentref="System.Management.Automation.Cmdlet.ThrowTerminatingError" />
+      </Docs>
+    </Member>
+    <Member MemberName="TransactionAvailable">
+      <MemberSignature Language="C#" Value="public bool TransactionAvailable ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool TransactionAvailable() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Provider.CmdletProvider.TransactionAvailable" />
+      <MemberSignature Language="VB.NET" Value="Public Function TransactionAvailable () As Boolean" />
+      <MemberSignature Language="F#" Value="member this.TransactionAvailable : unit -&gt; bool" Usage="cmdletProvider.TransactionAvailable " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Returns true if a transaction is available and active.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteDebug">
+      <MemberSignature Language="C#" Value="public void WriteDebug (string text);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void WriteDebug(string text) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Provider.CmdletProvider.WriteDebug(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub WriteDebug (text As String)" />
+      <MemberSignature Language="F#" Value="member this.WriteDebug : string -&gt; unit" Usage="cmdletProvider.WriteDebug text" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="text" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="text">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+        <Content contentref="System.Management.Automation.Cmdlet.WriteDebug" />
+      </Docs>
+    </Member>
+    <Member MemberName="WriteError">
+      <MemberSignature Language="C#" Value="public void WriteError (System.Management.Automation.ErrorRecord errorRecord);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void WriteError(class System.Management.Automation.ErrorRecord errorRecord) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Provider.CmdletProvider.WriteError(System.Management.Automation.ErrorRecord)" />
+      <MemberSignature Language="F#" Value="member this.WriteError : System.Management.Automation.ErrorRecord -&gt; unit" Usage="cmdletProvider.WriteError errorRecord" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="errorRecord" Type="System.Management.Automation.ErrorRecord" />
+      </Parameters>
+      <Docs>
+        <param name="errorRecord">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+        <Content contentref="System.Management.Automation.Cmdlet.WriteError" />
+      </Docs>
+    </Member>
+    <Member MemberName="WriteInformation">
+      <MemberSignature Language="C#" Value="public void WriteInformation (System.Management.Automation.InformationRecord record);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void WriteInformation(class System.Management.Automation.InformationRecord record) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Provider.CmdletProvider.WriteInformation(System.Management.Automation.InformationRecord)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub WriteInformation (record As InformationRecord)" />
+      <MemberSignature Language="F#" Value="member this.WriteInformation : System.Management.Automation.InformationRecord -&gt; unit" Usage="cmdletProvider.WriteInformation record" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="record" Type="System.Management.Automation.InformationRecord" />
+      </Parameters>
+      <Docs>
+        <param name="record">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+        <Content contentref="System.Management.Automation.Cmdlet.WriteInformation" />
+      </Docs>
+    </Member>
+    <Member MemberName="WriteInformation">
+      <MemberSignature Language="C#" Value="public void WriteInformation (object messageData, string[] tags);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void WriteInformation(object messageData, string[] tags) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Provider.CmdletProvider.WriteInformation(System.Object,System.String[])" />
+      <MemberSignature Language="VB.NET" Value="Public Sub WriteInformation (messageData As Object, tags As String())" />
+      <MemberSignature Language="F#" Value="member this.WriteInformation : obj * string[] -&gt; unit" Usage="cmdletProvider.WriteInformation (messageData, tags)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="messageData" Type="System.Object" />
+        <Parameter Name="tags" Type="System.String[]" />
+      </Parameters>
+      <Docs>
+        <param name="messageData">To be added.</param>
+        <param name="tags">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+        <Content contentref="System.Management.Automation.Cmdlet.WriteInformation" />
+      </Docs>
+    </Member>
+    <Member MemberName="WriteItemObject">
+      <MemberSignature Language="C#" Value="public void WriteItemObject (object item, string path, bool isContainer);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void WriteItemObject(object item, string path, bool isContainer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Provider.CmdletProvider.WriteItemObject(System.Object,System.String,System.Boolean)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub WriteItemObject (item As Object, path As String, isContainer As Boolean)" />
+      <MemberSignature Language="F#" Value="member this.WriteItemObject : obj * string * bool -&gt; unit" Usage="cmdletProvider.WriteItemObject (item, path, isContainer)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="item" Type="System.Object" />
+        <Parameter Name="path" Type="System.String" />
+        <Parameter Name="isContainer" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="item">
+             The item to be written.
+             </param>
+        <param name="path">
+             The path of the item being written.
+             </param>
+        <param name="isContainer">
+             True if the item is a container, false otherwise.
+             </param>
+        <summary>
+             Writes an item to the output as a PSObject with extra data attached
+             as notes.
+             </summary>
+        <remarks>To be added.</remarks>
+        <!--
+             If streaming is on and the writeObjectHandler was specified then the object
+             gets written to the writeObjectHandler. If streaming is on and the writeObjectHandler
+             was not specified and the command object was specified, the object gets written to
+             the WriteObject method of the command object.
+             If streaming is off the object gets written to an accumulator collection. The collection
+             of written object can be retrieved using the AccumulatedObjects method.
+             -->
+      </Docs>
+    </Member>
+    <Member MemberName="WriteProgress">
+      <MemberSignature Language="C#" Value="public void WriteProgress (System.Management.Automation.ProgressRecord progressRecord);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void WriteProgress(class System.Management.Automation.ProgressRecord progressRecord) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Provider.CmdletProvider.WriteProgress(System.Management.Automation.ProgressRecord)" />
+      <MemberSignature Language="F#" Value="member this.WriteProgress : System.Management.Automation.ProgressRecord -&gt; unit" Usage="cmdletProvider.WriteProgress progressRecord" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="progressRecord" Type="System.Management.Automation.ProgressRecord" />
+      </Parameters>
+      <Docs>
+        <param name="progressRecord">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+        <Content contentref="System.Management.Automation.Cmdlet.WriteProgress" />
+      </Docs>
+    </Member>
+    <Member MemberName="WritePropertyObject">
+      <MemberSignature Language="C#" Value="public void WritePropertyObject (object propertyValue, string path);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void WritePropertyObject(object propertyValue, string path) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Provider.CmdletProvider.WritePropertyObject(System.Object,System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub WritePropertyObject (propertyValue As Object, path As String)" />
+      <MemberSignature Language="F#" Value="member this.WritePropertyObject : obj * string -&gt; unit" Usage="cmdletProvider.WritePropertyObject (propertyValue, path)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="propertyValue" Type="System.Object" />
+        <Parameter Name="path" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="propertyValue">
+             The properties to be written.
+             </param>
+        <param name="path">
+             The path of the item being written.
+             </param>
+        <summary>
+             Writes a property object to the output as a PSObject with extra data attached
+             as notes.
+             </summary>
+        <remarks>To be added.</remarks>
+        <!--
+             If streaming is on and the writeObjectHandler was specified then the object
+             gets written to the writeObjectHandler. If streaming is on and the writeObjectHandler
+             was not specified and the command object was specified, the object gets written to
+             the WriteObject method of the command object.
+             If streaming is off the object gets written to an accumulator collection. The collection
+             of written object can be retrieved using the AccumulatedObjects method.
+             -->
+      </Docs>
+    </Member>
+    <Member MemberName="WriteSecurityDescriptorObject">
+      <MemberSignature Language="C#" Value="public void WriteSecurityDescriptorObject (System.Security.AccessControl.ObjectSecurity securityDescriptor, string path);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void WriteSecurityDescriptorObject(class System.Security.AccessControl.ObjectSecurity securityDescriptor, string path) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Provider.CmdletProvider.WriteSecurityDescriptorObject(System.Security.AccessControl.ObjectSecurity,System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub WriteSecurityDescriptorObject (securityDescriptor As ObjectSecurity, path As String)" />
+      <MemberSignature Language="F#" Value="member this.WriteSecurityDescriptorObject : System.Security.AccessControl.ObjectSecurity * string -&gt; unit" Usage="cmdletProvider.WriteSecurityDescriptorObject (securityDescriptor, path)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="securityDescriptor" Type="System.Security.AccessControl.ObjectSecurity" />
+        <Parameter Name="path" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="securityDescriptor">
+             The Security Descriptor to be written.
+             </param>
+        <param name="path">
+             The path of the item from which the Security Descriptor was retrieved.
+             </param>
+        <summary>
+             Writes a Security Descriptor object to the output as a PSObject with extra data attached
+             as notes.
+             </summary>
+        <remarks>To be added.</remarks>
+        <!--
+             If streaming is on and the writeObjectHandler was specified then the object
+             gets written to the writeObjectHandler. If streaming is on and the writeObjectHandler
+             was not specified and the command object was specified, the object gets written to
+             the WriteObject method of the command object.
+             If streaming is off the object gets written to an accumulator collection. The collection
+             of written object can be retrieved using the AccumulatedObjects method.
+             -->
+      </Docs>
+    </Member>
+    <Member MemberName="WriteVerbose">
+      <MemberSignature Language="C#" Value="public void WriteVerbose (string text);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void WriteVerbose(string text) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Provider.CmdletProvider.WriteVerbose(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub WriteVerbose (text As String)" />
+      <MemberSignature Language="F#" Value="member this.WriteVerbose : string -&gt; unit" Usage="cmdletProvider.WriteVerbose text" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="text" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="text">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+        <Content contentref="System.Management.Automation.Cmdlet.WriteVerbose" />
+      </Docs>
+    </Member>
+    <Member MemberName="WriteWarning">
+      <MemberSignature Language="C#" Value="public void WriteWarning (string text);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void WriteWarning(string text) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Provider.CmdletProvider.WriteWarning(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub WriteWarning (text As String)" />
+      <MemberSignature Language="F#" Value="member this.WriteWarning : string -&gt; unit" Usage="cmdletProvider.WriteWarning text" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="text" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="text">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+        <Content contentref="System.Management.Automation.Cmdlet.WriteWarning" />
+      </Docs>
+    </Member>
+  </Members>
+</Type>

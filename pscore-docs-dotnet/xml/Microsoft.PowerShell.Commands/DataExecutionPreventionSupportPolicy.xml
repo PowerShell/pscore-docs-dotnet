@@ -1,0 +1,112 @@
+﻿<Type Name="DataExecutionPreventionSupportPolicy" FullName="Microsoft.PowerShell.Commands.DataExecutionPreventionSupportPolicy">
+  <TypeSignature Language="C#" Value="public enum DataExecutionPreventionSupportPolicy" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed DataExecutionPreventionSupportPolicy extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.PowerShell.Commands.DataExecutionPreventionSupportPolicy" />
+  <TypeSignature Language="VB.NET" Value="Public Enum DataExecutionPreventionSupportPolicy" />
+  <TypeSignature Language="F#" Value="type DataExecutionPreventionSupportPolicy = " />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.PowerShell.Commands.Management</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>
+            Data Execution Prevention (DEP) settings
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="AlwaysOff">
+      <MemberSignature Language="C#" Value="AlwaysOff" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.PowerShell.Commands.DataExecutionPreventionSupportPolicy AlwaysOff = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.PowerShell.Commands.DataExecutionPreventionSupportPolicy.AlwaysOff" />
+      <MemberSignature Language="VB.NET" Value="AlwaysOff" />
+      <MemberSignature Language="F#" Value="AlwaysOff = 0" Usage="Microsoft.PowerShell.Commands.DataExecutionPreventionSupportPolicy.AlwaysOff" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Commands.Management</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.PowerShell.Commands.DataExecutionPreventionSupportPolicy</ReturnType>
+      </ReturnValue>
+      <MemberValue>0</MemberValue>
+      <Docs>
+        <summary>
+            DEP is turned off for all 32-bit applications on the computer with no exceptions
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="AlwaysOn">
+      <MemberSignature Language="C#" Value="AlwaysOn" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.PowerShell.Commands.DataExecutionPreventionSupportPolicy AlwaysOn = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.PowerShell.Commands.DataExecutionPreventionSupportPolicy.AlwaysOn" />
+      <MemberSignature Language="VB.NET" Value="AlwaysOn" />
+      <MemberSignature Language="F#" Value="AlwaysOn = 1" Usage="Microsoft.PowerShell.Commands.DataExecutionPreventionSupportPolicy.AlwaysOn" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Commands.Management</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.PowerShell.Commands.DataExecutionPreventionSupportPolicy</ReturnType>
+      </ReturnValue>
+      <MemberValue>1</MemberValue>
+      <Docs>
+        <summary>
+            DEP is enabled for all 32-bit applications on the computer
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="OptIn">
+      <MemberSignature Language="C#" Value="OptIn" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.PowerShell.Commands.DataExecutionPreventionSupportPolicy OptIn = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.PowerShell.Commands.DataExecutionPreventionSupportPolicy.OptIn" />
+      <MemberSignature Language="VB.NET" Value="OptIn" />
+      <MemberSignature Language="F#" Value="OptIn = 2" Usage="Microsoft.PowerShell.Commands.DataExecutionPreventionSupportPolicy.OptIn" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Commands.Management</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.PowerShell.Commands.DataExecutionPreventionSupportPolicy</ReturnType>
+      </ReturnValue>
+      <MemberValue>2</MemberValue>
+      <Docs>
+        <summary>
+            DEP is enabled for a limited number of binaries, the kernel, and all
+            Windows-based services. However, it is off by default for all 32-bit
+            applications. A user or administrator must explicitly choose either
+            the Always On or the Opt Out setting before DEP can be applied to
+            32-bit applications
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="OptOut">
+      <MemberSignature Language="C#" Value="OptOut" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.PowerShell.Commands.DataExecutionPreventionSupportPolicy OptOut = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.PowerShell.Commands.DataExecutionPreventionSupportPolicy.OptOut" />
+      <MemberSignature Language="VB.NET" Value="OptOut" />
+      <MemberSignature Language="F#" Value="OptOut = 3" Usage="Microsoft.PowerShell.Commands.DataExecutionPreventionSupportPolicy.OptOut" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Commands.Management</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.PowerShell.Commands.DataExecutionPreventionSupportPolicy</ReturnType>
+      </ReturnValue>
+      <MemberValue>3</MemberValue>
+      <Docs>
+        <summary>
+            DEP is enabled by default for all 32-bit applications. A user or
+            administrator can explicitly remove support for a 32-bit
+            application by adding the application to an exceptions list
+            </summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

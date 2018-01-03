@@ -1,0 +1,188 @@
+﻿<Type Name="GetLocationCommand" FullName="Microsoft.PowerShell.Commands.GetLocationCommand">
+  <TypeSignature Language="C#" Value="public class GetLocationCommand : Microsoft.PowerShell.Commands.DriveMatchingCoreCommandBase" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit GetLocationCommand extends Microsoft.PowerShell.Commands.DriveMatchingCoreCommandBase" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.PowerShell.Commands.GetLocationCommand" />
+  <TypeSignature Language="VB.NET" Value="Public Class GetLocationCommand&#xA;Inherits DriveMatchingCoreCommandBase" />
+  <TypeSignature Language="F#" Value="type GetLocationCommand = class&#xA;    inherit DriveMatchingCoreCommandBase" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.PowerShell.Commands.Management</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Microsoft.PowerShell.Commands.DriveMatchingCoreCommandBase</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Management.Automation.Cmdlet("Get", "Location", DefaultParameterSetName="Location", HelpUri="https://go.microsoft.com/fwlink/?LinkID=113321", SupportsTransactions=true)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Management.Automation.OutputType(typeof(System.Management.Automation.PathInfo), ParameterSetName=Mono.Cecil.CustomAttributeArgument[])</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Management.Automation.OutputType(typeof(System.Management.Automation.PathInfoStack), ParameterSetName=Mono.Cecil.CustomAttributeArgument[])</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>
+             The get-location command class.
+             This command does things like list the contents of a container, get
+             an item at a given path, get the current working directory, etc.
+             </summary>
+    <remarks />
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public GetLocationCommand ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Commands.GetLocationCommand.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New ()" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Commands.Management</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ProcessRecord">
+      <MemberSignature Language="C#" Value="protected override void ProcessRecord ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void ProcessRecord() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Commands.GetLocationCommand.ProcessRecord" />
+      <MemberSignature Language="VB.NET" Value="Protected Overrides Sub ProcessRecord ()" />
+      <MemberSignature Language="F#" Value="override this.ProcessRecord : unit -&gt; unit" Usage="getLocationCommand.ProcessRecord " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Commands.Management</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            The main execution method for the get-location command. Depending on
+            the parameter set that is specified, the command can do many things.
+                -locationSet gets the current working directory as a Monad path
+                -stackSet gets the directory stack of directories that have been
+                          pushed by the push-location command
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PSDrive">
+      <MemberSignature Language="C#" Value="public string[] PSDrive { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string[] PSDrive" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.GetLocationCommand.PSDrive" />
+      <MemberSignature Language="VB.NET" Value="Public Property PSDrive As String()" />
+      <MemberSignature Language="F#" Value="member this.PSDrive : string[] with get, set" Usage="Microsoft.PowerShell.Commands.GetLocationCommand.PSDrive" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Commands.Management</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="Location", ValueFromPipelineByPropertyName=true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+             Gets or sets the drive from which to get the current location.
+             </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PSProvider">
+      <MemberSignature Language="C#" Value="public string[] PSProvider { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string[] PSProvider" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.GetLocationCommand.PSProvider" />
+      <MemberSignature Language="VB.NET" Value="Public Property PSProvider As String()" />
+      <MemberSignature Language="F#" Value="member this.PSProvider : string[] with get, set" Usage="Microsoft.PowerShell.Commands.GetLocationCommand.PSProvider" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Commands.Management</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="Location", ValueFromPipelineByPropertyName=true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+             Gets or sets the provider from which to get the current location.
+             </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Stack">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.SwitchParameter Stack { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Management.Automation.SwitchParameter Stack" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.GetLocationCommand.Stack" />
+      <MemberSignature Language="VB.NET" Value="Public Property Stack As SwitchParameter" />
+      <MemberSignature Language="F#" Value="member this.Stack : System.Management.Automation.SwitchParameter with get, set" Usage="Microsoft.PowerShell.Commands.GetLocationCommand.Stack" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Commands.Management</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="Stack")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.SwitchParameter</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets the Stack switch parameter which is used
+            to disambiguate parameter sets
+            </summary>
+        <value />
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StackName">
+      <MemberSignature Language="C#" Value="public string[] StackName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string[] StackName" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.GetLocationCommand.StackName" />
+      <MemberSignature Language="VB.NET" Value="Public Property StackName As String()" />
+      <MemberSignature Language="F#" Value="member this.StackName : string[] with get, set" Usage="Microsoft.PowerShell.Commands.GetLocationCommand.StackName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Commands.Management</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="Stack", ValueFromPipelineByPropertyName=true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+             Gets or sets the stack ID for the location stack that will
+             be retrieved.
+             </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

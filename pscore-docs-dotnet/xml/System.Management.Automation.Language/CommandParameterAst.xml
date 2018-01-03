@@ -1,0 +1,164 @@
+﻿<Type Name="CommandParameterAst" FullName="System.Management.Automation.Language.CommandParameterAst">
+  <TypeSignature Language="C#" Value="public class CommandParameterAst : System.Management.Automation.Language.CommandElementAst" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit CommandParameterAst extends System.Management.Automation.Language.CommandElementAst" />
+  <TypeSignature Language="DocId" Value="T:System.Management.Automation.Language.CommandParameterAst" />
+  <TypeSignature Language="VB.NET" Value="Public Class CommandParameterAst&#xA;Inherits CommandElementAst" />
+  <TypeSignature Language="F#" Value="type CommandParameterAst = class&#xA;    inherit CommandElementAst" />
+  <AssemblyInfo>
+    <AssemblyName>System.Management.Automation</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Management.Automation.Language.CommandElementAst</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+             The ast that represents a parameter to a command, e.g. <c>dir -Path a*</c>, this class represent '-Path', and
+             in <c>dir -Path:a*</c>, this class represents '-Path:a*'.
+            
+             In the first case, the argument 'a*' is not represented by this class because the parser can't know until runtime
+             if the argument is positional or if -Path accepts an argument.  In the later case, the argument 'a*' always
+             belongs to the parameter -Path.
+             </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CommandParameterAst (System.Management.Automation.Language.IScriptExtent extent, string parameterName, System.Management.Automation.Language.ExpressionAst argument, System.Management.Automation.Language.IScriptExtent errorPosition);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Management.Automation.Language.IScriptExtent extent, string parameterName, class System.Management.Automation.Language.ExpressionAst argument, class System.Management.Automation.Language.IScriptExtent errorPosition) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Language.CommandParameterAst.#ctor(System.Management.Automation.Language.IScriptExtent,System.String,System.Management.Automation.Language.ExpressionAst,System.Management.Automation.Language.IScriptExtent)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (extent As IScriptExtent, parameterName As String, argument As ExpressionAst, errorPosition As IScriptExtent)" />
+      <MemberSignature Language="F#" Value="new System.Management.Automation.Language.CommandParameterAst : System.Management.Automation.Language.IScriptExtent * string * System.Management.Automation.Language.ExpressionAst * System.Management.Automation.Language.IScriptExtent -&gt; System.Management.Automation.Language.CommandParameterAst" Usage="new System.Management.Automation.Language.CommandParameterAst (extent, parameterName, argument, errorPosition)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="extent" Type="System.Management.Automation.Language.IScriptExtent" />
+        <Parameter Name="parameterName" Type="System.String" />
+        <Parameter Name="argument" Type="System.Management.Automation.Language.ExpressionAst" />
+        <Parameter Name="errorPosition" Type="System.Management.Automation.Language.IScriptExtent" />
+      </Parameters>
+      <Docs>
+        <param name="extent">
+            The extent of the parameter, starting from the dash character, ending at the end of the parameter name, or else
+            at the end of the optional argument.
+            </param>
+        <param name="parameterName">
+            The parameter name, without the leading dash and without the trailing colon, if a colon was used.
+            </param>
+        <param name="argument">
+            If the parameter includes an argument with the syntax like <c>-Path:a*</c>, then the expression for 'a*' is
+            passed as the argument.  An argument is not required.
+            </param>
+        <param name="errorPosition">
+            The extent to use for error reporting when parameter binding fails with this parameter.  If <paramref name="argument" />
+            is null, this extent is the same as <paramref name="extent" />, otherwise it is the extent of the parameter token
+            itself.
+            </param>
+        <summary>
+            Construct a command parameter.
+            </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.Management.Automation.PSArgumentNullException">
+            If <paramref name="extent" /> or <paramref name="parameterName" />is null, or if <paramref name="parameterName" />
+            is an empty string.
+            </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Argument">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.Language.ExpressionAst Argument { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Management.Automation.Language.ExpressionAst Argument" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.Language.CommandParameterAst.Argument" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Argument As ExpressionAst" />
+      <MemberSignature Language="F#" Value="member this.Argument : System.Management.Automation.Language.ExpressionAst" Usage="System.Management.Automation.Language.CommandParameterAst.Argument" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.Language.ExpressionAst</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The ast for the argument if specified (e.g. -Path:-abc, then the argument is the ast for '-ast'), otherwise null
+            if no argument was specified.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Copy">
+      <MemberSignature Language="C#" Value="public override System.Management.Automation.Language.Ast Copy ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Management.Automation.Language.Ast Copy() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Language.CommandParameterAst.Copy" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Function Copy () As Ast" />
+      <MemberSignature Language="F#" Value="override this.Copy : unit -&gt; System.Management.Automation.Language.Ast" Usage="commandParameterAst.Copy " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.Language.Ast</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Copy the CommandParameterAst instance
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ErrorPosition">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.Language.IScriptExtent ErrorPosition { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Management.Automation.Language.IScriptExtent ErrorPosition" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.Language.CommandParameterAst.ErrorPosition" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ErrorPosition As IScriptExtent" />
+      <MemberSignature Language="F#" Value="member this.ErrorPosition : System.Management.Automation.Language.IScriptExtent" Usage="System.Management.Automation.Language.CommandParameterAst.ErrorPosition" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.Language.IScriptExtent</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The error position to use when parameter binding fails.  This extent does not include the argument if one was
+            specified, which means this extent is often the same as <see cref="P:System.Management.Automation.Language.Ast.Extent" />.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ParameterName">
+      <MemberSignature Language="C#" Value="public string ParameterName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ParameterName" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.Language.CommandParameterAst.ParameterName" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ParameterName As String" />
+      <MemberSignature Language="F#" Value="member this.ParameterName : string" Usage="System.Management.Automation.Language.CommandParameterAst.ParameterName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The name of the parameter.  This value does not include a leading dash, and in the case that an argument
+            is specified, no trailing colon is included either.  This property is never null or empty.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,83 @@
+﻿<Type Name="PSReference" FullName="System.Management.Automation.PSReference">
+  <TypeSignature Language="C#" Value="public class PSReference" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit PSReference extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Management.Automation.PSReference" />
+  <TypeSignature Language="VB.NET" Value="Public Class PSReference" />
+  <TypeSignature Language="F#" Value="type PSReference = class" />
+  <AssemblyInfo>
+    <AssemblyName>System.Management.Automation</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+             Define type for a reference object in Monad scripting language.
+             </summary>
+    <remarks>
+             This class is used to describe both kinds of references:
+                 a. reference to a value: _value will be holding the value being referenced.
+                 b. reference to a variable: _value will be holding a PSVariable instance for the variable to be referenced.
+            
+             A reference is created in following ways,
+                 a. value reference
+                     $a = [ref] 3
+                     [ref] $a = 3
+                     [ref] $a = $b
+                 b. variable reference
+                     $a = [ref] $b
+            
+             </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public PSReference (object value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.PSReference.#ctor(System.Object)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (value As Object)" />
+      <MemberSignature Language="F#" Value="new System.Management.Automation.PSReference : obj -&gt; System.Management.Automation.PSReference" Usage="new System.Management.Automation.PSReference value" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="value"></param>
+        <summary>
+            Create an instance of PSReference.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Value">
+      <MemberSignature Language="C#" Value="public object Value { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object Value" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.PSReference.Value" />
+      <MemberSignature Language="VB.NET" Value="Public Property Value As Object" />
+      <MemberSignature Language="F#" Value="member this.Value : obj with get, set" Usage="System.Management.Automation.PSReference.Value" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Get and set value of PSReference.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+            If underlining object is a value, the object itself will be operated on.
+            If underlining object is a variable, the variable will be operated on.
+            </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

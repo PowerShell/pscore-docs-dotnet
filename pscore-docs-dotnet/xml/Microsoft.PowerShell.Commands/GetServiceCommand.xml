@@ -1,0 +1,165 @@
+﻿<Type Name="GetServiceCommand" FullName="Microsoft.PowerShell.Commands.GetServiceCommand">
+  <TypeSignature Language="C#" Value="public sealed class GetServiceCommand : Microsoft.PowerShell.Commands.MultipleServiceCommandBase" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit GetServiceCommand extends Microsoft.PowerShell.Commands.MultipleServiceCommandBase" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.PowerShell.Commands.GetServiceCommand" />
+  <TypeSignature Language="VB.NET" Value="Public NotInheritable Class GetServiceCommand&#xA;Inherits MultipleServiceCommandBase" />
+  <TypeSignature Language="F#" Value="type GetServiceCommand = class&#xA;    inherit MultipleServiceCommandBase" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.PowerShell.Commands.Management</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Microsoft.PowerShell.Commands.MultipleServiceCommandBase</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Management.Automation.Cmdlet("Get", "Service", DefaultParameterSetName="Default", HelpUri="https://go.microsoft.com/fwlink/?LinkID=113332", RemotingCapability=System.Management.Automation.RemotingCapability.SupportedByCommand)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Management.Automation.OutputType(typeof(System.ServiceProcess.ServiceController))</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>
+            This class implements the get-service command
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public GetServiceCommand ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Commands.GetServiceCommand.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New ()" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Commands.Management</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DependentServices">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.SwitchParameter DependentServices { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Management.Automation.SwitchParameter DependentServices" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.GetServiceCommand.DependentServices" />
+      <MemberSignature Language="VB.NET" Value="Public Property DependentServices As SwitchParameter" />
+      <MemberSignature Language="F#" Value="member this.DependentServices : System.Management.Automation.SwitchParameter with get, set" Usage="Microsoft.PowerShell.Commands.GetServiceCommand.DependentServices" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Commands.Management</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Alias(Mono.Cecil.CustomAttributeArgument[])</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.SwitchParameter</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            This returns the DependentServices of the specified service.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public string[] Name { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string[] Name" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.GetServiceCommand.Name" />
+      <MemberSignature Language="VB.NET" Value="Public Property Name As String()" />
+      <MemberSignature Language="F#" Value="member this.Name : string[] with get, set" Usage="Microsoft.PowerShell.Commands.GetServiceCommand.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Commands.Management</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Alias(Mono.Cecil.CustomAttributeArgument[])</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="Default", Position=0, ValueFromPipeline=true, ValueFromPipelineByPropertyName=true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.ValidateNotNullOrEmpty</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            gets/sets an array of service names
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+            The ServiceName parameter is declared in subclasses,
+            since it is optional for GetService and mandatory otherwise.
+            </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ProcessRecord">
+      <MemberSignature Language="C#" Value="protected override void ProcessRecord ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void ProcessRecord() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Commands.GetServiceCommand.ProcessRecord" />
+      <MemberSignature Language="VB.NET" Value="Protected Overrides Sub ProcessRecord ()" />
+      <MemberSignature Language="F#" Value="override this.ProcessRecord : unit -&gt; unit" Usage="getServiceCommand.ProcessRecord " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Commands.Management</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Write the service objects
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RequiredServices">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.SwitchParameter RequiredServices { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Management.Automation.SwitchParameter RequiredServices" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.GetServiceCommand.RequiredServices" />
+      <MemberSignature Language="VB.NET" Value="Public Property RequiredServices As SwitchParameter" />
+      <MemberSignature Language="F#" Value="member this.RequiredServices : System.Management.Automation.SwitchParameter with get, set" Usage="Microsoft.PowerShell.Commands.GetServiceCommand.RequiredServices" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Commands.Management</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Alias(Mono.Cecil.CustomAttributeArgument[])</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.SwitchParameter</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            This returns the ServicesDependedOn of the specified service.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

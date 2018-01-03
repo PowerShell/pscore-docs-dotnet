@@ -1,0 +1,96 @@
+﻿<Type Name="PSStreamObject" FullName="System.Management.Automation.Remoting.Internal.PSStreamObject">
+  <TypeSignature Language="C#" Value="public class PSStreamObject" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit PSStreamObject extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Management.Automation.Remoting.Internal.PSStreamObject" />
+  <TypeSignature Language="VB.NET" Value="Public Class PSStreamObject" />
+  <TypeSignature Language="F#" Value="type PSStreamObject = class" />
+  <AssemblyInfo>
+    <AssemblyName>System.Management.Automation</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            struct which describes whether an object written
+            to an ObjectStream is of type - output, error,
+            verbose, debug.
+            PSStreamObject is for internal (PowerShell) consumption
+            and should not be treated as a public API.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public PSStreamObject (System.Management.Automation.Remoting.Internal.PSStreamObjectType objectType, object value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Management.Automation.Remoting.Internal.PSStreamObjectType objectType, object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Remoting.Internal.PSStreamObject.#ctor(System.Management.Automation.Remoting.Internal.PSStreamObjectType,System.Object)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (objectType As PSStreamObjectType, value As Object)" />
+      <MemberSignature Language="F#" Value="new System.Management.Automation.Remoting.Internal.PSStreamObject : System.Management.Automation.Remoting.Internal.PSStreamObjectType * obj -&gt; System.Management.Automation.Remoting.Internal.PSStreamObject" Usage="new System.Management.Automation.Remoting.Internal.PSStreamObject (objectType, value)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="objectType" Type="System.Management.Automation.Remoting.Internal.PSStreamObjectType" />
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="objectType"></param>
+        <param name="value"></param>
+        <summary />
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ObjectType">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.Remoting.Internal.PSStreamObjectType ObjectType { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Management.Automation.Remoting.Internal.PSStreamObjectType ObjectType" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.Remoting.Internal.PSStreamObject.ObjectType" />
+      <MemberSignature Language="VB.NET" Value="Public Property ObjectType As PSStreamObjectType" />
+      <MemberSignature Language="F#" Value="member this.ObjectType : System.Management.Automation.Remoting.Internal.PSStreamObjectType with get, set" Usage="System.Management.Automation.Remoting.Internal.PSStreamObject.ObjectType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.Remoting.Internal.PSStreamObjectType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary />
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteStreamObject">
+      <MemberSignature Language="C#" Value="public void WriteStreamObject (System.Management.Automation.Cmdlet cmdlet, bool overrideInquire = false);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void WriteStreamObject(class System.Management.Automation.Cmdlet cmdlet, bool overrideInquire) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Remoting.Internal.PSStreamObject.WriteStreamObject(System.Management.Automation.Cmdlet,System.Boolean)" />
+      <MemberSignature Language="F#" Value="member this.WriteStreamObject : System.Management.Automation.Cmdlet * bool -&gt; unit" Usage="pSStreamObject.WriteStreamObject (cmdlet, overrideInquire)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="cmdlet" Type="System.Management.Automation.Cmdlet" />
+        <Parameter Name="overrideInquire" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="cmdlet">cmdlet to use for outputting the object</param>
+        <param name="overrideInquire">Used by Receive-Job to suppress inquire preference.</param>
+        <summary>
+            Handle the object obtained from an ObjectStream's reader
+            based on its type
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

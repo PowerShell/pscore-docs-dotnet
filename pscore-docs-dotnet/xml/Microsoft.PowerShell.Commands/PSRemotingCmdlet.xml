@@ -1,0 +1,388 @@
+﻿<Type Name="PSRemotingCmdlet" FullName="Microsoft.PowerShell.Commands.PSRemotingCmdlet">
+  <TypeSignature Language="C#" Value="public abstract class PSRemotingCmdlet : System.Management.Automation.PSCmdlet" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit PSRemotingCmdlet extends System.Management.Automation.PSCmdlet" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.PowerShell.Commands.PSRemotingCmdlet" />
+  <TypeSignature Language="VB.NET" Value="Public MustInherit Class PSRemotingCmdlet&#xA;Inherits PSCmdlet" />
+  <TypeSignature Language="F#" Value="type PSRemotingCmdlet = class&#xA;    inherit PSCmdlet" />
+  <AssemblyInfo>
+    <AssemblyName>System.Management.Automation</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Management.Automation.PSCmdlet</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+             This class defines most of the common functionality used
+             across remoting cmdlets.
+            
+             It contains tons of utility functions which are used all
+             across the remoting cmdlets
+             </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected PSRemotingCmdlet ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Commands.PSRemotingCmdlet.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Protected Sub New ()" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginProcessing">
+      <MemberSignature Language="C#" Value="protected override void BeginProcessing ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void BeginProcessing() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Commands.PSRemotingCmdlet.BeginProcessing" />
+      <MemberSignature Language="VB.NET" Value="Protected Overrides Sub BeginProcessing ()" />
+      <MemberSignature Language="F#" Value="override this.BeginProcessing : unit -&gt; unit" Usage="pSRemotingCmdlet.BeginProcessing " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Verifies if remoting cmdlets can be used
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ComputerInstanceIdParameterSet">
+      <MemberSignature Language="C#" Value="protected const string ComputerInstanceIdParameterSet;" />
+      <MemberSignature Language="ILAsm" Value=".field family static literal string ComputerInstanceIdParameterSet" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.PowerShell.Commands.PSRemotingCmdlet.ComputerInstanceIdParameterSet" />
+      <MemberSignature Language="VB.NET" Value="Protected Const ComputerInstanceIdParameterSet As String " />
+      <MemberSignature Language="F#" Value="val mutable ComputerInstanceIdParameterSet : string" Usage="Microsoft.PowerShell.Commands.PSRemotingCmdlet.ComputerInstanceIdParameterSet" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Computername with session instance ID parameter set
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ComputerNameParameterSet">
+      <MemberSignature Language="C#" Value="protected const string ComputerNameParameterSet;" />
+      <MemberSignature Language="ILAsm" Value=".field family static literal string ComputerNameParameterSet" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.PowerShell.Commands.PSRemotingCmdlet.ComputerNameParameterSet" />
+      <MemberSignature Language="VB.NET" Value="Protected Const ComputerNameParameterSet As String " />
+      <MemberSignature Language="F#" Value="val mutable ComputerNameParameterSet : string" Usage="Microsoft.PowerShell.Commands.PSRemotingCmdlet.ComputerNameParameterSet" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Computername parameter set
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContainerIdParameterSet">
+      <MemberSignature Language="C#" Value="protected const string ContainerIdParameterSet;" />
+      <MemberSignature Language="ILAsm" Value=".field family static literal string ContainerIdParameterSet" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.PowerShell.Commands.PSRemotingCmdlet.ContainerIdParameterSet" />
+      <MemberSignature Language="VB.NET" Value="Protected Const ContainerIdParameterSet As String " />
+      <MemberSignature Language="F#" Value="val mutable ContainerIdParameterSet : string" Usage="Microsoft.PowerShell.Commands.PSRemotingCmdlet.ContainerIdParameterSet" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Container ID parameter set
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultPowerShellRemoteShellAppName">
+      <MemberSignature Language="C#" Value="protected const string DefaultPowerShellRemoteShellAppName;" />
+      <MemberSignature Language="ILAsm" Value=".field family static literal string DefaultPowerShellRemoteShellAppName" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.PowerShell.Commands.PSRemotingCmdlet.DefaultPowerShellRemoteShellAppName" />
+      <MemberSignature Language="VB.NET" Value="Protected Const DefaultPowerShellRemoteShellAppName As String " />
+      <MemberSignature Language="F#" Value="val mutable DefaultPowerShellRemoteShellAppName : string" Usage="Microsoft.PowerShell.Commands.PSRemotingCmdlet.DefaultPowerShellRemoteShellAppName" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            default application name for the connection uri
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultPowerShellRemoteShellName">
+      <MemberSignature Language="C#" Value="protected const string DefaultPowerShellRemoteShellName;" />
+      <MemberSignature Language="ILAsm" Value=".field family static literal string DefaultPowerShellRemoteShellName" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.PowerShell.Commands.PSRemotingCmdlet.DefaultPowerShellRemoteShellName" />
+      <MemberSignature Language="VB.NET" Value="Protected Const DefaultPowerShellRemoteShellName As String " />
+      <MemberSignature Language="F#" Value="val mutable DefaultPowerShellRemoteShellName : string" Usage="Microsoft.PowerShell.Commands.PSRemotingCmdlet.DefaultPowerShellRemoteShellName" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Default shellname
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ResolveAppName">
+      <MemberSignature Language="C#" Value="protected string ResolveAppName (string appName);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance string ResolveAppName(string appName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Commands.PSRemotingCmdlet.ResolveAppName(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Protected Function ResolveAppName (appName As String) As String" />
+      <MemberSignature Language="F#" Value="member this.ResolveAppName : string -&gt; string" Usage="pSRemotingCmdlet.ResolveAppName appName" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="appName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="appName">application name to resolve</param>
+        <summary>
+            Determines the appname to be used based on the following order:
+                1. AppName parameter specified
+                2. DEFAULTREMOTEAPPNAME variable set
+                3. WSMan
+            </summary>
+        <returns>resolved appname</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ResolveComputerName">
+      <MemberSignature Language="C#" Value="protected string ResolveComputerName (string computerName);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance string ResolveComputerName(string computerName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Commands.PSRemotingCmdlet.ResolveComputerName(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Protected Function ResolveComputerName (computerName As String) As String" />
+      <MemberSignature Language="F#" Value="member this.ResolveComputerName : string -&gt; string" Usage="pSRemotingCmdlet.ResolveComputerName computerName" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="computerName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="computerName">computer name to resolve</param>
+        <summary>
+            Resolves a computer name. If its null or empty
+            its assumed to be localhost
+            </summary>
+        <returns>resolved computer name</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ResolveComputerNames">
+      <MemberSignature Language="C#" Value="protected void ResolveComputerNames (string[] computerNames, out string[] resolvedComputerNames);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void ResolveComputerNames(string[] computerNames, [out] string[]&amp; resolvedComputerNames) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Commands.PSRemotingCmdlet.ResolveComputerNames(System.String[],System.String[]@)" />
+      <MemberSignature Language="VB.NET" Value="Protected Sub ResolveComputerNames (computerNames As String(), ByRef resolvedComputerNames As String())" />
+      <MemberSignature Language="F#" Value="member this.ResolveComputerNames : string[] *  -&gt; unit" Usage="pSRemotingCmdlet.ResolveComputerNames (computerNames, resolvedComputerNames)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="computerNames" Type="System.String[]" />
+        <Parameter Name="resolvedComputerNames" Type="System.String[]&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="computerNames">array of computer names to resolve</param>
+        <param name="resolvedComputerNames">resolved array of machine names</param>
+        <summary>
+            Resolve all the machine names provided. Basically, if a machine
+            name is '.' assume localhost
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ResolveShell">
+      <MemberSignature Language="C#" Value="protected string ResolveShell (string shell);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance string ResolveShell(string shell) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Commands.PSRemotingCmdlet.ResolveShell(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Protected Function ResolveShell (shell As String) As String" />
+      <MemberSignature Language="F#" Value="member this.ResolveShell : string -&gt; string" Usage="pSRemotingCmdlet.ResolveShell shell" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="shell" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="shell">To be added.</param>
+        <summary>
+            Determines the shellname to use based on the following order:
+                1. ShellName parameter specified
+                2. DEFAULTREMOTESHELLNAME variable set
+                3. PowerShell
+            </summary>
+        <returns>The shell to launch in the remote machine</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SessionParameterSet">
+      <MemberSignature Language="C#" Value="protected const string SessionParameterSet;" />
+      <MemberSignature Language="ILAsm" Value=".field family static literal string SessionParameterSet" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.PowerShell.Commands.PSRemotingCmdlet.SessionParameterSet" />
+      <MemberSignature Language="VB.NET" Value="Protected Const SessionParameterSet As String " />
+      <MemberSignature Language="F#" Value="val mutable SessionParameterSet : string" Usage="Microsoft.PowerShell.Commands.PSRemotingCmdlet.SessionParameterSet" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            runspace parameter set
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SSHHostHashParameterSet">
+      <MemberSignature Language="C#" Value="protected const string SSHHostHashParameterSet;" />
+      <MemberSignature Language="ILAsm" Value=".field family static literal string SSHHostHashParameterSet" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.PowerShell.Commands.PSRemotingCmdlet.SSHHostHashParameterSet" />
+      <MemberSignature Language="VB.NET" Value="Protected Const SSHHostHashParameterSet As String " />
+      <MemberSignature Language="F#" Value="val mutable SSHHostHashParameterSet : string" Usage="Microsoft.PowerShell.Commands.PSRemotingCmdlet.SSHHostHashParameterSet" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            SSH host parmeter set supporting hash connection parameters
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SSHHostParameterSet">
+      <MemberSignature Language="C#" Value="protected const string SSHHostParameterSet;" />
+      <MemberSignature Language="ILAsm" Value=".field family static literal string SSHHostParameterSet" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.PowerShell.Commands.PSRemotingCmdlet.SSHHostParameterSet" />
+      <MemberSignature Language="VB.NET" Value="Protected Const SSHHostParameterSet As String " />
+      <MemberSignature Language="F#" Value="val mutable SSHHostParameterSet : string" Usage="Microsoft.PowerShell.Commands.PSRemotingCmdlet.SSHHostParameterSet" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            SSH host parameter set
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="VMIdParameterSet">
+      <MemberSignature Language="C#" Value="protected const string VMIdParameterSet;" />
+      <MemberSignature Language="ILAsm" Value=".field family static literal string VMIdParameterSet" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.PowerShell.Commands.PSRemotingCmdlet.VMIdParameterSet" />
+      <MemberSignature Language="VB.NET" Value="Protected Const VMIdParameterSet As String " />
+      <MemberSignature Language="F#" Value="val mutable VMIdParameterSet : string" Usage="Microsoft.PowerShell.Commands.PSRemotingCmdlet.VMIdParameterSet" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            VM guid parameter set
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="VMNameParameterSet">
+      <MemberSignature Language="C#" Value="protected const string VMNameParameterSet;" />
+      <MemberSignature Language="ILAsm" Value=".field family static literal string VMNameParameterSet" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.PowerShell.Commands.PSRemotingCmdlet.VMNameParameterSet" />
+      <MemberSignature Language="VB.NET" Value="Protected Const VMNameParameterSet As String " />
+      <MemberSignature Language="F#" Value="val mutable VMNameParameterSet : string" Usage="Microsoft.PowerShell.Commands.PSRemotingCmdlet.VMNameParameterSet" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            VM name parameter set
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

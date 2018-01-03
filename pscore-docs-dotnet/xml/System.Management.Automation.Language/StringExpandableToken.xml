@@ -1,0 +1,48 @@
+﻿<Type Name="StringExpandableToken" FullName="System.Management.Automation.Language.StringExpandableToken">
+  <TypeSignature Language="C#" Value="public class StringExpandableToken : System.Management.Automation.Language.StringToken" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit StringExpandableToken extends System.Management.Automation.Language.StringToken" />
+  <TypeSignature Language="DocId" Value="T:System.Management.Automation.Language.StringExpandableToken" />
+  <TypeSignature Language="VB.NET" Value="Public Class StringExpandableToken&#xA;Inherits StringToken" />
+  <TypeSignature Language="F#" Value="type StringExpandableToken = class&#xA;    inherit StringToken" />
+  <AssemblyInfo>
+    <AssemblyName>System.Management.Automation</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Management.Automation.Language.StringToken</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            A double quoted string, or a double quoted here string.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="NestedTokens">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.ReadOnlyCollection&lt;System.Management.Automation.Language.Token&gt; NestedTokens { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ObjectModel.ReadOnlyCollection`1&lt;class System.Management.Automation.Language.Token&gt; NestedTokens" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.Language.StringExpandableToken.NestedTokens" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property NestedTokens As ReadOnlyCollection(Of Token)" />
+      <MemberSignature Language="F#" Value="member this.NestedTokens : System.Collections.ObjectModel.ReadOnlyCollection&lt;System.Management.Automation.Language.Token&gt;" Usage="System.Management.Automation.Language.StringExpandableToken.NestedTokens" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.ReadOnlyCollection&lt;System.Management.Automation.Language.Token&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            This collection holds any tokens from variable references and sub-expressions within the string.
+            For example:
+                "In $([DateTime]::Now.Year - $age), $name was born"
+            has a nested expression with a sequence of tokens, plus the variable reference $name.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

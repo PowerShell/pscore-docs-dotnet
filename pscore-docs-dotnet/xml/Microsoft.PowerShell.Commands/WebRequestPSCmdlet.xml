@@ -1,0 +1,1013 @@
+﻿<Type Name="WebRequestPSCmdlet" FullName="Microsoft.PowerShell.Commands.WebRequestPSCmdlet">
+  <TypeSignature Language="C#" Value="public abstract class WebRequestPSCmdlet : System.Management.Automation.PSCmdlet" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit WebRequestPSCmdlet extends System.Management.Automation.PSCmdlet" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.PowerShell.Commands.WebRequestPSCmdlet" />
+  <TypeSignature Language="VB.NET" Value="Public MustInherit Class WebRequestPSCmdlet&#xA;Inherits PSCmdlet" />
+  <TypeSignature Language="F#" Value="type WebRequestPSCmdlet = class&#xA;    inherit PSCmdlet" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.PowerShell.Commands.Utility</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Management.Automation.PSCmdlet</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Base class for Invoke-RestMethod and Invoke-WebRequest commands.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected WebRequestPSCmdlet ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Commands.WebRequestPSCmdlet.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Protected Sub New ()" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Commands.Utility</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AllowUnencryptedAuthentication">
+      <MemberSignature Language="C#" Value="public virtual System.Management.Automation.SwitchParameter AllowUnencryptedAuthentication { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Management.Automation.SwitchParameter AllowUnencryptedAuthentication" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.WebRequestPSCmdlet.AllowUnencryptedAuthentication" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Property AllowUnencryptedAuthentication As SwitchParameter" />
+      <MemberSignature Language="F#" Value="member this.AllowUnencryptedAuthentication : System.Management.Automation.SwitchParameter with get, set" Usage="Microsoft.PowerShell.Commands.WebRequestPSCmdlet.AllowUnencryptedAuthentication" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Commands.Utility</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.SwitchParameter</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets the AllowUnencryptedAuthentication property
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Authentication">
+      <MemberSignature Language="C#" Value="public virtual Microsoft.PowerShell.Commands.WebAuthenticationType Authentication { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.PowerShell.Commands.WebAuthenticationType Authentication" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.WebRequestPSCmdlet.Authentication" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Property Authentication As WebAuthenticationType" />
+      <MemberSignature Language="F#" Value="member this.Authentication : Microsoft.PowerShell.Commands.WebAuthenticationType with get, set" Usage="Microsoft.PowerShell.Commands.WebRequestPSCmdlet.Authentication" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Commands.Utility</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Microsoft.PowerShell.Commands.WebAuthenticationType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets the Authentication property used to determin the Authentication method for the web session. 
+            Authentication does not work with UseDefaultCredentials.
+            Authentication over unencrypted sessions requires AllowUnencryptedAuthentication.
+            Basic: Requires Credential
+            OAuth/Bearer: Requires Token
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Body">
+      <MemberSignature Language="C#" Value="public virtual object Body { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object Body" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.WebRequestPSCmdlet.Body" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Property Body As Object" />
+      <MemberSignature Language="F#" Value="member this.Body : obj with get, set" Usage="Microsoft.PowerShell.Commands.WebRequestPSCmdlet.Body" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Commands.Utility</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ValueFromPipeline=true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            gets or sets the Body property
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Certificate">
+      <MemberSignature Language="C#" Value="public virtual System.Security.Cryptography.X509Certificates.X509Certificate Certificate { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Security.Cryptography.X509Certificates.X509Certificate Certificate" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.WebRequestPSCmdlet.Certificate" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Property Certificate As X509Certificate" />
+      <MemberSignature Language="F#" Value="member this.Certificate : System.Security.Cryptography.X509Certificates.X509Certificate with get, set" Usage="Microsoft.PowerShell.Commands.WebRequestPSCmdlet.Certificate" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Commands.Utility</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.ValidateNotNull</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.X509Certificates.X509Certificate</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            gets or sets the Certificate property
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CertificateThumbprint">
+      <MemberSignature Language="C#" Value="public virtual string CertificateThumbprint { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string CertificateThumbprint" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.WebRequestPSCmdlet.CertificateThumbprint" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Property CertificateThumbprint As String" />
+      <MemberSignature Language="F#" Value="member this.CertificateThumbprint : string with get, set" Usage="Microsoft.PowerShell.Commands.WebRequestPSCmdlet.CertificateThumbprint" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Commands.Utility</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.ValidateNotNullOrEmpty</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            gets or sets the CertificateThumbprint property
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContentType">
+      <MemberSignature Language="C#" Value="public virtual string ContentType { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ContentType" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.WebRequestPSCmdlet.ContentType" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Property ContentType As String" />
+      <MemberSignature Language="F#" Value="member this.ContentType : string with get, set" Usage="Microsoft.PowerShell.Commands.WebRequestPSCmdlet.ContentType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Commands.Utility</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            gets or sets the ContentType property
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Credential">
+      <MemberSignature Language="C#" Value="public virtual System.Management.Automation.PSCredential Credential { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Management.Automation.PSCredential Credential" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.WebRequestPSCmdlet.Credential" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Property Credential As PSCredential" />
+      <MemberSignature Language="F#" Value="member this.Credential : System.Management.Automation.PSCredential with get, set" Usage="Microsoft.PowerShell.Commands.WebRequestPSCmdlet.Credential" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Commands.Utility</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Credential</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.PSCredential</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            gets or sets the Credential property
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CustomMethod">
+      <MemberSignature Language="C#" Value="public virtual string CustomMethod { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string CustomMethod" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.WebRequestPSCmdlet.CustomMethod" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Property CustomMethod As String" />
+      <MemberSignature Language="F#" Value="member this.CustomMethod : string with get, set" Usage="Microsoft.PowerShell.Commands.WebRequestPSCmdlet.CustomMethod" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Commands.Utility</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Alias(Mono.Cecil.CustomAttributeArgument[])</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(Mandatory=true, ParameterSetName="CustomMethod")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(Mandatory=true, ParameterSetName="CustomMethodNoProxy")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.ValidateNotNullOrEmpty</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            gets or sets the CustomMethod property
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DisableKeepAlive">
+      <MemberSignature Language="C#" Value="public virtual System.Management.Automation.SwitchParameter DisableKeepAlive { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Management.Automation.SwitchParameter DisableKeepAlive" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.WebRequestPSCmdlet.DisableKeepAlive" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Property DisableKeepAlive As SwitchParameter" />
+      <MemberSignature Language="F#" Value="member this.DisableKeepAlive : System.Management.Automation.SwitchParameter with get, set" Usage="Microsoft.PowerShell.Commands.WebRequestPSCmdlet.DisableKeepAlive" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Commands.Utility</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.SwitchParameter</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            gets or sets the DisableKeepAlive property
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Headers">
+      <MemberSignature Language="C#" Value="public virtual System.Collections.IDictionary Headers { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.IDictionary Headers" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.WebRequestPSCmdlet.Headers" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Property Headers As IDictionary" />
+      <MemberSignature Language="F#" Value="member this.Headers : System.Collections.IDictionary with get, set" Usage="Microsoft.PowerShell.Commands.WebRequestPSCmdlet.Headers" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Commands.Utility</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Collections.IDictionary</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            gets or sets the Headers property
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InFile">
+      <MemberSignature Language="C#" Value="public virtual string InFile { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string InFile" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.WebRequestPSCmdlet.InFile" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Property InFile As String" />
+      <MemberSignature Language="F#" Value="member this.InFile : string with get, set" Usage="Microsoft.PowerShell.Commands.WebRequestPSCmdlet.InFile" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Commands.Utility</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            gets or sets the InFile property
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MaximumRedirection">
+      <MemberSignature Language="C#" Value="public virtual int MaximumRedirection { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 MaximumRedirection" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.WebRequestPSCmdlet.MaximumRedirection" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Property MaximumRedirection As Integer" />
+      <MemberSignature Language="F#" Value="member this.MaximumRedirection : int with get, set" Usage="Microsoft.PowerShell.Commands.WebRequestPSCmdlet.MaximumRedirection" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Commands.Utility</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.ValidateRange(Mono.Cecil.CustomAttributeArgument, Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            gets or sets the RedirectMax property
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Method">
+      <MemberSignature Language="C#" Value="public virtual Microsoft.PowerShell.Commands.WebRequestMethod Method { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.PowerShell.Commands.WebRequestMethod Method" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.WebRequestPSCmdlet.Method" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Property Method As WebRequestMethod" />
+      <MemberSignature Language="F#" Value="member this.Method : Microsoft.PowerShell.Commands.WebRequestMethod with get, set" Usage="Microsoft.PowerShell.Commands.WebRequestPSCmdlet.Method" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Commands.Utility</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="StandardMethod")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="StandardMethodNoProxy")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Microsoft.PowerShell.Commands.WebRequestMethod</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            gets or sets the Method property
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NoProxy">
+      <MemberSignature Language="C#" Value="public virtual System.Management.Automation.SwitchParameter NoProxy { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Management.Automation.SwitchParameter NoProxy" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.WebRequestPSCmdlet.NoProxy" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Property NoProxy As SwitchParameter" />
+      <MemberSignature Language="F#" Value="member this.NoProxy : System.Management.Automation.SwitchParameter with get, set" Usage="Microsoft.PowerShell.Commands.WebRequestPSCmdlet.NoProxy" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Commands.Utility</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(Mandatory=true, ParameterSetName="CustomMethodNoProxy")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(Mandatory=true, ParameterSetName="StandardMethodNoProxy")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.SwitchParameter</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            gets or sets the NoProxy property
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OutFile">
+      <MemberSignature Language="C#" Value="public virtual string OutFile { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string OutFile" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.WebRequestPSCmdlet.OutFile" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Property OutFile As String" />
+      <MemberSignature Language="F#" Value="member this.OutFile : string with get, set" Usage="Microsoft.PowerShell.Commands.WebRequestPSCmdlet.OutFile" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Commands.Utility</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            gets or sets the OutFile property
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PassThru">
+      <MemberSignature Language="C#" Value="public virtual System.Management.Automation.SwitchParameter PassThru { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Management.Automation.SwitchParameter PassThru" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.WebRequestPSCmdlet.PassThru" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Property PassThru As SwitchParameter" />
+      <MemberSignature Language="F#" Value="member this.PassThru : System.Management.Automation.SwitchParameter with get, set" Usage="Microsoft.PowerShell.Commands.WebRequestPSCmdlet.PassThru" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Commands.Utility</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.SwitchParameter</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            gets or sets the PassThrough property
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PreserveAuthorizationOnRedirect">
+      <MemberSignature Language="C#" Value="public virtual System.Management.Automation.SwitchParameter PreserveAuthorizationOnRedirect { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Management.Automation.SwitchParameter PreserveAuthorizationOnRedirect" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.WebRequestPSCmdlet.PreserveAuthorizationOnRedirect" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Property PreserveAuthorizationOnRedirect As SwitchParameter" />
+      <MemberSignature Language="F#" Value="member this.PreserveAuthorizationOnRedirect : System.Management.Automation.SwitchParameter with get, set" Usage="Microsoft.PowerShell.Commands.WebRequestPSCmdlet.PreserveAuthorizationOnRedirect" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Commands.Utility</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.SwitchParameter</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            gets or sets the PreserveAuthorizationOnRedirect property
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+            This property overrides compatibility with web requests on Windows.
+            On FullCLR (WebRequest), authorization headers are stripped during redirect.
+            CoreCLR (HTTPClient) does not have this behavior so web requests that work on
+            PowerShell/FullCLR can fail with PowerShell/CoreCLR.  To provide compatibility,
+            we'll detect requests with an Authorization header and automatically strip
+            the header when the first redirect occurs. This switch turns off this logic for
+            edge cases where the authorization header needs to be preserved across redirects.
+            </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ProcessRecord">
+      <MemberSignature Language="C#" Value="protected override void ProcessRecord ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void ProcessRecord() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Commands.WebRequestPSCmdlet.ProcessRecord" />
+      <MemberSignature Language="VB.NET" Value="Protected Overrides Sub ProcessRecord ()" />
+      <MemberSignature Language="F#" Value="override this.ProcessRecord : unit -&gt; unit" Usage="webRequestPSCmdlet.ProcessRecord " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Commands.Utility</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            the main execution method for cmdlets derived from WebRequestPSCmdlet.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Proxy">
+      <MemberSignature Language="C#" Value="public virtual Uri Proxy { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Uri Proxy" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.WebRequestPSCmdlet.Proxy" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Property Proxy As Uri" />
+      <MemberSignature Language="F#" Value="member this.Proxy : Uri with get, set" Usage="Microsoft.PowerShell.Commands.WebRequestPSCmdlet.Proxy" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Commands.Utility</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="StandardMethod")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="CustomMethod")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Uri</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            gets or sets the Proxy property
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ProxyCredential">
+      <MemberSignature Language="C#" Value="public virtual System.Management.Automation.PSCredential ProxyCredential { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Management.Automation.PSCredential ProxyCredential" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.WebRequestPSCmdlet.ProxyCredential" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Property ProxyCredential As PSCredential" />
+      <MemberSignature Language="F#" Value="member this.ProxyCredential : System.Management.Automation.PSCredential with get, set" Usage="Microsoft.PowerShell.Commands.WebRequestPSCmdlet.ProxyCredential" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Commands.Utility</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Credential</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="StandardMethod")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="CustomMethod")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.PSCredential</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            gets or sets the ProxyCredential property
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ProxyUseDefaultCredentials">
+      <MemberSignature Language="C#" Value="public virtual System.Management.Automation.SwitchParameter ProxyUseDefaultCredentials { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Management.Automation.SwitchParameter ProxyUseDefaultCredentials" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.WebRequestPSCmdlet.ProxyUseDefaultCredentials" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Property ProxyUseDefaultCredentials As SwitchParameter" />
+      <MemberSignature Language="F#" Value="member this.ProxyUseDefaultCredentials : System.Management.Automation.SwitchParameter with get, set" Usage="Microsoft.PowerShell.Commands.WebRequestPSCmdlet.ProxyUseDefaultCredentials" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Commands.Utility</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="StandardMethod")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="CustomMethod")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.SwitchParameter</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            gets or sets the ProxyUseDefaultCredentials property
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SessionVariable">
+      <MemberSignature Language="C#" Value="public virtual string SessionVariable { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string SessionVariable" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.WebRequestPSCmdlet.SessionVariable" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Property SessionVariable As String" />
+      <MemberSignature Language="F#" Value="member this.SessionVariable : string with get, set" Usage="Microsoft.PowerShell.Commands.WebRequestPSCmdlet.SessionVariable" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Commands.Utility</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Alias(Mono.Cecil.CustomAttributeArgument[])</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            gets or sets the SessionVariable property
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SkipCertificateCheck">
+      <MemberSignature Language="C#" Value="public virtual System.Management.Automation.SwitchParameter SkipCertificateCheck { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Management.Automation.SwitchParameter SkipCertificateCheck" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.WebRequestPSCmdlet.SkipCertificateCheck" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Property SkipCertificateCheck As SwitchParameter" />
+      <MemberSignature Language="F#" Value="member this.SkipCertificateCheck : System.Management.Automation.SwitchParameter with get, set" Usage="Microsoft.PowerShell.Commands.WebRequestPSCmdlet.SkipCertificateCheck" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Commands.Utility</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.SwitchParameter</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            gets or sets the SkipCertificateCheck property
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SkipHeaderValidation">
+      <MemberSignature Language="C#" Value="public virtual System.Management.Automation.SwitchParameter SkipHeaderValidation { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Management.Automation.SwitchParameter SkipHeaderValidation" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.WebRequestPSCmdlet.SkipHeaderValidation" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Property SkipHeaderValidation As SwitchParameter" />
+      <MemberSignature Language="F#" Value="member this.SkipHeaderValidation : System.Management.Automation.SwitchParameter with get, set" Usage="Microsoft.PowerShell.Commands.WebRequestPSCmdlet.SkipHeaderValidation" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Commands.Utility</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.SwitchParameter</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            gets or sets the SkipHeaderValidation property
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+            This property adds headers to the request's header collection without validation.
+            </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StopProcessing">
+      <MemberSignature Language="C#" Value="protected override void StopProcessing ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void StopProcessing() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Commands.WebRequestPSCmdlet.StopProcessing" />
+      <MemberSignature Language="VB.NET" Value="Protected Overrides Sub StopProcessing ()" />
+      <MemberSignature Language="F#" Value="override this.StopProcessing : unit -&gt; unit" Usage="webRequestPSCmdlet.StopProcessing " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Commands.Utility</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Implementing ^C, after start the BeginGetResponse
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TimeoutSec">
+      <MemberSignature Language="C#" Value="public virtual int TimeoutSec { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 TimeoutSec" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.WebRequestPSCmdlet.TimeoutSec" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Property TimeoutSec As Integer" />
+      <MemberSignature Language="F#" Value="member this.TimeoutSec : int with get, set" Usage="Microsoft.PowerShell.Commands.WebRequestPSCmdlet.TimeoutSec" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Commands.Utility</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.ValidateRange(Mono.Cecil.CustomAttributeArgument, Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            gets or sets the TimeOut property
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Token">
+      <MemberSignature Language="C#" Value="public virtual System.Security.SecureString Token { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Security.SecureString Token" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.WebRequestPSCmdlet.Token" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Property Token As SecureString" />
+      <MemberSignature Language="F#" Value="member this.Token : System.Security.SecureString with get, set" Usage="Microsoft.PowerShell.Commands.WebRequestPSCmdlet.Token" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Commands.Utility</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Security.SecureString</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets the Token property. Token is required by Authentication OAuth and Bearer.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TransferEncoding">
+      <MemberSignature Language="C#" Value="public virtual string TransferEncoding { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string TransferEncoding" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.WebRequestPSCmdlet.TransferEncoding" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Property TransferEncoding As String" />
+      <MemberSignature Language="F#" Value="member this.TransferEncoding : string with get, set" Usage="Microsoft.PowerShell.Commands.WebRequestPSCmdlet.TransferEncoding" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Commands.Utility</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.ValidateSet(Mono.Cecil.CustomAttributeArgument[], IgnoreCase=true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            gets or sets the TransferEncoding property
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Uri">
+      <MemberSignature Language="C#" Value="public virtual Uri Uri { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Uri Uri" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.WebRequestPSCmdlet.Uri" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Property Uri As Uri" />
+      <MemberSignature Language="F#" Value="member this.Uri : Uri with get, set" Usage="Microsoft.PowerShell.Commands.WebRequestPSCmdlet.Uri" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Commands.Utility</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(Mandatory=true, Position=0)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.ValidateNotNullOrEmpty</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Uri</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            gets or sets the Uri property
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UseBasicParsing">
+      <MemberSignature Language="C#" Value="public virtual System.Management.Automation.SwitchParameter UseBasicParsing { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Management.Automation.SwitchParameter UseBasicParsing" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.WebRequestPSCmdlet.UseBasicParsing" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Property UseBasicParsing As SwitchParameter" />
+      <MemberSignature Language="F#" Value="member this.UseBasicParsing : System.Management.Automation.SwitchParameter with get, set" Usage="Microsoft.PowerShell.Commands.WebRequestPSCmdlet.UseBasicParsing" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Commands.Utility</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.SwitchParameter</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            gets or sets the parameter UseBasicParsing
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UseDefaultCredentials">
+      <MemberSignature Language="C#" Value="public virtual System.Management.Automation.SwitchParameter UseDefaultCredentials { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Management.Automation.SwitchParameter UseDefaultCredentials" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.WebRequestPSCmdlet.UseDefaultCredentials" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Property UseDefaultCredentials As SwitchParameter" />
+      <MemberSignature Language="F#" Value="member this.UseDefaultCredentials : System.Management.Automation.SwitchParameter with get, set" Usage="Microsoft.PowerShell.Commands.WebRequestPSCmdlet.UseDefaultCredentials" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Commands.Utility</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.SwitchParameter</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            gets or sets the UseDefaultCredentials property
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UserAgent">
+      <MemberSignature Language="C#" Value="public virtual string UserAgent { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string UserAgent" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.WebRequestPSCmdlet.UserAgent" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Property UserAgent As String" />
+      <MemberSignature Language="F#" Value="member this.UserAgent : string with get, set" Usage="Microsoft.PowerShell.Commands.WebRequestPSCmdlet.UserAgent" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Commands.Utility</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            gets or sets the UserAgent property
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="VerifyInternetExplorerAvailable">
+      <MemberSignature Language="C#" Value="protected bool VerifyInternetExplorerAvailable (bool checkComObject);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance bool VerifyInternetExplorerAvailable(bool checkComObject) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Commands.WebRequestPSCmdlet.VerifyInternetExplorerAvailable(System.Boolean)" />
+      <MemberSignature Language="VB.NET" Value="Protected Function VerifyInternetExplorerAvailable (checkComObject As Boolean) As Boolean" />
+      <MemberSignature Language="F#" Value="member this.VerifyInternetExplorerAvailable : bool -&gt; bool" Usage="webRequestPSCmdlet.VerifyInternetExplorerAvailable checkComObject" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Commands.Utility</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="checkComObject" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="checkComObject">True if we should try to access IE's COM object. Not
+            needed if an HtmlDocument will be created shortly.</param>
+        <summary>
+            Verifies that Internet Explorer is available, and that its first-run
+            configuration is complete.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WebSession">
+      <MemberSignature Language="C#" Value="public virtual Microsoft.PowerShell.Commands.WebRequestSession WebSession { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.PowerShell.Commands.WebRequestSession WebSession" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.WebRequestPSCmdlet.WebSession" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Property WebSession As WebRequestSession" />
+      <MemberSignature Language="F#" Value="member this.WebSession : Microsoft.PowerShell.Commands.WebRequestSession with get, set" Usage="Microsoft.PowerShell.Commands.WebRequestPSCmdlet.WebSession" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Commands.Utility</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Microsoft.PowerShell.Commands.WebRequestSession</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            gets or sets the Session property
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,62 @@
+﻿<Type Name="SessionStateKeeper" FullName="System.Management.Automation.Internal.SessionStateKeeper">
+  <TypeSignature Language="C#" Value="public class SessionStateKeeper" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit SessionStateKeeper extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Management.Automation.Internal.SessionStateKeeper" />
+  <TypeSignature Language="VB.NET" Value="Public Class SessionStateKeeper" />
+  <TypeSignature Language="F#" Value="type SessionStateKeeper = class" />
+  <AssemblyInfo>
+    <AssemblyName>System.Management.Automation</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Every Runspace in one process contains SessionStateInternal per module (module SessionState).
+            Every RuntimeType is associated to only one SessionState in the Runspace, which creates it:
+            it's ever global state or a module state.
+            In the former case, module can be imported from the different runspaces in the same process.
+            And so runspaces will share RuntimeType. But in every runspace, Type is associated with just one SessionState.
+            We want type methods to be able access $script: variables and module-specific methods.
+            To achieve it, we preserve reference to SessionState that creates type in the private field 'SessionStateFieldName'.
+            Later, we use it to call scriptBlocks captured in ScriptBlockMemberMethodWrapper with the right sessionState.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="GetSessionState">
+      <MemberSignature Language="C#" Value="public object GetSessionState ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance object GetSessionState() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Internal.SessionStateKeeper.GetSessionState" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetSessionState () As Object" />
+      <MemberSignature Language="F#" Value="member this.GetSessionState : unit -&gt; obj" Usage="sessionStateKeeper.GetSessionState " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            This method should be called only from
+             - generated ctors for PowerShell classes, AND
+             - ScriptBlockMemberMethodWrapper when invoking static methods of PowerShell classes.
+            It's not intended to be a public API, but because we generate type in a different assembly it has to be public.
+            Return type should be SessionStateInternal, but it violates accessibility consistency, so we use object.
+            </summary>
+        <returns>SessionStateInternal</returns>
+        <remarks>
+            By default, PowerShell class instantiation usually happens in the same Runspace where the class is defined. In
+            that case, the created instance will be bound to the session state used to define that class in the Runspace.
+            However, if the instantiation happens in a different Runspace where the class is not defined, or it happens on
+            a thread without a default Runspace, then the created instance won't be bound to any session state.
+            </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

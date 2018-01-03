@@ -1,0 +1,70 @@
+﻿<Type Name="ProcessBaseCommand" FullName="Microsoft.PowerShell.Commands.ProcessBaseCommand">
+  <TypeSignature Language="C#" Value="public abstract class ProcessBaseCommand : System.Management.Automation.Cmdlet" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit ProcessBaseCommand extends System.Management.Automation.Cmdlet" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.PowerShell.Commands.ProcessBaseCommand" />
+  <TypeSignature Language="VB.NET" Value="Public MustInherit Class ProcessBaseCommand&#xA;Inherits Cmdlet" />
+  <TypeSignature Language="F#" Value="type ProcessBaseCommand = class&#xA;    inherit Cmdlet" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.PowerShell.Commands.Management</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Management.Automation.Cmdlet</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            This class implements the base for process commands
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected ProcessBaseCommand ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Commands.ProcessBaseCommand.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Protected Sub New ()" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Commands.Management</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InputObject">
+      <MemberSignature Language="C#" Value="public virtual System.Diagnostics.Process[] InputObject { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Diagnostics.Process[] InputObject" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.ProcessBaseCommand.InputObject" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Property InputObject As Process()" />
+      <MemberSignature Language="F#" Value="member this.InputObject : System.Diagnostics.Process[] with get, set" Usage="Microsoft.PowerShell.Commands.ProcessBaseCommand.InputObject" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Commands.Management</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(Mandatory=true, ParameterSetName="InputObject", ValueFromPipeline=true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Diagnostics.Process[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            If the input is a stream of [collections of]
+            Process objects, we bypass the Name and
+            Id parameters and read the Process objects
+            directly.  This allows us to deal with processes which
+            have wildcard characters in their name.
+            </summary>
+        <value>Process objects</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

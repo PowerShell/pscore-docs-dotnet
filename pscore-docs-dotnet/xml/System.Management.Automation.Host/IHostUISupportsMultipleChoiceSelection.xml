@@ -1,0 +1,68 @@
+﻿<Type Name="IHostUISupportsMultipleChoiceSelection" FullName="System.Management.Automation.Host.IHostUISupportsMultipleChoiceSelection">
+  <TypeSignature Language="C#" Value="public interface IHostUISupportsMultipleChoiceSelection" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IHostUISupportsMultipleChoiceSelection" />
+  <TypeSignature Language="DocId" Value="T:System.Management.Automation.Host.IHostUISupportsMultipleChoiceSelection" />
+  <TypeSignature Language="VB.NET" Value="Public Interface IHostUISupportsMultipleChoiceSelection" />
+  <TypeSignature Language="F#" Value="type IHostUISupportsMultipleChoiceSelection = interface" />
+  <AssemblyInfo>
+    <AssemblyName>System.Management.Automation</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>
+            This interface needs to be implemented by PSHost objects that want to support PromptForChoice
+            by giving the user ability to select more than one choice. The PromptForChoice method available
+            in PSHostUserInterface class supports only one choice selection.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="PromptForChoice">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.Collection&lt;int&gt; PromptForChoice (string caption, string message, System.Collections.ObjectModel.Collection&lt;System.Management.Automation.Host.ChoiceDescription&gt; choices, System.Collections.Generic.IEnumerable&lt;int&gt; defaultChoices);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Collections.ObjectModel.Collection`1&lt;int32&gt; PromptForChoice(string caption, string message, class System.Collections.ObjectModel.Collection`1&lt;class System.Management.Automation.Host.ChoiceDescription&gt; choices, class System.Collections.Generic.IEnumerable`1&lt;int32&gt; defaultChoices) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Host.IHostUISupportsMultipleChoiceSelection.PromptForChoice(System.String,System.String,System.Collections.ObjectModel.Collection{System.Management.Automation.Host.ChoiceDescription},System.Collections.Generic.IEnumerable{System.Int32})" />
+      <MemberSignature Language="VB.NET" Value="Public Function PromptForChoice (caption As String, message As String, choices As Collection(Of ChoiceDescription), defaultChoices As IEnumerable(Of Integer)) As Collection(Of Integer)" />
+      <MemberSignature Language="F#" Value="abstract member PromptForChoice : string * string * System.Collections.ObjectModel.Collection&lt;System.Management.Automation.Host.ChoiceDescription&gt; * seq&lt;int&gt; -&gt; System.Collections.ObjectModel.Collection&lt;int&gt;" Usage="iHostUISupportsMultipleChoiceSelection.PromptForChoice (caption, message, choices, defaultChoices)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.Collection&lt;System.Int32&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="caption" Type="System.String" />
+        <Parameter Name="message" Type="System.String" />
+        <Parameter Name="choices" Type="System.Collections.ObjectModel.Collection&lt;System.Management.Automation.Host.ChoiceDescription&gt;" />
+        <Parameter Name="defaultChoices" Type="System.Collections.Generic.IEnumerable&lt;System.Int32&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="caption">
+            Caption to precede or title the prompt.  E.g. "Parameters for get-foo (instance 1 of 2)"
+            </param>
+        <param name="message">
+            A message that describes what the choice is for.
+            </param>
+        <param name="choices">
+            An Collection of ChoiceDescription objects that describe each choice.
+            </param>
+        <param name="defaultChoices">
+            The index of the labels in the choices collection element to be presented to the user as
+            the default choice(s).
+            </param>
+        <summary>
+            Presents a dialog allowing the user to choose options from a set of options.
+            </summary>
+        <returns>
+            The indices of the choice elements that corresponds to the options selected. The
+            returned collection may contain duplicates depending on a particular host
+            implementation.
+            </returns>
+        <remarks>To be added.</remarks>
+        <altmember cref="M:System.Management.Automation.Host.PSHostUserInterface.PromptForChoice(System.String,System.String,System.Collections.ObjectModel.Collection{System.Management.Automation.Host.ChoiceDescription},System.Int32)" />
+      </Docs>
+    </Member>
+  </Members>
+</Type>

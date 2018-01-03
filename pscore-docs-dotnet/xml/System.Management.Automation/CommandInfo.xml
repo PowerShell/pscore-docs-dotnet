@@ -1,0 +1,350 @@
+﻿<Type Name="CommandInfo" FullName="System.Management.Automation.CommandInfo">
+  <TypeSignature Language="C#" Value="public abstract class CommandInfo" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit CommandInfo extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Management.Automation.CommandInfo" />
+  <TypeSignature Language="VB.NET" Value="Public MustInherit Class CommandInfo" />
+  <TypeSignature Language="F#" Value="type CommandInfo = class&#xA;    interface IHasSessionStateEntryVisibility" />
+  <AssemblyInfo>
+    <AssemblyName>System.Management.Automation</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            The base class for the information about commands. Contains the basic information about
+            the command, like name and type.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="CommandType">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.CommandTypes CommandType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Management.Automation.CommandTypes CommandType" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.CommandInfo.CommandType" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property CommandType As CommandTypes" />
+      <MemberSignature Language="F#" Value="member this.CommandType : System.Management.Automation.CommandTypes" Usage="System.Management.Automation.CommandInfo.CommandType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.CommandTypes</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the type of the command
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Definition">
+      <MemberSignature Language="C#" Value="public abstract string Definition { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Definition" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.CommandInfo.Definition" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride ReadOnly Property Definition As String" />
+      <MemberSignature Language="F#" Value="member this.Definition : string" Usage="System.Management.Automation.CommandInfo.Definition" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+             A string representing the definition of the command.
+             </summary>
+        <value>To be added.</value>
+        <remarks>
+             This is overridden by derived classes to return specific
+             information for the command type.
+             </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Module">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.PSModuleInfo Module { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Management.Automation.PSModuleInfo Module" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.CommandInfo.Module" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Module As PSModuleInfo" />
+      <MemberSignature Language="F#" Value="member this.Module : System.Management.Automation.PSModuleInfo" Usage="System.Management.Automation.CommandInfo.Module" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.PSModuleInfo</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The module that defines this cmdlet. This will be null for commands
+            that are not defined in the context of a module.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ModuleName">
+      <MemberSignature Language="C#" Value="public string ModuleName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ModuleName" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.CommandInfo.ModuleName" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ModuleName As String" />
+      <MemberSignature Language="F#" Value="member this.ModuleName : string" Usage="System.Management.Automation.CommandInfo.ModuleName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The module name of this command. It will be empty for commands
+            not imported from either a module or snapin.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public string Name { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.CommandInfo.Name" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Name As String" />
+      <MemberSignature Language="F#" Value="member this.Name : string" Usage="System.Management.Automation.CommandInfo.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the name of the command.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OutputType">
+      <MemberSignature Language="C#" Value="public abstract System.Collections.ObjectModel.ReadOnlyCollection&lt;System.Management.Automation.PSTypeName&gt; OutputType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ObjectModel.ReadOnlyCollection`1&lt;class System.Management.Automation.PSTypeName&gt; OutputType" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.CommandInfo.OutputType" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride ReadOnly Property OutputType As ReadOnlyCollection(Of PSTypeName)" />
+      <MemberSignature Language="F#" Value="member this.OutputType : System.Collections.ObjectModel.ReadOnlyCollection&lt;System.Management.Automation.PSTypeName&gt;" Usage="System.Management.Automation.CommandInfo.OutputType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.ReadOnlyCollection&lt;System.Management.Automation.PSTypeName&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            A possibly incomplete or even incorrect list of types the command could return.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Parameters">
+      <MemberSignature Language="C#" Value="public virtual System.Collections.Generic.Dictionary&lt;string,System.Management.Automation.ParameterMetadata&gt; Parameters { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.Dictionary`2&lt;string, class System.Management.Automation.ParameterMetadata&gt; Parameters" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.CommandInfo.Parameters" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable ReadOnly Property Parameters As Dictionary(Of String, ParameterMetadata)" />
+      <MemberSignature Language="F#" Value="member this.Parameters : System.Collections.Generic.Dictionary&lt;string, System.Management.Automation.ParameterMetadata&gt;" Usage="System.Management.Automation.CommandInfo.Parameters" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.Dictionary&lt;System.String,System.Management.Automation.ParameterMetadata&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Return the parameters for this command.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ParameterSets">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.ReadOnlyCollection&lt;System.Management.Automation.CommandParameterSetInfo&gt; ParameterSets { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ObjectModel.ReadOnlyCollection`1&lt;class System.Management.Automation.CommandParameterSetInfo&gt; ParameterSets" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.CommandInfo.ParameterSets" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ParameterSets As ReadOnlyCollection(Of CommandParameterSetInfo)" />
+      <MemberSignature Language="F#" Value="member this.ParameterSets : System.Collections.ObjectModel.ReadOnlyCollection&lt;System.Management.Automation.CommandParameterSetInfo&gt;" Usage="System.Management.Automation.CommandInfo.ParameterSets" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.ReadOnlyCollection&lt;System.Management.Automation.CommandParameterSetInfo&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the information about the parameters and parameter sets for
+            this command.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemotingCapability">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.RemotingCapability RemotingCapability { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Management.Automation.RemotingCapability RemotingCapability" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.CommandInfo.RemotingCapability" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property RemotingCapability As RemotingCapability" />
+      <MemberSignature Language="F#" Value="member this.RemotingCapability : System.Management.Automation.RemotingCapability" Usage="System.Management.Automation.CommandInfo.RemotingCapability" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.RemotingCapability</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The remoting capabilities of this cmdlet, when exposed in a context
+            with ambient remoting.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ResolveParameter">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.ParameterMetadata ResolveParameter (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Management.Automation.ParameterMetadata ResolveParameter(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.CommandInfo.ResolveParameter(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Function ResolveParameter (name As String) As ParameterMetadata" />
+      <MemberSignature Language="F#" Value="member this.ResolveParameter : string -&gt; System.Management.Automation.ParameterMetadata" Usage="commandInfo.ResolveParameter name" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.ParameterMetadata</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">The name of the parameter to resolve.</param>
+        <summary>
+            Resolves a full, shortened, or aliased parameter name to the actual
+            cmdlet parameter name, using PowerShell's standard parameter resolution
+            algorithm.
+            </summary>
+        <returns>The parameter that matches this name</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Source">
+      <MemberSignature Language="C#" Value="public virtual string Source { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Source" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.CommandInfo.Source" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable ReadOnly Property Source As String" />
+      <MemberSignature Language="F#" Value="member this.Source : string" Usage="System.Management.Automation.CommandInfo.Source" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the source of the command (shown by default in Get-Command)
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.CommandInfo.ToString" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Function ToString () As String" />
+      <MemberSignature Language="F#" Value="override this.ToString : unit -&gt; string" Usage="commandInfo.ToString " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            for diagnostic purposes
+            </summary>
+        <returns />
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Version">
+      <MemberSignature Language="C#" Value="public virtual Version Version { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Version Version" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.CommandInfo.Version" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable ReadOnly Property Version As Version" />
+      <MemberSignature Language="F#" Value="member this.Version : Version" Usage="System.Management.Automation.CommandInfo.Version" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Version</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the source version (shown by default in Get-Command)
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Visibility">
+      <MemberSignature Language="C#" Value="public virtual System.Management.Automation.SessionStateEntryVisibility Visibility { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Management.Automation.SessionStateEntryVisibility Visibility" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.CommandInfo.Visibility" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Property Visibility As SessionStateEntryVisibility" />
+      <MemberSignature Language="F#" Value="member this.Visibility : System.Management.Automation.SessionStateEntryVisibility with get, set" Usage="System.Management.Automation.CommandInfo.Visibility" />
+      <MemberType>Property</MemberType>
+      <Implements>
+        <InterfaceMember>P:System.Management.Automation.IHasSessionStateEntryVisibility.Visibility</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.SessionStateEntryVisibility</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Indicates if the command is to be allowed to be executed by a request
+            external to the runspace.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,219 @@
+﻿<Type Name="PSScriptMethod" FullName="System.Management.Automation.PSScriptMethod">
+  <TypeSignature Language="C#" Value="public class PSScriptMethod : System.Management.Automation.PSMethodInfo" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit PSScriptMethod extends System.Management.Automation.PSMethodInfo" />
+  <TypeSignature Language="DocId" Value="T:System.Management.Automation.PSScriptMethod" />
+  <TypeSignature Language="VB.NET" Value="Public Class PSScriptMethod&#xA;Inherits PSMethodInfo" />
+  <TypeSignature Language="F#" Value="type PSScriptMethod = class&#xA;    inherit PSMethodInfo" />
+  <AssemblyInfo>
+    <AssemblyName>System.Management.Automation</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Management.Automation.PSMethodInfo</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Serves as a method implemented with a script
+            </summary>
+    <remarks>
+            It is permitted to subclass <see cref="T:System.Management.Automation.PSScriptMethod" />
+            but there is no established scenario for doing this, nor has it been tested.
+            </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public PSScriptMethod (string name, System.Management.Automation.ScriptBlock script);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string name, class System.Management.Automation.ScriptBlock script) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.PSScriptMethod.#ctor(System.String,System.Management.Automation.ScriptBlock)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (name As String, script As ScriptBlock)" />
+      <MemberSignature Language="F#" Value="new System.Management.Automation.PSScriptMethod : string * System.Management.Automation.ScriptBlock -&gt; System.Management.Automation.PSScriptMethod" Usage="new System.Management.Automation.PSScriptMethod (name, script)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="script" Type="System.Management.Automation.ScriptBlock" />
+      </Parameters>
+      <Docs>
+        <param name="name">name of the method</param>
+        <param name="script">script to be used when calling the method.</param>
+        <summary>
+            Initializes a new instance of PSScriptMethod
+            </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">for invalid arguments</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Copy">
+      <MemberSignature Language="C#" Value="public override System.Management.Automation.PSMemberInfo Copy ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Management.Automation.PSMemberInfo Copy() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.PSScriptMethod.Copy" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Function Copy () As PSMemberInfo" />
+      <MemberSignature Language="F#" Value="override this.Copy : unit -&gt; System.Management.Automation.PSMemberInfo" Usage="pSScriptMethod.Copy " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.PSMemberInfo</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            returns a new PSMemberInfo that is a copy of this PSMemberInfo
+            </summary>
+        <returns>a new PSMemberInfo that is a copy of this PSMemberInfo</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Invoke">
+      <MemberSignature Language="C#" Value="public override object Invoke (params object[] arguments);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance object Invoke(object[] arguments) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.PSScriptMethod.Invoke(System.Object[])" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Function Invoke (ParamArray arguments As Object()) As Object" />
+      <MemberSignature Language="F#" Value="override this.Invoke : obj[] -&gt; obj" Usage="pSScriptMethod.Invoke arguments" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="arguments" Type="System.Object[]">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.ParamArray</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="arguments">arguments to the method</param>
+        <summary>
+            Invokes Script method and returns its results.
+            </summary>
+        <returns>return value from the method</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">if arguments is null</exception>
+        <exception cref="T:System.Management.Automation.MethodInvocationException">For exceptions invoking the Script or if there is no Runspace to run the script.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="MemberType">
+      <MemberSignature Language="C#" Value="public override System.Management.Automation.PSMemberTypes MemberType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Management.Automation.PSMemberTypes MemberType" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.PSScriptMethod.MemberType" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides ReadOnly Property MemberType As PSMemberTypes" />
+      <MemberSignature Language="F#" Value="member this.MemberType : System.Management.Automation.PSMemberTypes" Usage="System.Management.Automation.PSScriptMethod.MemberType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.PSMemberTypes</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the member type
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OverloadDefinitions">
+      <MemberSignature Language="C#" Value="public override System.Collections.ObjectModel.Collection&lt;string&gt; OverloadDefinitions { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ObjectModel.Collection`1&lt;string&gt; OverloadDefinitions" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.PSScriptMethod.OverloadDefinitions" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides ReadOnly Property OverloadDefinitions As Collection(Of String)" />
+      <MemberSignature Language="F#" Value="member this.OverloadDefinitions : System.Collections.ObjectModel.Collection&lt;string&gt;" Usage="System.Management.Automation.PSScriptMethod.OverloadDefinitions" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.Collection&lt;System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets a list of all the overloads for this method
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Script">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.ScriptBlock Script { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Management.Automation.ScriptBlock Script" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.PSScriptMethod.Script" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Script As ScriptBlock" />
+      <MemberSignature Language="F#" Value="member this.Script : System.Management.Automation.ScriptBlock" Usage="System.Management.Automation.PSScriptMethod.Script" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.ScriptBlock</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the script implementing this PSScriptMethod
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.PSScriptMethod.ToString" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Function ToString () As String" />
+      <MemberSignature Language="F#" Value="override this.ToString : unit -&gt; string" Usage="pSScriptMethod.ToString " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Returns the string representation of this member
+            </summary>
+        <returns>This property as a string</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TypeNameOfValue">
+      <MemberSignature Language="C#" Value="public override string TypeNameOfValue { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string TypeNameOfValue" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.PSScriptMethod.TypeNameOfValue" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides ReadOnly Property TypeNameOfValue As String" />
+      <MemberSignature Language="F#" Value="member this.TypeNameOfValue : string" Usage="System.Management.Automation.PSScriptMethod.TypeNameOfValue" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the type of the value for this member. Currently this always returns typeof(object).FullName.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

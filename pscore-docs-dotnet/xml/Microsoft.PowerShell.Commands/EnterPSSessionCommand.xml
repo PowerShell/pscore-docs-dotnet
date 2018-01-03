@@ -1,0 +1,600 @@
+﻿<Type Name="EnterPSSessionCommand" FullName="Microsoft.PowerShell.Commands.EnterPSSessionCommand">
+  <TypeSignature Language="C#" Value="public class EnterPSSessionCommand : Microsoft.PowerShell.Commands.PSRemotingBaseCmdlet" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit EnterPSSessionCommand extends Microsoft.PowerShell.Commands.PSRemotingBaseCmdlet" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.PowerShell.Commands.EnterPSSessionCommand" />
+  <TypeSignature Language="VB.NET" Value="Public Class EnterPSSessionCommand&#xA;Inherits PSRemotingBaseCmdlet" />
+  <TypeSignature Language="F#" Value="type EnterPSSessionCommand = class&#xA;    inherit PSRemotingBaseCmdlet" />
+  <AssemblyInfo>
+    <AssemblyName>System.Management.Automation</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Microsoft.PowerShell.Commands.PSRemotingBaseCmdlet</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Management.Automation.Cmdlet("Enter", "PSSession", DefaultParameterSetName="ComputerName", HelpUri="https://go.microsoft.com/fwlink/?LinkID=135210", RemotingCapability=System.Management.Automation.RemotingCapability.OwnedByCommand)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>
+            Enter-PSSession cmdlet.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public EnterPSSessionCommand ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Commands.EnterPSSessionCommand.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New ()" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginProcessing">
+      <MemberSignature Language="C#" Value="protected override void BeginProcessing ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void BeginProcessing() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Commands.EnterPSSessionCommand.BeginProcessing" />
+      <MemberSignature Language="VB.NET" Value="Protected Overrides Sub BeginProcessing ()" />
+      <MemberSignature Language="F#" Value="override this.BeginProcessing : unit -&gt; unit" Usage="enterPSSessionCommand.BeginProcessing " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Resolves shellname and appname
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ComputerName">
+      <MemberSignature Language="C#" Value="public string ComputerName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ComputerName" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.EnterPSSessionCommand.ComputerName" />
+      <MemberSignature Language="VB.NET" Value="Public Property ComputerName As String" />
+      <MemberSignature Language="F#" Value="member this.ComputerName : string with get, set" Usage="Microsoft.PowerShell.Commands.EnterPSSessionCommand.ComputerName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Alias(Mono.Cecil.CustomAttributeArgument[])</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(Mandatory=true, ParameterSetName="ComputerName", Position=0, ValueFromPipeline=true, ValueFromPipelineByPropertyName=true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.ValidateNotNullOrEmpty</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Computer name parameter.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ConfigurationName">
+      <MemberSignature Language="C#" Value="public string ConfigurationName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ConfigurationName" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.EnterPSSessionCommand.ConfigurationName" />
+      <MemberSignature Language="VB.NET" Value="Public Property ConfigurationName As String" />
+      <MemberSignature Language="F#" Value="member this.ConfigurationName : string with get, set" Usage="Microsoft.PowerShell.Commands.EnterPSSessionCommand.ConfigurationName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="ComputerName", ValueFromPipelineByPropertyName=true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="Uri", ValueFromPipelineByPropertyName=true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="ContainerId", ValueFromPipelineByPropertyName=true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="VMId", ValueFromPipelineByPropertyName=true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="VMName", ValueFromPipelineByPropertyName=true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+             For WSMan sessions:
+             If this parameter is not specified then the value specified in
+             the environment variable DEFAULTREMOTESHELLNAME will be used. If
+             this is not set as well, then Microsoft.PowerShell is used.
+            
+             For VM/Container sessions:
+             If this parameter is not specified then no configuration is used.
+             </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ConnectionUri">
+      <MemberSignature Language="C#" Value="public Uri ConnectionUri { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Uri ConnectionUri" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.EnterPSSessionCommand.ConnectionUri" />
+      <MemberSignature Language="VB.NET" Value="Public Property ConnectionUri As Uri" />
+      <MemberSignature Language="F#" Value="member this.ConnectionUri : Uri with get, set" Usage="Microsoft.PowerShell.Commands.EnterPSSessionCommand.ConnectionUri" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Alias(Mono.Cecil.CustomAttributeArgument[])</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="Uri", Position=1, ValueFromPipelineByPropertyName=true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.ValidateNotNullOrEmpty</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Uri</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            ConnectionUri parameter.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContainerId">
+      <MemberSignature Language="C#" Value="public string ContainerId { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ContainerId" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.EnterPSSessionCommand.ContainerId" />
+      <MemberSignature Language="VB.NET" Value="Public Property ContainerId As String" />
+      <MemberSignature Language="F#" Value="member this.ContainerId : string with get, set" Usage="Microsoft.PowerShell.Commands.EnterPSSessionCommand.ContainerId" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(Mandatory=true, ParameterSetName="ContainerId", Position=0, ValueFromPipeline=true, ValueFromPipelineByPropertyName=true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.ValidateNotNullOrEmpty</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The Id of the target container.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Credential">
+      <MemberSignature Language="C#" Value="public override System.Management.Automation.PSCredential Credential { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Management.Automation.PSCredential Credential" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.EnterPSSessionCommand.Credential" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Property Credential As PSCredential" />
+      <MemberSignature Language="F#" Value="member this.Credential : System.Management.Automation.PSCredential with get, set" Usage="Microsoft.PowerShell.Commands.EnterPSSessionCommand.Credential" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Credential</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="ComputerName", ValueFromPipelineByPropertyName=true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="Uri", ValueFromPipelineByPropertyName=true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(Mandatory=true, ParameterSetName="VMId", Position=1, ValueFromPipelineByPropertyName=true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(Mandatory=true, ParameterSetName="VMName", Position=1, ValueFromPipelineByPropertyName=true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.PSCredential</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Specifies the credentials of the user to impersonate in the
+            virtual machine. If this parameter is not specified then the
+            credentials of the current user process will be assumed.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EnableNetworkAccess">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.SwitchParameter EnableNetworkAccess { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Management.Automation.SwitchParameter EnableNetworkAccess" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.EnterPSSessionCommand.EnableNetworkAccess" />
+      <MemberSignature Language="VB.NET" Value="Public Property EnableNetworkAccess As SwitchParameter" />
+      <MemberSignature Language="F#" Value="member this.EnableNetworkAccess : System.Management.Automation.SwitchParameter with get, set" Usage="Microsoft.PowerShell.Commands.EnterPSSessionCommand.EnableNetworkAccess" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="ComputerName")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="Uri")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.SwitchParameter</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            When set and in loopback scenario (localhost) this enables creation of WSMan
+            host process with the user interactive token, allowing PowerShell script network access,
+            i.e., allows going off box.  When this property is true and a PSSession is disconnected,
+            reconnection is allowed only if reconnecting from a PowerShell session on the same box.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EndProcessing">
+      <MemberSignature Language="C#" Value="protected override void EndProcessing ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void EndProcessing() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Commands.EnterPSSessionCommand.EndProcessing" />
+      <MemberSignature Language="VB.NET" Value="Protected Overrides Sub EndProcessing ()" />
+      <MemberSignature Language="F#" Value="override this.EndProcessing : unit -&gt; unit" Usage="enterPSSessionCommand.EndProcessing " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            This method will until the runspace is opened and warnings if any
+            are reported
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HostName">
+      <MemberSignature Language="C#" Value="public string HostName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string HostName" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.EnterPSSessionCommand.HostName" />
+      <MemberSignature Language="VB.NET" Value="Public Property HostName As String" />
+      <MemberSignature Language="F#" Value="member this.HostName : string with get, set" Usage="Microsoft.PowerShell.Commands.EnterPSSessionCommand.HostName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(Mandatory=true, ParameterSetName="SSHHost", Position=0, ValueFromPipeline=true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.ValidateNotNullOrEmpty</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Host name for an SSH remote connection
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Id">
+      <MemberSignature Language="C#" Value="public int Id { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Id" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.EnterPSSessionCommand.Id" />
+      <MemberSignature Language="VB.NET" Value="Public Property Id As Integer" />
+      <MemberSignature Language="F#" Value="member this.Id : int with get, set" Usage="Microsoft.PowerShell.Commands.EnterPSSessionCommand.Id" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="Id", Position=0, ValueFromPipelineByPropertyName=true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.ValidateNotNull</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            SessionId of the remote runspace info object.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InstanceId">
+      <MemberSignature Language="C#" Value="public Guid InstanceId { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Guid InstanceId" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.EnterPSSessionCommand.InstanceId" />
+      <MemberSignature Language="VB.NET" Value="Public Property InstanceId As Guid" />
+      <MemberSignature Language="F#" Value="member this.InstanceId : Guid with get, set" Usage="Microsoft.PowerShell.Commands.EnterPSSessionCommand.InstanceId" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="InstanceId", ValueFromPipelineByPropertyName=true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.ValidateNotNull</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Guid</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            RemoteRunspaceId of the remote runspace info object.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public string Name { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.EnterPSSessionCommand.Name" />
+      <MemberSignature Language="VB.NET" Value="Public Property Name As String" />
+      <MemberSignature Language="F#" Value="member this.Name : string with get, set" Usage="Microsoft.PowerShell.Commands.EnterPSSessionCommand.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="Name", ValueFromPipelineByPropertyName=true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Name of the remote runspace info object.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ProcessRecord">
+      <MemberSignature Language="C#" Value="protected override void ProcessRecord ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void ProcessRecord() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Commands.EnterPSSessionCommand.ProcessRecord" />
+      <MemberSignature Language="VB.NET" Value="Protected Overrides Sub ProcessRecord ()" />
+      <MemberSignature Language="F#" Value="override this.ProcessRecord : unit -&gt; unit" Usage="enterPSSessionCommand.ProcessRecord " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Process record.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Session">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.Runspaces.PSSession Session { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Management.Automation.Runspaces.PSSession Session" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.EnterPSSessionCommand.Session" />
+      <MemberSignature Language="VB.NET" Value="Public Property Session As PSSession" />
+      <MemberSignature Language="F#" Value="member this.Session : System.Management.Automation.Runspaces.PSSession with get, set" Usage="Microsoft.PowerShell.Commands.EnterPSSessionCommand.Session" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="Session", Position=0, ValueFromPipeline=true, ValueFromPipelineByPropertyName=true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.ValidateNotNullOrEmpty</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.Runspaces.PSSession</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Runspace parameter.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SSHConnection">
+      <MemberSignature Language="C#" Value="public override System.Collections.Hashtable[] SSHConnection { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Hashtable[] SSHConnection" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.EnterPSSessionCommand.SSHConnection" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides ReadOnly Property SSHConnection As Hashtable()" />
+      <MemberSignature Language="F#" Value="member this.SSHConnection : System.Collections.Hashtable[]" Usage="Microsoft.PowerShell.Commands.EnterPSSessionCommand.SSHConnection" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Hashtable[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Suppress SSHConnection parameter set
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StopProcessing">
+      <MemberSignature Language="C#" Value="protected override void StopProcessing ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void StopProcessing() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Commands.EnterPSSessionCommand.StopProcessing" />
+      <MemberSignature Language="VB.NET" Value="Protected Overrides Sub StopProcessing ()" />
+      <MemberSignature Language="F#" Value="override this.StopProcessing : unit -&gt; unit" Usage="enterPSSessionCommand.StopProcessing " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary />
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ThrottleLimit">
+      <MemberSignature Language="C#" Value="public int ThrottleLimit { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 ThrottleLimit" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.EnterPSSessionCommand.ThrottleLimit" />
+      <MemberSignature Language="VB.NET" Value="Public Property ThrottleLimit As Integer" />
+      <MemberSignature Language="F#" Value="member this.ThrottleLimit : int with get, set" Usage="Microsoft.PowerShell.Commands.EnterPSSessionCommand.ThrottleLimit" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Disable ThrottleLimit parameter inherited from base class.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="VMId">
+      <MemberSignature Language="C#" Value="public Guid VMId { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Guid VMId" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.EnterPSSessionCommand.VMId" />
+      <MemberSignature Language="VB.NET" Value="Public Property VMId As Guid" />
+      <MemberSignature Language="F#" Value="member this.VMId : Guid with get, set" Usage="Microsoft.PowerShell.Commands.EnterPSSessionCommand.VMId" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Alias(Mono.Cecil.CustomAttributeArgument[])</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(Mandatory=true, ParameterSetName="VMId", Position=0, ValueFromPipeline=true, ValueFromPipelineByPropertyName=true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.ValidateNotNullOrEmpty</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Guid</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Virtual machine ID.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="VMName">
+      <MemberSignature Language="C#" Value="public string VMName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string VMName" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.EnterPSSessionCommand.VMName" />
+      <MemberSignature Language="VB.NET" Value="Public Property VMName As String" />
+      <MemberSignature Language="F#" Value="member this.VMName : string with get, set" Usage="Microsoft.PowerShell.Commands.EnterPSSessionCommand.VMName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(Mandatory=true, ParameterSetName="VMName", Position=0, ValueFromPipeline=true, ValueFromPipelineByPropertyName=true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.ValidateNotNullOrEmpty</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Virtual machine name.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

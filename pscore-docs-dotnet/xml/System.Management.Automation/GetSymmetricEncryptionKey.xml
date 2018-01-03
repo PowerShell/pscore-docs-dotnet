@@ -1,0 +1,32 @@
+﻿<Type Name="GetSymmetricEncryptionKey" FullName="System.Management.Automation.GetSymmetricEncryptionKey">
+  <TypeSignature Language="C#" Value="public delegate bool GetSymmetricEncryptionKey(StreamingContext context, out byte[] key, out byte[] iv);" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed GetSymmetricEncryptionKey extends System.MulticastDelegate" />
+  <TypeSignature Language="DocId" Value="T:System.Management.Automation.GetSymmetricEncryptionKey" />
+  <TypeSignature Language="VB.NET" Value="Public Delegate Function GetSymmetricEncryptionKey(context As StreamingContext, ByRef key As Byte(), ByRef iv As Byte()) As Boolean " />
+  <TypeSignature Language="F#" Value="type GetSymmetricEncryptionKey = delegate of StreamingContext *  *  -&gt; bool" />
+  <AssemblyInfo>
+    <AssemblyName>System.Management.Automation</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Delegate</BaseTypeName>
+  </Base>
+  <Parameters>
+    <Parameter Name="context" Type="System.Runtime.Serialization.StreamingContext" />
+    <Parameter Name="key" Type="System.Byte[]&amp;" RefType="out" />
+    <Parameter Name="iv" Type="System.Byte[]&amp;" RefType="out" />
+  </Parameters>
+  <ReturnValue>
+    <ReturnType>System.Boolean</ReturnType>
+  </ReturnValue>
+  <Docs>
+    <param name="context">The streaming context, which contains the searilization context.</param>
+    <param name="key">Symmetric encryption key.</param>
+    <param name="iv">symmetric encryption initialization vector.</param>
+    <summary>
+            Declare a delegate which returns the encryption key and initialization vector for symmetric encryption algorithm.
+            </summary>
+    <returns />
+    <remarks>To be added.</remarks>
+  </Docs>
+</Type>

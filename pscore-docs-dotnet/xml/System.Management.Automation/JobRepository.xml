@@ -1,0 +1,102 @@
+﻿<Type Name="JobRepository" FullName="System.Management.Automation.JobRepository">
+  <TypeSignature Language="C#" Value="public class JobRepository : System.Management.Automation.Repository&lt;System.Management.Automation.Job&gt;" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit JobRepository extends System.Management.Automation.Repository`1&lt;class System.Management.Automation.Job&gt;" />
+  <TypeSignature Language="DocId" Value="T:System.Management.Automation.JobRepository" />
+  <TypeSignature Language="VB.NET" Value="Public Class JobRepository&#xA;Inherits Repository(Of Job)" />
+  <TypeSignature Language="F#" Value="type JobRepository = class&#xA;    inherit Repository&lt;Job&gt;" />
+  <AssemblyInfo>
+    <AssemblyName>System.Management.Automation</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Management.Automation.Repository&lt;System.Management.Automation.Job&gt;</BaseTypeName>
+    <BaseTypeArguments>
+      <BaseTypeArgument TypeParamName="T">System.Management.Automation.Job</BaseTypeArgument>
+    </BaseTypeArguments>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            class which has list of job objects currently active in the system.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="GetJob">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.Job GetJob (Guid instanceId);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Management.Automation.Job GetJob(valuetype System.Guid instanceId) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.JobRepository.GetJob(System.Guid)" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetJob (instanceId As Guid) As Job" />
+      <MemberSignature Language="F#" Value="member this.GetJob : Guid -&gt; System.Management.Automation.Job" Usage="jobRepository.GetJob instanceId" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.Job</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="instanceId" Type="System.Guid" />
+      </Parameters>
+      <Docs>
+        <param name="instanceId">To be added.</param>
+        <summary>
+            Returns the Job whose InstanceId matches the parameter.
+            </summary>
+        <returns>
+            The matching Job. Null if no match is found.
+            </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetKey">
+      <MemberSignature Language="C#" Value="protected override Guid GetKey (System.Management.Automation.Job item);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance valuetype System.Guid GetKey(class System.Management.Automation.Job item) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.JobRepository.GetKey(System.Management.Automation.Job)" />
+      <MemberSignature Language="VB.NET" Value="Protected Overrides Function GetKey (item As Job) As Guid" />
+      <MemberSignature Language="F#" Value="override this.GetKey : System.Management.Automation.Job -&gt; Guid" Usage="jobRepository.GetKey item" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Guid</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="item" Type="System.Management.Automation.Job" />
+      </Parameters>
+      <Docs>
+        <param name="item">job for which a key is required</param>
+        <summary>
+            Returns the instance id of the job as key
+            </summary>
+        <returns>returns jobs guid</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Jobs">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.List&lt;System.Management.Automation.Job&gt; Jobs { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.List`1&lt;class System.Management.Automation.Job&gt; Jobs" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.JobRepository.Jobs" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Jobs As List(Of Job)" />
+      <MemberSignature Language="F#" Value="member this.Jobs : System.Collections.Generic.List&lt;System.Management.Automation.Job&gt;" Usage="System.Management.Automation.JobRepository.Jobs" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.List&lt;System.Management.Automation.Job&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Returns the list of available job objects
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

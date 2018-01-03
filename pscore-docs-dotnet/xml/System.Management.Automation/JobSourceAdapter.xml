@@ -1,0 +1,451 @@
+﻿<Type Name="JobSourceAdapter" FullName="System.Management.Automation.JobSourceAdapter">
+  <TypeSignature Language="C#" Value="public abstract class JobSourceAdapter" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit JobSourceAdapter extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Management.Automation.JobSourceAdapter" />
+  <TypeSignature Language="VB.NET" Value="Public MustInherit Class JobSourceAdapter" />
+  <TypeSignature Language="F#" Value="type JobSourceAdapter = class" />
+  <AssemblyInfo>
+    <AssemblyName>System.Management.Automation</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Abstract class for a job store which will
+            contain the jobs of a specific type.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected JobSourceAdapter ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.JobSourceAdapter.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Protected Sub New ()" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetJobByInstanceId">
+      <MemberSignature Language="C#" Value="public abstract System.Management.Automation.Job2 GetJobByInstanceId (Guid instanceId, bool recurse);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Management.Automation.Job2 GetJobByInstanceId(valuetype System.Guid instanceId, bool recurse) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.JobSourceAdapter.GetJobByInstanceId(System.Guid,System.Boolean)" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Function GetJobByInstanceId (instanceId As Guid, recurse As Boolean) As Job2" />
+      <MemberSignature Language="F#" Value="abstract member GetJobByInstanceId : Guid * bool -&gt; System.Management.Automation.Job2" Usage="jobSourceAdapter.GetJobByInstanceId (instanceId, recurse)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.Job2</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="instanceId" Type="System.Guid" />
+        <Parameter Name="recurse" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="instanceId">Guid to match</param>
+        <param name="recurse"></param>
+        <summary>
+            Get list of jobs that has the specified id
+            </summary>
+        <returns>job with the specified guid</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetJobBySessionId">
+      <MemberSignature Language="C#" Value="public abstract System.Management.Automation.Job2 GetJobBySessionId (int id, bool recurse);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Management.Automation.Job2 GetJobBySessionId(int32 id, bool recurse) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.JobSourceAdapter.GetJobBySessionId(System.Int32,System.Boolean)" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Function GetJobBySessionId (id As Integer, recurse As Boolean) As Job2" />
+      <MemberSignature Language="F#" Value="abstract member GetJobBySessionId : int * bool -&gt; System.Management.Automation.Job2" Usage="jobSourceAdapter.GetJobBySessionId (id, recurse)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.Job2</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="id" Type="System.Int32" />
+        <Parameter Name="recurse" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="id">Id to match</param>
+        <param name="recurse"></param>
+        <summary>
+            Get job that has specific session id
+            </summary>
+        <returns>Job with the specified id</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetJobs">
+      <MemberSignature Language="C#" Value="public abstract System.Collections.Generic.IList&lt;System.Management.Automation.Job2&gt; GetJobs ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Collections.Generic.IList`1&lt;class System.Management.Automation.Job2&gt; GetJobs() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.JobSourceAdapter.GetJobs" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Function GetJobs () As IList(Of Job2)" />
+      <MemberSignature Language="F#" Value="abstract member GetJobs : unit -&gt; System.Collections.Generic.IList&lt;System.Management.Automation.Job2&gt;" Usage="jobSourceAdapter.GetJobs " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IList&lt;System.Management.Automation.Job2&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Get the list of jobs that are currently available in this
+            store
+            </summary>
+        <returns>collection of job objects</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetJobsByCommand">
+      <MemberSignature Language="C#" Value="public abstract System.Collections.Generic.IList&lt;System.Management.Automation.Job2&gt; GetJobsByCommand (string command, bool recurse);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Collections.Generic.IList`1&lt;class System.Management.Automation.Job2&gt; GetJobsByCommand(string command, bool recurse) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.JobSourceAdapter.GetJobsByCommand(System.String,System.Boolean)" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Function GetJobsByCommand (command As String, recurse As Boolean) As IList(Of Job2)" />
+      <MemberSignature Language="F#" Value="abstract member GetJobsByCommand : string * bool -&gt; System.Collections.Generic.IList&lt;System.Management.Automation.Job2&gt;" Usage="jobSourceAdapter.GetJobsByCommand (command, recurse)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IList&lt;System.Management.Automation.Job2&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="command" Type="System.String" />
+        <Parameter Name="recurse" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="command">command to match</param>
+        <param name="recurse"></param>
+        <summary>
+            Get list of jobs that run the specified command
+            </summary>
+        <returns>collection of jobs that match the specified
+            criteria</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetJobsByFilter">
+      <MemberSignature Language="C#" Value="public abstract System.Collections.Generic.IList&lt;System.Management.Automation.Job2&gt; GetJobsByFilter (System.Collections.Generic.Dictionary&lt;string,object&gt; filter, bool recurse);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Collections.Generic.IList`1&lt;class System.Management.Automation.Job2&gt; GetJobsByFilter(class System.Collections.Generic.Dictionary`2&lt;string, object&gt; filter, bool recurse) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.JobSourceAdapter.GetJobsByFilter(System.Collections.Generic.Dictionary{System.String,System.Object},System.Boolean)" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Function GetJobsByFilter (filter As Dictionary(Of String, Object), recurse As Boolean) As IList(Of Job2)" />
+      <MemberSignature Language="F#" Value="abstract member GetJobsByFilter : System.Collections.Generic.Dictionary&lt;string, obj&gt; * bool -&gt; System.Collections.Generic.IList&lt;System.Management.Automation.Job2&gt;" Usage="jobSourceAdapter.GetJobsByFilter (filter, recurse)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IList&lt;System.Management.Automation.Job2&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="filter" Type="System.Collections.Generic.Dictionary&lt;System.String,System.Object&gt;" />
+        <Parameter Name="recurse" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="filter">dictionary containing name value
+              pairs for adapter specific filters</param>
+        <param name="recurse"></param>
+        <summary>
+            Get list of jobs based on the adapter specific
+            filter parameters
+            </summary>
+        <returns>collection of jobs that match the
+            specified criteria</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetJobsByName">
+      <MemberSignature Language="C#" Value="public abstract System.Collections.Generic.IList&lt;System.Management.Automation.Job2&gt; GetJobsByName (string name, bool recurse);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Collections.Generic.IList`1&lt;class System.Management.Automation.Job2&gt; GetJobsByName(string name, bool recurse) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.JobSourceAdapter.GetJobsByName(System.String,System.Boolean)" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Function GetJobsByName (name As String, recurse As Boolean) As IList(Of Job2)" />
+      <MemberSignature Language="F#" Value="abstract member GetJobsByName : string * bool -&gt; System.Collections.Generic.IList&lt;System.Management.Automation.Job2&gt;" Usage="jobSourceAdapter.GetJobsByName (name, recurse)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IList&lt;System.Management.Automation.Job2&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="recurse" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="name">names to match, can support
+              wildcard if the store supports</param>
+        <param name="recurse"></param>
+        <summary>
+            Get list of jobs that matches the specified names
+            </summary>
+        <returns>collection of jobs that match the specified
+            criteria</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetJobsByState">
+      <MemberSignature Language="C#" Value="public abstract System.Collections.Generic.IList&lt;System.Management.Automation.Job2&gt; GetJobsByState (System.Management.Automation.JobState state, bool recurse);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Collections.Generic.IList`1&lt;class System.Management.Automation.Job2&gt; GetJobsByState(valuetype System.Management.Automation.JobState state, bool recurse) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.JobSourceAdapter.GetJobsByState(System.Management.Automation.JobState,System.Boolean)" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Function GetJobsByState (state As JobState, recurse As Boolean) As IList(Of Job2)" />
+      <MemberSignature Language="F#" Value="abstract member GetJobsByState : System.Management.Automation.JobState * bool -&gt; System.Collections.Generic.IList&lt;System.Management.Automation.Job2&gt;" Usage="jobSourceAdapter.GetJobsByState (state, recurse)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IList&lt;System.Management.Automation.Job2&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="state" Type="System.Management.Automation.JobState" />
+        <Parameter Name="recurse" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="state">state to match</param>
+        <param name="recurse"></param>
+        <summary>
+            Get list of jobs that are in the specified state
+            </summary>
+        <returns>collection of jobs with the specified
+            state</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public string Name { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.JobSourceAdapter.Name" />
+      <MemberSignature Language="VB.NET" Value="Public Property Name As String" />
+      <MemberSignature Language="F#" Value="member this.Name : string with get, set" Usage="System.Management.Automation.JobSourceAdapter.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Name for this store
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NewJob">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.Job2 NewJob (System.Management.Automation.JobDefinition definition);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Management.Automation.Job2 NewJob(class System.Management.Automation.JobDefinition definition) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.JobSourceAdapter.NewJob(System.Management.Automation.JobDefinition)" />
+      <MemberSignature Language="VB.NET" Value="Public Function NewJob (definition As JobDefinition) As Job2" />
+      <MemberSignature Language="F#" Value="member this.NewJob : System.Management.Automation.JobDefinition -&gt; System.Management.Automation.Job2" Usage="jobSourceAdapter.NewJob definition" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.Job2</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="definition" Type="System.Management.Automation.JobDefinition" />
+      </Parameters>
+      <Docs>
+        <param name="definition">job definition to use</param>
+        <summary>
+            Create a new job with the specified definition
+            </summary>
+        <returns>job object</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NewJob">
+      <MemberSignature Language="C#" Value="public abstract System.Management.Automation.Job2 NewJob (System.Management.Automation.JobInvocationInfo specification);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Management.Automation.Job2 NewJob(class System.Management.Automation.JobInvocationInfo specification) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.JobSourceAdapter.NewJob(System.Management.Automation.JobInvocationInfo)" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Function NewJob (specification As JobInvocationInfo) As Job2" />
+      <MemberSignature Language="F#" Value="abstract member NewJob : System.Management.Automation.JobInvocationInfo -&gt; System.Management.Automation.Job2" Usage="jobSourceAdapter.NewJob specification" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.Job2</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="specification" Type="System.Management.Automation.JobInvocationInfo" />
+      </Parameters>
+      <Docs>
+        <param name="specification">specification</param>
+        <summary>
+            Create a new job with the specified JobSpecification
+            </summary>
+        <returns>job object</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NewJob">
+      <MemberSignature Language="C#" Value="public virtual System.Management.Automation.Job2 NewJob (string definitionName, string definitionPath);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Management.Automation.Job2 NewJob(string definitionName, string definitionPath) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.JobSourceAdapter.NewJob(System.String,System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function NewJob (definitionName As String, definitionPath As String) As Job2" />
+      <MemberSignature Language="F#" Value="abstract member NewJob : string * string -&gt; System.Management.Automation.Job2&#xA;override this.NewJob : string * string -&gt; System.Management.Automation.Job2" Usage="jobSourceAdapter.NewJob (definitionName, definitionPath)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.Job2</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="definitionName" Type="System.String" />
+        <Parameter Name="definitionPath" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="definitionName">Job definition name</param>
+        <param name="definitionPath">Job definition file path</param>
+        <summary>
+            Creates a new job with the definition as specified by
+            the provided definition name and path.  If path is null
+            then a default location will be used to find the job
+            definition by name.
+            </summary>
+        <returns>Job2 object</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PersistJob">
+      <MemberSignature Language="C#" Value="public virtual void PersistJob (System.Management.Automation.Job2 job);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void PersistJob(class System.Management.Automation.Job2 job) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.JobSourceAdapter.PersistJob(System.Management.Automation.Job2)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Sub PersistJob (job As Job2)" />
+      <MemberSignature Language="F#" Value="abstract member PersistJob : System.Management.Automation.Job2 -&gt; unit&#xA;override this.PersistJob : System.Management.Automation.Job2 -&gt; unit" Usage="jobSourceAdapter.PersistJob job" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="job" Type="System.Management.Automation.Job2" />
+      </Parameters>
+      <Docs>
+        <param name="job">Job2 type job to persist</param>
+        <summary>
+            Saves the job to a persisted store.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveJob">
+      <MemberSignature Language="C#" Value="public abstract void RemoveJob (System.Management.Automation.Job2 job);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void RemoveJob(class System.Management.Automation.Job2 job) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.JobSourceAdapter.RemoveJob(System.Management.Automation.Job2)" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Sub RemoveJob (job As Job2)" />
+      <MemberSignature Language="F#" Value="abstract member RemoveJob : System.Management.Automation.Job2 -&gt; unit" Usage="jobSourceAdapter.RemoveJob job" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="job" Type="System.Management.Automation.Job2" />
+      </Parameters>
+      <Docs>
+        <param name="job">job object to remove</param>
+        <summary>
+            Remove a job from the store
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RetrieveJobIdForReuse">
+      <MemberSignature Language="C#" Value="protected System.Management.Automation.JobIdentifier RetrieveJobIdForReuse (Guid instanceId);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance class System.Management.Automation.JobIdentifier RetrieveJobIdForReuse(valuetype System.Guid instanceId) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.JobSourceAdapter.RetrieveJobIdForReuse(System.Guid)" />
+      <MemberSignature Language="VB.NET" Value="Protected Function RetrieveJobIdForReuse (instanceId As Guid) As JobIdentifier" />
+      <MemberSignature Language="F#" Value="member this.RetrieveJobIdForReuse : Guid -&gt; System.Management.Automation.JobIdentifier" Usage="jobSourceAdapter.RetrieveJobIdForReuse instanceId" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.JobIdentifier</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="instanceId" Type="System.Guid" />
+      </Parameters>
+      <Docs>
+        <param name="instanceId">Instance Id of the job to recreate</param>
+        <summary>
+            Get a token that allows for construction of a job with a previously assigned
+            Id and InstanceId. This is only possible if this JobSourceAdapter is the
+            creator of the original job.
+            The original job must have been saved using "SaveJobIdForReconstruction"
+            </summary>
+        <returns>JobIdentifier to be used in job construction</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StoreJobIdForReuse">
+      <MemberSignature Language="C#" Value="public void StoreJobIdForReuse (System.Management.Automation.Job2 job, bool recurse);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void StoreJobIdForReuse(class System.Management.Automation.Job2 job, bool recurse) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.JobSourceAdapter.StoreJobIdForReuse(System.Management.Automation.Job2,System.Boolean)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub StoreJobIdForReuse (job As Job2, recurse As Boolean)" />
+      <MemberSignature Language="F#" Value="member this.StoreJobIdForReuse : System.Management.Automation.Job2 * bool -&gt; unit" Usage="jobSourceAdapter.StoreJobIdForReuse (job, recurse)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="job" Type="System.Management.Automation.Job2" />
+        <Parameter Name="recurse" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="job">The job whose id information to store.</param>
+        <param name="recurse">Recurse to save child job Ids.</param>
+        <summary>
+            Saves the Id information for a job so that it can be constructed at a later time.
+            This will only allow this job source adapter type to recreate the job.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

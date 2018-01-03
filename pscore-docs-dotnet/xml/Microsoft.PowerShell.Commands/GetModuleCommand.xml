@@ -1,0 +1,448 @@
+﻿<Type Name="GetModuleCommand" FullName="Microsoft.PowerShell.Commands.GetModuleCommand">
+  <TypeSignature Language="C#" Value="public sealed class GetModuleCommand : Microsoft.PowerShell.Commands.ModuleCmdletBase, IDisposable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit GetModuleCommand extends Microsoft.PowerShell.Commands.ModuleCmdletBase implements class System.IDisposable" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.PowerShell.Commands.GetModuleCommand" />
+  <TypeSignature Language="VB.NET" Value="Public NotInheritable Class GetModuleCommand&#xA;Inherits ModuleCmdletBase&#xA;Implements IDisposable" />
+  <TypeSignature Language="F#" Value="type GetModuleCommand = class&#xA;    inherit ModuleCmdletBase&#xA;    interface IDisposable" />
+  <AssemblyInfo>
+    <AssemblyName>System.Management.Automation</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Microsoft.PowerShell.Commands.ModuleCmdletBase</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Management.Automation.Cmdlet("Get", "Module", DefaultParameterSetName="Loaded", HelpUri="https://go.microsoft.com/fwlink/?LinkID=141552")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Management.Automation.OutputType(typeof(System.Management.Automation.PSModuleInfo))</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>
+            Implements a cmdlet that gets the list of loaded modules...
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public GetModuleCommand ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Commands.GetModuleCommand.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New ()" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="All">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.SwitchParameter All { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Management.Automation.SwitchParameter All" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.GetModuleCommand.All" />
+      <MemberSignature Language="VB.NET" Value="Public Property All As SwitchParameter" />
+      <MemberSignature Language="F#" Value="member this.All : System.Management.Automation.SwitchParameter with get, set" Usage="Microsoft.PowerShell.Commands.GetModuleCommand.All" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="Loaded")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="Available")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.SwitchParameter</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            If specified, all loaded modules should be returned, otherwise only the visible
+            modules should be returned.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CimNamespace">
+      <MemberSignature Language="C#" Value="public string CimNamespace { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string CimNamespace" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.GetModuleCommand.CimNamespace" />
+      <MemberSignature Language="VB.NET" Value="Public Property CimNamespace As String" />
+      <MemberSignature Language="F#" Value="member this.CimNamespace : string with get, set" Usage="Microsoft.PowerShell.Commands.GetModuleCommand.CimNamespace" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(Mandatory=false, ParameterSetName="CimSession")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.ValidateNotNullOrEmpty</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            For interoperability with 3rd party CIM servers, user can specify custom namespace
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CimResourceUri">
+      <MemberSignature Language="C#" Value="public Uri CimResourceUri { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Uri CimResourceUri" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.GetModuleCommand.CimResourceUri" />
+      <MemberSignature Language="VB.NET" Value="Public Property CimResourceUri As Uri" />
+      <MemberSignature Language="F#" Value="member this.CimResourceUri : Uri with get, set" Usage="Microsoft.PowerShell.Commands.GetModuleCommand.CimResourceUri" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(Mandatory=false, ParameterSetName="CimSession")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.ValidateNotNull</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Uri</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            For interoperability with 3rd party CIM servers, user can specify custom resource URI
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CimSession">
+      <MemberSignature Language="C#" Value="public Microsoft.Management.Infrastructure.CimSession CimSession { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Management.Infrastructure.CimSession CimSession" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.GetModuleCommand.CimSession" />
+      <MemberSignature Language="VB.NET" Value="Public Property CimSession As CimSession" />
+      <MemberSignature Language="F#" Value="member this.CimSession : Microsoft.Management.Infrastructure.CimSession with get, set" Usage="Microsoft.PowerShell.Commands.GetModuleCommand.CimSession" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(Mandatory=true, ParameterSetName="CimSession")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.ValidateNotNull</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Microsoft.Management.Infrastructure.CimSession</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            If specified, then Get-Module will attempt to discover PS-CIM modules on a remote computer using the specified session
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="public void Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Dispose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Commands.GetModuleCommand.Dispose" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Dispose ()" />
+      <MemberSignature Language="F#" Value="abstract member Dispose : unit -&gt; unit&#xA;override this.Dispose : unit -&gt; unit" Usage="getModuleCommand.Dispose " />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.IDisposable.Dispose</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Releases resources associated with this object
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FullyQualifiedName">
+      <MemberSignature Language="C#" Value="public Microsoft.PowerShell.Commands.ModuleSpecification[] FullyQualifiedName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.PowerShell.Commands.ModuleSpecification[] FullyQualifiedName" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.GetModuleCommand.FullyQualifiedName" />
+      <MemberSignature Language="VB.NET" Value="Public Property FullyQualifiedName As ModuleSpecification()" />
+      <MemberSignature Language="F#" Value="member this.FullyQualifiedName : Microsoft.PowerShell.Commands.ModuleSpecification[] with get, set" Usage="Microsoft.PowerShell.Commands.GetModuleCommand.FullyQualifiedName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="Loaded", ValueFromPipelineByPropertyName=true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="Available", ValueFromPipelineByPropertyName=true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="PsSession", ValueFromPipelineByPropertyName=true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="CimSession", ValueFromPipelineByPropertyName=true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Microsoft.PowerShell.Commands.ModuleSpecification[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            This parameter specifies the current pipeline object
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ListAvailable">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.SwitchParameter ListAvailable { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Management.Automation.SwitchParameter ListAvailable" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.GetModuleCommand.ListAvailable" />
+      <MemberSignature Language="VB.NET" Value="Public Property ListAvailable As SwitchParameter" />
+      <MemberSignature Language="F#" Value="member this.ListAvailable : System.Management.Automation.SwitchParameter with get, set" Usage="Microsoft.PowerShell.Commands.GetModuleCommand.ListAvailable" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(Mandatory=true, ParameterSetName="Available")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="PsSession")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="CimSession")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.SwitchParameter</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            If specified, then Get-Module will return the set of available modules...
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public string[] Name { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string[] Name" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.GetModuleCommand.Name" />
+      <MemberSignature Language="VB.NET" Value="Public Property Name As String()" />
+      <MemberSignature Language="F#" Value="member this.Name : string[] with get, set" Usage="Microsoft.PowerShell.Commands.GetModuleCommand.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="Loaded", Position=0, ValueFromPipeline=true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="Available", Position=0, ValueFromPipeline=true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="PsSession", Position=0, ValueFromPipeline=true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="CimSession", Position=0, ValueFromPipeline=true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.ValidateNotNullOrEmpty</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            This parameter specifies the current pipeline object
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ProcessRecord">
+      <MemberSignature Language="C#" Value="protected override void ProcessRecord ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void ProcessRecord() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Commands.GetModuleCommand.ProcessRecord" />
+      <MemberSignature Language="VB.NET" Value="Protected Overrides Sub ProcessRecord ()" />
+      <MemberSignature Language="F#" Value="override this.ProcessRecord : unit -&gt; unit" Usage="getModuleCommand.ProcessRecord " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Write out the specified modules...
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PSEdition">
+      <MemberSignature Language="C#" Value="public string PSEdition { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string PSEdition" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.GetModuleCommand.PSEdition" />
+      <MemberSignature Language="VB.NET" Value="Public Property PSEdition As String" />
+      <MemberSignature Language="F#" Value="member this.PSEdition : string with get, set" Usage="Microsoft.PowerShell.Commands.GetModuleCommand.PSEdition" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.ArgumentCompleter(typeof(Microsoft.PowerShell.Commands.PSEditionArgumentCompleter))</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="Available")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="PsSession")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            If specified, then Get-Module will return the set of available modules which supports the specified PowerShell edition...
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PSSession">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.Runspaces.PSSession PSSession { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Management.Automation.Runspaces.PSSession PSSession" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.GetModuleCommand.PSSession" />
+      <MemberSignature Language="VB.NET" Value="Public Property PSSession As PSSession" />
+      <MemberSignature Language="F#" Value="member this.PSSession : System.Management.Automation.Runspaces.PSSession with get, set" Usage="Microsoft.PowerShell.Commands.GetModuleCommand.PSSession" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(Mandatory=true, ParameterSetName="PsSession")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.ValidateNotNull</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.Runspaces.PSSession</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            If specified, then Get-Module will attempt to discover PowerShell modules on a remote computer using the specified session
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Refresh">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.SwitchParameter Refresh { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Management.Automation.SwitchParameter Refresh" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.GetModuleCommand.Refresh" />
+      <MemberSignature Language="VB.NET" Value="Public Property Refresh As SwitchParameter" />
+      <MemberSignature Language="F#" Value="member this.Refresh : System.Management.Automation.SwitchParameter with get, set" Usage="Microsoft.PowerShell.Commands.GetModuleCommand.Refresh" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="Available")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="PsSession")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="CimSession")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.SwitchParameter</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            If specified, then Get-Module refreshes the internal cmdlet analysis cache
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StopProcessing">
+      <MemberSignature Language="C#" Value="protected override void StopProcessing ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void StopProcessing() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Commands.GetModuleCommand.StopProcessing" />
+      <MemberSignature Language="VB.NET" Value="Protected Overrides Sub StopProcessing ()" />
+      <MemberSignature Language="F#" Value="override this.StopProcessing : unit -&gt; unit" Usage="getModuleCommand.StopProcessing " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            When overridden in the derived class, interrupts currently
+            running code within the command. It should interrupt BeginProcessing,
+            ProcessRecord, and EndProcessing.
+            Default implementation in the base class just returns.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

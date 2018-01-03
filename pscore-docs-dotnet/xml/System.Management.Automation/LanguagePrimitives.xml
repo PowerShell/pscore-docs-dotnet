@@ -1,0 +1,751 @@
+﻿<Type Name="LanguagePrimitives" FullName="System.Management.Automation.LanguagePrimitives">
+  <TypeSignature Language="C#" Value="public static class LanguagePrimitives" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract sealed LanguagePrimitives extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Management.Automation.LanguagePrimitives" />
+  <TypeSignature Language="VB.NET" Value="Public Class LanguagePrimitives" />
+  <TypeSignature Language="F#" Value="type LanguagePrimitives = class" />
+  <AssemblyInfo>
+    <AssemblyName>System.Management.Automation</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Defines language support methods
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Compare">
+      <MemberSignature Language="C#" Value="public static int Compare (object first, object second);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig int32 Compare(object first, object second) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.LanguagePrimitives.Compare(System.Object,System.Object)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function Compare (first As Object, second As Object) As Integer" />
+      <MemberSignature Language="F#" Value="static member Compare : obj * obj -&gt; int" Usage="System.Management.Automation.LanguagePrimitives.Compare (first, second)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="first" Type="System.Object" />
+        <Parameter Name="second" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="first">first comparison value</param>
+        <param name="second">second comparison value</param>
+        <summary>
+            Compare first and second, converting second to the
+            type of the first, if necessary.
+            </summary>
+        <returns>less than zero if first is smaller than second, more than
+            zero if it is greater or zero if they are the same</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="first" /> does not implement IComparable or <paramref name="second" /> cannot be converted
+            to the type of <paramref name="first" />.
+            </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Compare">
+      <MemberSignature Language="C#" Value="public static int Compare (object first, object second, bool ignoreCase);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig int32 Compare(object first, object second, bool ignoreCase) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.LanguagePrimitives.Compare(System.Object,System.Object,System.Boolean)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function Compare (first As Object, second As Object, ignoreCase As Boolean) As Integer" />
+      <MemberSignature Language="F#" Value="static member Compare : obj * obj * bool -&gt; int" Usage="System.Management.Automation.LanguagePrimitives.Compare (first, second, ignoreCase)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="first" Type="System.Object" />
+        <Parameter Name="second" Type="System.Object" />
+        <Parameter Name="ignoreCase" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="first">first comparison value</param>
+        <param name="second">second comparison value</param>
+        <param name="ignoreCase">Used if both values are strings</param>
+        <summary>
+            Compare first and second, converting second to the
+            type of the first, if necessary.
+            </summary>
+        <returns>less than zero if first is smaller than second, more than
+            zero if it is greater or zero if they are the same</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="first" /> does not implement IComparable or <paramref name="second" /> cannot be converted
+            to the type of <paramref name="first" />.
+            </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Compare">
+      <MemberSignature Language="C#" Value="public static int Compare (object first, object second, bool ignoreCase, IFormatProvider formatProvider);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig int32 Compare(object first, object second, bool ignoreCase, class System.IFormatProvider formatProvider) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.LanguagePrimitives.Compare(System.Object,System.Object,System.Boolean,System.IFormatProvider)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function Compare (first As Object, second As Object, ignoreCase As Boolean, formatProvider As IFormatProvider) As Integer" />
+      <MemberSignature Language="F#" Value="static member Compare : obj * obj * bool * IFormatProvider -&gt; int" Usage="System.Management.Automation.LanguagePrimitives.Compare (first, second, ignoreCase, formatProvider)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="first" Type="System.Object" />
+        <Parameter Name="second" Type="System.Object" />
+        <Parameter Name="ignoreCase" Type="System.Boolean" />
+        <Parameter Name="formatProvider" Type="System.IFormatProvider" />
+      </Parameters>
+      <Docs>
+        <param name="first">first comparison value</param>
+        <param name="second">second comparison value</param>
+        <param name="ignoreCase">Used if both values are strings</param>
+        <param name="formatProvider">Used in type conversions and if both values are strings</param>
+        <summary>
+            Compare first and second, converting second to the
+            type of the first, if necessary.
+            </summary>
+        <returns>less than zero if first is smaller than second, more than
+            zero if it is greater or zero if they are the same</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="first" /> does not implement IComparable or <paramref name="second" /> cannot be converted
+            to the type of <paramref name="first" />.
+            </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ConvertPSObjectToType">
+      <MemberSignature Language="C#" Value="public static object ConvertPSObjectToType (System.Management.Automation.PSObject valueToConvert, Type resultType, bool recursion, IFormatProvider formatProvider, bool ignoreUnknownMembers);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig object ConvertPSObjectToType(class System.Management.Automation.PSObject valueToConvert, class System.Type resultType, bool recursion, class System.IFormatProvider formatProvider, bool ignoreUnknownMembers) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.LanguagePrimitives.ConvertPSObjectToType(System.Management.Automation.PSObject,System.Type,System.Boolean,System.IFormatProvider,System.Boolean)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function ConvertPSObjectToType (valueToConvert As PSObject, resultType As Type, recursion As Boolean, formatProvider As IFormatProvider, ignoreUnknownMembers As Boolean) As Object" />
+      <MemberSignature Language="F#" Value="static member ConvertPSObjectToType : System.Management.Automation.PSObject * Type * bool * IFormatProvider * bool -&gt; obj" Usage="System.Management.Automation.LanguagePrimitives.ConvertPSObjectToType (valueToConvert, resultType, recursion, formatProvider, ignoreUnknownMembers)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="valueToConvert" Type="System.Management.Automation.PSObject" />
+        <Parameter Name="resultType" Type="System.Type" />
+        <Parameter Name="recursion" Type="System.Boolean" />
+        <Parameter Name="formatProvider" Type="System.IFormatProvider" />
+        <Parameter Name="ignoreUnknownMembers" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="valueToConvert">value to be converted and returned.</param>
+        <param name="resultType">type to convert psobject.</param>
+        <param name="recursion">Indicates if inner properties have to be recursively converted.</param>
+        <param name="formatProvider">To be used in custom type conversions, to call parse and to call Convert.ChangeType</param>
+        <param name="ignoreUnknownMembers">Indicates if Unknown members in the psobject have to be ignored if the corresponding members in resultType do not exist.</param>
+        <summary>
+            Converts PSObject to resultType.
+            </summary>
+        <returns>converted value.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ConvertTo">
+      <MemberSignature Language="C#" Value="public static object ConvertTo (object valueToConvert, Type resultType);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig object ConvertTo(object valueToConvert, class System.Type resultType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.LanguagePrimitives.ConvertTo(System.Object,System.Type)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function ConvertTo (valueToConvert As Object, resultType As Type) As Object" />
+      <MemberSignature Language="F#" Value="static member ConvertTo : obj * Type -&gt; obj" Usage="System.Management.Automation.LanguagePrimitives.ConvertTo (valueToConvert, resultType)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="valueToConvert" Type="System.Object" />
+        <Parameter Name="resultType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="valueToConvert">value to be converted and returned</param>
+        <param name="resultType">type to convert valueToConvert</param>
+        <summary>
+             Converts valueToConvert to resultType
+             </summary>
+        <returns>converted value</returns>
+        <remarks>
+             A null valueToConvert can be converted to :
+                 string          -   returns ""
+                 char            -   returns '\0'
+                 numeric types   -   returns 0 converted to the appropriate type
+                 boolean         -   returns LanguagePrimitives.IsTrue(null)
+                 PSObject       -   returns new PSObject())
+                 array           -   returns an array with null in array[0]
+                 non value types -   returns null
+            
+             The following conversions are considered language standard and cannot be customized:
+                 - from derived to base class            -   returns valueToConvert intact
+                 - to PSObject                          -   returns PSObject.AsPSObject(valueToConvert)
+                 - to void                               -   returns AutomationNull.Value
+                 - from array/IEnumerable to array       -   tries to convert array/IEnumerable elements
+                 - from object of type X to array of X   -   returns an array with object as its only element
+                 - to bool                               -   returns LanguagePrimitives.IsTrue(valueToConvert)
+                 - to string                             -   returns a string representation of the object.
+                                                             In the particular case of a number to string,
+                                                             the conversion is culture invariant.
+                 - from IDictionary to Hashtable         -   uses the Hashtable constructor
+                 - to XmlDocument                        -   creates a new XmlDocument with the
+                                                             string representation of valueToConvert
+                 - from string to char[]                 -   returns ((string)valueToConvert).ToCharArray()
+                 - from string to RegEx                  -   creates a new RegEx with the string
+                 - from string to Type                   -   looks up the type in the minishell's assemblies
+                 - from empty string to numeric          -   returns 0 converted to the appropriate type
+                 - from string to numeric                -   returns a culture invariant conversion
+                 - from ScriptBlock to Delegate          -   returns a delegate wrapping that scriptblock.
+                 - from Integer to Enumeration           -   Uses Enum.ToObject
+                 - to WMI                                -   Instantiate a WMI instance using
+                                                             System.Management.ManagementObject
+                 - to WMISearcher                        -   returns objects from running WQL query with the
+                                                             string representation of valueToConvert. The
+                                                             query is run using ManagementObjectSearcher Class.
+                 - to WMIClass                           -   returns ManagementClass represented by the
+                                                             string representation of valueToConvert.
+                 - to ADSI                               -   returns DirectoryEntry represented by the
+                                                             string representation of valueToConvert.
+                 - to ADSISearcher                       -   return DirectorySearcher represented by the
+                                                             string representation of valueToConvert.
+            
+             If none of the cases above is true, the following is considered in order:
+            
+                1) TypeConverter and PSTypeConverter
+                2) the Parse methods if the valueToConvert is a string
+                3) Constructors in resultType that take one parameter with type valueToConvert.GetType()
+                4) Implicit and explicit cast operators
+                5) IConvertible
+            
+              If any operation above throws an exception, this exception will be wrapped into a
+              PSInvalidCastException and thrown resulting in no further conversion attempt.
+             </remarks>
+        <exception cref="T:System.ArgumentNullException">if resultType is null</exception>
+        <exception cref="T:System.Management.Automation.PSInvalidCastException">if the conversion failed</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ConvertTo">
+      <MemberSignature Language="C#" Value="public static object ConvertTo (object valueToConvert, Type resultType, IFormatProvider formatProvider);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig object ConvertTo(object valueToConvert, class System.Type resultType, class System.IFormatProvider formatProvider) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.LanguagePrimitives.ConvertTo(System.Object,System.Type,System.IFormatProvider)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function ConvertTo (valueToConvert As Object, resultType As Type, formatProvider As IFormatProvider) As Object" />
+      <MemberSignature Language="F#" Value="static member ConvertTo : obj * Type * IFormatProvider -&gt; obj" Usage="System.Management.Automation.LanguagePrimitives.ConvertTo (valueToConvert, resultType, formatProvider)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="valueToConvert" Type="System.Object" />
+        <Parameter Name="resultType" Type="System.Type" />
+        <Parameter Name="formatProvider" Type="System.IFormatProvider" />
+      </Parameters>
+      <Docs>
+        <param name="valueToConvert">value to be converted and returned</param>
+        <param name="resultType">type to convert valueToConvert</param>
+        <param name="formatProvider">To be used in custom type conversions, to call parse and to call Convert.ChangeType</param>
+        <summary>
+             Converts valueToConvert to resultType possibly considering formatProvider
+             </summary>
+        <returns>converted value</returns>
+        <remarks>
+             A null valueToConvert can be converted to :
+                 string          -   returns ""
+                 char            -   returns '\0'
+                 numeric types   -   returns 0 converted to the appropriate type
+                 boolean         -   returns LanguagePrimitives.IsTrue(null)
+                 PSObject       -   returns new PSObject())
+                 array           -   returns an array with null in array[0]
+                 non value types -   returns null
+            
+             The following conversions are considered language standard and cannot be customized:
+                 - from derived to base class            -   returns valueToConvert intact
+                 - to PSObject                          -   returns PSObject.AsPSObject(valueToConvert)
+                 - to void                               -   returns AutomationNull.Value
+                 - from array/IEnumerable to array       -   tries to convert array/IEnumerable elements
+                 - from object of type X to array of X   -   returns an array with object as its only element
+                 - to bool                               -   returns LanguagePrimitives.IsTrue(valueToConvert)
+                 - to string                             -   returns a string representation of the object.
+                                                             In the particular case of a number to string,
+                                                             the conversion is culture invariant.
+                 - from IDictionary to Hashtable         -   uses the Hashtable constructor
+                 - to XmlDocument                        -   creates a new XmlDocument with the
+                                                             string representation of valueToConvert
+                 - from string to char[]                 -   returns ((string)valueToConvert).ToCharArray()
+                 - from string to RegEx                  -   creates a new RegEx with the string
+                 - from string to Type                   -   looks up the type in the minishell's assemblies
+                 - from empty string to numeric          -   returns 0 converted to the appropriate type
+                 - from string to numeric                -   returns a culture invariant conversion
+                 - from ScriptBlock to Delegate          -   returns a delegate wrapping that scriptblock.
+                 - from Integer to Enumeration           -   Uses Enum.ToObject
+            
+             If none of the cases above is true, the following is considered in order:
+            
+                1) TypeConverter and PSTypeConverter
+                2) the Parse methods if the valueToConvert is a string
+                3) Constructors in resultType that take one parameter with type valueToConvert.GetType()
+                4) Implicit and explicit cast operators
+                5) IConvertible
+            
+              If any operation above throws an exception, this exception will be wrapped into a
+              PSInvalidCastException and thrown resulting in no further conversion attempt.
+             </remarks>
+        <exception cref="T:System.ArgumentNullException">if resultType is null</exception>
+        <exception cref="T:System.Management.Automation.PSInvalidCastException">if the conversion failed</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ConvertTo&lt;T&gt;">
+      <MemberSignature Language="C#" Value="public static T ConvertTo&lt;T&gt; (object valueToConvert);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig !!T ConvertTo&lt;T&gt;(object valueToConvert) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.LanguagePrimitives.ConvertTo``1(System.Object)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function ConvertTo(Of T) (valueToConvert As Object) As T" />
+      <MemberSignature Language="F#" Value="static member ConvertTo : obj -&gt; 'T" Usage="System.Management.Automation.LanguagePrimitives.ConvertTo valueToConvert" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>T</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="T" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="valueToConvert" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <typeparam name="T">The type of object to return</typeparam>
+        <param name="valueToConvert"></param>
+        <summary>
+            Generic convertto that simplifies working with workflow.
+            </summary>
+        <returns />
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ConvertTypeNameToPSTypeName">
+      <MemberSignature Language="C#" Value="public static string ConvertTypeNameToPSTypeName (string typeName);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string ConvertTypeNameToPSTypeName(string typeName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.LanguagePrimitives.ConvertTypeNameToPSTypeName(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function ConvertTypeNameToPSTypeName (typeName As String) As String" />
+      <MemberSignature Language="F#" Value="static member ConvertTypeNameToPSTypeName : string -&gt; string" Usage="System.Management.Automation.LanguagePrimitives.ConvertTypeNameToPSTypeName typeName" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="typeName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="typeName">The typename string to convert.</param>
+        <summary>
+             BUGBUG - brucepay Mar. 2013 - I don't think this is general enough for dynamic keywords to support arbitrary target
+             languages with arbitrary type representations so we may need an extension point here...
+            
+             Maps a .NET or CIM type name string (e.g. SInt32) to the form expected by PowerShell users, namely "[typename]"
+             If there is no mapping, then it returns null.
+             If the string to convert is null or empty then the function returns "[object]" as the default typeless type.
+             </summary>
+        <returns>The equivalent PowerShell representation of that type.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public static bool Equals (object first, object second);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool Equals(object first, object second) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.LanguagePrimitives.Equals(System.Object,System.Object)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function Equals (first As Object, second As Object) As Boolean" />
+      <MemberSignature Language="F#" Value="static member Equals : obj * obj -&gt; bool" Usage="System.Management.Automation.LanguagePrimitives.Equals (first, second)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="first" Type="System.Object" />
+        <Parameter Name="second" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="first">first object</param>
+        <param name="second">object to compare first to</param>
+        <summary>
+            Used to compare two objects for equality converting the second to the type of the first, if required.
+            </summary>
+        <returns>true if first is equal to the second</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public static bool Equals (object first, object second, bool ignoreCase);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool Equals(object first, object second, bool ignoreCase) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.LanguagePrimitives.Equals(System.Object,System.Object,System.Boolean)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function Equals (first As Object, second As Object, ignoreCase As Boolean) As Boolean" />
+      <MemberSignature Language="F#" Value="static member Equals : obj * obj * bool -&gt; bool" Usage="System.Management.Automation.LanguagePrimitives.Equals (first, second, ignoreCase)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="first" Type="System.Object" />
+        <Parameter Name="second" Type="System.Object" />
+        <Parameter Name="ignoreCase" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="first">first object</param>
+        <param name="second">object to compare first to</param>
+        <param name="ignoreCase">used only if first and second are strings
+            to specify the type of string comparison </param>
+        <summary>
+            Used to compare two objects for equality converting the second to the type of the first, if required.
+            </summary>
+        <returns>true if first is equal to the second</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public static bool Equals (object first, object second, bool ignoreCase, IFormatProvider formatProvider);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool Equals(object first, object second, bool ignoreCase, class System.IFormatProvider formatProvider) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.LanguagePrimitives.Equals(System.Object,System.Object,System.Boolean,System.IFormatProvider)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function Equals (first As Object, second As Object, ignoreCase As Boolean, formatProvider As IFormatProvider) As Boolean" />
+      <MemberSignature Language="F#" Value="static member Equals : obj * obj * bool * IFormatProvider -&gt; bool" Usage="System.Management.Automation.LanguagePrimitives.Equals (first, second, ignoreCase, formatProvider)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="first" Type="System.Object" />
+        <Parameter Name="second" Type="System.Object" />
+        <Parameter Name="ignoreCase" Type="System.Boolean" />
+        <Parameter Name="formatProvider" Type="System.IFormatProvider" />
+      </Parameters>
+      <Docs>
+        <param name="first">first object</param>
+        <param name="second">object to compare first to</param>
+        <param name="ignoreCase">used only if first and second are strings
+            to specify the type of string comparison </param>
+        <param name="formatProvider">the format/culture to be used. If this parameter is null,
+            CultureInfo.InvariantCulture will be used.
+            </param>
+        <summary>
+            Used to compare two objects for equality converting the second to the type of the first, if required.
+            </summary>
+        <returns>true if first is equal to the second</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetEnumerable">
+      <MemberSignature Language="C#" Value="public static System.Collections.IEnumerable GetEnumerable (object obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Collections.IEnumerable GetEnumerable(object obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.LanguagePrimitives.GetEnumerable(System.Object)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function GetEnumerable (obj As Object) As IEnumerable" />
+      <MemberSignature Language="F#" Value="static member GetEnumerable : obj -&gt; System.Collections.IEnumerable" Usage="System.Management.Automation.LanguagePrimitives.GetEnumerable obj" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IEnumerable</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="obj">
+            IEnumerable or IEnumerable-like object
+            </param>
+        <summary>
+            Retrieves the IEnumerable of obj or null if the language does not consider obj to be IEnumerable
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetEnumerator">
+      <MemberSignature Language="C#" Value="public static System.Collections.IEnumerator GetEnumerator (object obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Collections.IEnumerator GetEnumerator(object obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.LanguagePrimitives.GetEnumerator(System.Object)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function GetEnumerator (obj As Object) As IEnumerator" />
+      <MemberSignature Language="F#" Value="static member GetEnumerator : obj -&gt; System.Collections.IEnumerator" Usage="System.Management.Automation.LanguagePrimitives.GetEnumerator obj" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IEnumerator</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="obj">
+            IEnumerable or IEnumerable-like object
+            </param>
+        <summary>
+            Retrieves the IEnumerator of obj or null if the language does not consider obj as capable of returning an IEnumerator
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.Management.Automation.ExtendedTypeSystemException">When the act of getting the enumerator throws an exception</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetPSDataCollection">
+      <MemberSignature Language="C#" Value="public static System.Management.Automation.PSDataCollection&lt;System.Management.Automation.PSObject&gt; GetPSDataCollection (object inputValue);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Management.Automation.PSDataCollection`1&lt;class System.Management.Automation.PSObject&gt; GetPSDataCollection(object inputValue) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.LanguagePrimitives.GetPSDataCollection(System.Object)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function GetPSDataCollection (inputValue As Object) As PSDataCollection(Of PSObject)" />
+      <MemberSignature Language="F#" Value="static member GetPSDataCollection : obj -&gt; System.Management.Automation.PSDataCollection&lt;System.Management.Automation.PSObject&gt;" Usage="System.Management.Automation.LanguagePrimitives.GetPSDataCollection inputValue" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.PSDataCollection&lt;System.Management.Automation.PSObject&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="inputValue" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="inputValue"></param>
+        <summary>
+            This method takes a an arbitrary object and wraps it in a PSDataCollection of PSObject.
+            This simplifies interacting with the PowerShell workflow activities.
+            </summary>
+        <returns />
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsObjectEnumerable">
+      <MemberSignature Language="C#" Value="public static bool IsObjectEnumerable (object obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool IsObjectEnumerable(object obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.LanguagePrimitives.IsObjectEnumerable(System.Object)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function IsObjectEnumerable (obj As Object) As Boolean" />
+      <MemberSignature Language="F#" Value="static member IsObjectEnumerable : obj -&gt; bool" Usage="System.Management.Automation.LanguagePrimitives.IsObjectEnumerable obj" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="obj">
+            IEnumerable or IEnumerable-like object
+            </param>
+        <summary>
+            Returns True if the language considers obj to be IEnumerable
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsTrue">
+      <MemberSignature Language="C#" Value="public static bool IsTrue (object obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool IsTrue(object obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.LanguagePrimitives.IsTrue(System.Object)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function IsTrue (obj As Object) As Boolean" />
+      <MemberSignature Language="F#" Value="static member IsTrue : obj -&gt; bool" Usage="System.Management.Automation.LanguagePrimitives.IsTrue obj" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="obj">obj to verify if it is true</param>
+        <summary>
+            Returns true if the language considers obj to be true
+            </summary>
+        <returns>true if obj is true</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TryConvertTo">
+      <MemberSignature Language="C#" Value="public static bool TryConvertTo (object valueToConvert, Type resultType, out object result);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool TryConvertTo(object valueToConvert, class System.Type resultType, [out] object&amp; result) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.LanguagePrimitives.TryConvertTo(System.Object,System.Type,System.Object@)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function TryConvertTo (valueToConvert As Object, resultType As Type, ByRef result As Object) As Boolean" />
+      <MemberSignature Language="F#" Value="static member TryConvertTo : obj * Type *  -&gt; bool" Usage="System.Management.Automation.LanguagePrimitives.TryConvertTo (valueToConvert, resultType, result)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="valueToConvert" Type="System.Object" />
+        <Parameter Name="resultType" Type="System.Type" />
+        <Parameter Name="result" Type="System.Object&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="valueToConvert">value to be converted and returned</param>
+        <param name="resultType">type to convert valueToConvert</param>
+        <param name="result">result of the conversion. This is valid only if the return is true.</param>
+        <summary>
+            Sets result to valueToConvert converted to resultType.
+            </summary>
+        <returns>false for conversion failure, true for success</returns>
+        <remarks>
+            This method is a variant of ConvertTo that does not throw exceptions if the conversion fails.
+            </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TryConvertTo">
+      <MemberSignature Language="C#" Value="public static bool TryConvertTo (object valueToConvert, Type resultType, IFormatProvider formatProvider, out object result);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool TryConvertTo(object valueToConvert, class System.Type resultType, class System.IFormatProvider formatProvider, [out] object&amp; result) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.LanguagePrimitives.TryConvertTo(System.Object,System.Type,System.IFormatProvider,System.Object@)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function TryConvertTo (valueToConvert As Object, resultType As Type, formatProvider As IFormatProvider, ByRef result As Object) As Boolean" />
+      <MemberSignature Language="F#" Value="static member TryConvertTo : obj * Type * IFormatProvider *  -&gt; bool" Usage="System.Management.Automation.LanguagePrimitives.TryConvertTo (valueToConvert, resultType, formatProvider, result)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="valueToConvert" Type="System.Object" />
+        <Parameter Name="resultType" Type="System.Type" />
+        <Parameter Name="formatProvider" Type="System.IFormatProvider" />
+        <Parameter Name="result" Type="System.Object&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="valueToConvert">value to be converted and returned</param>
+        <param name="resultType">type to convert valueToConvert</param>
+        <param name="formatProvider">governing conversion of types</param>
+        <param name="result">result of the conversion. This is valid only if the return is true.</param>
+        <summary>
+            Sets result to valueToConvert converted to resultType considering formatProvider
+            for custom conversions, calling the Parse method and calling Convert.ChangeType.
+            </summary>
+        <returns>false for conversion failure, true for success</returns>
+        <remarks>
+            This method is a variant of ConvertTo that does not throw exceptions if the conversion fails.
+            </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TryConvertTo&lt;T&gt;">
+      <MemberSignature Language="C#" Value="public static bool TryConvertTo&lt;T&gt; (object valueToConvert, out T result);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool TryConvertTo&lt;T&gt;(object valueToConvert, [out] !!T&amp; result) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.LanguagePrimitives.TryConvertTo``1(System.Object,``0@)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function TryConvertTo(Of T) (valueToConvert As Object, ByRef result As T) As Boolean" />
+      <MemberSignature Language="F#" Value="static member TryConvertTo : obj *  -&gt; bool" Usage="System.Management.Automation.LanguagePrimitives.TryConvertTo (valueToConvert, result)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="T" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="valueToConvert" Type="System.Object" />
+        <Parameter Name="result" Type="T&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <typeparam name="T">To be added.</typeparam>
+        <param name="valueToConvert">value to be converted and returned</param>
+        <param name="result">result of the conversion. This is valid only if the return is true.</param>
+        <summary>
+            Sets result to valueToConvert converted to resultType.
+            </summary>
+        <returns>false for conversion failure, true for success</returns>
+        <remarks>
+            This method is a variant of ConvertTo that does not throw exceptions if the conversion fails.
+            </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TryConvertTo&lt;T&gt;">
+      <MemberSignature Language="C#" Value="public static bool TryConvertTo&lt;T&gt; (object valueToConvert, IFormatProvider formatProvider, out T result);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool TryConvertTo&lt;T&gt;(object valueToConvert, class System.IFormatProvider formatProvider, [out] !!T&amp; result) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.LanguagePrimitives.TryConvertTo``1(System.Object,System.IFormatProvider,``0@)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function TryConvertTo(Of T) (valueToConvert As Object, formatProvider As IFormatProvider, ByRef result As T) As Boolean" />
+      <MemberSignature Language="F#" Value="static member TryConvertTo : obj * IFormatProvider *  -&gt; bool" Usage="System.Management.Automation.LanguagePrimitives.TryConvertTo (valueToConvert, formatProvider, result)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="T" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="valueToConvert" Type="System.Object" />
+        <Parameter Name="formatProvider" Type="System.IFormatProvider" />
+        <Parameter Name="result" Type="T&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <typeparam name="T">To be added.</typeparam>
+        <param name="valueToConvert">value to be converted and returned</param>
+        <param name="formatProvider">governing conversion of types</param>
+        <param name="result">result of the conversion. This is valid only if the return is true.</param>
+        <summary>
+            Sets result to valueToConvert converted to resultType considering formatProvider
+            for custom conversions, calling the Parse method and calling Convert.ChangeType.
+            </summary>
+        <returns>false for conversion failure, true for success</returns>
+        <remarks>
+            This method is a variant of ConvertTo that does not throw exceptions if the conversion fails.
+            </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

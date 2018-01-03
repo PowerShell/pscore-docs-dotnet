@@ -1,0 +1,292 @@
+﻿<Type Name="UnprotectCmsMessageCommand" FullName="Microsoft.PowerShell.Commands.UnprotectCmsMessageCommand">
+  <TypeSignature Language="C#" Value="public sealed class UnprotectCmsMessageCommand : System.Management.Automation.PSCmdlet" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit UnprotectCmsMessageCommand extends System.Management.Automation.PSCmdlet" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.PowerShell.Commands.UnprotectCmsMessageCommand" />
+  <TypeSignature Language="VB.NET" Value="Public NotInheritable Class UnprotectCmsMessageCommand&#xA;Inherits PSCmdlet" />
+  <TypeSignature Language="F#" Value="type UnprotectCmsMessageCommand = class&#xA;    inherit PSCmdlet" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.PowerShell.Security</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Management.Automation.PSCmdlet</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Management.Automation.Cmdlet("Unprotect", "CmsMessage", DefaultParameterSetName="ByWinEvent", HelpUri="https://go.microsoft.com/fwlink/?LinkId=394374")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Management.Automation.OutputType(typeof(System.String))</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>
+             Defines the implementation of the 'Unprotect-CmsMessage' cmdlet.
+            
+             This cmdlet retrieves the clear text content of an encrypted CMS
+             message.
+             </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public UnprotectCmsMessageCommand ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Commands.UnprotectCmsMessageCommand.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New ()" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Security</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginProcessing">
+      <MemberSignature Language="C#" Value="protected override void BeginProcessing ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void BeginProcessing() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Commands.UnprotectCmsMessageCommand.BeginProcessing" />
+      <MemberSignature Language="VB.NET" Value="Protected Overrides Sub BeginProcessing ()" />
+      <MemberSignature Language="F#" Value="override this.BeginProcessing : unit -&gt; unit" Usage="unprotectCmsMessageCommand.BeginProcessing " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Security</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Validate / convert arguments
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Content">
+      <MemberSignature Language="C#" Value="public string Content { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Content" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.UnprotectCmsMessageCommand.Content" />
+      <MemberSignature Language="VB.NET" Value="Public Property Content As String" />
+      <MemberSignature Language="F#" Value="member this.Content : string with get, set" Usage="Microsoft.PowerShell.Commands.UnprotectCmsMessageCommand.Content" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Security</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.AllowEmptyString</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.AllowNull</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(Mandatory=true, ParameterSetName="ByContent", Position=0, ValueFromPipeline=true, ValueFromPipelineByPropertyName=true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets the content of the CMS Message.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EndProcessing">
+      <MemberSignature Language="C#" Value="protected override void EndProcessing ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void EndProcessing() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Commands.UnprotectCmsMessageCommand.EndProcessing" />
+      <MemberSignature Language="VB.NET" Value="Protected Overrides Sub EndProcessing ()" />
+      <MemberSignature Language="F#" Value="override this.EndProcessing : unit -&gt; unit" Usage="unprotectCmsMessageCommand.EndProcessing " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Security</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Processes records from the input pipeline.
+            For each input object, the command gets the information
+            about the protected message and exports the object.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EventLogRecord">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.PSObject EventLogRecord { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Management.Automation.PSObject EventLogRecord" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.UnprotectCmsMessageCommand.EventLogRecord" />
+      <MemberSignature Language="VB.NET" Value="Public Property EventLogRecord As PSObject" />
+      <MemberSignature Language="F#" Value="member this.EventLogRecord : System.Management.Automation.PSObject with get, set" Usage="Microsoft.PowerShell.Commands.UnprotectCmsMessageCommand.EventLogRecord" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Security</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(Mandatory=true, ParameterSetName="ByWinEvent", Position=0, ValueFromPipeline=true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.PSTypeName("System.Diagnostics.Eventing.Reader.EventLogRecord")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.PSObject</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets the Windows Event Log Message with contents to be decrypted.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IncludeContext">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.SwitchParameter IncludeContext { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Management.Automation.SwitchParameter IncludeContext" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.UnprotectCmsMessageCommand.IncludeContext" />
+      <MemberSignature Language="VB.NET" Value="Public Property IncludeContext As SwitchParameter" />
+      <MemberSignature Language="F#" Value="member this.IncludeContext : System.Management.Automation.SwitchParameter with get, set" Usage="Microsoft.PowerShell.Commands.UnprotectCmsMessageCommand.IncludeContext" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Security</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.SwitchParameter</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Determines whether to include the decrypted content in its original context,
+            rather than just output the decrypted content itself.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LiteralPath">
+      <MemberSignature Language="C#" Value="public string LiteralPath { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string LiteralPath" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.UnprotectCmsMessageCommand.LiteralPath" />
+      <MemberSignature Language="VB.NET" Value="Public Property LiteralPath As String" />
+      <MemberSignature Language="F#" Value="member this.LiteralPath : string with get, set" Usage="Microsoft.PowerShell.Commands.UnprotectCmsMessageCommand.LiteralPath" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Security</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(Mandatory=true, ParameterSetName="ByLiteralPath", Position=0)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets the CMS Message by literal path.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Path">
+      <MemberSignature Language="C#" Value="public string Path { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Path" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.UnprotectCmsMessageCommand.Path" />
+      <MemberSignature Language="VB.NET" Value="Public Property Path As String" />
+      <MemberSignature Language="F#" Value="member this.Path : string with get, set" Usage="Microsoft.PowerShell.Commands.UnprotectCmsMessageCommand.Path" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Security</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(Mandatory=true, ParameterSetName="ByPath", Position=0)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets the CMS Message by path.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ProcessRecord">
+      <MemberSignature Language="C#" Value="protected override void ProcessRecord ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void ProcessRecord() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Commands.UnprotectCmsMessageCommand.ProcessRecord" />
+      <MemberSignature Language="VB.NET" Value="Protected Overrides Sub ProcessRecord ()" />
+      <MemberSignature Language="F#" Value="override this.ProcessRecord : unit -&gt; unit" Usage="unprotectCmsMessageCommand.ProcessRecord " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Security</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Processes records from the input pipeline.
+            For each input object, the command gets the information
+            about the protected message and exports the object.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="To">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.CmsMessageRecipient[] To { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Management.Automation.CmsMessageRecipient[] To" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.UnprotectCmsMessageCommand.To" />
+      <MemberSignature Language="VB.NET" Value="Public Property To As CmsMessageRecipient()" />
+      <MemberSignature Language="F#" Value="member this.To : System.Management.Automation.CmsMessageRecipient[] with get, set" Usage="Microsoft.PowerShell.Commands.UnprotectCmsMessageCommand.To" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Security</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(Position=1)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.CmsMessageRecipient[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets the recipient of the CMS Message.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

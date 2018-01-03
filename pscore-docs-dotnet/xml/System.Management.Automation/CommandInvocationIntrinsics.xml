@@ -1,0 +1,583 @@
+﻿<Type Name="CommandInvocationIntrinsics" FullName="System.Management.Automation.CommandInvocationIntrinsics">
+  <TypeSignature Language="C#" Value="public class CommandInvocationIntrinsics" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit CommandInvocationIntrinsics extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Management.Automation.CommandInvocationIntrinsics" />
+  <TypeSignature Language="VB.NET" Value="Public Class CommandInvocationIntrinsics" />
+  <TypeSignature Language="F#" Value="type CommandInvocationIntrinsics = class" />
+  <AssemblyInfo>
+    <AssemblyName>System.Management.Automation</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Interfaces that cmdlets can use to build script blocks and execute scripts.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="CommandNotFoundAction">
+      <MemberSignature Language="C#" Value="public EventHandler&lt;System.Management.Automation.CommandLookupEventArgs&gt; CommandNotFoundAction { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.EventHandler`1&lt;class System.Management.Automation.CommandLookupEventArgs&gt; CommandNotFoundAction" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.CommandInvocationIntrinsics.CommandNotFoundAction" />
+      <MemberSignature Language="VB.NET" Value="Public Property CommandNotFoundAction As EventHandler(Of CommandLookupEventArgs)" />
+      <MemberSignature Language="F#" Value="member this.CommandNotFoundAction : EventHandler&lt;System.Management.Automation.CommandLookupEventArgs&gt; with get, set" Usage="System.Management.Automation.CommandInvocationIntrinsics.CommandNotFoundAction" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;System.Management.Automation.CommandLookupEventArgs&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            This event handler is called when a command is not found.
+            If should have a single string parameter that is the name
+            of the command and should return a CommandInfo object or null. By default
+            it will search the module path looking for a module that exports the
+            desired command.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ExpandString">
+      <MemberSignature Language="C#" Value="public string ExpandString (string source);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance string ExpandString(string source) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.CommandInvocationIntrinsics.ExpandString(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Function ExpandString (source As String) As String" />
+      <MemberSignature Language="F#" Value="member this.ExpandString : string -&gt; string" Usage="commandInvocationIntrinsics.ExpandString source" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="source" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="source">The string to expand.
+            </param>
+        <summary>
+            Returns a string with all of the variable and expression substitutions done.
+            </summary>
+        <returns>The expanded string.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.Management.Automation.ParseException">
+            Thrown if a parse exception occurred during subexpression substitution.
+            </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetCmdlet">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.CmdletInfo GetCmdlet (string commandName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Management.Automation.CmdletInfo GetCmdlet(string commandName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.CommandInvocationIntrinsics.GetCmdlet(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetCmdlet (commandName As String) As CmdletInfo" />
+      <MemberSignature Language="F#" Value="member this.GetCmdlet : string -&gt; System.Management.Automation.CmdletInfo" Usage="commandInvocationIntrinsics.GetCmdlet commandName" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.CmdletInfo</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="commandName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="commandName">The name of the cmdlet to look for</param>
+        <summary>
+            Returns the CmdletInfo object that corresponds to the name argument
+            </summary>
+        <returns>The cmdletInfo object if found, null otherwise</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetCmdletByTypeName">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.CmdletInfo GetCmdletByTypeName (string cmdletTypeName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Management.Automation.CmdletInfo GetCmdletByTypeName(string cmdletTypeName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.CommandInvocationIntrinsics.GetCmdletByTypeName(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetCmdletByTypeName (cmdletTypeName As String) As CmdletInfo" />
+      <MemberSignature Language="F#" Value="member this.GetCmdletByTypeName : string -&gt; System.Management.Automation.CmdletInfo" Usage="commandInvocationIntrinsics.GetCmdletByTypeName cmdletTypeName" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.CmdletInfo</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="cmdletTypeName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="cmdletTypeName">the type name of the class implementing this cmdlet</param>
+        <summary>
+            Get the cmdlet info using the name of the cmdlet's implementing type. This bypasses
+            session state and retrieves the command directly. Note that the help file and snapin/module
+            info will both be null on returned object.
+            </summary>
+        <returns>CmdletInfo for the cmdlet if found, null otherwise</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetCmdlets">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.List&lt;System.Management.Automation.CmdletInfo&gt; GetCmdlets ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Collections.Generic.List`1&lt;class System.Management.Automation.CmdletInfo&gt; GetCmdlets() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.CommandInvocationIntrinsics.GetCmdlets" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetCmdlets () As List(Of CmdletInfo)" />
+      <MemberSignature Language="F#" Value="member this.GetCmdlets : unit -&gt; System.Collections.Generic.List&lt;System.Management.Automation.CmdletInfo&gt;" Usage="commandInvocationIntrinsics.GetCmdlets " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.List&lt;System.Management.Automation.CmdletInfo&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Returns a list of all cmdlets...
+            </summary>
+        <returns />
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetCmdlets">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.List&lt;System.Management.Automation.CmdletInfo&gt; GetCmdlets (string pattern);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Collections.Generic.List`1&lt;class System.Management.Automation.CmdletInfo&gt; GetCmdlets(string pattern) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.CommandInvocationIntrinsics.GetCmdlets(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetCmdlets (pattern As String) As List(Of CmdletInfo)" />
+      <MemberSignature Language="F#" Value="member this.GetCmdlets : string -&gt; System.Collections.Generic.List&lt;System.Management.Automation.CmdletInfo&gt;" Usage="commandInvocationIntrinsics.GetCmdlets pattern" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.List&lt;System.Management.Automation.CmdletInfo&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pattern" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="pattern">To be added.</param>
+        <summary>
+            Returns all cmdlets whose names match the pattern...
+            </summary>
+        <returns>A list of CmdletInfo objects...</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetCommand">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.CommandInfo GetCommand (string commandName, System.Management.Automation.CommandTypes type);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Management.Automation.CommandInfo GetCommand(string commandName, valuetype System.Management.Automation.CommandTypes type) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.CommandInvocationIntrinsics.GetCommand(System.String,System.Management.Automation.CommandTypes)" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetCommand (commandName As String, type As CommandTypes) As CommandInfo" />
+      <MemberSignature Language="F#" Value="member this.GetCommand : string * System.Management.Automation.CommandTypes -&gt; System.Management.Automation.CommandInfo" Usage="commandInvocationIntrinsics.GetCommand (commandName, type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.CommandInfo</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="commandName" Type="System.String" />
+        <Parameter Name="type" Type="System.Management.Automation.CommandTypes" />
+      </Parameters>
+      <Docs>
+        <param name="commandName"></param>
+        <param name="type"></param>
+        <summary />
+        <returns />
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetCommand">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.CommandInfo GetCommand (string commandName, System.Management.Automation.CommandTypes type, object[] arguments);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Management.Automation.CommandInfo GetCommand(string commandName, valuetype System.Management.Automation.CommandTypes type, object[] arguments) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.CommandInvocationIntrinsics.GetCommand(System.String,System.Management.Automation.CommandTypes,System.Object[])" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetCommand (commandName As String, type As CommandTypes, arguments As Object()) As CommandInfo" />
+      <MemberSignature Language="F#" Value="member this.GetCommand : string * System.Management.Automation.CommandTypes * obj[] -&gt; System.Management.Automation.CommandInfo" Usage="commandInvocationIntrinsics.GetCommand (commandName, type, arguments)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.CommandInfo</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="commandName" Type="System.String" />
+        <Parameter Name="type" Type="System.Management.Automation.CommandTypes" />
+        <Parameter Name="arguments" Type="System.Object[]" />
+      </Parameters>
+      <Docs>
+        <param name="commandName">The command name to search for</param>
+        <param name="type">The command type to search for</param>
+        <param name="arguments">The command arguments used to resolve dynamic parameters</param>
+        <summary>
+            Returns a command info for a given command name and type, using the specified arguments
+            to resolve dynamic parameters.
+            </summary>
+        <returns>A CommandInfo result that represents the resolved command</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetCommandName">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.List&lt;string&gt; GetCommandName (string name, bool nameIsPattern, bool returnFullName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Collections.Generic.List`1&lt;string&gt; GetCommandName(string name, bool nameIsPattern, bool returnFullName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.CommandInvocationIntrinsics.GetCommandName(System.String,System.Boolean,System.Boolean)" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetCommandName (name As String, nameIsPattern As Boolean, returnFullName As Boolean) As List(Of String)" />
+      <MemberSignature Language="F#" Value="member this.GetCommandName : string * bool * bool -&gt; System.Collections.Generic.List&lt;string&gt;" Usage="commandInvocationIntrinsics.GetCommandName (name, nameIsPattern, returnFullName)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.List&lt;System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="nameIsPattern" Type="System.Boolean" />
+        <Parameter Name="returnFullName" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="name">The name of the command to use</param>
+        <param name="nameIsPattern">If true treat the name as a pattern to search for</param>
+        <param name="returnFullName">If true, return the full path to scripts and applications</param>
+        <summary>
+            Searches for PowerShell commands, optionally using wildcard patterns
+            and optionally return the full path to applications and scripts rather than
+            the simple command name.
+            </summary>
+        <returns>A list of command names...</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetCommands">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IEnumerable&lt;System.Management.Automation.CommandInfo&gt; GetCommands (string name, System.Management.Automation.CommandTypes commandTypes, bool nameIsPattern);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Collections.Generic.IEnumerable`1&lt;class System.Management.Automation.CommandInfo&gt; GetCommands(string name, valuetype System.Management.Automation.CommandTypes commandTypes, bool nameIsPattern) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.CommandInvocationIntrinsics.GetCommands(System.String,System.Management.Automation.CommandTypes,System.Boolean)" />
+      <MemberSignature Language="F#" Value="member this.GetCommands : string * System.Management.Automation.CommandTypes * bool -&gt; seq&lt;System.Management.Automation.CommandInfo&gt;" Usage="commandInvocationIntrinsics.GetCommands (name, commandTypes, nameIsPattern)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerable&lt;System.Management.Automation.CommandInfo&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="commandTypes" Type="System.Management.Automation.CommandTypes" />
+        <Parameter Name="nameIsPattern" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="name">The name of the command to use</param>
+        <param name="commandTypes">Type of commands to support</param>
+        <param name="nameIsPattern">If true treat the name as a pattern to search for</param>
+        <summary>
+            Searches for PowerShell commands, optionally using wildcard patterns
+            </summary>
+        <returns>Collection of command names...</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HasErrors">
+      <MemberSignature Language="C#" Value="public bool HasErrors { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool HasErrors" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.CommandInvocationIntrinsics.HasErrors" />
+      <MemberSignature Language="VB.NET" Value="Public Property HasErrors As Boolean" />
+      <MemberSignature Language="F#" Value="member this.HasErrors : bool with get, set" Usage="System.Management.Automation.CommandInvocationIntrinsics.HasErrors" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            If an error occurred while executing the cmdlet, this will be set to true.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InvokeScript">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.Collection&lt;System.Management.Automation.PSObject&gt; InvokeScript (string script);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Collections.ObjectModel.Collection`1&lt;class System.Management.Automation.PSObject&gt; InvokeScript(string script) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.CommandInvocationIntrinsics.InvokeScript(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Function InvokeScript (script As String) As Collection(Of PSObject)" />
+      <MemberSignature Language="F#" Value="member this.InvokeScript : string -&gt; System.Collections.ObjectModel.Collection&lt;System.Management.Automation.PSObject&gt;" Usage="commandInvocationIntrinsics.InvokeScript script" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.Collection&lt;System.Management.Automation.PSObject&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="script" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="script">The script text to evaluate</param>
+        <summary>
+            Executes a piece of text as a script synchronously.
+            </summary>
+        <returns>A collection of MshCobjects generated by the script.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.Management.Automation.ParseException">Thrown if there was a parsing error in the script.</exception>
+        <exception cref="T:System.Management.Automation.RuntimeException">Represents a script-level exception</exception>
+        <exception cref="T:System.Management.Automation.FlowControlException" />
+      </Docs>
+    </Member>
+    <Member MemberName="InvokeScript">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.Collection&lt;System.Management.Automation.PSObject&gt; InvokeScript (string script, params object[] args);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Collections.ObjectModel.Collection`1&lt;class System.Management.Automation.PSObject&gt; InvokeScript(string script, object[] args) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.CommandInvocationIntrinsics.InvokeScript(System.String,System.Object[])" />
+      <MemberSignature Language="VB.NET" Value="Public Function InvokeScript (script As String, ParamArray args As Object()) As Collection(Of PSObject)" />
+      <MemberSignature Language="F#" Value="member this.InvokeScript : string * obj[] -&gt; System.Collections.ObjectModel.Collection&lt;System.Management.Automation.PSObject&gt;" Usage="commandInvocationIntrinsics.InvokeScript (script, args)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.Collection&lt;System.Management.Automation.PSObject&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="script" Type="System.String" />
+        <Parameter Name="args" Type="System.Object[]">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.ParamArray</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="script">The script text to evaluate</param>
+        <param name="args">The arguments to the script</param>
+        <summary>
+            Executes a piece of text as a script synchronously.
+            </summary>
+        <returns>A collection of MshCobjects generated by the script.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.Management.Automation.ParseException">Thrown if there was a parsing error in the script.</exception>
+        <exception cref="T:System.Management.Automation.RuntimeException">Represents a script-level exception</exception>
+        <exception cref="T:System.Management.Automation.FlowControlException" />
+      </Docs>
+    </Member>
+    <Member MemberName="InvokeScript">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.Collection&lt;System.Management.Automation.PSObject&gt; InvokeScript (System.Management.Automation.SessionState sessionState, System.Management.Automation.ScriptBlock scriptBlock, params object[] args);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Collections.ObjectModel.Collection`1&lt;class System.Management.Automation.PSObject&gt; InvokeScript(class System.Management.Automation.SessionState sessionState, class System.Management.Automation.ScriptBlock scriptBlock, object[] args) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.CommandInvocationIntrinsics.InvokeScript(System.Management.Automation.SessionState,System.Management.Automation.ScriptBlock,System.Object[])" />
+      <MemberSignature Language="F#" Value="member this.InvokeScript : System.Management.Automation.SessionState * System.Management.Automation.ScriptBlock * obj[] -&gt; System.Collections.ObjectModel.Collection&lt;System.Management.Automation.PSObject&gt;" Usage="commandInvocationIntrinsics.InvokeScript (sessionState, scriptBlock, args)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.Collection&lt;System.Management.Automation.PSObject&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sessionState" Type="System.Management.Automation.SessionState" />
+        <Parameter Name="scriptBlock" Type="System.Management.Automation.ScriptBlock" />
+        <Parameter Name="args" Type="System.Object[]">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.ParamArray</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="sessionState"></param>
+        <param name="scriptBlock"></param>
+        <param name="args"></param>
+        <summary />
+        <returns />
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InvokeScript">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.Collection&lt;System.Management.Automation.PSObject&gt; InvokeScript (bool useLocalScope, System.Management.Automation.ScriptBlock scriptBlock, System.Collections.IList input, params object[] args);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Collections.ObjectModel.Collection`1&lt;class System.Management.Automation.PSObject&gt; InvokeScript(bool useLocalScope, class System.Management.Automation.ScriptBlock scriptBlock, class System.Collections.IList input, object[] args) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.CommandInvocationIntrinsics.InvokeScript(System.Boolean,System.Management.Automation.ScriptBlock,System.Collections.IList,System.Object[])" />
+      <MemberSignature Language="F#" Value="member this.InvokeScript : bool * System.Management.Automation.ScriptBlock * System.Collections.IList * obj[] -&gt; System.Collections.ObjectModel.Collection&lt;System.Management.Automation.PSObject&gt;" Usage="commandInvocationIntrinsics.InvokeScript (useLocalScope, scriptBlock, input, args)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.Collection&lt;System.Management.Automation.PSObject&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="useLocalScope" Type="System.Boolean" />
+        <Parameter Name="scriptBlock" Type="System.Management.Automation.ScriptBlock" />
+        <Parameter Name="input" Type="System.Collections.IList" />
+        <Parameter Name="args" Type="System.Object[]">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.ParamArray</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="useLocalScope">If true, a new scope will be created</param>
+        <param name="scriptBlock">The scriptblock to execute</param>
+        <param name="input">Optionall input to the command</param>
+        <param name="args">Arguments to pass to the scriptblock</param>
+        <summary>
+            Invoke a scriptblock in the current runspace, controlling if it gets a new scope.
+            </summary>
+        <returns>The result of the evaluation</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InvokeScript">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.Collection&lt;System.Management.Automation.PSObject&gt; InvokeScript (string script, bool useNewScope, System.Management.Automation.Runspaces.PipelineResultTypes writeToPipeline, System.Collections.IList input, params object[] args);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Collections.ObjectModel.Collection`1&lt;class System.Management.Automation.PSObject&gt; InvokeScript(string script, bool useNewScope, valuetype System.Management.Automation.Runspaces.PipelineResultTypes writeToPipeline, class System.Collections.IList input, object[] args) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.CommandInvocationIntrinsics.InvokeScript(System.String,System.Boolean,System.Management.Automation.Runspaces.PipelineResultTypes,System.Collections.IList,System.Object[])" />
+      <MemberSignature Language="VB.NET" Value="Public Function InvokeScript (script As String, useNewScope As Boolean, writeToPipeline As PipelineResultTypes, input As IList, ParamArray args As Object()) As Collection(Of PSObject)" />
+      <MemberSignature Language="F#" Value="member this.InvokeScript : string * bool * System.Management.Automation.Runspaces.PipelineResultTypes * System.Collections.IList * obj[] -&gt; System.Collections.ObjectModel.Collection&lt;System.Management.Automation.PSObject&gt;" Usage="commandInvocationIntrinsics.InvokeScript (script, useNewScope, writeToPipeline, input, args)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.Collection&lt;System.Management.Automation.PSObject&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="script" Type="System.String" />
+        <Parameter Name="useNewScope" Type="System.Boolean" />
+        <Parameter Name="writeToPipeline" Type="System.Management.Automation.Runspaces.PipelineResultTypes" />
+        <Parameter Name="input" Type="System.Collections.IList" />
+        <Parameter Name="args" Type="System.Object[]">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.ParamArray</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="script">The script to evaluate.</param>
+        <param name="useNewScope">If true, evaluate the script in its own scope.
+            If false, the script will be evaluated in the current scope i.e. it will be "dotted"</param>
+        <param name="writeToPipeline">If set to Output, all output will be streamed
+            to the output pipe of the calling cmdlet. If set to None, the result will be returned
+            to the caller as a collection of PSObjects. No other flags are supported at this time and
+            will result in an exception if used.</param>
+        <param name="input">The list of objects to use as input to the script.</param>
+        <param name="args">The array of arguments to the command.</param>
+        <summary>
+            Executes a piece of text as a script synchronously using the options provided.
+            </summary>
+        <returns>A collection of MshCobjects generated by the script. This will be
+            empty if output was redirected.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.Management.Automation.ParseException">Thrown if there was a parsing error in the script.</exception>
+        <exception cref="T:System.Management.Automation.RuntimeException">Represents a script-level exception</exception>
+        <exception cref="T:System.NotImplementedException">Thrown if any redirect other than output is attempted</exception>
+        <exception cref="T:System.Management.Automation.FlowControlException" />
+      </Docs>
+    </Member>
+    <Member MemberName="NewScriptBlock">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.ScriptBlock NewScriptBlock (string scriptText);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Management.Automation.ScriptBlock NewScriptBlock(string scriptText) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.CommandInvocationIntrinsics.NewScriptBlock(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Function NewScriptBlock (scriptText As String) As ScriptBlock" />
+      <MemberSignature Language="F#" Value="member this.NewScriptBlock : string -&gt; System.Management.Automation.ScriptBlock" Usage="commandInvocationIntrinsics.NewScriptBlock scriptText" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.ScriptBlock</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="scriptText" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="scriptText">The source text to compile</param>
+        <summary>
+            Compile a string into a script block.
+            </summary>
+        <returns>The compiled script block</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.Management.Automation.ParseException" />
+      </Docs>
+    </Member>
+    <Member MemberName="PostCommandLookupAction">
+      <MemberSignature Language="C#" Value="public EventHandler&lt;System.Management.Automation.CommandLookupEventArgs&gt; PostCommandLookupAction { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.EventHandler`1&lt;class System.Management.Automation.CommandLookupEventArgs&gt; PostCommandLookupAction" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.CommandInvocationIntrinsics.PostCommandLookupAction" />
+      <MemberSignature Language="VB.NET" Value="Public Property PostCommandLookupAction As EventHandler(Of CommandLookupEventArgs)" />
+      <MemberSignature Language="F#" Value="member this.PostCommandLookupAction : EventHandler&lt;System.Management.Automation.CommandLookupEventArgs&gt; with get, set" Usage="System.Management.Automation.CommandInvocationIntrinsics.PostCommandLookupAction" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;System.Management.Automation.CommandLookupEventArgs&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            This event handler is after the command lookup is done but before the event object is
+            returned to the caller. This allows things like interning scripts to work.
+            If should have a single string parameter that is the name
+            of the command and should return a CommandInfo object or null.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PreCommandLookupAction">
+      <MemberSignature Language="C#" Value="public EventHandler&lt;System.Management.Automation.CommandLookupEventArgs&gt; PreCommandLookupAction { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.EventHandler`1&lt;class System.Management.Automation.CommandLookupEventArgs&gt; PreCommandLookupAction" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.CommandInvocationIntrinsics.PreCommandLookupAction" />
+      <MemberSignature Language="VB.NET" Value="Public Property PreCommandLookupAction As EventHandler(Of CommandLookupEventArgs)" />
+      <MemberSignature Language="F#" Value="member this.PreCommandLookupAction : EventHandler&lt;System.Management.Automation.CommandLookupEventArgs&gt; with get, set" Usage="System.Management.Automation.CommandInvocationIntrinsics.PreCommandLookupAction" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;System.Management.Automation.CommandLookupEventArgs&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            This event handler is called before the command lookup is done.
+            If should have a single string parameter that is the name
+            of the command and should return a CommandInfo object or null.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

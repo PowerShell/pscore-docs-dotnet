@@ -1,0 +1,591 @@
+﻿<Type Name="SendMailMessage" FullName="Microsoft.PowerShell.Commands.SendMailMessage">
+  <TypeSignature Language="C#" Value="public sealed class SendMailMessage : System.Management.Automation.PSCmdlet" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit SendMailMessage extends System.Management.Automation.PSCmdlet" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.PowerShell.Commands.SendMailMessage" />
+  <TypeSignature Language="VB.NET" Value="Public NotInheritable Class SendMailMessage&#xA;Inherits PSCmdlet" />
+  <TypeSignature Language="F#" Value="type SendMailMessage = class&#xA;    inherit PSCmdlet" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.PowerShell.Commands.Utility</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Management.Automation.PSCmdlet</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Management.Automation.Cmdlet("Send", "MailMessage", HelpUri="https://go.microsoft.com/fwlink/?LinkID=135256")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>
+            implementation for the Send-MailMessage command
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SendMailMessage ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Commands.SendMailMessage.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New ()" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Commands.Utility</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Attachments">
+      <MemberSignature Language="C#" Value="public string[] Attachments { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string[] Attachments" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.SendMailMessage.Attachments" />
+      <MemberSignature Language="VB.NET" Value="Public Property Attachments As String()" />
+      <MemberSignature Language="F#" Value="member this.Attachments : string[] with get, set" Usage="Microsoft.PowerShell.Commands.SendMailMessage.Attachments" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Commands.Utility</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Alias(Mono.Cecil.CustomAttributeArgument[])</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ValueFromPipeline=true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.ValidateNotNullOrEmpty</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Specifies the files names to be attached to the email.
+            If the filename specified can not be found, then the relevant error
+            message should be thrown.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Bcc">
+      <MemberSignature Language="C#" Value="public string[] Bcc { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string[] Bcc" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.SendMailMessage.Bcc" />
+      <MemberSignature Language="VB.NET" Value="Public Property Bcc As String()" />
+      <MemberSignature Language="F#" Value="member this.Bcc : string[] with get, set" Usage="Microsoft.PowerShell.Commands.SendMailMessage.Bcc" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Commands.Utility</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.ValidateNotNullOrEmpty</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Specifies the address collection that contains the
+            blind carbon copy (BCC) recipients for the e-mail message.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginProcessing">
+      <MemberSignature Language="C#" Value="protected override void BeginProcessing ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void BeginProcessing() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Commands.SendMailMessage.BeginProcessing" />
+      <MemberSignature Language="VB.NET" Value="Protected Overrides Sub BeginProcessing ()" />
+      <MemberSignature Language="F#" Value="override this.BeginProcessing : unit -&gt; unit" Usage="sendMailMessage.BeginProcessing " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Commands.Utility</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            ProcessRecord override
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Body">
+      <MemberSignature Language="C#" Value="public string Body { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Body" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.SendMailMessage.Body" />
+      <MemberSignature Language="VB.NET" Value="Public Property Body As String" />
+      <MemberSignature Language="F#" Value="member this.Body : string with get, set" Usage="Microsoft.PowerShell.Commands.SendMailMessage.Body" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Commands.Utility</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(Position=2)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.ValidateNotNullOrEmpty</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Specifies the body (content) of the message
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BodyAsHtml">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.SwitchParameter BodyAsHtml { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Management.Automation.SwitchParameter BodyAsHtml" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.SendMailMessage.BodyAsHtml" />
+      <MemberSignature Language="VB.NET" Value="Public Property BodyAsHtml As SwitchParameter" />
+      <MemberSignature Language="F#" Value="member this.BodyAsHtml : System.Management.Automation.SwitchParameter with get, set" Usage="Microsoft.PowerShell.Commands.SendMailMessage.BodyAsHtml" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Commands.Utility</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Alias(Mono.Cecil.CustomAttributeArgument[])</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.SwitchParameter</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Specifies a value indicating whether the mail message body is in Html.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Cc">
+      <MemberSignature Language="C#" Value="public string[] Cc { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string[] Cc" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.SendMailMessage.Cc" />
+      <MemberSignature Language="VB.NET" Value="Public Property Cc As String()" />
+      <MemberSignature Language="F#" Value="member this.Cc : string[] with get, set" Usage="Microsoft.PowerShell.Commands.SendMailMessage.Cc" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Commands.Utility</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.ValidateNotNullOrEmpty</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Specifies the address collection that contains the
+            carbon copy (CC) recipients for the e-mail message.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Credential">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.PSCredential Credential { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Management.Automation.PSCredential Credential" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.SendMailMessage.Credential" />
+      <MemberSignature Language="VB.NET" Value="Public Property Credential As PSCredential" />
+      <MemberSignature Language="F#" Value="member this.Credential : System.Management.Automation.PSCredential with get, set" Usage="Microsoft.PowerShell.Commands.SendMailMessage.Credential" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Commands.Utility</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Credential</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.ValidateNotNullOrEmpty</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.PSCredential</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Specifies the credential for this e-mail message.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DeliveryNotificationOption">
+      <MemberSignature Language="C#" Value="public System.Net.Mail.DeliveryNotificationOptions DeliveryNotificationOption { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Net.Mail.DeliveryNotificationOptions DeliveryNotificationOption" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.SendMailMessage.DeliveryNotificationOption" />
+      <MemberSignature Language="VB.NET" Value="Public Property DeliveryNotificationOption As DeliveryNotificationOptions" />
+      <MemberSignature Language="F#" Value="member this.DeliveryNotificationOption : System.Net.Mail.DeliveryNotificationOptions with get, set" Usage="Microsoft.PowerShell.Commands.SendMailMessage.DeliveryNotificationOption" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Commands.Utility</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Alias(Mono.Cecil.CustomAttributeArgument[])</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.ValidateNotNullOrEmpty</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Net.Mail.DeliveryNotificationOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Specifies the delivery notifications options for the e-mail message. The various
+            option available for this parameter are None, OnSuccess, OnFailure, Delay and Never
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Encoding">
+      <MemberSignature Language="C#" Value="public System.Text.Encoding Encoding { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Text.Encoding Encoding" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.SendMailMessage.Encoding" />
+      <MemberSignature Language="VB.NET" Value="Public Property Encoding As Encoding" />
+      <MemberSignature Language="F#" Value="member this.Encoding : System.Text.Encoding with get, set" Usage="Microsoft.PowerShell.Commands.SendMailMessage.Encoding" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Commands.Utility</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Alias(Mono.Cecil.CustomAttributeArgument[])</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.ArgumentCompletions(Mono.Cecil.CustomAttributeArgument[])</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.ArgumentToEncodingTransformation</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.ValidateNotNullOrEmpty</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Text.Encoding</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Specifies the encoding used for the content of the body and also the subject.
+            This is set to ASCII to ensure there are no problems with any email server
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EndProcessing">
+      <MemberSignature Language="C#" Value="protected override void EndProcessing ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void EndProcessing() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Commands.SendMailMessage.EndProcessing" />
+      <MemberSignature Language="VB.NET" Value="Protected Overrides Sub EndProcessing ()" />
+      <MemberSignature Language="F#" Value="override this.EndProcessing : unit -&gt; unit" Usage="sendMailMessage.EndProcessing " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Commands.Utility</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            EndProcessing
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="From">
+      <MemberSignature Language="C#" Value="public string From { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string From" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.SendMailMessage.From" />
+      <MemberSignature Language="VB.NET" Value="Public Property From As String" />
+      <MemberSignature Language="F#" Value="member this.From : string with get, set" Usage="Microsoft.PowerShell.Commands.SendMailMessage.From" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Commands.Utility</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(Mandatory=true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.ValidateNotNullOrEmpty</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Specifies the from address for this e-mail message. The default value for
+            this parameter is the email address of the currently logged on user
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Port">
+      <MemberSignature Language="C#" Value="public int Port { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Port" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.SendMailMessage.Port" />
+      <MemberSignature Language="VB.NET" Value="Public Property Port As Integer" />
+      <MemberSignature Language="F#" Value="member this.Port : int with get, set" Usage="Microsoft.PowerShell.Commands.SendMailMessage.Port" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Commands.Utility</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.ValidateRange(Mono.Cecil.CustomAttributeArgument, Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Specifies the Port to be used on the server. <see cref="P:Microsoft.PowerShell.Commands.SendMailMessage.SmtpServer" /></summary>
+        <value>To be added.</value>
+        <remarks>
+            Value must be greater than zero.
+            </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Priority">
+      <MemberSignature Language="C#" Value="public System.Net.Mail.MailPriority Priority { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Net.Mail.MailPriority Priority" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.SendMailMessage.Priority" />
+      <MemberSignature Language="VB.NET" Value="Public Property Priority As MailPriority" />
+      <MemberSignature Language="F#" Value="member this.Priority : System.Net.Mail.MailPriority with get, set" Usage="Microsoft.PowerShell.Commands.SendMailMessage.Priority" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Commands.Utility</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.ValidateNotNullOrEmpty</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Net.Mail.MailPriority</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Specifies the priority of the email message. The valid values for this are Normal, High and Low
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ProcessRecord">
+      <MemberSignature Language="C#" Value="protected override void ProcessRecord ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void ProcessRecord() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Commands.SendMailMessage.ProcessRecord" />
+      <MemberSignature Language="VB.NET" Value="Protected Overrides Sub ProcessRecord ()" />
+      <MemberSignature Language="F#" Value="override this.ProcessRecord : unit -&gt; unit" Usage="sendMailMessage.ProcessRecord " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Commands.Utility</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            ProcessRecord override
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SmtpServer">
+      <MemberSignature Language="C#" Value="public string SmtpServer { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string SmtpServer" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.SendMailMessage.SmtpServer" />
+      <MemberSignature Language="VB.NET" Value="Public Property SmtpServer As String" />
+      <MemberSignature Language="F#" Value="member this.SmtpServer : string with get, set" Usage="Microsoft.PowerShell.Commands.SendMailMessage.SmtpServer" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Commands.Utility</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Alias(Mono.Cecil.CustomAttributeArgument[])</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(Position=3)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.ValidateNotNullOrEmpty</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Specifies the name of the Host used to send the email. This host name will be assigned
+            to the Powershell variable PSEmailServer,if this host can not reached an appropriate error
+            message will be displayed.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Subject">
+      <MemberSignature Language="C#" Value="public string Subject { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Subject" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.SendMailMessage.Subject" />
+      <MemberSignature Language="VB.NET" Value="Public Property Subject As String" />
+      <MemberSignature Language="F#" Value="member this.Subject : string with get, set" Usage="Microsoft.PowerShell.Commands.SendMailMessage.Subject" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Commands.Utility</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Alias(Mono.Cecil.CustomAttributeArgument[])</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(Mandatory=true, Position=1)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.ValidateNotNullOrEmpty</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Specifies the subject of the email message.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="To">
+      <MemberSignature Language="C#" Value="public string[] To { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string[] To" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.SendMailMessage.To" />
+      <MemberSignature Language="VB.NET" Value="Public Property To As String()" />
+      <MemberSignature Language="F#" Value="member this.To : string[] with get, set" Usage="Microsoft.PowerShell.Commands.SendMailMessage.To" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Commands.Utility</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(Mandatory=true, Position=0)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.ValidateNotNullOrEmpty</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Specifies the To address for this e-mail message.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UseSsl">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.SwitchParameter UseSsl { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Management.Automation.SwitchParameter UseSsl" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.SendMailMessage.UseSsl" />
+      <MemberSignature Language="VB.NET" Value="Public Property UseSsl As SwitchParameter" />
+      <MemberSignature Language="F#" Value="member this.UseSsl : System.Management.Automation.SwitchParameter with get, set" Usage="Microsoft.PowerShell.Commands.SendMailMessage.UseSsl" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Commands.Utility</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.SwitchParameter</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Specifies if Secured layer is required or not
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

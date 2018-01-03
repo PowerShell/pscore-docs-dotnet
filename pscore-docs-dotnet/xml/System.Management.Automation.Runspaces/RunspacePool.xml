@@ -1,0 +1,925 @@
+﻿<Type Name="RunspacePool" FullName="System.Management.Automation.Runspaces.RunspacePool">
+  <TypeSignature Language="C#" Value="public sealed class RunspacePool : IDisposable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit RunspacePool extends System.Object implements class System.IDisposable" />
+  <TypeSignature Language="DocId" Value="T:System.Management.Automation.Runspaces.RunspacePool" />
+  <TypeSignature Language="VB.NET" Value="Public NotInheritable Class RunspacePool&#xA;Implements IDisposable" />
+  <TypeSignature Language="F#" Value="type RunspacePool = class&#xA;    interface IDisposable" />
+  <AssemblyInfo>
+    <AssemblyName>System.Management.Automation</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>
+            Public interface which supports pooling PowerShell Runspaces.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="BeginClose">
+      <MemberSignature Language="C#" Value="public IAsyncResult BeginClose (AsyncCallback callback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IAsyncResult BeginClose(class System.AsyncCallback callback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Runspaces.RunspacePool.BeginClose(System.AsyncCallback,System.Object)" />
+      <MemberSignature Language="VB.NET" Value="Public Function BeginClose (callback As AsyncCallback, state As Object) As IAsyncResult" />
+      <MemberSignature Language="F#" Value="member this.BeginClose : AsyncCallback * obj -&gt; IAsyncResult" Usage="runspacePool.BeginClose (callback, state)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="callback" Type="System.AsyncCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="callback">
+            A AsyncCallback to call once the BeginClose completes.
+            </param>
+        <param name="state">
+            A user supplied state to call the <paramref name="callback" />
+            with.
+            </param>
+        <summary>
+            Closes the RunspacePool asynchronously and cleans all the internal
+            resources. This will close all the runspaces in the
+            runspacepool and release all the async operations
+            waiting for a runspace. If the pool is already closed
+            or broken or closing this will just return.
+            </summary>
+        <returns>
+            An AsyncResult object to monitor the state of the async
+            operation.
+            </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginConnect">
+      <MemberSignature Language="C#" Value="public IAsyncResult BeginConnect (AsyncCallback callback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IAsyncResult BeginConnect(class System.AsyncCallback callback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Runspaces.RunspacePool.BeginConnect(System.AsyncCallback,System.Object)" />
+      <MemberSignature Language="VB.NET" Value="Public Function BeginConnect (callback As AsyncCallback, state As Object) As IAsyncResult" />
+      <MemberSignature Language="F#" Value="member this.BeginConnect : AsyncCallback * obj -&gt; IAsyncResult" Usage="runspacePool.BeginConnect (callback, state)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="callback" Type="System.AsyncCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="callback"></param>
+        <param name="state"></param>
+        <summary>
+            Connects the runspace pool asynchronously.  Runspace pool must be in disconnected state.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginDisconnect">
+      <MemberSignature Language="C#" Value="public IAsyncResult BeginDisconnect (AsyncCallback callback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IAsyncResult BeginDisconnect(class System.AsyncCallback callback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Runspaces.RunspacePool.BeginDisconnect(System.AsyncCallback,System.Object)" />
+      <MemberSignature Language="VB.NET" Value="Public Function BeginDisconnect (callback As AsyncCallback, state As Object) As IAsyncResult" />
+      <MemberSignature Language="F#" Value="member this.BeginDisconnect : AsyncCallback * obj -&gt; IAsyncResult" Usage="runspacePool.BeginDisconnect (callback, state)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="callback" Type="System.AsyncCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="callback">An AsyncCallback to call once the BeginClose completes.</param>
+        <param name="state">A user supplied state to call the callback with.</param>
+        <summary>
+            Disconnects the runspace pool asynchronously.  Runspace pool must be in Opened state.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginOpen">
+      <MemberSignature Language="C#" Value="public IAsyncResult BeginOpen (AsyncCallback callback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IAsyncResult BeginOpen(class System.AsyncCallback callback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Runspaces.RunspacePool.BeginOpen(System.AsyncCallback,System.Object)" />
+      <MemberSignature Language="VB.NET" Value="Public Function BeginOpen (callback As AsyncCallback, state As Object) As IAsyncResult" />
+      <MemberSignature Language="F#" Value="member this.BeginOpen : AsyncCallback * obj -&gt; IAsyncResult" Usage="runspacePool.BeginOpen (callback, state)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="callback" Type="System.AsyncCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="callback">
+            A AsyncCallback to call once the BeginOpen completes.
+            </param>
+        <param name="state">
+            A user supplied state to call the <paramref name="callback" />
+            with.
+            </param>
+        <summary>
+            Opens the RunspacePool asynchronously. RunspacePool must
+            be opened before it can be used.
+            To get the exceptions that might have occurred, call
+            EndOpen.
+            </summary>
+        <returns>
+            An AsyncResult object to monitor the state of the async
+            operation.
+            </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CleanupInterval">
+      <MemberSignature Language="C#" Value="public TimeSpan CleanupInterval { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.TimeSpan CleanupInterval" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.Runspaces.RunspacePool.CleanupInterval" />
+      <MemberSignature Language="VB.NET" Value="Public Property CleanupInterval As TimeSpan" />
+      <MemberSignature Language="F#" Value="member this.CleanupInterval : TimeSpan with get, set" Usage="System.Management.Automation.Runspaces.RunspacePool.CleanupInterval" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.TimeSpan</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Specifies how often unused runspaces are disposed.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Close">
+      <MemberSignature Language="C#" Value="public void Close ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Close() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Runspaces.RunspacePool.Close" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Close ()" />
+      <MemberSignature Language="F#" Value="member this.Close : unit -&gt; unit" Usage="runspacePool.Close " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Closes the RunspacePool and cleans all the internal
+            resources. This will close all the runspaces in the
+            runspacepool and release all the async operations
+            waiting for a runspace. If the pool is already closed
+            or broken or closing this will just return.
+            </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.Management.Automation.Runspaces.InvalidRunspacePoolStateException">
+            Cannot close the RunspacePool because RunspacePool is
+            in Closing state.
+            </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Connect">
+      <MemberSignature Language="C#" Value="public void Connect ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Connect() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Runspaces.RunspacePool.Connect" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Connect ()" />
+      <MemberSignature Language="F#" Value="member this.Connect : unit -&gt; unit" Usage="runspacePool.Connect " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Connects the runspace pool synchronously.  Runspace pool must be in disconnected state.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ConnectionInfo">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.Runspaces.RunspaceConnectionInfo ConnectionInfo { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Management.Automation.Runspaces.RunspaceConnectionInfo ConnectionInfo" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.Runspaces.RunspacePool.ConnectionInfo" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ConnectionInfo As RunspaceConnectionInfo" />
+      <MemberSignature Language="F#" Value="member this.ConnectionInfo : System.Management.Automation.Runspaces.RunspaceConnectionInfo" Usage="System.Management.Automation.Runspaces.RunspacePool.ConnectionInfo" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.Runspaces.RunspaceConnectionInfo</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Connection information for remote RunspacePools, null for local RunspacePools
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateDisconnectedPowerShells">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.Collection&lt;System.Management.Automation.PowerShell&gt; CreateDisconnectedPowerShells ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Collections.ObjectModel.Collection`1&lt;class System.Management.Automation.PowerShell&gt; CreateDisconnectedPowerShells() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Runspaces.RunspacePool.CreateDisconnectedPowerShells" />
+      <MemberSignature Language="VB.NET" Value="Public Function CreateDisconnectedPowerShells () As Collection(Of PowerShell)" />
+      <MemberSignature Language="F#" Value="member this.CreateDisconnectedPowerShells : unit -&gt; System.Collections.ObjectModel.Collection&lt;System.Management.Automation.PowerShell&gt;" Usage="runspacePool.CreateDisconnectedPowerShells " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.Collection&lt;System.Management.Automation.PowerShell&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Creates an array of PowerShell objects that are in the Disconnected state for
+            all currently disconnected running commands associated with this runspace pool.
+            </summary>
+        <returns />
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Disconnect">
+      <MemberSignature Language="C#" Value="public void Disconnect ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Disconnect() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Runspaces.RunspacePool.Disconnect" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Disconnect ()" />
+      <MemberSignature Language="F#" Value="member this.Disconnect : unit -&gt; unit" Usage="runspacePool.Disconnect " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Disconnects the runspace pool synchronously.  Runspace pool must be in Opened state.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="public void Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Dispose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Runspaces.RunspacePool.Dispose" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Dispose ()" />
+      <MemberSignature Language="F#" Value="abstract member Dispose : unit -&gt; unit&#xA;override this.Dispose : unit -&gt; unit" Usage="runspacePool.Dispose " />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.IDisposable.Dispose</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Dispose the current runspacepool.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EndClose">
+      <MemberSignature Language="C#" Value="public void EndClose (IAsyncResult asyncResult);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void EndClose(class System.IAsyncResult asyncResult) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Runspaces.RunspacePool.EndClose(System.IAsyncResult)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub EndClose (asyncResult As IAsyncResult)" />
+      <MemberSignature Language="F#" Value="member this.EndClose : IAsyncResult -&gt; unit" Usage="runspacePool.EndClose asyncResult" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="asyncResult" Type="System.IAsyncResult" />
+      </Parameters>
+      <Docs>
+        <param name="asyncResult">To be added.</param>
+        <summary>
+            Waits for the pending asynchronous BeginClose to complete.
+            </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+            asyncResult is a null reference.
+            </exception>
+        <exception cref="T:System.ArgumentException">
+            asyncResult object was not created by calling BeginClose
+            on this runspacepool instance.
+            </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="EndConnect">
+      <MemberSignature Language="C#" Value="public void EndConnect (IAsyncResult asyncResult);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void EndConnect(class System.IAsyncResult asyncResult) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Runspaces.RunspacePool.EndConnect(System.IAsyncResult)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub EndConnect (asyncResult As IAsyncResult)" />
+      <MemberSignature Language="F#" Value="member this.EndConnect : IAsyncResult -&gt; unit" Usage="runspacePool.EndConnect asyncResult" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="asyncResult" Type="System.IAsyncResult" />
+      </Parameters>
+      <Docs>
+        <param name="asyncResult">Asynchronous call result object.</param>
+        <summary>
+            Waits for the pending asynchronous BeginConnect to complete.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EndDisconnect">
+      <MemberSignature Language="C#" Value="public void EndDisconnect (IAsyncResult asyncResult);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void EndDisconnect(class System.IAsyncResult asyncResult) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Runspaces.RunspacePool.EndDisconnect(System.IAsyncResult)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub EndDisconnect (asyncResult As IAsyncResult)" />
+      <MemberSignature Language="F#" Value="member this.EndDisconnect : IAsyncResult -&gt; unit" Usage="runspacePool.EndDisconnect asyncResult" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="asyncResult" Type="System.IAsyncResult" />
+      </Parameters>
+      <Docs>
+        <param name="asyncResult">Asynchronous call result object.</param>
+        <summary>
+            Waits for the pending asynchronous BeginDisconnect to complete.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EndOpen">
+      <MemberSignature Language="C#" Value="public void EndOpen (IAsyncResult asyncResult);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void EndOpen(class System.IAsyncResult asyncResult) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Runspaces.RunspacePool.EndOpen(System.IAsyncResult)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub EndOpen (asyncResult As IAsyncResult)" />
+      <MemberSignature Language="F#" Value="member this.EndOpen : IAsyncResult -&gt; unit" Usage="runspacePool.EndOpen asyncResult" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="asyncResult" Type="System.IAsyncResult" />
+      </Parameters>
+      <Docs>
+        <param name="asyncResult">To be added.</param>
+        <summary>
+            Waits for the pending asynchronous BeginOpen to complete.
+            </summary>
+        <remarks>
+            TODO: Behavior if EndOpen is called multiple times.
+            </remarks>
+        <exception cref="T:System.ArgumentNullException">
+            asyncResult is a null reference.
+            </exception>
+        <exception cref="T:System.ArgumentException">
+            asyncResult object was not created by calling BeginOpen
+            on this runspacepool instance.
+            </exception>
+        <exception cref="T:System.Management.Automation.Runspaces.InvalidRunspacePoolStateException">
+            RunspacePoolState is not BeforeOpen.
+            </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetApplicationPrivateData">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.PSPrimitiveDictionary GetApplicationPrivateData ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Management.Automation.PSPrimitiveDictionary GetApplicationPrivateData() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Runspaces.RunspacePool.GetApplicationPrivateData" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetApplicationPrivateData () As PSPrimitiveDictionary" />
+      <MemberSignature Language="F#" Value="member this.GetApplicationPrivateData : unit -&gt; System.Management.Automation.PSPrimitiveDictionary" Usage="runspacePool.GetApplicationPrivateData " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.PSPrimitiveDictionary</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+             Private data to be used by applications built on top of PowerShell.
+            
+             Local runspace pool is created with application private data set to an empty <see cref="T:System.Management.Automation.PSPrimitiveDictionary" />.
+            
+             Remote runspace pool gets its application private data from the server (when creating the remote runspace pool)
+             Calling this method on a remote runspace pool will block until the data is received from the server.
+             The server will send application private data before reaching <see cref="F:System.Management.Automation.Runspaces.RunspacePoolState.Opened" /> state.
+            
+             Runspaces that are part of a <see cref="T:System.Management.Automation.Runspaces.RunspacePool" /> inherit application private data from the pool.
+             </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetAvailableRunspaces">
+      <MemberSignature Language="C#" Value="public int GetAvailableRunspaces ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int32 GetAvailableRunspaces() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Runspaces.RunspacePool.GetAvailableRunspaces" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetAvailableRunspaces () As Integer" />
+      <MemberSignature Language="F#" Value="member this.GetAvailableRunspaces : unit -&gt; int" Usage="runspacePool.GetAvailableRunspaces " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Retrieves the number of runspaces available at the time of calling
+            this method.
+            </summary>
+        <returns>
+            The number of available runspace in the pool.
+            </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetCapabilities">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.Runspaces.RunspacePoolCapability GetCapabilities ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype System.Management.Automation.Runspaces.RunspacePoolCapability GetCapabilities() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Runspaces.RunspacePool.GetCapabilities" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetCapabilities () As RunspacePoolCapability" />
+      <MemberSignature Language="F#" Value="member this.GetCapabilities : unit -&gt; System.Management.Automation.Runspaces.RunspacePoolCapability" Usage="runspacePool.GetCapabilities " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.Runspaces.RunspacePoolCapability</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+             Returns RunspacePool capabilities.
+             </summary>
+        <returns>RunspacePoolCapability</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetMaxRunspaces">
+      <MemberSignature Language="C#" Value="public int GetMaxRunspaces ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int32 GetMaxRunspaces() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Runspaces.RunspacePool.GetMaxRunspaces" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetMaxRunspaces () As Integer" />
+      <MemberSignature Language="F#" Value="member this.GetMaxRunspaces : unit -&gt; int" Usage="runspacePool.GetMaxRunspaces " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Retrieves the maximum number of runspaces the pool maintains.
+            </summary>
+        <returns>
+            The maximum number of runspaces in the pool
+            </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetMinRunspaces">
+      <MemberSignature Language="C#" Value="public int GetMinRunspaces ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int32 GetMinRunspaces() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Runspaces.RunspacePool.GetMinRunspaces" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetMinRunspaces () As Integer" />
+      <MemberSignature Language="F#" Value="member this.GetMinRunspaces : unit -&gt; int" Usage="runspacePool.GetMinRunspaces " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Retrieves the minimum number of runspaces the pool maintains.
+            </summary>
+        <returns>
+            The minimum number of runspaces in the pool
+            </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetRunspacePools">
+      <MemberSignature Language="C#" Value="public static System.Management.Automation.Runspaces.RunspacePool[] GetRunspacePools (System.Management.Automation.Runspaces.RunspaceConnectionInfo connectionInfo);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Management.Automation.Runspaces.RunspacePool[] GetRunspacePools(class System.Management.Automation.Runspaces.RunspaceConnectionInfo connectionInfo) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Runspaces.RunspacePool.GetRunspacePools(System.Management.Automation.Runspaces.RunspaceConnectionInfo)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function GetRunspacePools (connectionInfo As RunspaceConnectionInfo) As RunspacePool()" />
+      <MemberSignature Language="F#" Value="static member GetRunspacePools : System.Management.Automation.Runspaces.RunspaceConnectionInfo -&gt; System.Management.Automation.Runspaces.RunspacePool[]" Usage="System.Management.Automation.Runspaces.RunspacePool.GetRunspacePools connectionInfo" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.Runspaces.RunspacePool[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="connectionInfo" Type="System.Management.Automation.Runspaces.RunspaceConnectionInfo" />
+      </Parameters>
+      <Docs>
+        <param name="connectionInfo">Connection object for the target server.</param>
+        <summary>
+            Queries the server for disconnected runspace pools and creates an array of runspace
+            pool objects associated with each disconnected runspace pool on the server.  Each
+            runspace pool object in the returned array is in the Disconnected state and can be
+            connected to the server by calling the Connect() method on the runspace pool.
+            </summary>
+        <returns>Array of RunspacePool objects each in the Disconnected state.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetRunspacePools">
+      <MemberSignature Language="C#" Value="public static System.Management.Automation.Runspaces.RunspacePool[] GetRunspacePools (System.Management.Automation.Runspaces.RunspaceConnectionInfo connectionInfo, System.Management.Automation.Host.PSHost host);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Management.Automation.Runspaces.RunspacePool[] GetRunspacePools(class System.Management.Automation.Runspaces.RunspaceConnectionInfo connectionInfo, class System.Management.Automation.Host.PSHost host) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Runspaces.RunspacePool.GetRunspacePools(System.Management.Automation.Runspaces.RunspaceConnectionInfo,System.Management.Automation.Host.PSHost)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function GetRunspacePools (connectionInfo As RunspaceConnectionInfo, host As PSHost) As RunspacePool()" />
+      <MemberSignature Language="F#" Value="static member GetRunspacePools : System.Management.Automation.Runspaces.RunspaceConnectionInfo * System.Management.Automation.Host.PSHost -&gt; System.Management.Automation.Runspaces.RunspacePool[]" Usage="System.Management.Automation.Runspaces.RunspacePool.GetRunspacePools (connectionInfo, host)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.Runspaces.RunspacePool[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="connectionInfo" Type="System.Management.Automation.Runspaces.RunspaceConnectionInfo" />
+        <Parameter Name="host" Type="System.Management.Automation.Host.PSHost" />
+      </Parameters>
+      <Docs>
+        <param name="connectionInfo">Connection object for the target server.</param>
+        <param name="host">Client host object.</param>
+        <summary>
+            Queries the server for disconnected runspace pools and creates an array of runspace
+            pool objects associated with each disconnected runspace pool on the server.  Each
+            runspace pool object in the returned array is in the Disconnected state and can be
+            connected to the server by calling the Connect() method on the runspace pool.
+            </summary>
+        <returns>Array of RunspacePool objects each in the Disconnected state.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetRunspacePools">
+      <MemberSignature Language="C#" Value="public static System.Management.Automation.Runspaces.RunspacePool[] GetRunspacePools (System.Management.Automation.Runspaces.RunspaceConnectionInfo connectionInfo, System.Management.Automation.Host.PSHost host, System.Management.Automation.Runspaces.TypeTable typeTable);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Management.Automation.Runspaces.RunspacePool[] GetRunspacePools(class System.Management.Automation.Runspaces.RunspaceConnectionInfo connectionInfo, class System.Management.Automation.Host.PSHost host, class System.Management.Automation.Runspaces.TypeTable typeTable) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Runspaces.RunspacePool.GetRunspacePools(System.Management.Automation.Runspaces.RunspaceConnectionInfo,System.Management.Automation.Host.PSHost,System.Management.Automation.Runspaces.TypeTable)" />
+      <MemberSignature Language="F#" Value="static member GetRunspacePools : System.Management.Automation.Runspaces.RunspaceConnectionInfo * System.Management.Automation.Host.PSHost * System.Management.Automation.Runspaces.TypeTable -&gt; System.Management.Automation.Runspaces.RunspacePool[]" Usage="System.Management.Automation.Runspaces.RunspacePool.GetRunspacePools (connectionInfo, host, typeTable)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.Runspaces.RunspacePool[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="connectionInfo" Type="System.Management.Automation.Runspaces.RunspaceConnectionInfo" />
+        <Parameter Name="host" Type="System.Management.Automation.Host.PSHost" />
+        <Parameter Name="typeTable" Type="System.Management.Automation.Runspaces.TypeTable" />
+      </Parameters>
+      <Docs>
+        <param name="connectionInfo">Connection object for the target server.</param>
+        <param name="host">Client host object.</param>
+        <param name="typeTable">TypeTable object.</param>
+        <summary>
+            Queries the server for disconnected runspace pools and creates an array of runspace
+            pool objects associated with each disconnected runspace pool on the server.  Each
+            runspace pool object in the returned array is in the Disconnected state and can be
+            connected to the server by calling the Connect() method on the runspace pool.
+            </summary>
+        <returns>Array of RunspacePool objects each in the Disconnected state.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InitialSessionState">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.Runspaces.InitialSessionState InitialSessionState { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Management.Automation.Runspaces.InitialSessionState InitialSessionState" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.Runspaces.RunspacePool.InitialSessionState" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property InitialSessionState As InitialSessionState" />
+      <MemberSignature Language="F#" Value="member this.InitialSessionState : System.Management.Automation.Runspaces.InitialSessionState" Usage="System.Management.Automation.Runspaces.RunspacePool.InitialSessionState" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.Runspaces.InitialSessionState</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the InitialSessionState object that this pool uses
+            to create the runspaces.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InstanceId">
+      <MemberSignature Language="C#" Value="public Guid InstanceId { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Guid InstanceId" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.Runspaces.RunspacePool.InstanceId" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property InstanceId As Guid" />
+      <MemberSignature Language="F#" Value="member this.InstanceId : Guid" Usage="System.Management.Automation.Runspaces.RunspacePool.InstanceId" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Guid</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Get unique id for this instance of runspace pool. It is primarily used
+            for logging purposes.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsDisposed">
+      <MemberSignature Language="C#" Value="public bool IsDisposed { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsDisposed" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.Runspaces.RunspacePool.IsDisposed" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property IsDisposed As Boolean" />
+      <MemberSignature Language="F#" Value="member this.IsDisposed : bool" Usage="System.Management.Automation.Runspaces.RunspacePool.IsDisposed" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets a boolean which describes if the runspace pool is disposed.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Open">
+      <MemberSignature Language="C#" Value="public void Open ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Open() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Runspaces.RunspacePool.Open" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Open ()" />
+      <MemberSignature Language="F#" Value="member this.Open : unit -&gt; unit" Usage="runspacePool.Open " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Opens the runspacepool synchronously. RunspacePool must
+            be opened before it can be used.
+            </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.Management.Automation.Runspaces.InvalidRunspacePoolStateException">
+            RunspacePoolState is not BeforeOpen
+            </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="RunspacePoolAvailability">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.Runspaces.RunspacePoolAvailability RunspacePoolAvailability { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Management.Automation.Runspaces.RunspacePoolAvailability RunspacePoolAvailability" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.Runspaces.RunspacePool.RunspacePoolAvailability" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property RunspacePoolAvailability As RunspacePoolAvailability" />
+      <MemberSignature Language="F#" Value="member this.RunspacePoolAvailability : System.Management.Automation.Runspaces.RunspacePoolAvailability" Usage="System.Management.Automation.Runspaces.RunspacePool.RunspacePoolAvailability" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.Runspaces.RunspacePoolAvailability</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Returns runspace pool availability.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RunspacePoolStateInfo">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.RunspacePoolStateInfo RunspacePoolStateInfo { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Management.Automation.RunspacePoolStateInfo RunspacePoolStateInfo" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.Runspaces.RunspacePool.RunspacePoolStateInfo" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property RunspacePoolStateInfo As RunspacePoolStateInfo" />
+      <MemberSignature Language="F#" Value="member this.RunspacePoolStateInfo : System.Management.Automation.RunspacePoolStateInfo" Usage="System.Management.Automation.Runspaces.RunspacePool.RunspacePoolStateInfo" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.RunspacePoolStateInfo</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets State of the current runspace pool.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetMaxRunspaces">
+      <MemberSignature Language="C#" Value="public bool SetMaxRunspaces (int maxRunspaces);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool SetMaxRunspaces(int32 maxRunspaces) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Runspaces.RunspacePool.SetMaxRunspaces(System.Int32)" />
+      <MemberSignature Language="VB.NET" Value="Public Function SetMaxRunspaces (maxRunspaces As Integer) As Boolean" />
+      <MemberSignature Language="F#" Value="member this.SetMaxRunspaces : int -&gt; bool" Usage="runspacePool.SetMaxRunspaces maxRunspaces" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="maxRunspaces" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="maxRunspaces">
+            The maximum number of runspaces in the pool.
+            </param>
+        <summary>
+            Sets the maximum number of Runspaces that can be active concurrently
+            in the pool. All requests above that number remain queued until
+            runspaces become available.
+            </summary>
+        <returns>
+            true if the change is successful; otherwise, false.
+            </returns>
+        <remarks>
+            You cannot set the number of runspaces to a number smaller than
+            the minimum runspaces.
+            </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetMinRunspaces">
+      <MemberSignature Language="C#" Value="public bool SetMinRunspaces (int minRunspaces);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool SetMinRunspaces(int32 minRunspaces) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Runspaces.RunspacePool.SetMinRunspaces(System.Int32)" />
+      <MemberSignature Language="VB.NET" Value="Public Function SetMinRunspaces (minRunspaces As Integer) As Boolean" />
+      <MemberSignature Language="F#" Value="member this.SetMinRunspaces : int -&gt; bool" Usage="runspacePool.SetMinRunspaces minRunspaces" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="minRunspaces" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="minRunspaces">
+            The minimum number of runspaces in the pool.
+            </param>
+        <summary>
+            Sets the minimum number of Runspaces that the pool maintains
+            in anticipation of new requests.
+            </summary>
+        <returns>
+            true if the change is successful; otherwise, false.
+            </returns>
+        <remarks>
+            You cannot set the number of idle runspaces to a number smaller than
+            1 or greater than maximum number of active runspaces.
+            </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StateChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler&lt;System.Management.Automation.Runspaces.RunspacePoolStateChangedEventArgs&gt; StateChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class System.Management.Automation.Runspaces.RunspacePoolStateChangedEventArgs&gt; StateChanged" />
+      <MemberSignature Language="DocId" Value="E:System.Management.Automation.Runspaces.RunspacePool.StateChanged" />
+      <MemberSignature Language="VB.NET" Value="Public Custom Event StateChanged As EventHandler(Of RunspacePoolStateChangedEventArgs) " />
+      <MemberSignature Language="F#" Value="member this.StateChanged : EventHandler&lt;System.Management.Automation.Runspaces.RunspacePoolStateChangedEventArgs&gt; " Usage="member this.StateChanged : System.EventHandler&lt;System.Management.Automation.Runspaces.RunspacePoolStateChangedEventArgs&gt; " />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;System.Management.Automation.Runspaces.RunspacePoolStateChangedEventArgs&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Event raised when RunspacePoolState changes.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ThreadOptions">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.Runspaces.PSThreadOptions ThreadOptions { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Management.Automation.Runspaces.PSThreadOptions ThreadOptions" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.Runspaces.RunspacePool.ThreadOptions" />
+      <MemberSignature Language="VB.NET" Value="Public Property ThreadOptions As PSThreadOptions" />
+      <MemberSignature Language="F#" Value="member this.ThreadOptions : System.Management.Automation.Runspaces.PSThreadOptions with get, set" Usage="System.Management.Automation.Runspaces.RunspacePool.ThreadOptions" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.Runspaces.PSThreadOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            This property determines whether a new thread is created for each invocation
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+            Any updates to the value of this property must be done before the RunspacePool is opened
+            </remarks>
+        <exception cref="T:System.Management.Automation.Runspaces.InvalidRunspacePoolStateException">
+            An attempt to change this property was made after opening the RunspacePool
+            </exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

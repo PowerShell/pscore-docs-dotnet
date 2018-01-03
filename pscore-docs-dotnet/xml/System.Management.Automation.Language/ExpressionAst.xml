@@ -1,0 +1,70 @@
+﻿<Type Name="ExpressionAst" FullName="System.Management.Automation.Language.ExpressionAst">
+  <TypeSignature Language="C#" Value="public abstract class ExpressionAst : System.Management.Automation.Language.CommandElementAst" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit ExpressionAst extends System.Management.Automation.Language.CommandElementAst" />
+  <TypeSignature Language="DocId" Value="T:System.Management.Automation.Language.ExpressionAst" />
+  <TypeSignature Language="VB.NET" Value="Public MustInherit Class ExpressionAst&#xA;Inherits CommandElementAst" />
+  <TypeSignature Language="F#" Value="type ExpressionAst = class&#xA;    inherit CommandElementAst" />
+  <AssemblyInfo>
+    <AssemblyName>System.Management.Automation</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Management.Automation.Language.CommandElementAst</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            An abstract base class that represents all PowerShell expressions.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected ExpressionAst (System.Management.Automation.Language.IScriptExtent extent);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(class System.Management.Automation.Language.IScriptExtent extent) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Language.ExpressionAst.#ctor(System.Management.Automation.Language.IScriptExtent)" />
+      <MemberSignature Language="VB.NET" Value="Protected Sub New (extent As IScriptExtent)" />
+      <MemberSignature Language="F#" Value="new System.Management.Automation.Language.ExpressionAst : System.Management.Automation.Language.IScriptExtent -&gt; System.Management.Automation.Language.ExpressionAst" Usage="new System.Management.Automation.Language.ExpressionAst extent" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="extent" Type="System.Management.Automation.Language.IScriptExtent" />
+      </Parameters>
+      <Docs>
+        <param name="extent">The extent of the expression.</param>
+        <summary>
+            Initialize the fields common to all expressions.
+            </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.Management.Automation.PSArgumentNullException">
+            If <paramref name="extent" /> is null.
+            </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="StaticType">
+      <MemberSignature Language="C#" Value="public virtual Type StaticType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type StaticType" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.Language.ExpressionAst.StaticType" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable ReadOnly Property StaticType As Type" />
+      <MemberSignature Language="F#" Value="member this.StaticType : Type" Usage="System.Management.Automation.Language.ExpressionAst.StaticType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            By default, the static type of an expression is unknown and hence we assume <c>typeof(object)</c>.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,240 @@
+﻿<Type Name="PSSessionConfiguration" FullName="System.Management.Automation.Remoting.PSSessionConfiguration">
+  <TypeSignature Language="C#" Value="public abstract class PSSessionConfiguration : IDisposable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit PSSessionConfiguration extends System.Object implements class System.IDisposable" />
+  <TypeSignature Language="DocId" Value="T:System.Management.Automation.Remoting.PSSessionConfiguration" />
+  <TypeSignature Language="VB.NET" Value="Public MustInherit Class PSSessionConfiguration&#xA;Implements IDisposable" />
+  <TypeSignature Language="F#" Value="type PSSessionConfiguration = class&#xA;    interface IDisposable" />
+  <AssemblyInfo>
+    <AssemblyName>System.Management.Automation</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>
+            InitialSessionStateProvider is used by 3rd parties to provide shell configuration
+            on the remote server.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected PSSessionConfiguration ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Remoting.PSSessionConfiguration.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Protected Sub New ()" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="public void Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Dispose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Remoting.PSSessionConfiguration.Dispose" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Dispose ()" />
+      <MemberSignature Language="F#" Value="abstract member Dispose : unit -&gt; unit&#xA;override this.Dispose : unit -&gt; unit" Usage="pSSessionConfiguration.Dispose " />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.IDisposable.Dispose</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Dispose this configuration object. This will be called when a Runspace/RunspacePool
+            created using InitialSessionState from this object is Closed.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="protected virtual void Dispose (bool isDisposing);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void Dispose(bool isDisposing) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Remoting.PSSessionConfiguration.Dispose(System.Boolean)" />
+      <MemberSignature Language="VB.NET" Value="Protected Overridable Sub Dispose (isDisposing As Boolean)" />
+      <MemberSignature Language="F#" Value="abstract member Dispose : bool -&gt; unit&#xA;override this.Dispose : bool -&gt; unit" Usage="pSSessionConfiguration.Dispose isDisposing" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="isDisposing" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="isDisposing"></param>
+        <summary />
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetApplicationPrivateData">
+      <MemberSignature Language="C#" Value="public virtual System.Management.Automation.PSPrimitiveDictionary GetApplicationPrivateData (System.Management.Automation.Remoting.PSSenderInfo senderInfo);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Management.Automation.PSPrimitiveDictionary GetApplicationPrivateData(class System.Management.Automation.Remoting.PSSenderInfo senderInfo) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Remoting.PSSessionConfiguration.GetApplicationPrivateData(System.Management.Automation.Remoting.PSSenderInfo)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function GetApplicationPrivateData (senderInfo As PSSenderInfo) As PSPrimitiveDictionary" />
+      <MemberSignature Language="F#" Value="abstract member GetApplicationPrivateData : System.Management.Automation.Remoting.PSSenderInfo -&gt; System.Management.Automation.PSPrimitiveDictionary&#xA;override this.GetApplicationPrivateData : System.Management.Automation.Remoting.PSSenderInfo -&gt; System.Management.Automation.PSPrimitiveDictionary" Usage="pSSessionConfiguration.GetApplicationPrivateData senderInfo" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.PSPrimitiveDictionary</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="senderInfo" Type="System.Management.Automation.Remoting.PSSenderInfo" />
+      </Parameters>
+      <Docs>
+        <param name="senderInfo">
+            User Identity for which this information is requested
+            </param>
+        <summary>
+            Derived classes can override this method to provide application private data
+            that is going to be sent to the client and exposed via
+            <see cref="P:System.Management.Automation.Runspaces.PSSession.ApplicationPrivateData" />,
+            <see cref="M:System.Management.Automation.Runspaces.Runspace.GetApplicationPrivateData" /> and
+            <see cref="M:System.Management.Automation.Runspaces.RunspacePool.GetApplicationPrivateData" /></summary>
+        <returns>Application private data or <c>null</c></returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetInitialSessionState">
+      <MemberSignature Language="C#" Value="public abstract System.Management.Automation.Runspaces.InitialSessionState GetInitialSessionState (System.Management.Automation.Remoting.PSSenderInfo senderInfo);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Management.Automation.Runspaces.InitialSessionState GetInitialSessionState(class System.Management.Automation.Remoting.PSSenderInfo senderInfo) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Remoting.PSSessionConfiguration.GetInitialSessionState(System.Management.Automation.Remoting.PSSenderInfo)" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Function GetInitialSessionState (senderInfo As PSSenderInfo) As InitialSessionState" />
+      <MemberSignature Language="F#" Value="abstract member GetInitialSessionState : System.Management.Automation.Remoting.PSSenderInfo -&gt; System.Management.Automation.Runspaces.InitialSessionState" Usage="pSSessionConfiguration.GetInitialSessionState senderInfo" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.Runspaces.InitialSessionState</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="senderInfo" Type="System.Management.Automation.Remoting.PSSenderInfo" />
+      </Parameters>
+      <Docs>
+        <param name="senderInfo">
+            User Identity for which this information is requested
+            </param>
+        <summary>
+            Derived classes must override this to supply an InitialSessionState
+            to be used to construct a Runspace for the user
+            </summary>
+        <returns />
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetInitialSessionState">
+      <MemberSignature Language="C#" Value="public virtual System.Management.Automation.Runspaces.InitialSessionState GetInitialSessionState (System.Management.Automation.Remoting.PSSessionConfigurationData sessionConfigurationData, System.Management.Automation.Remoting.PSSenderInfo senderInfo, string configProviderId);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Management.Automation.Runspaces.InitialSessionState GetInitialSessionState(class System.Management.Automation.Remoting.PSSessionConfigurationData sessionConfigurationData, class System.Management.Automation.Remoting.PSSenderInfo senderInfo, string configProviderId) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Remoting.PSSessionConfiguration.GetInitialSessionState(System.Management.Automation.Remoting.PSSessionConfigurationData,System.Management.Automation.Remoting.PSSenderInfo,System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function GetInitialSessionState (sessionConfigurationData As PSSessionConfigurationData, senderInfo As PSSenderInfo, configProviderId As String) As InitialSessionState" />
+      <MemberSignature Language="F#" Value="abstract member GetInitialSessionState : System.Management.Automation.Remoting.PSSessionConfigurationData * System.Management.Automation.Remoting.PSSenderInfo * string -&gt; System.Management.Automation.Runspaces.InitialSessionState&#xA;override this.GetInitialSessionState : System.Management.Automation.Remoting.PSSessionConfigurationData * System.Management.Automation.Remoting.PSSenderInfo * string -&gt; System.Management.Automation.Runspaces.InitialSessionState" Usage="pSSessionConfiguration.GetInitialSessionState (sessionConfigurationData, senderInfo, configProviderId)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.Runspaces.InitialSessionState</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sessionConfigurationData" Type="System.Management.Automation.Remoting.PSSessionConfigurationData" />
+        <Parameter Name="senderInfo" Type="System.Management.Automation.Remoting.PSSenderInfo" />
+        <Parameter Name="configProviderId" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="sessionConfigurationData"></param>
+        <param name="senderInfo"></param>
+        <param name="configProviderId"></param>
+        <summary />
+        <returns />
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetMaximumReceivedDataSizePerCommand">
+      <MemberSignature Language="C#" Value="public virtual Nullable&lt;int&gt; GetMaximumReceivedDataSizePerCommand (System.Management.Automation.Remoting.PSSenderInfo senderInfo);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance valuetype System.Nullable`1&lt;int32&gt; GetMaximumReceivedDataSizePerCommand(class System.Management.Automation.Remoting.PSSenderInfo senderInfo) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Remoting.PSSessionConfiguration.GetMaximumReceivedDataSizePerCommand(System.Management.Automation.Remoting.PSSenderInfo)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function GetMaximumReceivedDataSizePerCommand (senderInfo As PSSenderInfo) As Nullable(Of Integer)" />
+      <MemberSignature Language="F#" Value="abstract member GetMaximumReceivedDataSizePerCommand : System.Management.Automation.Remoting.PSSenderInfo -&gt; Nullable&lt;int&gt;&#xA;override this.GetMaximumReceivedDataSizePerCommand : System.Management.Automation.Remoting.PSSenderInfo -&gt; Nullable&lt;int&gt;" Usage="pSSessionConfiguration.GetMaximumReceivedDataSizePerCommand senderInfo" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Nullable&lt;System.Int32&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="senderInfo" Type="System.Management.Automation.Remoting.PSSenderInfo" />
+      </Parameters>
+      <Docs>
+        <param name="senderInfo">
+            User Identity for which this information is requested
+            </param>
+        <summary>
+            Total data (in bytes) that can be received from a remote machine
+            targeted towards a command. If null, then the size is unlimited.
+            Default is 50MB.
+            </summary>
+        <returns />
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetMaximumReceivedObjectSize">
+      <MemberSignature Language="C#" Value="public virtual Nullable&lt;int&gt; GetMaximumReceivedObjectSize (System.Management.Automation.Remoting.PSSenderInfo senderInfo);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance valuetype System.Nullable`1&lt;int32&gt; GetMaximumReceivedObjectSize(class System.Management.Automation.Remoting.PSSenderInfo senderInfo) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Remoting.PSSessionConfiguration.GetMaximumReceivedObjectSize(System.Management.Automation.Remoting.PSSenderInfo)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function GetMaximumReceivedObjectSize (senderInfo As PSSenderInfo) As Nullable(Of Integer)" />
+      <MemberSignature Language="F#" Value="abstract member GetMaximumReceivedObjectSize : System.Management.Automation.Remoting.PSSenderInfo -&gt; Nullable&lt;int&gt;&#xA;override this.GetMaximumReceivedObjectSize : System.Management.Automation.Remoting.PSSenderInfo -&gt; Nullable&lt;int&gt;" Usage="pSSessionConfiguration.GetMaximumReceivedObjectSize senderInfo" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Nullable&lt;System.Int32&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="senderInfo" Type="System.Management.Automation.Remoting.PSSenderInfo" />
+      </Parameters>
+      <Docs>
+        <param name="senderInfo">
+            User Identity for which this information is requested
+            </param>
+        <summary>
+            Maximum size (in bytes) of a deserialized object received from a remote machine.
+            If null, then the size is unlimited. Default is 10MB.
+            </summary>
+        <returns />
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

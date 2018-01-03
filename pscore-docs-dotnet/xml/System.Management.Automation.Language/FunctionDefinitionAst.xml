@@ -1,0 +1,253 @@
+﻿<Type Name="FunctionDefinitionAst" FullName="System.Management.Automation.Language.FunctionDefinitionAst">
+  <TypeSignature Language="C#" Value="public class FunctionDefinitionAst : System.Management.Automation.Language.StatementAst" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit FunctionDefinitionAst extends System.Management.Automation.Language.StatementAst" />
+  <TypeSignature Language="DocId" Value="T:System.Management.Automation.Language.FunctionDefinitionAst" />
+  <TypeSignature Language="VB.NET" Value="Public Class FunctionDefinitionAst&#xA;Inherits StatementAst" />
+  <TypeSignature Language="F#" Value="type FunctionDefinitionAst = class&#xA;    inherit StatementAst&#xA;    interface IParameterMetadataProvider" />
+  <AssemblyInfo>
+    <AssemblyName>System.Management.Automation</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Management.Automation.Language.StatementAst</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            The ast that represents a function or filter definition.  The function is always named.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public FunctionDefinitionAst (System.Management.Automation.Language.IScriptExtent extent, bool isFilter, bool isWorkflow, string name, System.Collections.Generic.IEnumerable&lt;System.Management.Automation.Language.ParameterAst&gt; parameters, System.Management.Automation.Language.ScriptBlockAst body);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Management.Automation.Language.IScriptExtent extent, bool isFilter, bool isWorkflow, string name, class System.Collections.Generic.IEnumerable`1&lt;class System.Management.Automation.Language.ParameterAst&gt; parameters, class System.Management.Automation.Language.ScriptBlockAst body) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Language.FunctionDefinitionAst.#ctor(System.Management.Automation.Language.IScriptExtent,System.Boolean,System.Boolean,System.String,System.Collections.Generic.IEnumerable{System.Management.Automation.Language.ParameterAst},System.Management.Automation.Language.ScriptBlockAst)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (extent As IScriptExtent, isFilter As Boolean, isWorkflow As Boolean, name As String, parameters As IEnumerable(Of ParameterAst), body As ScriptBlockAst)" />
+      <MemberSignature Language="F#" Value="new System.Management.Automation.Language.FunctionDefinitionAst : System.Management.Automation.Language.IScriptExtent * bool * bool * string * seq&lt;System.Management.Automation.Language.ParameterAst&gt; * System.Management.Automation.Language.ScriptBlockAst -&gt; System.Management.Automation.Language.FunctionDefinitionAst" Usage="new System.Management.Automation.Language.FunctionDefinitionAst (extent, isFilter, isWorkflow, name, parameters, body)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="extent" Type="System.Management.Automation.Language.IScriptExtent" />
+        <Parameter Name="isFilter" Type="System.Boolean" />
+        <Parameter Name="isWorkflow" Type="System.Boolean" />
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="parameters" Type="System.Collections.Generic.IEnumerable&lt;System.Management.Automation.Language.ParameterAst&gt;" />
+        <Parameter Name="body" Type="System.Management.Automation.Language.ScriptBlockAst" />
+      </Parameters>
+      <Docs>
+        <param name="extent">
+            The extent of the function definition, starting with the function or filter keyword, ending at the closing curly.
+            </param>
+        <param name="isFilter">True if the filter keyword was used.</param>
+        <param name="isWorkflow">True if the workflow keyword was used.</param>
+        <param name="name">The name of the function.</param>
+        <param name="parameters">
+            The parameters specified after the function name.  This does not include parameters specified with a param statement.
+            </param>
+        <param name="body">The body of the function/filter.</param>
+        <summary>
+            Construct a function definition.
+            </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.Management.Automation.PSArgumentNullException">
+            If <paramref name="extent" />, <paramref name="name" />, or <paramref name="body" /> is null, or
+            if <paramref name="name" /> is an empty string.
+            </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Body">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.Language.ScriptBlockAst Body { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Management.Automation.Language.ScriptBlockAst Body" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.Language.FunctionDefinitionAst.Body" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Body As ScriptBlockAst" />
+      <MemberSignature Language="F#" Value="member this.Body : System.Management.Automation.Language.ScriptBlockAst" Usage="System.Management.Automation.Language.FunctionDefinitionAst.Body" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.Language.ScriptBlockAst</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The body of the function.  This property is never null.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Copy">
+      <MemberSignature Language="C#" Value="public override System.Management.Automation.Language.Ast Copy ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Management.Automation.Language.Ast Copy() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Language.FunctionDefinitionAst.Copy" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Function Copy () As Ast" />
+      <MemberSignature Language="F#" Value="override this.Copy : unit -&gt; System.Management.Automation.Language.Ast" Usage="functionDefinitionAst.Copy " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.Language.Ast</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Copy the FunctionDefinitionAst instance
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHelpContent">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.Language.CommentHelpInfo GetHelpContent ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Management.Automation.Language.CommentHelpInfo GetHelpContent() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Language.FunctionDefinitionAst.GetHelpContent" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetHelpContent () As CommentHelpInfo" />
+      <MemberSignature Language="F#" Value="member this.GetHelpContent : unit -&gt; System.Management.Automation.Language.CommentHelpInfo" Usage="functionDefinitionAst.GetHelpContent " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.Language.CommentHelpInfo</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Return the help content, if any, for the function.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHelpContent">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.Language.CommentHelpInfo GetHelpContent (System.Collections.Generic.Dictionary&lt;System.Management.Automation.Language.Ast,System.Management.Automation.Language.Token[]&gt; scriptBlockTokenCache);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Management.Automation.Language.CommentHelpInfo GetHelpContent(class System.Collections.Generic.Dictionary`2&lt;class System.Management.Automation.Language.Ast, class System.Management.Automation.Language.Token[]&gt; scriptBlockTokenCache) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Language.FunctionDefinitionAst.GetHelpContent(System.Collections.Generic.Dictionary{System.Management.Automation.Language.Ast,System.Management.Automation.Language.Token[]})" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetHelpContent (scriptBlockTokenCache As Dictionary(Of Ast, Token())) As CommentHelpInfo" />
+      <MemberSignature Language="F#" Value="member this.GetHelpContent : System.Collections.Generic.Dictionary&lt;System.Management.Automation.Language.Ast, System.Management.Automation.Language.Token[]&gt; -&gt; System.Management.Automation.Language.CommentHelpInfo" Usage="functionDefinitionAst.GetHelpContent scriptBlockTokenCache" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.Language.CommentHelpInfo</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="scriptBlockTokenCache" Type="System.Collections.Generic.Dictionary&lt;System.Management.Automation.Language.Ast,System.Management.Automation.Language.Token[]&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="scriptBlockTokenCache">A dictionary that the parser will use to
+            map AST nodes to their respective tokens. The parser uses this to improve performance
+            while repeatedly parsing the parent script blocks of a function (since the parent
+            script blocks may contain help comments related to this function.
+            To conserve memory, clear / null-out this cache when done with repeated parsing.</param>
+        <summary>
+             Return the help content, if any, for the function.
+             Use this overload when parsing multiple functions within a single scope.
+            </summary>
+        <returns />
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsFilter">
+      <MemberSignature Language="C#" Value="public bool IsFilter { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsFilter" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.Language.FunctionDefinitionAst.IsFilter" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property IsFilter As Boolean" />
+      <MemberSignature Language="F#" Value="member this.IsFilter : bool" Usage="System.Management.Automation.Language.FunctionDefinitionAst.IsFilter" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            If true, the filter keyword was used.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsWorkflow">
+      <MemberSignature Language="C#" Value="public bool IsWorkflow { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsWorkflow" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.Language.FunctionDefinitionAst.IsWorkflow" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property IsWorkflow As Boolean" />
+      <MemberSignature Language="F#" Value="member this.IsWorkflow : bool" Usage="System.Management.Automation.Language.FunctionDefinitionAst.IsWorkflow" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            If true, the workflow keyword was used.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public string Name { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.Language.FunctionDefinitionAst.Name" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Name As String" />
+      <MemberSignature Language="F#" Value="member this.Name : string" Usage="System.Management.Automation.Language.FunctionDefinitionAst.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The name of the function or filter.  This property is never null or empty.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Parameters">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.ReadOnlyCollection&lt;System.Management.Automation.Language.ParameterAst&gt; Parameters { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ObjectModel.ReadOnlyCollection`1&lt;class System.Management.Automation.Language.ParameterAst&gt; Parameters" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.Language.FunctionDefinitionAst.Parameters" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Parameters As ReadOnlyCollection(Of ParameterAst)" />
+      <MemberSignature Language="F#" Value="member this.Parameters : System.Collections.ObjectModel.ReadOnlyCollection&lt;System.Management.Automation.Language.ParameterAst&gt;" Usage="System.Management.Automation.Language.FunctionDefinitionAst.Parameters" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.ReadOnlyCollection&lt;System.Management.Automation.Language.ParameterAst&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The parameters specified immediately after the function name, or null if no parameters were specified.
+            <para>It is possible that this property may have a value and <see cref="P:System.Management.Automation.Language.ScriptBlockAst.ParamBlock" /> to also have a
+            value.  Normally this is not allowed in a valid script, but in one rare case it is allowed:</para><c>function foo() { param($a) }</c><para>
+            In this example, the parameters specified after the function name must be empty or the script is not valid.
+            </para></summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,346 @@
+﻿<Type Name="SetServiceCommand" FullName="Microsoft.PowerShell.Commands.SetServiceCommand">
+  <TypeSignature Language="C#" Value="public class SetServiceCommand : Microsoft.PowerShell.Commands.ServiceOperationBaseCommand" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit SetServiceCommand extends Microsoft.PowerShell.Commands.ServiceOperationBaseCommand" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.PowerShell.Commands.SetServiceCommand" />
+  <TypeSignature Language="VB.NET" Value="Public Class SetServiceCommand&#xA;Inherits ServiceOperationBaseCommand" />
+  <TypeSignature Language="F#" Value="type SetServiceCommand = class&#xA;    inherit ServiceOperationBaseCommand" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.PowerShell.Commands.Management</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Microsoft.PowerShell.Commands.ServiceOperationBaseCommand</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Management.Automation.Cmdlet("Set", "Service", DefaultParameterSetName="Name", HelpUri="https://go.microsoft.com/fwlink/?LinkID=113399", RemotingCapability=System.Management.Automation.RemotingCapability.SupportedByCommand, SupportsShouldProcess=true)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Management.Automation.OutputType(typeof(System.ServiceProcess.ServiceController))</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>
+            This class implements the set-service command
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SetServiceCommand ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Commands.SetServiceCommand.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New ()" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Commands.Management</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Credential">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.PSCredential Credential { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Management.Automation.PSCredential Credential" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.SetServiceCommand.Credential" />
+      <MemberSignature Language="VB.NET" Value="Public Property Credential As PSCredential" />
+      <MemberSignature Language="F#" Value="member this.Credential : System.Management.Automation.PSCredential with get, set" Usage="Microsoft.PowerShell.Commands.SetServiceCommand.Credential" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Commands.Management</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Credential</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.PSCredential</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Account under which the service should run
+            </summary>
+        <value />
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Description">
+      <MemberSignature Language="C#" Value="public string Description { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Description" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.SetServiceCommand.Description" />
+      <MemberSignature Language="VB.NET" Value="Public Property Description As String" />
+      <MemberSignature Language="F#" Value="member this.Description : string with get, set" Usage="Microsoft.PowerShell.Commands.SetServiceCommand.Description" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Commands.Management</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.ValidateNotNullOrEmpty</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The following is the definition of the input parameter "Description".
+            Specifies a new description for the service.
+            The service description appears in Services in Computer Management.
+            Description is not a property of the ServiceController object that
+            Get-Service retrieve
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DisplayName">
+      <MemberSignature Language="C#" Value="public string DisplayName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string DisplayName" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.SetServiceCommand.DisplayName" />
+      <MemberSignature Language="VB.NET" Value="Public Property DisplayName As String" />
+      <MemberSignature Language="F#" Value="member this.DisplayName : string with get, set" Usage="Microsoft.PowerShell.Commands.SetServiceCommand.DisplayName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Commands.Management</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Alias(Mono.Cecil.CustomAttributeArgument[])</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.ValidateNotNullOrEmpty</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The following is the definition of the input parameter "DisplayName".
+            Specifies a new display name for the cmdlet.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Exclude">
+      <MemberSignature Language="C#" Value="public string[] Exclude { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string[] Exclude" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.SetServiceCommand.Exclude" />
+      <MemberSignature Language="VB.NET" Value="Public Property Exclude As String()" />
+      <MemberSignature Language="F#" Value="member this.Exclude : string[] with get, set" Usage="Microsoft.PowerShell.Commands.SetServiceCommand.Exclude" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Commands.Management</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            This is not a parameter for this cmdlet.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Include">
+      <MemberSignature Language="C#" Value="public string[] Include { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string[] Include" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.SetServiceCommand.Include" />
+      <MemberSignature Language="VB.NET" Value="Public Property Include As String()" />
+      <MemberSignature Language="F#" Value="member this.Include : string[] with get, set" Usage="Microsoft.PowerShell.Commands.SetServiceCommand.Include" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Commands.Management</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            This is not a parameter for this cmdlet.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InputObject">
+      <MemberSignature Language="C#" Value="public System.ServiceProcess.ServiceController InputObject { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ServiceProcess.ServiceController InputObject" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.SetServiceCommand.InputObject" />
+      <MemberSignature Language="VB.NET" Value="Public Property InputObject As ServiceController" />
+      <MemberSignature Language="F#" Value="member this.InputObject : System.ServiceProcess.ServiceController with get, set" Usage="Microsoft.PowerShell.Commands.SetServiceCommand.InputObject" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Commands.Management</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(Mandatory=true, ParameterSetName="InputObject", Position=0, ValueFromPipeline=true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.ServiceProcess.ServiceController</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The following is the definition of the input parameter "InputObject".
+            Specifies a ServiceController object that represents the service to change.
+            Enter a variable that contains the objects or type a command or expression
+            that gets the objects.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public string Name { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.SetServiceCommand.Name" />
+      <MemberSignature Language="VB.NET" Value="Public Property Name As String" />
+      <MemberSignature Language="F#" Value="member this.Name : string with get, set" Usage="Microsoft.PowerShell.Commands.SetServiceCommand.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Commands.Management</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Alias(Mono.Cecil.CustomAttributeArgument[])</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(Mandatory=true, ParameterSetName="Name", Position=0, ValueFromPipeline=true, ValueFromPipelineByPropertyName=true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            service name
+            </summary>
+        <value />
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ProcessRecord">
+      <MemberSignature Language="C#" Value="protected override void ProcessRecord ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void ProcessRecord() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Commands.SetServiceCommand.ProcessRecord" />
+      <MemberSignature Language="VB.NET" Value="Protected Overrides Sub ProcessRecord ()" />
+      <MemberSignature Language="F#" Value="override this.ProcessRecord : unit -&gt; unit" Usage="setServiceCommand.ProcessRecord " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Commands.Management</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Internal.ArchitectureSensitive</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary />
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StartupType">
+      <MemberSignature Language="C#" Value="public Microsoft.PowerShell.Commands.ServiceStartupType StartupType { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.PowerShell.Commands.ServiceStartupType StartupType" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.SetServiceCommand.StartupType" />
+      <MemberSignature Language="VB.NET" Value="Public Property StartupType As ServiceStartupType" />
+      <MemberSignature Language="F#" Value="member this.StartupType : Microsoft.PowerShell.Commands.ServiceStartupType with get, set" Usage="Microsoft.PowerShell.Commands.SetServiceCommand.StartupType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Commands.Management</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Alias(Mono.Cecil.CustomAttributeArgument[])</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.ValidateNotNullOrEmpty</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Microsoft.PowerShell.Commands.ServiceStartupType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The following is the definition of the input parameter "StartupType".
+            Changes the starting mode of the service. Valid values for StartupType are:
+            -- Automatic: Start when the system starts.
+            -- Manual   : Starts only when started by a user or program.
+            -- Disabled : Can
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Status">
+      <MemberSignature Language="C#" Value="public string Status { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Status" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.SetServiceCommand.Status" />
+      <MemberSignature Language="VB.NET" Value="Public Property Status As String" />
+      <MemberSignature Language="F#" Value="member this.Status : string with get, set" Usage="Microsoft.PowerShell.Commands.SetServiceCommand.Status" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Commands.Management</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.ValidateSet(Mono.Cecil.CustomAttributeArgument[])</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The following is the definition of the input parameter "Status".
+            This specifies what state the service should be in (e.g. Running, Stopped,
+            Paused).  If it is already in that state, do nothing.  If it is not, do the
+            appropriate action to bring about the desired result (start/stop/suspend the
+            service) and issue an error if this cannot be achieved.
+             Status can be Paused ,  Running and Stopped
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

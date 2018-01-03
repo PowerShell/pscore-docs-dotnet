@@ -1,0 +1,1504 @@
+﻿<Type Name="InvokeCommandCommand" FullName="Microsoft.PowerShell.Commands.InvokeCommandCommand">
+  <TypeSignature Language="C#" Value="public class InvokeCommandCommand : Microsoft.PowerShell.Commands.PSExecutionCmdlet, IDisposable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit InvokeCommandCommand extends Microsoft.PowerShell.Commands.PSExecutionCmdlet implements class System.IDisposable" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.PowerShell.Commands.InvokeCommandCommand" />
+  <TypeSignature Language="VB.NET" Value="Public Class InvokeCommandCommand&#xA;Inherits PSExecutionCmdlet&#xA;Implements IDisposable" />
+  <TypeSignature Language="F#" Value="type InvokeCommandCommand = class&#xA;    inherit PSExecutionCmdlet&#xA;    interface IDisposable" />
+  <AssemblyInfo>
+    <AssemblyName>System.Management.Automation</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Microsoft.PowerShell.Commands.PSExecutionCmdlet</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Management.Automation.Cmdlet("Invoke", "Command", DefaultParameterSetName="InProcess", HelpUri="https://go.microsoft.com/fwlink/?LinkID=135225", RemotingCapability=System.Management.Automation.RemotingCapability.OwnedByCommand)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>
+             This cmdlet executes a specified script block on one or more
+             remote machines. The expression or command, as they will be
+             interchangeably called, need to be contained in a script
+             block. This is to ensure two things:
+                   1. The expression that the user has entered is
+                      syntactically correct (its compiled)
+                   2. The scriptblock can be converted to a powershell
+                      object before transmitting it to the remote end
+                      so that it can be run on constrained runspaces in
+                      the no language mode
+            
+             In general, the command script block is executed as if
+             the user had typed it at the command line. The output of the
+             command is the output of the cmdlet. However, since
+             invoke-command is a cmdlet, it will unravel its output:
+                 - if the command outputs an empty array, invoke-command
+                 will output $null
+                 - if the command outputs a single-element array, invoke-command
+                 will output that single element.
+            
+                 Additionally, the command will be run on a remote system.
+            
+             This cmdlet can be called in the following different ways:
+            
+             Execute a command in a remote machine by specifying the command
+             and machine name
+                 invoke-command -Command {get-process} -computername "server1"
+            
+             Execute a command in a set of remote machines by specifying the
+             command and the list of machines
+                 $servers = 1..10 | ForEach-Object {"Server${_}"}
+                 invoke-command -command {get-process} -computername $servers
+            
+             Create a new runspace and use it to execute a command on a remote machine
+                 $runspace = New-PSSession -computername "Server1"
+                 $credential = get-credential "user01"
+                 invoke-command -command {get-process} -Session $runspace -credential $credential
+            
+             Execute a command in a set of remote machines by specifying the
+             complete uri for the machines
+                 $uri = "http://hostedservices.microsoft.com/someservice"
+                 invoke-command -command { get-mail } - uri $uri
+            
+             Create a collection of runspaces and use it to execute a command on a set
+             of remote machines
+            
+                 $serveruris = 1..8 | ForEach-Object {"http://Server${_}/"}
+                 $runspaces = New-PSSession -URI $serveruris
+                 invoke-command -command {get-process} -Session $runspaces
+            
+             The cmdlet can also be invoked in the asynchronous mode.
+            
+                 invoke-command -command {get-process} -computername $servers -asjob
+            
+             When the -AsJob switch is used, the cmdlet will emit an PSJob Object.
+             The user can then use the other job cmdlets to work with this object
+            
+             Note there are two types of errors:
+                 1. Remote invocation errors
+                 2. Local errors.
+            
+             Both types of errors will be available when the user invokes
+             a receive operation.
+            
+             The PSJob object has its own throttling mechanism.
+             The result object will be stored in a global cache. If a user wants to
+             retrieve data from the result object the user should be able to do so
+             using the Receive-PSJob cmdlet
+            
+             The following needs to be noted about exception/error reporting in this
+             cmdlet:
+                 The exception objects that are thrown by underlying layers will be
+                 written as errors, to avoid stopping the entire cmdlet in case of
+                 multi-computername or multi-Session usage (for consistency, this
+                 is true even when done using one computername or runspace)
+            
+             Only one expression may be executed at a time in any single runspace.
+             Attempts to invoke an expression on a runspace that is already executing
+             an expression shall return an error with ErrorCategory ResourceNotAvailable
+             and notify the user that the runspace is currently busy.
+            
+             Some additional notes:
+             - invoke-command issues a single scriptblock to the computer or
+             runspace. If a runspace is specified and a command is already running
+             in that runspace, then the second command will fail
+             - The files necessary to execute the command (cmdlets, scripts, data
+             files, etc) must be present on the remote system; the cmdlet is not
+             responsible for copying them over
+             - The entire input stream is collected and sent to the remote system
+             before execution of the command begins (no input streaming)
+             - Input shall be available as $input.  Remote Runspaces must reference
+             $input explicitly (input will not automatically be available)
+             - Output from the command streams back to the client as it is
+             available
+             - Ctrl-C and pause/resume are supported; the client will send a
+             message to the remote powershell instance.
+             - By default if no -credential is specified, the host will impersonate
+             the current user on the client when executing the command
+             - The standard output of invoke-command is the output of the
+             last element of the remote pipeline, with some extra properties added
+             - If -Shell is not specified, then the value of the environment
+             variable DEFAULTREMOTESHELLNAME is used. If this is not set, then
+             "Microsoft.PowerShell" is used.
+             </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public InvokeCommandCommand ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Commands.InvokeCommandCommand.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New ()" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AllowRedirection">
+      <MemberSignature Language="C#" Value="public override System.Management.Automation.SwitchParameter AllowRedirection { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Management.Automation.SwitchParameter AllowRedirection" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.InvokeCommandCommand.AllowRedirection" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Property AllowRedirection As SwitchParameter" />
+      <MemberSignature Language="F#" Value="member this.AllowRedirection : System.Management.Automation.SwitchParameter with get, set" Usage="Microsoft.PowerShell.Commands.InvokeCommandCommand.AllowRedirection" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="Uri")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="FilePathUri")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.SwitchParameter</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The AllowRedirection parameter enables the implicit redirection functionality
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ApplicationName">
+      <MemberSignature Language="C#" Value="public override string ApplicationName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ApplicationName" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.InvokeCommandCommand.ApplicationName" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Property ApplicationName As String" />
+      <MemberSignature Language="F#" Value="member this.ApplicationName : string with get, set" Usage="Microsoft.PowerShell.Commands.InvokeCommandCommand.ApplicationName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="ComputerName", ValueFromPipelineByPropertyName=true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="FilePathComputerName", ValueFromPipelineByPropertyName=true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            This parameters specifies the appname which identifies the connection
+            end point on the remote machine. If this parameter is not specified
+            then the value specified in DEFAULTREMOTEAPPNAME will be used. If thats
+            not specified as well, then "WSMAN" will be used
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AsJob">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.SwitchParameter AsJob { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Management.Automation.SwitchParameter AsJob" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.InvokeCommandCommand.AsJob" />
+      <MemberSignature Language="VB.NET" Value="Public Property AsJob As SwitchParameter" />
+      <MemberSignature Language="F#" Value="member this.AsJob : System.Management.Automation.SwitchParameter with get, set" Usage="Microsoft.PowerShell.Commands.InvokeCommandCommand.AsJob" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="ComputerName")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="Session")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="Uri")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="FilePathComputerName")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="FilePathRunspace")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="FilePathUri")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="VMId")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="VMName")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="ContainerId")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="FilePathVMId")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="FilePathVMName")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="FilePathContainerId")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="SSHHost")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="SSHHostHashParam")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="FilePathSSHHost")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="FilePathSSHHostHash")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.SwitchParameter</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Specifies if the cmdlet needs to be run asynchronously
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Authentication">
+      <MemberSignature Language="C#" Value="public override System.Management.Automation.Runspaces.AuthenticationMechanism Authentication { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Management.Automation.Runspaces.AuthenticationMechanism Authentication" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.InvokeCommandCommand.Authentication" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Property Authentication As AuthenticationMechanism" />
+      <MemberSignature Language="F#" Value="member this.Authentication : System.Management.Automation.Runspaces.AuthenticationMechanism with get, set" Usage="Microsoft.PowerShell.Commands.InvokeCommandCommand.Authentication" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="ComputerName")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="FilePathComputerName")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="Uri")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="FilePathUri")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.Runspaces.AuthenticationMechanism</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Authentication mechanism to authenticate the user
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginProcessing">
+      <MemberSignature Language="C#" Value="protected override void BeginProcessing ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void BeginProcessing() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Commands.InvokeCommandCommand.BeginProcessing" />
+      <MemberSignature Language="VB.NET" Value="Protected Overrides Sub BeginProcessing ()" />
+      <MemberSignature Language="F#" Value="override this.BeginProcessing : unit -&gt; unit" Usage="invokeCommandCommand.BeginProcessing " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Creates the helper classes for the specified
+            parameter set
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ComputerName">
+      <MemberSignature Language="C#" Value="public override string[] ComputerName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string[] ComputerName" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.InvokeCommandCommand.ComputerName" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Property ComputerName As String()" />
+      <MemberSignature Language="F#" Value="member this.ComputerName : string[] with get, set" Usage="Microsoft.PowerShell.Commands.InvokeCommandCommand.ComputerName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Alias(Mono.Cecil.CustomAttributeArgument[])</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="ComputerName", Position=0)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="FilePathComputerName", Position=0)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.ValidateNotNullOrEmpty</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+             This parameter represents the address(es) of the remote
+             computer(s). The following formats are supported:
+                  (a) Computer name
+                  (b) IPv4 address : 132.3.4.5
+                  (c) IPv6 address: 3ffe:8311:ffff:f70f:0:5efe:172.30.162.18
+            
+             </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ConfigurationName">
+      <MemberSignature Language="C#" Value="public override string ConfigurationName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ConfigurationName" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.InvokeCommandCommand.ConfigurationName" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Property ConfigurationName As String" />
+      <MemberSignature Language="F#" Value="member this.ConfigurationName : string with get, set" Usage="Microsoft.PowerShell.Commands.InvokeCommandCommand.ConfigurationName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="ComputerName", ValueFromPipelineByPropertyName=true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="Uri", ValueFromPipelineByPropertyName=true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="FilePathComputerName", ValueFromPipelineByPropertyName=true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="FilePathUri", ValueFromPipelineByPropertyName=true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="ContainerId", ValueFromPipelineByPropertyName=true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="VMId", ValueFromPipelineByPropertyName=true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="VMName", ValueFromPipelineByPropertyName=true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="FilePathContainerId", ValueFromPipelineByPropertyName=true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="FilePathVMId", ValueFromPipelineByPropertyName=true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="FilePathVMName", ValueFromPipelineByPropertyName=true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+             For WSMan session:
+             If this parameter is not specified then the value specified in
+             the environment variable DEFAULTREMOTESHELLNAME will be used. If
+             this is not set as well, then Microsoft.PowerShell is used.
+            
+             For VM/Container sessions:
+             If this parameter is not specified then no configuration is used.
+             </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ConnectionUri">
+      <MemberSignature Language="C#" Value="public override Uri[] ConnectionUri { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Uri[] ConnectionUri" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.InvokeCommandCommand.ConnectionUri" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Property ConnectionUri As Uri()" />
+      <MemberSignature Language="F#" Value="member this.ConnectionUri : Uri[] with get, set" Usage="Microsoft.PowerShell.Commands.InvokeCommandCommand.ConnectionUri" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Alias(Mono.Cecil.CustomAttributeArgument[])</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="Uri", Position=0)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="FilePathUri", Position=0)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.ValidateNotNullOrEmpty</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Uri[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            A complete URI(s) specified for the remote computer and shell to
+            connect to and create runspace for
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Credential">
+      <MemberSignature Language="C#" Value="public override System.Management.Automation.PSCredential Credential { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Management.Automation.PSCredential Credential" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.InvokeCommandCommand.Credential" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Property Credential As PSCredential" />
+      <MemberSignature Language="F#" Value="member this.Credential : System.Management.Automation.PSCredential with get, set" Usage="Microsoft.PowerShell.Commands.InvokeCommandCommand.Credential" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Credential</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="ComputerName", ValueFromPipelineByPropertyName=true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="Uri", ValueFromPipelineByPropertyName=true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="FilePathComputerName", ValueFromPipelineByPropertyName=true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="FilePathUri", ValueFromPipelineByPropertyName=true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(Mandatory=true, ParameterSetName="VMId", ValueFromPipelineByPropertyName=true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(Mandatory=true, ParameterSetName="VMName", ValueFromPipelineByPropertyName=true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(Mandatory=true, ParameterSetName="FilePathVMId", ValueFromPipelineByPropertyName=true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(Mandatory=true, ParameterSetName="FilePathVMName", ValueFromPipelineByPropertyName=true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.PSCredential</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Specifies the credentials of the user to impersonate in the
+            remote machine. If this parameter is not specified then the
+            credentials of the current user process will be assumed.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="public void Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Dispose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Commands.InvokeCommandCommand.Dispose" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Dispose ()" />
+      <MemberSignature Language="F#" Value="abstract member Dispose : unit -&gt; unit&#xA;override this.Dispose : unit -&gt; unit" Usage="invokeCommandCommand.Dispose " />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.IDisposable.Dispose</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Dispose the cmdlet
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EnableNetworkAccess">
+      <MemberSignature Language="C#" Value="public override System.Management.Automation.SwitchParameter EnableNetworkAccess { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Management.Automation.SwitchParameter EnableNetworkAccess" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.InvokeCommandCommand.EnableNetworkAccess" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Property EnableNetworkAccess As SwitchParameter" />
+      <MemberSignature Language="F#" Value="member this.EnableNetworkAccess : System.Management.Automation.SwitchParameter with get, set" Usage="Microsoft.PowerShell.Commands.InvokeCommandCommand.EnableNetworkAccess" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="ComputerName")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="FilePathComputerName")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="Uri")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="FilePathUri")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.SwitchParameter</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            When set and in loopback scenario (localhost) this enables creation of WSMan
+            host process with the user interactive token, allowing PowerShell script network access,
+            i.e., allows going off box.  When this property is true and a PSSession is disconnected,
+            reconnection is allowed only if reconnecting from a PowerShell session on the same box.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EndProcessing">
+      <MemberSignature Language="C#" Value="protected override void EndProcessing ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void EndProcessing() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Commands.InvokeCommandCommand.EndProcessing" />
+      <MemberSignature Language="VB.NET" Value="Protected Overrides Sub EndProcessing ()" />
+      <MemberSignature Language="F#" Value="override this.EndProcessing : unit -&gt; unit" Usage="invokeCommandCommand.EndProcessing " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            InvokeAsync would have been called in ProcessRecord. Wait here
+            for all the results to become available.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FilePath">
+      <MemberSignature Language="C#" Value="public override string FilePath { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string FilePath" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.InvokeCommandCommand.FilePath" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Property FilePath As String" />
+      <MemberSignature Language="F#" Value="member this.FilePath : string with get, set" Usage="Microsoft.PowerShell.Commands.InvokeCommandCommand.FilePath" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Alias(Mono.Cecil.CustomAttributeArgument[])</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(Mandatory=true, ParameterSetName="FilePathComputerName", Position=1)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(Mandatory=true, ParameterSetName="FilePathRunspace", Position=1)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(Mandatory=true, ParameterSetName="FilePathUri", Position=1)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(Mandatory=true, ParameterSetName="FilePathVMId", Position=1)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(Mandatory=true, ParameterSetName="FilePathVMName", Position=1)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(Mandatory=true, ParameterSetName="FilePathContainerId", Position=1)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(Mandatory=true, ParameterSetName="FilePathSSHHost")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(Mandatory=true, ParameterSetName="FilePathSSHHostHash")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.ValidateNotNull</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The script block that the user has specified in the
+            cmdlet. This will be converted to a powershell before
+            its actually sent to the remote end
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HideComputerName">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.SwitchParameter HideComputerName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Management.Automation.SwitchParameter HideComputerName" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.InvokeCommandCommand.HideComputerName" />
+      <MemberSignature Language="VB.NET" Value="Public Property HideComputerName As SwitchParameter" />
+      <MemberSignature Language="F#" Value="member this.HideComputerName : System.Management.Automation.SwitchParameter with get, set" Usage="Microsoft.PowerShell.Commands.InvokeCommandCommand.HideComputerName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Alias(Mono.Cecil.CustomAttributeArgument[])</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="ComputerName")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="Session")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="Uri")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="FilePathComputerName")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="FilePathRunspace")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="FilePathUri")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="VMId")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="VMName")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="ContainerId")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="FilePathVMId")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="FilePathVMName")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="FilePathContainerId")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="SSHHost")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="SSHHostHashParam")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="FilePathSSHHost")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="FilePathSSHHostHash")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.SwitchParameter</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Hide/Show computername of the remote objects.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HostName">
+      <MemberSignature Language="C#" Value="public override string[] HostName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string[] HostName" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.InvokeCommandCommand.HostName" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Property HostName As String()" />
+      <MemberSignature Language="F#" Value="member this.HostName : string[] with get, set" Usage="Microsoft.PowerShell.Commands.InvokeCommandCommand.HostName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(Mandatory=true, ParameterSetName="SSHHost")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(Mandatory=true, ParameterSetName="FilePathSSHHost")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.ValidateNotNullOrEmpty</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Host name for an SSH remote connection
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InDisconnectedSession">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.SwitchParameter InDisconnectedSession { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Management.Automation.SwitchParameter InDisconnectedSession" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.InvokeCommandCommand.InDisconnectedSession" />
+      <MemberSignature Language="VB.NET" Value="Public Property InDisconnectedSession As SwitchParameter" />
+      <MemberSignature Language="F#" Value="member this.InDisconnectedSession : System.Management.Automation.SwitchParameter with get, set" Usage="Microsoft.PowerShell.Commands.InvokeCommandCommand.InDisconnectedSession" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Alias(Mono.Cecil.CustomAttributeArgument[])</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="ComputerName")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="FilePathComputerName")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="Uri")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="FilePathUri")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.SwitchParameter</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Specifies that after the command is invoked on a remote computer the
+            remote session should be disconnected.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="JobName">
+      <MemberSignature Language="C#" Value="public string JobName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string JobName" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.InvokeCommandCommand.JobName" />
+      <MemberSignature Language="VB.NET" Value="Public Property JobName As String" />
+      <MemberSignature Language="F#" Value="member this.JobName : string with get, set" Usage="Microsoft.PowerShell.Commands.InvokeCommandCommand.JobName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="ComputerName")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="Session")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="Uri")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="FilePathComputerName")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="FilePathRunspace")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="FilePathUri")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="ContainerId")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="FilePathContainerId")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Friendly name for the job object if AsJob is used
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="KeyFilePath">
+      <MemberSignature Language="C#" Value="public override string KeyFilePath { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string KeyFilePath" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.InvokeCommandCommand.KeyFilePath" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Property KeyFilePath As String" />
+      <MemberSignature Language="F#" Value="member this.KeyFilePath : string with get, set" Usage="Microsoft.PowerShell.Commands.InvokeCommandCommand.KeyFilePath" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Alias(Mono.Cecil.CustomAttributeArgument[])</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="SSHHost")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="FilePathSSHHost")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.ValidateNotNullOrEmpty</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Key Path
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NoNewScope">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.SwitchParameter NoNewScope { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Management.Automation.SwitchParameter NoNewScope" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.InvokeCommandCommand.NoNewScope" />
+      <MemberSignature Language="VB.NET" Value="Public Property NoNewScope As SwitchParameter" />
+      <MemberSignature Language="F#" Value="member this.NoNewScope : System.Management.Automation.SwitchParameter with get, set" Usage="Microsoft.PowerShell.Commands.InvokeCommandCommand.NoNewScope" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="InProcess")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.SwitchParameter</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            When executing a scriptblock in the current session, tell the cmdlet not to create a new scope.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Port">
+      <MemberSignature Language="C#" Value="public override int Port { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Port" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.InvokeCommandCommand.Port" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Property Port As Integer" />
+      <MemberSignature Language="F#" Value="member this.Port : int with get, set" Usage="Microsoft.PowerShell.Commands.InvokeCommandCommand.Port" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="ComputerName")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="FilePathComputerName")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="SSHHost")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.ValidateRange(Mono.Cecil.CustomAttributeArgument, Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Port specifies the alternate port to be used in case the
+            default ports are not used for the transport mechanism
+            (port 80 for http and port 443 for useSSL)
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+            Currently this is being accepted as a parameter. But in future
+            support will be added to make this a part of a policy setting.
+            When a policy setting is in place this parameter can be used
+            to override the policy setting
+            </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ProcessRecord">
+      <MemberSignature Language="C#" Value="protected override void ProcessRecord ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void ProcessRecord() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Commands.InvokeCommandCommand.ProcessRecord" />
+      <MemberSignature Language="VB.NET" Value="Protected Overrides Sub ProcessRecord ()" />
+      <MemberSignature Language="F#" Value="override this.ProcessRecord : unit -&gt; unit" Usage="invokeCommandCommand.ProcessRecord " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            The expression will be executed in the remote computer if a
+            remote runspace parameter or computer name or uri is specified.
+            </summary>
+        <remarks>
+            1. Identify if the command belongs to the same pipeline
+            2. If so, use the same GUID to create Pipeline/PowerShell
+            </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoteDebug">
+      <MemberSignature Language="C#" Value="public virtual System.Management.Automation.SwitchParameter RemoteDebug { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Management.Automation.SwitchParameter RemoteDebug" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.InvokeCommandCommand.RemoteDebug" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Property RemoteDebug As SwitchParameter" />
+      <MemberSignature Language="F#" Value="member this.RemoteDebug : System.Management.Automation.SwitchParameter with get, set" Usage="Microsoft.PowerShell.Commands.InvokeCommandCommand.RemoteDebug" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="ComputerName")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="Session")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="Uri")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="FilePathComputerName")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="FilePathRunspace")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="FilePathUri")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="VMId")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="VMName")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="ContainerId")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="FilePathVMId")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="FilePathVMName")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="FilePathContainerId")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="SSHHost")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="SSHHostHashParam")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="FilePathSSHHost")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="FilePathSSHHostHash")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.SwitchParameter</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            When selected this parameter causes a debugger Step-Into action for each running remote session.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RunAsAdministrator">
+      <MemberSignature Language="C#" Value="public override System.Management.Automation.SwitchParameter RunAsAdministrator { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Management.Automation.SwitchParameter RunAsAdministrator" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.InvokeCommandCommand.RunAsAdministrator" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Property RunAsAdministrator As SwitchParameter" />
+      <MemberSignature Language="F#" Value="member this.RunAsAdministrator : System.Management.Automation.SwitchParameter with get, set" Usage="Microsoft.PowerShell.Commands.InvokeCommandCommand.RunAsAdministrator" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="ContainerId")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="FilePathContainerId")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.SwitchParameter</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            When set, PowerShell process inside container will be launched with
+            high privileged account.
+            Otherwise (default case), PowerShell process inside container will be launched
+            with low privileged account.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ScriptBlock">
+      <MemberSignature Language="C#" Value="public override System.Management.Automation.ScriptBlock ScriptBlock { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Management.Automation.ScriptBlock ScriptBlock" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.InvokeCommandCommand.ScriptBlock" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Property ScriptBlock As ScriptBlock" />
+      <MemberSignature Language="F#" Value="member this.ScriptBlock : System.Management.Automation.ScriptBlock with get, set" Usage="Microsoft.PowerShell.Commands.InvokeCommandCommand.ScriptBlock" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Alias(Mono.Cecil.CustomAttributeArgument[])</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(Mandatory=true, ParameterSetName="ComputerName", Position=1)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(Mandatory=true, ParameterSetName="Session", Position=1)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(Mandatory=true, ParameterSetName="Uri", Position=1)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(Mandatory=true, ParameterSetName="InProcess", Position=0)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(Mandatory=true, ParameterSetName="VMId", Position=1)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(Mandatory=true, ParameterSetName="VMName", Position=1)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(Mandatory=true, ParameterSetName="ContainerId", Position=1)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(Mandatory=true, ParameterSetName="SSHHost")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(Mandatory=true, ParameterSetName="SSHHostHashParam")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.ValidateNotNull</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.ScriptBlock</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The script block that the user has specified in the
+            cmdlet. This will be converted to a powershell before
+            its actually sent to the remote end
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Session">
+      <MemberSignature Language="C#" Value="public override System.Management.Automation.Runspaces.PSSession[] Session { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Management.Automation.Runspaces.PSSession[] Session" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.InvokeCommandCommand.Session" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Property Session As PSSession()" />
+      <MemberSignature Language="F#" Value="member this.Session : System.Management.Automation.Runspaces.PSSession[] with get, set" Usage="Microsoft.PowerShell.Commands.InvokeCommandCommand.Session" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="Session", Position=0)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="FilePathRunspace", Position=0)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.ValidateNotNullOrEmpty</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.Runspaces.PSSession[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The PSSession object describing the remote runspace
+            using which the specified cmdlet operation will be performed
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SessionName">
+      <MemberSignature Language="C#" Value="public string[] SessionName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string[] SessionName" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.InvokeCommandCommand.SessionName" />
+      <MemberSignature Language="VB.NET" Value="Public Property SessionName As String()" />
+      <MemberSignature Language="F#" Value="member this.SessionName : string[] with get, set" Usage="Microsoft.PowerShell.Commands.InvokeCommandCommand.SessionName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="ComputerName")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="FilePathComputerName")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.ValidateNotNullOrEmpty</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Specifies the name of the returned session when the InDisconnectedSession switch
+            is used.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SessionOption">
+      <MemberSignature Language="C#" Value="public override System.Management.Automation.Remoting.PSSessionOption SessionOption { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Management.Automation.Remoting.PSSessionOption SessionOption" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.InvokeCommandCommand.SessionOption" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Property SessionOption As PSSessionOption" />
+      <MemberSignature Language="F#" Value="member this.SessionOption : System.Management.Automation.Remoting.PSSessionOption with get, set" Usage="Microsoft.PowerShell.Commands.InvokeCommandCommand.SessionOption" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="ComputerName")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="Uri")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="FilePathComputerName")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="FilePathUri")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.Remoting.PSSessionOption</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Extended Session Options for controlling the session creation. Use
+            "New-WSManSessionOption" cmdlet to supply value for this parameter.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SSHConnection">
+      <MemberSignature Language="C#" Value="public override System.Collections.Hashtable[] SSHConnection { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Hashtable[] SSHConnection" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.InvokeCommandCommand.SSHConnection" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Property SSHConnection As Hashtable()" />
+      <MemberSignature Language="F#" Value="member this.SSHConnection : System.Collections.Hashtable[] with get, set" Usage="Microsoft.PowerShell.Commands.InvokeCommandCommand.SSHConnection" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(Mandatory=true, ParameterSetName="SSHHostHashParam")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(Mandatory=true, ParameterSetName="FilePathSSHHostHash")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.ValidateNotNullOrEmpty</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Collections.Hashtable[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Hashtable array containing SSH connection parameters for each remote target
+              ComputerName  (Alias: HostName)           (required)
+              UserName                                  (optional)
+              KeyFilePath   (Alias: IdentityFilePath)   (optional)
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SSHTransport">
+      <MemberSignature Language="C#" Value="public override System.Management.Automation.SwitchParameter SSHTransport { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Management.Automation.SwitchParameter SSHTransport" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.InvokeCommandCommand.SSHTransport" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Property SSHTransport As SwitchParameter" />
+      <MemberSignature Language="F#" Value="member this.SSHTransport : System.Management.Automation.SwitchParameter with get, set" Usage="Microsoft.PowerShell.Commands.InvokeCommandCommand.SSHTransport" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="SSHHost")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="FilePathSSHHost")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.ValidateSet(Mono.Cecil.CustomAttributeArgument[])</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.SwitchParameter</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            This parameter specifies that SSH is used to establish the remote
+            connection and act as the remoting transport.  By default WinRM is used
+            as the remoting transport.  Using the SSH transport requires that SSH is
+            installed and PowerShell remoting is enabled on both client and remote machines.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StopProcessing">
+      <MemberSignature Language="C#" Value="protected override void StopProcessing ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void StopProcessing() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Commands.InvokeCommandCommand.StopProcessing" />
+      <MemberSignature Language="VB.NET" Value="Protected Overrides Sub StopProcessing ()" />
+      <MemberSignature Language="F#" Value="override this.StopProcessing : unit -&gt; unit" Usage="invokeCommandCommand.StopProcessing " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            This method is called when the user sends a stop signal to the
+            cmdlet. The cmdlet will not exit until it has completed
+            executing the command on all the runspaces. However, when a stop
+            signal is sent, execution needs to be stopped on the pipelines
+            corresponding to these runspaces
+            </summary>
+        <remarks>This is called from a separate thread so need to worry
+            about concurrency issues
+            </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ThrottleLimit">
+      <MemberSignature Language="C#" Value="public override int ThrottleLimit { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 ThrottleLimit" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.InvokeCommandCommand.ThrottleLimit" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Property ThrottleLimit As Integer" />
+      <MemberSignature Language="F#" Value="member this.ThrottleLimit : int with get, set" Usage="Microsoft.PowerShell.Commands.InvokeCommandCommand.ThrottleLimit" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="ComputerName")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="Session")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="Uri")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="FilePathComputerName")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="FilePathRunspace")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="FilePathUri")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="VMId")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="VMName")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="ContainerId")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="FilePathVMId")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="FilePathVMName")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="FilePathContainerId")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Allows the user of the cmdlet to specify a throttling value
+            for throttling the number of remote operations that can
+            be executed simultaneously
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UserName">
+      <MemberSignature Language="C#" Value="public override string UserName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string UserName" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.InvokeCommandCommand.UserName" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Property UserName As String" />
+      <MemberSignature Language="F#" Value="member this.UserName : string with get, set" Usage="Microsoft.PowerShell.Commands.InvokeCommandCommand.UserName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="SSHHost")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="FilePathSSHHost")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.ValidateNotNullOrEmpty</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            User Name
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UseSSL">
+      <MemberSignature Language="C#" Value="public override System.Management.Automation.SwitchParameter UseSSL { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Management.Automation.SwitchParameter UseSSL" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.InvokeCommandCommand.UseSSL" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Property UseSSL As SwitchParameter" />
+      <MemberSignature Language="F#" Value="member this.UseSSL : System.Management.Automation.SwitchParameter with get, set" Usage="Microsoft.PowerShell.Commands.InvokeCommandCommand.UseSSL" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="ComputerName")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="FilePathComputerName")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.SwitchParameter</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            This parameter suggests that the transport scheme to be used for
+            remote connections is useSSL instead of the default http.Since
+            there are only two possible transport schemes that are possible
+            at this point, a SwitchParameter is being used to switch between
+            the two.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

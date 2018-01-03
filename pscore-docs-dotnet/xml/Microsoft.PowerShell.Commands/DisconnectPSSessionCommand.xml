@@ -1,0 +1,418 @@
+﻿<Type Name="DisconnectPSSessionCommand" FullName="Microsoft.PowerShell.Commands.DisconnectPSSessionCommand">
+  <TypeSignature Language="C#" Value="public class DisconnectPSSessionCommand : Microsoft.PowerShell.Commands.PSRunspaceCmdlet, IDisposable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit DisconnectPSSessionCommand extends Microsoft.PowerShell.Commands.PSRunspaceCmdlet implements class System.IDisposable" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.PowerShell.Commands.DisconnectPSSessionCommand" />
+  <TypeSignature Language="VB.NET" Value="Public Class DisconnectPSSessionCommand&#xA;Inherits PSRunspaceCmdlet&#xA;Implements IDisposable" />
+  <TypeSignature Language="F#" Value="type DisconnectPSSessionCommand = class&#xA;    inherit PSRunspaceCmdlet&#xA;    interface IDisposable" />
+  <AssemblyInfo>
+    <AssemblyName>System.Management.Automation</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Microsoft.PowerShell.Commands.PSRunspaceCmdlet</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Management.Automation.Cmdlet("Disconnect", "PSSession", DefaultParameterSetName="Session", HelpUri="https://go.microsoft.com/fwlink/?LinkID=210605", RemotingCapability=System.Management.Automation.RemotingCapability.OwnedByCommand, SupportsShouldProcess=true)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Management.Automation.OutputType(typeof(System.Management.Automation.Runspaces.PSSession))</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>
+             This cmdlet disconnects PS sessions (RemoteRunspaces) that are in the Opened state
+             and returns the PS session objects in the Disconnected state.  While the PS
+             sessions are in the disconnected state no commands can be invoked on them and
+             any existing remote running commands will not return any data.
+             The PS sessions can be reconnected by using the Connect-PSSession cmdlet.
+            
+             The cmdlet can be used in the following ways:
+            
+             Disconnect a PS session object:
+             &gt; $session = New-PSSession serverName
+             &gt; Disconnect-PSSession $session
+            
+             Disconnect a PS session by name:
+             &gt; Disconnect-PSSession -Name $session.Name
+            
+             Disconnect a PS session by Id:
+             &gt; Disconnect-PSSession -Id $session.Id
+            
+             Disconnect a collection of PS sessions:
+             &gt; Get-PSSession | Disconnect-PSSession
+            
+             </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DisconnectPSSessionCommand ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Commands.DisconnectPSSessionCommand.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New ()" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginProcessing">
+      <MemberSignature Language="C#" Value="protected override void BeginProcessing ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void BeginProcessing() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Commands.DisconnectPSSessionCommand.BeginProcessing" />
+      <MemberSignature Language="VB.NET" Value="Protected Overrides Sub BeginProcessing ()" />
+      <MemberSignature Language="F#" Value="override this.BeginProcessing : unit -&gt; unit" Usage="disconnectPSSessionCommand.BeginProcessing " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Set up the ThrottleManager for runspace disconnect processing.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ComputerName">
+      <MemberSignature Language="C#" Value="public override string[] ComputerName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string[] ComputerName" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.DisconnectPSSessionCommand.ComputerName" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Property ComputerName As String()" />
+      <MemberSignature Language="F#" Value="member this.ComputerName : string[] with get, set" Usage="Microsoft.PowerShell.Commands.DisconnectPSSessionCommand.ComputerName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Disconnect-PSSession does not support ComputerName parameter set.
+            This may change for later versions.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContainerId">
+      <MemberSignature Language="C#" Value="public override string[] ContainerId { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string[] ContainerId" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.DisconnectPSSessionCommand.ContainerId" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides ReadOnly Property ContainerId As String()" />
+      <MemberSignature Language="F#" Value="member this.ContainerId : string[]" Usage="Microsoft.PowerShell.Commands.DisconnectPSSessionCommand.ContainerId" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Overriding to suppress this parameter
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="public void Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Dispose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Commands.DisconnectPSSessionCommand.Dispose" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Dispose ()" />
+      <MemberSignature Language="F#" Value="abstract member Dispose : unit -&gt; unit&#xA;override this.Dispose : unit -&gt; unit" Usage="disconnectPSSessionCommand.Dispose " />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.IDisposable.Dispose</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Dispose method of IDisposable. Gets called in the following cases:
+                1. Pipeline explicitly calls dispose on cmdlets
+                2. Called by the garbage collector
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EndProcessing">
+      <MemberSignature Language="C#" Value="protected override void EndProcessing ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void EndProcessing() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Commands.DisconnectPSSessionCommand.EndProcessing" />
+      <MemberSignature Language="VB.NET" Value="Protected Overrides Sub EndProcessing ()" />
+      <MemberSignature Language="F#" Value="override this.EndProcessing : unit -&gt; unit" Usage="disconnectPSSessionCommand.EndProcessing " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            End processing clean up.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IdleTimeoutSec">
+      <MemberSignature Language="C#" Value="public int IdleTimeoutSec { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 IdleTimeoutSec" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.DisconnectPSSessionCommand.IdleTimeoutSec" />
+      <MemberSignature Language="VB.NET" Value="Public Property IdleTimeoutSec As Integer" />
+      <MemberSignature Language="F#" Value="member this.IdleTimeoutSec : int with get, set" Usage="Microsoft.PowerShell.Commands.DisconnectPSSessionCommand.IdleTimeoutSec" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="Session")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="Name")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="Id")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="InstanceId")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.ValidateRange(Mono.Cecil.CustomAttributeArgument, Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Idle Timeout session option in seconds.  Used in this cmdlet to set server disconnect idletimeout option.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OutputBufferingMode">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.Runspaces.OutputBufferingMode OutputBufferingMode { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Management.Automation.Runspaces.OutputBufferingMode OutputBufferingMode" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.DisconnectPSSessionCommand.OutputBufferingMode" />
+      <MemberSignature Language="VB.NET" Value="Public Property OutputBufferingMode As OutputBufferingMode" />
+      <MemberSignature Language="F#" Value="member this.OutputBufferingMode : System.Management.Automation.Runspaces.OutputBufferingMode with get, set" Usage="Microsoft.PowerShell.Commands.DisconnectPSSessionCommand.OutputBufferingMode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="Session")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="Name")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="Id")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="InstanceId")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.Runspaces.OutputBufferingMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Output buffering mode session option.  Used in this cmdlet to set server disconnect OutputBufferingMode option.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ProcessRecord">
+      <MemberSignature Language="C#" Value="protected override void ProcessRecord ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void ProcessRecord() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Commands.DisconnectPSSessionCommand.ProcessRecord" />
+      <MemberSignature Language="VB.NET" Value="Protected Overrides Sub ProcessRecord ()" />
+      <MemberSignature Language="F#" Value="override this.ProcessRecord : unit -&gt; unit" Usage="disconnectPSSessionCommand.ProcessRecord " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Perform runspace disconnect processing on all input.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Session">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.Runspaces.PSSession[] Session { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Management.Automation.Runspaces.PSSession[] Session" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.DisconnectPSSessionCommand.Session" />
+      <MemberSignature Language="VB.NET" Value="Public Property Session As PSSession()" />
+      <MemberSignature Language="F#" Value="member this.Session : System.Management.Automation.Runspaces.PSSession[] with get, set" Usage="Microsoft.PowerShell.Commands.DisconnectPSSessionCommand.Session" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(Mandatory=true, ParameterSetName="Session", Position=0, ValueFromPipeline=true, ValueFromPipelineByPropertyName=true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.ValidateNotNullOrEmpty</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.Runspaces.PSSession[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The PSSession object or objects to be disconnected.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StopProcessing">
+      <MemberSignature Language="C#" Value="protected override void StopProcessing ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void StopProcessing() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Commands.DisconnectPSSessionCommand.StopProcessing" />
+      <MemberSignature Language="VB.NET" Value="Protected Overrides Sub StopProcessing ()" />
+      <MemberSignature Language="F#" Value="override this.StopProcessing : unit -&gt; unit" Usage="disconnectPSSessionCommand.StopProcessing " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            User has signaled a stop for this cmdlet.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ThrottleLimit">
+      <MemberSignature Language="C#" Value="public int ThrottleLimit { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 ThrottleLimit" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.DisconnectPSSessionCommand.ThrottleLimit" />
+      <MemberSignature Language="VB.NET" Value="Public Property ThrottleLimit As Integer" />
+      <MemberSignature Language="F#" Value="member this.ThrottleLimit : int with get, set" Usage="Microsoft.PowerShell.Commands.DisconnectPSSessionCommand.ThrottleLimit" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="Session")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="Name")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="Id")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="InstanceId")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Allows the user of the cmdlet to specify a throttling value
+            for throttling the number of remote operations that can
+            be executed simultaneously.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="VMId">
+      <MemberSignature Language="C#" Value="public override Guid[] VMId { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Guid[] VMId" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.DisconnectPSSessionCommand.VMId" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides ReadOnly Property VMId As Guid()" />
+      <MemberSignature Language="F#" Value="member this.VMId : Guid[]" Usage="Microsoft.PowerShell.Commands.DisconnectPSSessionCommand.VMId" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Guid[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Overriding to suppress this parameter
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="VMName">
+      <MemberSignature Language="C#" Value="public override string[] VMName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string[] VMName" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.DisconnectPSSessionCommand.VMName" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides ReadOnly Property VMName As String()" />
+      <MemberSignature Language="F#" Value="member this.VMName : string[]" Usage="Microsoft.PowerShell.Commands.DisconnectPSSessionCommand.VMName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Overriding to suppress this parameter
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

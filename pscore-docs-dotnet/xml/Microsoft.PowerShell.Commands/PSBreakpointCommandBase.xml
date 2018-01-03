@@ -1,0 +1,145 @@
+﻿<Type Name="PSBreakpointCommandBase" FullName="Microsoft.PowerShell.Commands.PSBreakpointCommandBase">
+  <TypeSignature Language="C#" Value="public abstract class PSBreakpointCommandBase : System.Management.Automation.PSCmdlet" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit PSBreakpointCommandBase extends System.Management.Automation.PSCmdlet" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.PowerShell.Commands.PSBreakpointCommandBase" />
+  <TypeSignature Language="VB.NET" Value="Public MustInherit Class PSBreakpointCommandBase&#xA;Inherits PSCmdlet" />
+  <TypeSignature Language="F#" Value="type PSBreakpointCommandBase = class&#xA;    inherit PSCmdlet" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.PowerShell.Commands.Utility</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Management.Automation.PSCmdlet</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Base class for Enable/Disable/Remove-PSBreakpoint
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected PSBreakpointCommandBase ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Commands.PSBreakpointCommandBase.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Protected Sub New ()" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Commands.Utility</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Breakpoint">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.Breakpoint[] Breakpoint { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Management.Automation.Breakpoint[] Breakpoint" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.PSBreakpointCommandBase.Breakpoint" />
+      <MemberSignature Language="VB.NET" Value="Public Property Breakpoint As Breakpoint()" />
+      <MemberSignature Language="F#" Value="member this.Breakpoint : System.Management.Automation.Breakpoint[] with get, set" Usage="Microsoft.PowerShell.Commands.PSBreakpointCommandBase.Breakpoint" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Commands.Utility</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(Mandatory=true, ParameterSetName="Breakpoint", Position=0, ValueFromPipeline=true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.ValidateNotNull</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.Breakpoint[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            the breakpoint to enable
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Id">
+      <MemberSignature Language="C#" Value="public int[] Id { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32[] Id" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.PSBreakpointCommandBase.Id" />
+      <MemberSignature Language="VB.NET" Value="Public Property Id As Integer()" />
+      <MemberSignature Language="F#" Value="member this.Id : int[] with get, set" Usage="Microsoft.PowerShell.Commands.PSBreakpointCommandBase.Id" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Commands.Utility</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(Mandatory=true, ParameterSetName="Id", Position=0, ValueFromPipelineByPropertyName=true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.ValidateNotNull</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The Id of the breakpoint to enable
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ProcessBreakpoint">
+      <MemberSignature Language="C#" Value="protected abstract void ProcessBreakpoint (System.Management.Automation.Breakpoint breakpoint);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void ProcessBreakpoint(class System.Management.Automation.Breakpoint breakpoint) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Commands.PSBreakpointCommandBase.ProcessBreakpoint(System.Management.Automation.Breakpoint)" />
+      <MemberSignature Language="F#" Value="abstract member ProcessBreakpoint : System.Management.Automation.Breakpoint -&gt; unit" Usage="pSBreakpointCommandBase.ProcessBreakpoint breakpoint" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Commands.Utility</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="breakpoint" Type="System.Management.Automation.Breakpoint" />
+      </Parameters>
+      <Docs>
+        <param name="breakpoint">To be added.</param>
+        <summary>
+            Process the given breakpoint
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ProcessRecord">
+      <MemberSignature Language="C#" Value="protected override void ProcessRecord ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void ProcessRecord() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Commands.PSBreakpointCommandBase.ProcessRecord" />
+      <MemberSignature Language="VB.NET" Value="Protected Overrides Sub ProcessRecord ()" />
+      <MemberSignature Language="F#" Value="override this.ProcessRecord : unit -&gt; unit" Usage="pSBreakpointCommandBase.ProcessRecord " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Commands.Utility</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Gathers the list of breakpoints to process and calls ProcessBreakpoints
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

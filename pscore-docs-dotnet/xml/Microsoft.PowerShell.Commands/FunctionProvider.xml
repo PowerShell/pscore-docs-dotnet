@@ -1,0 +1,187 @@
+﻿<Type Name="FunctionProvider" FullName="Microsoft.PowerShell.Commands.FunctionProvider">
+  <TypeSignature Language="C#" Value="public sealed class FunctionProvider : Microsoft.PowerShell.Commands.SessionStateProviderBase" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit FunctionProvider extends Microsoft.PowerShell.Commands.SessionStateProviderBase" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.PowerShell.Commands.FunctionProvider" />
+  <TypeSignature Language="VB.NET" Value="Public NotInheritable Class FunctionProvider&#xA;Inherits SessionStateProviderBase" />
+  <TypeSignature Language="F#" Value="type FunctionProvider = class&#xA;    inherit SessionStateProviderBase" />
+  <AssemblyInfo>
+    <AssemblyName>System.Management.Automation</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Microsoft.PowerShell.Commands.SessionStateProviderBase</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Management.Automation.OutputType(typeof(System.Management.Automation.FunctionInfo), ProviderCmdlet="Set-Item")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Management.Automation.OutputType(typeof(System.Management.Automation.FunctionInfo), ProviderCmdlet="Rename-Item")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Management.Automation.OutputType(typeof(System.Management.Automation.FunctionInfo), ProviderCmdlet="Copy-Item")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Management.Automation.OutputType(typeof(System.Management.Automation.FunctionInfo), ProviderCmdlet="Get-ChildItem")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Management.Automation.OutputType(typeof(System.Management.Automation.FunctionInfo), ProviderCmdlet="Get-Item")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Management.Automation.OutputType(typeof(System.Management.Automation.FunctionInfo), ProviderCmdlet="New-Item")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Management.Automation.Provider.CmdletProvider("Function", System.Management.Automation.Provider.ProviderCapabilities.ShouldProcess)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>
+            This provider is the data accessor for shell functions. It uses
+            the SessionStateProviderBase as the base class to produce a view on
+            session state data.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public FunctionProvider ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Commands.FunctionProvider.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New ()" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>
+            The constructor for the provider that exposes variables to the user
+            as drives.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InitializeDefaultDrives">
+      <MemberSignature Language="C#" Value="protected override System.Collections.ObjectModel.Collection&lt;System.Management.Automation.PSDriveInfo&gt; InitializeDefaultDrives ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Collections.ObjectModel.Collection`1&lt;class System.Management.Automation.PSDriveInfo&gt; InitializeDefaultDrives() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Commands.FunctionProvider.InitializeDefaultDrives" />
+      <MemberSignature Language="VB.NET" Value="Protected Overrides Function InitializeDefaultDrives () As Collection(Of PSDriveInfo)" />
+      <MemberSignature Language="F#" Value="override this.InitializeDefaultDrives : unit -&gt; System.Collections.ObjectModel.Collection&lt;System.Management.Automation.PSDriveInfo&gt;" Usage="functionProvider.InitializeDefaultDrives " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.Collection&lt;System.Management.Automation.PSDriveInfo&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+             Initializes the function drive
+             </summary>
+        <returns>
+             An array of a single PSDriveInfo object representing the functions drive.
+             </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NewItemDynamicParameters">
+      <MemberSignature Language="C#" Value="protected override object NewItemDynamicParameters (string path, string type, object newItemValue);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance object NewItemDynamicParameters(string path, string type, object newItemValue) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Commands.FunctionProvider.NewItemDynamicParameters(System.String,System.String,System.Object)" />
+      <MemberSignature Language="VB.NET" Value="Protected Overrides Function NewItemDynamicParameters (path As String, type As String, newItemValue As Object) As Object" />
+      <MemberSignature Language="F#" Value="override this.NewItemDynamicParameters : string * string * obj -&gt; obj" Usage="functionProvider.NewItemDynamicParameters (path, type, newItemValue)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+        <Parameter Name="type" Type="System.String" />
+        <Parameter Name="newItemValue" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="path">
+             Ignored.
+             </param>
+        <param name="type">
+             Ignored.
+             </param>
+        <param name="newItemValue">
+             Ignored.
+             </param>
+        <summary>
+             Gets the dynamic parameters for the NewItem cmdlet
+             </summary>
+        <returns>
+             An instance of FunctionProviderDynamicParameters which is the dynamic parameters for
+             NewItem.
+             </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ProviderName">
+      <MemberSignature Language="C#" Value="public const string ProviderName;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal string ProviderName" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.PowerShell.Commands.FunctionProvider.ProviderName" />
+      <MemberSignature Language="VB.NET" Value="Public Const ProviderName As String " />
+      <MemberSignature Language="F#" Value="val mutable ProviderName : string" Usage="Microsoft.PowerShell.Commands.FunctionProvider.ProviderName" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the name of the provider
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetItemDynamicParameters">
+      <MemberSignature Language="C#" Value="protected override object SetItemDynamicParameters (string path, object value);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance object SetItemDynamicParameters(string path, object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Commands.FunctionProvider.SetItemDynamicParameters(System.String,System.Object)" />
+      <MemberSignature Language="VB.NET" Value="Protected Overrides Function SetItemDynamicParameters (path As String, value As Object) As Object" />
+      <MemberSignature Language="F#" Value="override this.SetItemDynamicParameters : string * obj -&gt; obj" Usage="functionProvider.SetItemDynamicParameters (path, value)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="path">
+             Ignored.
+             </param>
+        <param name="value">
+             Ignored.
+             </param>
+        <summary>
+             Gets the dynamic parameters for the NewItem cmdlet
+             </summary>
+        <returns>
+             An instance of FunctionProviderDynamicParameters which is the dynamic parameters for
+             SetItem.
+             </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

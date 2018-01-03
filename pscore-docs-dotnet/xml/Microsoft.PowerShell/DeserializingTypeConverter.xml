@@ -1,0 +1,384 @@
+﻿<Type Name="DeserializingTypeConverter" FullName="Microsoft.PowerShell.DeserializingTypeConverter">
+  <TypeSignature Language="C#" Value="public sealed class DeserializingTypeConverter : System.Management.Automation.PSTypeConverter" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed DeserializingTypeConverter extends System.Management.Automation.PSTypeConverter" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.PowerShell.DeserializingTypeConverter" />
+  <TypeSignature Language="VB.NET" Value="Public NotInheritable Class DeserializingTypeConverter&#xA;Inherits PSTypeConverter" />
+  <TypeSignature Language="F#" Value="type DeserializingTypeConverter = class&#xA;    inherit PSTypeConverter" />
+  <AssemblyInfo>
+    <AssemblyName>System.Management.Automation</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Management.Automation.PSTypeConverter</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Rehydrating type converter used during deserialization.
+            It takes results of serializing some common types
+            and rehydrates them back from property bags into live objects.
+            </summary>
+    <remarks>To be added.</remarks>
+    <!--
+            To add a new type for rehydration:
+            - Add a new T RehydrateT(PSObject pso) method below
+            - Add this method to converters dictionary in the static constructor below
+            - If implicit rehydration is required then
+              - Add appropriate types.ps1 xml entries for
+                - SerializationDepth=X
+                - For types depending only on ToString for rehydration set
+                  - SerializationMethod=SpecificProperties
+                  - PropertySerializationSet=<empty>
+                - TargetTypeForDeserialization=DeserializingTypeConverter
+              - Add a field of that type in unit tests / S.M.A.Test.SerializationTest+RehydratedType
+                (testsrc\admintest\monad\DRT\engine\UnitTests\SerializationTest.cs)
+            -->
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DeserializingTypeConverter ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.DeserializingTypeConverter.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New ()" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanConvertFrom">
+      <MemberSignature Language="C#" Value="public override bool CanConvertFrom (System.Management.Automation.PSObject sourceValue, Type destinationType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool CanConvertFrom(class System.Management.Automation.PSObject sourceValue, class System.Type destinationType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.DeserializingTypeConverter.CanConvertFrom(System.Management.Automation.PSObject,System.Type)" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Function CanConvertFrom (sourceValue As PSObject, destinationType As Type) As Boolean" />
+      <MemberSignature Language="F#" Value="override this.CanConvertFrom : System.Management.Automation.PSObject * Type -&gt; bool" Usage="deserializingTypeConverter.CanConvertFrom (sourceValue, destinationType)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sourceValue" Type="System.Management.Automation.PSObject" />
+        <Parameter Name="destinationType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="sourceValue">The value to convert from</param>
+        <param name="destinationType">The type to convert to</param>
+        <summary>
+            Determines if the converter can convert the <paramref name="sourceValue" /> parameter to the <paramref name="destinationType" /> parameter.
+            </summary>
+        <returns>True if the converter can convert the <paramref name="sourceValue" /> parameter to the <paramref name="destinationType" /> parameter, otherwise false.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanConvertFrom">
+      <MemberSignature Language="C#" Value="public override bool CanConvertFrom (object sourceValue, Type destinationType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool CanConvertFrom(object sourceValue, class System.Type destinationType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.DeserializingTypeConverter.CanConvertFrom(System.Object,System.Type)" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Function CanConvertFrom (sourceValue As Object, destinationType As Type) As Boolean" />
+      <MemberSignature Language="F#" Value="override this.CanConvertFrom : obj * Type -&gt; bool" Usage="deserializingTypeConverter.CanConvertFrom (sourceValue, destinationType)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sourceValue" Type="System.Object" />
+        <Parameter Name="destinationType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="sourceValue">To be added.</param>
+        <param name="destinationType">To be added.</param>
+        <summary>
+            This method is not implemented - an overload taking a PSObject is implemented instead
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanConvertTo">
+      <MemberSignature Language="C#" Value="public override bool CanConvertTo (System.Management.Automation.PSObject sourceValue, Type destinationType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool CanConvertTo(class System.Management.Automation.PSObject sourceValue, class System.Type destinationType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.DeserializingTypeConverter.CanConvertTo(System.Management.Automation.PSObject,System.Type)" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Function CanConvertTo (sourceValue As PSObject, destinationType As Type) As Boolean" />
+      <MemberSignature Language="F#" Value="override this.CanConvertTo : System.Management.Automation.PSObject * Type -&gt; bool" Usage="deserializingTypeConverter.CanConvertTo (sourceValue, destinationType)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sourceValue" Type="System.Management.Automation.PSObject" />
+        <Parameter Name="destinationType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="sourceValue">To be added.</param>
+        <param name="destinationType">To be added.</param>
+        <summary>
+            This method is not implemented - an overload taking a PSObject is implemented instead
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanConvertTo">
+      <MemberSignature Language="C#" Value="public override bool CanConvertTo (object sourceValue, Type destinationType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool CanConvertTo(object sourceValue, class System.Type destinationType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.DeserializingTypeConverter.CanConvertTo(System.Object,System.Type)" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Function CanConvertTo (sourceValue As Object, destinationType As Type) As Boolean" />
+      <MemberSignature Language="F#" Value="override this.CanConvertTo : obj * Type -&gt; bool" Usage="deserializingTypeConverter.CanConvertTo (sourceValue, destinationType)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sourceValue" Type="System.Object" />
+        <Parameter Name="destinationType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="sourceValue">The value to convert from</param>
+        <param name="destinationType">The type to convert to</param>
+        <summary>
+            Returns true if the converter can convert the <paramref name="sourceValue" /> parameter to the <paramref name="destinationType" /> parameter
+            </summary>
+        <returns>True if the converter can convert the <paramref name="sourceValue" /> parameter to the <paramref name="destinationType" /> parameter, otherwise false.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ConvertFrom">
+      <MemberSignature Language="C#" Value="public override object ConvertFrom (System.Management.Automation.PSObject sourceValue, Type destinationType, IFormatProvider formatProvider, bool ignoreCase);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance object ConvertFrom(class System.Management.Automation.PSObject sourceValue, class System.Type destinationType, class System.IFormatProvider formatProvider, bool ignoreCase) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.DeserializingTypeConverter.ConvertFrom(System.Management.Automation.PSObject,System.Type,System.IFormatProvider,System.Boolean)" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Function ConvertFrom (sourceValue As PSObject, destinationType As Type, formatProvider As IFormatProvider, ignoreCase As Boolean) As Object" />
+      <MemberSignature Language="F#" Value="override this.ConvertFrom : System.Management.Automation.PSObject * Type * IFormatProvider * bool -&gt; obj" Usage="deserializingTypeConverter.ConvertFrom (sourceValue, destinationType, formatProvider, ignoreCase)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sourceValue" Type="System.Management.Automation.PSObject" />
+        <Parameter Name="destinationType" Type="System.Type" />
+        <Parameter Name="formatProvider" Type="System.IFormatProvider" />
+        <Parameter Name="ignoreCase" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="sourceValue">The value to convert from</param>
+        <param name="destinationType">The type to convert to</param>
+        <param name="formatProvider">The format provider to use like in IFormattable's ToString</param>
+        <param name="ignoreCase">true if case should be ignored</param>
+        <summary>
+            Converts the <paramref name="sourceValue" /> parameter to the <paramref name="destinationType" /> parameter using formatProvider and ignoreCase
+            </summary>
+        <returns>the <paramref name="sourceValue" /> parameter converted to the <paramref name="destinationType" /> parameter using formatProvider and ignoreCase</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidCastException">if no conversion was possible</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ConvertFrom">
+      <MemberSignature Language="C#" Value="public override object ConvertFrom (object sourceValue, Type destinationType, IFormatProvider formatProvider, bool ignoreCase);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance object ConvertFrom(object sourceValue, class System.Type destinationType, class System.IFormatProvider formatProvider, bool ignoreCase) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.DeserializingTypeConverter.ConvertFrom(System.Object,System.Type,System.IFormatProvider,System.Boolean)" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Function ConvertFrom (sourceValue As Object, destinationType As Type, formatProvider As IFormatProvider, ignoreCase As Boolean) As Object" />
+      <MemberSignature Language="F#" Value="override this.ConvertFrom : obj * Type * IFormatProvider * bool -&gt; obj" Usage="deserializingTypeConverter.ConvertFrom (sourceValue, destinationType, formatProvider, ignoreCase)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sourceValue" Type="System.Object" />
+        <Parameter Name="destinationType" Type="System.Type" />
+        <Parameter Name="formatProvider" Type="System.IFormatProvider" />
+        <Parameter Name="ignoreCase" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="sourceValue">To be added.</param>
+        <param name="destinationType">To be added.</param>
+        <param name="formatProvider">To be added.</param>
+        <param name="ignoreCase">To be added.</param>
+        <summary>
+            This method is not implemented - an overload taking a PSObject is implemented instead
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ConvertTo">
+      <MemberSignature Language="C#" Value="public override object ConvertTo (System.Management.Automation.PSObject sourceValue, Type destinationType, IFormatProvider formatProvider, bool ignoreCase);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance object ConvertTo(class System.Management.Automation.PSObject sourceValue, class System.Type destinationType, class System.IFormatProvider formatProvider, bool ignoreCase) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.DeserializingTypeConverter.ConvertTo(System.Management.Automation.PSObject,System.Type,System.IFormatProvider,System.Boolean)" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Function ConvertTo (sourceValue As PSObject, destinationType As Type, formatProvider As IFormatProvider, ignoreCase As Boolean) As Object" />
+      <MemberSignature Language="F#" Value="override this.ConvertTo : System.Management.Automation.PSObject * Type * IFormatProvider * bool -&gt; obj" Usage="deserializingTypeConverter.ConvertTo (sourceValue, destinationType, formatProvider, ignoreCase)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sourceValue" Type="System.Management.Automation.PSObject" />
+        <Parameter Name="destinationType" Type="System.Type" />
+        <Parameter Name="formatProvider" Type="System.IFormatProvider" />
+        <Parameter Name="ignoreCase" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="sourceValue">To be added.</param>
+        <param name="destinationType">To be added.</param>
+        <param name="formatProvider">To be added.</param>
+        <param name="ignoreCase">To be added.</param>
+        <summary>
+            This method is not implemented - an overload taking a PSObject is implemented instead
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ConvertTo">
+      <MemberSignature Language="C#" Value="public override object ConvertTo (object sourceValue, Type destinationType, IFormatProvider formatProvider, bool ignoreCase);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance object ConvertTo(object sourceValue, class System.Type destinationType, class System.IFormatProvider formatProvider, bool ignoreCase) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.DeserializingTypeConverter.ConvertTo(System.Object,System.Type,System.IFormatProvider,System.Boolean)" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Function ConvertTo (sourceValue As Object, destinationType As Type, formatProvider As IFormatProvider, ignoreCase As Boolean) As Object" />
+      <MemberSignature Language="F#" Value="override this.ConvertTo : obj * Type * IFormatProvider * bool -&gt; obj" Usage="deserializingTypeConverter.ConvertTo (sourceValue, destinationType, formatProvider, ignoreCase)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sourceValue" Type="System.Object" />
+        <Parameter Name="destinationType" Type="System.Type" />
+        <Parameter Name="formatProvider" Type="System.IFormatProvider" />
+        <Parameter Name="ignoreCase" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="sourceValue">The value to convert from</param>
+        <param name="destinationType">The type to convert to</param>
+        <param name="formatProvider">The format provider to use like in IFormattable's ToString</param>
+        <param name="ignoreCase">true if case should be ignored</param>
+        <summary>
+            Converts the <paramref name="sourceValue" /> parameter to the <paramref name="destinationType" /> parameter using formatProvider and ignoreCase
+            </summary>
+        <returns>sourceValue converted to the <paramref name="destinationType" /> parameter using formatProvider and ignoreCase</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidCastException">if no conversion was possible</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetFormatViewDefinitionInstanceId">
+      <MemberSignature Language="C#" Value="public static Guid GetFormatViewDefinitionInstanceId (System.Management.Automation.PSObject instance);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Guid GetFormatViewDefinitionInstanceId(class System.Management.Automation.PSObject instance) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.DeserializingTypeConverter.GetFormatViewDefinitionInstanceId(System.Management.Automation.PSObject)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function GetFormatViewDefinitionInstanceId (instance As PSObject) As Guid" />
+      <MemberSignature Language="F#" Value="static member GetFormatViewDefinitionInstanceId : System.Management.Automation.PSObject -&gt; Guid" Usage="Microsoft.PowerShell.DeserializingTypeConverter.GetFormatViewDefinitionInstanceId instance" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Guid</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="instance" Type="System.Management.Automation.PSObject" />
+      </Parameters>
+      <Docs>
+        <param name="instance">
+            The PSObject for which to obtain the flags
+            </param>
+        <summary>
+            Gets the boolean properties of ParameterSetMetadata object encoded as an integer
+            </summary>
+        <returns>
+            Boolean properties of ParameterSetMetadata object encoded as an integer
+            </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetInvocationInfo">
+      <MemberSignature Language="C#" Value="public static System.Management.Automation.PSObject GetInvocationInfo (System.Management.Automation.PSObject instance);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Management.Automation.PSObject GetInvocationInfo(class System.Management.Automation.PSObject instance) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.DeserializingTypeConverter.GetInvocationInfo(System.Management.Automation.PSObject)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function GetInvocationInfo (instance As PSObject) As PSObject" />
+      <MemberSignature Language="F#" Value="static member GetInvocationInfo : System.Management.Automation.PSObject -&gt; System.Management.Automation.PSObject" Usage="Microsoft.PowerShell.DeserializingTypeConverter.GetInvocationInfo instance" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.PSObject</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="instance" Type="System.Management.Automation.PSObject" />
+      </Parameters>
+      <Docs>
+        <param name="instance">InvocationInfo instance.</param>
+        <summary>
+            Gets the full remoting serialized PSObject for the InvocationInfo property
+            of the DebuggerStopEventArgs type.
+            </summary>
+        <returns>PSObject containing serialized InvocationInfo.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetParameterSetMetadataFlags">
+      <MemberSignature Language="C#" Value="public static uint GetParameterSetMetadataFlags (System.Management.Automation.PSObject instance);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig unsigned int32 GetParameterSetMetadataFlags(class System.Management.Automation.PSObject instance) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.DeserializingTypeConverter.GetParameterSetMetadataFlags(System.Management.Automation.PSObject)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function GetParameterSetMetadataFlags (instance As PSObject) As UInteger" />
+      <MemberSignature Language="F#" Value="static member GetParameterSetMetadataFlags : System.Management.Automation.PSObject -&gt; uint32" Usage="Microsoft.PowerShell.DeserializingTypeConverter.GetParameterSetMetadataFlags instance" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.UInt32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="instance" Type="System.Management.Automation.PSObject" />
+      </Parameters>
+      <Docs>
+        <param name="instance">
+            The PSObject for which to obtain the flags
+            </param>
+        <summary>
+            Gets the boolean properties of ParameterSetMetadata object encoded as an integer
+            </summary>
+        <returns>
+            Boolean properties of ParameterSetMetadata object encoded as an integer
+            </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

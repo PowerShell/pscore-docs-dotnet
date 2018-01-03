@@ -1,0 +1,115 @@
+﻿<Type Name="PowerShellTraceSourceFactory" FullName="System.Management.Automation.Tracing.PowerShellTraceSourceFactory">
+  <TypeSignature Language="C#" Value="public static class PowerShellTraceSourceFactory" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract sealed beforefieldinit PowerShellTraceSourceFactory extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Management.Automation.Tracing.PowerShellTraceSourceFactory" />
+  <TypeSignature Language="VB.NET" Value="Public Class PowerShellTraceSourceFactory" />
+  <TypeSignature Language="F#" Value="type PowerShellTraceSourceFactory = class" />
+  <AssemblyInfo>
+    <AssemblyName>System.Management.Automation</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            TraceSourceFactory will return an instance of TraceSource every time GetTraceSource method is called.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="GetTraceSource">
+      <MemberSignature Language="C#" Value="public static System.Management.Automation.Tracing.PowerShellTraceSource GetTraceSource ();" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Management.Automation.Tracing.PowerShellTraceSource GetTraceSource() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Tracing.PowerShellTraceSourceFactory.GetTraceSource" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function GetTraceSource () As PowerShellTraceSource" />
+      <MemberSignature Language="F#" Value="static member GetTraceSource : unit -&gt; System.Management.Automation.Tracing.PowerShellTraceSource" Usage="System.Management.Automation.Tracing.PowerShellTraceSourceFactory.GetTraceSource " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.Tracing.PowerShellTraceSource</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+             Returns an instance of BaseChannelWriter.
+             If the Etw is not supported by the platform it will return NullWriter.Instance
+            
+             A Task and a set of Keywords can be specified in the GetTraceSource method (See overloads).
+                The supplied task and keywords are used to pass to the Etw provider in case they are
+             not defined in the manifest file.
+             </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetTraceSource">
+      <MemberSignature Language="C#" Value="public static System.Management.Automation.Tracing.PowerShellTraceSource GetTraceSource (System.Management.Automation.Tracing.PowerShellTraceTask task);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Management.Automation.Tracing.PowerShellTraceSource GetTraceSource(valuetype System.Management.Automation.Tracing.PowerShellTraceTask task) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Tracing.PowerShellTraceSourceFactory.GetTraceSource(System.Management.Automation.Tracing.PowerShellTraceTask)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function GetTraceSource (task As PowerShellTraceTask) As PowerShellTraceSource" />
+      <MemberSignature Language="F#" Value="static member GetTraceSource : System.Management.Automation.Tracing.PowerShellTraceTask -&gt; System.Management.Automation.Tracing.PowerShellTraceSource" Usage="System.Management.Automation.Tracing.PowerShellTraceSourceFactory.GetTraceSource task" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.Tracing.PowerShellTraceSource</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="task" Type="System.Management.Automation.Tracing.PowerShellTraceTask" />
+      </Parameters>
+      <Docs>
+        <param name="task">To be added.</param>
+        <summary>
+             Returns an instance of BaseChannelWriter.
+             If the Etw is not supported by the platform it will return NullWriter.Instance
+            
+             A Task and a set of Keywords can be specified in the GetTraceSource method (See overloads).
+                The supplied task and keywords are used to pass to the Etw provider in case they are
+             not defined in the manifest file.
+             </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetTraceSource">
+      <MemberSignature Language="C#" Value="public static System.Management.Automation.Tracing.PowerShellTraceSource GetTraceSource (System.Management.Automation.Tracing.PowerShellTraceTask task, System.Management.Automation.Tracing.PowerShellTraceKeywords keywords);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Management.Automation.Tracing.PowerShellTraceSource GetTraceSource(valuetype System.Management.Automation.Tracing.PowerShellTraceTask task, valuetype System.Management.Automation.Tracing.PowerShellTraceKeywords keywords) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Tracing.PowerShellTraceSourceFactory.GetTraceSource(System.Management.Automation.Tracing.PowerShellTraceTask,System.Management.Automation.Tracing.PowerShellTraceKeywords)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function GetTraceSource (task As PowerShellTraceTask, keywords As PowerShellTraceKeywords) As PowerShellTraceSource" />
+      <MemberSignature Language="F#" Value="static member GetTraceSource : System.Management.Automation.Tracing.PowerShellTraceTask * System.Management.Automation.Tracing.PowerShellTraceKeywords -&gt; System.Management.Automation.Tracing.PowerShellTraceSource" Usage="System.Management.Automation.Tracing.PowerShellTraceSourceFactory.GetTraceSource (task, keywords)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.Tracing.PowerShellTraceSource</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="task" Type="System.Management.Automation.Tracing.PowerShellTraceTask" />
+        <Parameter Name="keywords" Type="System.Management.Automation.Tracing.PowerShellTraceKeywords" />
+      </Parameters>
+      <Docs>
+        <param name="task">To be added.</param>
+        <param name="keywords">To be added.</param>
+        <summary>
+             Returns an instance of BaseChannelWriter.
+             If the Etw is not supported by the platform it will return NullWriter.Instance
+            
+             A Task and a set of Keywords can be specified in the GetTraceSource method (See overloads).
+                The supplied task and keywords are used to pass to the Etw provider in case they are
+             not defined in the manifest file.
+             </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

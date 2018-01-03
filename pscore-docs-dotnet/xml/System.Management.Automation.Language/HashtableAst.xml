@@ -1,0 +1,117 @@
+﻿<Type Name="HashtableAst" FullName="System.Management.Automation.Language.HashtableAst">
+  <TypeSignature Language="C#" Value="public class HashtableAst : System.Management.Automation.Language.ExpressionAst" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit HashtableAst extends System.Management.Automation.Language.ExpressionAst" />
+  <TypeSignature Language="DocId" Value="T:System.Management.Automation.Language.HashtableAst" />
+  <TypeSignature Language="VB.NET" Value="Public Class HashtableAst&#xA;Inherits ExpressionAst" />
+  <TypeSignature Language="F#" Value="type HashtableAst = class&#xA;    inherit ExpressionAst" />
+  <AssemblyInfo>
+    <AssemblyName>System.Management.Automation</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Management.Automation.Language.ExpressionAst</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            The ast that represents a hash literal, e.g. <c>@{a = 1}</c>.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public HashtableAst (System.Management.Automation.Language.IScriptExtent extent, System.Collections.Generic.IEnumerable&lt;Tuple&lt;System.Management.Automation.Language.ExpressionAst,System.Management.Automation.Language.StatementAst&gt;&gt; keyValuePairs);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Management.Automation.Language.IScriptExtent extent, class System.Collections.Generic.IEnumerable`1&lt;class System.Tuple`2&lt;class System.Management.Automation.Language.ExpressionAst, class System.Management.Automation.Language.StatementAst&gt;&gt; keyValuePairs) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Language.HashtableAst.#ctor(System.Management.Automation.Language.IScriptExtent,System.Collections.Generic.IEnumerable{System.Tuple{System.Management.Automation.Language.ExpressionAst,System.Management.Automation.Language.StatementAst}})" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (extent As IScriptExtent, keyValuePairs As IEnumerable(Of Tuple(Of ExpressionAst, StatementAst)))" />
+      <MemberSignature Language="F#" Value="new System.Management.Automation.Language.HashtableAst : System.Management.Automation.Language.IScriptExtent * seq&lt;System.Management.Automation.Language.ExpressionAst * System.Management.Automation.Language.StatementAst&gt; -&gt; System.Management.Automation.Language.HashtableAst" Usage="new System.Management.Automation.Language.HashtableAst (extent, keyValuePairs)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="extent" Type="System.Management.Automation.Language.IScriptExtent" />
+        <Parameter Name="keyValuePairs" Type="System.Collections.Generic.IEnumerable&lt;System.Tuple&lt;System.Management.Automation.Language.ExpressionAst,System.Management.Automation.Language.StatementAst&gt;&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="extent">The extent of the literal, from '@{' to the closing '}'.</param>
+        <param name="keyValuePairs">The optionally null or empty list of key/value pairs.</param>
+        <summary>
+            Construct a hash literal ast.
+            </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.Management.Automation.PSArgumentNullException">
+            If <paramref name="extent" /> is null.
+            </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Copy">
+      <MemberSignature Language="C#" Value="public override System.Management.Automation.Language.Ast Copy ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Management.Automation.Language.Ast Copy() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Language.HashtableAst.Copy" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Function Copy () As Ast" />
+      <MemberSignature Language="F#" Value="override this.Copy : unit -&gt; System.Management.Automation.Language.Ast" Usage="hashtableAst.Copy " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.Language.Ast</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Copy the HashtableAst instance
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="KeyValuePairs">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.ReadOnlyCollection&lt;Tuple&lt;System.Management.Automation.Language.ExpressionAst,System.Management.Automation.Language.StatementAst&gt;&gt; KeyValuePairs { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ObjectModel.ReadOnlyCollection`1&lt;class System.Tuple`2&lt;class System.Management.Automation.Language.ExpressionAst, class System.Management.Automation.Language.StatementAst&gt;&gt; KeyValuePairs" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.Language.HashtableAst.KeyValuePairs" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property KeyValuePairs As ReadOnlyCollection(Of Tuple(Of ExpressionAst, StatementAst))" />
+      <MemberSignature Language="F#" Value="member this.KeyValuePairs : System.Collections.ObjectModel.ReadOnlyCollection&lt;System.Management.Automation.Language.ExpressionAst * System.Management.Automation.Language.StatementAst&gt;" Usage="System.Management.Automation.Language.HashtableAst.KeyValuePairs" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.ReadOnlyCollection&lt;System.Tuple&lt;System.Management.Automation.Language.ExpressionAst,System.Management.Automation.Language.StatementAst&gt;&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The pairs of key names and asts for values used to construct the hash table.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StaticType">
+      <MemberSignature Language="C#" Value="public override Type StaticType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type StaticType" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.Language.HashtableAst.StaticType" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides ReadOnly Property StaticType As Type" />
+      <MemberSignature Language="F#" Value="member this.StaticType : Type" Usage="System.Management.Automation.Language.HashtableAst.StaticType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The result type of a <see cref="T:System.Management.Automation.Language.HashtableAst" /> is always <c>typeof(<see cref="T:System.Collections.Hashtable" />)</c>.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,854 @@
+﻿<Type Name="PSRemotingBaseCmdlet" FullName="Microsoft.PowerShell.Commands.PSRemotingBaseCmdlet">
+  <TypeSignature Language="C#" Value="public abstract class PSRemotingBaseCmdlet : Microsoft.PowerShell.Commands.PSRemotingCmdlet" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit PSRemotingBaseCmdlet extends Microsoft.PowerShell.Commands.PSRemotingCmdlet" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.PowerShell.Commands.PSRemotingBaseCmdlet" />
+  <TypeSignature Language="VB.NET" Value="Public MustInherit Class PSRemotingBaseCmdlet&#xA;Inherits PSRemotingCmdlet" />
+  <TypeSignature Language="F#" Value="type PSRemotingBaseCmdlet = class&#xA;    inherit PSRemotingCmdlet" />
+  <AssemblyInfo>
+    <AssemblyName>System.Management.Automation</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Microsoft.PowerShell.Commands.PSRemotingCmdlet</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Base class for any cmdlet which takes a -Session parameter
+            or a -ComputerName parameter (along with its other associated
+            parameters). The following cmdlets currently fall under this
+            category:
+                1. New-PSSession
+                2. Invoke-Expression
+                3. Start-PSJob
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected PSRemotingBaseCmdlet ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Commands.PSRemotingBaseCmdlet.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Protected Sub New ()" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AllowRedirection">
+      <MemberSignature Language="C#" Value="public virtual System.Management.Automation.SwitchParameter AllowRedirection { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Management.Automation.SwitchParameter AllowRedirection" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.PSRemotingBaseCmdlet.AllowRedirection" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Property AllowRedirection As SwitchParameter" />
+      <MemberSignature Language="F#" Value="member this.AllowRedirection : System.Management.Automation.SwitchParameter with get, set" Usage="Microsoft.PowerShell.Commands.PSRemotingBaseCmdlet.AllowRedirection" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="Uri")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.SwitchParameter</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The AllowRedirection parameter enables the implicit redirection functionality
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ApplicationName">
+      <MemberSignature Language="C#" Value="public virtual string ApplicationName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ApplicationName" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.PSRemotingBaseCmdlet.ApplicationName" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Property ApplicationName As String" />
+      <MemberSignature Language="F#" Value="member this.ApplicationName : string with get, set" Usage="Microsoft.PowerShell.Commands.PSRemotingBaseCmdlet.ApplicationName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="ComputerName", ValueFromPipelineByPropertyName=true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            This parameters specifies the appname which identifies the connection
+            end point on the remote machine. If this parameter is not specified
+            then the value specified in DEFAULTREMOTEAPPNAME will be used. If thats
+            not specified as well, then "WSMAN" will be used
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Authentication">
+      <MemberSignature Language="C#" Value="public virtual System.Management.Automation.Runspaces.AuthenticationMechanism Authentication { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Management.Automation.Runspaces.AuthenticationMechanism Authentication" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.PSRemotingBaseCmdlet.Authentication" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Property Authentication As AuthenticationMechanism" />
+      <MemberSignature Language="F#" Value="member this.Authentication : System.Management.Automation.Runspaces.AuthenticationMechanism with get, set" Usage="Microsoft.PowerShell.Commands.PSRemotingBaseCmdlet.Authentication" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="ComputerName")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="Uri")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.Runspaces.AuthenticationMechanism</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Use basic authentication to authenticate the user.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginProcessing">
+      <MemberSignature Language="C#" Value="protected override void BeginProcessing ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void BeginProcessing() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Commands.PSRemotingBaseCmdlet.BeginProcessing" />
+      <MemberSignature Language="VB.NET" Value="Protected Overrides Sub BeginProcessing ()" />
+      <MemberSignature Language="F#" Value="override this.BeginProcessing : unit -&gt; unit" Usage="pSRemotingBaseCmdlet.BeginProcessing " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Resolves shellname and appname
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CertificateThumbprint">
+      <MemberSignature Language="C#" Value="public virtual string CertificateThumbprint { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string CertificateThumbprint" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.PSRemotingBaseCmdlet.CertificateThumbprint" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Property CertificateThumbprint As String" />
+      <MemberSignature Language="F#" Value="member this.CertificateThumbprint : string with get, set" Usage="Microsoft.PowerShell.Commands.PSRemotingBaseCmdlet.CertificateThumbprint" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="ComputerName")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="Uri")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Specifies the certificate thumbprint to be used to impersonate the user on the
+            remote machine.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ComputerName">
+      <MemberSignature Language="C#" Value="public virtual string[] ComputerName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string[] ComputerName" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.PSRemotingBaseCmdlet.ComputerName" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Property ComputerName As String()" />
+      <MemberSignature Language="F#" Value="member this.ComputerName : string[] with get, set" Usage="Microsoft.PowerShell.Commands.PSRemotingBaseCmdlet.ComputerName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Alias(Mono.Cecil.CustomAttributeArgument[])</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="ComputerName", Position=0, ValueFromPipelineByPropertyName=true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+             This parameter represents the address(es) of the remote
+             computer(s). The following formats are supported:
+                  (a) Computer name
+                  (b) IPv4 address : 132.3.4.5
+                  (c) IPv6 address: 3ffe:8311:ffff:f70f:0:5efe:172.30.162.18
+            
+             </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ConnectionUri">
+      <MemberSignature Language="C#" Value="public virtual Uri[] ConnectionUri { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Uri[] ConnectionUri" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.PSRemotingBaseCmdlet.ConnectionUri" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Property ConnectionUri As Uri()" />
+      <MemberSignature Language="F#" Value="member this.ConnectionUri : Uri[] with get, set" Usage="Microsoft.PowerShell.Commands.PSRemotingBaseCmdlet.ConnectionUri" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Alias(Mono.Cecil.CustomAttributeArgument[])</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(Mandatory=true, ParameterSetName="Uri", Position=0, ValueFromPipelineByPropertyName=true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.ValidateNotNullOrEmpty</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Uri[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            A complete URI(s) specified for the remote computer and shell to
+            connect to and create runspace for
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContainerId">
+      <MemberSignature Language="C#" Value="public virtual string[] ContainerId { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string[] ContainerId" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.PSRemotingBaseCmdlet.ContainerId" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Property ContainerId As String()" />
+      <MemberSignature Language="F#" Value="member this.ContainerId : string[] with get, set" Usage="Microsoft.PowerShell.Commands.PSRemotingBaseCmdlet.ContainerId" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(Mandatory=true, ParameterSetName="ContainerId", ValueFromPipelineByPropertyName=true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.ValidateNotNullOrEmpty</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            ID of target container.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Credential">
+      <MemberSignature Language="C#" Value="public virtual System.Management.Automation.PSCredential Credential { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Management.Automation.PSCredential Credential" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.PSRemotingBaseCmdlet.Credential" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Property Credential As PSCredential" />
+      <MemberSignature Language="F#" Value="member this.Credential : System.Management.Automation.PSCredential with get, set" Usage="Microsoft.PowerShell.Commands.PSRemotingBaseCmdlet.Credential" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Credential</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="ComputerName", ValueFromPipelineByPropertyName=true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="Uri", ValueFromPipelineByPropertyName=true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="VMId", ValueFromPipelineByPropertyName=true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="VMName", ValueFromPipelineByPropertyName=true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.PSCredential</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Specifies the credentials of the user to impersonate in the
+            remote machine. If this parameter is not specified then the
+            credentials of the current user process will be assumed.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HostName">
+      <MemberSignature Language="C#" Value="public virtual string[] HostName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string[] HostName" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.PSRemotingBaseCmdlet.HostName" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Property HostName As String()" />
+      <MemberSignature Language="F#" Value="member this.HostName : string[] with get, set" Usage="Microsoft.PowerShell.Commands.PSRemotingBaseCmdlet.HostName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(Mandatory=true, ParameterSetName="SSHHost", Position=0)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.ValidateNotNullOrEmpty</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Host name for an SSH remote connection.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="KeyFilePath">
+      <MemberSignature Language="C#" Value="public virtual string KeyFilePath { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string KeyFilePath" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.PSRemotingBaseCmdlet.KeyFilePath" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Property KeyFilePath As String" />
+      <MemberSignature Language="F#" Value="member this.KeyFilePath : string with get, set" Usage="Microsoft.PowerShell.Commands.PSRemotingBaseCmdlet.KeyFilePath" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Alias(Mono.Cecil.CustomAttributeArgument[])</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="SSHHost")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.ValidateNotNullOrEmpty</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            SSH Key File Path
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Port">
+      <MemberSignature Language="C#" Value="public virtual int Port { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Port" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.PSRemotingBaseCmdlet.Port" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Property Port As Integer" />
+      <MemberSignature Language="F#" Value="member this.Port : int with get, set" Usage="Microsoft.PowerShell.Commands.PSRemotingBaseCmdlet.Port" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="ComputerName")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="SSHHost")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.ValidateRange(Mono.Cecil.CustomAttributeArgument, Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Port specifies the alternate port to be used in case the
+            default ports are not used for the transport mechanism
+            (port 80 for http and port 443 for useSSL)
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+            Currently this is being accepted as a parameter. But in future
+            support will be added to make this a part of a policy setting.
+            When a policy setting is in place this parameter can be used
+            to override the policy setting
+            </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ResolvedComputerNames">
+      <MemberSignature Language="C#" Value="protected string[] ResolvedComputerNames { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string[] ResolvedComputerNames" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.PSRemotingBaseCmdlet.ResolvedComputerNames" />
+      <MemberSignature Language="VB.NET" Value="Protected Property ResolvedComputerNames As String()" />
+      <MemberSignature Language="F#" Value="member this.ResolvedComputerNames : string[] with get, set" Usage="Microsoft.PowerShell.Commands.PSRemotingBaseCmdlet.ResolvedComputerNames" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Computer names after they have been resolved
+            (null, empty string, "." resolves to localhost)
+            </summary>
+        <value>To be added.</value>
+        <remarks>If Null or empty string is specified, then localhost is assumed.
+            The ResolveComputerNames will include this.
+            </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RunAsAdministrator">
+      <MemberSignature Language="C#" Value="public virtual System.Management.Automation.SwitchParameter RunAsAdministrator { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Management.Automation.SwitchParameter RunAsAdministrator" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.PSRemotingBaseCmdlet.RunAsAdministrator" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Property RunAsAdministrator As SwitchParameter" />
+      <MemberSignature Language="F#" Value="member this.RunAsAdministrator : System.Management.Automation.SwitchParameter with get, set" Usage="Microsoft.PowerShell.Commands.PSRemotingBaseCmdlet.RunAsAdministrator" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="ContainerId")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.SwitchParameter</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            When set, PowerShell process inside container will be launched with
+            high privileged account.
+            Otherwise (default case), PowerShell process inside container will be launched
+            with low privileged account.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Session">
+      <MemberSignature Language="C#" Value="public virtual System.Management.Automation.Runspaces.PSSession[] Session { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Management.Automation.Runspaces.PSSession[] Session" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.PSRemotingBaseCmdlet.Session" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Property Session As PSSession()" />
+      <MemberSignature Language="F#" Value="member this.Session : System.Management.Automation.Runspaces.PSSession[] with get, set" Usage="Microsoft.PowerShell.Commands.PSRemotingBaseCmdlet.Session" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="Session", Position=0, ValueFromPipelineByPropertyName=true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.ValidateNotNullOrEmpty</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.Runspaces.PSSession[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The PSSession object describing the remote runspace
+            using which the specified cmdlet operation will be performed
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SessionOption">
+      <MemberSignature Language="C#" Value="public virtual System.Management.Automation.Remoting.PSSessionOption SessionOption { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Management.Automation.Remoting.PSSessionOption SessionOption" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.PSRemotingBaseCmdlet.SessionOption" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Property SessionOption As PSSessionOption" />
+      <MemberSignature Language="F#" Value="member this.SessionOption : System.Management.Automation.Remoting.PSSessionOption with get, set" Usage="Microsoft.PowerShell.Commands.PSRemotingBaseCmdlet.SessionOption" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="ComputerName")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="Uri")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.ValidateNotNull</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.Remoting.PSSessionOption</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Extended Session Options for controlling the session creation. Use
+            "New-WSManSessionOption" cmdlet to supply value for this parameter.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SSHConnection">
+      <MemberSignature Language="C#" Value="public virtual System.Collections.Hashtable[] SSHConnection { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Hashtable[] SSHConnection" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.PSRemotingBaseCmdlet.SSHConnection" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Property SSHConnection As Hashtable()" />
+      <MemberSignature Language="F#" Value="member this.SSHConnection : System.Collections.Hashtable[] with get, set" Usage="Microsoft.PowerShell.Commands.PSRemotingBaseCmdlet.SSHConnection" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(Mandatory=true, ParameterSetName="SSHHostHashParam")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.ValidateNotNullOrEmpty</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Collections.Hashtable[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Hashtable array containing SSH connection parameters for each remote target
+              ComputerName  (Alias: HostName)           (required)
+              UserName                                  (optional)
+              KeyFilePath   (Alias: IdentityFilePath)   (optional)
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SSHTransport">
+      <MemberSignature Language="C#" Value="public virtual System.Management.Automation.SwitchParameter SSHTransport { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Management.Automation.SwitchParameter SSHTransport" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.PSRemotingBaseCmdlet.SSHTransport" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Property SSHTransport As SwitchParameter" />
+      <MemberSignature Language="F#" Value="member this.SSHTransport : System.Management.Automation.SwitchParameter with get, set" Usage="Microsoft.PowerShell.Commands.PSRemotingBaseCmdlet.SSHTransport" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="SSHHost")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.ValidateSet(Mono.Cecil.CustomAttributeArgument[])</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.SwitchParameter</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            This parameter specifies that SSH is used to establish the remote
+            connection and act as the remoting transport.  By default WinRM is used
+            as the remoting transport.  Using the SSH transport requires that SSH is
+            installed and PowerShell remoting is enabled on both client and remote machines.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ThrottleLimit">
+      <MemberSignature Language="C#" Value="public virtual int ThrottleLimit { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 ThrottleLimit" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.PSRemotingBaseCmdlet.ThrottleLimit" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Property ThrottleLimit As Integer" />
+      <MemberSignature Language="F#" Value="member this.ThrottleLimit : int with get, set" Usage="Microsoft.PowerShell.Commands.PSRemotingBaseCmdlet.ThrottleLimit" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="ComputerName")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="Session")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="Uri")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="ContainerId")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="VMId")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="VMName")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Allows the user of the cmdlet to specify a throttling value
+            for throttling the number of remote operations that can
+            be executed simultaneously
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UriParameterSet">
+      <MemberSignature Language="C#" Value="protected const string UriParameterSet;" />
+      <MemberSignature Language="ILAsm" Value=".field family static literal string UriParameterSet" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.PowerShell.Commands.PSRemotingBaseCmdlet.UriParameterSet" />
+      <MemberSignature Language="VB.NET" Value="Protected Const UriParameterSet As String " />
+      <MemberSignature Language="F#" Value="val mutable UriParameterSet : string" Usage="Microsoft.PowerShell.Commands.PSRemotingBaseCmdlet.UriParameterSet" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Uri parameter set
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UserName">
+      <MemberSignature Language="C#" Value="public virtual string UserName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string UserName" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.PSRemotingBaseCmdlet.UserName" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Property UserName As String" />
+      <MemberSignature Language="F#" Value="member this.UserName : string with get, set" Usage="Microsoft.PowerShell.Commands.PSRemotingBaseCmdlet.UserName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="SSHHost")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.ValidateNotNullOrEmpty</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            SSH User Name
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UseSSL">
+      <MemberSignature Language="C#" Value="public virtual System.Management.Automation.SwitchParameter UseSSL { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Management.Automation.SwitchParameter UseSSL" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.PSRemotingBaseCmdlet.UseSSL" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Property UseSSL As SwitchParameter" />
+      <MemberSignature Language="F#" Value="member this.UseSSL : System.Management.Automation.SwitchParameter with get, set" Usage="Microsoft.PowerShell.Commands.PSRemotingBaseCmdlet.UseSSL" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="ComputerName")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.SwitchParameter</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            This parameter suggests that the transport scheme to be used for
+            remote connections is useSSL instead of the default http.Since
+            there are only two possible transport schemes that are possible
+            at this point, a SwitchParameter is being used to switch between
+            the two.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ValidateComputerName">
+      <MemberSignature Language="C#" Value="protected void ValidateComputerName (string[] computerNames);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void ValidateComputerName(string[] computerNames) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Commands.PSRemotingBaseCmdlet.ValidateComputerName(System.String[])" />
+      <MemberSignature Language="VB.NET" Value="Protected Sub ValidateComputerName (computerNames As String())" />
+      <MemberSignature Language="F#" Value="member this.ValidateComputerName : string[] -&gt; unit" Usage="pSRemotingBaseCmdlet.ValidateComputerName computerNames" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="computerNames" Type="System.String[]" />
+      </Parameters>
+      <Docs>
+        <param name="computerNames">collection of computer
+            names to validate</param>
+        <summary>
+            Validates computer names to check if none of them
+            happen to be a Uri. If so this throws an error
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ValidateRemoteRunspacesSpecified">
+      <MemberSignature Language="C#" Value="protected void ValidateRemoteRunspacesSpecified ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void ValidateRemoteRunspacesSpecified() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Commands.PSRemotingBaseCmdlet.ValidateRemoteRunspacesSpecified" />
+      <MemberSignature Language="VB.NET" Value="Protected Sub ValidateRemoteRunspacesSpecified ()" />
+      <MemberSignature Language="F#" Value="member this.ValidateRemoteRunspacesSpecified : unit -&gt; unit" Usage="pSRemotingBaseCmdlet.ValidateRemoteRunspacesSpecified " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Validate the PSSession objects specified and write
+            appropriate error records.
+            </summary>
+        <remarks>This function will lead in terminating errors when any of
+            the validations fail</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="VMId">
+      <MemberSignature Language="C#" Value="public virtual Guid[] VMId { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Guid[] VMId" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.PSRemotingBaseCmdlet.VMId" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Property VMId As Guid()" />
+      <MemberSignature Language="F#" Value="member this.VMId : Guid[] with get, set" Usage="Microsoft.PowerShell.Commands.PSRemotingBaseCmdlet.VMId" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Alias(Mono.Cecil.CustomAttributeArgument[])</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(Mandatory=true, ParameterSetName="VMId", Position=0, ValueFromPipelineByPropertyName=true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.ValidateNotNullOrEmpty</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Guid[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Guid of target virtual machine.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="VMName">
+      <MemberSignature Language="C#" Value="public virtual string[] VMName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string[] VMName" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.PSRemotingBaseCmdlet.VMName" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Property VMName As String()" />
+      <MemberSignature Language="F#" Value="member this.VMName : string[] with get, set" Usage="Microsoft.PowerShell.Commands.PSRemotingBaseCmdlet.VMName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(Mandatory=true, ParameterSetName="VMName", ValueFromPipelineByPropertyName=true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.ValidateNotNullOrEmpty</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Name of target virtual machine.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

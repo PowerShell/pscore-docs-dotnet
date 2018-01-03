@@ -1,0 +1,113 @@
+﻿<Type Name="CommandCollection" FullName="System.Management.Automation.Runspaces.CommandCollection">
+  <TypeSignature Language="C#" Value="public sealed class CommandCollection : System.Collections.ObjectModel.Collection&lt;System.Management.Automation.Runspaces.Command&gt;" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit CommandCollection extends System.Collections.ObjectModel.Collection`1&lt;class System.Management.Automation.Runspaces.Command&gt;" />
+  <TypeSignature Language="DocId" Value="T:System.Management.Automation.Runspaces.CommandCollection" />
+  <TypeSignature Language="VB.NET" Value="Public NotInheritable Class CommandCollection&#xA;Inherits Collection(Of Command)" />
+  <TypeSignature Language="F#" Value="type CommandCollection = class&#xA;    inherit Collection&lt;Command&gt;" />
+  <AssemblyInfo>
+    <AssemblyName>System.Management.Automation</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Collections.ObjectModel.Collection&lt;System.Management.Automation.Runspaces.Command&gt;</BaseTypeName>
+    <BaseTypeArguments>
+      <BaseTypeArgument TypeParamName="!0">System.Management.Automation.Runspaces.Command</BaseTypeArgument>
+    </BaseTypeArguments>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Defines a collection of Commands. This collection is used by <see cref="T:System.Management.Automation.Runspaces.Pipeline" /> to define
+            elements of pipeline.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public void Add (string command);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Add(string command) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Runspaces.CommandCollection.Add(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Add (command As String)" />
+      <MemberSignature Language="F#" Value="override this.Add : string -&gt; unit" Usage="commandCollection.Add command" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="command" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="command">To be added.</param>
+        <summary>
+            Adds a new command for given string
+            </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+            command is null.
+            </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AddScript">
+      <MemberSignature Language="C#" Value="public void AddScript (string scriptContents);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AddScript(string scriptContents) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Runspaces.CommandCollection.AddScript(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub AddScript (scriptContents As String)" />
+      <MemberSignature Language="F#" Value="member this.AddScript : string -&gt; unit" Usage="commandCollection.AddScript scriptContents" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="scriptContents" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="scriptContents">script contents</param>
+        <summary>
+            Adds a new script command
+            </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+            scriptContents is null.
+            </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AddScript">
+      <MemberSignature Language="C#" Value="public void AddScript (string scriptContents, bool useLocalScope);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AddScript(string scriptContents, bool useLocalScope) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Runspaces.CommandCollection.AddScript(System.String,System.Boolean)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub AddScript (scriptContents As String, useLocalScope As Boolean)" />
+      <MemberSignature Language="F#" Value="member this.AddScript : string * bool -&gt; unit" Usage="commandCollection.AddScript (scriptContents, useLocalScope)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="scriptContents" Type="System.String" />
+        <Parameter Name="useLocalScope" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="scriptContents">script contents</param>
+        <param name="useLocalScope">if true local scope is used to run the script command</param>
+        <summary>
+            Adds a new scrip command for given script
+            </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+            scriptContents is null.
+            </exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

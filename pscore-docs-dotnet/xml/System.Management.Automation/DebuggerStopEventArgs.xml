@@ -1,0 +1,120 @@
+﻿<Type Name="DebuggerStopEventArgs" FullName="System.Management.Automation.DebuggerStopEventArgs">
+  <TypeSignature Language="C#" Value="public class DebuggerStopEventArgs : EventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit DebuggerStopEventArgs extends System.EventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Management.Automation.DebuggerStopEventArgs" />
+  <TypeSignature Language="VB.NET" Value="Public Class DebuggerStopEventArgs&#xA;Inherits EventArgs" />
+  <TypeSignature Language="F#" Value="type DebuggerStopEventArgs = class&#xA;    inherit EventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>System.Management.Automation</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.EventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Arguments for the DebuggerStop event.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DebuggerStopEventArgs (System.Management.Automation.InvocationInfo invocationInfo, System.Collections.ObjectModel.Collection&lt;System.Management.Automation.Breakpoint&gt; breakpoints, System.Management.Automation.DebuggerResumeAction resumeAction);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Management.Automation.InvocationInfo invocationInfo, class System.Collections.ObjectModel.Collection`1&lt;class System.Management.Automation.Breakpoint&gt; breakpoints, valuetype System.Management.Automation.DebuggerResumeAction resumeAction) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.DebuggerStopEventArgs.#ctor(System.Management.Automation.InvocationInfo,System.Collections.ObjectModel.Collection{System.Management.Automation.Breakpoint},System.Management.Automation.DebuggerResumeAction)" />
+      <MemberSignature Language="F#" Value="new System.Management.Automation.DebuggerStopEventArgs : System.Management.Automation.InvocationInfo * System.Collections.ObjectModel.Collection&lt;System.Management.Automation.Breakpoint&gt; * System.Management.Automation.DebuggerResumeAction -&gt; System.Management.Automation.DebuggerStopEventArgs" Usage="new System.Management.Automation.DebuggerStopEventArgs (invocationInfo, breakpoints, resumeAction)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="invocationInfo" Type="System.Management.Automation.InvocationInfo" />
+        <Parameter Name="breakpoints" Type="System.Collections.ObjectModel.Collection&lt;System.Management.Automation.Breakpoint&gt;" />
+        <Parameter Name="resumeAction" Type="System.Management.Automation.DebuggerResumeAction" />
+      </Parameters>
+      <Docs>
+        <param name="invocationInfo"></param>
+        <param name="breakpoints"></param>
+        <param name="resumeAction"></param>
+        <summary>
+            Constructor.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Breakpoints">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.ReadOnlyCollection&lt;System.Management.Automation.Breakpoint&gt; Breakpoints { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ObjectModel.ReadOnlyCollection`1&lt;class System.Management.Automation.Breakpoint&gt; Breakpoints" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.DebuggerStopEventArgs.Breakpoints" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Breakpoints As ReadOnlyCollection(Of Breakpoint)" />
+      <MemberSignature Language="F#" Value="member this.Breakpoints : System.Collections.ObjectModel.ReadOnlyCollection&lt;System.Management.Automation.Breakpoint&gt;" Usage="System.Management.Automation.DebuggerStopEventArgs.Breakpoints" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.ReadOnlyCollection&lt;System.Management.Automation.Breakpoint&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The breakpoint(s) hit
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+            Note there may be more than one breakpoint on the same object (line, variable, command). A single event is
+            raised for all these breakpoints.
+            </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InvocationInfo">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.InvocationInfo InvocationInfo { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Management.Automation.InvocationInfo InvocationInfo" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.DebuggerStopEventArgs.InvocationInfo" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property InvocationInfo As InvocationInfo" />
+      <MemberSignature Language="F#" Value="member this.InvocationInfo : System.Management.Automation.InvocationInfo" Usage="System.Management.Automation.DebuggerStopEventArgs.InvocationInfo" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.InvocationInfo</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Invocation info of the code being executed
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ResumeAction">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.DebuggerResumeAction ResumeAction { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Management.Automation.DebuggerResumeAction ResumeAction" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.DebuggerStopEventArgs.ResumeAction" />
+      <MemberSignature Language="VB.NET" Value="Public Property ResumeAction As DebuggerResumeAction" />
+      <MemberSignature Language="F#" Value="member this.ResumeAction : System.Management.Automation.DebuggerResumeAction with get, set" Usage="System.Management.Automation.DebuggerStopEventArgs.ResumeAction" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.DebuggerResumeAction</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            This property must be set in the event handler to indicate the debugger what it should do next
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+            The default action is DebuggerAction.Continue.
+            DebuggerAction.StepToLine is only valid when debugging an script.
+            </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

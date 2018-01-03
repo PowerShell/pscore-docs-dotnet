@@ -1,0 +1,172 @@
+﻿<Type Name="PSEventJob" FullName="System.Management.Automation.PSEventJob">
+  <TypeSignature Language="C#" Value="public class PSEventJob : System.Management.Automation.Job" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit PSEventJob extends System.Management.Automation.Job" />
+  <TypeSignature Language="DocId" Value="T:System.Management.Automation.PSEventJob" />
+  <TypeSignature Language="VB.NET" Value="Public Class PSEventJob&#xA;Inherits Job" />
+  <TypeSignature Language="F#" Value="type PSEventJob = class&#xA;    inherit Job" />
+  <AssemblyInfo>
+    <AssemblyName>System.Management.Automation</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Management.Automation.Job</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            A class to give a job-like interface to event actions
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public PSEventJob (System.Management.Automation.PSEventManager eventManager, System.Management.Automation.PSEventSubscriber subscriber, System.Management.Automation.ScriptBlock action, string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Management.Automation.PSEventManager eventManager, class System.Management.Automation.PSEventSubscriber subscriber, class System.Management.Automation.ScriptBlock action, string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.PSEventJob.#ctor(System.Management.Automation.PSEventManager,System.Management.Automation.PSEventSubscriber,System.Management.Automation.ScriptBlock,System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (eventManager As PSEventManager, subscriber As PSEventSubscriber, action As ScriptBlock, name As String)" />
+      <MemberSignature Language="F#" Value="new System.Management.Automation.PSEventJob : System.Management.Automation.PSEventManager * System.Management.Automation.PSEventSubscriber * System.Management.Automation.ScriptBlock * string -&gt; System.Management.Automation.PSEventJob" Usage="new System.Management.Automation.PSEventJob (eventManager, subscriber, action, name)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="eventManager" Type="System.Management.Automation.PSEventManager" />
+        <Parameter Name="subscriber" Type="System.Management.Automation.PSEventSubscriber" />
+        <Parameter Name="action" Type="System.Management.Automation.ScriptBlock" />
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="eventManager">To be added.</param>
+        <param name="subscriber">To be added.</param>
+        <param name="action">To be added.</param>
+        <param name="name">To be added.</param>
+        <summary>
+             Creates a new instance of the PSEventJob class.
+            
+             <param name="eventManager">
+             The event manager that controls the event subscriptions
+             </param><param name="subscriber">
+             The subscriber that generates these actions
+             </param><param name="action">
+             The script block invoked for this event
+             </param><param name="name">
+             The name of the job
+             </param></summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HasMoreData">
+      <MemberSignature Language="C#" Value="public override bool HasMoreData { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool HasMoreData" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.PSEventJob.HasMoreData" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides ReadOnly Property HasMoreData As Boolean" />
+      <MemberSignature Language="F#" Value="member this.HasMoreData : bool" Usage="System.Management.Automation.PSEventJob.HasMoreData" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            indicates if more data is available
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+            This has more data if any of the child jobs have more data.
+            </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Location">
+      <MemberSignature Language="C#" Value="public override string Location { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Location" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.PSEventJob.Location" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides ReadOnly Property Location As String" />
+      <MemberSignature Language="F#" Value="member this.Location : string" Usage="System.Management.Automation.PSEventJob.Location" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Location in which this job is running
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Module">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.PSModuleInfo Module { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Management.Automation.PSModuleInfo Module" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.PSEventJob.Module" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Module As PSModuleInfo" />
+      <MemberSignature Language="F#" Value="member this.Module : System.Management.Automation.PSModuleInfo" Usage="System.Management.Automation.PSEventJob.Module" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.PSModuleInfo</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets dynamic module where the action is invoked
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StatusMessage">
+      <MemberSignature Language="C#" Value="public override string StatusMessage { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string StatusMessage" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.PSEventJob.StatusMessage" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides ReadOnly Property StatusMessage As String" />
+      <MemberSignature Language="F#" Value="member this.StatusMessage : string" Usage="System.Management.Automation.PSEventJob.StatusMessage" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Message indicating status of the job
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StopJob">
+      <MemberSignature Language="C#" Value="public override void StopJob ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void StopJob() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.PSEventJob.StopJob" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Sub StopJob ()" />
+      <MemberSignature Language="F#" Value="override this.StopJob : unit -&gt; unit" Usage="pSEventJob.StopJob " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Stop Job
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

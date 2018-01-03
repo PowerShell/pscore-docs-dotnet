@@ -1,0 +1,143 @@
+﻿<Type Name="PathInfo" FullName="System.Management.Automation.PathInfo">
+  <TypeSignature Language="C#" Value="public sealed class PathInfo" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit PathInfo extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Management.Automation.PathInfo" />
+  <TypeSignature Language="VB.NET" Value="Public NotInheritable Class PathInfo" />
+  <TypeSignature Language="F#" Value="type PathInfo = class" />
+  <AssemblyInfo>
+    <AssemblyName>System.Management.Automation</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            An object that represents a path.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Drive">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.PSDriveInfo Drive { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Management.Automation.PSDriveInfo Drive" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.PathInfo.Drive" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Drive As PSDriveInfo" />
+      <MemberSignature Language="F#" Value="member this.Drive : System.Management.Automation.PSDriveInfo" Usage="System.Management.Automation.PathInfo.Drive" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.PSDriveInfo</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the drive that contains the path.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Path">
+      <MemberSignature Language="C#" Value="public string Path { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Path" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.PathInfo.Path" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Path As String" />
+      <MemberSignature Language="F#" Value="member this.Path : string" Usage="System.Management.Automation.PathInfo.Path" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the MSH path that this object represents.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Provider">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.ProviderInfo Provider { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Management.Automation.ProviderInfo Provider" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.PathInfo.Provider" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Provider As ProviderInfo" />
+      <MemberSignature Language="F#" Value="member this.Provider : System.Management.Automation.ProviderInfo" Usage="System.Management.Automation.PathInfo.Provider" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.ProviderInfo</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the provider that contains the path.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ProviderPath">
+      <MemberSignature Language="C#" Value="public string ProviderPath { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ProviderPath" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.PathInfo.ProviderPath" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ProviderPath As String" />
+      <MemberSignature Language="F#" Value="member this.ProviderPath : string" Usage="System.Management.Automation.PathInfo.ProviderPath" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+             Gets the provider internal path for the PSPath that this PathInfo represents.
+             </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.Management.Automation.ProviderInvocationException">
+             The provider encountered an error when resolving the path.
+             </exception>
+        <exception cref="T:System.InvalidOperationException">
+             The path was a home relative path but the home path was not
+             set for the provider.
+             </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.PathInfo.ToString" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Function ToString () As String" />
+      <MemberSignature Language="F#" Value="override this.ToString : unit -&gt; string" Usage="pathInfo.ToString " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+             Gets a string representing the MSH path.
+             </summary>
+        <returns>
+             A string representing the MSH path.
+             </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

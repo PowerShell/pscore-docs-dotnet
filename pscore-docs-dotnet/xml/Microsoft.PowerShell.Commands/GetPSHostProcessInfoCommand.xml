@@ -1,0 +1,160 @@
+﻿<Type Name="GetPSHostProcessInfoCommand" FullName="Microsoft.PowerShell.Commands.GetPSHostProcessInfoCommand">
+  <TypeSignature Language="C#" Value="public sealed class GetPSHostProcessInfoCommand : System.Management.Automation.PSCmdlet" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit GetPSHostProcessInfoCommand extends System.Management.Automation.PSCmdlet" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.PowerShell.Commands.GetPSHostProcessInfoCommand" />
+  <TypeSignature Language="VB.NET" Value="Public NotInheritable Class GetPSHostProcessInfoCommand&#xA;Inherits PSCmdlet" />
+  <TypeSignature Language="F#" Value="type GetPSHostProcessInfoCommand = class&#xA;    inherit PSCmdlet" />
+  <AssemblyInfo>
+    <AssemblyName>System.Management.Automation</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Management.Automation.PSCmdlet</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Management.Automation.Cmdlet("Get", "PSHostProcessInfo", DefaultParameterSetName="ProcessNameParameterSet", HelpUri="https://go.microsoft.com/fwlink/?LinkId=517012")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Management.Automation.OutputType(typeof(Microsoft.PowerShell.Commands.PSHostProcessInfo))</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>
+            This cmdlet returns a collection of PSHostProcessInfo objects containing
+            process and AppDomain name information for processes that have PowerShell loaded.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public GetPSHostProcessInfoCommand ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Commands.GetPSHostProcessInfoCommand.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New ()" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EndProcessing">
+      <MemberSignature Language="C#" Value="protected override void EndProcessing ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void EndProcessing() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Commands.GetPSHostProcessInfoCommand.EndProcessing" />
+      <MemberSignature Language="VB.NET" Value="Protected Overrides Sub EndProcessing ()" />
+      <MemberSignature Language="F#" Value="override this.EndProcessing : unit -&gt; unit" Usage="getPSHostProcessInfoCommand.EndProcessing " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            End bock processing
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Id">
+      <MemberSignature Language="C#" Value="public int[] Id { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32[] Id" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.GetPSHostProcessInfoCommand.Id" />
+      <MemberSignature Language="VB.NET" Value="Public Property Id As Integer()" />
+      <MemberSignature Language="F#" Value="member this.Id : int[] with get, set" Usage="Microsoft.PowerShell.Commands.GetPSHostProcessInfoCommand.Id" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(Mandatory=true, ParameterSetName="ProcessIdParameterSet", Position=0)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.ValidateNotNullOrEmpty</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Id of process
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public string[] Name { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string[] Name" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.GetPSHostProcessInfoCommand.Name" />
+      <MemberSignature Language="VB.NET" Value="Public Property Name As String()" />
+      <MemberSignature Language="F#" Value="member this.Name : string[] with get, set" Usage="Microsoft.PowerShell.Commands.GetPSHostProcessInfoCommand.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="ProcessNameParameterSet", Position=0)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.ValidateNotNullOrEmpty</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Name of Process
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Process">
+      <MemberSignature Language="C#" Value="public System.Diagnostics.Process[] Process { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Diagnostics.Process[] Process" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.GetPSHostProcessInfoCommand.Process" />
+      <MemberSignature Language="VB.NET" Value="Public Property Process As Process()" />
+      <MemberSignature Language="F#" Value="member this.Process : System.Diagnostics.Process[] with get, set" Usage="Microsoft.PowerShell.Commands.GetPSHostProcessInfoCommand.Process" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(Mandatory=true, ParameterSetName="ProcessParameterSet", Position=0, ValueFromPipeline=true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.ValidateNotNullOrEmpty</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Diagnostics.Process[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Process
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

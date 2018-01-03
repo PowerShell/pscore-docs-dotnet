@@ -1,0 +1,69 @@
+﻿<Type Name="RedirectionAst" FullName="System.Management.Automation.Language.RedirectionAst">
+  <TypeSignature Language="C#" Value="public abstract class RedirectionAst : System.Management.Automation.Language.Ast" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit RedirectionAst extends System.Management.Automation.Language.Ast" />
+  <TypeSignature Language="DocId" Value="T:System.Management.Automation.Language.RedirectionAst" />
+  <TypeSignature Language="VB.NET" Value="Public MustInherit Class RedirectionAst&#xA;Inherits Ast" />
+  <TypeSignature Language="F#" Value="type RedirectionAst = class&#xA;    inherit Ast" />
+  <AssemblyInfo>
+    <AssemblyName>System.Management.Automation</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Management.Automation.Language.Ast</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            An abstract base class representing both file redirections and merging redirections.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected RedirectionAst (System.Management.Automation.Language.IScriptExtent extent, System.Management.Automation.Language.RedirectionStream from);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(class System.Management.Automation.Language.IScriptExtent extent, valuetype System.Management.Automation.Language.RedirectionStream from) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Language.RedirectionAst.#ctor(System.Management.Automation.Language.IScriptExtent,System.Management.Automation.Language.RedirectionStream)" />
+      <MemberSignature Language="VB.NET" Value="Protected Sub New (extent As IScriptExtent, from As RedirectionStream)" />
+      <MemberSignature Language="F#" Value="new System.Management.Automation.Language.RedirectionAst : System.Management.Automation.Language.IScriptExtent * System.Management.Automation.Language.RedirectionStream -&gt; System.Management.Automation.Language.RedirectionAst" Usage="new System.Management.Automation.Language.RedirectionAst (extent, from)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="extent" Type="System.Management.Automation.Language.IScriptExtent" />
+        <Parameter Name="from" Type="System.Management.Automation.Language.RedirectionStream" />
+      </Parameters>
+      <Docs>
+        <param name="extent">The extent of the redirection.</param>
+        <param name="from">The stream to read from.</param>
+        <summary>
+            Initialize the common fields in a redirection.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FromStream">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.Language.RedirectionStream FromStream { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Management.Automation.Language.RedirectionStream FromStream" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.Language.RedirectionAst.FromStream" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property FromStream As RedirectionStream" />
+      <MemberSignature Language="F#" Value="member this.FromStream : System.Management.Automation.Language.RedirectionStream" Usage="System.Management.Automation.Language.RedirectionAst.FromStream" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.Language.RedirectionStream</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The stream to read objects from.  Objects are either merged with another stream, or written to a file.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

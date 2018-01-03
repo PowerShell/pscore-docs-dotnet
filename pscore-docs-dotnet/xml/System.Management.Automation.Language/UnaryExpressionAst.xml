@@ -1,0 +1,143 @@
+﻿<Type Name="UnaryExpressionAst" FullName="System.Management.Automation.Language.UnaryExpressionAst">
+  <TypeSignature Language="C#" Value="public class UnaryExpressionAst : System.Management.Automation.Language.ExpressionAst" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit UnaryExpressionAst extends System.Management.Automation.Language.ExpressionAst" />
+  <TypeSignature Language="DocId" Value="T:System.Management.Automation.Language.UnaryExpressionAst" />
+  <TypeSignature Language="VB.NET" Value="Public Class UnaryExpressionAst&#xA;Inherits ExpressionAst" />
+  <TypeSignature Language="F#" Value="type UnaryExpressionAst = class&#xA;    inherit ExpressionAst" />
+  <AssemblyInfo>
+    <AssemblyName>System.Management.Automation</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Management.Automation.Language.ExpressionAst</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            The ast representing an expression with a unary operator.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public UnaryExpressionAst (System.Management.Automation.Language.IScriptExtent extent, System.Management.Automation.Language.TokenKind tokenKind, System.Management.Automation.Language.ExpressionAst child);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Management.Automation.Language.IScriptExtent extent, valuetype System.Management.Automation.Language.TokenKind tokenKind, class System.Management.Automation.Language.ExpressionAst child) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Language.UnaryExpressionAst.#ctor(System.Management.Automation.Language.IScriptExtent,System.Management.Automation.Language.TokenKind,System.Management.Automation.Language.ExpressionAst)" />
+      <MemberSignature Language="F#" Value="new System.Management.Automation.Language.UnaryExpressionAst : System.Management.Automation.Language.IScriptExtent * System.Management.Automation.Language.TokenKind * System.Management.Automation.Language.ExpressionAst -&gt; System.Management.Automation.Language.UnaryExpressionAst" Usage="new System.Management.Automation.Language.UnaryExpressionAst (extent, tokenKind, child)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="extent" Type="System.Management.Automation.Language.IScriptExtent" />
+        <Parameter Name="tokenKind" Type="System.Management.Automation.Language.TokenKind" />
+        <Parameter Name="child" Type="System.Management.Automation.Language.ExpressionAst" />
+      </Parameters>
+      <Docs>
+        <param name="extent">The extent of the expression, including the operator (which may be prefix or postfix.)</param>
+        <param name="tokenKind">The unary operator token kind for the operation.</param>
+        <param name="child">The expression that the unary operator is applied to.</param>
+        <summary>
+            Construct a unary expression.
+            </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.Management.Automation.PSArgumentNullException">
+            If <paramref name="extent" /> or <paramref name="child" /> is null.
+            </exception>
+        <exception cref="T:System.Management.Automation.PSArgumentException">
+            If <paramref name="tokenKind" /> is not a valid unary operator.
+            </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Child">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.Language.ExpressionAst Child { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Management.Automation.Language.ExpressionAst Child" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.Language.UnaryExpressionAst.Child" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Child As ExpressionAst" />
+      <MemberSignature Language="F#" Value="member this.Child : System.Management.Automation.Language.ExpressionAst" Usage="System.Management.Automation.Language.UnaryExpressionAst.Child" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.Language.ExpressionAst</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The child expression the unary operator is applied to.  The property is never null.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Copy">
+      <MemberSignature Language="C#" Value="public override System.Management.Automation.Language.Ast Copy ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Management.Automation.Language.Ast Copy() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Language.UnaryExpressionAst.Copy" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Function Copy () As Ast" />
+      <MemberSignature Language="F#" Value="override this.Copy : unit -&gt; System.Management.Automation.Language.Ast" Usage="unaryExpressionAst.Copy " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.Language.Ast</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Copy the UnaryExpressionAst instance
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StaticType">
+      <MemberSignature Language="C#" Value="public override Type StaticType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type StaticType" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.Language.UnaryExpressionAst.StaticType" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides ReadOnly Property StaticType As Type" />
+      <MemberSignature Language="F#" Value="member this.StaticType : Type" Usage="System.Management.Automation.Language.UnaryExpressionAst.StaticType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Returns <c>typeof(bool)</c> if the unary operator is a logical negation, otherwise returns <c>typeof(object)</c>.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TokenKind">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.Language.TokenKind TokenKind { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Management.Automation.Language.TokenKind TokenKind" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.Language.UnaryExpressionAst.TokenKind" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property TokenKind As TokenKind" />
+      <MemberSignature Language="F#" Value="member this.TokenKind : System.Management.Automation.Language.TokenKind" Usage="System.Management.Automation.Language.UnaryExpressionAst.TokenKind" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.Language.TokenKind</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The operator token for the unary expression.  The value returned is always a unary operator.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

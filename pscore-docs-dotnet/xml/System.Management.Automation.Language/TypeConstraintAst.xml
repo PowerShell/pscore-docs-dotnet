@@ -1,0 +1,99 @@
+﻿<Type Name="TypeConstraintAst" FullName="System.Management.Automation.Language.TypeConstraintAst">
+  <TypeSignature Language="C#" Value="public class TypeConstraintAst : System.Management.Automation.Language.AttributeBaseAst" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit TypeConstraintAst extends System.Management.Automation.Language.AttributeBaseAst" />
+  <TypeSignature Language="DocId" Value="T:System.Management.Automation.Language.TypeConstraintAst" />
+  <TypeSignature Language="VB.NET" Value="Public Class TypeConstraintAst&#xA;Inherits AttributeBaseAst" />
+  <TypeSignature Language="F#" Value="type TypeConstraintAst = class&#xA;    inherit AttributeBaseAst" />
+  <AssemblyInfo>
+    <AssemblyName>System.Management.Automation</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Management.Automation.Language.AttributeBaseAst</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            The ast representing a type constraint, which is simply a typename with no arguments.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TypeConstraintAst (System.Management.Automation.Language.IScriptExtent extent, System.Management.Automation.Language.ITypeName typeName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Management.Automation.Language.IScriptExtent extent, class System.Management.Automation.Language.ITypeName typeName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Language.TypeConstraintAst.#ctor(System.Management.Automation.Language.IScriptExtent,System.Management.Automation.Language.ITypeName)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (extent As IScriptExtent, typeName As ITypeName)" />
+      <MemberSignature Language="F#" Value="new System.Management.Automation.Language.TypeConstraintAst : System.Management.Automation.Language.IScriptExtent * System.Management.Automation.Language.ITypeName -&gt; System.Management.Automation.Language.TypeConstraintAst" Usage="new System.Management.Automation.Language.TypeConstraintAst (extent, typeName)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="extent" Type="System.Management.Automation.Language.IScriptExtent" />
+        <Parameter Name="typeName" Type="System.Management.Automation.Language.ITypeName" />
+      </Parameters>
+      <Docs>
+        <param name="extent">The extent of the constraint, from the opening '[' to the closing ']'.</param>
+        <param name="typeName">The type for the constraint.</param>
+        <summary>
+            Construct a type constraint from a possibly not yet resolved typename.
+            </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.Management.Automation.PSArgumentNullException">
+            If <paramref name="extent" /> or <paramref name="typeName" /> is null.
+            </exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TypeConstraintAst (System.Management.Automation.Language.IScriptExtent extent, Type type);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Management.Automation.Language.IScriptExtent extent, class System.Type type) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Language.TypeConstraintAst.#ctor(System.Management.Automation.Language.IScriptExtent,System.Type)" />
+      <MemberSignature Language="F#" Value="new System.Management.Automation.Language.TypeConstraintAst : System.Management.Automation.Language.IScriptExtent * Type -&gt; System.Management.Automation.Language.TypeConstraintAst" Usage="new System.Management.Automation.Language.TypeConstraintAst (extent, type)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="extent" Type="System.Management.Automation.Language.IScriptExtent" />
+        <Parameter Name="type" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="extent">The extent of the constraint, from the opening '[' to the closing ']'.</param>
+        <param name="type">The type for the constraint.</param>
+        <summary>
+            Construct a type constraint from a <see cref="T:System.Type" />.
+            </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.Management.Automation.PSArgumentNullException">
+            If <paramref name="extent" /> or <paramref name="type" /> is null.
+            </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Copy">
+      <MemberSignature Language="C#" Value="public override System.Management.Automation.Language.Ast Copy ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Management.Automation.Language.Ast Copy() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Language.TypeConstraintAst.Copy" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Function Copy () As Ast" />
+      <MemberSignature Language="F#" Value="override this.Copy : unit -&gt; System.Management.Automation.Language.Ast" Usage="typeConstraintAst.Copy " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.Language.Ast</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Copy the TypeConstraintAst instance
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

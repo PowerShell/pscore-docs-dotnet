@@ -1,0 +1,165 @@
+﻿<Type Name="ModuleCmdletBase" FullName="Microsoft.PowerShell.Commands.ModuleCmdletBase">
+  <TypeSignature Language="C#" Value="public class ModuleCmdletBase : System.Management.Automation.PSCmdlet" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ModuleCmdletBase extends System.Management.Automation.PSCmdlet" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.PowerShell.Commands.ModuleCmdletBase" />
+  <TypeSignature Language="VB.NET" Value="Public Class ModuleCmdletBase&#xA;Inherits PSCmdlet" />
+  <TypeSignature Language="F#" Value="type ModuleCmdletBase = class&#xA;    inherit PSCmdlet" />
+  <AssemblyInfo>
+    <AssemblyName>System.Management.Automation</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Management.Automation.PSCmdlet</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            This is the base class for some of the module cmdlets. It contains a number of
+            utility functions for these classes.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ModuleCmdletBase ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Commands.ModuleCmdletBase.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New ()" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddToAppDomainLevelCache">
+      <MemberSignature Language="C#" Value="protected bool AddToAppDomainLevelCache { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool AddToAppDomainLevelCache" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.ModuleCmdletBase.AddToAppDomainLevelCache" />
+      <MemberSignature Language="VB.NET" Value="Protected Property AddToAppDomainLevelCache As Boolean" />
+      <MemberSignature Language="F#" Value="member this.AddToAppDomainLevelCache : bool with get, set" Usage="Microsoft.PowerShell.Commands.ModuleCmdletBase.AddToAppDomainLevelCache" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Add module path to app domain level module path cache if name is not rooted
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BaseArgumentList">
+      <MemberSignature Language="C#" Value="protected object[] BaseArgumentList { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object[] BaseArgumentList" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.ModuleCmdletBase.BaseArgumentList" />
+      <MemberSignature Language="VB.NET" Value="Protected Property BaseArgumentList As Object()" />
+      <MemberSignature Language="F#" Value="member this.BaseArgumentList : obj[] with get, set" Usage="Microsoft.PowerShell.Commands.ModuleCmdletBase.BaseArgumentList" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The arguments to pass to the scriptblock used to create the module
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BaseDisableNameChecking">
+      <MemberSignature Language="C#" Value="protected bool BaseDisableNameChecking { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool BaseDisableNameChecking" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.ModuleCmdletBase.BaseDisableNameChecking" />
+      <MemberSignature Language="VB.NET" Value="Protected Property BaseDisableNameChecking As Boolean" />
+      <MemberSignature Language="F#" Value="member this.BaseDisableNameChecking : bool with get, set" Usage="Microsoft.PowerShell.Commands.ModuleCmdletBase.BaseDisableNameChecking" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Disable warnings on cmdlet and function names that have non-standard verbs
+            or non-standard characters in the noun.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ImportModuleMembers">
+      <MemberSignature Language="C#" Value="protected internal void ImportModuleMembers (System.Management.Automation.PSModuleInfo sourceModule, string prefix);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig instance void ImportModuleMembers(class System.Management.Automation.PSModuleInfo sourceModule, string prefix) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Commands.ModuleCmdletBase.ImportModuleMembers(System.Management.Automation.PSModuleInfo,System.String)" />
+      <MemberSignature Language="VB.NET" Value="Protected Friend Sub ImportModuleMembers (sourceModule As PSModuleInfo, prefix As String)" />
+      <MemberSignature Language="F#" Value="member this.ImportModuleMembers : System.Management.Automation.PSModuleInfo * string -&gt; unit" Usage="moduleCmdletBase.ImportModuleMembers (sourceModule, prefix)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sourceModule" Type="System.Management.Automation.PSModuleInfo" />
+        <Parameter Name="prefix" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="sourceModule">The session state instance to use as the source of the functions</param>
+        <param name="prefix">Command name prefix</param>
+        <summary>
+            Import the script-level functions from one session state to another, calling
+            WriteVerbose for each imported member...
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ImportModuleMembers">
+      <MemberSignature Language="C#" Value="protected internal void ImportModuleMembers (System.Management.Automation.PSModuleInfo sourceModule, string prefix, Microsoft.PowerShell.Commands.ModuleCmdletBase.ImportModuleOptions options);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig instance void ImportModuleMembers(class System.Management.Automation.PSModuleInfo sourceModule, string prefix, valuetype Microsoft.PowerShell.Commands.ModuleCmdletBase/ImportModuleOptions options) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Commands.ModuleCmdletBase.ImportModuleMembers(System.Management.Automation.PSModuleInfo,System.String,Microsoft.PowerShell.Commands.ModuleCmdletBase.ImportModuleOptions)" />
+      <MemberSignature Language="VB.NET" Value="Protected Friend Sub ImportModuleMembers (sourceModule As PSModuleInfo, prefix As String, options As ModuleCmdletBase.ImportModuleOptions)" />
+      <MemberSignature Language="F#" Value="member this.ImportModuleMembers : System.Management.Automation.PSModuleInfo * string * Microsoft.PowerShell.Commands.ModuleCmdletBase.ImportModuleOptions -&gt; unit" Usage="moduleCmdletBase.ImportModuleMembers (sourceModule, prefix, options)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sourceModule" Type="System.Management.Automation.PSModuleInfo" />
+        <Parameter Name="prefix" Type="System.String" />
+        <Parameter Name="options" Type="Microsoft.PowerShell.Commands.ModuleCmdletBase+ImportModuleOptions" />
+      </Parameters>
+      <Docs>
+        <param name="sourceModule">The session state instance to use as the source of the functions</param>
+        <param name="prefix">Command name prefix</param>
+        <param name="options">The set of options that are used while importing a module</param>
+        <summary>
+            Import the script-level functions from one session state to another, calling
+            WriteVerbose for each imported member...
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,203 @@
+﻿<Type Name="BasicHtmlWebResponseObject" FullName="Microsoft.PowerShell.Commands.BasicHtmlWebResponseObject">
+  <TypeSignature Language="C#" Value="public class BasicHtmlWebResponseObject : Microsoft.PowerShell.Commands.WebResponseObject" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit BasicHtmlWebResponseObject extends Microsoft.PowerShell.Commands.WebResponseObject" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.PowerShell.Commands.BasicHtmlWebResponseObject" />
+  <TypeSignature Language="VB.NET" Value="Public Class BasicHtmlWebResponseObject&#xA;Inherits WebResponseObject" />
+  <TypeSignature Language="F#" Value="type BasicHtmlWebResponseObject = class&#xA;    inherit WebResponseObject" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.PowerShell.Commands.Utility</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Microsoft.PowerShell.Commands.WebResponseObject</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Response object for html content without DOM parsing
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public BasicHtmlWebResponseObject (System.Net.Http.HttpResponseMessage response);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Net.Http.HttpResponseMessage response) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Commands.BasicHtmlWebResponseObject.#ctor(System.Net.Http.HttpResponseMessage)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (response As HttpResponseMessage)" />
+      <MemberSignature Language="F#" Value="new Microsoft.PowerShell.Commands.BasicHtmlWebResponseObject : System.Net.Http.HttpResponseMessage -&gt; Microsoft.PowerShell.Commands.BasicHtmlWebResponseObject" Usage="new Microsoft.PowerShell.Commands.BasicHtmlWebResponseObject response" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Commands.Utility</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="response" Type="System.Net.Http.HttpResponseMessage" />
+      </Parameters>
+      <Docs>
+        <param name="response"></param>
+        <summary>
+            Constructor for HtmlWebResponseObject
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public BasicHtmlWebResponseObject (System.Net.Http.HttpResponseMessage response, System.IO.Stream contentStream);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Net.Http.HttpResponseMessage response, class System.IO.Stream contentStream) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Commands.BasicHtmlWebResponseObject.#ctor(System.Net.Http.HttpResponseMessage,System.IO.Stream)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (response As HttpResponseMessage, contentStream As Stream)" />
+      <MemberSignature Language="F#" Value="new Microsoft.PowerShell.Commands.BasicHtmlWebResponseObject : System.Net.Http.HttpResponseMessage * System.IO.Stream -&gt; Microsoft.PowerShell.Commands.BasicHtmlWebResponseObject" Usage="new Microsoft.PowerShell.Commands.BasicHtmlWebResponseObject (response, contentStream)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Commands.Utility</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="response" Type="System.Net.Http.HttpResponseMessage" />
+        <Parameter Name="contentStream" Type="System.IO.Stream" />
+      </Parameters>
+      <Docs>
+        <param name="response"></param>
+        <param name="contentStream"></param>
+        <summary>
+            Constructor for HtmlWebResponseObject with memory stream
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Content">
+      <MemberSignature Language="C#" Value="public string Content { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Content" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.BasicHtmlWebResponseObject.Content" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Content As String" />
+      <MemberSignature Language="F#" Value="member this.Content : string" Usage="Microsoft.PowerShell.Commands.BasicHtmlWebResponseObject.Content" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Commands.Utility</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            gets or protected sets the Content property
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Encoding">
+      <MemberSignature Language="C#" Value="public System.Text.Encoding Encoding { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Text.Encoding Encoding" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.BasicHtmlWebResponseObject.Encoding" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Encoding As Encoding" />
+      <MemberSignature Language="F#" Value="member this.Encoding : System.Text.Encoding" Usage="Microsoft.PowerShell.Commands.BasicHtmlWebResponseObject.Encoding" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Commands.Utility</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Text.Encoding</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the Encoding that was used to decode the Content
+            </summary>
+        <value>
+            The Encoding used to decode the Content; otherwise, a null reference if the content is not text.
+            </value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Images">
+      <MemberSignature Language="C#" Value="public Microsoft.PowerShell.Commands.WebCmdletElementCollection Images { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.PowerShell.Commands.WebCmdletElementCollection Images" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.BasicHtmlWebResponseObject.Images" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Images As WebCmdletElementCollection" />
+      <MemberSignature Language="F#" Value="member this.Images : Microsoft.PowerShell.Commands.WebCmdletElementCollection" Usage="Microsoft.PowerShell.Commands.BasicHtmlWebResponseObject.Images" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Commands.Utility</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.PowerShell.Commands.WebCmdletElementCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            gets the Images property
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InitializeContent">
+      <MemberSignature Language="C#" Value="protected void InitializeContent ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void InitializeContent() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Commands.BasicHtmlWebResponseObject.InitializeContent" />
+      <MemberSignature Language="VB.NET" Value="Protected Sub InitializeContent ()" />
+      <MemberSignature Language="F#" Value="override this.InitializeContent : unit -&gt; unit" Usage="basicHtmlWebResponseObject.InitializeContent " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Commands.Utility</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Reads the response content from the web response.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InputFields">
+      <MemberSignature Language="C#" Value="public Microsoft.PowerShell.Commands.WebCmdletElementCollection InputFields { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.PowerShell.Commands.WebCmdletElementCollection InputFields" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.BasicHtmlWebResponseObject.InputFields" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property InputFields As WebCmdletElementCollection" />
+      <MemberSignature Language="F#" Value="member this.InputFields : Microsoft.PowerShell.Commands.WebCmdletElementCollection" Usage="Microsoft.PowerShell.Commands.BasicHtmlWebResponseObject.InputFields" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Commands.Utility</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.PowerShell.Commands.WebCmdletElementCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            gets the Fields property
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Links">
+      <MemberSignature Language="C#" Value="public Microsoft.PowerShell.Commands.WebCmdletElementCollection Links { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.PowerShell.Commands.WebCmdletElementCollection Links" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.BasicHtmlWebResponseObject.Links" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Links As WebCmdletElementCollection" />
+      <MemberSignature Language="F#" Value="member this.Links : Microsoft.PowerShell.Commands.WebCmdletElementCollection" Usage="Microsoft.PowerShell.Commands.BasicHtmlWebResponseObject.Links" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Commands.Utility</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.PowerShell.Commands.WebCmdletElementCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            gets the Links property
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

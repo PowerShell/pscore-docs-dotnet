@@ -1,0 +1,125 @@
+﻿<Type Name="CmdletProviderManagementIntrinsics" FullName="System.Management.Automation.CmdletProviderManagementIntrinsics">
+  <TypeSignature Language="C#" Value="public sealed class CmdletProviderManagementIntrinsics" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit CmdletProviderManagementIntrinsics extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Management.Automation.CmdletProviderManagementIntrinsics" />
+  <TypeSignature Language="VB.NET" Value="Public NotInheritable Class CmdletProviderManagementIntrinsics" />
+  <TypeSignature Language="F#" Value="type CmdletProviderManagementIntrinsics = class" />
+  <AssemblyInfo>
+    <AssemblyName>System.Management.Automation</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Exposes the APIs to manage the Cmdlet Providers the Cmdlet base class. The methods of this class
+            get and set provider data in session state.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Get">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.Collection&lt;System.Management.Automation.ProviderInfo&gt; Get (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Collections.ObjectModel.Collection`1&lt;class System.Management.Automation.ProviderInfo&gt; Get(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.CmdletProviderManagementIntrinsics.Get(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Function Get (name As String) As Collection(Of ProviderInfo)" />
+      <MemberSignature Language="F#" Value="member this.Get : string -&gt; System.Collections.ObjectModel.Collection&lt;System.Management.Automation.ProviderInfo&gt;" Usage="cmdletProviderManagementIntrinsics.Get name" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.Collection&lt;System.Management.Automation.ProviderInfo&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">
+             Either the fully-qualified or friendly name for the provider.
+             </param>
+        <summary>
+             Gets the specified provider(s).
+             </summary>
+        <returns>
+             The provider information for the specified provider.
+             </returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">
+             If <paramref name="name" /> is null or empty.
+             </exception>
+        <exception cref="T:System.Management.Automation.ProviderNotFoundException">
+             If the provider specified by <paramref name="name" /> is not currently
+             loaded.
+             </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetAll">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IEnumerable&lt;System.Management.Automation.ProviderInfo&gt; GetAll ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Collections.Generic.IEnumerable`1&lt;class System.Management.Automation.ProviderInfo&gt; GetAll() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.CmdletProviderManagementIntrinsics.GetAll" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetAll () As IEnumerable(Of ProviderInfo)" />
+      <MemberSignature Language="F#" Value="member this.GetAll : unit -&gt; seq&lt;System.Management.Automation.ProviderInfo&gt;" Usage="cmdletProviderManagementIntrinsics.GetAll " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerable&lt;System.Management.Automation.ProviderInfo&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Gets all the Cmdlet Providers that are loaded.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetOne">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.ProviderInfo GetOne (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Management.Automation.ProviderInfo GetOne(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.CmdletProviderManagementIntrinsics.GetOne(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetOne (name As String) As ProviderInfo" />
+      <MemberSignature Language="F#" Value="member this.GetOne : string -&gt; System.Management.Automation.ProviderInfo" Usage="cmdletProviderManagementIntrinsics.GetOne name" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.ProviderInfo</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">
+             Either the fully-qualified or friendly name for the provider.
+             </param>
+        <summary>
+             Gets the specified provider(s).
+             </summary>
+        <returns>
+             The provider information for the specified provider.
+             </returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">
+             If <paramref name="name" /> is null or empty.
+             </exception>
+        <exception cref="T:System.Management.Automation.ProviderNameAmbiguousException">
+             If <paramref name="name" /> is not PSSnapin-qualified and more than one provider
+             exists with the specified name.
+             </exception>
+        <exception cref="T:System.Management.Automation.ProviderNotFoundException">
+             If the provider specified by <paramref name="name" /> is not currently
+             loaded.
+             </exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

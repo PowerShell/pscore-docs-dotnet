@@ -1,0 +1,537 @@
+﻿<Type Name="ChildItemCmdletProviderIntrinsics" FullName="System.Management.Automation.ChildItemCmdletProviderIntrinsics">
+  <TypeSignature Language="C#" Value="public sealed class ChildItemCmdletProviderIntrinsics" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit ChildItemCmdletProviderIntrinsics extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Management.Automation.ChildItemCmdletProviderIntrinsics" />
+  <TypeSignature Language="VB.NET" Value="Public NotInheritable Class ChildItemCmdletProviderIntrinsics" />
+  <TypeSignature Language="F#" Value="type ChildItemCmdletProviderIntrinsics = class" />
+  <AssemblyInfo>
+    <AssemblyName>System.Management.Automation</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Exposes the Children noun of the Cmdlet Providers to the Cmdlet base class. The methods of this class
+            use the providers to perform operations.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Get">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.Collection&lt;System.Management.Automation.PSObject&gt; Get (string path, bool recurse);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Collections.ObjectModel.Collection`1&lt;class System.Management.Automation.PSObject&gt; Get(string path, bool recurse) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.ChildItemCmdletProviderIntrinsics.Get(System.String,System.Boolean)" />
+      <MemberSignature Language="VB.NET" Value="Public Function Get (path As String, recurse As Boolean) As Collection(Of PSObject)" />
+      <MemberSignature Language="F#" Value="member this.Get : string * bool -&gt; System.Collections.ObjectModel.Collection&lt;System.Management.Automation.PSObject&gt;" Usage="childItemCmdletProviderIntrinsics.Get (path, recurse)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.Collection&lt;System.Management.Automation.PSObject&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+        <Parameter Name="recurse" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="path">
+             The path to the item to retrieve. It may be a drive or provider-qualified path and may include
+             glob characters.
+             </param>
+        <param name="recurse">
+             If true, gets all the children in all the sub-containers of the specified
+             container. If false, only gets the immediate children of the specified
+             container.
+             </param>
+        <summary>
+             Gets the child items of the container at the given path.
+             </summary>
+        <returns>
+             The children of the container at the specified path. The type of the objects returned are
+             determined by the provider that supports the given path.
+             </returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+             If <paramref name="path" /> or <paramref name="context" /> is null.
+             </exception>
+        <exception cref="T:System.Management.Automation.ProviderNotFoundException">
+             If the <paramref name="path" /> refers to a provider that could not be found.
+             </exception>
+        <exception cref="T:System.Management.Automation.DriveNotFoundException">
+             If the <paramref name="path" /> refers to a drive that could not be found.
+             </exception>
+        <exception cref="T:System.Management.Automation.ItemNotFoundException">
+             If <paramref name="path" /> does not contain glob characters and
+             could not be found.
+             </exception>
+        <exception cref="T:System.NotSupportedException">
+             If the provider that the <paramref name="path" /> refers to does
+             not support this operation.
+             </exception>
+        <exception cref="T:System.Management.Automation.ProviderInvocationException">
+             If the provider threw an exception.
+             </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Get">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.Collection&lt;System.Management.Automation.PSObject&gt; Get (string[] path, bool recurse, bool force, bool literalPath);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Collections.ObjectModel.Collection`1&lt;class System.Management.Automation.PSObject&gt; Get(string[] path, bool recurse, bool force, bool literalPath) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.ChildItemCmdletProviderIntrinsics.Get(System.String[],System.Boolean,System.Boolean,System.Boolean)" />
+      <MemberSignature Language="VB.NET" Value="Public Function Get (path As String(), recurse As Boolean, force As Boolean, literalPath As Boolean) As Collection(Of PSObject)" />
+      <MemberSignature Language="F#" Value="member this.Get : string[] * bool * bool * bool -&gt; System.Collections.ObjectModel.Collection&lt;System.Management.Automation.PSObject&gt;" Usage="childItemCmdletProviderIntrinsics.Get (path, recurse, force, literalPath)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.Collection&lt;System.Management.Automation.PSObject&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="path" Type="System.String[]" />
+        <Parameter Name="recurse" Type="System.Boolean" />
+        <Parameter Name="force" Type="System.Boolean" />
+        <Parameter Name="literalPath" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="path">
+             The path(s) to the item(s) to retrieve. They may be drive or provider-qualified paths and may include
+             glob characters.
+             </param>
+        <param name="recurse">
+             If true, gets all the children in all the sub-containers of the specified
+             container. If false, only gets the immediate children of the specified
+             container.
+             </param>
+        <param name="force">
+             Passed on to providers to force operations.
+             </param>
+        <param name="literalPath">
+             If true, globbing is not done on paths.
+             </param>
+        <summary>
+             Gets the child items of the container at the given path(s).
+             </summary>
+        <returns>
+             The children of the container at the specified path. The type of the objects returned are
+             determined by the provider that supports the given path.
+             </returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+             If <paramref name="path" /> or <paramref name="context" /> is null.
+             </exception>
+        <exception cref="T:System.Management.Automation.ProviderNotFoundException">
+             If the <paramref name="path" /> refers to a provider that could not be found.
+             </exception>
+        <exception cref="T:System.Management.Automation.DriveNotFoundException">
+             If the <paramref name="path" /> refers to a drive that could not be found.
+             </exception>
+        <exception cref="T:System.Management.Automation.ItemNotFoundException">
+             If <paramref name="path" /> does not contain glob characters and
+             could not be found.
+             </exception>
+        <exception cref="T:System.NotSupportedException">
+             If the provider that the <paramref name="path" /> refers to does
+             not support this operation.
+             </exception>
+        <exception cref="T:System.Management.Automation.ProviderInvocationException">
+             If the provider threw an exception.
+             </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Get">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.Collection&lt;System.Management.Automation.PSObject&gt; Get (string[] path, bool recurse, uint depth, bool force, bool literalPath);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Collections.ObjectModel.Collection`1&lt;class System.Management.Automation.PSObject&gt; Get(string[] path, bool recurse, unsigned int32 depth, bool force, bool literalPath) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.ChildItemCmdletProviderIntrinsics.Get(System.String[],System.Boolean,System.UInt32,System.Boolean,System.Boolean)" />
+      <MemberSignature Language="VB.NET" Value="Public Function Get (path As String(), recurse As Boolean, depth As UInteger, force As Boolean, literalPath As Boolean) As Collection(Of PSObject)" />
+      <MemberSignature Language="F#" Value="member this.Get : string[] * bool * uint32 * bool * bool -&gt; System.Collections.ObjectModel.Collection&lt;System.Management.Automation.PSObject&gt;" Usage="childItemCmdletProviderIntrinsics.Get (path, recurse, depth, force, literalPath)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.Collection&lt;System.Management.Automation.PSObject&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="path" Type="System.String[]" />
+        <Parameter Name="recurse" Type="System.Boolean" />
+        <Parameter Name="depth" Type="System.UInt32" />
+        <Parameter Name="force" Type="System.Boolean" />
+        <Parameter Name="literalPath" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="path">
+             The path(s) to the item(s) to retrieve. They may be drive or provider-qualified paths and may include
+             glob characters.
+             </param>
+        <param name="recurse">
+             If true, gets all the children in all the sub-containers of the specified
+             container. If false, only gets the immediate children of the specified
+             container.
+             </param>
+        <param name="depth">
+             Limits the depth of recursion; uint.MaxValue performs full recursion.
+             </param>
+        <param name="force">
+             Passed on to providers to force operations.
+             </param>
+        <param name="literalPath">
+             If true, globbing is not done on paths.
+             </param>
+        <summary>
+             Gets the child items of the container at the given path(s).
+             </summary>
+        <returns>
+             The children of the container at the specified path. The type of the objects returned are
+             determined by the provider that supports the given path.
+             </returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+             If <paramref name="path" /> or <paramref name="context" /> is null.
+             </exception>
+        <exception cref="T:System.Management.Automation.ProviderNotFoundException">
+             If the <paramref name="path" /> refers to a provider that could not be found.
+             </exception>
+        <exception cref="T:System.Management.Automation.DriveNotFoundException">
+             If the <paramref name="path" /> refers to a drive that could not be found.
+             </exception>
+        <exception cref="T:System.Management.Automation.ItemNotFoundException">
+             If <paramref name="path" /> does not contain glob characters and
+             could not be found.
+             </exception>
+        <exception cref="T:System.NotSupportedException">
+             If the provider that the <paramref name="path" /> refers to does
+             not support this operation.
+             </exception>
+        <exception cref="T:System.Management.Automation.ProviderInvocationException">
+             If the provider threw an exception.
+             </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetNames">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.Collection&lt;string&gt; GetNames (string path, System.Management.Automation.ReturnContainers returnContainers, bool recurse);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Collections.ObjectModel.Collection`1&lt;string&gt; GetNames(string path, valuetype System.Management.Automation.ReturnContainers returnContainers, bool recurse) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.ChildItemCmdletProviderIntrinsics.GetNames(System.String,System.Management.Automation.ReturnContainers,System.Boolean)" />
+      <MemberSignature Language="F#" Value="member this.GetNames : string * System.Management.Automation.ReturnContainers * bool -&gt; System.Collections.ObjectModel.Collection&lt;string&gt;" Usage="childItemCmdletProviderIntrinsics.GetNames (path, returnContainers, recurse)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.Collection&lt;System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+        <Parameter Name="returnContainers" Type="System.Management.Automation.ReturnContainers" />
+        <Parameter Name="recurse" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="path">
+             The path to the item to retrieve. It may be a drive or provider-qualified path and may include
+             glob characters.
+             </param>
+        <param name="returnContainers">
+             Determines if all containers should be returned or only those containers that match the
+             filter(s).
+             </param>
+        <param name="recurse">
+             If true, gets all the relative paths of all the children
+             in all the sub-containers of the specified
+             container. If false, only gets the immediate child names of the specified
+             container.
+             </param>
+        <summary>
+             Gets the child names of the container at the given path.
+             </summary>
+        <returns>
+             The children of the container at the specified path. The type of the objects returned are
+             determined by the provider that supports the given path.
+             </returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+             If <paramref name="path" /> or <paramref name="propertyToClear" /> is null.
+             </exception>
+        <exception cref="T:System.Management.Automation.ProviderNotFoundException">
+             If the <paramref name="path" /> refers to a provider that could not be found.
+             </exception>
+        <exception cref="T:System.Management.Automation.DriveNotFoundException">
+             If the <paramref name="path" /> refers to a drive that could not be found.
+             </exception>
+        <exception cref="T:System.Management.Automation.ItemNotFoundException">
+             If <paramref name="path" /> does not contain glob characters and
+             could not be found.
+             </exception>
+        <exception cref="T:System.NotSupportedException">
+             If the provider that the <paramref name="path" /> refers to does
+             not support this operation.
+             </exception>
+        <exception cref="T:System.Management.Automation.ProviderInvocationException">
+             If the provider threw an exception.
+             </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetNames">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.Collection&lt;string&gt; GetNames (string[] path, System.Management.Automation.ReturnContainers returnContainers, bool recurse, bool force, bool literalPath);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Collections.ObjectModel.Collection`1&lt;string&gt; GetNames(string[] path, valuetype System.Management.Automation.ReturnContainers returnContainers, bool recurse, bool force, bool literalPath) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.ChildItemCmdletProviderIntrinsics.GetNames(System.String[],System.Management.Automation.ReturnContainers,System.Boolean,System.Boolean,System.Boolean)" />
+      <MemberSignature Language="F#" Value="member this.GetNames : string[] * System.Management.Automation.ReturnContainers * bool * bool * bool -&gt; System.Collections.ObjectModel.Collection&lt;string&gt;" Usage="childItemCmdletProviderIntrinsics.GetNames (path, returnContainers, recurse, force, literalPath)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.Collection&lt;System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="path" Type="System.String[]" />
+        <Parameter Name="returnContainers" Type="System.Management.Automation.ReturnContainers" />
+        <Parameter Name="recurse" Type="System.Boolean" />
+        <Parameter Name="force" Type="System.Boolean" />
+        <Parameter Name="literalPath" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="path">
+             The path(s) to the item(s) to retrieve. They may be drive or provider-qualified paths and may include
+             glob characters.
+             </param>
+        <param name="returnContainers">
+             Determines if all containers should be returned or only those containers that match the
+             filter(s).
+             </param>
+        <param name="recurse">
+             If true, gets all the relative paths of all the children
+             in all the sub-containers of the specified
+             container. If false, only gets the immediate child names of the specified
+             container.
+             </param>
+        <param name="force">
+             Passed on to providers to force operations.
+             </param>
+        <param name="literalPath">
+             If true, globbing is not done on paths.
+             </param>
+        <summary>
+             Gets the child names of the container at the given path.
+             </summary>
+        <returns>
+             The children of the container at the specified path. The type of the objects returned are
+             determined by the provider that supports the given path.
+             </returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+             If <paramref name="path" /> or <paramref name="propertyToClear" /> is null.
+             </exception>
+        <exception cref="T:System.Management.Automation.ProviderNotFoundException">
+             If the <paramref name="path" /> refers to a provider that could not be found.
+             </exception>
+        <exception cref="T:System.Management.Automation.DriveNotFoundException">
+             If the <paramref name="path" /> refers to a drive that could not be found.
+             </exception>
+        <exception cref="T:System.Management.Automation.ItemNotFoundException">
+             If <paramref name="path" /> does not contain glob characters and
+             could not be found.
+             </exception>
+        <exception cref="T:System.NotSupportedException">
+             If the provider that the <paramref name="path" /> refers to does
+             not support this operation.
+             </exception>
+        <exception cref="T:System.Management.Automation.ProviderInvocationException">
+             If the provider threw an exception.
+             </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetNames">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.Collection&lt;string&gt; GetNames (string[] path, System.Management.Automation.ReturnContainers returnContainers, bool recurse, uint depth, bool force, bool literalPath);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Collections.ObjectModel.Collection`1&lt;string&gt; GetNames(string[] path, valuetype System.Management.Automation.ReturnContainers returnContainers, bool recurse, unsigned int32 depth, bool force, bool literalPath) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.ChildItemCmdletProviderIntrinsics.GetNames(System.String[],System.Management.Automation.ReturnContainers,System.Boolean,System.UInt32,System.Boolean,System.Boolean)" />
+      <MemberSignature Language="F#" Value="member this.GetNames : string[] * System.Management.Automation.ReturnContainers * bool * uint32 * bool * bool -&gt; System.Collections.ObjectModel.Collection&lt;string&gt;" Usage="childItemCmdletProviderIntrinsics.GetNames (path, returnContainers, recurse, depth, force, literalPath)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.Collection&lt;System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="path" Type="System.String[]" />
+        <Parameter Name="returnContainers" Type="System.Management.Automation.ReturnContainers" />
+        <Parameter Name="recurse" Type="System.Boolean" />
+        <Parameter Name="depth" Type="System.UInt32" />
+        <Parameter Name="force" Type="System.Boolean" />
+        <Parameter Name="literalPath" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="path">
+             The path(s) to the item(s) to retrieve. They may be drive or provider-qualified paths and may include
+             glob characters.
+             </param>
+        <param name="returnContainers">
+             Determines if all containers should be returned or only those containers that match the
+             filter(s).
+             </param>
+        <param name="recurse">
+             If true, gets all the relative paths of all the children
+             in all the sub-containers of the specified
+             container. If false, only gets the immediate child names of the specified
+             container.
+             </param>
+        <param name="depth">
+             Limits the depth of recursion; uint.MaxValue performs full recursion.
+             </param>
+        <param name="force">
+             Passed on to providers to force operations.
+             </param>
+        <param name="literalPath">
+             If true, globbing is not done on paths.
+             </param>
+        <summary>
+             Gets the child names of the container at the given path.
+             </summary>
+        <returns>
+             The children of the container at the specified path. The type of the objects returned are
+             determined by the provider that supports the given path.
+             </returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+             If <paramref name="path" /> or <paramref name="propertyToClear" /> is null.
+             </exception>
+        <exception cref="T:System.Management.Automation.ProviderNotFoundException">
+             If the <paramref name="path" /> refers to a provider that could not be found.
+             </exception>
+        <exception cref="T:System.Management.Automation.DriveNotFoundException">
+             If the <paramref name="path" /> refers to a drive that could not be found.
+             </exception>
+        <exception cref="T:System.Management.Automation.ItemNotFoundException">
+             If <paramref name="path" /> does not contain glob characters and
+             could not be found.
+             </exception>
+        <exception cref="T:System.NotSupportedException">
+             If the provider that the <paramref name="path" /> refers to does
+             not support this operation.
+             </exception>
+        <exception cref="T:System.Management.Automation.ProviderInvocationException">
+             If the provider threw an exception.
+             </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="HasChild">
+      <MemberSignature Language="C#" Value="public bool HasChild (string path);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool HasChild(string path) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.ChildItemCmdletProviderIntrinsics.HasChild(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Function HasChild (path As String) As Boolean" />
+      <MemberSignature Language="F#" Value="member this.HasChild : string -&gt; bool" Usage="childItemCmdletProviderIntrinsics.HasChild path" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="path">
+             The path to the item to determine if it has children. It may be a drive or provider-qualified path and may include
+             glob characters.
+             </param>
+        <summary>
+             Determines if an item at the given path has children.
+             </summary>
+        <returns>
+             True if the item at the specified path has children. False otherwise.
+             </returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+             If <paramref name="path" /> is null.
+             </exception>
+        <exception cref="T:System.Management.Automation.ProviderNotFoundException">
+             If the <paramref name="path" /> refers to a provider that could not be found.
+             </exception>
+        <exception cref="T:System.Management.Automation.DriveNotFoundException">
+             If the <paramref name="path" /> refers to a drive that could not be found.
+             </exception>
+        <exception cref="T:System.Management.Automation.ItemNotFoundException">
+             If <paramref name="path" /> does not contain glob characters and
+             could not be found.
+             </exception>
+        <exception cref="T:System.NotSupportedException">
+             If the provider that the <paramref name="path" /> refers to does
+             not support this operation.
+             </exception>
+        <exception cref="T:System.Management.Automation.ProviderInvocationException">
+             If the provider threw an exception.
+             </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="HasChild">
+      <MemberSignature Language="C#" Value="public bool HasChild (string path, bool force, bool literalPath);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool HasChild(string path, bool force, bool literalPath) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.ChildItemCmdletProviderIntrinsics.HasChild(System.String,System.Boolean,System.Boolean)" />
+      <MemberSignature Language="VB.NET" Value="Public Function HasChild (path As String, force As Boolean, literalPath As Boolean) As Boolean" />
+      <MemberSignature Language="F#" Value="member this.HasChild : string * bool * bool -&gt; bool" Usage="childItemCmdletProviderIntrinsics.HasChild (path, force, literalPath)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+        <Parameter Name="force" Type="System.Boolean" />
+        <Parameter Name="literalPath" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="path">
+             The path to the item to determine if it has children. It may be a drive or provider-qualified path and may include
+             glob characters.
+             </param>
+        <param name="force">
+             Passed on to providers to force operations.
+             </param>
+        <param name="literalPath">
+             If true, globbing is not done on paths.
+             </param>
+        <summary>
+             Determines if an item at the given path has children.
+             </summary>
+        <returns>
+             True if the item at the specified path has children. False otherwise.
+             </returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+             If <paramref name="path" /> is null.
+             </exception>
+        <exception cref="T:System.Management.Automation.ProviderNotFoundException">
+             If the <paramref name="path" /> refers to a provider that could not be found.
+             </exception>
+        <exception cref="T:System.Management.Automation.DriveNotFoundException">
+             If the <paramref name="path" /> refers to a drive that could not be found.
+             </exception>
+        <exception cref="T:System.Management.Automation.ItemNotFoundException">
+             If <paramref name="path" /> does not contain glob characters and
+             could not be found.
+             </exception>
+        <exception cref="T:System.NotSupportedException">
+             If the provider that the <paramref name="path" /> refers to does
+             not support this operation.
+             </exception>
+        <exception cref="T:System.Management.Automation.ProviderInvocationException">
+             If the provider threw an exception.
+             </exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,193 @@
+﻿<Type Name="ContainerConnectionInfo" FullName="System.Management.Automation.Runspaces.ContainerConnectionInfo">
+  <TypeSignature Language="C#" Value="public sealed class ContainerConnectionInfo : System.Management.Automation.Runspaces.RunspaceConnectionInfo" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit ContainerConnectionInfo extends System.Management.Automation.Runspaces.RunspaceConnectionInfo" />
+  <TypeSignature Language="DocId" Value="T:System.Management.Automation.Runspaces.ContainerConnectionInfo" />
+  <TypeSignature Language="VB.NET" Value="Public NotInheritable Class ContainerConnectionInfo&#xA;Inherits RunspaceConnectionInfo" />
+  <TypeSignature Language="F#" Value="type ContainerConnectionInfo = class&#xA;    inherit RunspaceConnectionInfo" />
+  <AssemblyInfo>
+    <AssemblyName>System.Management.Automation</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Management.Automation.Runspaces.RunspaceConnectionInfo</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            The class that contains connection information for a remote session between a local
+            container host and container.
+            For Windows Server container, the transport is based on named pipe for now.
+            For Hyper-V container, the transport is based on Hyper-V socket.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="AuthenticationMechanism">
+      <MemberSignature Language="C#" Value="public override System.Management.Automation.Runspaces.AuthenticationMechanism AuthenticationMechanism { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Management.Automation.Runspaces.AuthenticationMechanism AuthenticationMechanism" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.Runspaces.ContainerConnectionInfo.AuthenticationMechanism" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Property AuthenticationMechanism As AuthenticationMechanism" />
+      <MemberSignature Language="F#" Value="member this.AuthenticationMechanism : System.Management.Automation.Runspaces.AuthenticationMechanism with get, set" Usage="System.Management.Automation.Runspaces.ContainerConnectionInfo.AuthenticationMechanism" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.Runspaces.AuthenticationMechanism</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Authentication mechanism to use while connecting to the server.
+            Only Default is supported.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CertificateThumbprint">
+      <MemberSignature Language="C#" Value="public override string CertificateThumbprint { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string CertificateThumbprint" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.Runspaces.ContainerConnectionInfo.CertificateThumbprint" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Property CertificateThumbprint As String" />
+      <MemberSignature Language="F#" Value="member this.CertificateThumbprint : string with get, set" Usage="System.Management.Automation.Runspaces.ContainerConnectionInfo.CertificateThumbprint" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            ThumbPrint of a certificate used for connecting to a remote machine.
+            When this is specified, you dont need to supply credential and authentication
+            mechanism.
+            Will always be null to signify that this is not supported.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ComputerName">
+      <MemberSignature Language="C#" Value="public override string ComputerName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ComputerName" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.Runspaces.ContainerConnectionInfo.ComputerName" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Property ComputerName As String" />
+      <MemberSignature Language="F#" Value="member this.ComputerName : string with get, set" Usage="System.Management.Automation.Runspaces.ContainerConnectionInfo.ComputerName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Name of the target container.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateContainerConnectionInfo">
+      <MemberSignature Language="C#" Value="public static System.Management.Automation.Runspaces.ContainerConnectionInfo CreateContainerConnectionInfo (string containerId, bool runAsAdmin, string configurationName);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Management.Automation.Runspaces.ContainerConnectionInfo CreateContainerConnectionInfo(string containerId, bool runAsAdmin, string configurationName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Runspaces.ContainerConnectionInfo.CreateContainerConnectionInfo(System.String,System.Boolean,System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function CreateContainerConnectionInfo (containerId As String, runAsAdmin As Boolean, configurationName As String) As ContainerConnectionInfo" />
+      <MemberSignature Language="F#" Value="static member CreateContainerConnectionInfo : string * bool * string -&gt; System.Management.Automation.Runspaces.ContainerConnectionInfo" Usage="System.Management.Automation.Runspaces.ContainerConnectionInfo.CreateContainerConnectionInfo (containerId, runAsAdmin, configurationName)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.Runspaces.ContainerConnectionInfo</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="containerId" Type="System.String" />
+        <Parameter Name="runAsAdmin" Type="System.Boolean" />
+        <Parameter Name="configurationName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="containerId">To be added.</param>
+        <param name="runAsAdmin">To be added.</param>
+        <param name="configurationName">To be added.</param>
+        <summary>
+            Create ContainerConnectionInfo object based on container id.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateContainerProcess">
+      <MemberSignature Language="C#" Value="public void CreateContainerProcess ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void CreateContainerProcess() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Runspaces.ContainerConnectionInfo.CreateContainerProcess" />
+      <MemberSignature Language="VB.NET" Value="Public Sub CreateContainerProcess ()" />
+      <MemberSignature Language="F#" Value="member this.CreateContainerProcess : unit -&gt; unit" Usage="containerConnectionInfo.CreateContainerProcess " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Create process inside container.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Credential">
+      <MemberSignature Language="C#" Value="public override System.Management.Automation.PSCredential Credential { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Management.Automation.PSCredential Credential" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.Runspaces.ContainerConnectionInfo.Credential" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Property Credential As PSCredential" />
+      <MemberSignature Language="F#" Value="member this.Credential : System.Management.Automation.PSCredential with get, set" Usage="System.Management.Automation.Runspaces.ContainerConnectionInfo.Credential" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.PSCredential</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Credential used for the connection.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TerminateContainerProcess">
+      <MemberSignature Language="C#" Value="public bool TerminateContainerProcess ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool TerminateContainerProcess() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Runspaces.ContainerConnectionInfo.TerminateContainerProcess" />
+      <MemberSignature Language="VB.NET" Value="Public Function TerminateContainerProcess () As Boolean" />
+      <MemberSignature Language="F#" Value="member this.TerminateContainerProcess : unit -&gt; bool" Usage="containerConnectionInfo.TerminateContainerProcess " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Terminate process inside container.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

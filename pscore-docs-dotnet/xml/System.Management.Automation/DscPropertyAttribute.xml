@@ -1,0 +1,114 @@
+﻿<Type Name="DscPropertyAttribute" FullName="System.Management.Automation.DscPropertyAttribute">
+  <TypeSignature Language="C#" Value="public class DscPropertyAttribute : System.Management.Automation.Internal.CmdletMetadataAttribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit DscPropertyAttribute extends System.Management.Automation.Internal.CmdletMetadataAttribute" />
+  <TypeSignature Language="DocId" Value="T:System.Management.Automation.DscPropertyAttribute" />
+  <TypeSignature Language="VB.NET" Value="Public Class DscPropertyAttribute&#xA;Inherits CmdletMetadataAttribute" />
+  <TypeSignature Language="F#" Value="type DscPropertyAttribute = class&#xA;    inherit CmdletMetadataAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System.Management.Automation</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Management.Automation.Internal.CmdletMetadataAttribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Property | System.AttributeTargets.Field)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>
+            When specified on a property or field of a DSC Resource, the property
+            can or must be specified in a configuration, unless it is marked
+            <see cref="P:System.Management.Automation.DscPropertyAttribute.NotConfigurable" />, in which case it is
+            returned by the Get() method of the resource.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DscPropertyAttribute ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.DscPropertyAttribute.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New ()" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Key">
+      <MemberSignature Language="C#" Value="public bool Key { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Key" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.DscPropertyAttribute.Key" />
+      <MemberSignature Language="VB.NET" Value="Public Property Key As Boolean" />
+      <MemberSignature Language="F#" Value="member this.Key : bool with get, set" Usage="System.Management.Automation.DscPropertyAttribute.Key" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Indicates the property is a required key property for a DSC resource.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Mandatory">
+      <MemberSignature Language="C#" Value="public bool Mandatory { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Mandatory" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.DscPropertyAttribute.Mandatory" />
+      <MemberSignature Language="VB.NET" Value="Public Property Mandatory As Boolean" />
+      <MemberSignature Language="F#" Value="member this.Mandatory : bool with get, set" Usage="System.Management.Automation.DscPropertyAttribute.Mandatory" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Indicates the property is a required property for a DSC resource.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NotConfigurable">
+      <MemberSignature Language="C#" Value="public bool NotConfigurable { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool NotConfigurable" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.DscPropertyAttribute.NotConfigurable" />
+      <MemberSignature Language="VB.NET" Value="Public Property NotConfigurable As Boolean" />
+      <MemberSignature Language="F#" Value="member this.NotConfigurable : bool with get, set" Usage="System.Management.Automation.DscPropertyAttribute.NotConfigurable" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Indicates the property is not a parameter to the DSC resource, but the
+            property will contain a value after the Get() method of the resource is called.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

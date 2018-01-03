@@ -1,0 +1,136 @@
+﻿<Type Name="PSAuthorizationManager" FullName="Microsoft.PowerShell.PSAuthorizationManager">
+  <TypeSignature Language="C#" Value="public sealed class PSAuthorizationManager : System.Management.Automation.AuthorizationManager" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit PSAuthorizationManager extends System.Management.Automation.AuthorizationManager" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.PowerShell.PSAuthorizationManager" />
+  <TypeSignature Language="VB.NET" Value="Public NotInheritable Class PSAuthorizationManager&#xA;Inherits AuthorizationManager" />
+  <TypeSignature Language="F#" Value="type PSAuthorizationManager = class&#xA;    inherit AuthorizationManager" />
+  <AssemblyInfo>
+    <AssemblyName>System.Management.Automation</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Management.Automation.AuthorizationManager</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+             Defines the authorization policy that controls the way scripts
+             (and other command types) are handled by Monad.  This authorization
+             policy enforces one of four levels, as defined by the 'ExecutionPolicy'
+             value in one of the following locations:
+            
+             In priority-order (highest priority first,) these come from:
+            
+                - Machine-wide Group Policy
+                HKLM\Software\Policies\Microsoft\Windows\PowerShell
+                - Current-user Group Policy
+                HKCU\Software\Policies\Microsoft\Windows\PowerShell.
+                - Current session preference
+                ENV:PSExecutionPolicyPreference
+                - Current user machine preference
+                HKEY_CURRENT_USER\SOFTWARE\Microsoft\PowerShell\1\ShellIds\Microsoft.PowerShell
+                - Local machine preference
+                HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\PowerShell\1\ShellIds\Microsoft.PowerShell
+            
+             Restricted - All .ps1 files are blocked.  ps1xml files must be digitally
+                signed, and by a trusted publisher.  If you haven't made a trust decision
+                on the publisher yet, prompting is done as in AllSigned mode.
+             AllSigned - All .ps1 and .ps1xml files must be digitally signed.  If
+                signed and executed, Monad prompts to determine if files from the
+                signing publisher should be run or not.
+             RemoteSigned - Only .ps1 and .ps1xml files originating from the internet
+                must be digitally signed.  If remote, signed, and executed, Monad
+                prompts to determine if files from the signing publisher should be
+                run or not.  This is the default setting.
+             Unrestricted - No files must be signed.  If a file originates from the
+                internet, Monad provides a warning prompt to alert the user.  To
+                suppress this warning message, right-click on the file in File Explorer,
+                select "Properties," and then "Unblock."
+             Bypass - No files must be signed, and internet origin is not verified
+            
+             </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public PSAuthorizationManager (string shellId);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string shellId) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.PSAuthorizationManager.#ctor(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (shellId As String)" />
+      <MemberSignature Language="F#" Value="new Microsoft.PowerShell.PSAuthorizationManager : string -&gt; Microsoft.PowerShell.PSAuthorizationManager" Usage="new Microsoft.PowerShell.PSAuthorizationManager shellId" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="shellId" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="shellId">
+            The shell identifier that the authorization manager applies
+            to.  For example, Microsoft.PowerShell
+            </param>
+        <summary>
+            Initializes a new instance of the PSAuthorizationManager
+            class, for a given ShellId.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ShouldRun">
+      <MemberSignature Language="C#" Value="protected internal override bool ShouldRun (System.Management.Automation.CommandInfo commandInfo, System.Management.Automation.CommandOrigin origin, System.Management.Automation.Host.PSHost host, out Exception reason);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance bool ShouldRun(class System.Management.Automation.CommandInfo commandInfo, valuetype System.Management.Automation.CommandOrigin origin, class System.Management.Automation.Host.PSHost host, [out] class System.Exception&amp; reason) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.PSAuthorizationManager.ShouldRun(System.Management.Automation.CommandInfo,System.Management.Automation.CommandOrigin,System.Management.Automation.Host.PSHost,System.Exception@)" />
+      <MemberSignature Language="F#" Value="override this.ShouldRun : System.Management.Automation.CommandInfo * System.Management.Automation.CommandOrigin * System.Management.Automation.Host.PSHost *  -&gt; bool" Usage="pSAuthorizationManager.ShouldRun (commandInfo, origin, host, reason)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="commandInfo" Type="System.Management.Automation.CommandInfo" />
+        <Parameter Name="origin" Type="System.Management.Automation.CommandOrigin" />
+        <Parameter Name="host" Type="System.Management.Automation.Host.PSHost" />
+        <Parameter Name="reason" Type="System.Exception&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="commandInfo">
+             The command to be run.
+             </param>
+        <param name="origin">
+             The origin of the command.
+             </param>
+        <param name="host">
+             The PSHost executing the command.
+             </param>
+        <param name="reason">
+             If access is denied, this parameter provides a specialized
+             Exception as the reason.
+             </param>
+        <summary>
+             Determines if should run the specified command.  Please see the
+             class summary for an overview of the semantics enforced by this
+             authorization manager.
+             </summary>
+        <returns>
+             True if the command should be run.  False otherwise.
+             </returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">
+             CommandInfo is invalid. This may occur if
+             commandInfo.Name is null or empty.
+             </exception>
+        <exception cref="T:System.ArgumentNullException">
+             CommandInfo is null.
+             </exception>
+        <exception cref="T:System.IO.FileNotFoundException">
+             The file specified by commandInfo.Path is not found.
+             </exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

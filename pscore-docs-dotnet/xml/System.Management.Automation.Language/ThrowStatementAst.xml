@@ -1,0 +1,125 @@
+﻿<Type Name="ThrowStatementAst" FullName="System.Management.Automation.Language.ThrowStatementAst">
+  <TypeSignature Language="C#" Value="public class ThrowStatementAst : System.Management.Automation.Language.StatementAst" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ThrowStatementAst extends System.Management.Automation.Language.StatementAst" />
+  <TypeSignature Language="DocId" Value="T:System.Management.Automation.Language.ThrowStatementAst" />
+  <TypeSignature Language="VB.NET" Value="Public Class ThrowStatementAst&#xA;Inherits StatementAst" />
+  <TypeSignature Language="F#" Value="type ThrowStatementAst = class&#xA;    inherit StatementAst" />
+  <AssemblyInfo>
+    <AssemblyName>System.Management.Automation</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Management.Automation.Language.StatementAst</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            The ast representing the throw statement.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ThrowStatementAst (System.Management.Automation.Language.IScriptExtent extent, System.Management.Automation.Language.PipelineBaseAst pipeline);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Management.Automation.Language.IScriptExtent extent, class System.Management.Automation.Language.PipelineBaseAst pipeline) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Language.ThrowStatementAst.#ctor(System.Management.Automation.Language.IScriptExtent,System.Management.Automation.Language.PipelineBaseAst)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (extent As IScriptExtent, pipeline As PipelineBaseAst)" />
+      <MemberSignature Language="F#" Value="new System.Management.Automation.Language.ThrowStatementAst : System.Management.Automation.Language.IScriptExtent * System.Management.Automation.Language.PipelineBaseAst -&gt; System.Management.Automation.Language.ThrowStatementAst" Usage="new System.Management.Automation.Language.ThrowStatementAst (extent, pipeline)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="extent" Type="System.Management.Automation.Language.IScriptExtent" />
+        <Parameter Name="pipeline" Type="System.Management.Automation.Language.PipelineBaseAst" />
+      </Parameters>
+      <Docs>
+        <param name="extent">The extent of the throw statement, including the optional value to throw.</param>
+        <param name="pipeline">The optional value to throw.</param>
+        <summary>
+            Construct a throw statement.
+            </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.Management.Automation.PSArgumentNullException">
+            If <paramref name="extent" /> is null.
+            </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Copy">
+      <MemberSignature Language="C#" Value="public override System.Management.Automation.Language.Ast Copy ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Management.Automation.Language.Ast Copy() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Language.ThrowStatementAst.Copy" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Function Copy () As Ast" />
+      <MemberSignature Language="F#" Value="override this.Copy : unit -&gt; System.Management.Automation.Language.Ast" Usage="throwStatementAst.Copy " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.Language.Ast</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Copy the ThrowStatementAst instance
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsRethrow">
+      <MemberSignature Language="C#" Value="public bool IsRethrow { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsRethrow" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.Language.ThrowStatementAst.IsRethrow" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property IsRethrow As Boolean" />
+      <MemberSignature Language="F#" Value="member this.IsRethrow : bool" Usage="System.Management.Automation.Language.ThrowStatementAst.IsRethrow" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            If the throw statement is a rethrow.  In PowerShell, a throw statement need not throw anything.  Such
+            a throw statement throws a new exception if it does not appear lexically withing a catch, otherwise
+            it rethrows the caught exception.  Examples:
+            <c>
+                if ($true) { throw } # not a rethrow
+                try { foo } catch { throw } # rethrow
+                try { foo } catch { . { throw } } # rethrow
+                try { foo } catch { function foo { throw } } # rethrow
+                try { foo } finally { throw } # not a rethrow
+            </c></summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Pipeline">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.Language.PipelineBaseAst Pipeline { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Management.Automation.Language.PipelineBaseAst Pipeline" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.Language.ThrowStatementAst.Pipeline" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Pipeline As PipelineBaseAst" />
+      <MemberSignature Language="F#" Value="member this.Pipeline : System.Management.Automation.Language.PipelineBaseAst" Usage="System.Management.Automation.Language.ThrowStatementAst.Pipeline" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.Language.PipelineBaseAst</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The pipeline specified in the throw statement, or null if none was specified.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

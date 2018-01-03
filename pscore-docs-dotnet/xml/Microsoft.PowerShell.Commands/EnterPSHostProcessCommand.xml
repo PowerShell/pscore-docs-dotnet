@@ -1,0 +1,251 @@
+﻿<Type Name="EnterPSHostProcessCommand" FullName="Microsoft.PowerShell.Commands.EnterPSHostProcessCommand">
+  <TypeSignature Language="C#" Value="public sealed class EnterPSHostProcessCommand : System.Management.Automation.PSCmdlet" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit EnterPSHostProcessCommand extends System.Management.Automation.PSCmdlet" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.PowerShell.Commands.EnterPSHostProcessCommand" />
+  <TypeSignature Language="VB.NET" Value="Public NotInheritable Class EnterPSHostProcessCommand&#xA;Inherits PSCmdlet" />
+  <TypeSignature Language="F#" Value="type EnterPSHostProcessCommand = class&#xA;    inherit PSCmdlet" />
+  <AssemblyInfo>
+    <AssemblyName>System.Management.Automation</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Management.Automation.PSCmdlet</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Management.Automation.Cmdlet("Enter", "PSHostProcess", DefaultParameterSetName="ProcessIdParameterSet", HelpUri="https://go.microsoft.com/fwlink/?LinkId=403736")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>
+            This cmdlet enters into an interactive session with the specified local process by
+            creating a remote runspace to the process and pushing it on the current PSHost.
+            If the selected process does not contain PowerShell then an error message will result.
+            If the current user does not have sufficient privileges to attach to the selected process
+            then an error message will result.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public EnterPSHostProcessCommand ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Commands.EnterPSHostProcessCommand.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New ()" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AppDomainName">
+      <MemberSignature Language="C#" Value="public string AppDomainName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string AppDomainName" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.EnterPSHostProcessCommand.AppDomainName" />
+      <MemberSignature Language="VB.NET" Value="Public Property AppDomainName As String" />
+      <MemberSignature Language="F#" Value="member this.AppDomainName : string with get, set" Usage="Microsoft.PowerShell.Commands.EnterPSHostProcessCommand.AppDomainName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="ProcessParameterSet", Position=1)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="ProcessIdParameterSet", Position=1)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="ProcessNameParameterSet", Position=1)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="PSHostProcessInfoParameterSet", Position=1)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.ValidateNotNullOrEmpty</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Optional name of AppDomain in process to enter.  If not specified then the default AppDomain is used.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EndProcessing">
+      <MemberSignature Language="C#" Value="protected override void EndProcessing ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void EndProcessing() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Commands.EnterPSHostProcessCommand.EndProcessing" />
+      <MemberSignature Language="VB.NET" Value="Protected Overrides Sub EndProcessing ()" />
+      <MemberSignature Language="F#" Value="override this.EndProcessing : unit -&gt; unit" Usage="enterPSHostProcessCommand.EndProcessing " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            End Processing
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HostProcessInfo">
+      <MemberSignature Language="C#" Value="public Microsoft.PowerShell.Commands.PSHostProcessInfo HostProcessInfo { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.PowerShell.Commands.PSHostProcessInfo HostProcessInfo" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.EnterPSHostProcessCommand.HostProcessInfo" />
+      <MemberSignature Language="VB.NET" Value="Public Property HostProcessInfo As PSHostProcessInfo" />
+      <MemberSignature Language="F#" Value="member this.HostProcessInfo : Microsoft.PowerShell.Commands.PSHostProcessInfo with get, set" Usage="Microsoft.PowerShell.Commands.EnterPSHostProcessCommand.HostProcessInfo" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(Mandatory=true, ParameterSetName="PSHostProcessInfoParameterSet", Position=0, ValueFromPipeline=true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.ValidateNotNull</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Microsoft.PowerShell.Commands.PSHostProcessInfo</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Host Process Info object that describes a connectible process.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Id">
+      <MemberSignature Language="C#" Value="public int Id { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Id" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.EnterPSHostProcessCommand.Id" />
+      <MemberSignature Language="VB.NET" Value="Public Property Id As Integer" />
+      <MemberSignature Language="F#" Value="member this.Id : int with get, set" Usage="Microsoft.PowerShell.Commands.EnterPSHostProcessCommand.Id" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(Mandatory=true, ParameterSetName="ProcessIdParameterSet", Position=0)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.ValidateRange(Mono.Cecil.CustomAttributeArgument, Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Id of process to enter.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public string Name { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.EnterPSHostProcessCommand.Name" />
+      <MemberSignature Language="VB.NET" Value="Public Property Name As String" />
+      <MemberSignature Language="F#" Value="member this.Name : string with get, set" Usage="Microsoft.PowerShell.Commands.EnterPSHostProcessCommand.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(Mandatory=true, ParameterSetName="ProcessNameParameterSet", Position=0)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.ValidateNotNullOrEmpty</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Name of process to enter.  An error will result if more than one such process exists.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Process">
+      <MemberSignature Language="C#" Value="public System.Diagnostics.Process Process { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Diagnostics.Process Process" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.EnterPSHostProcessCommand.Process" />
+      <MemberSignature Language="VB.NET" Value="Public Property Process As Process" />
+      <MemberSignature Language="F#" Value="member this.Process : System.Diagnostics.Process with get, set" Usage="Microsoft.PowerShell.Commands.EnterPSHostProcessCommand.Process" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(Mandatory=true, ParameterSetName="ProcessParameterSet", Position=0, ValueFromPipeline=true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.ValidateNotNull</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Diagnostics.Process</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Process to enter.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StopProcessing">
+      <MemberSignature Language="C#" Value="protected override void StopProcessing ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void StopProcessing() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Commands.EnterPSHostProcessCommand.StopProcessing" />
+      <MemberSignature Language="VB.NET" Value="Protected Overrides Sub StopProcessing ()" />
+      <MemberSignature Language="F#" Value="override this.StopProcessing : unit -&gt; unit" Usage="enterPSHostProcessCommand.StopProcessing " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Stop Processing
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

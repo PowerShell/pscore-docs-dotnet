@@ -1,0 +1,110 @@
+﻿<Type Name="PSLanguageMode" FullName="System.Management.Automation.PSLanguageMode">
+  <TypeSignature Language="C#" Value="public enum PSLanguageMode" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed PSLanguageMode extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Management.Automation.PSLanguageMode" />
+  <TypeSignature Language="VB.NET" Value="Public Enum PSLanguageMode" />
+  <TypeSignature Language="F#" Value="type PSLanguageMode = " />
+  <AssemblyInfo>
+    <AssemblyName>System.Management.Automation</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>
+            This enum defines what subset of the PowerShell language is permitted when
+            calling into this execution environment.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="ConstrainedLanguage">
+      <MemberSignature Language="C#" Value="ConstrainedLanguage" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Management.Automation.PSLanguageMode ConstrainedLanguage = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:System.Management.Automation.PSLanguageMode.ConstrainedLanguage" />
+      <MemberSignature Language="VB.NET" Value="ConstrainedLanguage" />
+      <MemberSignature Language="F#" Value="ConstrainedLanguage = 3" Usage="System.Management.Automation.PSLanguageMode.ConstrainedLanguage" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.PSLanguageMode</ReturnType>
+      </ReturnValue>
+      <MemberValue>3</MemberValue>
+      <Docs>
+        <summary>
+            Exposes a subset of the PowerShell language that limits itself to core PowerShell
+            types, does not support method invocation (except on those types), and does not
+            support property setters (except on those types).
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="FullLanguage">
+      <MemberSignature Language="C#" Value="FullLanguage" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Management.Automation.PSLanguageMode FullLanguage = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Management.Automation.PSLanguageMode.FullLanguage" />
+      <MemberSignature Language="VB.NET" Value="FullLanguage" />
+      <MemberSignature Language="F#" Value="FullLanguage = 0" Usage="System.Management.Automation.PSLanguageMode.FullLanguage" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.PSLanguageMode</ReturnType>
+      </ReturnValue>
+      <MemberValue>0</MemberValue>
+      <Docs>
+        <summary>
+            All PowerShell language elements are available
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="NoLanguage">
+      <MemberSignature Language="C#" Value="NoLanguage" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Management.Automation.PSLanguageMode NoLanguage = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Management.Automation.PSLanguageMode.NoLanguage" />
+      <MemberSignature Language="VB.NET" Value="NoLanguage" />
+      <MemberSignature Language="F#" Value="NoLanguage = 2" Usage="System.Management.Automation.PSLanguageMode.NoLanguage" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.PSLanguageMode</ReturnType>
+      </ReturnValue>
+      <MemberValue>2</MemberValue>
+      <Docs>
+        <summary>
+            Commands containing script text to evaluate are not allowed. You can only
+            call commands using the Runspace APIs when in this mode.
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="RestrictedLanguage">
+      <MemberSignature Language="C#" Value="RestrictedLanguage" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Management.Automation.PSLanguageMode RestrictedLanguage = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Management.Automation.PSLanguageMode.RestrictedLanguage" />
+      <MemberSignature Language="VB.NET" Value="RestrictedLanguage" />
+      <MemberSignature Language="F#" Value="RestrictedLanguage = 1" Usage="System.Management.Automation.PSLanguageMode.RestrictedLanguage" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.PSLanguageMode</ReturnType>
+      </ReturnValue>
+      <MemberValue>1</MemberValue>
+      <Docs>
+        <summary>
+            A subset of language elements are available to external requests
+            </summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,113 @@
+﻿<Type Name="RemotingCapability" FullName="System.Management.Automation.RemotingCapability">
+  <TypeSignature Language="C#" Value="public enum RemotingCapability" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed RemotingCapability extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Management.Automation.RemotingCapability" />
+  <TypeSignature Language="VB.NET" Value="Public Enum RemotingCapability" />
+  <TypeSignature Language="F#" Value="type RemotingCapability = " />
+  <AssemblyInfo>
+    <AssemblyName>System.Management.Automation</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>
+            Defines the various types of remoting behaviour that a cmdlet may
+            desire when used in a context that supports ambient / automatic remoting.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="None">
+      <MemberSignature Language="C#" Value="None" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Management.Automation.RemotingCapability None = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Management.Automation.RemotingCapability.None" />
+      <MemberSignature Language="VB.NET" Value="None" />
+      <MemberSignature Language="F#" Value="None = 0" Usage="System.Management.Automation.RemotingCapability.None" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.RemotingCapability</ReturnType>
+      </ReturnValue>
+      <MemberValue>0</MemberValue>
+      <Docs>
+        <summary>
+            In the presence of ambient remoting, this command should
+            still be run locally.
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="OwnedByCommand">
+      <MemberSignature Language="C#" Value="OwnedByCommand" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Management.Automation.RemotingCapability OwnedByCommand = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:System.Management.Automation.RemotingCapability.OwnedByCommand" />
+      <MemberSignature Language="VB.NET" Value="OwnedByCommand" />
+      <MemberSignature Language="F#" Value="OwnedByCommand = 3" Usage="System.Management.Automation.RemotingCapability.OwnedByCommand" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.RemotingCapability</ReturnType>
+      </ReturnValue>
+      <MemberValue>3</MemberValue>
+      <Docs>
+        <summary>
+            In the presence of ambient remoting, the command assumes
+            all responsibility for targeting the remote computer;
+            PowerShell Remoting is not supported.
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="PowerShell">
+      <MemberSignature Language="C#" Value="PowerShell" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Management.Automation.RemotingCapability PowerShell = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Management.Automation.RemotingCapability.PowerShell" />
+      <MemberSignature Language="VB.NET" Value="PowerShell" />
+      <MemberSignature Language="F#" Value="PowerShell = 1" Usage="System.Management.Automation.RemotingCapability.PowerShell" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.RemotingCapability</ReturnType>
+      </ReturnValue>
+      <MemberValue>1</MemberValue>
+      <Docs>
+        <summary>
+            In the presence of ambient remoting, this command should
+            be run on the target computer using PowerShell Remoting.
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="SupportedByCommand">
+      <MemberSignature Language="C#" Value="SupportedByCommand" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Management.Automation.RemotingCapability SupportedByCommand = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Management.Automation.RemotingCapability.SupportedByCommand" />
+      <MemberSignature Language="VB.NET" Value="SupportedByCommand" />
+      <MemberSignature Language="F#" Value="SupportedByCommand = 2" Usage="System.Management.Automation.RemotingCapability.SupportedByCommand" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.RemotingCapability</ReturnType>
+      </ReturnValue>
+      <MemberValue>2</MemberValue>
+      <Docs>
+        <summary>
+            In the presence of ambient remoting, this command supports
+            its own form of remoting which can be used instead to target
+            the remote computer.
+            </summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

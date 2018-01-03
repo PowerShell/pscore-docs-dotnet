@@ -1,0 +1,116 @@
+﻿<Type Name="HashCmdletBase" FullName="Microsoft.PowerShell.Commands.HashCmdletBase">
+  <TypeSignature Language="C#" Value="public class HashCmdletBase : System.Management.Automation.PSCmdlet" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit HashCmdletBase extends System.Management.Automation.PSCmdlet" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.PowerShell.Commands.HashCmdletBase" />
+  <TypeSignature Language="VB.NET" Value="Public Class HashCmdletBase&#xA;Inherits PSCmdlet" />
+  <TypeSignature Language="F#" Value="type HashCmdletBase = class&#xA;    inherit PSCmdlet" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.PowerShell.Commands.Utility</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Management.Automation.PSCmdlet</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Base Cmdlet for cmdlets which deal with crypto hashes
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public HashCmdletBase ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Commands.HashCmdletBase.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New ()" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Commands.Utility</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Algorithm">
+      <MemberSignature Language="C#" Value="public string Algorithm { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Algorithm" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.HashCmdletBase.Algorithm" />
+      <MemberSignature Language="VB.NET" Value="Public Property Algorithm As String" />
+      <MemberSignature Language="F#" Value="member this.Algorithm : string with get, set" Usage="Microsoft.PowerShell.Commands.HashCmdletBase.Algorithm" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Commands.Utility</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(Position=1)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.ValidateSet(Mono.Cecil.CustomAttributeArgument[])</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Algorithm parameter
+            The hash algorithm name: "SHA1", "SHA256", "SHA384", "SHA512", "MD5"
+            </summary>
+        <value />
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="hasher">
+      <MemberSignature Language="C#" Value="protected System.Security.Cryptography.HashAlgorithm hasher;" />
+      <MemberSignature Language="ILAsm" Value=".field family class System.Security.Cryptography.HashAlgorithm hasher" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.PowerShell.Commands.HashCmdletBase.hasher" />
+      <MemberSignature Language="VB.NET" Value="Protected hasher As HashAlgorithm " />
+      <MemberSignature Language="F#" Value="val mutable hasher : System.Security.Cryptography.HashAlgorithm" Usage="Microsoft.PowerShell.Commands.HashCmdletBase.hasher" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Commands.Utility</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.HashAlgorithm</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Hash algorithm is used
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InitHasher">
+      <MemberSignature Language="C#" Value="protected void InitHasher (string Algorithm);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void InitHasher(string Algorithm) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Commands.HashCmdletBase.InitHasher(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Protected Sub InitHasher (Algorithm As String)" />
+      <MemberSignature Language="F#" Value="member this.InitHasher : string -&gt; unit" Usage="hashCmdletBase.InitHasher Algorithm" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Commands.Utility</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="Algorithm" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="Algorithm">To be added.</param>
+        <summary>
+            Init a hash algorithm
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

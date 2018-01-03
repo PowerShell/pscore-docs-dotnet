@@ -1,0 +1,144 @@
+﻿<Type Name="ValidateEnumeratedArgumentsAttribute" FullName="System.Management.Automation.ValidateEnumeratedArgumentsAttribute">
+  <TypeSignature Language="C#" Value="public abstract class ValidateEnumeratedArgumentsAttribute : System.Management.Automation.ValidateArgumentsAttribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit ValidateEnumeratedArgumentsAttribute extends System.Management.Automation.ValidateArgumentsAttribute" />
+  <TypeSignature Language="DocId" Value="T:System.Management.Automation.ValidateEnumeratedArgumentsAttribute" />
+  <TypeSignature Language="VB.NET" Value="Public MustInherit Class ValidateEnumeratedArgumentsAttribute&#xA;Inherits ValidateArgumentsAttribute" />
+  <TypeSignature Language="F#" Value="type ValidateEnumeratedArgumentsAttribute = class&#xA;    inherit ValidateArgumentsAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System.Management.Automation</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Management.Automation.ValidateArgumentsAttribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Property | System.AttributeTargets.Field)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>
+             A variant of <see cref="T:System.Management.Automation.ValidateArgumentsAttribute" /> which
+             unrolls enumeration values and validates each element
+             individually.
+             </summary>
+    <remarks>
+      <see cref="T:System.Management.Automation.ValidateEnumeratedArgumentsAttribute" /> is like
+             <see cref="T:System.Management.Automation.ValidateArgumentsAttribute" />, except that if
+             the argument value is an enumeration,
+             <see cref="T:System.Management.Automation.ValidateEnumeratedArgumentsAttribute" /> will unroll
+             the enumeration and validate each item individually.
+            
+             Existing enumerated validation attributes include
+             <see cref="T:System.Management.Automation.ValidateLengthAttribute" />,
+             <see cref="T:System.Management.Automation.ValidateRangeAttribute" />,
+             <see cref="T:System.Management.Automation.ValidatePatternAttribute" />, and
+             <see cref="T:System.Management.Automation.ValidateSetAttribute" />.
+            
+             PSSnapins wishing to create custom enumerated argument validation attributes
+             should derive from
+             <seealso cref="T:System.Management.Automation.ValidateEnumeratedArgumentsAttribute" />
+             and override the
+             <seealso cref="M:System.Management.Automation.ValidateEnumeratedArgumentsAttribute.ValidateElement(System.Object)" />
+             abstract method, after which they can apply the
+             attribute to their parameters.
+            
+             It is also recommended to override
+             <see cref="M:System.Object.ToString" /> to return a readable string
+             similar to the attribute declaration, for example
+             "[ValidateRangeAttribute(5,10)]".
+            
+             If this attribute is applied to a string parameter, the string command argument will be validated.
+             If this attribute is applied to a string[] parameter, each string command argument will be validated.
+             </remarks>
+    <altmember cref="T:System.Management.Automation.ValidateArgumentsAttribute" />
+    <altmember cref="T:System.Management.Automation.ValidateLengthAttribute" />
+    <altmember cref="T:System.Management.Automation.ValidateRangeAttribute" />
+    <altmember cref="T:System.Management.Automation.ValidatePatternAttribute" />
+    <altmember cref="T:System.Management.Automation.ValidateSetAttribute" />
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected ValidateEnumeratedArgumentsAttribute ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.ValidateEnumeratedArgumentsAttribute.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Protected Sub New ()" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>
+            Initializes a new instance of a class derived from ValidateEnumeratedArgumentsAttribute
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Validate">
+      <MemberSignature Language="C#" Value="protected override sealed void Validate (object arguments, System.Management.Automation.EngineIntrinsics engineIntrinsics);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void Validate(object arguments, class System.Management.Automation.EngineIntrinsics engineIntrinsics) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.ValidateEnumeratedArgumentsAttribute.Validate(System.Object,System.Management.Automation.EngineIntrinsics)" />
+      <MemberSignature Language="F#" Value="override this.Validate : obj * System.Management.Automation.EngineIntrinsics -&gt; unit" Usage="validateEnumeratedArgumentsAttribute.Validate (arguments, engineIntrinsics)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="arguments" Type="System.Object" />
+        <Parameter Name="engineIntrinsics" Type="System.Management.Automation.EngineIntrinsics" />
+      </Parameters>
+      <Docs>
+        <param name="arguments">object to validate</param>
+        <param name="engineIntrinsics">
+            The engine APIs for the context under which the prerequisite is being
+            evaluated.
+            </param>
+        <summary>
+            Calls ValidateElement in each element in the enumeration argument value.
+            </summary>
+        <remarks>
+            PSSnapins should override <see cref="M:System.Management.Automation.ValidateEnumeratedArgumentsAttribute.ValidateElement(System.Object)" /> instead.
+            </remarks>
+        <exception cref="T:System.Management.Automation.ValidationMetadataException">should be thrown for any validation failure</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ValidateElement">
+      <MemberSignature Language="C#" Value="protected abstract void ValidateElement (object element);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void ValidateElement(object element) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.ValidateEnumeratedArgumentsAttribute.ValidateElement(System.Object)" />
+      <MemberSignature Language="VB.NET" Value="Protected MustOverride Sub ValidateElement (element As Object)" />
+      <MemberSignature Language="F#" Value="abstract member ValidateElement : obj -&gt; unit" Usage="validateEnumeratedArgumentsAttribute.ValidateElement element" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="element">one of the parameter arguments</param>
+        <summary>
+            Overridden by subclasses to implement the validation of each parameter argument
+            </summary>
+        <remarks>
+            Validate that the value of <paramref name="element" />
+            is valid, and throw
+            <see cref="T:System.Management.Automation.ValidationMetadataException" />
+            if it is invalid.
+            </remarks>
+        <exception cref="T:System.Management.Automation.ValidationMetadataException">should be thrown for any validation failure</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

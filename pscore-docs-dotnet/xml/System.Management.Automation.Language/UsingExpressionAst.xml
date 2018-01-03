@@ -1,0 +1,122 @@
+﻿<Type Name="UsingExpressionAst" FullName="System.Management.Automation.Language.UsingExpressionAst">
+  <TypeSignature Language="C#" Value="public class UsingExpressionAst : System.Management.Automation.Language.ExpressionAst" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit UsingExpressionAst extends System.Management.Automation.Language.ExpressionAst" />
+  <TypeSignature Language="DocId" Value="T:System.Management.Automation.Language.UsingExpressionAst" />
+  <TypeSignature Language="VB.NET" Value="Public Class UsingExpressionAst&#xA;Inherits ExpressionAst" />
+  <TypeSignature Language="F#" Value="type UsingExpressionAst = class&#xA;    inherit ExpressionAst" />
+  <AssemblyInfo>
+    <AssemblyName>System.Management.Automation</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Management.Automation.Language.ExpressionAst</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            The ast that represents a "using" expression, e.g. <c>$using:pshome</c></summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public UsingExpressionAst (System.Management.Automation.Language.IScriptExtent extent, System.Management.Automation.Language.ExpressionAst expressionAst);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Management.Automation.Language.IScriptExtent extent, class System.Management.Automation.Language.ExpressionAst expressionAst) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Language.UsingExpressionAst.#ctor(System.Management.Automation.Language.IScriptExtent,System.Management.Automation.Language.ExpressionAst)" />
+      <MemberSignature Language="F#" Value="new System.Management.Automation.Language.UsingExpressionAst : System.Management.Automation.Language.IScriptExtent * System.Management.Automation.Language.ExpressionAst -&gt; System.Management.Automation.Language.UsingExpressionAst" Usage="new System.Management.Automation.Language.UsingExpressionAst (extent, expressionAst)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="extent" Type="System.Management.Automation.Language.IScriptExtent" />
+        <Parameter Name="expressionAst" Type="System.Management.Automation.Language.ExpressionAst" />
+      </Parameters>
+      <Docs>
+        <param name="extent">The extent of the using expression.</param>
+        <param name="expressionAst">The sub-expression of the using expression.</param>
+        <summary>
+            Construct a using expression.
+            </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.Management.Automation.PSArgumentNullException">
+            If <paramref name="extent" /> or <paramref name="expressionAst" /> is null.
+            </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Copy">
+      <MemberSignature Language="C#" Value="public override System.Management.Automation.Language.Ast Copy ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Management.Automation.Language.Ast Copy() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Language.UsingExpressionAst.Copy" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Function Copy () As Ast" />
+      <MemberSignature Language="F#" Value="override this.Copy : unit -&gt; System.Management.Automation.Language.Ast" Usage="usingExpressionAst.Copy " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.Language.Ast</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Copy the UsingExpressionAst instance
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ExtractUsingVariable">
+      <MemberSignature Language="C#" Value="public static System.Management.Automation.Language.VariableExpressionAst ExtractUsingVariable (System.Management.Automation.Language.UsingExpressionAst usingExpressionAst);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Management.Automation.Language.VariableExpressionAst ExtractUsingVariable(class System.Management.Automation.Language.UsingExpressionAst usingExpressionAst) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Language.UsingExpressionAst.ExtractUsingVariable(System.Management.Automation.Language.UsingExpressionAst)" />
+      <MemberSignature Language="F#" Value="static member ExtractUsingVariable : System.Management.Automation.Language.UsingExpressionAst -&gt; System.Management.Automation.Language.VariableExpressionAst" Usage="System.Management.Automation.Language.UsingExpressionAst.ExtractUsingVariable usingExpressionAst" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.Language.VariableExpressionAst</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="usingExpressionAst" Type="System.Management.Automation.Language.UsingExpressionAst" />
+      </Parameters>
+      <Docs>
+        <param name="usingExpressionAst">
+            A UsingExpressionAst
+            </param>
+        <summary>
+            Get the underlying "using variable" from a UsingExpressionAst
+            </summary>
+        <returns>
+            The underlying VariableExpressionAst of the UsingExpression
+            </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SubExpression">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.Language.ExpressionAst SubExpression { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Management.Automation.Language.ExpressionAst SubExpression" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.Language.UsingExpressionAst.SubExpression" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property SubExpression As ExpressionAst" />
+      <MemberSignature Language="F#" Value="member this.SubExpression : System.Management.Automation.Language.ExpressionAst" Usage="System.Management.Automation.Language.UsingExpressionAst.SubExpression" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.Language.ExpressionAst</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The expression represented by this using expression.  This property is never null.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

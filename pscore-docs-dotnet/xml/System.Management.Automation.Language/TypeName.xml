@@ -1,0 +1,363 @@
+﻿<Type Name="TypeName" FullName="System.Management.Automation.Language.TypeName">
+  <TypeSignature Language="C#" Value="public sealed class TypeName : System.Management.Automation.Language.ITypeName" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit TypeName extends System.Object implements class System.Management.Automation.Language.ITypeName" />
+  <TypeSignature Language="DocId" Value="T:System.Management.Automation.Language.TypeName" />
+  <TypeSignature Language="VB.NET" Value="Public NotInheritable Class TypeName&#xA;Implements ITypeName" />
+  <TypeSignature Language="F#" Value="type TypeName = class&#xA;    interface ITypeName&#xA;    interface ISupportsTypeCaching" />
+  <AssemblyInfo>
+    <AssemblyName>System.Management.Automation</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Management.Automation.Language.ITypeName</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>
+            A simple type that is not an array or does not have generic arguments.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TypeName (System.Management.Automation.Language.IScriptExtent extent, string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Management.Automation.Language.IScriptExtent extent, string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Language.TypeName.#ctor(System.Management.Automation.Language.IScriptExtent,System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (extent As IScriptExtent, name As String)" />
+      <MemberSignature Language="F#" Value="new System.Management.Automation.Language.TypeName : System.Management.Automation.Language.IScriptExtent * string -&gt; System.Management.Automation.Language.TypeName" Usage="new System.Management.Automation.Language.TypeName (extent, name)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="extent" Type="System.Management.Automation.Language.IScriptExtent" />
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="extent">The extent of the typename.</param>
+        <param name="name">The name of the type.</param>
+        <summary>
+            Construct a simple typename.
+            </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.Management.Automation.PSArgumentNullException">
+            If <paramref name="name" /> is null or the empty string.
+            </exception>
+        <exception cref="T:System.Management.Automation.PSArgumentException">
+            If <paramref name="name" /> contains characters that are only allowed in a generic or array typename.
+            </exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TypeName (System.Management.Automation.Language.IScriptExtent extent, string name, string assembly);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Management.Automation.Language.IScriptExtent extent, string name, string assembly) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Language.TypeName.#ctor(System.Management.Automation.Language.IScriptExtent,System.String,System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (extent As IScriptExtent, name As String, assembly As String)" />
+      <MemberSignature Language="F#" Value="new System.Management.Automation.Language.TypeName : System.Management.Automation.Language.IScriptExtent * string * string -&gt; System.Management.Automation.Language.TypeName" Usage="new System.Management.Automation.Language.TypeName (extent, name, assembly)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="extent" Type="System.Management.Automation.Language.IScriptExtent" />
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="assembly" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="extent">The extent of the typename.</param>
+        <param name="name">The name of the type.</param>
+        <param name="assembly">The assembly the type belongs to.</param>
+        <summary>
+            Construct a typename with an assembly specification.
+            </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.Management.Automation.PSArgumentNullException">
+            If <paramref name="extent" /> is null or if <paramref name="name" /> or <paramref name="assembly" /> is null or the empty string.
+            </exception>
+        <exception cref="T:System.Management.Automation.PSArgumentException">
+            If <paramref name="name" /> contains characters that are only allowed in a generic or array typename.
+            </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AssemblyName">
+      <MemberSignature Language="C#" Value="public string AssemblyName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string AssemblyName" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.Language.TypeName.AssemblyName" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property AssemblyName As String" />
+      <MemberSignature Language="F#" Value="member this.AssemblyName : string" Usage="System.Management.Automation.Language.TypeName.AssemblyName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The name of the assembly, if specified, otherwise null.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public override bool Equals (object obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Language.TypeName.Equals(System.Object)" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Function Equals (obj As Object) As Boolean" />
+      <MemberSignature Language="F#" Value="override this.Equals : obj -&gt; bool" Usage="typeName.Equals obj" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="obj">To be added.</param>
+        <summary />
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Extent">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.Language.IScriptExtent Extent { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Management.Automation.Language.IScriptExtent Extent" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.Language.TypeName.Extent" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Extent As IScriptExtent" />
+      <MemberSignature Language="F#" Value="member this.Extent : System.Management.Automation.Language.IScriptExtent" Usage="System.Management.Automation.Language.TypeName.Extent" />
+      <MemberType>Property</MemberType>
+      <Implements>
+        <InterfaceMember>P:System.Management.Automation.Language.ITypeName.Extent</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.Language.IScriptExtent</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The extent of the typename.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FullName">
+      <MemberSignature Language="C#" Value="public string FullName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string FullName" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.Language.TypeName.FullName" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property FullName As String" />
+      <MemberSignature Language="F#" Value="member this.FullName : string" Usage="System.Management.Automation.Language.TypeName.FullName" />
+      <MemberType>Property</MemberType>
+      <Implements>
+        <InterfaceMember>P:System.Management.Automation.Language.ITypeName.FullName</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Returns the full name of the type.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public override int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Language.TypeName.GetHashCode" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Function GetHashCode () As Integer" />
+      <MemberSignature Language="F#" Value="override this.GetHashCode : unit -&gt; int" Usage="typeName.GetHashCode " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary />
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetReflectionAttributeType">
+      <MemberSignature Language="C#" Value="public Type GetReflectionAttributeType ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Type GetReflectionAttributeType() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Language.TypeName.GetReflectionAttributeType" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetReflectionAttributeType () As Type" />
+      <MemberSignature Language="F#" Value="abstract member GetReflectionAttributeType : unit -&gt; Type&#xA;override this.GetReflectionAttributeType : unit -&gt; Type" Usage="typeName.GetReflectionAttributeType " />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.Management.Automation.Language.ITypeName.GetReflectionAttributeType</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Returns the <see cref="T:System.Type" /> this type represents, assuming the type is an attribute.  The suffix
+            "Attribute" may be appended, if necessary, to resolve the type.
+            </summary>
+        <returns>
+            The <see cref="T:System.Type" /> if possible, null otherwise.  Null may be returned for valid typenames if the assembly
+            containing the type has not been loaded.
+            </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetReflectionType">
+      <MemberSignature Language="C#" Value="public Type GetReflectionType ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Type GetReflectionType() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Language.TypeName.GetReflectionType" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetReflectionType () As Type" />
+      <MemberSignature Language="F#" Value="abstract member GetReflectionType : unit -&gt; Type&#xA;override this.GetReflectionType : unit -&gt; Type" Usage="typeName.GetReflectionType " />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.Management.Automation.Language.ITypeName.GetReflectionType</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Get the <see cref="T:System.Type" /> from a typename.
+            </summary>
+        <returns>
+            The <see cref="T:System.Type" /> if possible, null otherwise.  Null may be returned for valid typenames if the assembly
+            containing the type has not been loaded.
+            </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsArray">
+      <MemberSignature Language="C#" Value="public bool IsArray { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsArray" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.Language.TypeName.IsArray" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property IsArray As Boolean" />
+      <MemberSignature Language="F#" Value="member this.IsArray : bool" Usage="System.Management.Automation.Language.TypeName.IsArray" />
+      <MemberType>Property</MemberType>
+      <Implements>
+        <InterfaceMember>P:System.Management.Automation.Language.ITypeName.IsArray</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Always returns false, array typenames are instances of <see cref="T:System.Management.Automation.Language.ArrayTypeName" />.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsGeneric">
+      <MemberSignature Language="C#" Value="public bool IsGeneric { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsGeneric" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.Language.TypeName.IsGeneric" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property IsGeneric As Boolean" />
+      <MemberSignature Language="F#" Value="member this.IsGeneric : bool" Usage="System.Management.Automation.Language.TypeName.IsGeneric" />
+      <MemberType>Property</MemberType>
+      <Implements>
+        <InterfaceMember>P:System.Management.Automation.Language.ITypeName.IsGeneric</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Always returns false, generic typenames are instances of <see cref="T:System.Management.Automation.Language.GenericTypeName" />.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public string Name { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.Language.TypeName.Name" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Name As String" />
+      <MemberSignature Language="F#" Value="member this.Name : string" Usage="System.Management.Automation.Language.TypeName.Name" />
+      <MemberType>Property</MemberType>
+      <Implements>
+        <InterfaceMember>P:System.Management.Automation.Language.ITypeName.Name</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Returns the name of the type, w/o any assembly name if one was specified.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Language.TypeName.ToString" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Function ToString () As String" />
+      <MemberSignature Language="F#" Value="override this.ToString : unit -&gt; string" Usage="typeName.ToString " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Simply return the <see cref="P:System.Management.Automation.Language.TypeName.FullName" /> of the type.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

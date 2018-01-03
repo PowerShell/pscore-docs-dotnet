@@ -1,0 +1,157 @@
+﻿<Type Name="ValidateRangeAttribute" FullName="System.Management.Automation.ValidateRangeAttribute">
+  <TypeSignature Language="C#" Value="public sealed class ValidateRangeAttribute : System.Management.Automation.ValidateEnumeratedArgumentsAttribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit ValidateRangeAttribute extends System.Management.Automation.ValidateEnumeratedArgumentsAttribute" />
+  <TypeSignature Language="DocId" Value="T:System.Management.Automation.ValidateRangeAttribute" />
+  <TypeSignature Language="VB.NET" Value="Public NotInheritable Class ValidateRangeAttribute&#xA;Inherits ValidateEnumeratedArgumentsAttribute" />
+  <TypeSignature Language="F#" Value="type ValidateRangeAttribute = class&#xA;    inherit ValidateEnumeratedArgumentsAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System.Management.Automation</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Management.Automation.ValidateEnumeratedArgumentsAttribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Property | System.AttributeTargets.Field)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>
+            Validates that each parameter argument falls in the range
+            specified by MinRange and MaxRange
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ValidateRangeAttribute (System.Management.Automation.ValidateRangeKind kind);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Management.Automation.ValidateRangeKind kind) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.ValidateRangeAttribute.#ctor(System.Management.Automation.ValidateRangeKind)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (kind As ValidateRangeKind)" />
+      <MemberSignature Language="F#" Value="new System.Management.Automation.ValidateRangeAttribute : System.Management.Automation.ValidateRangeKind -&gt; System.Management.Automation.ValidateRangeAttribute" Usage="new System.Management.Automation.ValidateRangeAttribute kind" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="kind" Type="System.Management.Automation.ValidateRangeKind" />
+      </Parameters>
+      <Docs>
+        <param name="kind">To be added.</param>
+        <summary>
+            Initializes a new instance of the ValidateRangeAttribute class
+            this constructor uses a predefined ranged
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ValidateRangeAttribute (object minRange, object maxRange);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(object minRange, object maxRange) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.ValidateRangeAttribute.#ctor(System.Object,System.Object)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (minRange As Object, maxRange As Object)" />
+      <MemberSignature Language="F#" Value="new System.Management.Automation.ValidateRangeAttribute : obj * obj -&gt; System.Management.Automation.ValidateRangeAttribute" Usage="new System.Management.Automation.ValidateRangeAttribute (minRange, maxRange)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="minRange" Type="System.Object" />
+        <Parameter Name="maxRange" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="minRange">Minimum value of the range allowed. </param>
+        <param name="maxRange">Maximum value of the range allowed. </param>
+        <summary>
+            Initializes a new instance of the ValidateRangeAttribute class
+            </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">for invalid arguments</exception>
+        <exception cref="T:System.Management.Automation.ValidationMetadataException">
+            if maxRange has a different type than minRange
+            if maxRange is smaller than minRange
+            if maxRange, minRange are not IComparable
+            </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="MaxRange">
+      <MemberSignature Language="C#" Value="public object MaxRange { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object MaxRange" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.ValidateRangeAttribute.MaxRange" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property MaxRange As Object" />
+      <MemberSignature Language="F#" Value="member this.MaxRange : obj" Usage="System.Management.Automation.ValidateRangeAttribute.MaxRange" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the attribute's maximum range
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MinRange">
+      <MemberSignature Language="C#" Value="public object MinRange { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object MinRange" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.ValidateRangeAttribute.MinRange" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property MinRange As Object" />
+      <MemberSignature Language="F#" Value="member this.MinRange : obj" Usage="System.Management.Automation.ValidateRangeAttribute.MinRange" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the attribute's minimum range
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ValidateElement">
+      <MemberSignature Language="C#" Value="protected override void ValidateElement (object element);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void ValidateElement(object element) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.ValidateRangeAttribute.ValidateElement(System.Object)" />
+      <MemberSignature Language="VB.NET" Value="Protected Overrides Sub ValidateElement (element As Object)" />
+      <MemberSignature Language="F#" Value="override this.ValidateElement : obj -&gt; unit" Usage="validateRangeAttribute.ValidateElement element" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="element">object to validate</param>
+        <summary>
+            Validates that each parameter argument falls in the range
+            specified by MinRange and MaxRange
+            </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.Management.Automation.ValidationMetadataException">
+            Thrown if the object to be validated does not implement IComparable,
+            if the element type is not the same of MinRange, MaxRange,
+            or if the element is not between MinRange and MaxRange.
+            </exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

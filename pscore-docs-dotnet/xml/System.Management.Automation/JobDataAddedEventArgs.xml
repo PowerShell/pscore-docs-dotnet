@@ -1,0 +1,91 @@
+﻿<Type Name="JobDataAddedEventArgs" FullName="System.Management.Automation.JobDataAddedEventArgs">
+  <TypeSignature Language="C#" Value="public sealed class JobDataAddedEventArgs : EventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit JobDataAddedEventArgs extends System.EventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Management.Automation.JobDataAddedEventArgs" />
+  <TypeSignature Language="VB.NET" Value="Public NotInheritable Class JobDataAddedEventArgs&#xA;Inherits EventArgs" />
+  <TypeSignature Language="F#" Value="type JobDataAddedEventArgs = class&#xA;    inherit EventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>System.Management.Automation</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.EventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Event arguments that indicate data has been added to a child job.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="DataType">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.PowerShellStreamType DataType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Management.Automation.PowerShellStreamType DataType" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.JobDataAddedEventArgs.DataType" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property DataType As PowerShellStreamType" />
+      <MemberSignature Language="F#" Value="member this.DataType : System.Management.Automation.PowerShellStreamType" Usage="System.Management.Automation.JobDataAddedEventArgs.DataType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.PowerShellStreamType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Identifies the type of the sending collection as one of the six collections
+            associated with a job.
+            If data type = output, sender is PSDataCollection of PSObject, Error is of ErrorRecord, etc.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Index">
+      <MemberSignature Language="C#" Value="public int Index { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Index" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.JobDataAddedEventArgs.Index" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Index As Integer" />
+      <MemberSignature Language="F#" Value="member this.Index : int" Usage="System.Management.Automation.JobDataAddedEventArgs.Index" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Index at which the data is added.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SourceJob">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.Job SourceJob { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Management.Automation.Job SourceJob" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.JobDataAddedEventArgs.SourceJob" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property SourceJob As Job" />
+      <MemberSignature Language="F#" Value="member this.SourceJob : System.Management.Automation.Job" Usage="System.Management.Automation.JobDataAddedEventArgs.SourceJob" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.Job</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The job that contains the PSDataCollection which is the sender.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

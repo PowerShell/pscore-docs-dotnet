@@ -1,0 +1,260 @@
+﻿<Type Name="SteppablePipeline" FullName="System.Management.Automation.SteppablePipeline">
+  <TypeSignature Language="C#" Value="public sealed class SteppablePipeline : IDisposable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit SteppablePipeline extends System.Object implements class System.IDisposable" />
+  <TypeSignature Language="DocId" Value="T:System.Management.Automation.SteppablePipeline" />
+  <TypeSignature Language="VB.NET" Value="Public NotInheritable Class SteppablePipeline&#xA;Implements IDisposable" />
+  <TypeSignature Language="F#" Value="type SteppablePipeline = class&#xA;    interface IDisposable" />
+  <AssemblyInfo>
+    <AssemblyName>System.Management.Automation</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>
+            A steppable pipeline wrapper object...
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Begin">
+      <MemberSignature Language="C#" Value="public void Begin (bool expectInput);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Begin(bool expectInput) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.SteppablePipeline.Begin(System.Boolean)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Begin (expectInput As Boolean)" />
+      <MemberSignature Language="F#" Value="member this.Begin : bool -&gt; unit" Usage="steppablePipeline.Begin expectInput" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="expectInput" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="expectInput">
+          <c>true</c> if you plan to write input into this pipe; <c>false</c> otherwise</param>
+        <summary>
+            Begin execution of a steppable pipeline. This overload doesn't reroute output and error pipes.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Begin">
+      <MemberSignature Language="C#" Value="public void Begin (System.Management.Automation.Internal.InternalCommand command);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Begin(class System.Management.Automation.Internal.InternalCommand command) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.SteppablePipeline.Begin(System.Management.Automation.Internal.InternalCommand)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Begin (command As InternalCommand)" />
+      <MemberSignature Language="F#" Value="member this.Begin : System.Management.Automation.Internal.InternalCommand -&gt; unit" Usage="steppablePipeline.Begin command" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="command" Type="System.Management.Automation.Internal.InternalCommand" />
+      </Parameters>
+      <Docs>
+        <param name="command">The command you're calling this from (i.e. instance of PSCmdlet or value of $PSCmdlet variable)</param>
+        <summary>
+            Begin execution of a steppable pipeline, using the calling command to figure
+            out how to route the output and errors. This is the most effective
+            way to start stepping.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Begin">
+      <MemberSignature Language="C#" Value="public void Begin (bool expectInput, System.Management.Automation.EngineIntrinsics contextToRedirectTo);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Begin(bool expectInput, class System.Management.Automation.EngineIntrinsics contextToRedirectTo) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.SteppablePipeline.Begin(System.Boolean,System.Management.Automation.EngineIntrinsics)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Begin (expectInput As Boolean, contextToRedirectTo As EngineIntrinsics)" />
+      <MemberSignature Language="F#" Value="member this.Begin : bool * System.Management.Automation.EngineIntrinsics -&gt; unit" Usage="steppablePipeline.Begin (expectInput, contextToRedirectTo)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="expectInput" Type="System.Boolean" />
+        <Parameter Name="contextToRedirectTo" Type="System.Management.Automation.EngineIntrinsics" />
+      </Parameters>
+      <Docs>
+        <param name="expectInput">
+          <c>true</c> if you plan to write input into this pipe; <c>false</c> otherwise</param>
+        <param name="contextToRedirectTo">context used to figure out how to route the output and errors.</param>
+        <summary>
+            Begin execution of a steppable pipeline, using the command running currently in the specified context to figure
+            out how to route the output and errors.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="public void Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Dispose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.SteppablePipeline.Dispose" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Dispose ()" />
+      <MemberSignature Language="F#" Value="abstract member Dispose : unit -&gt; unit&#xA;override this.Dispose : unit -&gt; unit" Usage="steppablePipeline.Dispose " />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.IDisposable.Dispose</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            IDisposable implementation
+            When this object is disposed, the contained pipeline should also be disposed.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="End">
+      <MemberSignature Language="C#" Value="public Array End ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Array End() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.SteppablePipeline.End" />
+      <MemberSignature Language="VB.NET" Value="Public Function End () As Array" />
+      <MemberSignature Language="F#" Value="member this.End : unit -&gt; Array" Usage="steppablePipeline.End " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Array</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            End the execution of this steppable pipeline. This will
+            complete the execution and dispose the results.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Finalize">
+      <MemberSignature Language="C#" Value="~SteppablePipeline ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void Finalize() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.SteppablePipeline.Finalize" />
+      <MemberSignature Language="VB.NET" Value="Finalize ()" />
+      <MemberSignature Language="F#" Value="override this.Finalize : unit -&gt; unit" Usage="steppablePipeline.Finalize " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Finalizer for class SteppablePipeline
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Process">
+      <MemberSignature Language="C#" Value="public Array Process ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Array Process() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.SteppablePipeline.Process" />
+      <MemberSignature Language="VB.NET" Value="Public Function Process () As Array" />
+      <MemberSignature Language="F#" Value="member this.Process : unit -&gt; Array" Usage="steppablePipeline.Process " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Array</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Process with no input. This is used in the case where
+            Begin() was called with $false so we won't send any
+            input to be processed.
+            </summary>
+        <returns>The result of the execution</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Process">
+      <MemberSignature Language="C#" Value="public Array Process (System.Management.Automation.PSObject input);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Array Process(class System.Management.Automation.PSObject input) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.SteppablePipeline.Process(System.Management.Automation.PSObject)" />
+      <MemberSignature Language="VB.NET" Value="Public Function Process (input As PSObject) As Array" />
+      <MemberSignature Language="F#" Value="member this.Process : System.Management.Automation.PSObject -&gt; Array" Usage="steppablePipeline.Process input" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Array</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="input" Type="System.Management.Automation.PSObject" />
+      </Parameters>
+      <Docs>
+        <param name="input">The input object to process</param>
+        <summary>
+            Process a single PSObject. This overload exists to deal with the fact
+            that the PowerShell runtime will PSBase an object before passing it to
+            a .NET API call with argument type object.
+            </summary>
+        <returns />
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Process">
+      <MemberSignature Language="C#" Value="public Array Process (object input);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Array Process(object input) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.SteppablePipeline.Process(System.Object)" />
+      <MemberSignature Language="VB.NET" Value="Public Function Process (input As Object) As Array" />
+      <MemberSignature Language="F#" Value="member this.Process : obj -&gt; Array" Usage="steppablePipeline.Process input" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Array</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="input" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="input">The object to process</param>
+        <summary>
+            Process a single input object.
+            </summary>
+        <returns>a collection of 0 or more result objects</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

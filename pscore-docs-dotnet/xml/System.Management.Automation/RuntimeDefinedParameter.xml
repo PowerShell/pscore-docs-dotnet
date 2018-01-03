@@ -1,0 +1,214 @@
+﻿<Type Name="RuntimeDefinedParameter" FullName="System.Management.Automation.RuntimeDefinedParameter">
+  <TypeSignature Language="C#" Value="public class RuntimeDefinedParameter" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit RuntimeDefinedParameter extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Management.Automation.RuntimeDefinedParameter" />
+  <TypeSignature Language="VB.NET" Value="Public Class RuntimeDefinedParameter" />
+  <TypeSignature Language="F#" Value="type RuntimeDefinedParameter = class" />
+  <AssemblyInfo>
+    <AssemblyName>System.Management.Automation</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+             Represents a parameter declaration that can be constructed at runtime.
+             </summary>
+    <remarks>
+             Instances of <see cref="T:System.Management.Automation.RuntimeDefinedParameterDictionary" />
+             should be returned to cmdlet implementations of
+             <see cref="M:System.Management.Automation.IDynamicParameters.GetDynamicParameters" />.
+            
+             It is permitted to subclass <see cref="T:System.Management.Automation.RuntimeDefinedParameter" />
+             but there is no established scenario for doing this, nor has it been tested.
+             </remarks>
+    <altmember cref="T:System.Management.Automation.RuntimeDefinedParameterDictionary" />
+    <altmember cref="T:System.Management.Automation.IDynamicParameters" />
+    <altmember cref="M:System.Management.Automation.IDynamicParameters.GetDynamicParameters" />
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public RuntimeDefinedParameter ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.RuntimeDefinedParameter.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New ()" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>
+            Constructs a runtime-defined parameter instance.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public RuntimeDefinedParameter (string name, Type parameterType, System.Collections.ObjectModel.Collection&lt;Attribute&gt; attributes);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string name, class System.Type parameterType, class System.Collections.ObjectModel.Collection`1&lt;class System.Attribute&gt; attributes) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.RuntimeDefinedParameter.#ctor(System.String,System.Type,System.Collections.ObjectModel.Collection{System.Attribute})" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (name As String, parameterType As Type, attributes As Collection(Of Attribute))" />
+      <MemberSignature Language="F#" Value="new System.Management.Automation.RuntimeDefinedParameter : string * Type * System.Collections.ObjectModel.Collection&lt;Attribute&gt; -&gt; System.Management.Automation.RuntimeDefinedParameter" Usage="new System.Management.Automation.RuntimeDefinedParameter (name, parameterType, attributes)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="parameterType" Type="System.Type" />
+        <Parameter Name="attributes" Type="System.Collections.ObjectModel.Collection&lt;System.Attribute&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="name">
+             The name of the parameter. This cannot be null or empty.
+             </param>
+        <param name="parameterType">
+             The type of the parameter value. Arguments will be coerced to this type before binding.
+             This parameter cannot be null.
+             </param>
+        <param name="attributes">
+             Any parameter attributes that should be on the parameter. This can be any of the
+             parameter attributes including but not limited to Validate*Attribute, ExpandWildcardAttribute, etc.
+             </param>
+        <summary>
+             Constructs a new instance of a runtime-defined parameter using the specified parameters.
+             </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">
+             If <paramref name="name" /> is null or empty.
+             </exception>
+        <exception cref="T:System.ArgumentNullException">
+             If <paramref name="parameterType" /> is null.
+             </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Attributes">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.Collection&lt;Attribute&gt; Attributes { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ObjectModel.Collection`1&lt;class System.Attribute&gt; Attributes" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.RuntimeDefinedParameter.Attributes" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Attributes As Collection(Of Attribute)" />
+      <MemberSignature Language="F#" Value="member this.Attributes : System.Collections.ObjectModel.Collection&lt;Attribute&gt;" Usage="System.Management.Automation.RuntimeDefinedParameter.Attributes" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.Collection&lt;System.Attribute&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+             Gets or sets the attribute collection that describes the parameter.
+             </summary>
+        <value>To be added.</value>
+        <remarks>
+             This can be any attribute that can be applied to a normal parameter.
+             </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsSet">
+      <MemberSignature Language="C#" Value="public bool IsSet { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsSet" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.RuntimeDefinedParameter.IsSet" />
+      <MemberSignature Language="VB.NET" Value="Public Property IsSet As Boolean" />
+      <MemberSignature Language="F#" Value="member this.IsSet : bool with get, set" Usage="System.Management.Automation.RuntimeDefinedParameter.IsSet" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets whether this parameter value has been set.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public string Name { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.RuntimeDefinedParameter.Name" />
+      <MemberSignature Language="VB.NET" Value="Public Property Name As String" />
+      <MemberSignature Language="F#" Value="member this.Name : string with get, set" Usage="System.Management.Automation.RuntimeDefinedParameter.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+             Gets or sets the name of the parameter
+             </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">
+             If <paramref name="value" /> is null or empty on set.
+             </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ParameterType">
+      <MemberSignature Language="C#" Value="public Type ParameterType { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type ParameterType" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.RuntimeDefinedParameter.ParameterType" />
+      <MemberSignature Language="VB.NET" Value="Public Property ParameterType As Type" />
+      <MemberSignature Language="F#" Value="member this.ParameterType : Type with get, set" Usage="System.Management.Automation.RuntimeDefinedParameter.ParameterType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+             Gets or sets the type of the parameter.
+             </summary>
+        <value>To be added.</value>
+        <remarks>
+             Arguments will be coerced to this type before being bound.
+             </remarks>
+        <exception cref="T:System.ArgumentNullException">
+             If <paramref name="value" /> is null.
+             </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Value">
+      <MemberSignature Language="C#" Value="public object Value { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object Value" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.RuntimeDefinedParameter.Value" />
+      <MemberSignature Language="VB.NET" Value="Public Property Value As Object" />
+      <MemberSignature Language="F#" Value="member this.Value : obj with get, set" Usage="System.Management.Automation.RuntimeDefinedParameter.Value" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+             Gets or sets the value of the parameter.
+             </summary>
+        <value>To be added.</value>
+        <remarks>
+             If the value is set prior to parameter binding, the value will be
+             reset before each pipeline object is processed.
+             </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

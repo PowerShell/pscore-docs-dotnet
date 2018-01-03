@@ -1,0 +1,243 @@
+﻿<Type Name="PSToken" FullName="System.Management.Automation.PSToken">
+  <TypeSignature Language="C#" Value="public sealed class PSToken" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit PSToken extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Management.Automation.PSToken" />
+  <TypeSignature Language="VB.NET" Value="Public NotInheritable Class PSToken" />
+  <TypeSignature Language="F#" Value="type PSToken = class" />
+  <AssemblyInfo>
+    <AssemblyName>System.Management.Automation</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+             This is public class for representing a powershell token.
+             </summary>
+    <remarks>
+             There is already an internal class Token for representing the token.
+            
+             This class wraps the internal Token class for providing limited information
+             to syntax editor.
+             </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Content">
+      <MemberSignature Language="C#" Value="public string Content { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Content" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.PSToken.Content" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Content As String" />
+      <MemberSignature Language="F#" Value="member this.Content : string" Usage="System.Management.Automation.PSToken.Content" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+             Resulting text for the token.
+             </summary>
+        <value>To be added.</value>
+        <remarks>
+             The text here represents the content of token. It can be the same as
+             the text chunk within script resulting into this token, but usually is not
+             the case.
+            
+             For example, -name in following command result into a parameter token.
+            
+                 get-process -name foo
+            
+             Text property in this case is 'name' instead of '-name'.
+             </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EndColumn">
+      <MemberSignature Language="C#" Value="public int EndColumn { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 EndColumn" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.PSToken.EndColumn" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property EndColumn As Integer" />
+      <MemberSignature Language="F#" Value="member this.EndColumn : int" Usage="System.Management.Automation.PSToken.EndColumn" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Position of token end in end line.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EndLine">
+      <MemberSignature Language="C#" Value="public int EndLine { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 EndLine" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.PSToken.EndLine" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property EndLine As Integer" />
+      <MemberSignature Language="F#" Value="member this.EndLine : int" Usage="System.Management.Automation.PSToken.EndLine" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Line number of token end.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetPSTokenType">
+      <MemberSignature Language="C#" Value="public static System.Management.Automation.PSTokenType GetPSTokenType (System.Management.Automation.Language.Token token);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Management.Automation.PSTokenType GetPSTokenType(class System.Management.Automation.Language.Token token) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.PSToken.GetPSTokenType(System.Management.Automation.Language.Token)" />
+      <MemberSignature Language="F#" Value="static member GetPSTokenType : System.Management.Automation.Language.Token -&gt; System.Management.Automation.PSTokenType" Usage="System.Management.Automation.PSToken.GetPSTokenType token" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.PSTokenType</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="token" Type="System.Management.Automation.Language.Token" />
+      </Parameters>
+      <Docs>
+        <param name="token">The V3 token</param>
+        <summary>
+            Map a V3 token to a V2 PSTokenType
+            </summary>
+        <returns>The V2 PSTokenType</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Length">
+      <MemberSignature Language="C#" Value="public int Length { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Length" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.PSToken.Length" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Length As Integer" />
+      <MemberSignature Language="F#" Value="member this.Length : int" Usage="System.Management.Automation.PSToken.Length" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Offset of token end in script buffer.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Start">
+      <MemberSignature Language="C#" Value="public int Start { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Start" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.PSToken.Start" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Start As Integer" />
+      <MemberSignature Language="F#" Value="member this.Start : int" Usage="System.Management.Automation.PSToken.Start" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Offset of token start in script buffer.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StartColumn">
+      <MemberSignature Language="C#" Value="public int StartColumn { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 StartColumn" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.PSToken.StartColumn" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property StartColumn As Integer" />
+      <MemberSignature Language="F#" Value="member this.StartColumn : int" Usage="System.Management.Automation.PSToken.StartColumn" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Position of token start in start line.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StartLine">
+      <MemberSignature Language="C#" Value="public int StartLine { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 StartLine" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.PSToken.StartLine" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property StartLine As Integer" />
+      <MemberSignature Language="F#" Value="member this.StartLine : int" Usage="System.Management.Automation.PSToken.StartLine" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Line number of token start.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+            StartLine, StartColumn, EndLine, and EndColumn are 1-based,
+            i.e., first line has a line number 1 and first character in
+            a line has column number 1.
+            </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Type">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.PSTokenType Type { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Management.Automation.PSTokenType Type" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.PSToken.Type" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Type As PSTokenType" />
+      <MemberSignature Language="F#" Value="member this.Type : System.Management.Automation.PSTokenType" Usage="System.Management.Automation.PSToken.Type" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.PSTokenType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Token type.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

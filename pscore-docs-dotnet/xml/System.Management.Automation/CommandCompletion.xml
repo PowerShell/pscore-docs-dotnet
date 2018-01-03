@@ -1,0 +1,315 @@
+﻿<Type Name="CommandCompletion" FullName="System.Management.Automation.CommandCompletion">
+  <TypeSignature Language="C#" Value="public class CommandCompletion" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit CommandCompletion extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Management.Automation.CommandCompletion" />
+  <TypeSignature Language="VB.NET" Value="Public Class CommandCompletion" />
+  <TypeSignature Language="F#" Value="type CommandCompletion = class" />
+  <AssemblyInfo>
+    <AssemblyName>System.Management.Automation</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Provides a set of possible completions for given input.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CommandCompletion (System.Collections.ObjectModel.Collection&lt;System.Management.Automation.CompletionResult&gt; matches, int currentMatchIndex, int replacementIndex, int replacementLength);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Collections.ObjectModel.Collection`1&lt;class System.Management.Automation.CompletionResult&gt; matches, int32 currentMatchIndex, int32 replacementIndex, int32 replacementLength) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.CommandCompletion.#ctor(System.Collections.ObjectModel.Collection{System.Management.Automation.CompletionResult},System.Int32,System.Int32,System.Int32)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (matches As Collection(Of CompletionResult), currentMatchIndex As Integer, replacementIndex As Integer, replacementLength As Integer)" />
+      <MemberSignature Language="F#" Value="new System.Management.Automation.CommandCompletion : System.Collections.ObjectModel.Collection&lt;System.Management.Automation.CompletionResult&gt; * int * int * int -&gt; System.Management.Automation.CommandCompletion" Usage="new System.Management.Automation.CommandCompletion (matches, currentMatchIndex, replacementIndex, replacementLength)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="matches" Type="System.Collections.ObjectModel.Collection&lt;System.Management.Automation.CompletionResult&gt;" />
+        <Parameter Name="currentMatchIndex" Type="System.Int32" />
+        <Parameter Name="replacementIndex" Type="System.Int32" />
+        <Parameter Name="replacementLength" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="matches">To be added.</param>
+        <param name="currentMatchIndex">To be added.</param>
+        <param name="replacementIndex">To be added.</param>
+        <param name="replacementLength">To be added.</param>
+        <summary>
+            Construct the result CompleteInput or TabExpansion2.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CompleteInput">
+      <MemberSignature Language="C#" Value="public static System.Management.Automation.CommandCompletion CompleteInput (string input, int cursorIndex, System.Collections.Hashtable options);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Management.Automation.CommandCompletion CompleteInput(string input, int32 cursorIndex, class System.Collections.Hashtable options) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.CommandCompletion.CompleteInput(System.String,System.Int32,System.Collections.Hashtable)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function CompleteInput (input As String, cursorIndex As Integer, options As Hashtable) As CommandCompletion" />
+      <MemberSignature Language="F#" Value="static member CompleteInput : string * int * System.Collections.Hashtable -&gt; System.Management.Automation.CommandCompletion" Usage="System.Management.Automation.CommandCompletion.CompleteInput (input, cursorIndex, options)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.CommandCompletion</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="input" Type="System.String" />
+        <Parameter Name="cursorIndex" Type="System.Int32" />
+        <Parameter Name="options" Type="System.Collections.Hashtable" />
+      </Parameters>
+      <Docs>
+        <param name="input">The input to complete</param>
+        <param name="cursorIndex">The index of the cursor in the input</param>
+        <param name="options">Optional options to configure how completion is performed</param>
+        <summary />
+        <returns />
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CompleteInput">
+      <MemberSignature Language="C#" Value="public static System.Management.Automation.CommandCompletion CompleteInput (System.Management.Automation.Language.Ast ast, System.Management.Automation.Language.Token[] tokens, System.Management.Automation.Language.IScriptPosition positionOfCursor, System.Collections.Hashtable options);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Management.Automation.CommandCompletion CompleteInput(class System.Management.Automation.Language.Ast ast, class System.Management.Automation.Language.Token[] tokens, class System.Management.Automation.Language.IScriptPosition positionOfCursor, class System.Collections.Hashtable options) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.CommandCompletion.CompleteInput(System.Management.Automation.Language.Ast,System.Management.Automation.Language.Token[],System.Management.Automation.Language.IScriptPosition,System.Collections.Hashtable)" />
+      <MemberSignature Language="F#" Value="static member CompleteInput : System.Management.Automation.Language.Ast * System.Management.Automation.Language.Token[] * System.Management.Automation.Language.IScriptPosition * System.Collections.Hashtable -&gt; System.Management.Automation.CommandCompletion" Usage="System.Management.Automation.CommandCompletion.CompleteInput (ast, tokens, positionOfCursor, options)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.CommandCompletion</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="ast" Type="System.Management.Automation.Language.Ast" />
+        <Parameter Name="tokens" Type="System.Management.Automation.Language.Token[]" />
+        <Parameter Name="positionOfCursor" Type="System.Management.Automation.Language.IScriptPosition" />
+        <Parameter Name="options" Type="System.Collections.Hashtable" />
+      </Parameters>
+      <Docs>
+        <param name="ast">Ast for pre-parsed input</param>
+        <param name="tokens">Tokens for pre-parsed input</param>
+        <param name="positionOfCursor"></param>
+        <param name="options">Optional options to configure how completion is performed</param>
+        <summary />
+        <returns />
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CompleteInput">
+      <MemberSignature Language="C#" Value="public static System.Management.Automation.CommandCompletion CompleteInput (string input, int cursorIndex, System.Collections.Hashtable options, System.Management.Automation.PowerShell powershell);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Management.Automation.CommandCompletion CompleteInput(string input, int32 cursorIndex, class System.Collections.Hashtable options, class System.Management.Automation.PowerShell powershell) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.CommandCompletion.CompleteInput(System.String,System.Int32,System.Collections.Hashtable,System.Management.Automation.PowerShell)" />
+      <MemberSignature Language="F#" Value="static member CompleteInput : string * int * System.Collections.Hashtable * System.Management.Automation.PowerShell -&gt; System.Management.Automation.CommandCompletion" Usage="System.Management.Automation.CommandCompletion.CompleteInput (input, cursorIndex, options, powershell)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.CommandCompletion</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="input" Type="System.String" />
+        <Parameter Name="cursorIndex" Type="System.Int32" />
+        <Parameter Name="options" Type="System.Collections.Hashtable" />
+        <Parameter Name="powershell" Type="System.Management.Automation.PowerShell" />
+      </Parameters>
+      <Docs>
+        <param name="input">The input script to complete</param>
+        <param name="cursorIndex">The offset in <paramref name="input" /> where completion is requested</param>
+        <param name="options">Optional parameter that specifies configurable options for completion.</param>
+        <param name="powershell">The powershell to use to invoke the script function TabExpansion2</param>
+        <summary>
+            Invokes the script function TabExpansion2.
+            For legacy support, TabExpansion2 will indirectly call TabExpansion if it exists.
+            </summary>
+        <returns>A collection of completions with the replacement start and length.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CompleteInput">
+      <MemberSignature Language="C#" Value="public static System.Management.Automation.CommandCompletion CompleteInput (System.Management.Automation.Language.Ast ast, System.Management.Automation.Language.Token[] tokens, System.Management.Automation.Language.IScriptPosition cursorPosition, System.Collections.Hashtable options, System.Management.Automation.PowerShell powershell);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Management.Automation.CommandCompletion CompleteInput(class System.Management.Automation.Language.Ast ast, class System.Management.Automation.Language.Token[] tokens, class System.Management.Automation.Language.IScriptPosition cursorPosition, class System.Collections.Hashtable options, class System.Management.Automation.PowerShell powershell) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.CommandCompletion.CompleteInput(System.Management.Automation.Language.Ast,System.Management.Automation.Language.Token[],System.Management.Automation.Language.IScriptPosition,System.Collections.Hashtable,System.Management.Automation.PowerShell)" />
+      <MemberSignature Language="F#" Value="static member CompleteInput : System.Management.Automation.Language.Ast * System.Management.Automation.Language.Token[] * System.Management.Automation.Language.IScriptPosition * System.Collections.Hashtable * System.Management.Automation.PowerShell -&gt; System.Management.Automation.CommandCompletion" Usage="System.Management.Automation.CommandCompletion.CompleteInput (ast, tokens, cursorPosition, options, powershell)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.CommandCompletion</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="ast" Type="System.Management.Automation.Language.Ast" />
+        <Parameter Name="tokens" Type="System.Management.Automation.Language.Token[]" />
+        <Parameter Name="cursorPosition" Type="System.Management.Automation.Language.IScriptPosition" />
+        <Parameter Name="options" Type="System.Collections.Hashtable" />
+        <Parameter Name="powershell" Type="System.Management.Automation.PowerShell" />
+      </Parameters>
+      <Docs>
+        <param name="ast">The ast for pre-parsed input</param>
+        <param name="tokens"></param>
+        <param name="cursorPosition"></param>
+        <param name="options">Optional options to configure how completion is performed</param>
+        <param name="powershell">The powershell to use to invoke the script function TabExpansion2</param>
+        <summary>
+            Invokes the script function TabExpansion2.
+            For legacy support, TabExpansion2 will indirectly call TabExpansion if it exists.
+            </summary>
+        <returns />
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CompletionMatches">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.Collection&lt;System.Management.Automation.CompletionResult&gt; CompletionMatches { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ObjectModel.Collection`1&lt;class System.Management.Automation.CompletionResult&gt; CompletionMatches" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.CommandCompletion.CompletionMatches" />
+      <MemberSignature Language="VB.NET" Value="Public Property CompletionMatches As Collection(Of CompletionResult)" />
+      <MemberSignature Language="F#" Value="member this.CompletionMatches : System.Collections.ObjectModel.Collection&lt;System.Management.Automation.CompletionResult&gt; with get, set" Usage="System.Management.Automation.CommandCompletion.CompletionMatches" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.Collection&lt;System.Management.Automation.CompletionResult&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets all the completion results.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CurrentMatchIndex">
+      <MemberSignature Language="C#" Value="public int CurrentMatchIndex { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 CurrentMatchIndex" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.CommandCompletion.CurrentMatchIndex" />
+      <MemberSignature Language="VB.NET" Value="Public Property CurrentMatchIndex As Integer" />
+      <MemberSignature Language="F#" Value="member this.CurrentMatchIndex : int with get, set" Usage="System.Management.Automation.CommandCompletion.CurrentMatchIndex" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Current index in <see cref="P:System.Management.Automation.CommandCompletion.CompletionMatches" />.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetNextResult">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.CompletionResult GetNextResult (bool forward);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Management.Automation.CompletionResult GetNextResult(bool forward) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.CommandCompletion.GetNextResult(System.Boolean)" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetNextResult (forward As Boolean) As CompletionResult" />
+      <MemberSignature Language="F#" Value="member this.GetNextResult : bool -&gt; System.Management.Automation.CompletionResult" Usage="commandCompletion.GetNextResult forward" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.CompletionResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="forward" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="forward">True if we should move forward through the list, false if backwards.</param>
+        <summary>
+            Get the next result, moving forward or backward.  Supports wraparound, so if there are any results at all,
+            this method will never fail and never return null.
+            </summary>
+        <returns>The next completion result, or null if no results.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MapStringInputToParsedInput">
+      <MemberSignature Language="C#" Value="public static Tuple&lt;System.Management.Automation.Language.Ast,System.Management.Automation.Language.Token[],System.Management.Automation.Language.IScriptPosition&gt; MapStringInputToParsedInput (string input, int cursorIndex);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Tuple`3&lt;class System.Management.Automation.Language.Ast, class System.Management.Automation.Language.Token[], class System.Management.Automation.Language.IScriptPosition&gt; MapStringInputToParsedInput(string input, int32 cursorIndex) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.CommandCompletion.MapStringInputToParsedInput(System.String,System.Int32)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function MapStringInputToParsedInput (input As String, cursorIndex As Integer) As Tuple(Of Ast, Token(), IScriptPosition)" />
+      <MemberSignature Language="F#" Value="static member MapStringInputToParsedInput : string * int -&gt; System.Management.Automation.Language.Ast * System.Management.Automation.Language.Token[] * System.Management.Automation.Language.IScriptPosition" Usage="System.Management.Automation.CommandCompletion.MapStringInputToParsedInput (input, cursorIndex)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Tuple&lt;System.Management.Automation.Language.Ast,System.Management.Automation.Language.Token[],System.Management.Automation.Language.IScriptPosition&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="input" Type="System.String" />
+        <Parameter Name="cursorIndex" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="input"></param>
+        <param name="cursorIndex"></param>
+        <summary />
+        <returns />
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReplacementIndex">
+      <MemberSignature Language="C#" Value="public int ReplacementIndex { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 ReplacementIndex" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.CommandCompletion.ReplacementIndex" />
+      <MemberSignature Language="VB.NET" Value="Public Property ReplacementIndex As Integer" />
+      <MemberSignature Language="F#" Value="member this.ReplacementIndex : int with get, set" Usage="System.Management.Automation.CommandCompletion.ReplacementIndex" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Returns the starting replacement index from the original input.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReplacementLength">
+      <MemberSignature Language="C#" Value="public int ReplacementLength { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 ReplacementLength" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.CommandCompletion.ReplacementLength" />
+      <MemberSignature Language="VB.NET" Value="Public Property ReplacementLength As Integer" />
+      <MemberSignature Language="F#" Value="member this.ReplacementLength : int with get, set" Usage="System.Management.Automation.CommandCompletion.ReplacementLength" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Returns the length of the text to replace from the original input.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

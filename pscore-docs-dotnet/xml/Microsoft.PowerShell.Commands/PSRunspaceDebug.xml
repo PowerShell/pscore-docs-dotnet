@@ -1,0 +1,145 @@
+﻿<Type Name="PSRunspaceDebug" FullName="Microsoft.PowerShell.Commands.PSRunspaceDebug">
+  <TypeSignature Language="C#" Value="public sealed class PSRunspaceDebug" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit PSRunspaceDebug extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.PowerShell.Commands.PSRunspaceDebug" />
+  <TypeSignature Language="VB.NET" Value="Public NotInheritable Class PSRunspaceDebug" />
+  <TypeSignature Language="F#" Value="type PSRunspaceDebug = class" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.PowerShell.Commands.Utility</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Runspace Debug Options class
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public PSRunspaceDebug (bool enabled, bool breakAll, string runspaceName, int runspaceId);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(bool enabled, bool breakAll, string runspaceName, int32 runspaceId) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Commands.PSRunspaceDebug.#ctor(System.Boolean,System.Boolean,System.String,System.Int32)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (enabled As Boolean, breakAll As Boolean, runspaceName As String, runspaceId As Integer)" />
+      <MemberSignature Language="F#" Value="new Microsoft.PowerShell.Commands.PSRunspaceDebug : bool * bool * string * int -&gt; Microsoft.PowerShell.Commands.PSRunspaceDebug" Usage="new Microsoft.PowerShell.Commands.PSRunspaceDebug (enabled, breakAll, runspaceName, runspaceId)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Commands.Utility</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="enabled" Type="System.Boolean" />
+        <Parameter Name="breakAll" Type="System.Boolean" />
+        <Parameter Name="runspaceName" Type="System.String" />
+        <Parameter Name="runspaceId" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="enabled">Enable debugger option</param>
+        <param name="breakAll">BreakAll option</param>
+        <param name="runspaceName">Runspace name</param>
+        <param name="runspaceId">Runspace local Id</param>
+        <summary>
+            Constructor.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BreakAll">
+      <MemberSignature Language="C#" Value="public bool BreakAll { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool BreakAll" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.PSRunspaceDebug.BreakAll" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property BreakAll As Boolean" />
+      <MemberSignature Language="F#" Value="member this.BreakAll : bool" Usage="Microsoft.PowerShell.Commands.PSRunspaceDebug.BreakAll" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Commands.Utility</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            When true this property will cause any running command or script in the Runspace
+            to stop in step mode, regardless of whether a debugger is currently attached.  The
+            script or command will remain stopped until a debugger is attached to debug the
+            current stop point.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Enabled">
+      <MemberSignature Language="C#" Value="public bool Enabled { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Enabled" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.PSRunspaceDebug.Enabled" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Enabled As Boolean" />
+      <MemberSignature Language="F#" Value="member this.Enabled : bool" Usage="Microsoft.PowerShell.Commands.PSRunspaceDebug.Enabled" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Commands.Utility</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            When true this property will cause any breakpoints set in a Runspace to stop
+            the running command or script when the breakpoint is hit, regardless of whether a
+            debugger is currently attached.  The script or command will remain stopped until
+            a debugger is attached to debug the breakpoint.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RunspaceId">
+      <MemberSignature Language="C#" Value="public int RunspaceId { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 RunspaceId" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.PSRunspaceDebug.RunspaceId" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property RunspaceId As Integer" />
+      <MemberSignature Language="F#" Value="member this.RunspaceId : int" Usage="Microsoft.PowerShell.Commands.PSRunspaceDebug.RunspaceId" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Commands.Utility</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Local Id of runspace for which the options apply.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RunspaceName">
+      <MemberSignature Language="C#" Value="public string RunspaceName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string RunspaceName" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.PSRunspaceDebug.RunspaceName" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property RunspaceName As String" />
+      <MemberSignature Language="F#" Value="member this.RunspaceName : string" Usage="Microsoft.PowerShell.Commands.PSRunspaceDebug.RunspaceName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Commands.Utility</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Name of runspace for which the options apply.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,1835 @@
+﻿<Type Name="Cmdlet" FullName="System.Management.Automation.Cmdlet">
+  <TypeSignature Language="C#" Value="public abstract class Cmdlet : System.Management.Automation.Internal.InternalCommand" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit Cmdlet extends System.Management.Automation.Internal.InternalCommand" />
+  <TypeSignature Language="DocId" Value="T:System.Management.Automation.Cmdlet" />
+  <TypeSignature Language="VB.NET" Value="Public MustInherit Class Cmdlet&#xA;Inherits InternalCommand" />
+  <TypeSignature Language="F#" Value="type Cmdlet = class&#xA;    inherit InternalCommand" />
+  <AssemblyInfo>
+    <AssemblyName>System.Management.Automation</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Management.Automation.Internal.InternalCommand</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Defines members and overrides used by Cmdlets.
+            All Cmdlets must derive from <see cref="T:System.Management.Automation.Cmdlet" />.
+            </summary>
+    <remarks>
+            There are two ways to create a Cmdlet: by deriving from the Cmdlet base class, and by
+            deriving from the PSCmdlet base class.  The Cmdlet base class is the primary means by
+            which users create their own Cmdlets.  Extending this class provides support for the most
+            common functionality, including object output and record processing.
+            If your Cmdlet requires access to the MSH Runtime (for example, variables in the session state,
+            access to the host, or information about the current Cmdlet Providers,) then you should instead
+            derive from the PSCmdlet base class.
+            In both cases, users should first develop and implement an object model to accomplish their
+            task, extending the Cmdlet or PSCmdlet classes only as a thin management layer.
+            </remarks>
+    <altmember cref="T:System.Management.Automation.Internal.InternalCommand" />
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected Cmdlet ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Cmdlet.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Protected Sub New ()" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>
+            Initializes the new instance of Cmdlet class.
+            </summary>
+        <remarks>
+            Only subclasses of <see cref="T:System.Management.Automation.Cmdlet" />
+            can be created.
+            </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginProcessing">
+      <MemberSignature Language="C#" Value="protected virtual void BeginProcessing ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void BeginProcessing() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Cmdlet.BeginProcessing" />
+      <MemberSignature Language="VB.NET" Value="Protected Overridable Sub BeginProcessing ()" />
+      <MemberSignature Language="F#" Value="abstract member BeginProcessing : unit -&gt; unit&#xA;override this.BeginProcessing : unit -&gt; unit" Usage="cmdlet.BeginProcessing " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            When overridden in the derived class, performs initialization
+            of command execution.
+            Default implementation in the base class just returns.
+            </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.Exception">
+            This method is overridden in the implementation of
+            individual Cmdlets, and can throw literally any exception.
+            </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CommandRuntime">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.ICommandRuntime CommandRuntime { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Management.Automation.ICommandRuntime CommandRuntime" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.Cmdlet.CommandRuntime" />
+      <MemberSignature Language="VB.NET" Value="Public Property CommandRuntime As ICommandRuntime" />
+      <MemberSignature Language="F#" Value="member this.CommandRuntime : System.Management.Automation.ICommandRuntime with get, set" Usage="System.Management.Automation.Cmdlet.CommandRuntime" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.ICommandRuntime</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Holds the command runtime object for this command. This object controls
+            what actually happens when a write is called.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CommonParameters">
+      <MemberSignature Language="C#" Value="public static System.Collections.Generic.HashSet&lt;string&gt; CommonParameters { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Collections.Generic.HashSet`1&lt;string&gt; CommonParameters" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.Cmdlet.CommonParameters" />
+      <MemberSignature Language="VB.NET" Value="Public Shared ReadOnly Property CommonParameters As HashSet(Of String)" />
+      <MemberSignature Language="F#" Value="member this.CommonParameters : System.Collections.Generic.HashSet&lt;string&gt;" Usage="System.Management.Automation.Cmdlet.CommonParameters" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.HashSet&lt;System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Lists the common parameters that are added by the PowerShell engine to any cmdlet that derives
+            from PSCmdlet.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CurrentPSTransaction">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.PSTransactionContext CurrentPSTransaction { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Management.Automation.PSTransactionContext CurrentPSTransaction" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.Cmdlet.CurrentPSTransaction" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property CurrentPSTransaction As PSTransactionContext" />
+      <MemberSignature Language="F#" Value="member this.CurrentPSTransaction : System.Management.Automation.PSTransactionContext" Usage="System.Management.Automation.Cmdlet.CurrentPSTransaction" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.PSTransactionContext</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets an object that surfaces the current PowerShell transaction.
+            When this object is disposed, PowerShell resets the active transaction
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EndProcessing">
+      <MemberSignature Language="C#" Value="protected virtual void EndProcessing ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void EndProcessing() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Cmdlet.EndProcessing" />
+      <MemberSignature Language="VB.NET" Value="Protected Overridable Sub EndProcessing ()" />
+      <MemberSignature Language="F#" Value="abstract member EndProcessing : unit -&gt; unit&#xA;override this.EndProcessing : unit -&gt; unit" Usage="cmdlet.EndProcessing " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            When overridden in the derived class, performs clean-up
+            after the command execution.
+            Default implementation in the base class just returns.
+            </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.Exception">
+            This method is overridden in the implementation of
+            individual Cmdlets, and can throw literally any exception.
+            </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetResourceString">
+      <MemberSignature Language="C#" Value="public virtual string GetResourceString (string baseName, string resourceId);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance string GetResourceString(string baseName, string resourceId) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Cmdlet.GetResourceString(System.String,System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function GetResourceString (baseName As String, resourceId As String) As String" />
+      <MemberSignature Language="F#" Value="abstract member GetResourceString : string * string -&gt; string&#xA;override this.GetResourceString : string * string -&gt; string" Usage="cmdlet.GetResourceString (baseName, resourceId)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="baseName" Type="System.String" />
+        <Parameter Name="resourceId" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="baseName">the base resource name</param>
+        <param name="resourceId">the resource id</param>
+        <summary>
+            Gets the resource string corresponding to
+            baseName and resourceId from the current assembly.
+            You should override this if you require a different behavior.
+            </summary>
+        <returns>the resource string corresponding to baseName and resourceId</returns>
+        <remarks>
+            This behavior may be used when the Cmdlet specifies
+            HelpMessageBaseName and HelpMessageResourceId when defining
+            <see cref="T:System.Management.Automation.ParameterAttribute" />,
+            or when it uses the
+            <see cref="T:System.Management.Automation.ErrorDetails" />
+            constructor variants which take baseName and resourceId.
+            </remarks>
+        <exception cref="T:System.ArgumentException">
+            Invalid <paramref name="baseName" /> or <paramref name="resourceId" />, or
+            string not found in resources
+            </exception>
+        <altmember cref="T:System.Management.Automation.ParameterAttribute" />
+        <altmember cref="T:System.Management.Automation.ErrorDetails" />
+      </Docs>
+    </Member>
+    <Member MemberName="Invoke">
+      <MemberSignature Language="C#" Value="public System.Collections.IEnumerable Invoke ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Collections.IEnumerable Invoke() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Cmdlet.Invoke" />
+      <MemberSignature Language="VB.NET" Value="Public Iterator Function Invoke () As IEnumerable" />
+      <MemberSignature Language="F#" Value="member this.Invoke : unit -&gt; System.Collections.IEnumerable" Usage="cmdlet.Invoke " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.CompilerServices.IteratorStateMachine(typeof(System.Management.Automation.Cmdlet/&lt;Invoke&gt;d__40))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Collections.IEnumerable</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Invoke this cmdlet object returning a collection of results.
+            </summary>
+        <returns>The results that were produced by this class</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Invoke&lt;T&gt;">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IEnumerable&lt;T&gt; Invoke&lt;T&gt; ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Collections.Generic.IEnumerable`1&lt;!!T&gt; Invoke&lt;T&gt;() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Cmdlet.Invoke``1" />
+      <MemberSignature Language="VB.NET" Value="Public Iterator Function Invoke(Of T) () As IEnumerable(Of T)" />
+      <MemberSignature Language="F#" Value="member this.Invoke : unit -&gt; seq&lt;'T&gt;" Usage="cmdlet.Invoke " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.CompilerServices.IteratorStateMachine(typeof(System.Management.Automation.Cmdlet/&lt;Invoke&gt;d__41`1))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerable&lt;T&gt;</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="T" />
+      </TypeParameters>
+      <Parameters />
+      <Docs>
+        <typeparam name="T">The type returned by the enumerator</typeparam>
+        <summary>
+            Returns a strongly-typed enumerator for the results of this cmdlet.
+            </summary>
+        <returns>An instance of the appropriate enumerator</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidCastException">Thrown when the object returned by the cmdlet cannot be converted to the target type</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="OptionalCommonParameters">
+      <MemberSignature Language="C#" Value="public static System.Collections.Generic.HashSet&lt;string&gt; OptionalCommonParameters { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Collections.Generic.HashSet`1&lt;string&gt; OptionalCommonParameters" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.Cmdlet.OptionalCommonParameters" />
+      <MemberSignature Language="VB.NET" Value="Public Shared ReadOnly Property OptionalCommonParameters As HashSet(Of String)" />
+      <MemberSignature Language="F#" Value="member this.OptionalCommonParameters : System.Collections.Generic.HashSet&lt;string&gt;" Usage="System.Management.Automation.Cmdlet.OptionalCommonParameters" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.HashSet&lt;System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Lists the common parameters that are added by the PowerShell engine when a cmdlet defines
+            additional capabilities (SupportsShouldProcess, SupportsTransactions)
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ProcessRecord">
+      <MemberSignature Language="C#" Value="protected virtual void ProcessRecord ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void ProcessRecord() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Cmdlet.ProcessRecord" />
+      <MemberSignature Language="VB.NET" Value="Protected Overridable Sub ProcessRecord ()" />
+      <MemberSignature Language="F#" Value="abstract member ProcessRecord : unit -&gt; unit&#xA;override this.ProcessRecord : unit -&gt; unit" Usage="cmdlet.ProcessRecord " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            When overridden in the derived class, performs execution
+            of the command.
+            </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.Exception">
+            This method is overridden in the implementation of
+            individual Cmdlets, and can throw literally any exception.
+            </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ShouldContinue">
+      <MemberSignature Language="C#" Value="public bool ShouldContinue (string query, string caption);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool ShouldContinue(string query, string caption) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Cmdlet.ShouldContinue(System.String,System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Function ShouldContinue (query As String, caption As String) As Boolean" />
+      <MemberSignature Language="F#" Value="member this.ShouldContinue : string * string -&gt; bool" Usage="cmdlet.ShouldContinue (query, caption)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="query" Type="System.String" />
+        <Parameter Name="caption" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="query">
+             Textual query of whether the action should be performed,
+             usually in the form of a question.
+             </param>
+        <param name="caption">
+             Caption of the window which may be displayed
+             when the user is prompted whether or not to perform the action.
+             It may be displayed by some hosts, but not all.
+             </param>
+        <summary>
+             Confirm an operation or grouping of operations with the user.
+             This differs from ShouldProcess in that it is not affected by
+             preference settings or command-line parameters,
+             it always does the query.
+             This variant only offers Yes/No, not YesToAll/NoToAll.
+             </summary>
+        <returns>
+             If ShouldContinue returns true, the operation should be performed.
+             If ShouldContinue returns false, the operation should not be
+             performed, and the Cmdlet should move on to the next target resource.
+             </returns>
+        <remarks>
+             Cmdlets using ShouldContinue should also offer a "bool Force"
+             parameter which bypasses the calls to ShouldContinue
+             and ShouldProcess.
+             If this is not done, it will be difficult to use the Cmdlet
+             from scripts and non-interactive hosts.
+            
+             Cmdlets using ShouldContinue must still verify operations
+             which will make changes using ShouldProcess.
+             This will assure that settings such as -WhatIf work properly.
+             You may call ShouldContinue either before or after ShouldProcess.
+            
+             ShouldContinue may only be called during a call to this Cmdlet's
+             implementation of ProcessRecord, BeginProcessing or EndProcessing,
+             and only from that thread.
+            
+             Cmdlets may have different "classes" of confirmations.  For example,
+             "del" confirms whether files in a particular directory should be
+             deleted, whether read-only files should be deleted, etc.
+             Cmdlets can use ShouldContinue to store YesToAll/NoToAll members
+             for each such "class" to keep track of whether the user has
+             confirmed "delete all read-only files" etc.
+             ShouldProcess offers YesToAll/NoToAll automatically,
+             but answering YesToAll or NoToAll applies to all subsequent calls
+             to ShouldProcess for the Cmdlet instance.
+             </remarks>
+        <exception cref="T:System.Management.Automation.PipelineStoppedException">
+             The pipeline has already been terminated, or was terminated
+             during the execution of this method.
+             The Cmdlet should generally just allow PipelineStoppedException
+             to percolate up to the caller of ProcessRecord etc.
+             </exception>
+        <exception cref="T:System.InvalidOperationException">
+             Not permitted at this time or from this thread.
+             ShouldContinue may only be called during a call to this Cmdlet's
+             implementation of ProcessRecord, BeginProcessing or EndProcessing,
+             and only from that thread.
+             </exception>
+        <example>
+          <snippet Code="C#">
+                     namespace Microsoft.Samples.MSH.Cmdlet
+                     {
+                         [Cmdlet(VerbsCommon.Remove,"myobjecttype4")]
+                         public class RemoveMyObjectType4 : Cmdlet
+                         {
+                             [Parameter( Mandatory = true )]
+                             public string Filename
+                             {
+                                 get { return filename; }
+                                 set { filename = value; }
+                             }
+                             private string filename;
+            
+                             [Parameter]
+                             public SwitchParameter Force
+                             {
+                                 get { return force; }
+                                 set { force = value; }
+                             }
+                             private bool force;
+            
+                             public override void ProcessRecord()
+                             {
+                                 if (ShouldProcess(
+                                     String.Format("Deleting file {0}",filename),
+                                     String.Format("Are you sure you want to delete file {0}", filename),
+                                     "Delete file"))
+                                 {
+                                     if (IsReadOnly(filename))
+                                     {
+                                         if (!Force &amp;&amp; !ShouldContinue(
+                                                 String.Format("File {0} is read-only.  Are you sure you want to delete read-only file {0}?", filename),
+                                                 "Delete file"))
+                                                 )
+                                         {
+                                             return;
+                                         }
+                                     }
+                                     // delete the object
+                                 }
+                             }
+                         }
+                     }
+                 </snippet>
+        </example>
+        <altmember cref="M:System.Management.Automation.Cmdlet.ShouldContinue(System.String,System.String,System.Boolean@,System.Boolean@)" />
+        <altmember cref="M:System.Management.Automation.Cmdlet.ShouldProcess(System.String)" />
+        <altmember cref="M:System.Management.Automation.Cmdlet.ShouldProcess(System.String,System.String)" />
+        <altmember cref="M:System.Management.Automation.Cmdlet.ShouldProcess(System.String,System.String,System.String)" />
+      </Docs>
+    </Member>
+    <Member MemberName="ShouldContinue">
+      <MemberSignature Language="C#" Value="public bool ShouldContinue (string query, string caption, ref bool yesToAll, ref bool noToAll);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool ShouldContinue(string query, string caption, bool&amp; yesToAll, bool&amp; noToAll) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Cmdlet.ShouldContinue(System.String,System.String,System.Boolean@,System.Boolean@)" />
+      <MemberSignature Language="VB.NET" Value="Public Function ShouldContinue (query As String, caption As String, ByRef yesToAll As Boolean, ByRef noToAll As Boolean) As Boolean" />
+      <MemberSignature Language="F#" Value="member this.ShouldContinue : string * string *  *  -&gt; bool" Usage="cmdlet.ShouldContinue (query, caption, yesToAll, noToAll)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="query" Type="System.String" />
+        <Parameter Name="caption" Type="System.String" />
+        <Parameter Name="yesToAll" Type="System.Boolean&amp;" RefType="ref" />
+        <Parameter Name="noToAll" Type="System.Boolean&amp;" RefType="ref" />
+      </Parameters>
+      <Docs>
+        <param name="query">
+             Textual query of whether the action should be performed,
+             usually in the form of a question.
+             </param>
+        <param name="caption">
+             Caption of the window which may be displayed
+             when the user is prompted whether or not to perform the action.
+             It may be displayed by some hosts, but not all.
+             </param>
+        <param name="yesToAll">
+             true iff user selects YesToAll.  If this is already true,
+             ShouldContinue will bypass the prompt and return true.
+             </param>
+        <param name="noToAll">
+             true iff user selects NoToAll.  If this is already true,
+             ShouldContinue will bypass the prompt and return false.
+             </param>
+        <summary>
+             Confirm an operation or grouping of operations with the user.
+             This differs from ShouldProcess in that it is not affected by
+             preference settings or command-line parameters,
+             it always does the query.
+             This variant offers Yes, No, YesToAll and NoToAll.
+             </summary>
+        <returns>
+             If ShouldContinue returns true, the operation should be performed.
+             If ShouldContinue returns false, the operation should not be
+             performed, and the Cmdlet should move on to the next target resource.
+             </returns>
+        <remarks>
+             Cmdlets using ShouldContinue should also offer a "bool Force"
+             parameter which bypasses the calls to ShouldContinue
+             and ShouldProcess.
+             If this is not done, it will be difficult to use the Cmdlet
+             from scripts and non-interactive hosts.
+            
+             Cmdlets using ShouldContinue must still verify operations
+             which will make changes using ShouldProcess.
+             This will assure that settings such as -WhatIf work properly.
+             You may call ShouldContinue either before or after ShouldProcess.
+            
+             ShouldContinue may only be called during a call to this Cmdlet's
+             implementation of ProcessRecord, BeginProcessing or EndProcessing,
+             and only from that thread.
+            
+             Cmdlets may have different "classes" of confirmations.  For example,
+             "del" confirms whether files in a particular directory should be
+             deleted, whether read-only files should be deleted, etc.
+             Cmdlets can use ShouldContinue to store YesToAll/NoToAll members
+             for each such "class" to keep track of whether the user has
+             confirmed "delete all read-only files" etc.
+             ShouldProcess offers YesToAll/NoToAll automatically,
+             but answering YesToAll or NoToAll applies to all subsequent calls
+             to ShouldProcess for the Cmdlet instance.
+             </remarks>
+        <exception cref="T:System.Management.Automation.PipelineStoppedException">
+             The pipeline has already been terminated, or was terminated
+             during the execution of this method.
+             The Cmdlet should generally just allow PipelineStoppedException
+             to percolate up to the caller of ProcessRecord etc.
+             </exception>
+        <exception cref="T:System.InvalidOperationException">
+             Not permitted at this time or from this thread.
+             ShouldContinue may only be called during a call to this Cmdlet's
+             implementation of ProcessRecord, BeginProcessing or EndProcessing,
+             and only from that thread.
+             </exception>
+        <example>
+          <snippet Code="C#">
+                     namespace Microsoft.Samples.MSH.Cmdlet
+                     {
+                         [Cmdlet(VerbsCommon.Remove,"myobjecttype4")]
+                         public class RemoveMyObjectType5 : Cmdlet
+                         {
+                             [Parameter( Mandatory = true )]
+                             public string Filename
+                             {
+                                 get { return filename; }
+                                 set { filename = value; }
+                             }
+                             private string filename;
+            
+                             [Parameter]
+                             public SwitchParameter Force
+                             {
+                                 get { return force; }
+                                 set { force = value; }
+                             }
+                             private bool force;
+            
+                             private bool yesToAll;
+                             private bool noToAll;
+            
+                             public override void ProcessRecord()
+                             {
+                                 if (ShouldProcess(
+                                     String.Format("Deleting file {0}",filename),
+                                     String.Format("Are you sure you want to delete file {0}", filename),
+                                     "Delete file"))
+                                 {
+                                     if (IsReadOnly(filename))
+                                     {
+                                         if (!Force &amp;&amp; !ShouldContinue(
+                                                 String.Format("File {0} is read-only.  Are you sure you want to delete read-only file {0}?", filename),
+                                                 "Delete file"),
+                                                 ref yesToAll,
+                                                 ref noToAll
+                                                 )
+                                         {
+                                             return;
+                                         }
+                                     }
+                                     // delete the object
+                                 }
+                             }
+                         }
+                     }
+                 </snippet>
+        </example>
+        <altmember cref="M:System.Management.Automation.Cmdlet.ShouldContinue(System.String,System.String)" />
+        <altmember cref="M:System.Management.Automation.Cmdlet.ShouldProcess(System.String)" />
+        <altmember cref="M:System.Management.Automation.Cmdlet.ShouldProcess(System.String,System.String)" />
+        <altmember cref="M:System.Management.Automation.Cmdlet.ShouldProcess(System.String,System.String,System.String)" />
+      </Docs>
+    </Member>
+    <Member MemberName="ShouldContinue">
+      <MemberSignature Language="C#" Value="public bool ShouldContinue (string query, string caption, bool hasSecurityImpact, ref bool yesToAll, ref bool noToAll);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool ShouldContinue(string query, string caption, bool hasSecurityImpact, bool&amp; yesToAll, bool&amp; noToAll) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Cmdlet.ShouldContinue(System.String,System.String,System.Boolean,System.Boolean@,System.Boolean@)" />
+      <MemberSignature Language="VB.NET" Value="Public Function ShouldContinue (query As String, caption As String, hasSecurityImpact As Boolean, ByRef yesToAll As Boolean, ByRef noToAll As Boolean) As Boolean" />
+      <MemberSignature Language="F#" Value="member this.ShouldContinue : string * string * bool *  *  -&gt; bool" Usage="cmdlet.ShouldContinue (query, caption, hasSecurityImpact, yesToAll, noToAll)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="query" Type="System.String" />
+        <Parameter Name="caption" Type="System.String" />
+        <Parameter Name="hasSecurityImpact" Type="System.Boolean" />
+        <Parameter Name="yesToAll" Type="System.Boolean&amp;" RefType="ref" />
+        <Parameter Name="noToAll" Type="System.Boolean&amp;" RefType="ref" />
+      </Parameters>
+      <Docs>
+        <param name="query">
+             Textual query of whether the action should be performed,
+             usually in the form of a question.
+             </param>
+        <param name="caption">
+             Caption of the window which may be displayed
+             when the user is prompted whether or not to perform the action.
+             It may be displayed by some hosts, but not all.
+             </param>
+        <param name="hasSecurityImpact">
+             true if the operation being confirmed has a security impact. If specified,
+             the default option selected in the selection menu is 'No'.
+             </param>
+        <param name="yesToAll">
+             true iff user selects YesToAll.  If this is already true,
+             ShouldContinue will bypass the prompt and return true.
+             </param>
+        <param name="noToAll">
+             true iff user selects NoToAll.  If this is already true,
+             ShouldContinue will bypass the prompt and return false.
+             </param>
+        <summary>
+             Confirm an operation or grouping of operations with the user.
+             This differs from ShouldProcess in that it is not affected by
+             preference settings or command-line parameters,
+             it always does the query.
+             This variant offers Yes, No, YesToAll and NoToAll.
+             </summary>
+        <returns>
+             If ShouldContinue returns true, the operation should be performed.
+             If ShouldContinue returns false, the operation should not be
+             performed, and the Cmdlet should move on to the next target resource.
+             </returns>
+        <remarks>
+             Cmdlets using ShouldContinue should also offer a "bool Force"
+             parameter which bypasses the calls to ShouldContinue
+             and ShouldProcess.
+             If this is not done, it will be difficult to use the Cmdlet
+             from scripts and non-interactive hosts.
+            
+             Cmdlets using ShouldContinue must still verify operations
+             which will make changes using ShouldProcess.
+             This will assure that settings such as -WhatIf work properly.
+             You may call ShouldContinue either before or after ShouldProcess.
+            
+             ShouldContinue may only be called during a call to this Cmdlet's
+             implementation of ProcessRecord, BeginProcessing or EndProcessing,
+             and only from that thread.
+            
+             Cmdlets may have different "classes" of confirmations.  For example,
+             "del" confirms whether files in a particular directory should be
+             deleted, whether read-only files should be deleted, etc.
+             Cmdlets can use ShouldContinue to store YesToAll/NoToAll members
+             for each such "class" to keep track of whether the user has
+             confirmed "delete all read-only files" etc.
+             ShouldProcess offers YesToAll/NoToAll automatically,
+             but answering YesToAll or NoToAll applies to all subsequent calls
+             to ShouldProcess for the Cmdlet instance.
+             </remarks>
+        <exception cref="T:System.Management.Automation.PipelineStoppedException">
+             The pipeline has already been terminated, or was terminated
+             during the execution of this method.
+             The Cmdlet should generally just allow PipelineStoppedException
+             to percolate up to the caller of ProcessRecord etc.
+             </exception>
+        <exception cref="T:System.InvalidOperationException">
+             Not permitted at this time or from this thread.
+             ShouldContinue may only be called during a call to this Cmdlet's
+             implementation of ProcessRecord, BeginProcessing or EndProcessing,
+             and only from that thread.
+             </exception>
+        <example>
+          <snippet Code="C#">
+                     namespace Microsoft.Samples.MSH.Cmdlet
+                     {
+                         [Cmdlet(VerbsCommon.Remove,"myobjecttype4")]
+                         public class RemoveMyObjectType5 : Cmdlet
+                         {
+                             [Parameter( Mandatory = true )]
+                             public string Filename
+                             {
+                                 get { return filename; }
+                                 set { filename = value; }
+                             }
+                             private string filename;
+            
+                             [Parameter]
+                             public SwitchParameter Force
+                             {
+                                 get { return force; }
+                                 set { force = value; }
+                             }
+                             private bool force;
+            
+                             private bool yesToAll;
+                             private bool noToAll;
+            
+                             public override void ProcessRecord()
+                             {
+                                 if (ShouldProcess(
+                                     String.Format("Deleting file {0}",filename),
+                                     String.Format("Are you sure you want to delete file {0}", filename),
+                                     "Delete file"))
+                                 {
+                                     if (IsReadOnly(filename))
+                                     {
+                                         if (!Force &amp;&amp; !ShouldContinue(
+                                                 String.Format("File {0} is read-only.  Are you sure you want to delete read-only file {0}?", filename),
+                                                 "Delete file"),
+                                                 ref yesToAll,
+                                                 ref noToAll
+                                                 )
+                                         {
+                                             return;
+                                         }
+                                     }
+                                     // delete the object
+                                 }
+                             }
+                         }
+                     }
+                 </snippet>
+        </example>
+        <altmember cref="M:System.Management.Automation.Cmdlet.ShouldContinue(System.String,System.String)" />
+        <altmember cref="M:System.Management.Automation.Cmdlet.ShouldProcess(System.String)" />
+        <altmember cref="M:System.Management.Automation.Cmdlet.ShouldProcess(System.String,System.String)" />
+        <altmember cref="M:System.Management.Automation.Cmdlet.ShouldProcess(System.String,System.String,System.String)" />
+      </Docs>
+    </Member>
+    <Member MemberName="ShouldProcess">
+      <MemberSignature Language="C#" Value="public bool ShouldProcess (string target);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool ShouldProcess(string target) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Cmdlet.ShouldProcess(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Function ShouldProcess (target As String) As Boolean" />
+      <MemberSignature Language="F#" Value="member this.ShouldProcess : string -&gt; bool" Usage="cmdlet.ShouldProcess target" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="target" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="target">
+             Name of the target resource being acted upon. This will
+             potentially be displayed to the user.
+             </param>
+        <summary>
+             Confirm the operation with the user.  Cmdlets which make changes
+             (e.g. delete files, stop services etc.) should call ShouldProcess
+             to give the user the opportunity to confirm that the operation
+             should actually be performed.
+             </summary>
+        <returns>
+             If ShouldProcess returns true, the operation should be performed.
+             If ShouldProcess returns false, the operation should not be
+             performed, and the Cmdlet should move on to the next target resource.
+             </returns>
+        <remarks>
+             A Cmdlet should declare
+             [Cmdlet( SupportsShouldProcess = true )]
+             if-and-only-if it calls ShouldProcess before making changes.
+            
+             ShouldProcess may only be called during a call to this Cmdlet's
+             implementation of ProcessRecord, BeginProcessing or EndProcessing,
+             and only from that thread.
+            
+             ShouldProcess will take into account command-line settings
+             and preference variables in determining what it should return
+             and whether it should prompt the user.
+             </remarks>
+        <remarks>
+             If the pipeline is terminated due to ActionPreference.Stop
+             or ActionPreference.Inquire,
+             <see cref="M:System.Management.Automation.Cmdlet.ShouldProcess(System.String)" />
+             will throw
+             <see cref="T:System.Management.Automation.PipelineStoppedException" />,
+             but the command failure will ultimately be
+             <see cref="T:System.Management.Automation.ActionPreferenceStopException" />,
+             </remarks>
+        <exception cref="T:System.Management.Automation.PipelineStoppedException">
+             The pipeline has already been terminated, or was terminated
+             during the execution of this method.
+             The Cmdlet should generally just allow PipelineStoppedException
+             to percolate up to the caller of ProcessRecord etc.
+             </exception>
+        <exception cref="T:System.InvalidOperationException">
+             Not permitted at this time or from this thread.
+             ShouldProcess may only be called during a call to this Cmdlet's
+             implementation of ProcessRecord, BeginProcessing or EndProcessing,
+             and only from that thread.
+             </exception>
+        <example>
+          <snippet Code="C#">
+                     namespace Microsoft.Samples.MSH.Cmdlet
+                     {
+                         [Cmdlet(VerbsCommon.Remove,"myobjecttype1")]
+                         public class RemoveMyObjectType1 : Cmdlet
+                         {
+                             [Parameter( Mandatory = true )]
+                             public string Filename
+                             {
+                                 get { return filename; }
+                                 set { filename = value; }
+                             }
+                             private string filename;
+            
+                             public override void ProcessRecord()
+                             {
+                                 if (ShouldProcess(filename))
+                                 {
+                                     // delete the object
+                                 }
+                             }
+                         }
+                     }
+                 </snippet>
+        </example>
+        <altmember cref="M:System.Management.Automation.Cmdlet.ShouldProcess(System.String,System.String)" />
+        <altmember cref="M:System.Management.Automation.Cmdlet.ShouldProcess(System.String,System.String,System.String)" />
+        <altmember cref="M:System.Management.Automation.Cmdlet.ShouldProcess(System.String,System.String,System.String,System.Management.Automation.ShouldProcessReason@)" />
+        <altmember cref="M:System.Management.Automation.Cmdlet.ShouldContinue(System.String,System.String)" />
+        <altmember cref="M:System.Management.Automation.Cmdlet.ShouldContinue(System.String,System.String,System.Boolean@,System.Boolean@)" />
+      </Docs>
+    </Member>
+    <Member MemberName="ShouldProcess">
+      <MemberSignature Language="C#" Value="public bool ShouldProcess (string target, string action);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool ShouldProcess(string target, string action) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Cmdlet.ShouldProcess(System.String,System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Function ShouldProcess (target As String, action As String) As Boolean" />
+      <MemberSignature Language="F#" Value="member this.ShouldProcess : string * string -&gt; bool" Usage="cmdlet.ShouldProcess (target, action)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="target" Type="System.String" />
+        <Parameter Name="action" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="target">
+             Name of the target resource being acted upon. This will
+             potentially be displayed to the user.
+             </param>
+        <param name="action">
+             Name of the action which is being performed. This will
+             potentially be displayed to the user. (default is Cmdlet name)
+             </param>
+        <summary>
+             Confirm the operation with the user.  Cmdlets which make changes
+             (e.g. delete files, stop services etc.) should call ShouldProcess
+             to give the user the opportunity to confirm that the operation
+             should actually be performed.
+            
+             This variant allows the caller to specify text for both the
+             target resource and the action.
+             </summary>
+        <returns>
+             If ShouldProcess returns true, the operation should be performed.
+             If ShouldProcess returns false, the operation should not be
+             performed, and the Cmdlet should move on to the next target resource.
+             </returns>
+        <remarks>
+             A Cmdlet should declare
+             [Cmdlet( SupportsShouldProcess = true )]
+             if-and-only-if it calls ShouldProcess before making changes.
+            
+             ShouldProcess may only be called during a call to this Cmdlet's
+             implementation of ProcessRecord, BeginProcessing or EndProcessing,
+             and only from that thread.
+            
+             ShouldProcess will take into account command-line settings
+             and preference variables in determining what it should return
+             and whether it should prompt the user.
+             </remarks>
+        <remarks>
+             If the pipeline is terminated due to ActionPreference.Stop
+             or ActionPreference.Inquire, this method will throw
+             <see cref="T:System.Management.Automation.PipelineStoppedException" />,
+             but the command failure will ultimately be
+             <see cref="T:System.Management.Automation.ActionPreferenceStopException" />,
+             </remarks>
+        <exception cref="T:System.Management.Automation.PipelineStoppedException">
+             The pipeline has already been terminated, or was terminated
+             during the execution of this method.
+             The Cmdlet should generally just allow PipelineStoppedException
+             to percolate up to the caller of ProcessRecord etc.
+             </exception>
+        <exception cref="T:System.InvalidOperationException">
+             Not permitted at this time or from this thread.
+             ShouldProcess may only be called during a call to this Cmdlet's
+             implementation of ProcessRecord, BeginProcessing or EndProcessing,
+             and only from that thread.
+             </exception>
+        <example>
+          <snippet Code="C#">
+                     namespace Microsoft.Samples.MSH.Cmdlet
+                     {
+                         [Cmdlet(VerbsCommon.Remove,"myobjecttype2")]
+                         public class RemoveMyObjectType2 : Cmdlet
+                         {
+                             [Parameter( Mandatory = true )]
+                             public string Filename
+                             {
+                                 get { return filename; }
+                                 set { filename = value; }
+                             }
+                             private string filename;
+            
+                             public override void ProcessRecord()
+                             {
+                                 if (ShouldProcess(filename, "delete"))
+                                 {
+                                     // delete the object
+                                 }
+                             }
+                         }
+                     }
+                 </snippet>
+        </example>
+        <altmember cref="M:System.Management.Automation.Cmdlet.ShouldProcess(System.String)" />
+        <altmember cref="M:System.Management.Automation.Cmdlet.ShouldProcess(System.String,System.String,System.String)" />
+        <altmember cref="M:System.Management.Automation.Cmdlet.ShouldProcess(System.String,System.String,System.String,System.Management.Automation.ShouldProcessReason@)" />
+        <altmember cref="M:System.Management.Automation.Cmdlet.ShouldContinue(System.String,System.String)" />
+        <altmember cref="M:System.Management.Automation.Cmdlet.ShouldContinue(System.String,System.String,System.Boolean@,System.Boolean@)" />
+      </Docs>
+    </Member>
+    <Member MemberName="ShouldProcess">
+      <MemberSignature Language="C#" Value="public bool ShouldProcess (string verboseDescription, string verboseWarning, string caption);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool ShouldProcess(string verboseDescription, string verboseWarning, string caption) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Cmdlet.ShouldProcess(System.String,System.String,System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Function ShouldProcess (verboseDescription As String, verboseWarning As String, caption As String) As Boolean" />
+      <MemberSignature Language="F#" Value="member this.ShouldProcess : string * string * string -&gt; bool" Usage="cmdlet.ShouldProcess (verboseDescription, verboseWarning, caption)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="verboseDescription" Type="System.String" />
+        <Parameter Name="verboseWarning" Type="System.String" />
+        <Parameter Name="caption" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="verboseDescription">
+             Textual description of the action to be performed.
+             This is what will be displayed to the user for
+             ActionPreference.Continue.
+             </param>
+        <param name="verboseWarning">
+             Textual query of whether the action should be performed,
+             usually in the form of a question.
+             This is what will be displayed to the user for
+             ActionPreference.Inquire.
+             </param>
+        <param name="caption">
+             Caption of the window which may be displayed
+             if the user is prompted whether or not to perform the action.
+             <paramref name="caption" /> may be displayed by some hosts, but not all.
+             </param>
+        <summary>
+             Confirm the operation with the user.  Cmdlets which make changes
+             (e.g. delete files, stop services etc.) should call ShouldProcess
+             to give the user the opportunity to confirm that the operation
+             should actually be performed.
+            
+             This variant allows the caller to specify the complete text
+             describing the operation, rather than just the name and action.
+             </summary>
+        <returns>
+             If ShouldProcess returns true, the operation should be performed.
+             If ShouldProcess returns false, the operation should not be
+             performed, and the Cmdlet should move on to the next target resource.
+             </returns>
+        <remarks>
+             A Cmdlet should declare
+             [Cmdlet( SupportsShouldProcess = true )]
+             if-and-only-if it calls ShouldProcess before making changes.
+            
+             ShouldProcess may only be called during a call to this Cmdlet's
+             implementation of ProcessRecord, BeginProcessing or EndProcessing,
+             and only from that thread.
+            
+             ShouldProcess will take into account command-line settings
+             and preference variables in determining what it should return
+             and whether it should prompt the user.
+             </remarks>
+        <remarks>
+             If the pipeline is terminated due to ActionPreference.Stop
+             or ActionPreference.Inquire, this method will throw
+             <see cref="T:System.Management.Automation.PipelineStoppedException" />,
+             but the command failure will ultimately be
+             <see cref="T:System.Management.Automation.ActionPreferenceStopException" />,
+             </remarks>
+        <exception cref="T:System.Management.Automation.PipelineStoppedException">
+             The pipeline has already been terminated, or was terminated
+             during the execution of this method.
+             The Cmdlet should generally just allow PipelineStoppedException
+             to percolate up to the caller of ProcessRecord etc.
+             </exception>
+        <exception cref="T:System.InvalidOperationException">
+             Not permitted at this time or from this thread.
+             ShouldProcess may only be called during a call to this Cmdlet's
+             implementation of ProcessRecord, BeginProcessing or EndProcessing,
+             and only from that thread.
+             </exception>
+        <example>
+          <snippet Code="C#">
+                     namespace Microsoft.Samples.MSH.Cmdlet
+                     {
+                         [Cmdlet(VerbsCommon.Remove,"myobjecttype3")]
+                         public class RemoveMyObjectType3 : Cmdlet
+                         {
+                             [Parameter( Mandatory = true )]
+                             public string Filename
+                             {
+                                 get { return filename; }
+                                 set { filename = value; }
+                             }
+                             private string filename;
+            
+                             public override void ProcessRecord()
+                             {
+                                 if (ShouldProcess(
+                                     String.Format("Deleting file {0}",filename),
+                                     String.Format("Are you sure you want to delete file {0}?", filename),
+                                     "Delete file"))
+                                 {
+                                     // delete the object
+                                 }
+                             }
+                         }
+                     }
+                 </snippet>
+        </example>
+        <altmember cref="M:System.Management.Automation.Cmdlet.ShouldProcess(System.String)" />
+        <altmember cref="M:System.Management.Automation.Cmdlet.ShouldProcess(System.String,System.String)" />
+        <altmember cref="M:System.Management.Automation.Cmdlet.ShouldProcess(System.String,System.String,System.String,System.Management.Automation.ShouldProcessReason@)" />
+        <altmember cref="M:System.Management.Automation.Cmdlet.ShouldContinue(System.String,System.String)" />
+        <altmember cref="M:System.Management.Automation.Cmdlet.ShouldContinue(System.String,System.String,System.Boolean@,System.Boolean@)" />
+      </Docs>
+    </Member>
+    <Member MemberName="ShouldProcess">
+      <MemberSignature Language="C#" Value="public bool ShouldProcess (string verboseDescription, string verboseWarning, string caption, out System.Management.Automation.ShouldProcessReason shouldProcessReason);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool ShouldProcess(string verboseDescription, string verboseWarning, string caption, [out] valuetype System.Management.Automation.ShouldProcessReason&amp; shouldProcessReason) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Cmdlet.ShouldProcess(System.String,System.String,System.String,System.Management.Automation.ShouldProcessReason@)" />
+      <MemberSignature Language="VB.NET" Value="Public Function ShouldProcess (verboseDescription As String, verboseWarning As String, caption As String, ByRef shouldProcessReason As ShouldProcessReason) As Boolean" />
+      <MemberSignature Language="F#" Value="member this.ShouldProcess : string * string * string *  -&gt; bool" Usage="cmdlet.ShouldProcess (verboseDescription, verboseWarning, caption, shouldProcessReason)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="verboseDescription" Type="System.String" />
+        <Parameter Name="verboseWarning" Type="System.String" />
+        <Parameter Name="caption" Type="System.String" />
+        <Parameter Name="shouldProcessReason" Type="System.Management.Automation.ShouldProcessReason&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="verboseDescription">
+             Textual description of the action to be performed.
+             This is what will be displayed to the user for
+             ActionPreference.Continue.
+             </param>
+        <param name="verboseWarning">
+             Textual query of whether the action should be performed,
+             usually in the form of a question.
+             This is what will be displayed to the user for
+             ActionPreference.Inquire.
+             </param>
+        <param name="caption">
+             Caption of the window which may be displayed
+             if the user is prompted whether or not to perform the action.
+             <paramref name="caption" /> may be displayed by some hosts, but not all.
+             </param>
+        <param name="shouldProcessReason">
+             Indicates the reason(s) why ShouldProcess returned what it returned.
+             Only the reasons enumerated in
+             <see cref="T:System.Management.Automation.ShouldProcessReason" />
+             are returned.
+             </param>
+        <summary>
+             Confirm the operation with the user.  Cmdlets which make changes
+             (e.g. delete files, stop services etc.) should call ShouldProcess
+             to give the user the opportunity to confirm that the operation
+             should actually be performed.
+            
+             This variant allows the caller to specify the complete text
+             describing the operation, rather than just the name and action.
+             </summary>
+        <returns>
+             If ShouldProcess returns true, the operation should be performed.
+             If ShouldProcess returns false, the operation should not be
+             performed, and the Cmdlet should move on to the next target resource.
+             </returns>
+        <remarks>
+             A Cmdlet should declare
+             [Cmdlet( SupportsShouldProcess = true )]
+             if-and-only-if it calls ShouldProcess before making changes.
+            
+             ShouldProcess may only be called during a call to this Cmdlet's
+             implementation of ProcessRecord, BeginProcessing or EndProcessing,
+             and only from that thread.
+            
+             ShouldProcess will take into account command-line settings
+             and preference variables in determining what it should return
+             and whether it should prompt the user.
+             </remarks>
+        <remarks>
+             If the pipeline is terminated due to ActionPreference.Stop
+             or ActionPreference.Inquire, this method will throw
+             <see cref="T:System.Management.Automation.PipelineStoppedException" />,
+             but the command failure will ultimately be
+             <see cref="T:System.Management.Automation.ActionPreferenceStopException" />,
+             </remarks>
+        <exception cref="T:System.Management.Automation.PipelineStoppedException">
+             The pipeline has already been terminated, or was terminated
+             during the execution of this method.
+             The Cmdlet should generally just allow PipelineStoppedException
+             to percolate up to the caller of ProcessRecord etc.
+             </exception>
+        <exception cref="T:System.InvalidOperationException">
+             Not permitted at this time or from this thread.
+             ShouldProcess may only be called during a call to this Cmdlet's
+             implementation of ProcessRecord, BeginProcessing or EndProcessing,
+             and only from that thread.
+             </exception>
+        <example>
+          <snippet Code="C#">
+                     namespace Microsoft.Samples.MSH.Cmdlet
+                     {
+                         [Cmdlet(VerbsCommon.Remove,"myobjecttype3")]
+                         public class RemoveMyObjectType3 : Cmdlet
+                         {
+                             [Parameter( Mandatory = true )]
+                             public string Filename
+                             {
+                                 get { return filename; }
+                                 set { filename = value; }
+                             }
+                             private string filename;
+            
+                             public override void ProcessRecord()
+                             {
+                                 ShouldProcessReason shouldProcessReason;
+                                 if (ShouldProcess(
+                                     String.Format("Deleting file {0}",filename),
+                                     String.Format("Are you sure you want to delete file {0}?", filename),
+                                     "Delete file",
+                                     out shouldProcessReason))
+                                 {
+                                     // delete the object
+                                 }
+                             }
+                         }
+                     }
+                 </snippet>
+        </example>
+        <altmember cref="M:System.Management.Automation.Cmdlet.ShouldProcess(System.String)" />
+        <altmember cref="M:System.Management.Automation.Cmdlet.ShouldProcess(System.String,System.String)" />
+        <altmember cref="M:System.Management.Automation.Cmdlet.ShouldProcess(System.String,System.String,System.String)" />
+        <altmember cref="M:System.Management.Automation.Cmdlet.ShouldContinue(System.String,System.String)" />
+        <altmember cref="M:System.Management.Automation.Cmdlet.ShouldContinue(System.String,System.String,System.Boolean@,System.Boolean@)" />
+      </Docs>
+    </Member>
+    <Member MemberName="Stopping">
+      <MemberSignature Language="C#" Value="public bool Stopping { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Stopping" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.Cmdlet.Stopping" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Stopping As Boolean" />
+      <MemberSignature Language="F#" Value="member this.Stopping : bool" Usage="System.Management.Automation.Cmdlet.Stopping" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+             Is this command stopping?
+             </summary>
+        <value>To be added.</value>
+        <remarks>
+             If Stopping is true, many Cmdlet methods will throw
+             <see cref="T:System.Management.Automation.PipelineStoppedException" />.
+            
+             In general, if a Cmdlet's override implementation of ProcessRecord etc.
+             throws <see cref="T:System.Management.Automation.PipelineStoppedException" />, the best thing to do is to
+             shut down the operation and return to the caller.
+             It is acceptable to not catch <see cref="T:System.Management.Automation.PipelineStoppedException" />
+             and allow the exception to reach ProcessRecord.
+             </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StopProcessing">
+      <MemberSignature Language="C#" Value="protected virtual void StopProcessing ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void StopProcessing() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Cmdlet.StopProcessing" />
+      <MemberSignature Language="VB.NET" Value="Protected Overridable Sub StopProcessing ()" />
+      <MemberSignature Language="F#" Value="abstract member StopProcessing : unit -&gt; unit&#xA;override this.StopProcessing : unit -&gt; unit" Usage="cmdlet.StopProcessing " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            When overridden in the derived class, interrupts currently
+            running code within the command. It should interrupt BeginProcessing,
+            ProcessRecord, and EndProcessing.
+            Default implementation in the base class just returns.
+            </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.Exception">
+            This method is overridden in the implementation of
+            individual Cmdlets, and can throw literally any exception.
+            </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ThrowTerminatingError">
+      <MemberSignature Language="C#" Value="public void ThrowTerminatingError (System.Management.Automation.ErrorRecord errorRecord);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void ThrowTerminatingError(class System.Management.Automation.ErrorRecord errorRecord) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Cmdlet.ThrowTerminatingError(System.Management.Automation.ErrorRecord)" />
+      <MemberSignature Language="F#" Value="member this.ThrowTerminatingError : System.Management.Automation.ErrorRecord -&gt; unit" Usage="cmdlet.ThrowTerminatingError errorRecord" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="errorRecord" Type="System.Management.Automation.ErrorRecord" />
+      </Parameters>
+      <Docs>
+        <param name="errorRecord">
+             The error which caused the command to be terminated
+             </param>
+        <summary>
+             Terminate the command and report an error
+             </summary>
+        <remarks>
+          <see cref="M:System.Management.Automation.Cmdlet.ThrowTerminatingError(System.Management.Automation.ErrorRecord)" />
+             terminates the command, where
+             <see cref="M:System.Management.Automation.ICommandRuntime.WriteError(System.Management.Automation.ErrorRecord)" />
+             allows the command to continue.
+            
+             The cmdlet can also terminate the command by simply throwing
+             any exception.  When the cmdlet's implementation of
+             <see cref="M:System.Management.Automation.Cmdlet.ProcessRecord" />,
+             <see cref="M:System.Management.Automation.Cmdlet.BeginProcessing" /> or
+             <see cref="M:System.Management.Automation.Cmdlet.EndProcessing" />
+             throws an exception, the Engine will always catch the exception
+             and report it as a terminating error.
+             However, it is preferred for the cmdlet to call
+             <see cref="M:System.Management.Automation.Cmdlet.ThrowTerminatingError(System.Management.Automation.ErrorRecord)" />,
+             so that the additional information in
+             <see cref="T:System.Management.Automation.ErrorRecord" />
+             is available.
+            
+             <see cref="M:System.Management.Automation.Cmdlet.ThrowTerminatingError(System.Management.Automation.ErrorRecord)" />
+             always throws
+             <see cref="T:System.Management.Automation.PipelineStoppedException" />,
+             regardless of what error was specified in <paramref name="errorRecord" />.
+             The Cmdlet should generally just allow
+             <see cref="T:System.Management.Automation.PipelineStoppedException" />.
+             to percolate up to the caller of
+             <see cref="M:System.Management.Automation.Cmdlet.ProcessRecord" />.
+             etc.
+             </remarks>
+        <exception cref="T:System.Management.Automation.PipelineStoppedException">
+             always
+             </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="TransactionAvailable">
+      <MemberSignature Language="C#" Value="public bool TransactionAvailable ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool TransactionAvailable() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Cmdlet.TransactionAvailable" />
+      <MemberSignature Language="VB.NET" Value="Public Function TransactionAvailable () As Boolean" />
+      <MemberSignature Language="F#" Value="member this.TransactionAvailable : unit -&gt; bool" Usage="cmdlet.TransactionAvailable " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Returns true if a transaction is available and active.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteCommandDetail">
+      <MemberSignature Language="C#" Value="public void WriteCommandDetail (string text);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void WriteCommandDetail(string text) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Cmdlet.WriteCommandDetail(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub WriteCommandDetail (text As String)" />
+      <MemberSignature Language="F#" Value="member this.WriteCommandDetail : string -&gt; unit" Usage="cmdlet.WriteCommandDetail text" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="text" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="text">text to be written to log</param>
+        <summary>
+             Write text into pipeline execution log.
+             </summary>
+        <remarks>
+             Use WriteCommandDetail to write important information about cmdlet execution to
+             pipeline execution log.
+            
+             If LogPipelineExecutionDetail is turned on, this information will be written
+             to monad log under log category "Pipeline execution detail"
+             </remarks>
+        <exception cref="T:System.Management.Automation.PipelineStoppedException">
+             The pipeline has already been terminated, or was terminated
+             during the execution of this method.
+             The Cmdlet should generally just allow PipelineStoppedException
+             to percolate up to the caller of ProcessRecord etc.
+             </exception>
+        <exception cref="T:System.InvalidOperationException">
+             Not permitted at this time or from this thread.
+             WriteWarning may only be called during a call to this Cmdlet's
+             implementation of ProcessRecord, BeginProcessing or EndProcessing,
+             and only from that thread.
+             </exception>
+        <altmember cref="M:System.Management.Automation.Cmdlet.WriteDebug(System.String)" />
+        <altmember cref="M:System.Management.Automation.Cmdlet.WriteVerbose(System.String)" />
+        <altmember cref="M:System.Management.Automation.Cmdlet.WriteProgress(System.Management.Automation.ProgressRecord)" />
+      </Docs>
+    </Member>
+    <Member MemberName="WriteDebug">
+      <MemberSignature Language="C#" Value="public void WriteDebug (string text);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void WriteDebug(string text) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Cmdlet.WriteDebug(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub WriteDebug (text As String)" />
+      <MemberSignature Language="F#" Value="member this.WriteDebug : string -&gt; unit" Usage="cmdlet.WriteDebug text" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="text" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="text">debug output</param>
+        <summary>
+            Display debug information
+            </summary>
+        <remarks>
+            Use WriteDebug to display debug information on the inner workings
+            of your Cmdlet.  By default, debug output will
+            not be displayed, although this can be configured with the
+            DebugPreference shell variable or the -Debug command-line option.
+            </remarks>
+        <remarks>
+            If the pipeline is terminated due to ActionPreference.Stop
+            or ActionPreference.Inquire, this method will throw
+            <see cref="T:System.Management.Automation.PipelineStoppedException" />,
+            but the command failure will ultimately be
+            <see cref="T:System.Management.Automation.ActionPreferenceStopException" />,
+            </remarks>
+        <exception cref="T:System.Management.Automation.PipelineStoppedException">
+            The pipeline has already been terminated, or was terminated
+            during the execution of this method.
+            The Cmdlet should generally just allow PipelineStoppedException
+            to percolate up to the caller of ProcessRecord etc.
+            </exception>
+        <exception cref="T:System.InvalidOperationException">
+            Not permitted at this time or from this thread.
+            WriteDebug may only be called during a call to this Cmdlet's
+            implementation of ProcessRecord, BeginProcessing or EndProcessing,
+            and only from that thread.
+            </exception>
+        <altmember cref="M:System.Management.Automation.Cmdlet.WriteVerbose(System.String)" />
+        <altmember cref="M:System.Management.Automation.Cmdlet.WriteWarning(System.String)" />
+        <altmember cref="M:System.Management.Automation.Cmdlet.WriteProgress(System.Management.Automation.ProgressRecord)" />
+      </Docs>
+    </Member>
+    <Member MemberName="WriteError">
+      <MemberSignature Language="C#" Value="public void WriteError (System.Management.Automation.ErrorRecord errorRecord);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void WriteError(class System.Management.Automation.ErrorRecord errorRecord) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Cmdlet.WriteError(System.Management.Automation.ErrorRecord)" />
+      <MemberSignature Language="F#" Value="member this.WriteError : System.Management.Automation.ErrorRecord -&gt; unit" Usage="cmdlet.WriteError errorRecord" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="errorRecord" Type="System.Management.Automation.ErrorRecord" />
+      </Parameters>
+      <Docs>
+        <param name="errorRecord">error</param>
+        <summary>
+             Internal variant: Writes the specified error to the error pipe.
+             </summary>
+        <remarks>
+             Do not call WriteError(e.ErrorRecord).
+             The ErrorRecord contained in the ErrorRecord property of
+             an exception which implements IContainsErrorRecord
+             should not be passed directly to WriteError, since it contains
+             a <see cref="T:System.Management.Automation.ParentContainsErrorRecordException" />
+             rather than the real exception.
+             </remarks>
+        <remarks>
+          <see cref="M:System.Management.Automation.Cmdlet.ThrowTerminatingError(System.Management.Automation.ErrorRecord)" />
+             terminates the command, where
+             <see cref="M:System.Management.Automation.ICommandRuntime.WriteError(System.Management.Automation.ErrorRecord)" />
+             allows the command to continue.
+            
+             If the pipeline is terminated due to ActionPreference.Stop
+             or ActionPreference.Inquire, this method will throw
+             <see cref="T:System.Management.Automation.PipelineStoppedException" />,
+             but the command failure will ultimately be
+             <see cref="T:System.Management.Automation.ActionPreferenceStopException" />,
+             </remarks>
+        <exception cref="T:System.InvalidOperationException">
+             Not permitted at this time or from this thread
+             </exception>
+        <exception cref="T:System.Management.Automation.PipelineStoppedException">
+             The pipeline has already been terminated, or was terminated
+             during the execution of this method.
+             The Cmdlet should generally just allow PipelineStoppedException
+             to percolate up to the caller of ProcessRecord etc.
+             </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteInformation">
+      <MemberSignature Language="C#" Value="public void WriteInformation (System.Management.Automation.InformationRecord informationRecord);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void WriteInformation(class System.Management.Automation.InformationRecord informationRecord) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Cmdlet.WriteInformation(System.Management.Automation.InformationRecord)" />
+      <MemberSignature Language="F#" Value="member this.WriteInformation : System.Management.Automation.InformationRecord -&gt; unit" Usage="cmdlet.WriteInformation informationRecord" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="informationRecord" Type="System.Management.Automation.InformationRecord" />
+      </Parameters>
+      <Docs>
+        <param name="informationRecord">The information record to write.</param>
+        <summary>
+            Route information to the user or host.
+            </summary>
+        <remarks>
+            Use WriteInformation to transmit information to the user about the activity
+            of your Cmdlet.  By default, informational output will
+            be displayed, although this can be configured with the
+            InformationPreference shell variable or the -InformationPreference command-line option.
+            </remarks>
+        <remarks>
+            If the pipeline is terminated due to ActionPreference.Stop
+            or ActionPreference.Inquire, this method will throw
+            <see cref="T:System.Management.Automation.PipelineStoppedException" />,
+            but the command failure will ultimately be
+            <see cref="T:System.Management.Automation.ActionPreferenceStopException" />,
+            </remarks>
+        <exception cref="T:System.Management.Automation.PipelineStoppedException">
+            The pipeline has already been terminated, or was terminated
+            during the execution of this method.
+            The Cmdlet should generally just allow PipelineStoppedException
+            to percolate up to the caller of ProcessRecord etc.
+            </exception>
+        <exception cref="T:System.InvalidOperationException">
+            Not permitted at this time or from this thread.
+            WriteInformation may only be called during a call to this Cmdlet's
+            implementation of ProcessRecord, BeginProcessing or EndProcessing,
+            and only from that thread.
+            </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteInformation">
+      <MemberSignature Language="C#" Value="public void WriteInformation (object messageData, string[] tags);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void WriteInformation(object messageData, string[] tags) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Cmdlet.WriteInformation(System.Object,System.String[])" />
+      <MemberSignature Language="VB.NET" Value="Public Sub WriteInformation (messageData As Object, tags As String())" />
+      <MemberSignature Language="F#" Value="member this.WriteInformation : obj * string[] -&gt; unit" Usage="cmdlet.WriteInformation (messageData, tags)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="messageData" Type="System.Object" />
+        <Parameter Name="tags" Type="System.String[]" />
+      </Parameters>
+      <Docs>
+        <param name="messageData">The object / message data to transmit to the hosting application.</param>
+        <param name="tags">
+            Any tags to be associated with the message data. These can later be used to filter
+            or separate objects being sent to the host.
+            </param>
+        <summary>
+            Route information to the user or host.
+            </summary>
+        <remarks>
+            Use WriteInformation to transmit information to the user about the activity
+            of your Cmdlet.  By default, informational output will
+            be displayed, although this can be configured with the
+            InformationPreference shell variable or the -InformationPreference command-line option.
+            </remarks>
+        <remarks>
+            If the pipeline is terminated due to ActionPreference.Stop
+            or ActionPreference.Inquire, this method will throw
+            <see cref="T:System.Management.Automation.PipelineStoppedException" />,
+            but the command failure will ultimately be
+            <see cref="T:System.Management.Automation.ActionPreferenceStopException" />,
+            </remarks>
+        <exception cref="T:System.Management.Automation.PipelineStoppedException">
+            The pipeline has already been terminated, or was terminated
+            during the execution of this method.
+            The Cmdlet should generally just allow PipelineStoppedException
+            to percolate up to the caller of ProcessRecord etc.
+            </exception>
+        <exception cref="T:System.InvalidOperationException">
+            Not permitted at this time or from this thread.
+            WriteInformation may only be called during a call to this Cmdlet's
+            implementation of ProcessRecord, BeginProcessing or EndProcessing,
+            and only from that thread.
+            </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteObject">
+      <MemberSignature Language="C#" Value="public void WriteObject (object sendToPipeline);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void WriteObject(object sendToPipeline) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Cmdlet.WriteObject(System.Object)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub WriteObject (sendToPipeline As Object)" />
+      <MemberSignature Language="F#" Value="member this.WriteObject : obj -&gt; unit" Usage="cmdlet.WriteObject sendToPipeline" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sendToPipeline" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="sendToPipeline">
+            The object that needs to be written.  This will be written as
+            a single object, even if it is an enumeration.
+            </param>
+        <summary>
+            Writes the object to the output pipe.
+            </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.Management.Automation.PipelineStoppedException">
+            The pipeline has already been terminated, or was terminated
+            during the execution of this method.
+            The Cmdlet should generally just allow PipelineStoppedException
+            to percolate up to the caller of ProcessRecord etc.
+            </exception>
+        <exception cref="T:System.InvalidOperationException">
+            Not permitted at this time or from this thread.
+            WriteObject may only be called during a call to this Cmdlet's
+            implementation of ProcessRecord, BeginProcessing or EndProcessing,
+            and only from that thread.
+            </exception>
+        <altmember cref="M:System.Management.Automation.ICommandRuntime.WriteObject(System.Object,System.Boolean)" />
+        <altmember cref="M:System.Management.Automation.ICommandRuntime.WriteError(System.Management.Automation.ErrorRecord)" />
+      </Docs>
+    </Member>
+    <Member MemberName="WriteObject">
+      <MemberSignature Language="C#" Value="public void WriteObject (object sendToPipeline, bool enumerateCollection);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void WriteObject(object sendToPipeline, bool enumerateCollection) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Cmdlet.WriteObject(System.Object,System.Boolean)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub WriteObject (sendToPipeline As Object, enumerateCollection As Boolean)" />
+      <MemberSignature Language="F#" Value="member this.WriteObject : obj * bool -&gt; unit" Usage="cmdlet.WriteObject (sendToPipeline, enumerateCollection)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sendToPipeline" Type="System.Object" />
+        <Parameter Name="enumerateCollection" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="sendToPipeline">
+            The object that needs to be written to the pipeline.
+            </param>
+        <param name="enumerateCollection">
+            true if the collection should be enumerated
+            </param>
+        <summary>
+            Writes one or more objects to the output pipe.
+            If the object is a collection and the enumerateCollection flag
+            is true, the objects in the collection
+            will be written individually.
+            </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.Management.Automation.PipelineStoppedException">
+            The pipeline has already been terminated, or was terminated
+            during the execution of this method.
+            The Cmdlet should generally just allow PipelineStoppedException
+            to percolate up to the caller of ProcessRecord etc.
+            </exception>
+        <exception cref="T:System.InvalidOperationException">
+            Not permitted at this time or from this thread.
+            WriteObject may only be called during a call to this Cmdlet's
+            implementation of ProcessRecord, BeginProcessing or EndProcessing,
+            and only from that thread.
+            </exception>
+        <altmember cref="M:System.Management.Automation.ICommandRuntime.WriteObject(System.Object)" />
+        <altmember cref="M:System.Management.Automation.ICommandRuntime.WriteError(System.Management.Automation.ErrorRecord)" />
+      </Docs>
+    </Member>
+    <Member MemberName="WriteProgress">
+      <MemberSignature Language="C#" Value="public void WriteProgress (System.Management.Automation.ProgressRecord progressRecord);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void WriteProgress(class System.Management.Automation.ProgressRecord progressRecord) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Cmdlet.WriteProgress(System.Management.Automation.ProgressRecord)" />
+      <MemberSignature Language="F#" Value="member this.WriteProgress : System.Management.Automation.ProgressRecord -&gt; unit" Usage="cmdlet.WriteProgress progressRecord" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="progressRecord" Type="System.Management.Automation.ProgressRecord" />
+      </Parameters>
+      <Docs>
+        <param name="progressRecord">progress information</param>
+        <summary>
+             Display progress information
+             </summary>
+        <remarks>
+             Use WriteProgress to display progress information about
+             the activity of your Cmdlet, when the operation of your Cmdlet
+             could potentially take a long time.
+            
+             By default, progress output will
+             be displayed, although this can be configured with the
+             ProgressPreference shell variable.
+             </remarks>
+        <exception cref="T:System.Management.Automation.PipelineStoppedException">
+             The pipeline has already been terminated, or was terminated
+             during the execution of this method.
+             The Cmdlet should generally just allow PipelineStoppedException
+             to percolate up to the caller of ProcessRecord etc.
+             </exception>
+        <exception cref="T:System.InvalidOperationException">
+             Not permitted at this time or from this thread.
+             WriteProgress may only be called during a call to this Cmdlet's
+             implementation of ProcessRecord, BeginProcessing or EndProcessing,
+             and only from that thread.
+             </exception>
+        <altmember cref="M:System.Management.Automation.Cmdlet.WriteDebug(System.String)" />
+        <altmember cref="M:System.Management.Automation.Cmdlet.WriteWarning(System.String)" />
+        <altmember cref="M:System.Management.Automation.Cmdlet.WriteVerbose(System.String)" />
+      </Docs>
+    </Member>
+    <Member MemberName="WriteVerbose">
+      <MemberSignature Language="C#" Value="public void WriteVerbose (string text);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void WriteVerbose(string text) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Cmdlet.WriteVerbose(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub WriteVerbose (text As String)" />
+      <MemberSignature Language="F#" Value="member this.WriteVerbose : string -&gt; unit" Usage="cmdlet.WriteVerbose text" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="text" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="text">verbose output</param>
+        <summary>
+            Display verbose information
+            </summary>
+        <remarks>
+            Use WriteVerbose to display more detailed information about
+            the activity of your Cmdlet.  By default, verbose output will
+            not be displayed, although this can be configured with the
+            VerbosePreference shell variable
+            or the -Verbose and -Debug command-line options.
+            </remarks>
+        <exception cref="T:System.Management.Automation.PipelineStoppedException">
+            The pipeline has already been terminated, or was terminated
+            during the execution of this method.
+            The Cmdlet should generally just allow PipelineStoppedException
+            to percolate up to the caller of ProcessRecord etc.
+            </exception>
+        <exception cref="T:System.InvalidOperationException">
+            Not permitted at this time or from this thread.
+            WriteVerbose may only be called during a call to this Cmdlets's
+            implementation of ProcessRecord, BeginProcessing or EndProcessing,
+            and only from that thread.
+            </exception>
+        <altmember cref="M:System.Management.Automation.Cmdlet.WriteDebug(System.String)" />
+        <altmember cref="M:System.Management.Automation.Cmdlet.WriteWarning(System.String)" />
+        <altmember cref="M:System.Management.Automation.Cmdlet.WriteProgress(System.Management.Automation.ProgressRecord)" />
+      </Docs>
+    </Member>
+    <Member MemberName="WriteWarning">
+      <MemberSignature Language="C#" Value="public void WriteWarning (string text);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void WriteWarning(string text) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Cmdlet.WriteWarning(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub WriteWarning (text As String)" />
+      <MemberSignature Language="F#" Value="member this.WriteWarning : string -&gt; unit" Usage="cmdlet.WriteWarning text" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="text" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="text">warning output</param>
+        <summary>
+            Display warning information
+            </summary>
+        <remarks>
+            Use WriteWarning to display warnings about
+            the activity of your Cmdlet.  By default, warning output will
+            be displayed, although this can be configured with the
+            WarningPreference shell variable
+            or the -Verbose and -Debug command-line options.
+            </remarks>
+        <exception cref="T:System.Management.Automation.PipelineStoppedException">
+            The pipeline has already been terminated, or was terminated
+            during the execution of this method.
+            The Cmdlet should generally just allow PipelineStoppedException
+            to percolate up to the caller of ProcessRecord etc.
+            </exception>
+        <exception cref="T:System.InvalidOperationException">
+            Not permitted at this time or from this thread.
+            WriteWarning may only be called during a call to this Cmdlet's
+            implementation of ProcessRecord, BeginProcessing or EndProcessing,
+            and only from that thread.
+            </exception>
+        <altmember cref="M:System.Management.Automation.Cmdlet.WriteDebug(System.String)" />
+        <altmember cref="M:System.Management.Automation.Cmdlet.WriteVerbose(System.String)" />
+        <altmember cref="M:System.Management.Automation.Cmdlet.WriteProgress(System.Management.Automation.ProgressRecord)" />
+      </Docs>
+    </Member>
+  </Members>
+</Type>

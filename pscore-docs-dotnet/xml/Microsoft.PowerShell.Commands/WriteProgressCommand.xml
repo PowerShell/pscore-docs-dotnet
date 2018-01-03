@@ -1,0 +1,344 @@
+﻿<Type Name="WriteProgressCommand" FullName="Microsoft.PowerShell.Commands.WriteProgressCommand">
+  <TypeSignature Language="C#" Value="public sealed class WriteProgressCommand : System.Management.Automation.PSCmdlet" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit WriteProgressCommand extends System.Management.Automation.PSCmdlet" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.PowerShell.Commands.WriteProgressCommand" />
+  <TypeSignature Language="VB.NET" Value="Public NotInheritable Class WriteProgressCommand&#xA;Inherits PSCmdlet" />
+  <TypeSignature Language="F#" Value="type WriteProgressCommand = class&#xA;    inherit PSCmdlet" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.PowerShell.Commands.Utility</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Management.Automation.PSCmdlet</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Management.Automation.Cmdlet("Write", "Progress", HelpUri="https://go.microsoft.com/fwlink/?LinkID=113428", RemotingCapability=System.Management.Automation.RemotingCapability.None)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>
+            
+             Implements the write-progress cmdlet
+            
+             </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WriteProgressCommand ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Commands.WriteProgressCommand.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New ()" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Commands.Utility</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Activity">
+      <MemberSignature Language="C#" Value="public string Activity { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Activity" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.WriteProgressCommand.Activity" />
+      <MemberSignature Language="VB.NET" Value="Public Property Activity As String" />
+      <MemberSignature Language="F#" Value="member this.Activity : string with get, set" Usage="Microsoft.PowerShell.Commands.WriteProgressCommand.Activity" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Commands.Utility</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(HelpMessageBaseName="WriteProgressResourceStrings", HelpMessageResourceId="ActivityParameterHelpMessage", Mandatory=true, Position=0)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            
+             Describes the activity for which progress is being reported.
+            
+             </summary>
+        <value />
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Completed">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.SwitchParameter Completed { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Management.Automation.SwitchParameter Completed" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.WriteProgressCommand.Completed" />
+      <MemberSignature Language="VB.NET" Value="Public Property Completed As SwitchParameter" />
+      <MemberSignature Language="F#" Value="member this.Completed : System.Management.Automation.SwitchParameter with get, set" Usage="Microsoft.PowerShell.Commands.WriteProgressCommand.Completed" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Commands.Utility</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.SwitchParameter</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            
+             Identifies whether the activity has completed (and the display for it should be removed),
+             or if it is proceeding (and the display for it should be shown).
+            
+             </summary>
+        <value />
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CurrentOperation">
+      <MemberSignature Language="C#" Value="public string CurrentOperation { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string CurrentOperation" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.WriteProgressCommand.CurrentOperation" />
+      <MemberSignature Language="VB.NET" Value="Public Property CurrentOperation As String" />
+      <MemberSignature Language="F#" Value="member this.CurrentOperation : string with get, set" Usage="Microsoft.PowerShell.Commands.WriteProgressCommand.CurrentOperation" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Commands.Utility</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            
+             Description of current operation in activity, empty if n/a
+            
+             </summary>
+        <value />
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Id">
+      <MemberSignature Language="C#" Value="public int Id { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Id" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.WriteProgressCommand.Id" />
+      <MemberSignature Language="VB.NET" Value="Public Property Id As Integer" />
+      <MemberSignature Language="F#" Value="member this.Id : int with get, set" Usage="Microsoft.PowerShell.Commands.WriteProgressCommand.Id" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Commands.Utility</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(Position=2)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.ValidateRange(Mono.Cecil.CustomAttributeArgument, Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            
+             Uniquely identifies this activity for purposes of chaining subordinate activities.
+            
+             </summary>
+        <value />
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ParentId">
+      <MemberSignature Language="C#" Value="public int ParentId { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 ParentId" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.WriteProgressCommand.ParentId" />
+      <MemberSignature Language="VB.NET" Value="Public Property ParentId As Integer" />
+      <MemberSignature Language="F#" Value="member this.ParentId : int with get, set" Usage="Microsoft.PowerShell.Commands.WriteProgressCommand.ParentId" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Commands.Utility</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.ValidateRange(Mono.Cecil.CustomAttributeArgument, Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            
+             Identifies the parent Id of this activity, or -1 if none.
+            
+             </summary>
+        <value />
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PercentComplete">
+      <MemberSignature Language="C#" Value="public int PercentComplete { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 PercentComplete" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.WriteProgressCommand.PercentComplete" />
+      <MemberSignature Language="VB.NET" Value="Public Property PercentComplete As Integer" />
+      <MemberSignature Language="F#" Value="member this.PercentComplete : int with get, set" Usage="Microsoft.PowerShell.Commands.WriteProgressCommand.PercentComplete" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Commands.Utility</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.ValidateRange(Mono.Cecil.CustomAttributeArgument, Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            
+             Percentage completion of the activity, or -1 if n/a
+            
+             </summary>
+        <value />
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ProcessRecord">
+      <MemberSignature Language="C#" Value="protected override void ProcessRecord ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void ProcessRecord() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Commands.WriteProgressCommand.ProcessRecord" />
+      <MemberSignature Language="VB.NET" Value="Protected Overrides Sub ProcessRecord ()" />
+      <MemberSignature Language="F#" Value="override this.ProcessRecord : unit -&gt; unit" Usage="writeProgressCommand.ProcessRecord " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Commands.Utility</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            
+             Writes a ProgressRecord created from the parameters.
+            
+             </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SecondsRemaining">
+      <MemberSignature Language="C#" Value="public int SecondsRemaining { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 SecondsRemaining" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.WriteProgressCommand.SecondsRemaining" />
+      <MemberSignature Language="VB.NET" Value="Public Property SecondsRemaining As Integer" />
+      <MemberSignature Language="F#" Value="member this.SecondsRemaining : int with get, set" Usage="Microsoft.PowerShell.Commands.WriteProgressCommand.SecondsRemaining" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Commands.Utility</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            
+             Seconds remaining to complete the operation, or -1 if n/a
+            
+             </summary>
+        <value />
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SourceId">
+      <MemberSignature Language="C#" Value="public int SourceId { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 SourceId" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.WriteProgressCommand.SourceId" />
+      <MemberSignature Language="VB.NET" Value="Public Property SourceId As Integer" />
+      <MemberSignature Language="F#" Value="member this.SourceId : int with get, set" Usage="Microsoft.PowerShell.Commands.WriteProgressCommand.SourceId" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Commands.Utility</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            
+             Identifies the source of the record.
+            
+             </summary>
+        <value />
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Status">
+      <MemberSignature Language="C#" Value="public string Status { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Status" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.WriteProgressCommand.Status" />
+      <MemberSignature Language="VB.NET" Value="Public Property Status As String" />
+      <MemberSignature Language="F#" Value="member this.Status : string with get, set" Usage="Microsoft.PowerShell.Commands.WriteProgressCommand.Status" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Commands.Utility</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(HelpMessageBaseName="WriteProgressResourceStrings", HelpMessageResourceId="StatusParameterHelpMessage", Position=1)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.ValidateNotNullOrEmpty</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            
+             Describes the current state of the activity.
+            
+             </summary>
+        <value />
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,175 @@
+﻿<Type Name="SetExecutionPolicyCommand" FullName="Microsoft.PowerShell.Commands.SetExecutionPolicyCommand">
+  <TypeSignature Language="C#" Value="public class SetExecutionPolicyCommand : System.Management.Automation.PSCmdlet" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit SetExecutionPolicyCommand extends System.Management.Automation.PSCmdlet" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.PowerShell.Commands.SetExecutionPolicyCommand" />
+  <TypeSignature Language="VB.NET" Value="Public Class SetExecutionPolicyCommand&#xA;Inherits PSCmdlet" />
+  <TypeSignature Language="F#" Value="type SetExecutionPolicyCommand = class&#xA;    inherit PSCmdlet" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.PowerShell.Security</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Management.Automation.PSCmdlet</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Management.Automation.Cmdlet("Set", "ExecutionPolicy", HelpUri="https://go.microsoft.com/fwlink/?LinkID=113394", SupportsShouldProcess=true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>
+             Defines the implementation of the 'Set-ExecutionPolicy' cmdlet.
+             This cmdlet sets the local preference for the execution policy of the
+             shell.
+            
+             The execution policy may be overridden by settings in Group Policy.
+             If the Group Policy setting overrides the desired behaviour, the Cmdlet
+             generates a terminating error.
+             </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SetExecutionPolicyCommand ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Commands.SetExecutionPolicyCommand.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New ()" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Security</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginProcessing">
+      <MemberSignature Language="C#" Value="protected override void BeginProcessing ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void BeginProcessing() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Commands.SetExecutionPolicyCommand.BeginProcessing" />
+      <MemberSignature Language="VB.NET" Value="Protected Overrides Sub BeginProcessing ()" />
+      <MemberSignature Language="F#" Value="override this.BeginProcessing : unit -&gt; unit" Usage="setExecutionPolicyCommand.BeginProcessing " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Security</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Sets the execution policy (validation).
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ExecutionPolicy">
+      <MemberSignature Language="C#" Value="public Microsoft.PowerShell.ExecutionPolicy ExecutionPolicy { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.PowerShell.ExecutionPolicy ExecutionPolicy" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.SetExecutionPolicyCommand.ExecutionPolicy" />
+      <MemberSignature Language="VB.NET" Value="Public Property ExecutionPolicy As ExecutionPolicy" />
+      <MemberSignature Language="F#" Value="member this.ExecutionPolicy : Microsoft.PowerShell.ExecutionPolicy with get, set" Usage="Microsoft.PowerShell.Commands.SetExecutionPolicyCommand.ExecutionPolicy" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Security</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(Mandatory=true, Position=0, ValueFromPipeline=true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Microsoft.PowerShell.ExecutionPolicy</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets the execution policy that the user requests.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Force">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.SwitchParameter Force { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Management.Automation.SwitchParameter Force" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.SetExecutionPolicyCommand.Force" />
+      <MemberSignature Language="VB.NET" Value="Public Property Force As SwitchParameter" />
+      <MemberSignature Language="F#" Value="member this.Force : System.Management.Automation.SwitchParameter with get, set" Usage="Microsoft.PowerShell.Commands.SetExecutionPolicyCommand.Force" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Security</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.SwitchParameter</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Specifies whether to force the execution policy change.
+            </summary>
+        <value />
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ProcessRecord">
+      <MemberSignature Language="C#" Value="protected override void ProcessRecord ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void ProcessRecord() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Commands.SetExecutionPolicyCommand.ProcessRecord" />
+      <MemberSignature Language="VB.NET" Value="Protected Overrides Sub ProcessRecord ()" />
+      <MemberSignature Language="F#" Value="override this.ProcessRecord : unit -&gt; unit" Usage="setExecutionPolicyCommand.ProcessRecord " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Security</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Set the desired execution policy.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Scope">
+      <MemberSignature Language="C#" Value="public Microsoft.PowerShell.ExecutionPolicyScope Scope { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.PowerShell.ExecutionPolicyScope Scope" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.SetExecutionPolicyCommand.Scope" />
+      <MemberSignature Language="VB.NET" Value="Public Property Scope As ExecutionPolicyScope" />
+      <MemberSignature Language="F#" Value="member this.Scope : Microsoft.PowerShell.ExecutionPolicyScope with get, set" Usage="Microsoft.PowerShell.Commands.SetExecutionPolicyCommand.Scope" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Security</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(Mandatory=false, Position=1, ValueFromPipelineByPropertyName=true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Microsoft.PowerShell.ExecutionPolicyScope</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets the scope of the execution policy.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

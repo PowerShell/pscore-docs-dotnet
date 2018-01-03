@@ -1,0 +1,127 @@
+﻿<Type Name="IContentWriter" FullName="System.Management.Automation.Provider.IContentWriter">
+  <TypeSignature Language="C#" Value="public interface IContentWriter : IDisposable" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IContentWriter implements class System.IDisposable" />
+  <TypeSignature Language="DocId" Value="T:System.Management.Automation.Provider.IContentWriter" />
+  <TypeSignature Language="VB.NET" Value="Public Interface IContentWriter&#xA;Implements IDisposable" />
+  <TypeSignature Language="F#" Value="type IContentWriter = interface&#xA;    interface IDisposable" />
+  <AssemblyInfo>
+    <AssemblyName>System.Management.Automation</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>
+             A Cmdlet provider that implements the IContentCmdletProvider interface must provide an
+             object that implements this interface when GetContentWriter() is called.
+            
+             The interface allows for writing content to an item.
+             </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Close">
+      <MemberSignature Language="C#" Value="public void Close ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Close() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Provider.IContentWriter.Close" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Close ()" />
+      <MemberSignature Language="F#" Value="abstract member Close : unit -&gt; unit" Usage="iContentWriter.Close " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+             Closes the writer. Further writes should fail if the writer
+             has been closed.
+             </summary>
+        <remarks>
+             The implementation of this method should close any resources held open by the
+             writer.
+             </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Seek">
+      <MemberSignature Language="C#" Value="public void Seek (long offset, System.IO.SeekOrigin origin);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Seek(int64 offset, valuetype System.IO.SeekOrigin origin) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Provider.IContentWriter.Seek(System.Int64,System.IO.SeekOrigin)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Seek (offset As Long, origin As SeekOrigin)" />
+      <MemberSignature Language="F#" Value="abstract member Seek : int64 * System.IO.SeekOrigin -&gt; unit" Usage="iContentWriter.Seek (offset, origin)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="offset" Type="System.Int64" />
+        <Parameter Name="origin" Type="System.IO.SeekOrigin" />
+      </Parameters>
+      <Docs>
+        <param name="offset">
+             An offset of the number of blocks to seek from the origin.
+             </param>
+        <param name="origin">
+             The place in the stream to start the seek from.
+             </param>
+        <summary>
+             Moves the current "block" to be written to a position relative to a place
+             in the writer.
+             </summary>
+        <remarks>
+             The implementation of this method moves the content writer <paramref name="offset" />
+             number of blocks from the specified <paramref name="origin" />. See <see cref="M:System.Management.Automation.Provider.IContentWriter.Write(System.Collections.IList)" />
+             for a description of what a block is.
+             </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Write">
+      <MemberSignature Language="C#" Value="public System.Collections.IList Write (System.Collections.IList content);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Collections.IList Write(class System.Collections.IList content) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Provider.IContentWriter.Write(System.Collections.IList)" />
+      <MemberSignature Language="VB.NET" Value="Public Function Write (content As IList) As IList" />
+      <MemberSignature Language="F#" Value="abstract member Write : System.Collections.IList -&gt; System.Collections.IList" Usage="iContentWriter.Write content" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IList</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="content" Type="System.Collections.IList" />
+      </Parameters>
+      <Docs>
+        <param name="content">
+             An array of content "blocks" to be written to the item.
+             </param>
+        <summary>
+             Writes content to the item.
+             </summary>
+        <returns>
+             The blocks of content that were successfully written to the item.
+             </returns>
+        <remarks>
+             A "block" of content is provider specific.  For the file system
+             a "block" may be considered a byte, a character, or delimited string.
+            
+             The implementation of this method should treat each element in the
+             <paramref name="content" /> parameter as a block. Each additional
+             call to this method should append any new values to the content
+             writer's current location until <see cref="M:System.Management.Automation.Provider.IContentWriter.Close" /> is called.
+             </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

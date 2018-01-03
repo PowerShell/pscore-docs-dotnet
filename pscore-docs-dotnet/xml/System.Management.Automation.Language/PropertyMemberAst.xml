@@ -1,0 +1,275 @@
+﻿<Type Name="PropertyMemberAst" FullName="System.Management.Automation.Language.PropertyMemberAst">
+  <TypeSignature Language="C#" Value="public class PropertyMemberAst : System.Management.Automation.Language.MemberAst" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit PropertyMemberAst extends System.Management.Automation.Language.MemberAst" />
+  <TypeSignature Language="DocId" Value="T:System.Management.Automation.Language.PropertyMemberAst" />
+  <TypeSignature Language="VB.NET" Value="Public Class PropertyMemberAst&#xA;Inherits MemberAst" />
+  <TypeSignature Language="F#" Value="type PropertyMemberAst = class&#xA;    inherit MemberAst" />
+  <AssemblyInfo>
+    <AssemblyName>System.Management.Automation</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Management.Automation.Language.MemberAst</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            The ast for a property.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public PropertyMemberAst (System.Management.Automation.Language.IScriptExtent extent, string name, System.Management.Automation.Language.TypeConstraintAst propertyType, System.Collections.Generic.IEnumerable&lt;System.Management.Automation.Language.AttributeAst&gt; attributes, System.Management.Automation.Language.PropertyAttributes propertyAttributes, System.Management.Automation.Language.ExpressionAst initialValue);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Management.Automation.Language.IScriptExtent extent, string name, class System.Management.Automation.Language.TypeConstraintAst propertyType, class System.Collections.Generic.IEnumerable`1&lt;class System.Management.Automation.Language.AttributeAst&gt; attributes, valuetype System.Management.Automation.Language.PropertyAttributes propertyAttributes, class System.Management.Automation.Language.ExpressionAst initialValue) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Language.PropertyMemberAst.#ctor(System.Management.Automation.Language.IScriptExtent,System.String,System.Management.Automation.Language.TypeConstraintAst,System.Collections.Generic.IEnumerable{System.Management.Automation.Language.AttributeAst},System.Management.Automation.Language.PropertyAttributes,System.Management.Automation.Language.ExpressionAst)" />
+      <MemberSignature Language="F#" Value="new System.Management.Automation.Language.PropertyMemberAst : System.Management.Automation.Language.IScriptExtent * string * System.Management.Automation.Language.TypeConstraintAst * seq&lt;System.Management.Automation.Language.AttributeAst&gt; * System.Management.Automation.Language.PropertyAttributes * System.Management.Automation.Language.ExpressionAst -&gt; System.Management.Automation.Language.PropertyMemberAst" Usage="new System.Management.Automation.Language.PropertyMemberAst (extent, name, propertyType, attributes, propertyAttributes, initialValue)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="extent" Type="System.Management.Automation.Language.IScriptExtent" />
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="propertyType" Type="System.Management.Automation.Language.TypeConstraintAst" />
+        <Parameter Name="attributes" Type="System.Collections.Generic.IEnumerable&lt;System.Management.Automation.Language.AttributeAst&gt;" />
+        <Parameter Name="propertyAttributes" Type="System.Management.Automation.Language.PropertyAttributes" />
+        <Parameter Name="initialValue" Type="System.Management.Automation.Language.ExpressionAst" />
+      </Parameters>
+      <Docs>
+        <param name="extent">The extent of the property starting with any custom attributes.</param>
+        <param name="name">The name of the property.</param>
+        <param name="propertyType">The ast for the type of the property - may be null.</param>
+        <param name="attributes">The custom attributes for the property.</param>
+        <param name="propertyAttributes">The attributes (like public or static) for the property.</param>
+        <param name="initialValue">The initial value of the property (may be null).</param>
+        <summary>
+            Construct a property member.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Attributes">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.ReadOnlyCollection&lt;System.Management.Automation.Language.AttributeAst&gt; Attributes { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ObjectModel.ReadOnlyCollection`1&lt;class System.Management.Automation.Language.AttributeAst&gt; Attributes" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.Language.PropertyMemberAst.Attributes" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Attributes As ReadOnlyCollection(Of AttributeAst)" />
+      <MemberSignature Language="F#" Value="member this.Attributes : System.Collections.ObjectModel.ReadOnlyCollection&lt;System.Management.Automation.Language.AttributeAst&gt;" Usage="System.Management.Automation.Language.PropertyMemberAst.Attributes" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.ReadOnlyCollection&lt;System.Management.Automation.Language.AttributeAst&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The custom attributes of the property.  This property is never null.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Copy">
+      <MemberSignature Language="C#" Value="public override System.Management.Automation.Language.Ast Copy ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Management.Automation.Language.Ast Copy() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Language.PropertyMemberAst.Copy" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Function Copy () As Ast" />
+      <MemberSignature Language="F#" Value="override this.Copy : unit -&gt; System.Management.Automation.Language.Ast" Usage="propertyMemberAst.Copy " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.Language.Ast</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Copy the PropertyMemberAst.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InitialValue">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.Language.ExpressionAst InitialValue { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Management.Automation.Language.ExpressionAst InitialValue" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.Language.PropertyMemberAst.InitialValue" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property InitialValue As ExpressionAst" />
+      <MemberSignature Language="F#" Value="member this.InitialValue : System.Management.Automation.Language.ExpressionAst" Usage="System.Management.Automation.Language.PropertyMemberAst.InitialValue" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.Language.ExpressionAst</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The ast for the initial value of the property.  This property may be null if no initial value was specified.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsHidden">
+      <MemberSignature Language="C#" Value="public bool IsHidden { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsHidden" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.Language.PropertyMemberAst.IsHidden" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property IsHidden As Boolean" />
+      <MemberSignature Language="F#" Value="member this.IsHidden : bool" Usage="System.Management.Automation.Language.PropertyMemberAst.IsHidden" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Return true if the property is hidden.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsPrivate">
+      <MemberSignature Language="C#" Value="public bool IsPrivate { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsPrivate" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.Language.PropertyMemberAst.IsPrivate" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property IsPrivate As Boolean" />
+      <MemberSignature Language="F#" Value="member this.IsPrivate : bool" Usage="System.Management.Automation.Language.PropertyMemberAst.IsPrivate" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Return true if the property is private.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsPublic">
+      <MemberSignature Language="C#" Value="public bool IsPublic { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsPublic" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.Language.PropertyMemberAst.IsPublic" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property IsPublic As Boolean" />
+      <MemberSignature Language="F#" Value="member this.IsPublic : bool" Usage="System.Management.Automation.Language.PropertyMemberAst.IsPublic" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Return true if the property is public.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsStatic">
+      <MemberSignature Language="C#" Value="public bool IsStatic { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsStatic" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.Language.PropertyMemberAst.IsStatic" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property IsStatic As Boolean" />
+      <MemberSignature Language="F#" Value="member this.IsStatic : bool" Usage="System.Management.Automation.Language.PropertyMemberAst.IsStatic" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Return true if the property is static.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public override string Name { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.Language.PropertyMemberAst.Name" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides ReadOnly Property Name As String" />
+      <MemberSignature Language="F#" Value="member this.Name : string" Usage="System.Management.Automation.Language.PropertyMemberAst.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The name of the property.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PropertyAttributes">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.Language.PropertyAttributes PropertyAttributes { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Management.Automation.Language.PropertyAttributes PropertyAttributes" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.Language.PropertyMemberAst.PropertyAttributes" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property PropertyAttributes As PropertyAttributes" />
+      <MemberSignature Language="F#" Value="member this.PropertyAttributes : System.Management.Automation.Language.PropertyAttributes" Usage="System.Management.Automation.Language.PropertyMemberAst.PropertyAttributes" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.Language.PropertyAttributes</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The attributes (like public or static) of the property.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PropertyType">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.Language.TypeConstraintAst PropertyType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Management.Automation.Language.TypeConstraintAst PropertyType" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.Language.PropertyMemberAst.PropertyType" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property PropertyType As TypeConstraintAst" />
+      <MemberSignature Language="F#" Value="member this.PropertyType : System.Management.Automation.Language.TypeConstraintAst" Usage="System.Management.Automation.Language.PropertyMemberAst.PropertyType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.Language.TypeConstraintAst</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The ast for the type of the property.  This property may be null if no type was specified.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

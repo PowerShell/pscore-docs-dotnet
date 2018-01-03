@@ -1,0 +1,144 @@
+﻿<Type Name="FormatTable" FullName="System.Management.Automation.Runspaces.FormatTable">
+  <TypeSignature Language="C#" Value="public sealed class FormatTable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit FormatTable extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Management.Automation.Runspaces.FormatTable" />
+  <TypeSignature Language="VB.NET" Value="Public NotInheritable Class FormatTable" />
+  <TypeSignature Language="F#" Value="type FormatTable = class" />
+  <AssemblyInfo>
+    <AssemblyName>System.Management.Automation</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            A class that keeps the information from format.ps1xml files in a cache table
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public FormatTable (System.Collections.Generic.IEnumerable&lt;string&gt; formatFiles);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Collections.Generic.IEnumerable`1&lt;string&gt; formatFiles) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Runspaces.FormatTable.#ctor(System.Collections.Generic.IEnumerable{System.String})" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (formatFiles As IEnumerable(Of String))" />
+      <MemberSignature Language="F#" Value="new System.Management.Automation.Runspaces.FormatTable : seq&lt;string&gt; -&gt; System.Management.Automation.Runspaces.FormatTable" Usage="new System.Management.Automation.Runspaces.FormatTable formatFiles" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="formatFiles" Type="System.Collections.Generic.IEnumerable&lt;System.String&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="formatFiles">
+            Format files to load for format information.
+            </param>
+        <summary>
+            Constructor that creates a FormatTable from a set of format files.
+            </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">
+            1. Path {0} is not fully qualified. Specify a fully qualified type file path.
+            </exception>
+        <exception cref="T:System.Management.Automation.Runspaces.FormatTableLoadException">
+            1. There were errors loading Formattable. Look in the Errors property to
+            get detailed error messages.
+            </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AppendFormatData">
+      <MemberSignature Language="C#" Value="public void AppendFormatData (System.Collections.Generic.IEnumerable&lt;System.Management.Automation.ExtendedTypeDefinition&gt; formatData);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AppendFormatData(class System.Collections.Generic.IEnumerable`1&lt;class System.Management.Automation.ExtendedTypeDefinition&gt; formatData) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Runspaces.FormatTable.AppendFormatData(System.Collections.Generic.IEnumerable{System.Management.Automation.ExtendedTypeDefinition})" />
+      <MemberSignature Language="VB.NET" Value="Public Sub AppendFormatData (formatData As IEnumerable(Of ExtendedTypeDefinition))" />
+      <MemberSignature Language="F#" Value="member this.AppendFormatData : seq&lt;System.Management.Automation.ExtendedTypeDefinition&gt; -&gt; unit" Usage="formatTable.AppendFormatData formatData" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="formatData" Type="System.Collections.Generic.IEnumerable&lt;System.Management.Automation.ExtendedTypeDefinition&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="formatData">
+            The formatData is of type 'ExtendedTypeDefinition'. It defines the View configuration
+            including TableControl, ListControl, and WideControl.
+            </param>
+        <summary>
+            Append the formatData to the list of formatting configurations, and update the
+            entire formatting database.
+            </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.Management.Automation.Runspaces.FormatTableLoadException">
+            1. There were errors loading Formattable. Look in the Errors property to
+            get detailed error messages.
+            </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="LoadDefaultFormatFiles">
+      <MemberSignature Language="C#" Value="public static System.Management.Automation.Runspaces.FormatTable LoadDefaultFormatFiles ();" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Management.Automation.Runspaces.FormatTable LoadDefaultFormatFiles() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Runspaces.FormatTable.LoadDefaultFormatFiles" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function LoadDefaultFormatFiles () As FormatTable" />
+      <MemberSignature Language="F#" Value="static member LoadDefaultFormatFiles : unit -&gt; System.Management.Automation.Runspaces.FormatTable" Usage="System.Management.Automation.Runspaces.FormatTable.LoadDefaultFormatFiles " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.Runspaces.FormatTable</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Returns a format table instance with all default
+            format files loaded
+            </summary>
+        <returns />
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PrependFormatData">
+      <MemberSignature Language="C#" Value="public void PrependFormatData (System.Collections.Generic.IEnumerable&lt;System.Management.Automation.ExtendedTypeDefinition&gt; formatData);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void PrependFormatData(class System.Collections.Generic.IEnumerable`1&lt;class System.Management.Automation.ExtendedTypeDefinition&gt; formatData) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Runspaces.FormatTable.PrependFormatData(System.Collections.Generic.IEnumerable{System.Management.Automation.ExtendedTypeDefinition})" />
+      <MemberSignature Language="VB.NET" Value="Public Sub PrependFormatData (formatData As IEnumerable(Of ExtendedTypeDefinition))" />
+      <MemberSignature Language="F#" Value="member this.PrependFormatData : seq&lt;System.Management.Automation.ExtendedTypeDefinition&gt; -&gt; unit" Usage="formatTable.PrependFormatData formatData" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="formatData" Type="System.Collections.Generic.IEnumerable&lt;System.Management.Automation.ExtendedTypeDefinition&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="formatData">
+            The formatData is of type 'ExtendedTypeDefinition'. It defines the View configuration
+            including TableControl, ListControl, and WideControl.
+            </param>
+        <summary>
+            Prepend the formatData to the list of formatting configurations, and update the
+            entire formatting database.
+            </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.Management.Automation.Runspaces.FormatTableLoadException">
+            1. There were errors loading Formattable. Look in the Errors property to
+            get detailed error messages.
+            </exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

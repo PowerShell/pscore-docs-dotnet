@@ -1,0 +1,745 @@
+﻿<Type Name="PSDriveInfo" FullName="System.Management.Automation.PSDriveInfo">
+  <TypeSignature Language="C#" Value="public class PSDriveInfo : IComparable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit PSDriveInfo extends System.Object implements class System.IComparable" />
+  <TypeSignature Language="DocId" Value="T:System.Management.Automation.PSDriveInfo" />
+  <TypeSignature Language="VB.NET" Value="Public Class PSDriveInfo&#xA;Implements IComparable" />
+  <TypeSignature Language="F#" Value="type PSDriveInfo = class&#xA;    interface IComparable" />
+  <AssemblyInfo>
+    <AssemblyName>System.Management.Automation</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IComparable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>
+             Defines a drive that exposes a provider path to the user.
+             </summary>
+    <remarks>
+             A cmdlet provider may want to derive from this class to provide their
+             own public members or to cache information related to the drive. For instance,
+             if a drive is a connection to a remote machine and making that connection
+             is expensive, then the provider may want keep a handle to the connection as
+             a member of their derived <see cref="T:System.Management.Automation.PSDriveInfo" /> class and use it when
+             the provider is invoked.
+             </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected PSDriveInfo (System.Management.Automation.PSDriveInfo driveInfo);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(class System.Management.Automation.PSDriveInfo driveInfo) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.PSDriveInfo.#ctor(System.Management.Automation.PSDriveInfo)" />
+      <MemberSignature Language="VB.NET" Value="Protected Sub New (driveInfo As PSDriveInfo)" />
+      <MemberSignature Language="F#" Value="new System.Management.Automation.PSDriveInfo : System.Management.Automation.PSDriveInfo -&gt; System.Management.Automation.PSDriveInfo" Usage="new System.Management.Automation.PSDriveInfo driveInfo" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="driveInfo" Type="System.Management.Automation.PSDriveInfo" />
+      </Parameters>
+      <Docs>
+        <param name="driveInfo">
+             An existing PSDriveInfo object that should be copied to this instance.
+             </param>
+        <summary>
+             Constructs a new instance of the PSDriveInfo using another PSDriveInfo
+             as a template.
+             </summary>
+        <remarks>
+             A protected constructor that derived classes can call with an instance
+             of this class. This allows for easy creation of derived PSDriveInfo objects
+             which can be created in CmdletProvider's NewDrive method using the PSDriveInfo
+             that is passed in.
+             </remarks>
+        <exception cref="T:System.ArgumentNullException">
+             If <paramref name="PSDriveInfo" /> is null.
+             </exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public PSDriveInfo (string name, System.Management.Automation.ProviderInfo provider, string root, string description, System.Management.Automation.PSCredential credential);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string name, class System.Management.Automation.ProviderInfo provider, string root, string description, class System.Management.Automation.PSCredential credential) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.PSDriveInfo.#ctor(System.String,System.Management.Automation.ProviderInfo,System.String,System.String,System.Management.Automation.PSCredential)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (name As String, provider As ProviderInfo, root As String, description As String, credential As PSCredential)" />
+      <MemberSignature Language="F#" Value="new System.Management.Automation.PSDriveInfo : string * System.Management.Automation.ProviderInfo * string * string * System.Management.Automation.PSCredential -&gt; System.Management.Automation.PSDriveInfo" Usage="new System.Management.Automation.PSDriveInfo (name, provider, root, description, credential)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="provider" Type="System.Management.Automation.ProviderInfo" />
+        <Parameter Name="root" Type="System.String" />
+        <Parameter Name="description" Type="System.String" />
+        <Parameter Name="credential" Type="System.Management.Automation.PSCredential" />
+      </Parameters>
+      <Docs>
+        <param name="name">
+             The name of the drive.
+             </param>
+        <param name="provider">
+             The name of the provider which implements the functionality
+             for the root path of the drive.
+             </param>
+        <param name="root">
+             The root path of the drive. For example, the root of a
+             drive in the file system can be c:\windows\system32
+             </param>
+        <param name="description">
+             The description for the drive.
+             </param>
+        <param name="credential">
+             The credentials under which all operations on the drive should occur.
+             If null, the current user credential is used.
+             </param>
+        <summary>
+             Constructs a drive that maps an MSH Path in
+             the shell to a Cmdlet Provider.
+             </summary>
+        <remarks>To be added.</remarks>
+        <throws>
+             ArgumentNullException - if <paramref name="name" />,
+             <paramref name="provider" />, or <paramref name="root" />
+             is null.
+             </throws>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public PSDriveInfo (string name, System.Management.Automation.ProviderInfo provider, string root, string description, System.Management.Automation.PSCredential credential, bool persist);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string name, class System.Management.Automation.ProviderInfo provider, string root, string description, class System.Management.Automation.PSCredential credential, bool persist) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.PSDriveInfo.#ctor(System.String,System.Management.Automation.ProviderInfo,System.String,System.String,System.Management.Automation.PSCredential,System.Boolean)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (name As String, provider As ProviderInfo, root As String, description As String, credential As PSCredential, persist As Boolean)" />
+      <MemberSignature Language="F#" Value="new System.Management.Automation.PSDriveInfo : string * System.Management.Automation.ProviderInfo * string * string * System.Management.Automation.PSCredential * bool -&gt; System.Management.Automation.PSDriveInfo" Usage="new System.Management.Automation.PSDriveInfo (name, provider, root, description, credential, persist)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="provider" Type="System.Management.Automation.ProviderInfo" />
+        <Parameter Name="root" Type="System.String" />
+        <Parameter Name="description" Type="System.String" />
+        <Parameter Name="credential" Type="System.Management.Automation.PSCredential" />
+        <Parameter Name="persist" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="name">
+             The name of the drive.
+             </param>
+        <param name="provider">
+             The name of the provider which implements the functionality
+             for the root path of the drive.
+             </param>
+        <param name="root">
+             The root path of the drive. For example, the root of a
+             drive in the file system can be c:\windows\system32
+             </param>
+        <param name="description">
+             The description for the drive.
+             </param>
+        <param name="credential">
+             The credentials under which all operations on the drive should occur.
+             If null, the current user credential is used.
+             </param>
+        <param name="persist">
+             It indicates if the the created PSDrive would be
+             persisted across PowerShell sessions.
+             </param>
+        <summary>
+             Constructs a drive that maps an MSH Path in
+             the shell to a Cmdlet Provider.
+             </summary>
+        <remarks>To be added.</remarks>
+        <throws>
+             ArgumentNullException - if <paramref name="name" />,
+             <paramref name="provider" />, or <paramref name="root" />
+             is null.
+             </throws>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public PSDriveInfo (string name, System.Management.Automation.ProviderInfo provider, string root, string description, System.Management.Automation.PSCredential credential, string displayRoot);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string name, class System.Management.Automation.ProviderInfo provider, string root, string description, class System.Management.Automation.PSCredential credential, string displayRoot) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.PSDriveInfo.#ctor(System.String,System.Management.Automation.ProviderInfo,System.String,System.String,System.Management.Automation.PSCredential,System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (name As String, provider As ProviderInfo, root As String, description As String, credential As PSCredential, displayRoot As String)" />
+      <MemberSignature Language="F#" Value="new System.Management.Automation.PSDriveInfo : string * System.Management.Automation.ProviderInfo * string * string * System.Management.Automation.PSCredential * string -&gt; System.Management.Automation.PSDriveInfo" Usage="new System.Management.Automation.PSDriveInfo (name, provider, root, description, credential, displayRoot)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="provider" Type="System.Management.Automation.ProviderInfo" />
+        <Parameter Name="root" Type="System.String" />
+        <Parameter Name="description" Type="System.String" />
+        <Parameter Name="credential" Type="System.Management.Automation.PSCredential" />
+        <Parameter Name="displayRoot" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">
+             The name of the drive.
+             </param>
+        <param name="provider">
+             The name of the provider which implements the functionality
+             for the root path of the drive.
+             </param>
+        <param name="root">
+             The root path of the drive. For example, the root of a
+             drive in the file system can be c:\windows\system32
+             </param>
+        <param name="description">
+             The description for the drive.
+             </param>
+        <param name="credential">
+             The credentials under which all operations on the drive should occur.
+             If null, the current user credential is used.
+             </param>
+        <param name="displayRoot">
+             The network path of the drive. This field would be populated only if PSDriveInfo
+             is targeting the network drive or else this filed is null for local drives.
+             </param>
+        <summary>
+             Constructs a drive that maps an MSH Path in
+             the shell to a Cmdlet Provider.
+             </summary>
+        <remarks>To be added.</remarks>
+        <throws>
+             ArgumentNullException - if <paramref name="name" />,
+             <paramref name="provider" />, or <paramref name="root" />
+             is null.
+             </throws>
+      </Docs>
+    </Member>
+    <Member MemberName="CompareTo">
+      <MemberSignature Language="C#" Value="public int CompareTo (System.Management.Automation.PSDriveInfo drive);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int32 CompareTo(class System.Management.Automation.PSDriveInfo drive) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.PSDriveInfo.CompareTo(System.Management.Automation.PSDriveInfo)" />
+      <MemberSignature Language="VB.NET" Value="Public Function CompareTo (drive As PSDriveInfo) As Integer" />
+      <MemberSignature Language="F#" Value="member this.CompareTo : System.Management.Automation.PSDriveInfo -&gt; int" Usage="pSDriveInfo.CompareTo drive" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="drive" Type="System.Management.Automation.PSDriveInfo" />
+      </Parameters>
+      <Docs>
+        <param name="drive">
+             A PSDriveInfo object to compare.
+             </param>
+        <summary>
+             Compares this instance to the specified drive.
+             </summary>
+        <returns>
+             A signed number indicating the relative values of this instance and object specified.
+             Return Value: Less than zero        Meaning: This instance is less than object.
+             Return Value: Zero                  Meaning: This instance is equal to object.
+             Return Value: Greater than zero     Meaning: This instance is greater than object or object is a null reference.
+             </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CompareTo">
+      <MemberSignature Language="C#" Value="public int CompareTo (object obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance int32 CompareTo(object obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.PSDriveInfo.CompareTo(System.Object)" />
+      <MemberSignature Language="VB.NET" Value="Public Function CompareTo (obj As Object) As Integer" />
+      <MemberSignature Language="F#" Value="abstract member CompareTo : obj -&gt; int&#xA;override this.CompareTo : obj -&gt; int" Usage="pSDriveInfo.CompareTo obj" />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.IComparable.CompareTo(System.Object)</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="obj">
+             An object to compare.
+             </param>
+        <summary>
+             Compares this instance to the specified object. The object must be a PSDriveInfo.
+             </summary>
+        <returns>
+             A signed number indicating the relative values of this
+             instance and object specified.
+             </returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">
+             If <paramref name="obj" /> is not a PSDriveInfo instance.
+             </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Credential">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.PSCredential Credential { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Management.Automation.PSCredential Credential" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.PSDriveInfo.Credential" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Credential As PSCredential" />
+      <MemberSignature Language="F#" Value="member this.Credential : System.Management.Automation.PSCredential" Usage="System.Management.Automation.PSDriveInfo.Credential" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.PSCredential</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the credential to use with the drive.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CurrentLocation">
+      <MemberSignature Language="C#" Value="public string CurrentLocation { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string CurrentLocation" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.PSDriveInfo.CurrentLocation" />
+      <MemberSignature Language="VB.NET" Value="Public Property CurrentLocation As String" />
+      <MemberSignature Language="F#" Value="member this.CurrentLocation : string with get, set" Usage="System.Management.Automation.PSDriveInfo.CurrentLocation" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets the current working directory for the drive.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Description">
+      <MemberSignature Language="C#" Value="public string Description { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Description" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.PSDriveInfo.Description" />
+      <MemberSignature Language="VB.NET" Value="Public Property Description As String" />
+      <MemberSignature Language="F#" Value="member this.Description : string with get, set" Usage="System.Management.Automation.PSDriveInfo.Description" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets the description for the drive.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DisplayRoot">
+      <MemberSignature Language="C#" Value="public string DisplayRoot { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string DisplayRoot" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.PSDriveInfo.DisplayRoot" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property DisplayRoot As String" />
+      <MemberSignature Language="F#" Value="member this.DisplayRoot : string" Usage="System.Management.Automation.PSDriveInfo.DisplayRoot" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets the UNC path of the drive. This property would be populated only
+            if the created PSDrive is targeting a network drive or else this property
+            would be null.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public bool Equals (System.Management.Automation.PSDriveInfo drive);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool Equals(class System.Management.Automation.PSDriveInfo drive) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.PSDriveInfo.Equals(System.Management.Automation.PSDriveInfo)" />
+      <MemberSignature Language="VB.NET" Value="Public Function Equals (drive As PSDriveInfo) As Boolean" />
+      <MemberSignature Language="F#" Value="override this.Equals : System.Management.Automation.PSDriveInfo -&gt; bool" Usage="pSDriveInfo.Equals drive" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="drive" Type="System.Management.Automation.PSDriveInfo" />
+      </Parameters>
+      <Docs>
+        <param name="drive">
+             An object to compare.
+             </param>
+        <summary>
+             Compares this instance to the specified object.
+             </summary>
+        <returns>
+             True if the drive names are equal, false otherwise.
+             </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public override bool Equals (object obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.PSDriveInfo.Equals(System.Object)" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Function Equals (obj As Object) As Boolean" />
+      <MemberSignature Language="F#" Value="override this.Equals : obj -&gt; bool" Usage="pSDriveInfo.Equals obj" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="obj">
+             An object to compare.
+             </param>
+        <summary>
+             Compares this instance to the specified object.
+             </summary>
+        <returns>
+             True if the drive names are equal, false otherwise.
+             </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public override int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.PSDriveInfo.GetHashCode" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Function GetHashCode () As Integer" />
+      <MemberSignature Language="F#" Value="override this.GetHashCode : unit -&gt; int" Usage="pSDriveInfo.GetHashCode " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+             Gets the hash code for this instance.
+             </summary>
+        <returns>The result of base.GetHashCode()</returns>
+        <remarks>To be added.</remarks>
+        <!-- Override the base GetHashCode because the compiler complains
+             if you don't when you implement operator== and operator!= -->
+      </Docs>
+    </Member>
+    <Member MemberName="MaximumSize">
+      <MemberSignature Language="C#" Value="public Nullable&lt;long&gt; MaximumSize { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Nullable`1&lt;int64&gt; MaximumSize" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.PSDriveInfo.MaximumSize" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property MaximumSize As Nullable(Of Long)" />
+      <MemberSignature Language="F#" Value="member this.MaximumSize : Nullable&lt;int64&gt;" Usage="System.Management.Automation.PSDriveInfo.MaximumSize" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Nullable&lt;System.Int64&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            When supported by provider this specifies a maximum drive size.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public string Name { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.PSDriveInfo.Name" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Name As String" />
+      <MemberSignature Language="F#" Value="member this.Name : string" Usage="System.Management.Automation.PSDriveInfo.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the name of the drive
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Equality">
+      <MemberSignature Language="C#" Value="public static bool operator == (System.Management.Automation.PSDriveInfo drive1, System.Management.Automation.PSDriveInfo drive2);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname bool op_Equality(class System.Management.Automation.PSDriveInfo drive1, class System.Management.Automation.PSDriveInfo drive2) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.PSDriveInfo.op_Equality(System.Management.Automation.PSDriveInfo,System.Management.Automation.PSDriveInfo)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Operator == (drive1 As PSDriveInfo, drive2 As PSDriveInfo) As Boolean" />
+      <MemberSignature Language="F#" Value="static member ( = ) : System.Management.Automation.PSDriveInfo * System.Management.Automation.PSDriveInfo -&gt; bool" Usage="drive1 = drive2" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="drive1" Type="System.Management.Automation.PSDriveInfo" />
+        <Parameter Name="drive2" Type="System.Management.Automation.PSDriveInfo" />
+      </Parameters>
+      <Docs>
+        <param name="drive1">
+             The first object to compare to the second.
+             </param>
+        <param name="drive2">
+             The second object to compare to the first.
+             </param>
+        <summary>
+             Equality operator for the drive determines if the drives
+             are equal by having the same name.
+             </summary>
+        <returns>
+             True if the objects are PSDriveInfo objects and have the same name,
+             false otherwise.
+             </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_GreaterThan">
+      <MemberSignature Language="C#" Value="public static bool operator &gt; (System.Management.Automation.PSDriveInfo drive1, System.Management.Automation.PSDriveInfo drive2);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname bool op_GreaterThan(class System.Management.Automation.PSDriveInfo drive1, class System.Management.Automation.PSDriveInfo drive2) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.PSDriveInfo.op_GreaterThan(System.Management.Automation.PSDriveInfo,System.Management.Automation.PSDriveInfo)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Operator &gt; (drive1 As PSDriveInfo, drive2 As PSDriveInfo) As Boolean" />
+      <MemberSignature Language="F#" Value="static member ( &gt; ) : System.Management.Automation.PSDriveInfo * System.Management.Automation.PSDriveInfo -&gt; bool" Usage="drive1 &gt; drive2" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="drive1" Type="System.Management.Automation.PSDriveInfo" />
+        <Parameter Name="drive2" Type="System.Management.Automation.PSDriveInfo" />
+      </Parameters>
+      <Docs>
+        <param name="drive1">
+             The drive to determine if it is greater than the other drive.
+             </param>
+        <param name="drive2">
+             The drive to compare drive1 against.
+             </param>
+        <summary>
+             Compares the specified drives to determine if drive1 is greater than
+             drive2.
+             </summary>
+        <returns>
+             True if the lexical comparison of drive1's name is greater than drive2's name.
+             </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Inequality">
+      <MemberSignature Language="C#" Value="public static bool operator != (System.Management.Automation.PSDriveInfo drive1, System.Management.Automation.PSDriveInfo drive2);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname bool op_Inequality(class System.Management.Automation.PSDriveInfo drive1, class System.Management.Automation.PSDriveInfo drive2) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.PSDriveInfo.op_Inequality(System.Management.Automation.PSDriveInfo,System.Management.Automation.PSDriveInfo)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Operator != (drive1 As PSDriveInfo, drive2 As PSDriveInfo) As Boolean" />
+      <MemberSignature Language="F#" Value="static member op_Inequality : System.Management.Automation.PSDriveInfo * System.Management.Automation.PSDriveInfo -&gt; bool" Usage="System.Management.Automation.PSDriveInfo.op_Inequality (drive1, drive2)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="drive1" Type="System.Management.Automation.PSDriveInfo" />
+        <Parameter Name="drive2" Type="System.Management.Automation.PSDriveInfo" />
+      </Parameters>
+      <Docs>
+        <param name="drive1">
+             The first object to compare to the second.
+             </param>
+        <param name="drive2">
+             The second object to compare to the first.
+             </param>
+        <summary>
+             Inequality operator for the drive determines if the drives
+             are not equal by using the drive name.
+             </summary>
+        <returns>
+             True if the PSDriveInfo objects do not have the same name,
+             false otherwise.
+             </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_LessThan">
+      <MemberSignature Language="C#" Value="public static bool operator &lt; (System.Management.Automation.PSDriveInfo drive1, System.Management.Automation.PSDriveInfo drive2);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname bool op_LessThan(class System.Management.Automation.PSDriveInfo drive1, class System.Management.Automation.PSDriveInfo drive2) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.PSDriveInfo.op_LessThan(System.Management.Automation.PSDriveInfo,System.Management.Automation.PSDriveInfo)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Operator &lt; (drive1 As PSDriveInfo, drive2 As PSDriveInfo) As Boolean" />
+      <MemberSignature Language="F#" Value="static member ( &lt; ) : System.Management.Automation.PSDriveInfo * System.Management.Automation.PSDriveInfo -&gt; bool" Usage="drive1 &lt; drive2" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="drive1" Type="System.Management.Automation.PSDriveInfo" />
+        <Parameter Name="drive2" Type="System.Management.Automation.PSDriveInfo" />
+      </Parameters>
+      <Docs>
+        <param name="drive1">
+             The drive to determine if it is less than the other drive.
+             </param>
+        <param name="drive2">
+             The drive to compare drive1 against.
+             </param>
+        <summary>
+             Compares the specified drives to determine if drive1 is less than
+             drive2.
+             </summary>
+        <returns>
+             True if the lexical comparison of drive1's name is less than drive2's name.
+             </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Provider">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.ProviderInfo Provider { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Management.Automation.ProviderInfo Provider" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.PSDriveInfo.Provider" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Provider As ProviderInfo" />
+      <MemberSignature Language="F#" Value="member this.Provider : System.Management.Automation.ProviderInfo" Usage="System.Management.Automation.PSDriveInfo.Provider" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.ProviderInfo</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the name of the provider that root path
+            of the drive represents.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Root">
+      <MemberSignature Language="C#" Value="public string Root { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Root" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.PSDriveInfo.Root" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Root As String" />
+      <MemberSignature Language="F#" Value="member this.Root : string" Usage="System.Management.Automation.PSDriveInfo.Root" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the root path of the drive.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.PSDriveInfo.ToString" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Function ToString () As String" />
+      <MemberSignature Language="F#" Value="override this.ToString : unit -&gt; string" Usage="pSDriveInfo.ToString " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+             Gets the name of the drive as a string.
+             </summary>
+        <returns>
+             Returns a String that is that name of the drive.
+             </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="VolumeSeparatedByColon">
+      <MemberSignature Language="C#" Value="public bool VolumeSeparatedByColon { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool VolumeSeparatedByColon" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.PSDriveInfo.VolumeSeparatedByColon" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property VolumeSeparatedByColon As Boolean" />
+      <MemberSignature Language="F#" Value="member this.VolumeSeparatedByColon : bool" Usage="System.Management.Automation.PSDriveInfo.VolumeSeparatedByColon" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

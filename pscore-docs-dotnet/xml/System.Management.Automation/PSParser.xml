@@ -1,0 +1,108 @@
+﻿<Type Name="PSParser" FullName="System.Management.Automation.PSParser">
+  <TypeSignature Language="C#" Value="public sealed class PSParser" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit PSParser extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Management.Automation.PSParser" />
+  <TypeSignature Language="VB.NET" Value="Public NotInheritable Class PSParser" />
+  <TypeSignature Language="F#" Value="type PSParser = class" />
+  <AssemblyInfo>
+    <AssemblyName>System.Management.Automation</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+             PSParser class
+             </summary>
+    <remarks>
+             This is a class providing the interface for parsing a script into a collection of
+             tokens, which primarily can be used for syntax colorization.
+            
+             Classes provided for syntax colorization includes,
+            
+                 1. PSParser: this class provides the main interface to be used.
+                 2. PSToken: this class provides a public representation of powershell tokens.
+                 3. PSParseError: this class provides a public representation of syntax errors.
+            
+             These three classes are provided for exposing interfaces only. They
+             should not be used in PowerShell engine code.
+            
+             </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Tokenize">
+      <MemberSignature Language="C#" Value="public static System.Collections.ObjectModel.Collection&lt;System.Management.Automation.PSToken&gt; Tokenize (object[] script, out System.Collections.ObjectModel.Collection&lt;System.Management.Automation.PSParseError&gt; errors);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Collections.ObjectModel.Collection`1&lt;class System.Management.Automation.PSToken&gt; Tokenize(object[] script, [out] class System.Collections.ObjectModel.Collection`1&lt;class System.Management.Automation.PSParseError&gt;&amp; errors) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.PSParser.Tokenize(System.Object[],System.Collections.ObjectModel.Collection{System.Management.Automation.PSParseError}@)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function Tokenize (script As Object(), ByRef errors As Collection(Of PSParseError)) As Collection(Of PSToken)" />
+      <MemberSignature Language="F#" Value="static member Tokenize : obj[] *  -&gt; System.Collections.ObjectModel.Collection&lt;System.Management.Automation.PSToken&gt;" Usage="System.Management.Automation.PSParser.Tokenize (script, errors)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.Collection&lt;System.Management.Automation.PSToken&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="script" Type="System.Object[]" />
+        <Parameter Name="errors" Type="System.Collections.ObjectModel.Collection&lt;System.Management.Automation.PSParseError&gt;&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="script">script to parse, as an array of lines</param>
+        <param name="errors">errors happened during parsing</param>
+        <summary>
+            Parse a script into a collection of tokens.
+            </summary>
+        <returns>collection of tokens generated during parsing</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.Management.Automation.RuntimeException">
+            Although this API returns most parse-time exceptions in the errors
+            collection, there are some scenarios where resource limits will result
+            in an exception being thrown by this API. This allows the caller to
+            distinguish between a successful parse with errors and a failed parse.
+            All exceptions thrown will be derived from System.Management.Automation.RuntimeException
+            but may contain an inner exception that describes the real issue.
+            </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Tokenize">
+      <MemberSignature Language="C#" Value="public static System.Collections.ObjectModel.Collection&lt;System.Management.Automation.PSToken&gt; Tokenize (string script, out System.Collections.ObjectModel.Collection&lt;System.Management.Automation.PSParseError&gt; errors);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Collections.ObjectModel.Collection`1&lt;class System.Management.Automation.PSToken&gt; Tokenize(string script, [out] class System.Collections.ObjectModel.Collection`1&lt;class System.Management.Automation.PSParseError&gt;&amp; errors) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.PSParser.Tokenize(System.String,System.Collections.ObjectModel.Collection{System.Management.Automation.PSParseError}@)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function Tokenize (script As String, ByRef errors As Collection(Of PSParseError)) As Collection(Of PSToken)" />
+      <MemberSignature Language="F#" Value="static member Tokenize : string *  -&gt; System.Collections.ObjectModel.Collection&lt;System.Management.Automation.PSToken&gt;" Usage="System.Management.Automation.PSParser.Tokenize (script, errors)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.Collection&lt;System.Management.Automation.PSToken&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="script" Type="System.String" />
+        <Parameter Name="errors" Type="System.Collections.ObjectModel.Collection&lt;System.Management.Automation.PSParseError&gt;&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="script">script to parse</param>
+        <param name="errors">errors happened during parsing</param>
+        <summary>
+            Parse a script into a collection of tokens.
+            </summary>
+        <returns>collection of tokens generated during parsing</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.Management.Automation.RuntimeException">
+            Although this API returns most parse-time exceptions in the errors
+            collection, there are some scenarios where resource limits will result
+            in an exception being thrown by this API. This allows the caller to
+            distinguish between a successful parse with errors and a failed parse.
+            All exceptions thrown will be derived from System.Management.Automation.RuntimeException
+            but may contain an inner exception that describes the real issue.
+            </exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,226 @@
+﻿<Type Name="BaseCsvWritingCommand" FullName="Microsoft.PowerShell.Commands.BaseCsvWritingCommand">
+  <TypeSignature Language="C#" Value="public abstract class BaseCsvWritingCommand : System.Management.Automation.PSCmdlet" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit BaseCsvWritingCommand extends System.Management.Automation.PSCmdlet" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.PowerShell.Commands.BaseCsvWritingCommand" />
+  <TypeSignature Language="VB.NET" Value="Public MustInherit Class BaseCsvWritingCommand&#xA;Inherits PSCmdlet" />
+  <TypeSignature Language="F#" Value="type BaseCsvWritingCommand = class&#xA;    inherit PSCmdlet" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.PowerShell.Commands.Utility</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Management.Automation.PSCmdlet</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            This class implements the base for exportcsv and converttocsv commands
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected BaseCsvWritingCommand ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Commands.BaseCsvWritingCommand.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Protected Sub New ()" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Commands.Utility</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginProcessing">
+      <MemberSignature Language="C#" Value="protected override void BeginProcessing ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void BeginProcessing() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Commands.BaseCsvWritingCommand.BeginProcessing" />
+      <MemberSignature Language="VB.NET" Value="Protected Overrides Sub BeginProcessing ()" />
+      <MemberSignature Language="F#" Value="override this.BeginProcessing : unit -&gt; unit" Usage="baseCsvWritingCommand.BeginProcessing " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Commands.Utility</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            BeginProcessing override
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Delimiter">
+      <MemberSignature Language="C#" Value="public char Delimiter { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance char Delimiter" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.BaseCsvWritingCommand.Delimiter" />
+      <MemberSignature Language="VB.NET" Value="Public Property Delimiter As Char" />
+      <MemberSignature Language="F#" Value="member this.Delimiter : char with get, set" Usage="Microsoft.PowerShell.Commands.BaseCsvWritingCommand.Delimiter" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Commands.Utility</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="Delimiter", Position=1)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.ValidateNotNull</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Char</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Property that sets delimiter
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IncludeTypeInformation">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.SwitchParameter IncludeTypeInformation { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Management.Automation.SwitchParameter IncludeTypeInformation" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.BaseCsvWritingCommand.IncludeTypeInformation" />
+      <MemberSignature Language="VB.NET" Value="Public Property IncludeTypeInformation As SwitchParameter" />
+      <MemberSignature Language="F#" Value="member this.IncludeTypeInformation : System.Management.Automation.SwitchParameter with get, set" Usage="Microsoft.PowerShell.Commands.BaseCsvWritingCommand.IncludeTypeInformation" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Commands.Utility</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Alias(Mono.Cecil.CustomAttributeArgument[])</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.SwitchParameter</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            IncludeTypeInformation : The #TYPE line should be generated. Default is false. Cannot specify with NoTypeInformation.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InputObject">
+      <MemberSignature Language="C#" Value="public abstract System.Management.Automation.PSObject InputObject { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Management.Automation.PSObject InputObject" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.BaseCsvWritingCommand.InputObject" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Property InputObject As PSObject" />
+      <MemberSignature Language="F#" Value="member this.InputObject : System.Management.Automation.PSObject with get, set" Usage="Microsoft.PowerShell.Commands.BaseCsvWritingCommand.InputObject" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Commands.Utility</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.PSObject</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Abstract Property - Input Object which is written in Csv format
+            Derived as Different Attributes.In ConvertTo-CSV, This is a positional parameter. Export-CSV not a Positional behaviour.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NoTypeInformation">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.SwitchParameter NoTypeInformation { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Management.Automation.SwitchParameter NoTypeInformation" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.BaseCsvWritingCommand.NoTypeInformation" />
+      <MemberSignature Language="VB.NET" Value="Public Property NoTypeInformation As SwitchParameter" />
+      <MemberSignature Language="F#" Value="member this.NoTypeInformation : System.Management.Automation.SwitchParameter with get, set" Usage="Microsoft.PowerShell.Commands.BaseCsvWritingCommand.NoTypeInformation" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Commands.Utility</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Alias(Mono.Cecil.CustomAttributeArgument[])</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(DontShow=true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.SwitchParameter</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            NoTypeInformation : The #TYPE line should not be generated. Default is true. Cannot specify with IncludeTypeInformation.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UseCulture">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.SwitchParameter UseCulture { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Management.Automation.SwitchParameter UseCulture" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.BaseCsvWritingCommand.UseCulture" />
+      <MemberSignature Language="VB.NET" Value="Public Property UseCulture As SwitchParameter" />
+      <MemberSignature Language="F#" Value="member this.UseCulture : System.Management.Automation.SwitchParameter with get, set" Usage="Microsoft.PowerShell.Commands.BaseCsvWritingCommand.UseCulture" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Commands.Utility</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="UseCulture")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.SwitchParameter</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Culture switch for csv conversion
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteCsvLine">
+      <MemberSignature Language="C#" Value="public virtual void WriteCsvLine (string line);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void WriteCsvLine(string line) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Commands.BaseCsvWritingCommand.WriteCsvLine(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Sub WriteCsvLine (line As String)" />
+      <MemberSignature Language="F#" Value="abstract member WriteCsvLine : string -&gt; unit&#xA;override this.WriteCsvLine : string -&gt; unit" Usage="baseCsvWritingCommand.WriteCsvLine line" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Commands.Utility</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="line" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="line">To be added.</param>
+        <summary>
+            Write the string to a file or pipeline
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

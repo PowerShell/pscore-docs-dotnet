@@ -1,0 +1,1231 @@
+﻿<Type Name="WhereObjectCommand" FullName="Microsoft.PowerShell.Commands.WhereObjectCommand">
+  <TypeSignature Language="C#" Value="public sealed class WhereObjectCommand : System.Management.Automation.PSCmdlet" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit WhereObjectCommand extends System.Management.Automation.PSCmdlet" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.PowerShell.Commands.WhereObjectCommand" />
+  <TypeSignature Language="VB.NET" Value="Public NotInheritable Class WhereObjectCommand&#xA;Inherits PSCmdlet" />
+  <TypeSignature Language="F#" Value="type WhereObjectCommand = class&#xA;    inherit PSCmdlet" />
+  <AssemblyInfo>
+    <AssemblyName>System.Management.Automation</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Management.Automation.PSCmdlet</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Management.Automation.Cmdlet("Where", "Object", DefaultParameterSetName="EqualSet", HelpUri="https://go.microsoft.com/fwlink/?LinkID=113423", RemotingCapability=System.Management.Automation.RemotingCapability.None)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>
+            Implements a cmdlet that applys a script block
+            to each element of the pipeline. If the result of that
+            application is true, then the current pipeline object
+            is passed on, otherwise it is dropped.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WhereObjectCommand ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Commands.WhereObjectCommand.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New ()" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginProcessing">
+      <MemberSignature Language="C#" Value="protected override void BeginProcessing ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void BeginProcessing() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Commands.WhereObjectCommand.BeginProcessing" />
+      <MemberSignature Language="VB.NET" Value="Protected Overrides Sub BeginProcessing ()" />
+      <MemberSignature Language="F#" Value="override this.BeginProcessing : unit -&gt; unit" Usage="whereObjectCommand.BeginProcessing " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary />
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CContains">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.SwitchParameter CContains { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Management.Automation.SwitchParameter CContains" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.WhereObjectCommand.CContains" />
+      <MemberSignature Language="VB.NET" Value="Public Property CContains As SwitchParameter" />
+      <MemberSignature Language="F#" Value="member this.CContains : System.Management.Automation.SwitchParameter with get, set" Usage="Microsoft.PowerShell.Commands.WhereObjectCommand.CContains" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(Mandatory=true, ParameterSetName="CaseSensitiveContainsSet")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.SwitchParameter</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Case sensitive binary operator -ccontains
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CEQ">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.SwitchParameter CEQ { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Management.Automation.SwitchParameter CEQ" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.WhereObjectCommand.CEQ" />
+      <MemberSignature Language="VB.NET" Value="Public Property CEQ As SwitchParameter" />
+      <MemberSignature Language="F#" Value="member this.CEQ : System.Management.Automation.SwitchParameter with get, set" Usage="Microsoft.PowerShell.Commands.WhereObjectCommand.CEQ" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(Mandatory=true, ParameterSetName="CaseSensitiveEqualSet")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.SwitchParameter</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Case sensitive binary operator -ceq
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CGE">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.SwitchParameter CGE { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Management.Automation.SwitchParameter CGE" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.WhereObjectCommand.CGE" />
+      <MemberSignature Language="VB.NET" Value="Public Property CGE As SwitchParameter" />
+      <MemberSignature Language="F#" Value="member this.CGE : System.Management.Automation.SwitchParameter with get, set" Usage="Microsoft.PowerShell.Commands.WhereObjectCommand.CGE" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(Mandatory=true, ParameterSetName="CaseSensitiveGreaterOrEqualSet")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.SwitchParameter</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Case sensitive binary operator -cge
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CGT">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.SwitchParameter CGT { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Management.Automation.SwitchParameter CGT" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.WhereObjectCommand.CGT" />
+      <MemberSignature Language="VB.NET" Value="Public Property CGT As SwitchParameter" />
+      <MemberSignature Language="F#" Value="member this.CGT : System.Management.Automation.SwitchParameter with get, set" Usage="Microsoft.PowerShell.Commands.WhereObjectCommand.CGT" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(Mandatory=true, ParameterSetName="CaseSensitiveGreaterThanSet")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.SwitchParameter</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Case sensitive binary operator -cgt
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CIn">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.SwitchParameter CIn { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Management.Automation.SwitchParameter CIn" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.WhereObjectCommand.CIn" />
+      <MemberSignature Language="VB.NET" Value="Public Property CIn As SwitchParameter" />
+      <MemberSignature Language="F#" Value="member this.CIn : System.Management.Automation.SwitchParameter with get, set" Usage="Microsoft.PowerShell.Commands.WhereObjectCommand.CIn" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(Mandatory=true, ParameterSetName="CaseSensitiveInSet")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.SwitchParameter</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Case sensitive binary operator -cin
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CLE">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.SwitchParameter CLE { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Management.Automation.SwitchParameter CLE" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.WhereObjectCommand.CLE" />
+      <MemberSignature Language="VB.NET" Value="Public Property CLE As SwitchParameter" />
+      <MemberSignature Language="F#" Value="member this.CLE : System.Management.Automation.SwitchParameter with get, set" Usage="Microsoft.PowerShell.Commands.WhereObjectCommand.CLE" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(Mandatory=true, ParameterSetName="CaseSensitiveLessOrEqualSet")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.SwitchParameter</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Case sensitive binary operator -cle
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CLike">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.SwitchParameter CLike { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Management.Automation.SwitchParameter CLike" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.WhereObjectCommand.CLike" />
+      <MemberSignature Language="VB.NET" Value="Public Property CLike As SwitchParameter" />
+      <MemberSignature Language="F#" Value="member this.CLike : System.Management.Automation.SwitchParameter with get, set" Usage="Microsoft.PowerShell.Commands.WhereObjectCommand.CLike" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(Mandatory=true, ParameterSetName="CaseSensitiveLikeSet")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.SwitchParameter</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Case sensitive binary operator -clike
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CLT">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.SwitchParameter CLT { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Management.Automation.SwitchParameter CLT" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.WhereObjectCommand.CLT" />
+      <MemberSignature Language="VB.NET" Value="Public Property CLT As SwitchParameter" />
+      <MemberSignature Language="F#" Value="member this.CLT : System.Management.Automation.SwitchParameter with get, set" Usage="Microsoft.PowerShell.Commands.WhereObjectCommand.CLT" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(Mandatory=true, ParameterSetName="CaseSensitiveLessThanSet")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.SwitchParameter</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Case sensitive binary operator -clt
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CMatch">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.SwitchParameter CMatch { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Management.Automation.SwitchParameter CMatch" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.WhereObjectCommand.CMatch" />
+      <MemberSignature Language="VB.NET" Value="Public Property CMatch As SwitchParameter" />
+      <MemberSignature Language="F#" Value="member this.CMatch : System.Management.Automation.SwitchParameter with get, set" Usage="Microsoft.PowerShell.Commands.WhereObjectCommand.CMatch" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(Mandatory=true, ParameterSetName="CaseSensitiveMatchSet")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.SwitchParameter</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Case sensitive binary operator -cmatch
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CNE">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.SwitchParameter CNE { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Management.Automation.SwitchParameter CNE" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.WhereObjectCommand.CNE" />
+      <MemberSignature Language="VB.NET" Value="Public Property CNE As SwitchParameter" />
+      <MemberSignature Language="F#" Value="member this.CNE : System.Management.Automation.SwitchParameter with get, set" Usage="Microsoft.PowerShell.Commands.WhereObjectCommand.CNE" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(Mandatory=true, ParameterSetName="CaseSensitiveNotEqualSet")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.SwitchParameter</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Case sensitive binary operator -cne
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CNotContains">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.SwitchParameter CNotContains { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Management.Automation.SwitchParameter CNotContains" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.WhereObjectCommand.CNotContains" />
+      <MemberSignature Language="VB.NET" Value="Public Property CNotContains As SwitchParameter" />
+      <MemberSignature Language="F#" Value="member this.CNotContains : System.Management.Automation.SwitchParameter with get, set" Usage="Microsoft.PowerShell.Commands.WhereObjectCommand.CNotContains" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(Mandatory=true, ParameterSetName="CaseSensitiveNotContainsSet")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.SwitchParameter</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Case sensitive binary operator -cnotcontains
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CNotIn">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.SwitchParameter CNotIn { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Management.Automation.SwitchParameter CNotIn" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.WhereObjectCommand.CNotIn" />
+      <MemberSignature Language="VB.NET" Value="Public Property CNotIn As SwitchParameter" />
+      <MemberSignature Language="F#" Value="member this.CNotIn : System.Management.Automation.SwitchParameter with get, set" Usage="Microsoft.PowerShell.Commands.WhereObjectCommand.CNotIn" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(Mandatory=true, ParameterSetName="CaseSensitiveNotInSet")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.SwitchParameter</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Case sensitive binary operator -cnotin
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CNotLike">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.SwitchParameter CNotLike { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Management.Automation.SwitchParameter CNotLike" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.WhereObjectCommand.CNotLike" />
+      <MemberSignature Language="VB.NET" Value="Public Property CNotLike As SwitchParameter" />
+      <MemberSignature Language="F#" Value="member this.CNotLike : System.Management.Automation.SwitchParameter with get, set" Usage="Microsoft.PowerShell.Commands.WhereObjectCommand.CNotLike" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(Mandatory=true, ParameterSetName="CaseSensitiveNotLikeSet")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.SwitchParameter</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Case sensitive binary operator -cnotlike
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CNotMatch">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.SwitchParameter CNotMatch { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Management.Automation.SwitchParameter CNotMatch" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.WhereObjectCommand.CNotMatch" />
+      <MemberSignature Language="VB.NET" Value="Public Property CNotMatch As SwitchParameter" />
+      <MemberSignature Language="F#" Value="member this.CNotMatch : System.Management.Automation.SwitchParameter with get, set" Usage="Microsoft.PowerShell.Commands.WhereObjectCommand.CNotMatch" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(Mandatory=true, ParameterSetName="CaseSensitiveNotMatchSet")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.SwitchParameter</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Case sensitive binary operator -cnotmatch
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Contains">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.SwitchParameter Contains { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Management.Automation.SwitchParameter Contains" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.WhereObjectCommand.Contains" />
+      <MemberSignature Language="VB.NET" Value="Public Property Contains As SwitchParameter" />
+      <MemberSignature Language="F#" Value="member this.Contains : System.Management.Automation.SwitchParameter with get, set" Usage="Microsoft.PowerShell.Commands.WhereObjectCommand.Contains" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Alias(Mono.Cecil.CustomAttributeArgument[])</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(Mandatory=true, ParameterSetName="ContainsSet")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.SwitchParameter</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Binary operator -Contains
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EQ">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.SwitchParameter EQ { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Management.Automation.SwitchParameter EQ" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.WhereObjectCommand.EQ" />
+      <MemberSignature Language="VB.NET" Value="Public Property EQ As SwitchParameter" />
+      <MemberSignature Language="F#" Value="member this.EQ : System.Management.Automation.SwitchParameter with get, set" Usage="Microsoft.PowerShell.Commands.WhereObjectCommand.EQ" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Alias(Mono.Cecil.CustomAttributeArgument[])</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="EqualSet")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.SwitchParameter</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Binary operator -Equal
+            It's the default parameter set, so -EQ is not mandatory.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FilterScript">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.ScriptBlock FilterScript { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Management.Automation.ScriptBlock FilterScript" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.WhereObjectCommand.FilterScript" />
+      <MemberSignature Language="VB.NET" Value="Public Property FilterScript As ScriptBlock" />
+      <MemberSignature Language="F#" Value="member this.FilterScript : System.Management.Automation.ScriptBlock with get, set" Usage="Microsoft.PowerShell.Commands.WhereObjectCommand.FilterScript" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(Mandatory=true, ParameterSetName="ScriptBlockSet", Position=0)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.ScriptBlock</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The script block to apply
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GE">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.SwitchParameter GE { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Management.Automation.SwitchParameter GE" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.WhereObjectCommand.GE" />
+      <MemberSignature Language="VB.NET" Value="Public Property GE As SwitchParameter" />
+      <MemberSignature Language="F#" Value="member this.GE : System.Management.Automation.SwitchParameter with get, set" Usage="Microsoft.PowerShell.Commands.WhereObjectCommand.GE" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Alias(Mono.Cecil.CustomAttributeArgument[])</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(Mandatory=true, ParameterSetName="GreaterOrEqualSet")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.SwitchParameter</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Binary operator -GreaterOrEqual
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GT">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.SwitchParameter GT { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Management.Automation.SwitchParameter GT" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.WhereObjectCommand.GT" />
+      <MemberSignature Language="VB.NET" Value="Public Property GT As SwitchParameter" />
+      <MemberSignature Language="F#" Value="member this.GT : System.Management.Automation.SwitchParameter with get, set" Usage="Microsoft.PowerShell.Commands.WhereObjectCommand.GT" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Alias(Mono.Cecil.CustomAttributeArgument[])</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(Mandatory=true, ParameterSetName="GreaterThanSet")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.SwitchParameter</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Binary operator -GreaterThan
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="In">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.SwitchParameter In { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Management.Automation.SwitchParameter In" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.WhereObjectCommand.In" />
+      <MemberSignature Language="VB.NET" Value="Public Property In As SwitchParameter" />
+      <MemberSignature Language="F#" Value="member this.In : System.Management.Automation.SwitchParameter with get, set" Usage="Microsoft.PowerShell.Commands.WhereObjectCommand.In" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Alias(Mono.Cecil.CustomAttributeArgument[])</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(Mandatory=true, ParameterSetName="InSet")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.SwitchParameter</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Binary operator -In
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InputObject">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.PSObject InputObject { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Management.Automation.PSObject InputObject" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.WhereObjectCommand.InputObject" />
+      <MemberSignature Language="VB.NET" Value="Public Property InputObject As PSObject" />
+      <MemberSignature Language="F#" Value="member this.InputObject : System.Management.Automation.PSObject with get, set" Usage="Microsoft.PowerShell.Commands.WhereObjectCommand.InputObject" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ValueFromPipeline=true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.PSObject</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            This parameter specifies the current pipeline object 
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Is">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.SwitchParameter Is { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Management.Automation.SwitchParameter Is" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.WhereObjectCommand.Is" />
+      <MemberSignature Language="VB.NET" Value="Public Property Is As SwitchParameter" />
+      <MemberSignature Language="F#" Value="member this.Is : System.Management.Automation.SwitchParameter with get, set" Usage="Microsoft.PowerShell.Commands.WhereObjectCommand.Is" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(Mandatory=true, ParameterSetName="IsSet")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.SwitchParameter</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Binary operator -Is
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsNot">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.SwitchParameter IsNot { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Management.Automation.SwitchParameter IsNot" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.WhereObjectCommand.IsNot" />
+      <MemberSignature Language="VB.NET" Value="Public Property IsNot As SwitchParameter" />
+      <MemberSignature Language="F#" Value="member this.IsNot : System.Management.Automation.SwitchParameter with get, set" Usage="Microsoft.PowerShell.Commands.WhereObjectCommand.IsNot" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(Mandatory=true, ParameterSetName="IsNotSet")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.SwitchParameter</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Binary operator -IsNot
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LE">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.SwitchParameter LE { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Management.Automation.SwitchParameter LE" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.WhereObjectCommand.LE" />
+      <MemberSignature Language="VB.NET" Value="Public Property LE As SwitchParameter" />
+      <MemberSignature Language="F#" Value="member this.LE : System.Management.Automation.SwitchParameter with get, set" Usage="Microsoft.PowerShell.Commands.WhereObjectCommand.LE" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Alias(Mono.Cecil.CustomAttributeArgument[])</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(Mandatory=true, ParameterSetName="LessOrEqualSet")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.SwitchParameter</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Binary operator -LessOrEqual
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Like">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.SwitchParameter Like { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Management.Automation.SwitchParameter Like" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.WhereObjectCommand.Like" />
+      <MemberSignature Language="VB.NET" Value="Public Property Like As SwitchParameter" />
+      <MemberSignature Language="F#" Value="member this.Like : System.Management.Automation.SwitchParameter with get, set" Usage="Microsoft.PowerShell.Commands.WhereObjectCommand.Like" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Alias(Mono.Cecil.CustomAttributeArgument[])</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(Mandatory=true, ParameterSetName="LikeSet")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.SwitchParameter</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Binary operator -Like
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LT">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.SwitchParameter LT { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Management.Automation.SwitchParameter LT" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.WhereObjectCommand.LT" />
+      <MemberSignature Language="VB.NET" Value="Public Property LT As SwitchParameter" />
+      <MemberSignature Language="F#" Value="member this.LT : System.Management.Automation.SwitchParameter with get, set" Usage="Microsoft.PowerShell.Commands.WhereObjectCommand.LT" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Alias(Mono.Cecil.CustomAttributeArgument[])</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(Mandatory=true, ParameterSetName="LessThanSet")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.SwitchParameter</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Binary operator -LessThan
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Match">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.SwitchParameter Match { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Management.Automation.SwitchParameter Match" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.WhereObjectCommand.Match" />
+      <MemberSignature Language="VB.NET" Value="Public Property Match As SwitchParameter" />
+      <MemberSignature Language="F#" Value="member this.Match : System.Management.Automation.SwitchParameter with get, set" Usage="Microsoft.PowerShell.Commands.WhereObjectCommand.Match" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Alias(Mono.Cecil.CustomAttributeArgument[])</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(Mandatory=true, ParameterSetName="MatchSet")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.SwitchParameter</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Binary operator -Match
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NE">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.SwitchParameter NE { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Management.Automation.SwitchParameter NE" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.WhereObjectCommand.NE" />
+      <MemberSignature Language="VB.NET" Value="Public Property NE As SwitchParameter" />
+      <MemberSignature Language="F#" Value="member this.NE : System.Management.Automation.SwitchParameter with get, set" Usage="Microsoft.PowerShell.Commands.WhereObjectCommand.NE" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Alias(Mono.Cecil.CustomAttributeArgument[])</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(Mandatory=true, ParameterSetName="NotEqualSet")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.SwitchParameter</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Binary operator -NotEqual
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NotContains">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.SwitchParameter NotContains { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Management.Automation.SwitchParameter NotContains" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.WhereObjectCommand.NotContains" />
+      <MemberSignature Language="VB.NET" Value="Public Property NotContains As SwitchParameter" />
+      <MemberSignature Language="F#" Value="member this.NotContains : System.Management.Automation.SwitchParameter with get, set" Usage="Microsoft.PowerShell.Commands.WhereObjectCommand.NotContains" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Alias(Mono.Cecil.CustomAttributeArgument[])</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(Mandatory=true, ParameterSetName="NotContainsSet")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.SwitchParameter</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Binary operator -NotContains
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NotIn">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.SwitchParameter NotIn { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Management.Automation.SwitchParameter NotIn" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.WhereObjectCommand.NotIn" />
+      <MemberSignature Language="VB.NET" Value="Public Property NotIn As SwitchParameter" />
+      <MemberSignature Language="F#" Value="member this.NotIn : System.Management.Automation.SwitchParameter with get, set" Usage="Microsoft.PowerShell.Commands.WhereObjectCommand.NotIn" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Alias(Mono.Cecil.CustomAttributeArgument[])</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(Mandatory=true, ParameterSetName="NotInSet")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.SwitchParameter</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Binary operator -NotIn
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NotLike">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.SwitchParameter NotLike { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Management.Automation.SwitchParameter NotLike" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.WhereObjectCommand.NotLike" />
+      <MemberSignature Language="VB.NET" Value="Public Property NotLike As SwitchParameter" />
+      <MemberSignature Language="F#" Value="member this.NotLike : System.Management.Automation.SwitchParameter with get, set" Usage="Microsoft.PowerShell.Commands.WhereObjectCommand.NotLike" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Alias(Mono.Cecil.CustomAttributeArgument[])</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(Mandatory=true, ParameterSetName="NotLikeSet")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.SwitchParameter</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Binary operator -NotLike
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NotMatch">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.SwitchParameter NotMatch { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Management.Automation.SwitchParameter NotMatch" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.WhereObjectCommand.NotMatch" />
+      <MemberSignature Language="VB.NET" Value="Public Property NotMatch As SwitchParameter" />
+      <MemberSignature Language="F#" Value="member this.NotMatch : System.Management.Automation.SwitchParameter with get, set" Usage="Microsoft.PowerShell.Commands.WhereObjectCommand.NotMatch" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Alias(Mono.Cecil.CustomAttributeArgument[])</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(Mandatory=true, ParameterSetName="NotMatchSet")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.SwitchParameter</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Binary operator -NotMatch
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ProcessRecord">
+      <MemberSignature Language="C#" Value="protected override void ProcessRecord ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void ProcessRecord() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Commands.WhereObjectCommand.ProcessRecord" />
+      <MemberSignature Language="VB.NET" Value="Protected Overrides Sub ProcessRecord ()" />
+      <MemberSignature Language="F#" Value="override this.ProcessRecord : unit -&gt; unit" Usage="whereObjectCommand.ProcessRecord " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Execute the script block passing in the current pipeline object as
+            it's only parameter.
+            </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.Management.Automation.ParseException">could not parse script</exception>
+        <exception cref="T:System.Management.Automation.RuntimeException">see Pipeline.Invoke</exception>
+        <exception cref="T:System.Management.Automation.ParameterBindingException">see Pipeline.Invoke</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Property">
+      <MemberSignature Language="C#" Value="public string Property { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Property" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.WhereObjectCommand.Property" />
+      <MemberSignature Language="VB.NET" Value="Public Property Property As String" />
+      <MemberSignature Language="F#" Value="member this.Property : string with get, set" Usage="Microsoft.PowerShell.Commands.WhereObjectCommand.Property" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(Mandatory=true, ParameterSetName="EqualSet", Position=0)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(Mandatory=true, ParameterSetName="CaseSensitiveEqualSet", Position=0)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(Mandatory=true, ParameterSetName="NotEqualSet", Position=0)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(Mandatory=true, ParameterSetName="CaseSensitiveNotEqualSet", Position=0)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(Mandatory=true, ParameterSetName="GreaterThanSet", Position=0)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(Mandatory=true, ParameterSetName="CaseSensitiveGreaterThanSet", Position=0)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(Mandatory=true, ParameterSetName="LessThanSet", Position=0)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(Mandatory=true, ParameterSetName="CaseSensitiveLessThanSet", Position=0)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(Mandatory=true, ParameterSetName="GreaterOrEqualSet", Position=0)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(Mandatory=true, ParameterSetName="CaseSensitiveGreaterOrEqualSet", Position=0)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(Mandatory=true, ParameterSetName="LessOrEqualSet", Position=0)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(Mandatory=true, ParameterSetName="CaseSensitiveLessOrEqualSet", Position=0)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(Mandatory=true, ParameterSetName="LikeSet", Position=0)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(Mandatory=true, ParameterSetName="CaseSensitiveLikeSet", Position=0)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(Mandatory=true, ParameterSetName="NotLikeSet", Position=0)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(Mandatory=true, ParameterSetName="CaseSensitiveNotLikeSet", Position=0)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(Mandatory=true, ParameterSetName="MatchSet", Position=0)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(Mandatory=true, ParameterSetName="CaseSensitiveMatchSet", Position=0)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(Mandatory=true, ParameterSetName="NotMatchSet", Position=0)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(Mandatory=true, ParameterSetName="CaseSensitiveNotMatchSet", Position=0)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(Mandatory=true, ParameterSetName="ContainsSet", Position=0)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(Mandatory=true, ParameterSetName="CaseSensitiveContainsSet", Position=0)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(Mandatory=true, ParameterSetName="NotContainsSet", Position=0)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(Mandatory=true, ParameterSetName="CaseSensitiveNotContainsSet", Position=0)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(Mandatory=true, ParameterSetName="InSet", Position=0)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(Mandatory=true, ParameterSetName="CaseSensitiveInSet", Position=0)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(Mandatory=true, ParameterSetName="NotInSet", Position=0)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(Mandatory=true, ParameterSetName="CaseSensitiveNotInSet", Position=0)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(Mandatory=true, ParameterSetName="IsSet", Position=0)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(Mandatory=true, ParameterSetName="IsNotSet", Position=0)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.ValidateNotNullOrEmpty</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The property to retrieve value
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Value">
+      <MemberSignature Language="C#" Value="public object Value { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object Value" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.WhereObjectCommand.Value" />
+      <MemberSignature Language="VB.NET" Value="Public Property Value As Object" />
+      <MemberSignature Language="F#" Value="member this.Value : obj with get, set" Usage="Microsoft.PowerShell.Commands.WhereObjectCommand.Value" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="EqualSet", Position=1)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="CaseSensitiveEqualSet", Position=1)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="NotEqualSet", Position=1)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="CaseSensitiveNotEqualSet", Position=1)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="GreaterThanSet", Position=1)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="CaseSensitiveGreaterThanSet", Position=1)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="LessThanSet", Position=1)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="CaseSensitiveLessThanSet", Position=1)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="GreaterOrEqualSet", Position=1)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="CaseSensitiveGreaterOrEqualSet", Position=1)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="LessOrEqualSet", Position=1)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="CaseSensitiveLessOrEqualSet", Position=1)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="LikeSet", Position=1)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="CaseSensitiveLikeSet", Position=1)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="NotLikeSet", Position=1)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="CaseSensitiveNotLikeSet", Position=1)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="MatchSet", Position=1)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="CaseSensitiveMatchSet", Position=1)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="NotMatchSet", Position=1)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="CaseSensitiveNotMatchSet", Position=1)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="ContainsSet", Position=1)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="CaseSensitiveContainsSet", Position=1)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="NotContainsSet", Position=1)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="CaseSensitiveNotContainsSet", Position=1)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="InSet", Position=1)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="CaseSensitiveInSet", Position=1)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="NotInSet", Position=1)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="CaseSensitiveNotInSet", Position=1)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="IsSet", Position=1)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="IsNotSet", Position=1)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The value to compare against
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

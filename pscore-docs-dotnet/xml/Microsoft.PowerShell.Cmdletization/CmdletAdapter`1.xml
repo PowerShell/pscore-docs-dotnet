@@ -1,0 +1,397 @@
+﻿<Type Name="CmdletAdapter&lt;TObjectInstance&gt;" FullName="Microsoft.PowerShell.Cmdletization.CmdletAdapter&lt;TObjectInstance&gt;">
+  <TypeSignature Language="C#" Value="public abstract class CmdletAdapter&lt;TObjectInstance&gt; where TObjectInstance : class" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit CmdletAdapter`1&lt;class TObjectInstance&gt; extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.PowerShell.Cmdletization.CmdletAdapter`1" />
+  <TypeSignature Language="VB.NET" Value="Public MustInherit Class CmdletAdapter(Of TObjectInstance)" />
+  <TypeSignature Language="F#" Value="type CmdletAdapter&lt;'ObjectInstance (requires 'ObjectInstance : null)&gt; = class" />
+  <AssemblyInfo>
+    <AssemblyName>System.Management.Automation</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <TypeParameters>
+    <TypeParameter Name="TObjectInstance">
+      <Constraints>
+        <ParameterAttribute>ReferenceTypeConstraint</ParameterAttribute>
+      </Constraints>
+    </TypeParameter>
+  </TypeParameters>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <typeparam name="TObjectInstance">Type that represents instances of objects from the wrapped object model</typeparam>
+    <summary>
+            ObjectModelWrapper integrates OM-specific operations into generic cmdletization framework.
+            For example - CimCmdletAdapter knows how to invoke a static method "Foo" in the CIM OM.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected CmdletAdapter ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Cmdletization.CmdletAdapter`1.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Protected Sub New ()" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginProcessing">
+      <MemberSignature Language="C#" Value="public virtual void BeginProcessing ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void BeginProcessing() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Cmdletization.CmdletAdapter`1.BeginProcessing" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Sub BeginProcessing ()" />
+      <MemberSignature Language="F#" Value="abstract member BeginProcessing : unit -&gt; unit&#xA;override this.BeginProcessing : unit -&gt; unit" Usage="cmdletAdapter.BeginProcessing " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            When overridden in the derived class, performs initialization of cmdlet execution.
+            Default implementation in the base class just returns.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ClassName">
+      <MemberSignature Language="C#" Value="public string ClassName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ClassName" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Cmdletization.CmdletAdapter`1.ClassName" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ClassName As String" />
+      <MemberSignature Language="F#" Value="member this.ClassName : string" Usage="Microsoft.PowerShell.Cmdletization.CmdletAdapter&lt;'ObjectInstance (requires 'ObjectInstance : null)&gt;.ClassName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Name of the class (from the object model handled by this ObjectModelWrapper) that is wrapped by the currently executing cmdlet
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ClassVersion">
+      <MemberSignature Language="C#" Value="public string ClassVersion { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ClassVersion" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Cmdletization.CmdletAdapter`1.ClassVersion" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ClassVersion As String" />
+      <MemberSignature Language="F#" Value="member this.ClassVersion : string" Usage="Microsoft.PowerShell.Cmdletization.CmdletAdapter&lt;'ObjectInstance (requires 'ObjectInstance : null)&gt;.ClassVersion" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Name of the class (from the object model handled by this ObjectModelWrapper) that is wrapped by the currently executing cmdlet.
+            This value can be <c>null</c> (i.e. when ClassVersion attribute is omitted in the ps1xml)
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Cmdlet">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.PSCmdlet Cmdlet { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Management.Automation.PSCmdlet Cmdlet" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Cmdletization.CmdletAdapter`1.Cmdlet" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Cmdlet As PSCmdlet" />
+      <MemberSignature Language="F#" Value="member this.Cmdlet : System.Management.Automation.PSCmdlet" Usage="Microsoft.PowerShell.Cmdletization.CmdletAdapter&lt;'ObjectInstance (requires 'ObjectInstance : null)&gt;.Cmdlet" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.PSCmdlet</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Cmdlet that this ObjectModelWrapper is associated with.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EndProcessing">
+      <MemberSignature Language="C#" Value="public virtual void EndProcessing ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void EndProcessing() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Cmdletization.CmdletAdapter`1.EndProcessing" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Sub EndProcessing ()" />
+      <MemberSignature Language="F#" Value="abstract member EndProcessing : unit -&gt; unit&#xA;override this.EndProcessing : unit -&gt; unit" Usage="cmdletAdapter.EndProcessing " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            When overridden in the derived class, performs cleanup after cmdlet execution.
+            Default implementation in the base class just returns.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetQueryBuilder">
+      <MemberSignature Language="C#" Value="public virtual Microsoft.PowerShell.Cmdletization.QueryBuilder GetQueryBuilder ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Microsoft.PowerShell.Cmdletization.QueryBuilder GetQueryBuilder() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Cmdletization.CmdletAdapter`1.GetQueryBuilder" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function GetQueryBuilder () As QueryBuilder" />
+      <MemberSignature Language="F#" Value="abstract member GetQueryBuilder : unit -&gt; Microsoft.PowerShell.Cmdletization.QueryBuilder&#xA;override this.GetQueryBuilder : unit -&gt; Microsoft.PowerShell.Cmdletization.QueryBuilder" Usage="cmdletAdapter.GetQueryBuilder " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.PowerShell.Cmdletization.QueryBuilder</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            When overridden in the derived class, creates a query builder for a given object model
+            </summary>
+        <returns>Query builder for a given object model</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Initialize">
+      <MemberSignature Language="C#" Value="public void Initialize (System.Management.Automation.PSCmdlet cmdlet, string className, string classVersion, Version moduleVersion, System.Collections.Generic.IDictionary&lt;string,string&gt; privateData);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Initialize(class System.Management.Automation.PSCmdlet cmdlet, string className, string classVersion, class System.Version moduleVersion, class System.Collections.Generic.IDictionary`2&lt;string, string&gt; privateData) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Cmdletization.CmdletAdapter`1.Initialize(System.Management.Automation.PSCmdlet,System.String,System.String,System.Version,System.Collections.Generic.IDictionary{System.String,System.String})" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Initialize (cmdlet As PSCmdlet, className As String, classVersion As String, moduleVersion As Version, privateData As IDictionary(Of String, String))" />
+      <MemberSignature Language="F#" Value="member this.Initialize : System.Management.Automation.PSCmdlet * string * string * Version * System.Collections.Generic.IDictionary&lt;string, string&gt; -&gt; unit" Usage="cmdletAdapter.Initialize (cmdlet, className, classVersion, moduleVersion, privateData)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="cmdlet" Type="System.Management.Automation.PSCmdlet" />
+        <Parameter Name="className" Type="System.String" />
+        <Parameter Name="classVersion" Type="System.String" />
+        <Parameter Name="moduleVersion" Type="System.Version" />
+        <Parameter Name="privateData" Type="System.Collections.Generic.IDictionary&lt;System.String,System.String&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="cmdlet"></param>
+        <param name="className"></param>
+        <param name="classVersion"></param>
+        <param name="moduleVersion"></param>
+        <param name="privateData"></param>
+        <summary>
+            Class constructor
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ModuleVersion">
+      <MemberSignature Language="C#" Value="public Version ModuleVersion { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Version ModuleVersion" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Cmdletization.CmdletAdapter`1.ModuleVersion" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ModuleVersion As Version" />
+      <MemberSignature Language="F#" Value="member this.ModuleVersion : Version" Usage="Microsoft.PowerShell.Cmdletization.CmdletAdapter&lt;'ObjectInstance (requires 'ObjectInstance : null)&gt;.ModuleVersion" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Version</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Module version
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PrivateData">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IDictionary&lt;string,string&gt; PrivateData { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IDictionary`2&lt;string, string&gt; PrivateData" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Cmdletization.CmdletAdapter`1.PrivateData" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property PrivateData As IDictionary(Of String, String)" />
+      <MemberSignature Language="F#" Value="member this.PrivateData : System.Collections.Generic.IDictionary&lt;string, string&gt;" Usage="Microsoft.PowerShell.Cmdletization.CmdletAdapter&lt;'ObjectInstance (requires 'ObjectInstance : null)&gt;.PrivateData" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IDictionary&lt;System.String,System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Private data from Cmdlet Definition XML (from &lt;ObjectModelWrapperPrivateData&gt; element)
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ProcessRecord">
+      <MemberSignature Language="C#" Value="public virtual void ProcessRecord (Microsoft.PowerShell.Cmdletization.MethodInvocationInfo methodInvocationInfo);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void ProcessRecord(class Microsoft.PowerShell.Cmdletization.MethodInvocationInfo methodInvocationInfo) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Cmdletization.CmdletAdapter`1.ProcessRecord(Microsoft.PowerShell.Cmdletization.MethodInvocationInfo)" />
+      <MemberSignature Language="F#" Value="abstract member ProcessRecord : Microsoft.PowerShell.Cmdletization.MethodInvocationInfo -&gt; unit&#xA;override this.ProcessRecord : Microsoft.PowerShell.Cmdletization.MethodInvocationInfo -&gt; unit" Usage="cmdletAdapter.ProcessRecord methodInvocationInfo" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="methodInvocationInfo" Type="Microsoft.PowerShell.Cmdletization.MethodInvocationInfo" />
+      </Parameters>
+      <Docs>
+        <param name="methodInvocationInfo">Method invocation details</param>
+        <summary>
+            Invokes a static method in the object model.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ProcessRecord">
+      <MemberSignature Language="C#" Value="public virtual void ProcessRecord (Microsoft.PowerShell.Cmdletization.QueryBuilder query);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void ProcessRecord(class Microsoft.PowerShell.Cmdletization.QueryBuilder query) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Cmdletization.CmdletAdapter`1.ProcessRecord(Microsoft.PowerShell.Cmdletization.QueryBuilder)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Sub ProcessRecord (query As QueryBuilder)" />
+      <MemberSignature Language="F#" Value="abstract member ProcessRecord : Microsoft.PowerShell.Cmdletization.QueryBuilder -&gt; unit&#xA;override this.ProcessRecord : Microsoft.PowerShell.Cmdletization.QueryBuilder -&gt; unit" Usage="cmdletAdapter.ProcessRecord query" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="query" Type="Microsoft.PowerShell.Cmdletization.QueryBuilder" />
+      </Parameters>
+      <Docs>
+        <param name="query">Query parameters</param>
+        <summary>
+            Queries for object instances in the object model.
+            </summary>
+        <returns>A lazy evaluated collection of object instances</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ProcessRecord">
+      <MemberSignature Language="C#" Value="public virtual void ProcessRecord (Microsoft.PowerShell.Cmdletization.QueryBuilder query, Microsoft.PowerShell.Cmdletization.MethodInvocationInfo methodInvocationInfo, bool passThru);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void ProcessRecord(class Microsoft.PowerShell.Cmdletization.QueryBuilder query, class Microsoft.PowerShell.Cmdletization.MethodInvocationInfo methodInvocationInfo, bool passThru) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Cmdletization.CmdletAdapter`1.ProcessRecord(Microsoft.PowerShell.Cmdletization.QueryBuilder,Microsoft.PowerShell.Cmdletization.MethodInvocationInfo,System.Boolean)" />
+      <MemberSignature Language="F#" Value="abstract member ProcessRecord : Microsoft.PowerShell.Cmdletization.QueryBuilder * Microsoft.PowerShell.Cmdletization.MethodInvocationInfo * bool -&gt; unit&#xA;override this.ProcessRecord : Microsoft.PowerShell.Cmdletization.QueryBuilder * Microsoft.PowerShell.Cmdletization.MethodInvocationInfo * bool -&gt; unit" Usage="cmdletAdapter.ProcessRecord (query, methodInvocationInfo, passThru)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="query" Type="Microsoft.PowerShell.Cmdletization.QueryBuilder" />
+        <Parameter Name="methodInvocationInfo" Type="Microsoft.PowerShell.Cmdletization.MethodInvocationInfo" />
+        <Parameter Name="passThru" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="query">Query parameters</param>
+        <param name="methodInvocationInfo">Method invocation details</param>
+        <param name="passThru">
+          <c>true</c> if successful method invocations should emit downstream the object instance being operated on</param>
+        <summary>
+            Combines <see cref="M:Microsoft.PowerShell.Cmdletization.CmdletAdapter`1.ProcessRecord(Microsoft.PowerShell.Cmdletization.QueryBuilder)" /> and <see cref="M:Microsoft.PowerShell.Cmdletization.CmdletAdapter`1.ProcessRecord(`0,Microsoft.PowerShell.Cmdletization.MethodInvocationInfo,System.Boolean)" />.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ProcessRecord">
+      <MemberSignature Language="C#" Value="public virtual void ProcessRecord (TObjectInstance objectInstance, Microsoft.PowerShell.Cmdletization.MethodInvocationInfo methodInvocationInfo, bool passThru);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void ProcessRecord(!TObjectInstance objectInstance, class Microsoft.PowerShell.Cmdletization.MethodInvocationInfo methodInvocationInfo, bool passThru) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Cmdletization.CmdletAdapter`1.ProcessRecord(`0,Microsoft.PowerShell.Cmdletization.MethodInvocationInfo,System.Boolean)" />
+      <MemberSignature Language="F#" Value="abstract member ProcessRecord : 'ObjectInstance * Microsoft.PowerShell.Cmdletization.MethodInvocationInfo * bool -&gt; unit&#xA;override this.ProcessRecord : 'ObjectInstance * Microsoft.PowerShell.Cmdletization.MethodInvocationInfo * bool -&gt; unit" Usage="cmdletAdapter.ProcessRecord (objectInstance, methodInvocationInfo, passThru)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="objectInstance" Type="TObjectInstance" />
+        <Parameter Name="methodInvocationInfo" Type="Microsoft.PowerShell.Cmdletization.MethodInvocationInfo" />
+        <Parameter Name="passThru" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="objectInstance">The object on which to invoke the method</param>
+        <param name="methodInvocationInfo">Method invocation details</param>
+        <param name="passThru">
+          <c>true</c> if successful method invocations should emit downstream the <paramref name="objectInstance" /> being operated on</param>
+        <summary>
+            Invokes an instance method in the object model.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StopProcessing">
+      <MemberSignature Language="C#" Value="public virtual void StopProcessing ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void StopProcessing() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Cmdletization.CmdletAdapter`1.StopProcessing" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Sub StopProcessing ()" />
+      <MemberSignature Language="F#" Value="abstract member StopProcessing : unit -&gt; unit&#xA;override this.StopProcessing : unit -&gt; unit" Usage="cmdletAdapter.StopProcessing " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            When overridden in the derived class, interrupts currently
+            running code within the <see cref="T:Microsoft.PowerShell.Cmdletization.CmdletAdapter`1" />.
+            Default implementation in the base class just returns.
+            </summary>
+        <remarks>
+            The PowerShell engine will call this method on a separate thread
+            from the pipeline thread where BeginProcessing, EndProcessing
+            and other methods are normally being executed.
+            </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

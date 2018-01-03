@@ -1,0 +1,360 @@
+﻿<Type Name="MeasureObjectCommand" FullName="Microsoft.PowerShell.Commands.MeasureObjectCommand">
+  <TypeSignature Language="C#" Value="public sealed class MeasureObjectCommand : System.Management.Automation.PSCmdlet" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit MeasureObjectCommand extends System.Management.Automation.PSCmdlet" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.PowerShell.Commands.MeasureObjectCommand" />
+  <TypeSignature Language="VB.NET" Value="Public NotInheritable Class MeasureObjectCommand&#xA;Inherits PSCmdlet" />
+  <TypeSignature Language="F#" Value="type MeasureObjectCommand = class&#xA;    inherit PSCmdlet" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.PowerShell.Commands.Utility</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Management.Automation.PSCmdlet</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Management.Automation.Cmdlet("Measure", "Object", DefaultParameterSetName="GenericMeasure", HelpUri="https://go.microsoft.com/fwlink/?LinkID=113349", RemotingCapability=System.Management.Automation.RemotingCapability.None)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Management.Automation.OutputType(Mono.Cecil.CustomAttributeArgument[])</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>
+            measure object cmdlet
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public MeasureObjectCommand ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Commands.MeasureObjectCommand.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New ()" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Commands.Utility</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>
+            default constructor
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Average">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.SwitchParameter Average { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Management.Automation.SwitchParameter Average" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.MeasureObjectCommand.Average" />
+      <MemberSignature Language="VB.NET" Value="Public Property Average As SwitchParameter" />
+      <MemberSignature Language="F#" Value="member this.Average : System.Management.Automation.SwitchParameter with get, set" Usage="Microsoft.PowerShell.Commands.MeasureObjectCommand.Average" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Commands.Utility</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="GenericMeasure")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.SwitchParameter</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Set to true is Average is to be returned
+            </summary>
+        <value />
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Character">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.SwitchParameter Character { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Management.Automation.SwitchParameter Character" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.MeasureObjectCommand.Character" />
+      <MemberSignature Language="VB.NET" Value="Public Property Character As SwitchParameter" />
+      <MemberSignature Language="F#" Value="member this.Character : System.Management.Automation.SwitchParameter with get, set" Usage="Microsoft.PowerShell.Commands.MeasureObjectCommand.Character" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Commands.Utility</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="TextMeasure")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.SwitchParameter</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary />
+        <value />
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EndProcessing">
+      <MemberSignature Language="C#" Value="protected override void EndProcessing ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void EndProcessing() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Commands.MeasureObjectCommand.EndProcessing" />
+      <MemberSignature Language="VB.NET" Value="Protected Overrides Sub EndProcessing ()" />
+      <MemberSignature Language="F#" Value="override this.EndProcessing : unit -&gt; unit" Usage="measureObjectCommand.EndProcessing " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Commands.Utility</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Output collected statistics.
+            Side effects: Updates statistics. Writes objects to stream.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IgnoreWhiteSpace">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.SwitchParameter IgnoreWhiteSpace { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Management.Automation.SwitchParameter IgnoreWhiteSpace" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.MeasureObjectCommand.IgnoreWhiteSpace" />
+      <MemberSignature Language="VB.NET" Value="Public Property IgnoreWhiteSpace As SwitchParameter" />
+      <MemberSignature Language="F#" Value="member this.IgnoreWhiteSpace : System.Management.Automation.SwitchParameter with get, set" Usage="Microsoft.PowerShell.Commands.MeasureObjectCommand.IgnoreWhiteSpace" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Commands.Utility</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="TextMeasure")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.SwitchParameter</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary />
+        <value />
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InputObject">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.PSObject InputObject { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Management.Automation.PSObject InputObject" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.MeasureObjectCommand.InputObject" />
+      <MemberSignature Language="VB.NET" Value="Public Property InputObject As PSObject" />
+      <MemberSignature Language="F#" Value="member this.InputObject : System.Management.Automation.PSObject with get, set" Usage="Microsoft.PowerShell.Commands.MeasureObjectCommand.InputObject" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Commands.Utility</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ValueFromPipeline=true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.PSObject</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            incoming object
+            </summary>
+        <value />
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Line">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.SwitchParameter Line { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Management.Automation.SwitchParameter Line" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.MeasureObjectCommand.Line" />
+      <MemberSignature Language="VB.NET" Value="Public Property Line As SwitchParameter" />
+      <MemberSignature Language="F#" Value="member this.Line : System.Management.Automation.SwitchParameter with get, set" Usage="Microsoft.PowerShell.Commands.MeasureObjectCommand.Line" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Commands.Utility</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="TextMeasure")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.SwitchParameter</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary />
+        <value />
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Maximum">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.SwitchParameter Maximum { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Management.Automation.SwitchParameter Maximum" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.MeasureObjectCommand.Maximum" />
+      <MemberSignature Language="VB.NET" Value="Public Property Maximum As SwitchParameter" />
+      <MemberSignature Language="F#" Value="member this.Maximum : System.Management.Automation.SwitchParameter with get, set" Usage="Microsoft.PowerShell.Commands.MeasureObjectCommand.Maximum" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Commands.Utility</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="GenericMeasure")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.SwitchParameter</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Set to true is Max is to be returned
+            </summary>
+        <value />
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Minimum">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.SwitchParameter Minimum { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Management.Automation.SwitchParameter Minimum" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.MeasureObjectCommand.Minimum" />
+      <MemberSignature Language="VB.NET" Value="Public Property Minimum As SwitchParameter" />
+      <MemberSignature Language="F#" Value="member this.Minimum : System.Management.Automation.SwitchParameter with get, set" Usage="Microsoft.PowerShell.Commands.MeasureObjectCommand.Minimum" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Commands.Utility</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="GenericMeasure")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.SwitchParameter</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Set to true is Min is to be returned
+            </summary>
+        <value />
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ProcessRecord">
+      <MemberSignature Language="C#" Value="protected override void ProcessRecord ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void ProcessRecord() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Commands.MeasureObjectCommand.ProcessRecord" />
+      <MemberSignature Language="VB.NET" Value="Protected Overrides Sub ProcessRecord ()" />
+      <MemberSignature Language="F#" Value="override this.ProcessRecord : unit -&gt; unit" Usage="measureObjectCommand.ProcessRecord " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Commands.Utility</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Collect data about each record that comes in.
+            Side effects: Updates totalRecordCount.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Property">
+      <MemberSignature Language="C#" Value="public string[] Property { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string[] Property" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.MeasureObjectCommand.Property" />
+      <MemberSignature Language="VB.NET" Value="Public Property Property As String()" />
+      <MemberSignature Language="F#" Value="member this.Property : string[] with get, set" Usage="Microsoft.PowerShell.Commands.MeasureObjectCommand.Property" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Commands.Utility</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(Position=0)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.ValidateNotNullOrEmpty</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Properties to be examined
+            </summary>
+        <value />
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Sum">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.SwitchParameter Sum { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Management.Automation.SwitchParameter Sum" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.MeasureObjectCommand.Sum" />
+      <MemberSignature Language="VB.NET" Value="Public Property Sum As SwitchParameter" />
+      <MemberSignature Language="F#" Value="member this.Sum : System.Management.Automation.SwitchParameter with get, set" Usage="Microsoft.PowerShell.Commands.MeasureObjectCommand.Sum" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Commands.Utility</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="GenericMeasure")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.SwitchParameter</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Set to true is Sum is to be returned
+            </summary>
+        <value />
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Word">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.SwitchParameter Word { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Management.Automation.SwitchParameter Word" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.MeasureObjectCommand.Word" />
+      <MemberSignature Language="VB.NET" Value="Public Property Word As SwitchParameter" />
+      <MemberSignature Language="F#" Value="member this.Word : System.Management.Automation.SwitchParameter with get, set" Usage="Microsoft.PowerShell.Commands.MeasureObjectCommand.Word" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Commands.Utility</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="TextMeasure")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.SwitchParameter</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary />
+        <value />
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

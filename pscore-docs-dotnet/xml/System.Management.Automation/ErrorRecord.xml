@@ -1,0 +1,383 @@
+﻿<Type Name="ErrorRecord" FullName="System.Management.Automation.ErrorRecord">
+  <TypeSignature Language="C#" Value="public class ErrorRecord : System.Runtime.Serialization.ISerializable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable beforefieldinit ErrorRecord extends System.Object implements class System.Runtime.Serialization.ISerializable" />
+  <TypeSignature Language="DocId" Value="T:System.Management.Automation.ErrorRecord" />
+  <TypeSignature Language="VB.NET" Value="Public Class ErrorRecord&#xA;Implements ISerializable" />
+  <TypeSignature Language="F#" Value="type ErrorRecord = class&#xA;    interface ISerializable" />
+  <AssemblyInfo>
+    <AssemblyName>System.Management.Automation</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Runtime.Serialization.ISerializable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>
+             Represents an error.
+             </summary>
+    <remarks>
+             An ErrorRecord describes an error.  It extends the usual information
+             in <see cref="T:System.Exception" /> with the additional information in
+             <see cref="P:System.Management.Automation.ErrorRecord.ErrorDetails" />,
+             <see cref="P:System.Management.Automation.ErrorRecord.TargetObject" />,
+             <see cref="P:System.Management.Automation.ErrorRecord.CategoryInfo" />,
+             <see cref="P:System.Management.Automation.ErrorRecord.FullyQualifiedErrorId" />,
+             <see cref="P:System.Management.Automation.ErrorRecord.ErrorDetails" />, and
+             <see cref="P:System.Management.Automation.ErrorRecord.InvocationInfo" />.
+             Non-terminating errors are stored as
+             <see cref="T:System.Management.Automation.ErrorRecord" />
+             instances in shell variable
+             $error.
+            
+             Some terminating errors implement
+             <see cref="T:System.Management.Automation.IContainsErrorRecord" />
+             which gives them an ErrorRecord property containing this additional
+             information.  In this case, ErrorRecord.Exception will be an instance of
+             <see cref="T:System.Management.Automation.ParentContainsErrorRecordException" />.
+             rather than the actual exception, to avoid the mutual references.
+             </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ErrorRecord (System.Management.Automation.ErrorRecord errorRecord, Exception replaceParentContainsErrorRecordException);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Management.Automation.ErrorRecord errorRecord, class System.Exception replaceParentContainsErrorRecordException) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.ErrorRecord.#ctor(System.Management.Automation.ErrorRecord,System.Exception)" />
+      <MemberSignature Language="F#" Value="new System.Management.Automation.ErrorRecord : System.Management.Automation.ErrorRecord * Exception -&gt; System.Management.Automation.ErrorRecord" Usage="new System.Management.Automation.ErrorRecord (errorRecord, replaceParentContainsErrorRecordException)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="errorRecord" Type="System.Management.Automation.ErrorRecord" />
+        <Parameter Name="replaceParentContainsErrorRecordException" Type="System.Exception" />
+      </Parameters>
+      <Docs>
+        <param name="errorRecord">wrapped ErrorRecord</param>
+        <param name="replaceParentContainsErrorRecordException">
+            If the wrapped exception contains a ParentContainsErrorRecordException, the new
+            ErrorRecord should have this exception as its Exception instead.
+            </param>
+        <summary>
+            Copy constructor, for use when a new wrapper exception wraps an
+            exception which already has an ErrorRecord
+            ErrorCategoryInfo and ErrorDetails are deep-copied, other fields are not.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected ErrorRecord (System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(class System.Runtime.Serialization.SerializationInfo info, valuetype System.Runtime.Serialization.StreamingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.ErrorRecord.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" />
+      <MemberSignature Language="VB.NET" Value="Protected Sub New (info As SerializationInfo, context As StreamingContext)" />
+      <MemberSignature Language="F#" Value="new System.Management.Automation.ErrorRecord : System.Runtime.Serialization.SerializationInfo * System.Runtime.Serialization.StreamingContext -&gt; System.Management.Automation.ErrorRecord" Usage="new System.Management.Automation.ErrorRecord (info, context)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="info" Type="System.Runtime.Serialization.SerializationInfo" />
+        <Parameter Name="context" Type="System.Runtime.Serialization.StreamingContext" />
+      </Parameters>
+      <Docs>
+        <param name="info"> serialization information </param>
+        <param name="context"> streaming context </param>
+        <summary>
+            Initializes a new instance of the ErrorRecord class
+            using data serialized via
+            <see cref="T:System.Runtime.Serialization.ISerializable" /></summary>
+        <returns> constructed object </returns>
+        <remarks>
+            ErrorRecord instances which are serialized using
+            <see cref="T:System.Runtime.Serialization.ISerializable" />
+            will only be partially reconstructed.
+            </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ErrorRecord (Exception exception, string errorId, System.Management.Automation.ErrorCategory errorCategory, object targetObject);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Exception exception, string errorId, valuetype System.Management.Automation.ErrorCategory errorCategory, object targetObject) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.ErrorRecord.#ctor(System.Exception,System.String,System.Management.Automation.ErrorCategory,System.Object)" />
+      <MemberSignature Language="F#" Value="new System.Management.Automation.ErrorRecord : Exception * string * System.Management.Automation.ErrorCategory * obj -&gt; System.Management.Automation.ErrorRecord" Usage="new System.Management.Automation.ErrorRecord (exception, errorId, errorCategory, targetObject)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="exception" Type="System.Exception" />
+        <Parameter Name="errorId" Type="System.String" />
+        <Parameter Name="errorCategory" Type="System.Management.Automation.ErrorCategory" />
+        <Parameter Name="targetObject" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="exception">
+            This is an exception which describes the error.
+            This argument may not be null, but it is not required
+            that the exception have ever been thrown.
+            </param>
+        <param name="errorId">
+            This string will be used to construct the FullyQualifiedErrorId,
+            which is a global identifier of the error condition.  Pass a
+            non-empty string which is specific to this error condition in
+            this context.
+            </param>
+        <param name="errorCategory">
+            This is the ErrorCategory which best describes the error.
+            </param>
+        <param name="targetObject">
+            This is the object against which the cmdlet or provider
+            was operating when the error occurred.  This is optional.
+            </param>
+        <summary>
+            Creates an instance of ErrorRecord.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CategoryInfo">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.ErrorCategoryInfo CategoryInfo { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Management.Automation.ErrorCategoryInfo CategoryInfo" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.ErrorRecord.CategoryInfo" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property CategoryInfo As ErrorCategoryInfo" />
+      <MemberSignature Language="F#" Value="member this.CategoryInfo : System.Management.Automation.ErrorCategoryInfo" Usage="System.Management.Automation.ErrorRecord.CategoryInfo" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.ErrorCategoryInfo</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Information regarding the ErrorCategory
+            associated with this error, and with the categorized error message
+            for that ErrorCategory.
+            </summary>
+        <value>never null</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ErrorDetails">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.ErrorDetails ErrorDetails { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Management.Automation.ErrorDetails ErrorDetails" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.ErrorRecord.ErrorDetails" />
+      <MemberSignature Language="VB.NET" Value="Public Property ErrorDetails As ErrorDetails" />
+      <MemberSignature Language="F#" Value="member this.ErrorDetails : System.Management.Automation.ErrorDetails with get, set" Usage="System.Management.Automation.ErrorRecord.ErrorDetails" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.ErrorDetails</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Additional information about the error.
+            </summary>
+        <value>may be null</value>
+        <remarks>
+            In particular, ErrorDetails.Message (if present and non-empty)
+            contains a replacement message which should be displayed instead of
+            Exception.Message.
+            </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Exception">
+      <MemberSignature Language="C#" Value="public Exception Exception { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Exception Exception" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.ErrorRecord.Exception" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Exception As Exception" />
+      <MemberSignature Language="F#" Value="member this.Exception : Exception" Usage="System.Management.Automation.ErrorRecord.Exception" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Exception</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            An Exception describing the error.
+            </summary>
+        <value>never null</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FullyQualifiedErrorId">
+      <MemberSignature Language="C#" Value="public string FullyQualifiedErrorId { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string FullyQualifiedErrorId" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.ErrorRecord.FullyQualifiedErrorId" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property FullyQualifiedErrorId As String" />
+      <MemberSignature Language="F#" Value="member this.FullyQualifiedErrorId : string" Usage="System.Management.Automation.ErrorRecord.FullyQualifiedErrorId" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            String which uniquely identifies this error condition
+            </summary>
+        <value>never null</value>
+        <remarks>
+            FullyQualifiedErrorid identifies this error condition
+            more specifically than either the ErrorCategory
+            or the Exception.  Use FullyQualifiedErrorId to filter specific
+            error conditions, or to associate special handling with specific
+            error conditions.
+            </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetObjectData">
+      <MemberSignature Language="C#" Value="public virtual void GetObjectData (System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void GetObjectData(class System.Runtime.Serialization.SerializationInfo info, valuetype System.Runtime.Serialization.StreamingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.ErrorRecord.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Sub GetObjectData (info As SerializationInfo, context As StreamingContext)" />
+      <MemberSignature Language="F#" Value="abstract member GetObjectData : System.Runtime.Serialization.SerializationInfo * System.Runtime.Serialization.StreamingContext -&gt; unit&#xA;override this.GetObjectData : System.Runtime.Serialization.SerializationInfo * System.Runtime.Serialization.StreamingContext -&gt; unit" Usage="errorRecord.GetObjectData (info, context)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="info" Type="System.Runtime.Serialization.SerializationInfo" />
+        <Parameter Name="context" Type="System.Runtime.Serialization.StreamingContext" />
+      </Parameters>
+      <Docs>
+        <param name="info"> serialization information </param>
+        <param name="context"> streaming context </param>
+        <summary>
+            Deserializer for <see cref="T:System.Runtime.Serialization.ISerializable" /></summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InvocationInfo">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.InvocationInfo InvocationInfo { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Management.Automation.InvocationInfo InvocationInfo" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.ErrorRecord.InvocationInfo" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property InvocationInfo As InvocationInfo" />
+      <MemberSignature Language="F#" Value="member this.InvocationInfo : System.Management.Automation.InvocationInfo" Usage="System.Management.Automation.ErrorRecord.InvocationInfo" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.InvocationInfo</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Identifies the cmdlet, script, or other command which caused
+            the error.
+            </summary>
+        <value>may be null</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PipelineIterationInfo">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.ReadOnlyCollection&lt;int&gt; PipelineIterationInfo { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ObjectModel.ReadOnlyCollection`1&lt;int32&gt; PipelineIterationInfo" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.ErrorRecord.PipelineIterationInfo" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property PipelineIterationInfo As ReadOnlyCollection(Of Integer)" />
+      <MemberSignature Language="F#" Value="member this.PipelineIterationInfo : System.Collections.ObjectModel.ReadOnlyCollection&lt;int&gt;" Usage="System.Management.Automation.ErrorRecord.PipelineIterationInfo" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.ReadOnlyCollection&lt;System.Int32&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The status of the pipeline when this record was created.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ScriptStackTrace">
+      <MemberSignature Language="C#" Value="public string ScriptStackTrace { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ScriptStackTrace" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.ErrorRecord.ScriptStackTrace" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ScriptStackTrace As String" />
+      <MemberSignature Language="F#" Value="member this.ScriptStackTrace : string" Usage="System.Management.Automation.ErrorRecord.ScriptStackTrace" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The script stack trace for the error.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TargetObject">
+      <MemberSignature Language="C#" Value="public object TargetObject { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object TargetObject" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.ErrorRecord.TargetObject" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property TargetObject As Object" />
+      <MemberSignature Language="F#" Value="member this.TargetObject : obj" Usage="System.Management.Automation.ErrorRecord.TargetObject" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The object against which the error occurred.
+            </summary>
+        <value>may be null</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.ErrorRecord.ToString" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Function ToString () As String" />
+      <MemberSignature Language="F#" Value="override this.ToString : unit -&gt; string" Usage="errorRecord.ToString " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            As <see cref="M:System.Object.ToString" /></summary>
+        <returns>developer-readable identifier</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

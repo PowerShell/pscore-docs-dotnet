@@ -1,0 +1,73 @@
+﻿<Type Name="SettingValueExceptionEventArgs" FullName="System.Management.Automation.SettingValueExceptionEventArgs">
+  <TypeSignature Language="C#" Value="public class SettingValueExceptionEventArgs : EventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit SettingValueExceptionEventArgs extends System.EventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Management.Automation.SettingValueExceptionEventArgs" />
+  <TypeSignature Language="VB.NET" Value="Public Class SettingValueExceptionEventArgs&#xA;Inherits EventArgs" />
+  <TypeSignature Language="F#" Value="type SettingValueExceptionEventArgs = class&#xA;    inherit EventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>System.Management.Automation</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.EventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Serves as the arguments for events triggered by exceptions in the SetValue method of <see cref="T:System.Management.Automation.PSObjectPropertyDescriptor" /></summary>
+    <remarks>
+            The sender of this event is an object of type <see cref="T:System.Management.Automation.PSObjectPropertyDescriptor" />.
+            It is permitted to subclass <see cref="T:System.Management.Automation.SettingValueExceptionEventArgs" />
+            but there is no established scenario for doing this, nor has it been tested.
+            </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Exception">
+      <MemberSignature Language="C#" Value="public Exception Exception { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Exception Exception" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.SettingValueExceptionEventArgs.Exception" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Exception As Exception" />
+      <MemberSignature Language="F#" Value="member this.Exception : Exception" Usage="System.Management.Automation.SettingValueExceptionEventArgs.Exception" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Exception</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the exception that triggered the associated event.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ShouldThrow">
+      <MemberSignature Language="C#" Value="public bool ShouldThrow { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ShouldThrow" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.SettingValueExceptionEventArgs.ShouldThrow" />
+      <MemberSignature Language="VB.NET" Value="Public Property ShouldThrow As Boolean" />
+      <MemberSignature Language="F#" Value="member this.ShouldThrow : bool with get, set" Usage="System.Management.Automation.SettingValueExceptionEventArgs.ShouldThrow" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets and sets a <see cref="T:System.Boolean" /> indicating if the SetValue method of <see cref="T:System.Management.Automation.PSObjectPropertyDescriptor" />
+            should throw the exception associated with this event.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+            The default value is true, indicating that the Exception associated with this event will be thrown.
+            </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,116 @@
+﻿<Type Name="Parser" FullName="System.Management.Automation.Language.Parser">
+  <TypeSignature Language="C#" Value="public sealed class Parser" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit Parser extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Management.Automation.Language.Parser" />
+  <TypeSignature Language="VB.NET" Value="Public NotInheritable Class Parser" />
+  <TypeSignature Language="F#" Value="type Parser = class" />
+  <AssemblyInfo>
+    <AssemblyName>System.Management.Automation</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            The parser that parses PowerShell script and returns a <see cref="T:System.Management.Automation.Language.ScriptBlockAst" />, tokens, and error messages
+            if the script cannot be parsed successfully.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="ParseFile">
+      <MemberSignature Language="C#" Value="public static System.Management.Automation.Language.ScriptBlockAst ParseFile (string fileName, out System.Management.Automation.Language.Token[] tokens, out System.Management.Automation.Language.ParseError[] errors);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Management.Automation.Language.ScriptBlockAst ParseFile(string fileName, [out] class System.Management.Automation.Language.Token[]&amp; tokens, [out] class System.Management.Automation.Language.ParseError[]&amp; errors) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Language.Parser.ParseFile(System.String,System.Management.Automation.Language.Token[]@,System.Management.Automation.Language.ParseError[]@)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function ParseFile (fileName As String, ByRef tokens As Token(), ByRef errors As ParseError()) As ScriptBlockAst" />
+      <MemberSignature Language="F#" Value="static member ParseFile : string *  *  -&gt; System.Management.Automation.Language.ScriptBlockAst" Usage="System.Management.Automation.Language.Parser.ParseFile (fileName, tokens, errors)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.Language.ScriptBlockAst</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="fileName" Type="System.String" />
+        <Parameter Name="tokens" Type="System.Management.Automation.Language.Token[]&amp;" RefType="out" />
+        <Parameter Name="errors" Type="System.Management.Automation.Language.ParseError[]&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="fileName">The name of the file to parse.</param>
+        <param name="tokens">Returns the tokens from parsing the script.</param>
+        <param name="errors">Returns errors, if any, discovered while parsing the script.</param>
+        <summary>
+            Parse input from the specified file.
+            </summary>
+        <returns>The <see cref="T:System.Management.Automation.Language.ScriptBlockAst" /> that represents the input script file.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ParseInput">
+      <MemberSignature Language="C#" Value="public static System.Management.Automation.Language.ScriptBlockAst ParseInput (string input, out System.Management.Automation.Language.Token[] tokens, out System.Management.Automation.Language.ParseError[] errors);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Management.Automation.Language.ScriptBlockAst ParseInput(string input, [out] class System.Management.Automation.Language.Token[]&amp; tokens, [out] class System.Management.Automation.Language.ParseError[]&amp; errors) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Language.Parser.ParseInput(System.String,System.Management.Automation.Language.Token[]@,System.Management.Automation.Language.ParseError[]@)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function ParseInput (input As String, ByRef tokens As Token(), ByRef errors As ParseError()) As ScriptBlockAst" />
+      <MemberSignature Language="F#" Value="static member ParseInput : string *  *  -&gt; System.Management.Automation.Language.ScriptBlockAst" Usage="System.Management.Automation.Language.Parser.ParseInput (input, tokens, errors)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.Language.ScriptBlockAst</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="input" Type="System.String" />
+        <Parameter Name="tokens" Type="System.Management.Automation.Language.Token[]&amp;" RefType="out" />
+        <Parameter Name="errors" Type="System.Management.Automation.Language.ParseError[]&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="input">The input to parse.</param>
+        <param name="tokens">Returns the tokens from parsing the script.</param>
+        <param name="errors">Returns errors, if any, discovered while parsing the script.</param>
+        <summary>
+            Parse input that does not come from a file.
+            </summary>
+        <returns>The <see cref="T:System.Management.Automation.Language.ScriptBlockAst" /> that represents the input script file.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ParseInput">
+      <MemberSignature Language="C#" Value="public static System.Management.Automation.Language.ScriptBlockAst ParseInput (string input, string fileName, out System.Management.Automation.Language.Token[] tokens, out System.Management.Automation.Language.ParseError[] errors);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Management.Automation.Language.ScriptBlockAst ParseInput(string input, string fileName, [out] class System.Management.Automation.Language.Token[]&amp; tokens, [out] class System.Management.Automation.Language.ParseError[]&amp; errors) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Language.Parser.ParseInput(System.String,System.String,System.Management.Automation.Language.Token[]@,System.Management.Automation.Language.ParseError[]@)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function ParseInput (input As String, fileName As String, ByRef tokens As Token(), ByRef errors As ParseError()) As ScriptBlockAst" />
+      <MemberSignature Language="F#" Value="static member ParseInput : string * string *  *  -&gt; System.Management.Automation.Language.ScriptBlockAst" Usage="System.Management.Automation.Language.Parser.ParseInput (input, fileName, tokens, errors)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.Language.ScriptBlockAst</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="input" Type="System.String" />
+        <Parameter Name="fileName" Type="System.String" />
+        <Parameter Name="tokens" Type="System.Management.Automation.Language.Token[]&amp;" RefType="out" />
+        <Parameter Name="errors" Type="System.Management.Automation.Language.ParseError[]&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="input">The input to parse.</param>
+        <param name="fileName">The fileName if present or null.</param>
+        <param name="tokens">Returns the tokens from parsing the script.</param>
+        <param name="errors">Returns errors, if any, discovered while parsing the script.</param>
+        <summary>
+            Parse input that does not come from a file.
+            </summary>
+        <returns>The <see cref="T:System.Management.Automation.Language.ScriptBlockAst" /> that represents the input script file.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

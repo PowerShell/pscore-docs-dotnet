@@ -1,0 +1,227 @@
+﻿<Type Name="QueryBuilder" FullName="Microsoft.PowerShell.Cmdletization.QueryBuilder">
+  <TypeSignature Language="C#" Value="public abstract class QueryBuilder" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit QueryBuilder extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.PowerShell.Cmdletization.QueryBuilder" />
+  <TypeSignature Language="VB.NET" Value="Public MustInherit Class QueryBuilder" />
+  <TypeSignature Language="F#" Value="type QueryBuilder = class" />
+  <AssemblyInfo>
+    <AssemblyName>System.Management.Automation</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            QueryBuilder supports building of object model queries in an object-model-agnostic way
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected QueryBuilder ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Cmdletization.QueryBuilder.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Protected Sub New ()" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddQueryOption">
+      <MemberSignature Language="C#" Value="public virtual void AddQueryOption (string optionName, object optionValue);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void AddQueryOption(string optionName, object optionValue) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Cmdletization.QueryBuilder.AddQueryOption(System.String,System.Object)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Sub AddQueryOption (optionName As String, optionValue As Object)" />
+      <MemberSignature Language="F#" Value="abstract member AddQueryOption : string * obj -&gt; unit&#xA;override this.AddQueryOption : string * obj -&gt; unit" Usage="queryBuilder.AddQueryOption (optionName, optionValue)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="optionName" Type="System.String" />
+        <Parameter Name="optionValue" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="optionName"></param>
+        <param name="optionValue"></param>
+        <summary>
+            Sets a query option
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ExcludeByProperty">
+      <MemberSignature Language="C#" Value="public virtual void ExcludeByProperty (string propertyName, System.Collections.IEnumerable excludedPropertyValues, bool wildcardsEnabled, Microsoft.PowerShell.Cmdletization.BehaviorOnNoMatch behaviorOnNoMatch);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void ExcludeByProperty(string propertyName, class System.Collections.IEnumerable excludedPropertyValues, bool wildcardsEnabled, valuetype Microsoft.PowerShell.Cmdletization.BehaviorOnNoMatch behaviorOnNoMatch) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Cmdletization.QueryBuilder.ExcludeByProperty(System.String,System.Collections.IEnumerable,System.Boolean,Microsoft.PowerShell.Cmdletization.BehaviorOnNoMatch)" />
+      <MemberSignature Language="F#" Value="abstract member ExcludeByProperty : string * System.Collections.IEnumerable * bool * Microsoft.PowerShell.Cmdletization.BehaviorOnNoMatch -&gt; unit&#xA;override this.ExcludeByProperty : string * System.Collections.IEnumerable * bool * Microsoft.PowerShell.Cmdletization.BehaviorOnNoMatch -&gt; unit" Usage="queryBuilder.ExcludeByProperty (propertyName, excludedPropertyValues, wildcardsEnabled, behaviorOnNoMatch)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="propertyName" Type="System.String" />
+        <Parameter Name="excludedPropertyValues" Type="System.Collections.IEnumerable" />
+        <Parameter Name="wildcardsEnabled" Type="System.Boolean" />
+        <Parameter Name="behaviorOnNoMatch" Type="Microsoft.PowerShell.Cmdletization.BehaviorOnNoMatch" />
+      </Parameters>
+      <Docs>
+        <param name="propertyName">Property name to query on</param>
+        <param name="excludedPropertyValues">Property values to reject in the query</param>
+        <param name="wildcardsEnabled">
+          <c>true</c> if <paramref name="excludedPropertyValues" /> should be treated as a <see cref="T:System.String" /> containing a wildcard pattern;
+            <c>false otherwise</c></param>
+        <param name="behaviorOnNoMatch">
+            Describes how to handle filters that didn't match any objects
+            </param>
+        <summary>
+            Modifies the query, so that it does not return objects with a given property value
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FilterByAssociatedInstance">
+      <MemberSignature Language="C#" Value="public virtual void FilterByAssociatedInstance (object associatedInstance, string associationName, string sourceRole, string resultRole, Microsoft.PowerShell.Cmdletization.BehaviorOnNoMatch behaviorOnNoMatch);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void FilterByAssociatedInstance(object associatedInstance, string associationName, string sourceRole, string resultRole, valuetype Microsoft.PowerShell.Cmdletization.BehaviorOnNoMatch behaviorOnNoMatch) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Cmdletization.QueryBuilder.FilterByAssociatedInstance(System.Object,System.String,System.String,System.String,Microsoft.PowerShell.Cmdletization.BehaviorOnNoMatch)" />
+      <MemberSignature Language="F#" Value="abstract member FilterByAssociatedInstance : obj * string * string * string * Microsoft.PowerShell.Cmdletization.BehaviorOnNoMatch -&gt; unit&#xA;override this.FilterByAssociatedInstance : obj * string * string * string * Microsoft.PowerShell.Cmdletization.BehaviorOnNoMatch -&gt; unit" Usage="queryBuilder.FilterByAssociatedInstance (associatedInstance, associationName, sourceRole, resultRole, behaviorOnNoMatch)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="associatedInstance" Type="System.Object" />
+        <Parameter Name="associationName" Type="System.String" />
+        <Parameter Name="sourceRole" Type="System.String" />
+        <Parameter Name="resultRole" Type="System.String" />
+        <Parameter Name="behaviorOnNoMatch" Type="Microsoft.PowerShell.Cmdletization.BehaviorOnNoMatch" />
+      </Parameters>
+      <Docs>
+        <param name="associatedInstance">object that query results have to be associated with</param>
+        <param name="associationName">name of the association</param>
+        <param name="sourceRole">name of the role that query results have in the association</param>
+        <param name="resultRole">name of the role that <paramref name="associatedInstance" /> has in the association</param>
+        <param name="behaviorOnNoMatch">
+            Describes how to handle filters that didn't match any objects
+            </param>
+        <summary>
+            Modifies the query, so that it returns only objects associated with <paramref name="associatedInstance" /></summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FilterByMaxPropertyValue">
+      <MemberSignature Language="C#" Value="public virtual void FilterByMaxPropertyValue (string propertyName, object maxPropertyValue, Microsoft.PowerShell.Cmdletization.BehaviorOnNoMatch behaviorOnNoMatch);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void FilterByMaxPropertyValue(string propertyName, object maxPropertyValue, valuetype Microsoft.PowerShell.Cmdletization.BehaviorOnNoMatch behaviorOnNoMatch) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Cmdletization.QueryBuilder.FilterByMaxPropertyValue(System.String,System.Object,Microsoft.PowerShell.Cmdletization.BehaviorOnNoMatch)" />
+      <MemberSignature Language="F#" Value="abstract member FilterByMaxPropertyValue : string * obj * Microsoft.PowerShell.Cmdletization.BehaviorOnNoMatch -&gt; unit&#xA;override this.FilterByMaxPropertyValue : string * obj * Microsoft.PowerShell.Cmdletization.BehaviorOnNoMatch -&gt; unit" Usage="queryBuilder.FilterByMaxPropertyValue (propertyName, maxPropertyValue, behaviorOnNoMatch)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="propertyName" Type="System.String" />
+        <Parameter Name="maxPropertyValue" Type="System.Object" />
+        <Parameter Name="behaviorOnNoMatch" Type="Microsoft.PowerShell.Cmdletization.BehaviorOnNoMatch" />
+      </Parameters>
+      <Docs>
+        <param name="propertyName">Property name to query on</param>
+        <param name="maxPropertyValue">Maximum property value</param>
+        <param name="behaviorOnNoMatch">
+            Describes how to handle filters that didn't match any objects
+            </param>
+        <summary>
+            Modifies the query, so that it returns only objects that have a property value less than or equal to a <paramref name="maxPropertyValue" /> threshold
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FilterByMinPropertyValue">
+      <MemberSignature Language="C#" Value="public virtual void FilterByMinPropertyValue (string propertyName, object minPropertyValue, Microsoft.PowerShell.Cmdletization.BehaviorOnNoMatch behaviorOnNoMatch);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void FilterByMinPropertyValue(string propertyName, object minPropertyValue, valuetype Microsoft.PowerShell.Cmdletization.BehaviorOnNoMatch behaviorOnNoMatch) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Cmdletization.QueryBuilder.FilterByMinPropertyValue(System.String,System.Object,Microsoft.PowerShell.Cmdletization.BehaviorOnNoMatch)" />
+      <MemberSignature Language="F#" Value="abstract member FilterByMinPropertyValue : string * obj * Microsoft.PowerShell.Cmdletization.BehaviorOnNoMatch -&gt; unit&#xA;override this.FilterByMinPropertyValue : string * obj * Microsoft.PowerShell.Cmdletization.BehaviorOnNoMatch -&gt; unit" Usage="queryBuilder.FilterByMinPropertyValue (propertyName, minPropertyValue, behaviorOnNoMatch)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="propertyName" Type="System.String" />
+        <Parameter Name="minPropertyValue" Type="System.Object" />
+        <Parameter Name="behaviorOnNoMatch" Type="Microsoft.PowerShell.Cmdletization.BehaviorOnNoMatch" />
+      </Parameters>
+      <Docs>
+        <param name="propertyName">Property name to query on</param>
+        <param name="minPropertyValue">Minimum property value</param>
+        <param name="behaviorOnNoMatch">
+            Describes how to handle filters that didn't match any objects
+            </param>
+        <summary>
+            Modifies the query, so that it returns only objects that have a property value greater than or equal to a <paramref name="minPropertyValue" /> threshold
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FilterByProperty">
+      <MemberSignature Language="C#" Value="public virtual void FilterByProperty (string propertyName, System.Collections.IEnumerable allowedPropertyValues, bool wildcardsEnabled, Microsoft.PowerShell.Cmdletization.BehaviorOnNoMatch behaviorOnNoMatch);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void FilterByProperty(string propertyName, class System.Collections.IEnumerable allowedPropertyValues, bool wildcardsEnabled, valuetype Microsoft.PowerShell.Cmdletization.BehaviorOnNoMatch behaviorOnNoMatch) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Cmdletization.QueryBuilder.FilterByProperty(System.String,System.Collections.IEnumerable,System.Boolean,Microsoft.PowerShell.Cmdletization.BehaviorOnNoMatch)" />
+      <MemberSignature Language="F#" Value="abstract member FilterByProperty : string * System.Collections.IEnumerable * bool * Microsoft.PowerShell.Cmdletization.BehaviorOnNoMatch -&gt; unit&#xA;override this.FilterByProperty : string * System.Collections.IEnumerable * bool * Microsoft.PowerShell.Cmdletization.BehaviorOnNoMatch -&gt; unit" Usage="queryBuilder.FilterByProperty (propertyName, allowedPropertyValues, wildcardsEnabled, behaviorOnNoMatch)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="propertyName" Type="System.String" />
+        <Parameter Name="allowedPropertyValues" Type="System.Collections.IEnumerable" />
+        <Parameter Name="wildcardsEnabled" Type="System.Boolean" />
+        <Parameter Name="behaviorOnNoMatch" Type="Microsoft.PowerShell.Cmdletization.BehaviorOnNoMatch" />
+      </Parameters>
+      <Docs>
+        <param name="propertyName">Property name to query on</param>
+        <param name="allowedPropertyValues">Property values to accept in the query</param>
+        <param name="wildcardsEnabled">
+          <c>true</c> if <paramref name="allowedPropertyValues" /> should be treated as a <see cref="T:System.String" /> containing a wildcard pattern;
+            <c>false otherwise</c></param>
+        <param name="behaviorOnNoMatch">
+            Describes how to handle filters that didn't match any objects
+            </param>
+        <summary>
+            Modifies the query, so that it only returns objects with a given property value
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

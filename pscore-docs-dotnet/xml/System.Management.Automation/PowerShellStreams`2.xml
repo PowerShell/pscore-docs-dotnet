@@ -1,0 +1,297 @@
+﻿<Type Name="PowerShellStreams&lt;TInput,TOutput&gt;" FullName="System.Management.Automation.PowerShellStreams&lt;TInput,TOutput&gt;">
+  <TypeSignature Language="C#" Value="public sealed class PowerShellStreams&lt;TInput,TOutput&gt; : IDisposable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit PowerShellStreams`2&lt;TInput, TOutput&gt; extends System.Object implements class System.IDisposable" />
+  <TypeSignature Language="DocId" Value="T:System.Management.Automation.PowerShellStreams`2" />
+  <TypeSignature Language="VB.NET" Value="Public NotInheritable Class PowerShellStreams(Of TInput, TOutput)&#xA;Implements IDisposable" />
+  <TypeSignature Language="F#" Value="type PowerShellStreams&lt;'Input, 'Output&gt; = class&#xA;    interface IDisposable" />
+  <AssemblyInfo>
+    <AssemblyName>System.Management.Automation</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <TypeParameters>
+    <TypeParameter Name="TInput" />
+    <TypeParameter Name="TOutput" />
+  </TypeParameters>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <typeparam name="TInput">To be added.</typeparam>
+    <typeparam name="TOutput">To be added.</typeparam>
+    <summary>
+            Define all the output streams and one input stream for a workflow.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public PowerShellStreams ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.PowerShellStreams`2.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New ()" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>
+            Default constructor.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public PowerShellStreams (System.Management.Automation.PSDataCollection&lt;TInput&gt; pipelineInput);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Management.Automation.PSDataCollection`1&lt;!TInput&gt; pipelineInput) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.PowerShellStreams`2.#ctor(System.Management.Automation.PSDataCollection{`0})" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (pipelineInput As PSDataCollection(Of TInput))" />
+      <MemberSignature Language="F#" Value="new System.Management.Automation.PowerShellStreams&lt;'Input, 'Output&gt; : System.Management.Automation.PSDataCollection&lt;'Input&gt; -&gt; System.Management.Automation.PowerShellStreams&lt;'Input, 'Output&gt;" Usage="new System.Management.Automation.PowerShellStreams&lt;'Input, 'Output&gt; pipelineInput" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="pipelineInput" Type="System.Management.Automation.PSDataCollection&lt;TInput&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="pipelineInput">To be added.</param>
+        <summary>
+            Default constructor.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CloseAll">
+      <MemberSignature Language="C#" Value="public void CloseAll ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void CloseAll() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.PowerShellStreams`2.CloseAll" />
+      <MemberSignature Language="VB.NET" Value="Public Sub CloseAll ()" />
+      <MemberSignature Language="F#" Value="member this.CloseAll : unit -&gt; unit" Usage="powerShellStreams.CloseAll " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Marking all the streams as completed so that no further data can be added and
+            jobs will know that there is no more data coming in.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DebugStream">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.PSDataCollection&lt;System.Management.Automation.DebugRecord&gt; DebugStream { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Management.Automation.PSDataCollection`1&lt;class System.Management.Automation.DebugRecord&gt; DebugStream" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.PowerShellStreams`2.DebugStream" />
+      <MemberSignature Language="VB.NET" Value="Public Property DebugStream As PSDataCollection(Of DebugRecord)" />
+      <MemberSignature Language="F#" Value="member this.DebugStream : System.Management.Automation.PSDataCollection&lt;System.Management.Automation.DebugRecord&gt; with get, set" Usage="System.Management.Automation.PowerShellStreams&lt;'Input, 'Output&gt;.DebugStream" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.PSDataCollection&lt;System.Management.Automation.DebugRecord&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Get debug stream.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="public void Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Dispose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.PowerShellStreams`2.Dispose" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Dispose ()" />
+      <MemberSignature Language="F#" Value="abstract member Dispose : unit -&gt; unit&#xA;override this.Dispose : unit -&gt; unit" Usage="powerShellStreams.Dispose " />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.IDisposable.Dispose</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Dispose implementation.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ErrorStream">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.PSDataCollection&lt;System.Management.Automation.ErrorRecord&gt; ErrorStream { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Management.Automation.PSDataCollection`1&lt;class System.Management.Automation.ErrorRecord&gt; ErrorStream" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.PowerShellStreams`2.ErrorStream" />
+      <MemberSignature Language="VB.NET" Value="Public Property ErrorStream As PSDataCollection(Of ErrorRecord)" />
+      <MemberSignature Language="F#" Value="member this.ErrorStream : System.Management.Automation.PSDataCollection&lt;System.Management.Automation.ErrorRecord&gt; with get, set" Usage="System.Management.Automation.PowerShellStreams&lt;'Input, 'Output&gt;.ErrorStream" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.PSDataCollection&lt;System.Management.Automation.ErrorRecord&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets error stream.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InformationStream">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.PSDataCollection&lt;System.Management.Automation.InformationRecord&gt; InformationStream { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Management.Automation.PSDataCollection`1&lt;class System.Management.Automation.InformationRecord&gt; InformationStream" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.PowerShellStreams`2.InformationStream" />
+      <MemberSignature Language="VB.NET" Value="Public Property InformationStream As PSDataCollection(Of InformationRecord)" />
+      <MemberSignature Language="F#" Value="member this.InformationStream : System.Management.Automation.PSDataCollection&lt;System.Management.Automation.InformationRecord&gt; with get, set" Usage="System.Management.Automation.PowerShellStreams&lt;'Input, 'Output&gt;.InformationStream" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.PSDataCollection&lt;System.Management.Automation.InformationRecord&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets Information stream.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InputStream">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.PSDataCollection&lt;TInput&gt; InputStream { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Management.Automation.PSDataCollection`1&lt;!TInput&gt; InputStream" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.PowerShellStreams`2.InputStream" />
+      <MemberSignature Language="VB.NET" Value="Public Property InputStream As PSDataCollection(Of TInput)" />
+      <MemberSignature Language="F#" Value="member this.InputStream : System.Management.Automation.PSDataCollection&lt;'Input&gt; with get, set" Usage="System.Management.Automation.PowerShellStreams&lt;'Input, 'Output&gt;.InputStream" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.PSDataCollection&lt;TInput&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets input stream.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OutputStream">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.PSDataCollection&lt;TOutput&gt; OutputStream { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Management.Automation.PSDataCollection`1&lt;!TOutput&gt; OutputStream" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.PowerShellStreams`2.OutputStream" />
+      <MemberSignature Language="VB.NET" Value="Public Property OutputStream As PSDataCollection(Of TOutput)" />
+      <MemberSignature Language="F#" Value="member this.OutputStream : System.Management.Automation.PSDataCollection&lt;'Output&gt; with get, set" Usage="System.Management.Automation.PowerShellStreams&lt;'Input, 'Output&gt;.OutputStream" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.PSDataCollection&lt;TOutput&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets output stream.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ProgressStream">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.PSDataCollection&lt;System.Management.Automation.ProgressRecord&gt; ProgressStream { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Management.Automation.PSDataCollection`1&lt;class System.Management.Automation.ProgressRecord&gt; ProgressStream" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.PowerShellStreams`2.ProgressStream" />
+      <MemberSignature Language="VB.NET" Value="Public Property ProgressStream As PSDataCollection(Of ProgressRecord)" />
+      <MemberSignature Language="F#" Value="member this.ProgressStream : System.Management.Automation.PSDataCollection&lt;System.Management.Automation.ProgressRecord&gt; with get, set" Usage="System.Management.Automation.PowerShellStreams&lt;'Input, 'Output&gt;.ProgressStream" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.PSDataCollection&lt;System.Management.Automation.ProgressRecord&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets progress stream.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="VerboseStream">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.PSDataCollection&lt;System.Management.Automation.VerboseRecord&gt; VerboseStream { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Management.Automation.PSDataCollection`1&lt;class System.Management.Automation.VerboseRecord&gt; VerboseStream" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.PowerShellStreams`2.VerboseStream" />
+      <MemberSignature Language="VB.NET" Value="Public Property VerboseStream As PSDataCollection(Of VerboseRecord)" />
+      <MemberSignature Language="F#" Value="member this.VerboseStream : System.Management.Automation.PSDataCollection&lt;System.Management.Automation.VerboseRecord&gt; with get, set" Usage="System.Management.Automation.PowerShellStreams&lt;'Input, 'Output&gt;.VerboseStream" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.PSDataCollection&lt;System.Management.Automation.VerboseRecord&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets verbose stream.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WarningStream">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.PSDataCollection&lt;System.Management.Automation.WarningRecord&gt; WarningStream { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Management.Automation.PSDataCollection`1&lt;class System.Management.Automation.WarningRecord&gt; WarningStream" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.PowerShellStreams`2.WarningStream" />
+      <MemberSignature Language="VB.NET" Value="Public Property WarningStream As PSDataCollection(Of WarningRecord)" />
+      <MemberSignature Language="F#" Value="member this.WarningStream : System.Management.Automation.PSDataCollection&lt;System.Management.Automation.WarningRecord&gt; with get, set" Usage="System.Management.Automation.PowerShellStreams&lt;'Input, 'Output&gt;.WarningStream" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.PSDataCollection&lt;System.Management.Automation.WarningRecord&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets warning stream.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

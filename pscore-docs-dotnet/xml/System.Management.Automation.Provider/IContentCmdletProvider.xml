@@ -1,0 +1,264 @@
+﻿<Type Name="IContentCmdletProvider" FullName="System.Management.Automation.Provider.IContentCmdletProvider">
+  <TypeSignature Language="C#" Value="public interface IContentCmdletProvider" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IContentCmdletProvider" />
+  <TypeSignature Language="DocId" Value="T:System.Management.Automation.Provider.IContentCmdletProvider" />
+  <TypeSignature Language="VB.NET" Value="Public Interface IContentCmdletProvider" />
+  <TypeSignature Language="F#" Value="type IContentCmdletProvider = interface" />
+  <AssemblyInfo>
+    <AssemblyName>System.Management.Automation</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>
+             An interface that can be implemented on a Cmdlet provider to expose an item's
+             content.
+             </summary>
+    <remarks>
+             An IContentCmdletProvider provider implements a set of methods that allows
+             the use of a set of core commands against the data store that the provider
+             gives access to. By implementing this interface users can take advantage
+             the commands that expose the contents of an item.
+                 get-content
+                 set-content
+                 clear-content
+            
+             This interface should only be implemented on derived classes of
+             <see cref="T:System.Management.Automation.Provider.CmdletProvider" />, <see cref="T:System.Management.Automation.Provider.ItemCmdletProvider" />,
+             <see cref="T:System.Management.Automation.Provider.ContainerCmdletProvider" />, or <see cref="T:System.Management.Automation.Provider.NavigationCmdletProvider" />.
+            
+             A namespace provider should implemented this interface if items in the
+             namespace have content the provide wishes to expose.
+             </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="ClearContent">
+      <MemberSignature Language="C#" Value="public void ClearContent (string path);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void ClearContent(string path) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Provider.IContentCmdletProvider.ClearContent(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub ClearContent (path As String)" />
+      <MemberSignature Language="F#" Value="abstract member ClearContent : string -&gt; unit" Usage="iContentCmdletProvider.ClearContent path" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="path">
+             The path to the item to clear the content from.
+             </param>
+        <summary>
+             Clears the content from the specified item.
+             </summary>
+        <remarks>
+             Overrides of this method should remove any content from the object but
+             not remove (delete) the object itself.
+            
+             Providers that declare <see cref="T:System.Management.Automation.Provider.ProviderCapabilities" />
+             of ExpandWildcards, Filter, Include, or Exclude should ensure that the path passed meets those
+             requirements by accessing the appropriate property from the base class.
+            
+             By default overrides of this method should not clear or write objects that are generally hidden from
+             the user unless the Force property is set to true. An error should be sent to the WriteError method if
+             the path represents an item that is hidden from the user and Force is set to false.
+             </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ClearContentDynamicParameters">
+      <MemberSignature Language="C#" Value="public object ClearContentDynamicParameters (string path);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object ClearContentDynamicParameters(string path) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Provider.IContentCmdletProvider.ClearContentDynamicParameters(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Function ClearContentDynamicParameters (path As String) As Object" />
+      <MemberSignature Language="F#" Value="abstract member ClearContentDynamicParameters : string -&gt; obj" Usage="iContentCmdletProvider.ClearContentDynamicParameters path" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="path">
+             If the path was specified on the command line, this is the path
+             to the item to get the dynamic parameters for.
+             </param>
+        <summary>
+             Gives the provider an opportunity to attach additional parameters to the
+             clear-content cmdlet.
+             </summary>
+        <returns>
+             Overrides of this method should return an object that has properties and fields decorated with
+             parsing attributes similar to a cmdlet class or a
+             <see cref="T:System.Management.Automation.RuntimeDefinedParameterDictionary" />.
+            
+             The default implementation returns null. (no additional parameters)
+             </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetContentReader">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.Provider.IContentReader GetContentReader (string path);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Management.Automation.Provider.IContentReader GetContentReader(string path) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Provider.IContentCmdletProvider.GetContentReader(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetContentReader (path As String) As IContentReader" />
+      <MemberSignature Language="F#" Value="abstract member GetContentReader : string -&gt; System.Management.Automation.Provider.IContentReader" Usage="iContentCmdletProvider.GetContentReader path" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.Provider.IContentReader</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="path">
+             The path to the item to get the content reader for.
+             </param>
+        <summary>
+             Gets the content reader for the item at the specified path.
+             </summary>
+        <returns>To be added.</returns>
+        <remarks>
+             Overrides of this method should return an <see cref="T:System.Management.Automation.Provider.IContentReader" />
+             for the item specified by the path.
+            
+             Providers that declare <see cref="T:System.Management.Automation.Provider.ProviderCapabilities" />
+             of ExpandWildcards, Filter, Include, or Exclude should ensure that the path passed meets those
+             requirements by accessing the appropriate property from the base class.
+            
+             By default overrides of this method should not return a content reader for objects
+             that are generally hidden from
+             the user unless the Force property is set to true. An error should be sent to the WriteError method if
+             the path represents an item that is hidden from the user and Force is set to false.
+             </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetContentReaderDynamicParameters">
+      <MemberSignature Language="C#" Value="public object GetContentReaderDynamicParameters (string path);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object GetContentReaderDynamicParameters(string path) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Provider.IContentCmdletProvider.GetContentReaderDynamicParameters(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetContentReaderDynamicParameters (path As String) As Object" />
+      <MemberSignature Language="F#" Value="abstract member GetContentReaderDynamicParameters : string -&gt; obj" Usage="iContentCmdletProvider.GetContentReaderDynamicParameters path" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="path">
+             If the path was specified on the command line, this is the path
+             to the item to get the dynamic parameters for.
+             </param>
+        <summary>
+             Gives the provider an opportunity to attach additional parameters to the
+             get-content cmdlet.
+             </summary>
+        <returns>
+             Overrides of this method should return an object that has properties and fields decorated with
+             parsing attributes similar to a cmdlet class or a
+             <see cref="T:System.Management.Automation.RuntimeDefinedParameterDictionary" />.
+            
+             The default implementation returns null. (no additional parameters)
+             </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetContentWriter">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.Provider.IContentWriter GetContentWriter (string path);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Management.Automation.Provider.IContentWriter GetContentWriter(string path) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Provider.IContentCmdletProvider.GetContentWriter(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetContentWriter (path As String) As IContentWriter" />
+      <MemberSignature Language="F#" Value="abstract member GetContentWriter : string -&gt; System.Management.Automation.Provider.IContentWriter" Usage="iContentCmdletProvider.GetContentWriter path" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.Provider.IContentWriter</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="path">
+             The path to the item to get the content writer for.
+             </param>
+        <summary>
+             Gets the content writer for the item at the specified path.
+             </summary>
+        <returns>
+             An IContentWriter for the item at the specified path.
+             </returns>
+        <remarks>
+             Overrides of this method should return an <see cref="T:System.Management.Automation.Provider.IContentWriter" />
+             for the item specified by the path.
+            
+             Providers that declare <see cref="T:System.Management.Automation.Provider.ProviderCapabilities" />
+             of ExpandWildcards, Filter, Include, or Exclude should ensure that the path passed meets those
+             requirements by accessing the appropriate property from the base class.
+            
+             By default overrides of this method should not return a content writer for objects
+             that are generally hidden from
+             the user unless the Force property is set to true. An error should be sent to the WriteError method if
+             the path represents an item that is hidden from the user and Force is set to false.
+             </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetContentWriterDynamicParameters">
+      <MemberSignature Language="C#" Value="public object GetContentWriterDynamicParameters (string path);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object GetContentWriterDynamicParameters(string path) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Provider.IContentCmdletProvider.GetContentWriterDynamicParameters(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetContentWriterDynamicParameters (path As String) As Object" />
+      <MemberSignature Language="F#" Value="abstract member GetContentWriterDynamicParameters : string -&gt; obj" Usage="iContentCmdletProvider.GetContentWriterDynamicParameters path" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="path">
+             If the path was specified on the command line, this is the path
+             to the item to get the dynamic parameters for.
+             </param>
+        <summary>
+             Gives the provider an opportunity to attach additional parameters to the
+             set-content and add-content cmdlet.
+             </summary>
+        <returns>
+             Overrides of this method should return an object that has properties and fields decorated with
+             parsing attributes similar to a cmdlet class or a
+             <see cref="T:System.Management.Automation.RuntimeDefinedParameterDictionary" />.
+            
+             The default implementation returns null. (no additional parameters)
+             </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

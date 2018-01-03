@@ -1,0 +1,350 @@
+﻿<Type Name="JobInvocationInfo" FullName="System.Management.Automation.JobInvocationInfo">
+  <TypeSignature Language="C#" Value="public class JobInvocationInfo : System.Runtime.Serialization.ISerializable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable beforefieldinit JobInvocationInfo extends System.Object implements class System.Runtime.Serialization.ISerializable" />
+  <TypeSignature Language="DocId" Value="T:System.Management.Automation.JobInvocationInfo" />
+  <TypeSignature Language="VB.NET" Value="Public Class JobInvocationInfo&#xA;Implements ISerializable" />
+  <TypeSignature Language="F#" Value="type JobInvocationInfo = class&#xA;    interface ISerializable" />
+  <AssemblyInfo>
+    <AssemblyName>System.Management.Automation</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Runtime.Serialization.ISerializable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>
+            Class that helps define the parameters to
+            be passed to a job so that the job can be
+            instantiated without having to specify
+            the parameters explicitly. Helps in
+            passing job parameters to disk
+            </summary>
+    <remarks>This class is not required if
+            CommandParameterCollection adds a public
+            constructor.The actual implementation of
+            this class will happen in M2</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected JobInvocationInfo ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.JobInvocationInfo.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Protected Sub New ()" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>
+            Constructor.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public JobInvocationInfo (System.Management.Automation.JobDefinition definition, System.Collections.Generic.Dictionary&lt;string,object&gt; parameters);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Management.Automation.JobDefinition definition, class System.Collections.Generic.Dictionary`2&lt;string, object&gt; parameters) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.JobInvocationInfo.#ctor(System.Management.Automation.JobDefinition,System.Collections.Generic.Dictionary{System.String,System.Object})" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (definition As JobDefinition, parameters As Dictionary(Of String, Object))" />
+      <MemberSignature Language="F#" Value="new System.Management.Automation.JobInvocationInfo : System.Management.Automation.JobDefinition * System.Collections.Generic.Dictionary&lt;string, obj&gt; -&gt; System.Management.Automation.JobInvocationInfo" Usage="new System.Management.Automation.JobInvocationInfo (definition, parameters)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="definition" Type="System.Management.Automation.JobDefinition" />
+        <Parameter Name="parameters" Type="System.Collections.Generic.Dictionary&lt;System.String,System.Object&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="definition">The job definition</param>
+        <param name="parameters">The parameter collection to use</param>
+        <summary>
+            Create a new job definition with a single set of parameters.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public JobInvocationInfo (System.Management.Automation.JobDefinition definition, System.Collections.Generic.IEnumerable&lt;System.Collections.Generic.Dictionary&lt;string,object&gt;&gt; parameterCollectionList);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Management.Automation.JobDefinition definition, class System.Collections.Generic.IEnumerable`1&lt;class System.Collections.Generic.Dictionary`2&lt;string, object&gt;&gt; parameterCollectionList) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.JobInvocationInfo.#ctor(System.Management.Automation.JobDefinition,System.Collections.Generic.IEnumerable{System.Collections.Generic.Dictionary{System.String,System.Object}})" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (definition As JobDefinition, parameterCollectionList As IEnumerable(Of Dictionary(Of String, Object)))" />
+      <MemberSignature Language="F#" Value="new System.Management.Automation.JobInvocationInfo : System.Management.Automation.JobDefinition * seq&lt;System.Collections.Generic.Dictionary&lt;string, obj&gt;&gt; -&gt; System.Management.Automation.JobInvocationInfo" Usage="new System.Management.Automation.JobInvocationInfo (definition, parameterCollectionList)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="definition" Type="System.Management.Automation.JobDefinition" />
+        <Parameter Name="parameterCollectionList" Type="System.Collections.Generic.IEnumerable&lt;System.Collections.Generic.Dictionary&lt;System.String,System.Object&gt;&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="definition">The job definition</param>
+        <param name="parameterCollectionList">Collection of sets of parameters to use for the child jobs</param>
+        <summary>
+            Create a new job definition with a multiple sets of parameters. This allows
+            different parameters for different machines.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public JobInvocationInfo (System.Management.Automation.JobDefinition definition, System.Collections.Generic.IEnumerable&lt;System.Management.Automation.Runspaces.CommandParameterCollection&gt; parameters);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Management.Automation.JobDefinition definition, class System.Collections.Generic.IEnumerable`1&lt;class System.Management.Automation.Runspaces.CommandParameterCollection&gt; parameters) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.JobInvocationInfo.#ctor(System.Management.Automation.JobDefinition,System.Collections.Generic.IEnumerable{System.Management.Automation.Runspaces.CommandParameterCollection})" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (definition As JobDefinition, parameters As IEnumerable(Of CommandParameterCollection))" />
+      <MemberSignature Language="F#" Value="new System.Management.Automation.JobInvocationInfo : System.Management.Automation.JobDefinition * seq&lt;System.Management.Automation.Runspaces.CommandParameterCollection&gt; -&gt; System.Management.Automation.JobInvocationInfo" Usage="new System.Management.Automation.JobInvocationInfo (definition, parameters)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="definition" Type="System.Management.Automation.JobDefinition" />
+        <Parameter Name="parameters" Type="System.Collections.Generic.IEnumerable&lt;System.Management.Automation.Runspaces.CommandParameterCollection&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="definition"></param>
+        <param name="parameters"></param>
+        <summary />
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public JobInvocationInfo (System.Management.Automation.JobDefinition definition, System.Management.Automation.Runspaces.CommandParameterCollection parameters);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Management.Automation.JobDefinition definition, class System.Management.Automation.Runspaces.CommandParameterCollection parameters) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.JobInvocationInfo.#ctor(System.Management.Automation.JobDefinition,System.Management.Automation.Runspaces.CommandParameterCollection)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (definition As JobDefinition, parameters As CommandParameterCollection)" />
+      <MemberSignature Language="F#" Value="new System.Management.Automation.JobInvocationInfo : System.Management.Automation.JobDefinition * System.Management.Automation.Runspaces.CommandParameterCollection -&gt; System.Management.Automation.JobInvocationInfo" Usage="new System.Management.Automation.JobInvocationInfo (definition, parameters)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="definition" Type="System.Management.Automation.JobDefinition" />
+        <Parameter Name="parameters" Type="System.Management.Automation.Runspaces.CommandParameterCollection" />
+      </Parameters>
+      <Docs>
+        <param name="definition"></param>
+        <param name="parameters"></param>
+        <summary />
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected JobInvocationInfo (System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(class System.Runtime.Serialization.SerializationInfo info, valuetype System.Runtime.Serialization.StreamingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.JobInvocationInfo.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" />
+      <MemberSignature Language="VB.NET" Value="Protected Sub New (info As SerializationInfo, context As StreamingContext)" />
+      <MemberSignature Language="F#" Value="new System.Management.Automation.JobInvocationInfo : System.Runtime.Serialization.SerializationInfo * System.Runtime.Serialization.StreamingContext -&gt; System.Management.Automation.JobInvocationInfo" Usage="new System.Management.Automation.JobInvocationInfo (info, context)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="info" Type="System.Runtime.Serialization.SerializationInfo" />
+        <Parameter Name="context" Type="System.Runtime.Serialization.StreamingContext" />
+      </Parameters>
+      <Docs>
+        <param name="info"></param>
+        <param name="context"></param>
+        <summary />
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Command">
+      <MemberSignature Language="C#" Value="public string Command { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Command" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.JobInvocationInfo.Command" />
+      <MemberSignature Language="VB.NET" Value="Public Property Command As String" />
+      <MemberSignature Language="F#" Value="member this.Command : string with get, set" Usage="System.Management.Automation.JobInvocationInfo.Command" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Command string to execute.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Definition">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.JobDefinition Definition { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Management.Automation.JobDefinition Definition" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.JobInvocationInfo.Definition" />
+      <MemberSignature Language="VB.NET" Value="Public Property Definition As JobDefinition" />
+      <MemberSignature Language="F#" Value="member this.Definition : System.Management.Automation.JobDefinition with get, set" Usage="System.Management.Automation.JobInvocationInfo.Definition" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.JobDefinition</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Definition associated with the job
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetObjectData">
+      <MemberSignature Language="C#" Value="public virtual void GetObjectData (System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void GetObjectData(class System.Runtime.Serialization.SerializationInfo info, valuetype System.Runtime.Serialization.StreamingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.JobInvocationInfo.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Sub GetObjectData (info As SerializationInfo, context As StreamingContext)" />
+      <MemberSignature Language="F#" Value="abstract member GetObjectData : System.Runtime.Serialization.SerializationInfo * System.Runtime.Serialization.StreamingContext -&gt; unit&#xA;override this.GetObjectData : System.Runtime.Serialization.SerializationInfo * System.Runtime.Serialization.StreamingContext -&gt; unit" Usage="jobInvocationInfo.GetObjectData (info, context)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="info" Type="System.Runtime.Serialization.SerializationInfo" />
+        <Parameter Name="context" Type="System.Runtime.Serialization.StreamingContext" />
+      </Parameters>
+      <Docs>
+        <param name="info"></param>
+        <param name="context"></param>
+        <summary />
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InstanceId">
+      <MemberSignature Language="C#" Value="public Guid InstanceId { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Guid InstanceId" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.JobInvocationInfo.InstanceId" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property InstanceId As Guid" />
+      <MemberSignature Language="F#" Value="member this.InstanceId : Guid" Usage="System.Management.Automation.JobInvocationInfo.InstanceId" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Guid</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Unique identifies for this specification
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Load">
+      <MemberSignature Language="C#" Value="public virtual void Load (System.IO.Stream stream);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Load(class System.IO.Stream stream) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.JobInvocationInfo.Load(System.IO.Stream)" />
+      <MemberSignature Language="F#" Value="abstract member Load : System.IO.Stream -&gt; unit&#xA;override this.Load : System.IO.Stream -&gt; unit" Usage="jobInvocationInfo.Load stream" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="stream" Type="System.IO.Stream" />
+      </Parameters>
+      <Docs>
+        <param name="stream">stream to load from</param>
+        <summary>
+            Load this specification from a file
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public string Name { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.JobInvocationInfo.Name" />
+      <MemberSignature Language="VB.NET" Value="Public Property Name As String" />
+      <MemberSignature Language="F#" Value="member this.Name : string with get, set" Usage="System.Management.Automation.JobInvocationInfo.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Friendly name associated with this specification
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Parameters">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.List&lt;System.Management.Automation.Runspaces.CommandParameterCollection&gt; Parameters { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.List`1&lt;class System.Management.Automation.Runspaces.CommandParameterCollection&gt; Parameters" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.JobInvocationInfo.Parameters" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Parameters As List(Of CommandParameterCollection)" />
+      <MemberSignature Language="F#" Value="member this.Parameters : System.Collections.Generic.List&lt;System.Management.Automation.Runspaces.CommandParameterCollection&gt;" Usage="System.Management.Automation.JobInvocationInfo.Parameters" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.List&lt;System.Management.Automation.Runspaces.CommandParameterCollection&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Parameters associated with this specification
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Save">
+      <MemberSignature Language="C#" Value="public virtual void Save (System.IO.Stream stream);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Save(class System.IO.Stream stream) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.JobInvocationInfo.Save(System.IO.Stream)" />
+      <MemberSignature Language="F#" Value="abstract member Save : System.IO.Stream -&gt; unit&#xA;override this.Save : System.IO.Stream -&gt; unit" Usage="jobInvocationInfo.Save stream" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="stream" Type="System.IO.Stream" />
+      </Parameters>
+      <Docs>
+        <param name="stream">stream to save to</param>
+        <summary>
+            Save this specification to a file
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

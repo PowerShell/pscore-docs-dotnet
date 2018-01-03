@@ -1,0 +1,114 @@
+﻿<Type Name="FlagsExpression&lt;T&gt;" FullName="System.Management.Automation.FlagsExpression&lt;T&gt;">
+  <TypeSignature Language="C#" Value="public sealed class FlagsExpression&lt;T&gt; where T : struct" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit FlagsExpression`1&lt;struct .ctor (class System.IConvertible, class System.ValueType) T&gt; extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Management.Automation.FlagsExpression`1" />
+  <TypeSignature Language="VB.NET" Value="Public NotInheritable Class FlagsExpression(Of T)" />
+  <TypeSignature Language="F#" Value="type FlagsExpression&lt;'T (requires 'T : struct)&gt; = class" />
+  <AssemblyInfo>
+    <AssemblyName>System.Management.Automation</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <TypeParameters>
+    <TypeParameter Name="T">
+      <Constraints>
+        <ParameterAttribute>DefaultConstructorConstraint</ParameterAttribute>
+        <ParameterAttribute>NotNullableValueTypeConstraint</ParameterAttribute>
+        <InterfaceName>System.IConvertible</InterfaceName>
+        <BaseTypeName>System.ValueType</BaseTypeName>
+      </Constraints>
+    </TypeParameter>
+  </TypeParameters>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <typeparam name="T">To be added.</typeparam>
+    <summary>
+            Takes as input a collection of strings and builds an expression tree from the input.
+            At the evaluation stage, it walks down the tree and evaluates the result.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public FlagsExpression (object[] expression);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(object[] expression) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.FlagsExpression`1.#ctor(System.Object[])" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (expression As Object())" />
+      <MemberSignature Language="F#" Value="new System.Management.Automation.FlagsExpression&lt;'T (requires 'T : struct)&gt; : obj[] -&gt; System.Management.Automation.FlagsExpression&lt;'T (requires 'T : struct)&gt;" Usage="new System.Management.Automation.FlagsExpression&lt;'T (requires 'T : struct)&gt; expression" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="expression" Type="System.Object[]" />
+      </Parameters>
+      <Docs>
+        <param name="expression">
+            The array of specified flag attribute subexpression strings.
+            </param>
+        <summary>
+            Construct the tree from an object collection when arguments are comma separated.
+            If valid, all elements are OR separated.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public FlagsExpression (string expression);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string expression) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.FlagsExpression`1.#ctor(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (expression As String)" />
+      <MemberSignature Language="F#" Value="new System.Management.Automation.FlagsExpression&lt;'T (requires 'T : struct)&gt; : string -&gt; System.Management.Automation.FlagsExpression&lt;'T (requires 'T : struct)&gt;" Usage="new System.Management.Automation.FlagsExpression&lt;'T (requires 'T : struct)&gt; expression" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="expression" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="expression">
+            The specified flag attribute expression string.
+            </param>
+        <summary>
+            Construct the expression from a single string.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Evaluate">
+      <MemberSignature Language="C#" Value="public bool Evaluate (T value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool Evaluate(!T value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.FlagsExpression`1.Evaluate(`0)" />
+      <MemberSignature Language="VB.NET" Value="Public Function Evaluate (value As T) As Boolean" />
+      <MemberSignature Language="F#" Value="member this.Evaluate : 'T -&gt; bool" Usage="flagsExpression.Evaluate value" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="T" />
+      </Parameters>
+      <Docs>
+        <param name="value">
+            The flag enum value to be evaluated.
+            </param>
+        <summary>
+            Evaluate a given flag enum value against the expression.
+            </summary>
+        <returns>
+            Whether the enum value satisfy the expression.
+            </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

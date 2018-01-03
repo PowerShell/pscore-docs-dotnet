@@ -1,0 +1,117 @@
+﻿<Type Name="ConfirmImpact" FullName="System.Management.Automation.ConfirmImpact">
+  <TypeSignature Language="C#" Value="public enum ConfirmImpact" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed ConfirmImpact extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Management.Automation.ConfirmImpact" />
+  <TypeSignature Language="VB.NET" Value="Public Enum ConfirmImpact" />
+  <TypeSignature Language="F#" Value="type ConfirmImpact = " />
+  <AssemblyInfo>
+    <AssemblyName>System.Management.Automation</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>
+            Defines the ConfirmImpact levels.  These levels describe
+            the "destructiveness" of an action, and thus the degree of
+            important that the user confirm the action.
+            For example, setting the read-only flag on a file might be Low,
+            and reformatting a disk might be High.
+            These levels are also used in $ConfirmPreference to describe
+            which operations should be confirmed.  Operations with ConfirmImpact
+            equal to or greater than $ConfirmPreference are confirmed.
+            Operations with ConfirmImpact.None are never confirmed, and
+            no operations are confirmed when $ConfirmPreference is ConfirmImpact.None
+            (except when explicitly requested with -Confirm).
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="High">
+      <MemberSignature Language="C#" Value="High" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Management.Automation.ConfirmImpact High = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:System.Management.Automation.ConfirmImpact.High" />
+      <MemberSignature Language="VB.NET" Value="High" />
+      <MemberSignature Language="F#" Value="High = 3" Usage="System.Management.Automation.ConfirmImpact.High" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.ConfirmImpact</ReturnType>
+      </ReturnValue>
+      <MemberValue>3</MemberValue>
+      <Docs>
+        <summary>
+            This action is potentially highly "destructive" and should be
+            confirmed by default unless otherwise specified.
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Low">
+      <MemberSignature Language="C#" Value="Low" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Management.Automation.ConfirmImpact Low = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Management.Automation.ConfirmImpact.Low" />
+      <MemberSignature Language="VB.NET" Value="Low" />
+      <MemberSignature Language="F#" Value="Low = 1" Usage="System.Management.Automation.ConfirmImpact.Low" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.ConfirmImpact</ReturnType>
+      </ReturnValue>
+      <MemberValue>1</MemberValue>
+      <Docs>
+        <summary>
+            This action only needs to be confirmed when the
+            user has requested that low-impact changes must be confirmed.
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Medium">
+      <MemberSignature Language="C#" Value="Medium" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Management.Automation.ConfirmImpact Medium = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Management.Automation.ConfirmImpact.Medium" />
+      <MemberSignature Language="VB.NET" Value="Medium" />
+      <MemberSignature Language="F#" Value="Medium = 2" Usage="System.Management.Automation.ConfirmImpact.Medium" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.ConfirmImpact</ReturnType>
+      </ReturnValue>
+      <MemberValue>2</MemberValue>
+      <Docs>
+        <summary>
+            This action should be confirmed in most scenarios where
+            confirmation is requested.
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="None">
+      <MemberSignature Language="C#" Value="None" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Management.Automation.ConfirmImpact None = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Management.Automation.ConfirmImpact.None" />
+      <MemberSignature Language="VB.NET" Value="None" />
+      <MemberSignature Language="F#" Value="None = 0" Usage="System.Management.Automation.ConfirmImpact.None" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.ConfirmImpact</ReturnType>
+      </ReturnValue>
+      <MemberValue>0</MemberValue>
+      <Docs>
+        <summary>There is never any need to confirm this action.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

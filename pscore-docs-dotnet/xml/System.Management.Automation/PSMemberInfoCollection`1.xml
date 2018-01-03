@@ -1,0 +1,289 @@
+﻿<Type Name="PSMemberInfoCollection&lt;T&gt;" FullName="System.Management.Automation.PSMemberInfoCollection&lt;T&gt;">
+  <TypeSignature Language="C#" Value="public abstract class PSMemberInfoCollection&lt;T&gt; : System.Collections.Generic.IEnumerable&lt;T&gt; where T : PSMemberInfo" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit PSMemberInfoCollection`1&lt;(class System.Management.Automation.PSMemberInfo) T&gt; extends System.Object implements class System.Collections.Generic.IEnumerable`1&lt;!T&gt;, class System.Collections.IEnumerable" />
+  <TypeSignature Language="DocId" Value="T:System.Management.Automation.PSMemberInfoCollection`1" />
+  <TypeSignature Language="VB.NET" Value="Public MustInherit Class PSMemberInfoCollection(Of T)&#xA;Implements IEnumerable(Of T)" />
+  <TypeSignature Language="F#" Value="type PSMemberInfoCollection&lt;'T (requires 'T :&gt; PSMemberInfo)&gt; = class&#xA;    interface seq&lt;'T (requires 'T :&gt; PSMemberInfo)&gt;&#xA;    interface IEnumerable" />
+  <AssemblyInfo>
+    <AssemblyName>System.Management.Automation</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <TypeParameters>
+    <TypeParameter Name="T">
+      <Constraints>
+        <BaseTypeName>System.Management.Automation.PSMemberInfo</BaseTypeName>
+      </Constraints>
+    </TypeParameter>
+  </TypeParameters>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Collections.Generic.IEnumerable&lt;T&gt;</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <typeparam name="T">To be added.</typeparam>
+    <summary>
+            Serves as the collection of members in an PSObject or MemberSet
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected PSMemberInfoCollection ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.PSMemberInfoCollection`1.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Protected Sub New ()" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>
+            Initializes a new instance of an PSMemberInfoCollection derived class
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public abstract void Add (T member);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Add(!T member) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.PSMemberInfoCollection`1.Add(`0)" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Sub Add (member As T)" />
+      <MemberSignature Language="F#" Value="abstract member Add : 'T -&gt; unit" Usage="pSMemberInfoCollection.Add member" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="member" Type="T" />
+      </Parameters>
+      <Docs>
+        <param name="member">member to be added</param>
+        <summary>
+            Adds a member to this collection
+            </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.Management.Automation.ExtendedTypeSystemException">
+                When:
+                    adding a member to an PSMemberSet from the type configuration file or
+                    adding a member with a reserved member name or
+                    trying to add a member with a type not compatible with this collection or
+                    a member by this name is already present
+            </exception>
+        <exception cref="T:System.ArgumentException">for invalid arguments</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public abstract void Add (T member, bool preValidated);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Add(!T member, bool preValidated) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.PSMemberInfoCollection`1.Add(`0,System.Boolean)" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Sub Add (member As T, preValidated As Boolean)" />
+      <MemberSignature Language="F#" Value="abstract member Add : 'T * bool -&gt; unit" Usage="pSMemberInfoCollection.Add (member, preValidated)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="member" Type="T" />
+        <Parameter Name="preValidated" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="member">member to be added</param>
+        <param name="preValidated">flag to indicate that validation has already been done
+                on this new member.  Use only when you can guarantee that the input will not
+                cause any of the errors normally caught by this method.</param>
+        <summary>
+            Adds a member to this collection
+            </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.Management.Automation.ExtendedTypeSystemException">
+                When:
+                    adding a member to an PSMemberSet from the type configuration file or
+                    adding a member with a reserved member name or
+                    trying to add a member with a type not compatible with this collection or
+                    a member by this name is already present
+            </exception>
+        <exception cref="T:System.ArgumentException">for invalid arguments</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetEnumerator">
+      <MemberSignature Language="C#" Value="public abstract System.Collections.Generic.IEnumerator&lt;T&gt; GetEnumerator ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Collections.Generic.IEnumerator`1&lt;!T&gt; GetEnumerator() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.PSMemberInfoCollection`1.GetEnumerator" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Function GetEnumerator () As IEnumerator(Of T)" />
+      <MemberSignature Language="F#" Value="abstract member GetEnumerator : unit -&gt; System.Collections.Generic.IEnumerator&lt;'T (requires 'T :&gt; System.Management.Automation.PSMemberInfo)&gt;" Usage="pSMemberInfoCollection.GetEnumerator " />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.Collections.Generic.IEnumerable`1.GetEnumerator</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerator&lt;T&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Gets the specific enumerator for this collection.
+            </summary>
+        <returns>the enumerator for this collection</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public abstract T this[string name] { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance !T Item(string)" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.PSMemberInfoCollection`1.Item(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Default Public MustOverride ReadOnly Property Item(name As String) As T" />
+      <MemberSignature Language="F#" Value="member this.Item(string) : 'T" Usage="System.Management.Automation.PSMemberInfoCollection&lt;'T (requires 'T :&gt; System.Management.Automation.PSMemberInfo)&gt;.Item" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>T</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">name of the member to look for</param>
+        <summary>
+            Gets the member in this collection matching name. If the member does not exist, null is returned.
+            </summary>
+        <value>the member matching name</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">for invalid arguments</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Match">
+      <MemberSignature Language="C#" Value="public abstract System.Management.Automation.ReadOnlyPSMemberInfoCollection&lt;T&gt; Match (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Management.Automation.ReadOnlyPSMemberInfoCollection`1&lt;!T&gt; Match(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.PSMemberInfoCollection`1.Match(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Function Match (name As String) As ReadOnlyPSMemberInfoCollection(Of T)" />
+      <MemberSignature Language="F#" Value="abstract member Match : string -&gt; System.Management.Automation.ReadOnlyPSMemberInfoCollection&lt;'T (requires 'T :&gt; System.Management.Automation.PSMemberInfo)&gt;" Usage="pSMemberInfoCollection.Match name" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.ReadOnlyPSMemberInfoCollection&lt;T&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">name of the members to be return. May contain wildcard characters.</param>
+        <summary>
+            Returns all members in the collection matching name
+            </summary>
+        <returns>all members in the collection matching name</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">for invalid arguments</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Match">
+      <MemberSignature Language="C#" Value="public abstract System.Management.Automation.ReadOnlyPSMemberInfoCollection&lt;T&gt; Match (string name, System.Management.Automation.PSMemberTypes memberTypes);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Management.Automation.ReadOnlyPSMemberInfoCollection`1&lt;!T&gt; Match(string name, valuetype System.Management.Automation.PSMemberTypes memberTypes) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.PSMemberInfoCollection`1.Match(System.String,System.Management.Automation.PSMemberTypes)" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Function Match (name As String, memberTypes As PSMemberTypes) As ReadOnlyPSMemberInfoCollection(Of T)" />
+      <MemberSignature Language="F#" Value="abstract member Match : string * System.Management.Automation.PSMemberTypes -&gt; System.Management.Automation.ReadOnlyPSMemberInfoCollection&lt;'T (requires 'T :&gt; System.Management.Automation.PSMemberInfo)&gt;" Usage="pSMemberInfoCollection.Match (name, memberTypes)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.ReadOnlyPSMemberInfoCollection&lt;T&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="memberTypes" Type="System.Management.Automation.PSMemberTypes" />
+      </Parameters>
+      <Docs>
+        <param name="name">name of the members to be return. May contain wildcard characters.</param>
+        <param name="memberTypes">type of the members to be searched.</param>
+        <summary>
+            Returns all members in the collection matching name and types
+            </summary>
+        <returns>all members in the collection matching name and types</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">for invalid arguments</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Remove">
+      <MemberSignature Language="C#" Value="public abstract void Remove (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Remove(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.PSMemberInfoCollection`1.Remove(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Sub Remove (name As String)" />
+      <MemberSignature Language="F#" Value="abstract member Remove : string -&gt; unit" Usage="pSMemberInfoCollection.Remove name" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">name of the member to be removed</param>
+        <summary>
+            Removes a member from this collection
+            </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.Management.Automation.ExtendedTypeSystemException">
+                When:
+                    removing a member from an PSMemberSet from the type configuration file
+                    removing a member with a reserved member name or
+                    trying to remove a member with a type not compatible with this collection
+            </exception>
+        <exception cref="T:System.ArgumentException">for invalid arguments</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IEnumerable.GetEnumerator">
+      <MemberSignature Language="C#" Value="System.Collections.IEnumerator IEnumerable.GetEnumerator ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance class System.Collections.IEnumerator System.Collections.IEnumerable.GetEnumerator() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.PSMemberInfoCollection`1.System#Collections#IEnumerable#GetEnumerator" />
+      <MemberSignature Language="VB.NET" Value="Function GetEnumerator () As IEnumerator Implements IEnumerable.GetEnumerator" />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.Collections.IEnumerable.GetEnumerator</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IEnumerator</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Gets the general enumerator for this collection
+            </summary>
+        <returns>the enumerator for this collection</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

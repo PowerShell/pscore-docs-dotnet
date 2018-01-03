@@ -1,0 +1,330 @@
+﻿<Type Name="Command" FullName="System.Management.Automation.Runspaces.Command">
+  <TypeSignature Language="C#" Value="public sealed class Command" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit Command extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Management.Automation.Runspaces.Command" />
+  <TypeSignature Language="VB.NET" Value="Public NotInheritable Class Command" />
+  <TypeSignature Language="F#" Value="type Command = class" />
+  <AssemblyInfo>
+    <AssemblyName>System.Management.Automation</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Defines a Command object which can be added to <see cref="T:System.Management.Automation.Runspaces.Pipeline" /> object
+            for invocation.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Command (string command);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string command) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Runspaces.Command.#ctor(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (command As String)" />
+      <MemberSignature Language="F#" Value="new System.Management.Automation.Runspaces.Command : string -&gt; System.Management.Automation.Runspaces.Command" Usage="new System.Management.Automation.Runspaces.Command command" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="command" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="command">Name of the command or script contents </param>
+        <summary>
+            Initializes a new instance of Command class using specified command parameter.
+            </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">command is null</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Command (string command, bool isScript);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string command, bool isScript) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Runspaces.Command.#ctor(System.String,System.Boolean)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (command As String, isScript As Boolean)" />
+      <MemberSignature Language="F#" Value="new System.Management.Automation.Runspaces.Command : string * bool -&gt; System.Management.Automation.Runspaces.Command" Usage="new System.Management.Automation.Runspaces.Command (command, isScript)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="command" Type="System.String" />
+        <Parameter Name="isScript" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="command">The command name or script contents</param>
+        <param name="isScript">True if this command represents a script, otherwise; false.</param>
+        <summary>
+            Initializes a new instance of Command class using specified command parameter.
+            </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">command is null</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Command (string command, bool isScript, bool useLocalScope);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string command, bool isScript, bool useLocalScope) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Runspaces.Command.#ctor(System.String,System.Boolean,System.Boolean)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (command As String, isScript As Boolean, useLocalScope As Boolean)" />
+      <MemberSignature Language="F#" Value="new System.Management.Automation.Runspaces.Command : string * bool * bool -&gt; System.Management.Automation.Runspaces.Command" Usage="new System.Management.Automation.Runspaces.Command (command, isScript, useLocalScope)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="command" Type="System.String" />
+        <Parameter Name="isScript" Type="System.Boolean" />
+        <Parameter Name="useLocalScope" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="command">The command name or script contents</param>
+        <param name="isScript">True if this command represents a script, otherwise; false.</param>
+        <param name="useLocalScope">if true local scope is used to run the script command</param>
+        <summary>
+            Constructor
+            </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">command is null</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CommandOrigin">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.CommandOrigin CommandOrigin { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Management.Automation.CommandOrigin CommandOrigin" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.Runspaces.Command.CommandOrigin" />
+      <MemberSignature Language="VB.NET" Value="Public Property CommandOrigin As CommandOrigin" />
+      <MemberSignature Language="F#" Value="member this.CommandOrigin : System.Management.Automation.CommandOrigin with get, set" Usage="System.Management.Automation.Runspaces.Command.CommandOrigin" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.CommandOrigin</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets the command origin for this command. A command origin
+            of 'Runspace' (the default) applies Runspace restrictions to this command.
+            A command origin of 'Internal' does not apply runspace restrictions.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CommandText">
+      <MemberSignature Language="C#" Value="public string CommandText { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string CommandText" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.Runspaces.Command.CommandText" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property CommandText As String" />
+      <MemberSignature Language="F#" Value="member this.CommandText : string" Usage="System.Management.Automation.Runspaces.Command.CommandText" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Access the command string.
+            </summary>
+        <value>The command name, if <see cref="P:System.Management.Automation.Runspaces.Command.IsScript" /> is false; otherwise; the script contents</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsEndOfStatement">
+      <MemberSignature Language="C#" Value="public bool IsEndOfStatement { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsEndOfStatement" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.Runspaces.Command.IsEndOfStatement" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property IsEndOfStatement As Boolean" />
+      <MemberSignature Language="F#" Value="member this.IsEndOfStatement : bool" Usage="System.Management.Automation.Runspaces.Command.IsEndOfStatement" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Checks if the current command marks the end of a statement (see PowerShell.AddStatement())
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsScript">
+      <MemberSignature Language="C#" Value="public bool IsScript { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsScript" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.Runspaces.Command.IsScript" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property IsScript As Boolean" />
+      <MemberSignature Language="F#" Value="member this.IsScript : bool" Usage="System.Management.Automation.Runspaces.Command.IsScript" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Access the value indicating if this <see cref="T:System.Management.Automation.Runspaces.Command" /> represents a script.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MergeMyResults">
+      <MemberSignature Language="C#" Value="public void MergeMyResults (System.Management.Automation.Runspaces.PipelineResultTypes myResult, System.Management.Automation.Runspaces.PipelineResultTypes toResult);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void MergeMyResults(valuetype System.Management.Automation.Runspaces.PipelineResultTypes myResult, valuetype System.Management.Automation.Runspaces.PipelineResultTypes toResult) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Runspaces.Command.MergeMyResults(System.Management.Automation.Runspaces.PipelineResultTypes,System.Management.Automation.Runspaces.PipelineResultTypes)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub MergeMyResults (myResult As PipelineResultTypes, toResult As PipelineResultTypes)" />
+      <MemberSignature Language="F#" Value="member this.MergeMyResults : System.Management.Automation.Runspaces.PipelineResultTypes * System.Management.Automation.Runspaces.PipelineResultTypes -&gt; unit" Usage="command.MergeMyResults (myResult, toResult)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="myResult" Type="System.Management.Automation.Runspaces.PipelineResultTypes" />
+        <Parameter Name="toResult" Type="System.Management.Automation.Runspaces.PipelineResultTypes" />
+      </Parameters>
+      <Docs>
+        <param name="myResult">
+             Pipeline stream to be redirected.
+             </param>
+        <param name="toResult">
+             Pipeline stream in to which myResult is merged
+             </param>
+        <summary>
+             Merges this commands results
+             </summary>
+        <remarks>
+             Currently only operation supported is to merge error of command to output of
+             command.
+             </remarks>
+        <exception cref="T:System.ArgumentException">
+             myResult parameter is not PipelineResultTypes.Error or
+             toResult parameter is not PipelineResultTypes.Output
+             </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="MergeUnclaimedPreviousCommandResults">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.Runspaces.PipelineResultTypes MergeUnclaimedPreviousCommandResults { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Management.Automation.Runspaces.PipelineResultTypes MergeUnclaimedPreviousCommandResults" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.Runspaces.Command.MergeUnclaimedPreviousCommandResults" />
+      <MemberSignature Language="VB.NET" Value="Public Property MergeUnclaimedPreviousCommandResults As PipelineResultTypes" />
+      <MemberSignature Language="F#" Value="member this.MergeUnclaimedPreviousCommandResults : System.Management.Automation.Runspaces.PipelineResultTypes with get, set" Usage="System.Management.Automation.Runspaces.Command.MergeUnclaimedPreviousCommandResults" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.Runspaces.PipelineResultTypes</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Sets this command as the mergepoint for previous unclaimed
+            commands' results
+            </summary>
+        <value />
+        <remarks>
+            Currently only supported operation is to merge
+            Output and Error.
+            </remarks>
+        <exception cref="T:System.NotSupportedException">
+            Currently only supported operation is to merge Output and Error.
+            Attempt to set the property to something other than
+            PipelineResultTypes.Error | PipelineResultTypes.Output results
+            in this exception.
+            </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Parameters">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.Runspaces.CommandParameterCollection Parameters { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Management.Automation.Runspaces.CommandParameterCollection Parameters" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.Runspaces.Command.Parameters" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Parameters As CommandParameterCollection" />
+      <MemberSignature Language="F#" Value="member this.Parameters : System.Management.Automation.Runspaces.CommandParameterCollection" Usage="System.Management.Automation.Runspaces.Command.Parameters" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.Runspaces.CommandParameterCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the set of parameters for this command.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+            This property is used to add positional or named parameters to the command.
+            </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Runspaces.Command.ToString" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Function ToString () As String" />
+      <MemberSignature Language="F#" Value="override this.ToString : unit -&gt; string" Usage="command.ToString " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            for diagnostic purposes
+            </summary>
+        <returns />
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UseLocalScope">
+      <MemberSignature Language="C#" Value="public bool UseLocalScope { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool UseLocalScope" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.Runspaces.Command.UseLocalScope" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property UseLocalScope As Boolean" />
+      <MemberSignature Language="F#" Value="member this.UseLocalScope : bool" Usage="System.Management.Automation.Runspaces.Command.UseLocalScope" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Access the value indicating if LocalScope is to be used for running
+            this script command.
+            </summary>
+        <value>True if this command is a script and localScope is
+            used for executing the script</value>
+        <remarks>This value is always false for non-script commands</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

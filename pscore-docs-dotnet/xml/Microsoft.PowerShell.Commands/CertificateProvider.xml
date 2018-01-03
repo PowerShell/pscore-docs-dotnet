@@ -1,0 +1,763 @@
+﻿<Type Name="CertificateProvider" FullName="Microsoft.PowerShell.Commands.CertificateProvider">
+  <TypeSignature Language="C#" Value="public sealed class CertificateProvider : System.Management.Automation.Provider.NavigationCmdletProvider, System.Management.Automation.Provider.ICmdletProviderSupportsHelp" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit CertificateProvider extends System.Management.Automation.Provider.NavigationCmdletProvider implements class System.Management.Automation.Provider.ICmdletProviderSupportsHelp" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.PowerShell.Commands.CertificateProvider" />
+  <TypeSignature Language="VB.NET" Value="Public NotInheritable Class CertificateProvider&#xA;Inherits NavigationCmdletProvider&#xA;Implements ICmdletProviderSupportsHelp" />
+  <TypeSignature Language="F#" Value="type CertificateProvider = class&#xA;    inherit NavigationCmdletProvider&#xA;    interface ICmdletProviderSupportsHelp" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.PowerShell.Security</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Management.Automation.Provider.NavigationCmdletProvider</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Management.Automation.Provider.ICmdletProviderSupportsHelp</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Management.Automation.OutputType(Mono.Cecil.CustomAttributeArgument[], ProviderCmdlet="Resolve-Path")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Management.Automation.OutputType(typeof(System.Management.Automation.PathInfo), ProviderCmdlet="Push-Location")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Management.Automation.OutputType(Mono.Cecil.CustomAttributeArgument[], ProviderCmdlet="Get-Item")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Management.Automation.OutputType(Mono.Cecil.CustomAttributeArgument[], ProviderCmdlet="Get-ChildItem")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Management.Automation.Provider.CmdletProvider("Certificate", System.Management.Automation.Provider.ProviderCapabilities.ShouldProcess)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>
+            Defines the implementation of a Certificate Store Provider.  This provider
+            allows for stateless namespace navigation of the computer's certificate
+            store.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CertificateProvider ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Commands.CertificateProvider.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New ()" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Security</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>
+            Initializes a new instance of the CertificateProvider class.
+            This initializes the default certificate store locations.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetChildItems">
+      <MemberSignature Language="C#" Value="protected override void GetChildItems (string path, bool recurse);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void GetChildItems(string path, bool recurse) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Commands.CertificateProvider.GetChildItems(System.String,System.Boolean)" />
+      <MemberSignature Language="VB.NET" Value="Protected Overrides Sub GetChildItems (path As String, recurse As Boolean)" />
+      <MemberSignature Language="F#" Value="override this.GetChildItems : string * bool -&gt; unit" Usage="certificateProvider.GetChildItems (path, recurse)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Security</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+        <Parameter Name="recurse" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="path">
+             The full path of the store or location to enumerate.
+             </param>
+        <param name="recurse">
+             If true, recursively enumerates the child items as well.
+             </param>
+        <summary>
+             Gets the child items of a given store, or location.
+             </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+             Path is null or empty.
+             </exception>
+        <exception cref="T:System.Security.Cryptography.CryptographicException">
+             This exception can be thrown if any cryptographic error occurs.
+             It is not possible to know exactly what went wrong.
+             This is because of the way CryptographicException is designed.
+             Possible reasons:
+              -- certificate is invalid
+              -- certificate has no private key
+              -- certificate password mismatch
+              -- etc
+             </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetChildItemsDynamicParameters">
+      <MemberSignature Language="C#" Value="protected override object GetChildItemsDynamicParameters (string path, bool recurse);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance object GetChildItemsDynamicParameters(string path, bool recurse) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Commands.CertificateProvider.GetChildItemsDynamicParameters(System.String,System.Boolean)" />
+      <MemberSignature Language="VB.NET" Value="Protected Overrides Function GetChildItemsDynamicParameters (path As String, recurse As Boolean) As Object" />
+      <MemberSignature Language="F#" Value="override this.GetChildItemsDynamicParameters : string * bool -&gt; obj" Usage="certificateProvider.GetChildItemsDynamicParameters (path, recurse)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Security</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+        <Parameter Name="recurse" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="path">
+             If the path was specified on the command line, this is the path
+             to the item for which to get the dynamic parameters.
+             </param>
+        <param name="recurse">
+             Ignored.
+             </param>
+        <summary>
+             Gets the dynamic parameters for get-childitem on the Certificate
+             Provider.  We currently only support one dynamic parameter,
+             "CodeSigning," that returns only certificates good for signing
+             code or scripts.
+             </summary>
+        <returns>
+             An object that has properties and fields decorated with
+             parsing attributes similar to a cmdlet class.
+             </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetChildName">
+      <MemberSignature Language="C#" Value="protected override string GetChildName (string path);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance string GetChildName(string path) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Commands.CertificateProvider.GetChildName(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Protected Overrides Function GetChildName (path As String) As String" />
+      <MemberSignature Language="F#" Value="override this.GetChildName : string -&gt; string" Usage="certificateProvider.GetChildName path" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Security</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="path">
+             The fully qualified path to the item.
+             </param>
+        <summary>
+             Gets the name of the leaf element of the specified path.
+             </summary>
+        <returns>
+             The leaf element of the specified path.
+             </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetChildNames">
+      <MemberSignature Language="C#" Value="protected override void GetChildNames (string path, System.Management.Automation.ReturnContainers returnContainers);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void GetChildNames(string path, valuetype System.Management.Automation.ReturnContainers returnContainers) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Commands.CertificateProvider.GetChildNames(System.String,System.Management.Automation.ReturnContainers)" />
+      <MemberSignature Language="F#" Value="override this.GetChildNames : string * System.Management.Automation.ReturnContainers -&gt; unit" Usage="certificateProvider.GetChildNames (path, returnContainers)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Security</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+        <Parameter Name="returnContainers" Type="System.Management.Automation.ReturnContainers" />
+      </Parameters>
+      <Docs>
+        <param name="path">
+             The full path of the store or location to enumerate.
+             </param>
+        <param name="returnContainers">
+             Determines if all containers should be returned or only those containers that match the
+             filter(s).
+             </param>
+        <summary>
+             Gets the child names of a given store, or location.
+             </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+             Path is null or empty.
+             </exception>
+        <exception cref="T:System.Security.Cryptography.CryptographicException">
+             This exception can be thrown if any cryptographic error occurs.
+             It is not possible to know exactly what went wrong.
+             This is because of the way CryptographicException is designed.
+             Possible reasons:
+              -- certificate is invalid
+              -- certificate has no private key
+              -- certificate password mismatch
+              -- etc
+             </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetItem">
+      <MemberSignature Language="C#" Value="protected override void GetItem (string path);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void GetItem(string path) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Commands.CertificateProvider.GetItem(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Protected Overrides Sub GetItem (path As String)" />
+      <MemberSignature Language="F#" Value="override this.GetItem : string -&gt; unit" Usage="certificateProvider.GetItem path" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Security</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="path">
+             The path of the item to retrieve.
+             </param>
+        <summary>
+             Gets the store location, store, or certificate
+             at the specified path.
+             </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+             Path is null
+             </exception>
+        <exception cref="T:System.Security.Cryptography.CryptographicException">
+             This exception can be thrown if any cryptographic error occurs.
+             It is not possible to know exactly what went wrong.
+             This is because of the way CryptographicException is designed.
+             Possible reasons:
+              -- certificate is invalid
+              -- certificate has no private key
+              -- certificate password mismatch
+              -- etc
+             </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetItemDynamicParameters">
+      <MemberSignature Language="C#" Value="protected override object GetItemDynamicParameters (string path);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance object GetItemDynamicParameters(string path) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Commands.CertificateProvider.GetItemDynamicParameters(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Protected Overrides Function GetItemDynamicParameters (path As String) As Object" />
+      <MemberSignature Language="F#" Value="override this.GetItemDynamicParameters : string -&gt; obj" Usage="certificateProvider.GetItemDynamicParameters path" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Security</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="path">
+             If the path was specified on the command line, this is the path
+             to the item for which to get the dynamic parameters.
+             </param>
+        <summary>
+             Gets the dynamic parameters for get-item on the Certificate
+             Provider.  We currently support the following dynamic parameters:
+             "CodeSigning," that returns only certificates good for signing
+             code or scripts.
+             </summary>
+        <returns>
+             An object that has properties and fields decorated with
+             parsing attributes similar to a cmdlet class.
+             </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetParentPath">
+      <MemberSignature Language="C#" Value="protected override string GetParentPath (string path, string root);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance string GetParentPath(string path, string root) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Commands.CertificateProvider.GetParentPath(System.String,System.String)" />
+      <MemberSignature Language="VB.NET" Value="Protected Overrides Function GetParentPath (path As String, root As String) As String" />
+      <MemberSignature Language="F#" Value="override this.GetParentPath : string * string -&gt; string" Usage="certificateProvider.GetParentPath (path, root)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Security</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+        <Parameter Name="root" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="path">
+             The path of which to get the parent.
+             </param>
+        <param name="root">
+             The root of the drive.
+             </param>
+        <summary>
+             Gets the parent of the given path.
+             </summary>
+        <returns>
+             The parent of the given path.
+             </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HasChildItems">
+      <MemberSignature Language="C#" Value="protected override bool HasChildItems (string path);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance bool HasChildItems(string path) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Commands.CertificateProvider.HasChildItems(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Protected Overrides Function HasChildItems (path As String) As Boolean" />
+      <MemberSignature Language="F#" Value="override this.HasChildItems : string -&gt; bool" Usage="certificateProvider.HasChildItems path" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Security</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="path">
+             The full path to the item.
+             </param>
+        <summary>
+             Determines if the item at the given path is a store-location
+             or store with items in it.
+             </summary>
+        <returns>
+             True if the path refers to a store location, or store that contains
+             certificates.  False otherwise.
+             </returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+             Path is null
+             </exception>
+        <exception cref="T:System.Security.Cryptography.CryptographicException">
+             This exception can be thrown if any cryptographic error occurs.
+             It is not possible to know exactly what went wrong.
+             This is because of the way CryptographicException is designed.
+             Some example reasons include:
+              -- certificate is invalid
+              -- certificate has no private key
+              -- certificate password mismatch
+             </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="InitializeDefaultDrives">
+      <MemberSignature Language="C#" Value="protected override System.Collections.ObjectModel.Collection&lt;System.Management.Automation.PSDriveInfo&gt; InitializeDefaultDrives ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Collections.ObjectModel.Collection`1&lt;class System.Management.Automation.PSDriveInfo&gt; InitializeDefaultDrives() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Commands.CertificateProvider.InitializeDefaultDrives" />
+      <MemberSignature Language="VB.NET" Value="Protected Overrides Function InitializeDefaultDrives () As Collection(Of PSDriveInfo)" />
+      <MemberSignature Language="F#" Value="override this.InitializeDefaultDrives : unit -&gt; System.Collections.ObjectModel.Collection&lt;System.Management.Automation.PSDriveInfo&gt;" Usage="certificateProvider.InitializeDefaultDrives " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Security</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.Collection&lt;System.Management.Automation.PSDriveInfo&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+             Initializes the cert: drive.
+             </summary>
+        <returns>
+             A collection that contains the PSDriveInfo object
+             that represents the cert: drive.
+             </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InvokeDefaultAction">
+      <MemberSignature Language="C#" Value="protected override void InvokeDefaultAction (string path);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void InvokeDefaultAction(string path) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Commands.CertificateProvider.InvokeDefaultAction(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Protected Overrides Sub InvokeDefaultAction (path As String)" />
+      <MemberSignature Language="F#" Value="override this.InvokeDefaultAction : string -&gt; unit" Usage="certificateProvider.InvokeDefaultAction path" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Security</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="path">
+             Ignored.
+             </param>
+        <summary>
+             Invokes the certificate management UI (certmgr.msc)
+             for any path.
+             </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsItemContainer">
+      <MemberSignature Language="C#" Value="protected override bool IsItemContainer (string path);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance bool IsItemContainer(string path) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Commands.CertificateProvider.IsItemContainer(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Protected Overrides Function IsItemContainer (path As String) As Boolean" />
+      <MemberSignature Language="F#" Value="override this.IsItemContainer : string -&gt; bool" Usage="certificateProvider.IsItemContainer path" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Security</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="path">To be added.</param>
+        <summary>
+             Determines if the item at the specified path is a store
+             or location.
+             </summary>
+        <returns>
+             True if the item at the specified path is a store or location.
+             False otherwise.
+             </returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+             Path is null or empty.
+             </exception>
+        <exception cref="T:System.Security.Cryptography.CryptographicException">
+             This exception can be thrown if any cryptographic error occurs.
+             It is not possible to know exactly what went wrong.
+             This is because of the way CryptographicException is designed.
+             Possible reasons:
+              -- certificate is invalid
+              -- certificate has no private key
+              -- certificate password mismatch
+              -- etc
+             </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="IsValidPath">
+      <MemberSignature Language="C#" Value="protected override bool IsValidPath (string path);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance bool IsValidPath(string path) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Commands.CertificateProvider.IsValidPath(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Protected Overrides Function IsValidPath (path As String) As Boolean" />
+      <MemberSignature Language="F#" Value="override this.IsValidPath : string -&gt; bool" Usage="certificateProvider.IsValidPath path" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Security</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="path">
+             The path of the item to check.
+             </param>
+        <summary>
+             Determines if the specified path is syntactically and semantically valid.
+             An example path looks like this:
+                 cert:\CurrentUser\My\5F98EBBFE735CDDAE00E33E0FD69050EF9220254
+             </summary>
+        <returns>
+             True if the path is valid, false otherwise.
+             </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ItemExists">
+      <MemberSignature Language="C#" Value="protected override bool ItemExists (string path);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance bool ItemExists(string path) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Commands.CertificateProvider.ItemExists(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Protected Overrides Function ItemExists (path As String) As Boolean" />
+      <MemberSignature Language="F#" Value="override this.ItemExists : string -&gt; bool" Usage="certificateProvider.ItemExists path" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Security</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="path">
+             The path of the item to check.
+             </param>
+        <summary>
+             Determines if the store location, store, or certificate exists
+             at the specified path.
+             </summary>
+        <returns>
+             True if a the store location, store, or certificate exists
+             at the specified path.  False otherwise.
+             </returns>
+        <remarks>
+             The method ItemExists will be hit by all built-in cmdlets that interact
+             with the CertificateProvider except for the New-Item. They are:
+                 Get-ChildItem
+                 Set-Location
+                 Push-Location
+                 Pop-Location
+                 Move-Item
+                 Invoke-Item
+                 Get-Item
+                 Remove-Item
+             So we import the PKI module in this method if we haven't tried yet.
+             </remarks>
+        <exception cref="T:System.ArgumentNullException">
+             Path is null
+             </exception>
+        <exception cref="T:System.Security.Cryptography.CryptographicException">
+             This exception can be thrown if any cryptographic error occurs.
+             It is not possible to know exactly what went wrong.
+             This is because of the way CryptographicException is designed.
+             Possible reasons:
+              -- certificate is invalid
+              -- certificate has no private key
+              -- certificate password mismatch
+              -- etc
+             </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="MoveItem">
+      <MemberSignature Language="C#" Value="protected override void MoveItem (string path, string destination);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void MoveItem(string path, string destination) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Commands.CertificateProvider.MoveItem(System.String,System.String)" />
+      <MemberSignature Language="VB.NET" Value="Protected Overrides Sub MoveItem (path As String, destination As String)" />
+      <MemberSignature Language="F#" Value="override this.MoveItem : string * string -&gt; unit" Usage="certificateProvider.MoveItem (path, destination)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Security</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+        <Parameter Name="destination" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="path">
+             The path of the item to move.
+             </param>
+        <param name="destination">
+             The path of the destination.
+             </param>
+        <summary>
+             Moves an item at the specified path to the given destination.
+             </summary>
+        <returns>
+             Nothing.  Moved items are written to the context's pipeline.
+             </returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">
+                 path is null or empty.
+                 destination is null or empty.
+             </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="NewItem">
+      <MemberSignature Language="C#" Value="protected override void NewItem (string path, string type, object value);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void NewItem(string path, string type, object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Commands.CertificateProvider.NewItem(System.String,System.String,System.Object)" />
+      <MemberSignature Language="VB.NET" Value="Protected Overrides Sub NewItem (path As String, type As String, value As Object)" />
+      <MemberSignature Language="F#" Value="override this.NewItem : string * string * obj -&gt; unit" Usage="certificateProvider.NewItem (path, type, value)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Security</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+        <Parameter Name="type" Type="System.String" />
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="path">
+             The path of the certificate store to create.
+             </param>
+        <param name="type">
+             Ignored.
+             Only support store.
+             </param>
+        <param name="value">
+             Ignored
+             </param>
+        <summary>
+             Creates a certificate store with the given path.
+             </summary>
+        <returns>
+             Nothing.  The new certificate store object is
+             written to the context's pipeline.
+             </returns>
+        <remarks>
+             New-Item doesn't go through the method "ItemExists". But for the
+             CertificateProvider, New-Item can create an X509Store and return
+             it, and the user can access the certificates within the store via its
+             property "Certificates". We want the extra new properties of the
+             X509Certificate2 objects to be shown to the user, so we also need
+             to import the PKI module in this method, if we haven't tried it yet.
+             </remarks>
+        <exception cref="T:System.ArgumentException">
+                 path is null or empty.
+             </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveItem">
+      <MemberSignature Language="C#" Value="protected override void RemoveItem (string path, bool recurse);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void RemoveItem(string path, bool recurse) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Commands.CertificateProvider.RemoveItem(System.String,System.Boolean)" />
+      <MemberSignature Language="VB.NET" Value="Protected Overrides Sub RemoveItem (path As String, recurse As Boolean)" />
+      <MemberSignature Language="F#" Value="override this.RemoveItem : string * bool -&gt; unit" Usage="certificateProvider.RemoveItem (path, recurse)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Security</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+        <Parameter Name="recurse" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="path">
+             The path of the item to remove.
+             </param>
+        <param name="recurse">
+             Recursively remove.
+             </param>
+        <summary>
+             Removes an item at the specified path
+             </summary>
+        <returns>
+             Nothing.
+             </returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">
+                 path is null or empty.
+                 destination is null or empty.
+             </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveItemDynamicParameters">
+      <MemberSignature Language="C#" Value="protected override object RemoveItemDynamicParameters (string path, bool recurse);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance object RemoveItemDynamicParameters(string path, bool recurse) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Commands.CertificateProvider.RemoveItemDynamicParameters(System.String,System.Boolean)" />
+      <MemberSignature Language="VB.NET" Value="Protected Overrides Function RemoveItemDynamicParameters (path As String, recurse As Boolean) As Object" />
+      <MemberSignature Language="F#" Value="override this.RemoveItemDynamicParameters : string * bool -&gt; obj" Usage="certificateProvider.RemoveItemDynamicParameters (path, recurse)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Security</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+        <Parameter Name="recurse" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="path">
+             If the path was specified on the command line, this is the path
+             to the item for which to get the dynamic parameters.
+             </param>
+        <param name="recurse">
+             Ignored.
+             </param>
+        <summary>
+             Gets the dynamic parameters for remove-item on the Certificate
+             Provider.  We currently only support one dynamic parameter,
+             "DeleteKey," that delete private key when we delete a certificate.
+             </summary>
+        <returns>
+             An object that has properties and fields decorated with
+             parsing attributes similar to a cmdlet class.
+             </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Management.Automation.Provider.ICmdletProviderSupportsHelp.GetHelpMaml">
+      <MemberSignature Language="C#" Value="string ICmdletProviderSupportsHelp.GetHelpMaml (string helpItemName, string path);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance string System.Management.Automation.Provider.ICmdletProviderSupportsHelp.GetHelpMaml(string helpItemName, string path) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Commands.CertificateProvider.System#Management#Automation#Provider#ICmdletProviderSupportsHelp#GetHelpMaml(System.String,System.String)" />
+      <MemberSignature Language="VB.NET" Value="Function GetHelpMaml (helpItemName As String, path As String) As String Implements ICmdletProviderSupportsHelp.GetHelpMaml" />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.Management.Automation.Provider.ICmdletProviderSupportsHelp.GetHelpMaml(System.String,System.String)</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Security</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="helpItemName" Type="System.String" />
+        <Parameter Name="path" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="helpItemName">
+            Name of help item or cmdlet for which user has requested help
+            </param>
+        <param name="path">
+            Path to the current location or path to the location of the property that the user needs
+            help about.
+            </param>
+        <summary>
+            Get provider-specific help
+            </summary>
+        <returns>
+            Provider specific MAML help content string
+            </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,231 @@
+﻿<Type Name="ProviderCapabilities" FullName="System.Management.Automation.Provider.ProviderCapabilities">
+  <TypeSignature Language="C#" Value="public enum ProviderCapabilities" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed ProviderCapabilities extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Management.Automation.Provider.ProviderCapabilities" />
+  <TypeSignature Language="VB.NET" Value="Public Enum ProviderCapabilities" />
+  <TypeSignature Language="F#" Value="type ProviderCapabilities = " />
+  <AssemblyInfo>
+    <AssemblyName>System.Management.Automation</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Flags</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>
+            This enumeration defines the capabilities that the provider implements.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Credentials">
+      <MemberSignature Language="C#" Value="Credentials" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Management.Automation.Provider.ProviderCapabilities Credentials = int32(32)" />
+      <MemberSignature Language="DocId" Value="F:System.Management.Automation.Provider.ProviderCapabilities.Credentials" />
+      <MemberSignature Language="VB.NET" Value="Credentials" />
+      <MemberSignature Language="F#" Value="Credentials = 32" Usage="System.Management.Automation.Provider.ProviderCapabilities.Credentials" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.Provider.ProviderCapabilities</ReturnType>
+      </ReturnValue>
+      <MemberValue>32</MemberValue>
+      <Docs>
+        <summary>
+            The provider supports credentials. When this capability is specified and
+            the user passes credentials to the core cmdlets, those credentials will
+            be passed to the provider. If the provider doesn't specify this capability
+            and the user passes credentials, an exception is thrown.
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Exclude">
+      <MemberSignature Language="C#" Value="Exclude" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Management.Automation.Provider.ProviderCapabilities Exclude = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Management.Automation.Provider.ProviderCapabilities.Exclude" />
+      <MemberSignature Language="VB.NET" Value="Exclude" />
+      <MemberSignature Language="F#" Value="Exclude = 2" Usage="System.Management.Automation.Provider.ProviderCapabilities.Exclude" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.Provider.ProviderCapabilities</ReturnType>
+      </ReturnValue>
+      <MemberValue>2</MemberValue>
+      <Docs>
+        <summary>
+             The provider does the exclusion filtering for those commands that take an Exclude
+             parameter. The Monad engine should not try to do the filtering on behalf of this
+             provider.
+             </summary>
+        <remarks>
+             Note, the provider should make every effort to filter in a way that is consistent
+             with the Monad engine. This option is allowed because in many cases the provider
+             can be much more efficient at filtering.
+             </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ExpandWildcards">
+      <MemberSignature Language="C#" Value="ExpandWildcards" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Management.Automation.Provider.ProviderCapabilities ExpandWildcards = int32(8)" />
+      <MemberSignature Language="DocId" Value="F:System.Management.Automation.Provider.ProviderCapabilities.ExpandWildcards" />
+      <MemberSignature Language="VB.NET" Value="ExpandWildcards" />
+      <MemberSignature Language="F#" Value="ExpandWildcards = 8" Usage="System.Management.Automation.Provider.ProviderCapabilities.ExpandWildcards" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.Provider.ProviderCapabilities</ReturnType>
+      </ReturnValue>
+      <MemberValue>8</MemberValue>
+      <Docs>
+        <summary>
+             The provider does the wildcard matching for those commands that allow for it. The Monad
+             engine should not try to do the wildcard matching on behalf of the provider when this
+             flag is set.
+             </summary>
+        <remarks>
+             Note, the provider should make every effort to do the wildcard matching in a way that is consistent
+             with the Monad engine. This option is allowed because in many cases wildcard matching
+             cannot occur via the path name or because the provider can do the matching in a much more
+             efficient manner.
+             </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Filter">
+      <MemberSignature Language="C#" Value="Filter" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Management.Automation.Provider.ProviderCapabilities Filter = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:System.Management.Automation.Provider.ProviderCapabilities.Filter" />
+      <MemberSignature Language="VB.NET" Value="Filter" />
+      <MemberSignature Language="F#" Value="Filter = 4" Usage="System.Management.Automation.Provider.ProviderCapabilities.Filter" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.Provider.ProviderCapabilities</ReturnType>
+      </ReturnValue>
+      <MemberValue>4</MemberValue>
+      <Docs>
+        <summary>
+             The provider can take a provider specific filter string.
+             </summary>
+        <remarks>
+             When this attribute is specified a provider specific filter can be passed from
+             the Core Commands to the provider. This filter string is not interpreted in any
+             way by the Monad engine.
+             </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Include">
+      <MemberSignature Language="C#" Value="Include" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Management.Automation.Provider.ProviderCapabilities Include = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Management.Automation.Provider.ProviderCapabilities.Include" />
+      <MemberSignature Language="VB.NET" Value="Include" />
+      <MemberSignature Language="F#" Value="Include = 1" Usage="System.Management.Automation.Provider.ProviderCapabilities.Include" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.Provider.ProviderCapabilities</ReturnType>
+      </ReturnValue>
+      <MemberValue>1</MemberValue>
+      <Docs>
+        <summary>
+             The provider does the inclusion filtering for those commands that take an Include
+             parameter. The Monad engine should not try to do the filtering on behalf of this
+             provider.
+             </summary>
+        <remarks>
+             Note, the provider should make every effort to filter in a way that is consistent
+             with the Monad engine. This option is allowed because in many cases the provider
+             can be much more efficient at filtering.
+             </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="None">
+      <MemberSignature Language="C#" Value="None" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Management.Automation.Provider.ProviderCapabilities None = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Management.Automation.Provider.ProviderCapabilities.None" />
+      <MemberSignature Language="VB.NET" Value="None" />
+      <MemberSignature Language="F#" Value="None = 0" Usage="System.Management.Automation.Provider.ProviderCapabilities.None" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.Provider.ProviderCapabilities</ReturnType>
+      </ReturnValue>
+      <MemberValue>0</MemberValue>
+      <Docs>
+        <summary>
+            The provider does not add any additional capabilities beyond what the
+            Monad engine provides.
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ShouldProcess">
+      <MemberSignature Language="C#" Value="ShouldProcess" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Management.Automation.Provider.ProviderCapabilities ShouldProcess = int32(16)" />
+      <MemberSignature Language="DocId" Value="F:System.Management.Automation.Provider.ProviderCapabilities.ShouldProcess" />
+      <MemberSignature Language="VB.NET" Value="ShouldProcess" />
+      <MemberSignature Language="F#" Value="ShouldProcess = 16" Usage="System.Management.Automation.Provider.ProviderCapabilities.ShouldProcess" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.Provider.ProviderCapabilities</ReturnType>
+      </ReturnValue>
+      <MemberValue>16</MemberValue>
+      <Docs>
+        <summary>
+            The provider supports ShouldProcess. When this capability is specified, the
+            -Whatif and -Confirm parameters become available to the user when using
+            this provider
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Transactions">
+      <MemberSignature Language="C#" Value="Transactions" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Management.Automation.Provider.ProviderCapabilities Transactions = int32(64)" />
+      <MemberSignature Language="DocId" Value="F:System.Management.Automation.Provider.ProviderCapabilities.Transactions" />
+      <MemberSignature Language="VB.NET" Value="Transactions" />
+      <MemberSignature Language="F#" Value="Transactions = 64" Usage="System.Management.Automation.Provider.ProviderCapabilities.Transactions" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.Provider.ProviderCapabilities</ReturnType>
+      </ReturnValue>
+      <MemberValue>64</MemberValue>
+      <Docs>
+        <summary>
+            The provider supports transactions. When this capability is specified, PowerShell
+            lets the provider participate in the current PowerShell transaction.
+            The provider does not support this capability and the user attempts to apply a
+            transaction to it, an exception is thrown.
+            </summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

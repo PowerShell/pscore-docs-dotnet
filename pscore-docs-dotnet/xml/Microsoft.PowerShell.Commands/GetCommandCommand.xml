@@ -1,0 +1,527 @@
+﻿<Type Name="GetCommandCommand" FullName="Microsoft.PowerShell.Commands.GetCommandCommand">
+  <TypeSignature Language="C#" Value="public sealed class GetCommandCommand : System.Management.Automation.PSCmdlet" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit GetCommandCommand extends System.Management.Automation.PSCmdlet" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.PowerShell.Commands.GetCommandCommand" />
+  <TypeSignature Language="VB.NET" Value="Public NotInheritable Class GetCommandCommand&#xA;Inherits PSCmdlet" />
+  <TypeSignature Language="F#" Value="type GetCommandCommand = class&#xA;    inherit PSCmdlet" />
+  <AssemblyInfo>
+    <AssemblyName>System.Management.Automation</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Management.Automation.PSCmdlet</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Management.Automation.Cmdlet("Get", "Command", DefaultParameterSetName="CmdletSet", HelpUri="https://go.microsoft.com/fwlink/?LinkID=113309")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Management.Automation.OutputType(Mono.Cecil.CustomAttributeArgument[])</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>
+             The get-command cmdlet.  It uses the command discovery APIs to find one or more
+             commands of the given name.  It returns an instance of CommandInfo for each
+             command that is found.
+             </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public GetCommandCommand ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Commands.GetCommandCommand.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New ()" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="All">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.SwitchParameter All { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Management.Automation.SwitchParameter All" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.GetCommandCommand.All" />
+      <MemberSignature Language="VB.NET" Value="Public Property All As SwitchParameter" />
+      <MemberSignature Language="F#" Value="member this.All : System.Management.Automation.SwitchParameter with get, set" Usage="Microsoft.PowerShell.Commands.GetCommandCommand.All" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ValueFromPipelineByPropertyName=true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.SwitchParameter</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+             The parameter that determines if additional matching commands should be returned.
+             (Additional matching functions and aliases are returned from module tables)
+             </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ArgumentList">
+      <MemberSignature Language="C#" Value="public object[] ArgumentList { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object[] ArgumentList" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.GetCommandCommand.ArgumentList" />
+      <MemberSignature Language="VB.NET" Value="Public Property ArgumentList As Object()" />
+      <MemberSignature Language="F#" Value="member this.ArgumentList : obj[] with get, set" Usage="Microsoft.PowerShell.Commands.GetCommandCommand.ArgumentList" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Alias(Mono.Cecil.CustomAttributeArgument[])</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.AllowEmptyCollection</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.AllowNull</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(Position=1, ValueFromRemainingArguments=true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Object[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+             The parameter that all additional arguments get bound to. These arguments are used
+             when retrieving dynamic parameters from cmdlets that support them.
+             </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginProcessing">
+      <MemberSignature Language="C#" Value="protected override void BeginProcessing ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void BeginProcessing() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Commands.GetCommandCommand.BeginProcessing" />
+      <MemberSignature Language="VB.NET" Value="Protected Overrides Sub BeginProcessing ()" />
+      <MemberSignature Language="F#" Value="override this.BeginProcessing : unit -&gt; unit" Usage="getCommandCommand.BeginProcessing " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Begin Processing
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CommandType">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.CommandTypes CommandType { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Management.Automation.CommandTypes CommandType" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.GetCommandCommand.CommandType" />
+      <MemberSignature Language="VB.NET" Value="Public Property CommandType As CommandTypes" />
+      <MemberSignature Language="F#" Value="member this.CommandType : System.Management.Automation.CommandTypes with get, set" Usage="Microsoft.PowerShell.Commands.GetCommandCommand.CommandType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Alias(Mono.Cecil.CustomAttributeArgument[])</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="AllCommandSet", ValueFromPipelineByPropertyName=true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.CommandTypes</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+             Gets or sets the type of the command to get
+             </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EndProcessing">
+      <MemberSignature Language="C#" Value="protected override void EndProcessing ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void EndProcessing() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Commands.GetCommandCommand.EndProcessing" />
+      <MemberSignature Language="VB.NET" Value="Protected Overrides Sub EndProcessing ()" />
+      <MemberSignature Language="F#" Value="override this.EndProcessing : unit -&gt; unit" Usage="getCommandCommand.EndProcessing " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+             Writes out the accumulated matching commands
+             </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FullyQualifiedModule">
+      <MemberSignature Language="C#" Value="public Microsoft.PowerShell.Commands.ModuleSpecification[] FullyQualifiedModule { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.PowerShell.Commands.ModuleSpecification[] FullyQualifiedModule" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.GetCommandCommand.FullyQualifiedModule" />
+      <MemberSignature Language="VB.NET" Value="Public Property FullyQualifiedModule As ModuleSpecification()" />
+      <MemberSignature Language="F#" Value="member this.FullyQualifiedModule : Microsoft.PowerShell.Commands.ModuleSpecification[] with get, set" Usage="Microsoft.PowerShell.Commands.GetCommandCommand.FullyQualifiedModule" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ValueFromPipelineByPropertyName=true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Microsoft.PowerShell.Commands.ModuleSpecification[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+             Gets or sets the FullyQualifiedModule parameter to the cmdlet
+             </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ListImported">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.SwitchParameter ListImported { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Management.Automation.SwitchParameter ListImported" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.GetCommandCommand.ListImported" />
+      <MemberSignature Language="VB.NET" Value="Public Property ListImported As SwitchParameter" />
+      <MemberSignature Language="F#" Value="member this.ListImported : System.Management.Automation.SwitchParameter with get, set" Usage="Microsoft.PowerShell.Commands.GetCommandCommand.ListImported" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ValueFromPipelineByPropertyName=true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.SwitchParameter</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+             The parameter that determines if additional matching commands from available modules should be returned.
+             If set to true, only those commands currently in the session are returned.
+             </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Module">
+      <MemberSignature Language="C#" Value="public string[] Module { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string[] Module" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.GetCommandCommand.Module" />
+      <MemberSignature Language="VB.NET" Value="Public Property Module As String()" />
+      <MemberSignature Language="F#" Value="member this.Module : string[] with get, set" Usage="Microsoft.PowerShell.Commands.GetCommandCommand.Module" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Alias(Mono.Cecil.CustomAttributeArgument[])</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ValueFromPipelineByPropertyName=true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+             Gets or sets the PSSnapin/Module parameter to the cmdlet
+             </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public string[] Name { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string[] Name" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.GetCommandCommand.Name" />
+      <MemberSignature Language="VB.NET" Value="Public Property Name As String()" />
+      <MemberSignature Language="F#" Value="member this.Name : string[] with get, set" Usage="Microsoft.PowerShell.Commands.GetCommandCommand.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="AllCommandSet", Position=0, ValueFromPipeline=true, ValueFromPipelineByPropertyName=true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.ValidateNotNullOrEmpty</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+             Gets or sets the path(s) or name(s) of the commands to retrieve
+             </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Noun">
+      <MemberSignature Language="C#" Value="public string[] Noun { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string[] Noun" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.GetCommandCommand.Noun" />
+      <MemberSignature Language="VB.NET" Value="Public Property Noun As String()" />
+      <MemberSignature Language="F#" Value="member this.Noun : string[] with get, set" Usage="Microsoft.PowerShell.Commands.GetCommandCommand.Noun" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.ArgumentCompleter(typeof(Microsoft.PowerShell.Commands.NounArgumentCompleter))</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="CmdletSet", ValueFromPipelineByPropertyName=true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+             Gets or sets the noun parameter to the cmdlet
+             </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ParameterName">
+      <MemberSignature Language="C#" Value="public string[] ParameterName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string[] ParameterName" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.GetCommandCommand.ParameterName" />
+      <MemberSignature Language="VB.NET" Value="Public Property ParameterName As String()" />
+      <MemberSignature Language="F#" Value="member this.ParameterName : string[] with get, set" Usage="Microsoft.PowerShell.Commands.GetCommandCommand.ParameterName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.ValidateNotNullOrEmpty</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The parameter that filters commands returned to only include commands that have a parameter with a name that matches one of the ParameterName's arguments
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ParameterType">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.PSTypeName[] ParameterType { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Management.Automation.PSTypeName[] ParameterType" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.GetCommandCommand.ParameterType" />
+      <MemberSignature Language="VB.NET" Value="Public Property ParameterType As PSTypeName()" />
+      <MemberSignature Language="F#" Value="member this.ParameterType : System.Management.Automation.PSTypeName[] with get, set" Usage="Microsoft.PowerShell.Commands.GetCommandCommand.ParameterType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.ValidateNotNullOrEmpty</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.PSTypeName[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The parameter that filters commands returned to only include commands that have a parameter of a type that matches one of the ParameterType's arguments
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ProcessRecord">
+      <MemberSignature Language="C#" Value="protected override void ProcessRecord ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void ProcessRecord() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Commands.GetCommandCommand.ProcessRecord" />
+      <MemberSignature Language="VB.NET" Value="Protected Overrides Sub ProcessRecord ()" />
+      <MemberSignature Language="F#" Value="override this.ProcessRecord : unit -&gt; unit" Usage="getCommandCommand.ProcessRecord " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+             method that implements get-command
+             </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ShowCommandInfo">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.SwitchParameter ShowCommandInfo { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Management.Automation.SwitchParameter ShowCommandInfo" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.GetCommandCommand.ShowCommandInfo" />
+      <MemberSignature Language="VB.NET" Value="Public Property ShowCommandInfo As SwitchParameter" />
+      <MemberSignature Language="F#" Value="member this.ShowCommandInfo : System.Management.Automation.SwitchParameter with get, set" Usage="Microsoft.PowerShell.Commands.GetCommandCommand.ShowCommandInfo" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.SwitchParameter</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            This parameter causes the output to be packaged into ShowCommandInfo PSObject types
+            needed to display GUI command information.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Syntax">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.SwitchParameter Syntax { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Management.Automation.SwitchParameter Syntax" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.GetCommandCommand.Syntax" />
+      <MemberSignature Language="VB.NET" Value="Public Property Syntax As SwitchParameter" />
+      <MemberSignature Language="F#" Value="member this.Syntax : System.Management.Automation.SwitchParameter with get, set" Usage="Microsoft.PowerShell.Commands.GetCommandCommand.Syntax" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ValueFromPipelineByPropertyName=true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.SwitchParameter</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+             The parameter that determines if the CommandInfo or the string
+             definition of the command is output.
+             </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TotalCount">
+      <MemberSignature Language="C#" Value="public int TotalCount { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 TotalCount" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.GetCommandCommand.TotalCount" />
+      <MemberSignature Language="VB.NET" Value="Public Property TotalCount As Integer" />
+      <MemberSignature Language="F#" Value="member this.TotalCount : int with get, set" Usage="Microsoft.PowerShell.Commands.GetCommandCommand.TotalCount" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ValueFromPipelineByPropertyName=true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+             The parameter representing the total number of commands that will
+             be returned. If negative, all matching commands that are found will
+             be returned.
+             </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Verb">
+      <MemberSignature Language="C#" Value="public string[] Verb { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string[] Verb" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.GetCommandCommand.Verb" />
+      <MemberSignature Language="VB.NET" Value="Public Property Verb As String()" />
+      <MemberSignature Language="F#" Value="member this.Verb : string[] with get, set" Usage="Microsoft.PowerShell.Commands.GetCommandCommand.Verb" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="CmdletSet", ValueFromPipelineByPropertyName=true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+             Gets or sets the verb parameter to the cmdlet
+             </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

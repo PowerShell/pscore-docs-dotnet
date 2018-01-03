@@ -1,0 +1,144 @@
+﻿<Type Name="HostUtilities" FullName="System.Management.Automation.HostUtilities">
+  <TypeSignature Language="C#" Value="public static class HostUtilities" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract sealed beforefieldinit HostUtilities extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Management.Automation.HostUtilities" />
+  <TypeSignature Language="VB.NET" Value="Public Class HostUtilities" />
+  <TypeSignature Language="F#" Value="type HostUtilities = class" />
+  <AssemblyInfo>
+    <AssemblyName>System.Management.Automation</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Implements utility methods that might be used by Hosts.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="CreatePSEditFunction">
+      <MemberSignature Language="C#" Value="public const string CreatePSEditFunction;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal string CreatePSEditFunction" />
+      <MemberSignature Language="DocId" Value="F:System.Management.Automation.HostUtilities.CreatePSEditFunction" />
+      <MemberSignature Language="VB.NET" Value="Public Const CreatePSEditFunction As String " />
+      <MemberSignature Language="F#" Value="val mutable CreatePSEditFunction : string" Usage="System.Management.Automation.HostUtilities.CreatePSEditFunction" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            CreatePSEditFunction script string.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InvokeOnRunspace">
+      <MemberSignature Language="C#" Value="public static System.Collections.ObjectModel.Collection&lt;System.Management.Automation.PSObject&gt; InvokeOnRunspace (System.Management.Automation.PSCommand command, System.Management.Automation.Runspaces.Runspace runspace);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Collections.ObjectModel.Collection`1&lt;class System.Management.Automation.PSObject&gt; InvokeOnRunspace(class System.Management.Automation.PSCommand command, class System.Management.Automation.Runspaces.Runspace runspace) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.HostUtilities.InvokeOnRunspace(System.Management.Automation.PSCommand,System.Management.Automation.Runspaces.Runspace)" />
+      <MemberSignature Language="F#" Value="static member InvokeOnRunspace : System.Management.Automation.PSCommand * System.Management.Automation.Runspaces.Runspace -&gt; System.Collections.ObjectModel.Collection&lt;System.Management.Automation.PSObject&gt;" Usage="System.Management.Automation.HostUtilities.InvokeOnRunspace (command, runspace)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.Collection&lt;System.Management.Automation.PSObject&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="command" Type="System.Management.Automation.PSCommand" />
+        <Parameter Name="runspace" Type="System.Management.Automation.Runspaces.Runspace" />
+      </Parameters>
+      <Docs>
+        <param name="command">Command to invoke</param>
+        <param name="runspace">Runspace to invoke the command on</param>
+        <summary>
+             Helper method to invoke a PSCommand on a given runspace.  This method correctly invokes the command for
+             these runspace cases:
+               1. Local runspace.  If the local runspace is busy it will invoke as a nested command.
+               2. Remote runspace.
+               3. Runspace that is stopped in the debugger at a breakpoint.
+            
+             Error and information streams are ignored and only the command result output is returned.
+            
+             This method is NOT thread safe.  It does not support running commands from different threads on the
+             provided runspace.  It assumes the thread invoking this method is the same that runs all other
+             commands on the provided runspace.
+             </summary>
+        <returns>Collection of command output result objects</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PSEditFunction">
+      <MemberSignature Language="C#" Value="public const string PSEditFunction;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal string PSEditFunction" />
+      <MemberSignature Language="DocId" Value="F:System.Management.Automation.HostUtilities.PSEditFunction" />
+      <MemberSignature Language="VB.NET" Value="Public Const PSEditFunction As String " />
+      <MemberSignature Language="F#" Value="val mutable PSEditFunction : string" Usage="System.Management.Automation.HostUtilities.PSEditFunction" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            PSEditFunction script string.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoteSessionOpenFileEvent">
+      <MemberSignature Language="C#" Value="public const string RemoteSessionOpenFileEvent;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal string RemoteSessionOpenFileEvent" />
+      <MemberSignature Language="DocId" Value="F:System.Management.Automation.HostUtilities.RemoteSessionOpenFileEvent" />
+      <MemberSignature Language="VB.NET" Value="Public Const RemoteSessionOpenFileEvent As String " />
+      <MemberSignature Language="F#" Value="val mutable RemoteSessionOpenFileEvent : string" Usage="System.Management.Automation.HostUtilities.RemoteSessionOpenFileEvent" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Open file event.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemovePSEditFunction">
+      <MemberSignature Language="C#" Value="public const string RemovePSEditFunction;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal string RemovePSEditFunction" />
+      <MemberSignature Language="DocId" Value="F:System.Management.Automation.HostUtilities.RemovePSEditFunction" />
+      <MemberSignature Language="VB.NET" Value="Public Const RemovePSEditFunction As String " />
+      <MemberSignature Language="F#" Value="val mutable RemovePSEditFunction : string" Usage="System.Management.Automation.HostUtilities.RemovePSEditFunction" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            RemovePSEditFunction script string.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

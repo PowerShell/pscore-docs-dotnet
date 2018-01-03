@@ -1,0 +1,170 @@
+﻿<Type Name="SecurityDescriptorCmdletProviderIntrinsics" FullName="System.Management.Automation.SecurityDescriptorCmdletProviderIntrinsics">
+  <TypeSignature Language="C#" Value="public sealed class SecurityDescriptorCmdletProviderIntrinsics" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit SecurityDescriptorCmdletProviderIntrinsics extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Management.Automation.SecurityDescriptorCmdletProviderIntrinsics" />
+  <TypeSignature Language="VB.NET" Value="Public NotInheritable Class SecurityDescriptorCmdletProviderIntrinsics" />
+  <TypeSignature Language="F#" Value="type SecurityDescriptorCmdletProviderIntrinsics = class" />
+  <AssemblyInfo>
+    <AssemblyName>System.Management.Automation</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+             Provides the *-SecurityDescriptor noun for the cmdlet providers.
+             </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Get">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.Collection&lt;System.Management.Automation.PSObject&gt; Get (string path, System.Security.AccessControl.AccessControlSections includeSections);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Collections.ObjectModel.Collection`1&lt;class System.Management.Automation.PSObject&gt; Get(string path, valuetype System.Security.AccessControl.AccessControlSections includeSections) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.SecurityDescriptorCmdletProviderIntrinsics.Get(System.String,System.Security.AccessControl.AccessControlSections)" />
+      <MemberSignature Language="VB.NET" Value="Public Function Get (path As String, includeSections As AccessControlSections) As Collection(Of PSObject)" />
+      <MemberSignature Language="F#" Value="member this.Get : string * System.Security.AccessControl.AccessControlSections -&gt; System.Collections.ObjectModel.Collection&lt;System.Management.Automation.PSObject&gt;" Usage="securityDescriptorCmdletProviderIntrinsics.Get (path, includeSections)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.Collection&lt;System.Management.Automation.PSObject&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+        <Parameter Name="includeSections" Type="System.Security.AccessControl.AccessControlSections" />
+      </Parameters>
+      <Docs>
+        <param name="path">
+             The path of the item to retrieve. It may be a drive or provider-qualified path and may include.
+             glob characters.
+             </param>
+        <param name="includeSections">
+             The sections of the security descriptor to include.
+             </param>
+        <summary>
+             Gets the SecurityDescriptor at the specified path, including only the specified
+             AccessControlSections.
+             </summary>
+        <returns>
+             The SecurityDescriptor(s) at the specified path.
+             </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NewFromPath">
+      <MemberSignature Language="C#" Value="public System.Security.AccessControl.ObjectSecurity NewFromPath (string path, System.Security.AccessControl.AccessControlSections includeSections);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Security.AccessControl.ObjectSecurity NewFromPath(string path, valuetype System.Security.AccessControl.AccessControlSections includeSections) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.SecurityDescriptorCmdletProviderIntrinsics.NewFromPath(System.String,System.Security.AccessControl.AccessControlSections)" />
+      <MemberSignature Language="VB.NET" Value="Public Function NewFromPath (path As String, includeSections As AccessControlSections) As ObjectSecurity" />
+      <MemberSignature Language="F#" Value="member this.NewFromPath : string * System.Security.AccessControl.AccessControlSections -&gt; System.Security.AccessControl.ObjectSecurity" Usage="securityDescriptorCmdletProviderIntrinsics.NewFromPath (path, includeSections)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.AccessControl.ObjectSecurity</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+        <Parameter Name="includeSections" Type="System.Security.AccessControl.AccessControlSections" />
+      </Parameters>
+      <Docs>
+        <param name="path">
+             The path of the item to retrieve. It may be a drive or provider-qualified path and may include
+             glob characters.
+             </param>
+        <param name="includeSections">
+             The sections of the security descriptor to include.
+             </param>
+        <summary>
+             Creates a new SecurityDescriptor from the item at the specified path, including only the specified
+             AccessControlSections.
+             </summary>
+        <returns>
+             The SecurityDescriptor(s) at the specified path.
+             </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NewOfType">
+      <MemberSignature Language="C#" Value="public System.Security.AccessControl.ObjectSecurity NewOfType (string providerId, string type, System.Security.AccessControl.AccessControlSections includeSections);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Security.AccessControl.ObjectSecurity NewOfType(string providerId, string type, valuetype System.Security.AccessControl.AccessControlSections includeSections) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.SecurityDescriptorCmdletProviderIntrinsics.NewOfType(System.String,System.String,System.Security.AccessControl.AccessControlSections)" />
+      <MemberSignature Language="VB.NET" Value="Public Function NewOfType (providerId As String, type As String, includeSections As AccessControlSections) As ObjectSecurity" />
+      <MemberSignature Language="F#" Value="member this.NewOfType : string * string * System.Security.AccessControl.AccessControlSections -&gt; System.Security.AccessControl.ObjectSecurity" Usage="securityDescriptorCmdletProviderIntrinsics.NewOfType (providerId, type, includeSections)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.AccessControl.ObjectSecurity</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="providerId" Type="System.String" />
+        <Parameter Name="type" Type="System.String" />
+        <Parameter Name="includeSections" Type="System.Security.AccessControl.AccessControlSections" />
+      </Parameters>
+      <Docs>
+        <param name="providerId">
+             The name of the provider.
+             </param>
+        <param name="type">
+             The type of the item which corresponds to the security
+             descriptor that we want to create.
+             </param>
+        <param name="includeSections">
+             The sections of the security descriptor to include.
+             </param>
+        <summary>
+             Creates a new SecurityDescriptor from the specified provider and of the given type,
+             including only the specified AccessControlSections.
+             </summary>
+        <returns>
+             A new SecurityDescriptor of the specified type.
+             </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Set">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.Collection&lt;System.Management.Automation.PSObject&gt; Set (string path, System.Security.AccessControl.ObjectSecurity sd);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Collections.ObjectModel.Collection`1&lt;class System.Management.Automation.PSObject&gt; Set(string path, class System.Security.AccessControl.ObjectSecurity sd) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.SecurityDescriptorCmdletProviderIntrinsics.Set(System.String,System.Security.AccessControl.ObjectSecurity)" />
+      <MemberSignature Language="VB.NET" Value="Public Function Set (path As String, sd As ObjectSecurity) As Collection(Of PSObject)" />
+      <MemberSignature Language="F#" Value="member this.Set : string * System.Security.AccessControl.ObjectSecurity -&gt; System.Collections.ObjectModel.Collection&lt;System.Management.Automation.PSObject&gt;" Usage="securityDescriptorCmdletProviderIntrinsics.Set (path, sd)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.Collection&lt;System.Management.Automation.PSObject&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+        <Parameter Name="sd" Type="System.Security.AccessControl.ObjectSecurity" />
+      </Parameters>
+      <Docs>
+        <param name="path">
+             The path of the item to set. It may be a drive or provider-qualified path and may include
+             glob characters.
+             </param>
+        <param name="sd">
+             The new security descriptor to set.
+             </param>
+        <summary>
+             Sets the provided SecurityDescriptor at the specified path.
+             </summary>
+        <returns>
+             The SecurityDescriptor(s) set at the specified path.
+             </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,113 @@
+﻿<Type Name="StaticParameterBinder" FullName="System.Management.Automation.Language.StaticParameterBinder">
+  <TypeSignature Language="C#" Value="public static class StaticParameterBinder" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract sealed beforefieldinit StaticParameterBinder extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Management.Automation.Language.StaticParameterBinder" />
+  <TypeSignature Language="VB.NET" Value="Public Class StaticParameterBinder" />
+  <TypeSignature Language="F#" Value="type StaticParameterBinder = class" />
+  <AssemblyInfo>
+    <AssemblyName>System.Management.Automation</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+             Runs the PowerShell parameter binding algorithm against a CommandAst,
+             returning information about which parameters were bound.
+            
+             </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="BindCommand">
+      <MemberSignature Language="C#" Value="public static System.Management.Automation.Language.StaticBindingResult BindCommand (System.Management.Automation.Language.CommandAst commandAst);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Management.Automation.Language.StaticBindingResult BindCommand(class System.Management.Automation.Language.CommandAst commandAst) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Language.StaticParameterBinder.BindCommand(System.Management.Automation.Language.CommandAst)" />
+      <MemberSignature Language="F#" Value="static member BindCommand : System.Management.Automation.Language.CommandAst -&gt; System.Management.Automation.Language.StaticBindingResult" Usage="System.Management.Automation.Language.StaticParameterBinder.BindCommand commandAst" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.Language.StaticBindingResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="commandAst" Type="System.Management.Automation.Language.CommandAst" />
+      </Parameters>
+      <Docs>
+        <param name="commandAst">The CommandAst that represents the command invocation.</param>
+        <summary>
+            Bind a CommandAst to one of PowerShell's built-in commands
+            </summary>
+        <returns>The StaticBindingResult that represents the binding.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BindCommand">
+      <MemberSignature Language="C#" Value="public static System.Management.Automation.Language.StaticBindingResult BindCommand (System.Management.Automation.Language.CommandAst commandAst, bool resolve);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Management.Automation.Language.StaticBindingResult BindCommand(class System.Management.Automation.Language.CommandAst commandAst, bool resolve) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Language.StaticParameterBinder.BindCommand(System.Management.Automation.Language.CommandAst,System.Boolean)" />
+      <MemberSignature Language="F#" Value="static member BindCommand : System.Management.Automation.Language.CommandAst * bool -&gt; System.Management.Automation.Language.StaticBindingResult" Usage="System.Management.Automation.Language.StaticParameterBinder.BindCommand (commandAst, resolve)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.Language.StaticBindingResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="commandAst" Type="System.Management.Automation.Language.CommandAst" />
+        <Parameter Name="resolve" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="commandAst">The CommandAst that represents the command invocation.</param>
+        <param name="resolve">Boolean to determine whether binding should be syntactic, or should attempt
+            to resolve against an existing command.
+            </param>
+        <summary>
+            Bind a CommandAst to the specified command
+            </summary>
+        <returns>The StaticBindingResult that represents the binding.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BindCommand">
+      <MemberSignature Language="C#" Value="public static System.Management.Automation.Language.StaticBindingResult BindCommand (System.Management.Automation.Language.CommandAst commandAst, bool resolve, string[] desiredParameters);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Management.Automation.Language.StaticBindingResult BindCommand(class System.Management.Automation.Language.CommandAst commandAst, bool resolve, string[] desiredParameters) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Language.StaticParameterBinder.BindCommand(System.Management.Automation.Language.CommandAst,System.Boolean,System.String[])" />
+      <MemberSignature Language="F#" Value="static member BindCommand : System.Management.Automation.Language.CommandAst * bool * string[] -&gt; System.Management.Automation.Language.StaticBindingResult" Usage="System.Management.Automation.Language.StaticParameterBinder.BindCommand (commandAst, resolve, desiredParameters)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.Language.StaticBindingResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="commandAst" Type="System.Management.Automation.Language.CommandAst" />
+        <Parameter Name="resolve" Type="System.Boolean" />
+        <Parameter Name="desiredParameters" Type="System.String[]" />
+      </Parameters>
+      <Docs>
+        <param name="commandAst">The CommandAst that represents the command invocation.</param>
+        <param name="resolve">Boolean to determine whether binding should be syntactic, or should attempt
+            to resolve against an existing command.
+            </param>
+        <param name="desiredParameters">
+                A string array that represents parameter names of interest. If any of these are specified,
+                then full binding is done.
+            </param>
+        <summary>
+            Bind a CommandAst to the specified command
+            </summary>
+        <returns>The StaticBindingResult that represents the binding.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

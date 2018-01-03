@@ -1,0 +1,124 @@
+﻿<Type Name="ValidateArgumentsAttribute" FullName="System.Management.Automation.ValidateArgumentsAttribute">
+  <TypeSignature Language="C#" Value="public abstract class ValidateArgumentsAttribute : System.Management.Automation.Internal.CmdletMetadataAttribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit ValidateArgumentsAttribute extends System.Management.Automation.Internal.CmdletMetadataAttribute" />
+  <TypeSignature Language="DocId" Value="T:System.Management.Automation.ValidateArgumentsAttribute" />
+  <TypeSignature Language="VB.NET" Value="Public MustInherit Class ValidateArgumentsAttribute&#xA;Inherits CmdletMetadataAttribute" />
+  <TypeSignature Language="F#" Value="type ValidateArgumentsAttribute = class&#xA;    inherit CmdletMetadataAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System.Management.Automation</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Management.Automation.Internal.CmdletMetadataAttribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Property | System.AttributeTargets.Field)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>
+             Serves as the base class for Validate attributes that validate parameter arguments.
+             </summary>
+    <remarks>
+             Argument validation attributes can be attached to
+             <see cref="T:System.Management.Automation.Cmdlet" /> and <see cref="T:System.Management.Automation.Provider.CmdletProvider" />
+             parameters to ensure that the Cmdlet or CmdletProvider will not
+             be invoked with invalid values of the parameter.  Existing
+             validation attributes include <see cref="T:System.Management.Automation.ValidateCountAttribute" />,
+             <see cref="T:System.Management.Automation.ValidateNotNullAttribute" />,
+             <see cref="T:System.Management.Automation.ValidateNotNullOrEmptyAttribute" />,
+             <see cref="T:System.Management.Automation.ValidateArgumentsAttribute" />,
+             <see cref="T:System.Management.Automation.ValidateLengthAttribute" />,
+             <see cref="T:System.Management.Automation.ValidateRangeAttribute" />,
+             <see cref="T:System.Management.Automation.ValidatePatternAttribute" />, and
+             <see cref="T:System.Management.Automation.ValidateSetAttribute" />.
+            
+             PSSnapins wishing to create custom argument validation attributes
+             should derive from
+             <see cref="T:System.Management.Automation.ValidateArgumentsAttribute" />
+             and override the
+             <see cref="M:System.Management.Automation.ValidateArgumentsAttribute.Validate(System.Object,System.Management.Automation.EngineIntrinsics)" />
+             abstract method, after which they can apply the
+             attribute to their parameters.
+            
+             <see cref="T:System.Management.Automation.ValidateArgumentsAttribute" /> validates the argument
+             as a whole.  If the argument value is potentially an enumeration,
+             you can derive from <see cref="T:System.Management.Automation.ValidateEnumeratedArgumentsAttribute" />
+             which will take care of unrolling the enumeration
+             and validate each element individually.
+            
+             It is also recommended to override
+             <see cref="M:System.Object.ToString" /> to return a readable string
+             similar to the attribute declaration, for example
+             "[ValidateRangeAttribute(5,10)]".
+            
+             If this attribute is applied to a string parameter, the string command argument will be validated.
+             If this attribute is applied to a string[] parameter, the string[] command argument will be validated.
+             </remarks>
+    <altmember cref="T:System.Management.Automation.ValidateEnumeratedArgumentsAttribute" />
+    <altmember cref="T:System.Management.Automation.ValidateCountAttribute" />
+    <altmember cref="T:System.Management.Automation.ValidateNotNullAttribute" />
+    <altmember cref="T:System.Management.Automation.ValidateNotNullOrEmptyAttribute" />
+    <altmember cref="T:System.Management.Automation.ValidateArgumentsAttribute" />
+    <altmember cref="T:System.Management.Automation.ValidateLengthAttribute" />
+    <altmember cref="T:System.Management.Automation.ValidateRangeAttribute" />
+    <altmember cref="T:System.Management.Automation.ValidatePatternAttribute" />
+    <altmember cref="T:System.Management.Automation.ValidateSetAttribute" />
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected ValidateArgumentsAttribute ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.ValidateArgumentsAttribute.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Protected Sub New ()" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>
+            Initializes a new instance of a class derived from ValidateArgumentsAttribute
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Validate">
+      <MemberSignature Language="C#" Value="protected abstract void Validate (object arguments, System.Management.Automation.EngineIntrinsics engineIntrinsics);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void Validate(object arguments, class System.Management.Automation.EngineIntrinsics engineIntrinsics) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.ValidateArgumentsAttribute.Validate(System.Object,System.Management.Automation.EngineIntrinsics)" />
+      <MemberSignature Language="F#" Value="abstract member Validate : obj * System.Management.Automation.EngineIntrinsics -&gt; unit" Usage="validateArgumentsAttribute.Validate (arguments, engineIntrinsics)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="arguments" Type="System.Object" />
+        <Parameter Name="engineIntrinsics" Type="System.Management.Automation.EngineIntrinsics" />
+      </Parameters>
+      <Docs>
+        <param name="arguments">argument value to validate</param>
+        <param name="engineIntrinsics">
+            The engine APIs for the context under which the prerequisite is being
+            evaluated.
+            </param>
+        <summary>
+            Overridden by subclasses to implement the validation of the parameter arguments
+            </summary>
+        <remarks>
+            Validate that the value of <paramref name="arguments" /> is valid,
+            and throw <see cref="T:System.Management.Automation.ValidationMetadataException" />
+            if it is invalid.
+            </remarks>
+        <exception cref="T:System.Management.Automation.ValidationMetadataException">should be thrown for any validation failure</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,1741 @@
+﻿<Type Name="FileSystemProvider" FullName="Microsoft.PowerShell.Commands.FileSystemProvider">
+  <TypeSignature Language="C#" Value="public sealed class FileSystemProvider : System.Management.Automation.Provider.NavigationCmdletProvider, System.Management.Automation.Provider.ICmdletProviderSupportsHelp, System.Management.Automation.Provider.IContentCmdletProvider, System.Management.Automation.Provider.IPropertyCmdletProvider, System.Management.Automation.Provider.ISecurityDescriptorCmdletProvider" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit FileSystemProvider extends System.Management.Automation.Provider.NavigationCmdletProvider implements class System.Management.Automation.Provider.ICmdletProviderSupportsHelp, class System.Management.Automation.Provider.IContentCmdletProvider, class System.Management.Automation.Provider.IPropertyCmdletProvider, class System.Management.Automation.Provider.ISecurityDescriptorCmdletProvider" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.PowerShell.Commands.FileSystemProvider" />
+  <TypeSignature Language="VB.NET" Value="Public NotInheritable Class FileSystemProvider&#xA;Inherits NavigationCmdletProvider&#xA;Implements ICmdletProviderSupportsHelp, IContentCmdletProvider, IPropertyCmdletProvider, ISecurityDescriptorCmdletProvider" />
+  <TypeSignature Language="F#" Value="type FileSystemProvider = class&#xA;    inherit NavigationCmdletProvider&#xA;    interface IContentCmdletProvider&#xA;    interface IPropertyCmdletProvider&#xA;    interface ISecurityDescriptorCmdletProvider&#xA;    interface ICmdletProviderSupportsHelp" />
+  <AssemblyInfo>
+    <AssemblyName>System.Management.Automation</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Management.Automation.Provider.NavigationCmdletProvider</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Management.Automation.Provider.ICmdletProviderSupportsHelp</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.Management.Automation.Provider.IContentCmdletProvider</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.Management.Automation.Provider.IPropertyCmdletProvider</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.Management.Automation.Provider.ISecurityDescriptorCmdletProvider</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Management.Automation.OutputType(typeof(System.Security.AccessControl.FileSecurity), ProviderCmdlet="Set-Acl")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Management.Automation.OutputType(Mono.Cecil.CustomAttributeArgument[], ProviderCmdlet="Resolve-Path")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Management.Automation.OutputType(typeof(System.Management.Automation.PathInfo), ProviderCmdlet="Push-Location")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Management.Automation.OutputType(Mono.Cecil.CustomAttributeArgument[], ProviderCmdlet="Get-Content")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Management.Automation.OutputType(typeof(System.IO.FileInfo), ProviderCmdlet="Get-Item")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Management.Automation.OutputType(Mono.Cecil.CustomAttributeArgument[], ProviderCmdlet="Get-ChildItem")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Management.Automation.OutputType(Mono.Cecil.CustomAttributeArgument[], ProviderCmdlet="Get-Acl")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Management.Automation.OutputType(Mono.Cecil.CustomAttributeArgument[], ProviderCmdlet="Get-Item")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Management.Automation.OutputType(Mono.Cecil.CustomAttributeArgument[], ProviderCmdlet="Get-ItemProperty")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Management.Automation.OutputType(Mono.Cecil.CustomAttributeArgument[], ProviderCmdlet="New-Item")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Management.Automation.Provider.CmdletProvider("FileSystem", System.Management.Automation.Provider.ProviderCapabilities.Filter | System.Management.Automation.Provider.ProviderCapabilities.ShouldProcess | System.Management.Automation.Provider.ProviderCapabilities.Credentials)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>
+            Defines the implementation of a File System Provider.  This provider
+            allows for stateless namespace navigation of the file system.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public FileSystemProvider ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Commands.FileSystemProvider.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New ()" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>
+            Initializes a new instance of the FileSystemProvider class. Since this
+            object needs to be stateless, the constructor does nothing.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ClearContent">
+      <MemberSignature Language="C#" Value="public void ClearContent (string path);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void ClearContent(string path) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Commands.FileSystemProvider.ClearContent(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub ClearContent (path As String)" />
+      <MemberSignature Language="F#" Value="override this.ClearContent : string -&gt; unit" Usage="fileSystemProvider.ClearContent path" />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.Management.Automation.Provider.IContentCmdletProvider.ClearContent(System.String)</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="path">
+             The path to the file of which to clear the contents.
+             </param>
+        <summary>
+             Clears the content of the specified file.
+             </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">
+                 path is null or empty.
+             </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ClearContentDynamicParameters">
+      <MemberSignature Language="C#" Value="public object ClearContentDynamicParameters (string path);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object ClearContentDynamicParameters(string path) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Commands.FileSystemProvider.ClearContentDynamicParameters(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Function ClearContentDynamicParameters (path As String) As Object" />
+      <MemberSignature Language="F#" Value="override this.ClearContentDynamicParameters : string -&gt; obj" Usage="fileSystemProvider.ClearContentDynamicParameters path" />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.Management.Automation.Provider.IContentCmdletProvider.ClearContentDynamicParameters(System.String)</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="path">
+             If the path was specified on the command line, this is the path
+             to the item for which to get the dynamic parameters.
+             </param>
+        <summary>
+             Gets the dynamic property parameters required by the clear-content cmdlet.
+             </summary>
+        <returns>
+             A FileSystemClearContentDynamicParameters that provides access to the -Stream dynamic parameter.
+             </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ClearProperty">
+      <MemberSignature Language="C#" Value="public void ClearProperty (string path, System.Collections.ObjectModel.Collection&lt;string&gt; propertiesToClear);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void ClearProperty(string path, class System.Collections.ObjectModel.Collection`1&lt;string&gt; propertiesToClear) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Commands.FileSystemProvider.ClearProperty(System.String,System.Collections.ObjectModel.Collection{System.String})" />
+      <MemberSignature Language="VB.NET" Value="Public Sub ClearProperty (path As String, propertiesToClear As Collection(Of String))" />
+      <MemberSignature Language="F#" Value="override this.ClearProperty : string * System.Collections.ObjectModel.Collection&lt;string&gt; -&gt; unit" Usage="fileSystemProvider.ClearProperty (path, propertiesToClear)" />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.Management.Automation.Provider.IPropertyCmdletProvider.ClearProperty(System.String,System.Collections.ObjectModel.Collection{System.String})</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+        <Parameter Name="propertiesToClear" Type="System.Collections.ObjectModel.Collection&lt;System.String&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="path">
+             The path of the item on which to clear the properties.
+             </param>
+        <param name="propertiesToClear">
+             A collection of the names of the properties to clear.  The File System
+             provider supports clearing only the "Attributes" property.
+             </param>
+        <summary>
+             Clears the specified properties on the item at the given path.
+             The File System provider supports only the "Attributes" property.
+             </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">
+                 Path is null or empty.
+             </exception>
+        <exception cref="T:System.ArgumentNullException">
+                 propertiesToClear is null or count is zero.
+             </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ClearPropertyDynamicParameters">
+      <MemberSignature Language="C#" Value="public object ClearPropertyDynamicParameters (string path, System.Collections.ObjectModel.Collection&lt;string&gt; propertiesToClear);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object ClearPropertyDynamicParameters(string path, class System.Collections.ObjectModel.Collection`1&lt;string&gt; propertiesToClear) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Commands.FileSystemProvider.ClearPropertyDynamicParameters(System.String,System.Collections.ObjectModel.Collection{System.String})" />
+      <MemberSignature Language="VB.NET" Value="Public Function ClearPropertyDynamicParameters (path As String, propertiesToClear As Collection(Of String)) As Object" />
+      <MemberSignature Language="F#" Value="override this.ClearPropertyDynamicParameters : string * System.Collections.ObjectModel.Collection&lt;string&gt; -&gt; obj" Usage="fileSystemProvider.ClearPropertyDynamicParameters (path, propertiesToClear)" />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.Management.Automation.Provider.IPropertyCmdletProvider.ClearPropertyDynamicParameters(System.String,System.Collections.ObjectModel.Collection{System.String})</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+        <Parameter Name="propertiesToClear" Type="System.Collections.ObjectModel.Collection&lt;System.String&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="path">
+             If the path was specified on the command line, this is the path
+             to the item for which to set the dynamic parameters.
+             </param>
+        <param name="propertiesToClear">
+             A collection of the names of the properties to clear.
+             </param>
+        <summary>
+             Gets the dynamic property parameters required by the clear-itemproperty cmdlet.
+             This feature is not required by the File System provider.
+             </summary>
+        <returns>
+             Null.  This feature is not required by the File System provider.
+             </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ConvertPath">
+      <MemberSignature Language="C#" Value="protected override bool ConvertPath (string path, string filter, ref string updatedPath, ref string updatedFilter);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance bool ConvertPath(string path, string filter, string&amp; updatedPath, string&amp; updatedFilter) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Commands.FileSystemProvider.ConvertPath(System.String,System.String,System.String@,System.String@)" />
+      <MemberSignature Language="VB.NET" Value="Protected Overrides Function ConvertPath (path As String, filter As String, ByRef updatedPath As String, ByRef updatedFilter As String) As Boolean" />
+      <MemberSignature Language="F#" Value="override this.ConvertPath : string * string *  *  -&gt; bool" Usage="fileSystemProvider.ConvertPath (path, filter, updatedPath, updatedFilter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+        <Parameter Name="filter" Type="System.String" />
+        <Parameter Name="updatedPath" Type="System.String&amp;" RefType="ref" />
+        <Parameter Name="updatedFilter" Type="System.String&amp;" RefType="ref" />
+      </Parameters>
+      <Docs>
+        <param name="path">
+             The path to the item. Unlike most other provider APIs, this path is likely to
+             contain PowerShell wildcards.
+             </param>
+        <param name="filter">
+             The provider-specific filter currently applied.
+             </param>
+        <param name="updatedPath">
+             The new path to the item.
+             </param>
+        <param name="updatedFilter">
+             The new filter.
+             </param>
+        <summary>
+             Gets a new provider-specific path and filter (if any) that corresponds to the given
+             path.
+             </summary>
+        <returns>
+             True if the path or filter were altered. False otherwise.
+             </returns>
+        <remarks>
+             Makes no attempt to filter if the user has already specified a filter, or
+             if the path contains directory separators. Those are not supported by the
+             FileSystem filter.
+             </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CopyItem">
+      <MemberSignature Language="C#" Value="protected override void CopyItem (string path, string destinationPath, bool recurse);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void CopyItem(string path, string destinationPath, bool recurse) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Commands.FileSystemProvider.CopyItem(System.String,System.String,System.Boolean)" />
+      <MemberSignature Language="VB.NET" Value="Protected Overrides Sub CopyItem (path As String, destinationPath As String, recurse As Boolean)" />
+      <MemberSignature Language="F#" Value="override this.CopyItem : string * string * bool -&gt; unit" Usage="fileSystemProvider.CopyItem (path, destinationPath, recurse)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+        <Parameter Name="destinationPath" Type="System.String" />
+        <Parameter Name="recurse" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="path">
+             The path of the item to copy.
+             </param>
+        <param name="destinationPath">
+             The path of the destination.
+             </param>
+        <param name="recurse">
+             Specifies if the operation should also copy child items.
+             </param>
+        <summary>
+             Copies an item at the specified path to the given destination.
+             </summary>
+        <returns>
+             Nothing.  Copied items are written to the context's pipeline.
+             </returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">
+                 path is null or empty.
+                 destination path is null or empty.
+             </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CopyItemDynamicParameters">
+      <MemberSignature Language="C#" Value="protected override object CopyItemDynamicParameters (string path, string destination, bool recurse);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance object CopyItemDynamicParameters(string path, string destination, bool recurse) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Commands.FileSystemProvider.CopyItemDynamicParameters(System.String,System.String,System.Boolean)" />
+      <MemberSignature Language="VB.NET" Value="Protected Overrides Function CopyItemDynamicParameters (path As String, destination As String, recurse As Boolean) As Object" />
+      <MemberSignature Language="F#" Value="override this.CopyItemDynamicParameters : string * string * bool -&gt; obj" Usage="fileSystemProvider.CopyItemDynamicParameters (path, destination, recurse)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+        <Parameter Name="destination" Type="System.String" />
+        <Parameter Name="recurse" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="path">Source for the copy operation.</param>
+        <param name="destination">Destination for the copy operation.</param>
+        <param name="recurse">Whether to recurse.</param>
+        <summary>
+            Gets the dynamic parameters for Copy-Item on the FileSystemProvider.
+            </summary>
+        <returns />
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetChildItems">
+      <MemberSignature Language="C#" Value="protected override void GetChildItems (string path, bool recurse, uint depth);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void GetChildItems(string path, bool recurse, unsigned int32 depth) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Commands.FileSystemProvider.GetChildItems(System.String,System.Boolean,System.UInt32)" />
+      <MemberSignature Language="VB.NET" Value="Protected Overrides Sub GetChildItems (path As String, recurse As Boolean, depth As UInteger)" />
+      <MemberSignature Language="F#" Value="override this.GetChildItems : string * bool * uint32 -&gt; unit" Usage="fileSystemProvider.GetChildItems (path, recurse, depth)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+        <Parameter Name="recurse" Type="System.Boolean" />
+        <Parameter Name="depth" Type="System.UInt32" />
+      </Parameters>
+      <Docs>
+        <param name="path">
+             The full path of the directory to enumerate.
+             </param>
+        <param name="recurse">
+             If true, recursively enumerates the child items as well.
+             </param>
+        <param name="depth">
+             Limits the depth of recursion; uint.MaxValue performs full recursion.
+             </param>
+        <summary>
+             Gets the child items of a given directory.
+             </summary>
+        <returns>
+             Nothing.  FileInfo and DirectoryInfo objects that match the filter are written to the
+             context's pipeline.
+             </returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">
+                 path is null or empty.
+             </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetChildItemsDynamicParameters">
+      <MemberSignature Language="C#" Value="protected override object GetChildItemsDynamicParameters (string path, bool recurse);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance object GetChildItemsDynamicParameters(string path, bool recurse) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Commands.FileSystemProvider.GetChildItemsDynamicParameters(System.String,System.Boolean)" />
+      <MemberSignature Language="VB.NET" Value="Protected Overrides Function GetChildItemsDynamicParameters (path As String, recurse As Boolean) As Object" />
+      <MemberSignature Language="F#" Value="override this.GetChildItemsDynamicParameters : string * bool -&gt; obj" Usage="fileSystemProvider.GetChildItemsDynamicParameters (path, recurse)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+        <Parameter Name="recurse" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="path">
+             If the path was specified on the command line, this is the path
+             to the item for which to get the dynamic parameters.
+             </param>
+        <param name="recurse">
+             Ignored.
+             </param>
+        <summary>
+             Gets the dynamic parameters for get-childitems on the
+             FileSystemProvider.
+             We currently only support one dynamic parameter,
+             "Attributes" that returns an enum evaluator for the
+             given expression.
+             </summary>
+        <returns>
+             An object that has properties and fields decorated with
+             parsing attributes similar to a cmdlet class.
+             </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetChildName">
+      <MemberSignature Language="C#" Value="protected override string GetChildName (string path);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance string GetChildName(string path) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Commands.FileSystemProvider.GetChildName(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Protected Overrides Function GetChildName (path As String) As String" />
+      <MemberSignature Language="F#" Value="override this.GetChildName : string -&gt; string" Usage="fileSystemProvider.GetChildName path" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="path">
+             The fully qualified path to the item.
+             </param>
+        <summary>
+             Gets the name of the leaf element of the specified path.
+             </summary>
+        <returns>
+             The leaf element of the specified path.
+             </returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">
+                 path is null or empty.
+             </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetChildNames">
+      <MemberSignature Language="C#" Value="protected override void GetChildNames (string path, System.Management.Automation.ReturnContainers returnContainers);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void GetChildNames(string path, valuetype System.Management.Automation.ReturnContainers returnContainers) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Commands.FileSystemProvider.GetChildNames(System.String,System.Management.Automation.ReturnContainers)" />
+      <MemberSignature Language="F#" Value="override this.GetChildNames : string * System.Management.Automation.ReturnContainers -&gt; unit" Usage="fileSystemProvider.GetChildNames (path, returnContainers)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+        <Parameter Name="returnContainers" Type="System.Management.Automation.ReturnContainers" />
+      </Parameters>
+      <Docs>
+        <param name="path">
+             The full path of the directory to enumerate.
+             </param>
+        <param name="returnContainers">
+             Determines if all containers should be returned or only those containers that match the
+             filter(s).
+             </param>
+        <summary>
+             Gets the path names for all children of the specified
+             directory that match the given filter.
+             </summary>
+        <returns>
+             Nothing.  Child names are written to the context's pipeline.
+             </returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">
+                 path is null or empty.
+             </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetChildNamesDynamicParameters">
+      <MemberSignature Language="C#" Value="protected override object GetChildNamesDynamicParameters (string path);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance object GetChildNamesDynamicParameters(string path) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Commands.FileSystemProvider.GetChildNamesDynamicParameters(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Protected Overrides Function GetChildNamesDynamicParameters (path As String) As Object" />
+      <MemberSignature Language="F#" Value="override this.GetChildNamesDynamicParameters : string -&gt; obj" Usage="fileSystemProvider.GetChildNamesDynamicParameters path" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="path">
+             If the path was specified on the command line, this is the path
+             to the item for which to get the dynamic parameters.
+             </param>
+        <summary>
+             Gets the dynamic parameters for get-childnames on the
+             FileSystemProvider.
+             We currently only support one dynamic parameter,
+             "Attributes" that returns an enum evaluator for the
+             given expression.
+             </summary>
+        <returns>
+             An object that has properties and fields decorated with
+             parsing attributes similar to a cmdlet class.
+             </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetContentReader">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.Provider.IContentReader GetContentReader (string path);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Management.Automation.Provider.IContentReader GetContentReader(string path) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Commands.FileSystemProvider.GetContentReader(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetContentReader (path As String) As IContentReader" />
+      <MemberSignature Language="F#" Value="override this.GetContentReader : string -&gt; System.Management.Automation.Provider.IContentReader" Usage="fileSystemProvider.GetContentReader path" />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.Management.Automation.Provider.IContentCmdletProvider.GetContentReader(System.String)</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.Provider.IContentReader</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="path">
+             The path of the file to be opened for reading.
+             </param>
+        <summary>
+             Creates an instance of the FileSystemContentStream class, opens
+             the specified file for reading, and returns the IContentReader interface
+             to it.
+             </summary>
+        <returns>
+             An IContentReader for the specified file.
+             </returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">
+                 path is null or empty.
+             </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetContentReaderDynamicParameters">
+      <MemberSignature Language="C#" Value="public object GetContentReaderDynamicParameters (string path);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object GetContentReaderDynamicParameters(string path) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Commands.FileSystemProvider.GetContentReaderDynamicParameters(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetContentReaderDynamicParameters (path As String) As Object" />
+      <MemberSignature Language="F#" Value="override this.GetContentReaderDynamicParameters : string -&gt; obj" Usage="fileSystemProvider.GetContentReaderDynamicParameters path" />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.Management.Automation.Provider.IContentCmdletProvider.GetContentReaderDynamicParameters(System.String)</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="path">
+             If the path was specified on the command line, this is the path
+             to the item for which to get the dynamic parameters.
+             </param>
+        <summary>
+             Gets the dynamic property parameters required by the get-content cmdlet.
+             </summary>
+        <returns>
+             An object that has properties and fields decorated with
+             parsing attributes similar to a cmdlet class.
+             </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetContentWriter">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.Provider.IContentWriter GetContentWriter (string path);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Management.Automation.Provider.IContentWriter GetContentWriter(string path) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Commands.FileSystemProvider.GetContentWriter(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetContentWriter (path As String) As IContentWriter" />
+      <MemberSignature Language="F#" Value="override this.GetContentWriter : string -&gt; System.Management.Automation.Provider.IContentWriter" Usage="fileSystemProvider.GetContentWriter path" />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.Management.Automation.Provider.IContentCmdletProvider.GetContentWriter(System.String)</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.Provider.IContentWriter</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="path">
+             The path of the file to be opened for writing.
+             </param>
+        <summary>
+             Creates an instance of the FileSystemContentStream class, opens
+             the specified file for writing, and returns the IContentReader interface
+             to it.
+             </summary>
+        <returns>
+             An IContentWriter for the specified file.
+             </returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">
+                 path is null or empty.
+             </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetContentWriterDynamicParameters">
+      <MemberSignature Language="C#" Value="public object GetContentWriterDynamicParameters (string path);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object GetContentWriterDynamicParameters(string path) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Commands.FileSystemProvider.GetContentWriterDynamicParameters(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetContentWriterDynamicParameters (path As String) As Object" />
+      <MemberSignature Language="F#" Value="override this.GetContentWriterDynamicParameters : string -&gt; obj" Usage="fileSystemProvider.GetContentWriterDynamicParameters path" />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.Management.Automation.Provider.IContentCmdletProvider.GetContentWriterDynamicParameters(System.String)</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="path">
+             If the path was specified on the command line, this is the path
+             to the item for which to get the dynamic parameters.
+             </param>
+        <summary>
+             Gets the dynamic property parameters required by the set-content and
+             add-content cmdlets.
+             </summary>
+        <returns>
+             An object that has properties and fields decorated with
+             parsing attributes similar to a cmdlet class.
+             </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHelpMaml">
+      <MemberSignature Language="C#" Value="public string GetHelpMaml (string helpItemName, string path);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance string GetHelpMaml(string helpItemName, string path) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Commands.FileSystemProvider.GetHelpMaml(System.String,System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetHelpMaml (helpItemName As String, path As String) As String" />
+      <MemberSignature Language="F#" Value="abstract member GetHelpMaml : string * string -&gt; string&#xA;override this.GetHelpMaml : string * string -&gt; string" Usage="fileSystemProvider.GetHelpMaml (helpItemName, path)" />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.Management.Automation.Provider.ICmdletProviderSupportsHelp.GetHelpMaml(System.String,System.String)</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="helpItemName" Type="System.String" />
+        <Parameter Name="path" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="helpItemName">
+            Name of command that the help is requested for.
+            </param>
+        <param name="path">
+            Not used here.
+            </param>
+        <summary>
+            Implementation of ICmdletProviderSupportsHelp interface.
+            Gets provider-specific help content for the corresponding cmdlet
+            </summary>
+        <returns>
+            The MAML help XML that should be presented to the user.
+            </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetItem">
+      <MemberSignature Language="C#" Value="protected override void GetItem (string path);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void GetItem(string path) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Commands.FileSystemProvider.GetItem(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Protected Overrides Sub GetItem (path As String)" />
+      <MemberSignature Language="F#" Value="override this.GetItem : string -&gt; unit" Usage="fileSystemProvider.GetItem path" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="path">
+             A fully qualified path representing a file or directory in the
+             file system.
+             </param>
+        <summary>
+             Gets the item at the specified path.
+             </summary>
+        <returns>
+             Nothing.  FileInfo and DirectoryInfo objects are written to the
+             context's pipeline.
+             </returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">
+                 path is null or empty.
+             </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetItemDynamicParameters">
+      <MemberSignature Language="C#" Value="protected override object GetItemDynamicParameters (string path);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance object GetItemDynamicParameters(string path) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Commands.FileSystemProvider.GetItemDynamicParameters(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Protected Overrides Function GetItemDynamicParameters (path As String) As Object" />
+      <MemberSignature Language="F#" Value="override this.GetItemDynamicParameters : string -&gt; obj" Usage="fileSystemProvider.GetItemDynamicParameters path" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="path">The path of the file to process</param>
+        <summary>
+            Retrieves the dynamic parameters required for the Get-Item cmdlet
+            </summary>
+        <returns>An instance of the FileSystemProviderGetItemDynamicParameters class that represents the dynamic parameters.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetParentPath">
+      <MemberSignature Language="C#" Value="protected override string GetParentPath (string path, string root);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance string GetParentPath(string path, string root) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Commands.FileSystemProvider.GetParentPath(System.String,System.String)" />
+      <MemberSignature Language="VB.NET" Value="Protected Overrides Function GetParentPath (path As String, root As String) As String" />
+      <MemberSignature Language="F#" Value="override this.GetParentPath : string * string -&gt; string" Usage="fileSystemProvider.GetParentPath (path, root)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+        <Parameter Name="root" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="path">
+             The path of which to get the parent.
+             </param>
+        <param name="root">
+             The root of the drive.
+             </param>
+        <summary>
+             Gets the parent of the given path.
+             </summary>
+        <returns>
+             The parent of the given path.
+             </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetProperty">
+      <MemberSignature Language="C#" Value="public void GetProperty (string path, System.Collections.ObjectModel.Collection&lt;string&gt; providerSpecificPickList);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void GetProperty(string path, class System.Collections.ObjectModel.Collection`1&lt;string&gt; providerSpecificPickList) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Commands.FileSystemProvider.GetProperty(System.String,System.Collections.ObjectModel.Collection{System.String})" />
+      <MemberSignature Language="VB.NET" Value="Public Sub GetProperty (path As String, providerSpecificPickList As Collection(Of String))" />
+      <MemberSignature Language="F#" Value="override this.GetProperty : string * System.Collections.ObjectModel.Collection&lt;string&gt; -&gt; unit" Usage="fileSystemProvider.GetProperty (path, providerSpecificPickList)" />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.Management.Automation.Provider.IPropertyCmdletProvider.GetProperty(System.String,System.Collections.ObjectModel.Collection{System.String})</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+        <Parameter Name="providerSpecificPickList" Type="System.Collections.ObjectModel.Collection&lt;System.String&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="path">The fully qualified path to the item.</param>
+        <param name="providerSpecificPickList">
+            The list of properties to get.  Examples include "Attributes", "LastAccessTime,"
+            and other properties defined by
+            <see cref="T:System.IO.DirectoryInfo" /> and
+            <see cref="T:System.IO.FileInfo" /></param>
+        <summary>
+            Gets a property for the given item.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetPropertyDynamicParameters">
+      <MemberSignature Language="C#" Value="public object GetPropertyDynamicParameters (string path, System.Collections.ObjectModel.Collection&lt;string&gt; providerSpecificPickList);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object GetPropertyDynamicParameters(string path, class System.Collections.ObjectModel.Collection`1&lt;string&gt; providerSpecificPickList) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Commands.FileSystemProvider.GetPropertyDynamicParameters(System.String,System.Collections.ObjectModel.Collection{System.String})" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetPropertyDynamicParameters (path As String, providerSpecificPickList As Collection(Of String)) As Object" />
+      <MemberSignature Language="F#" Value="override this.GetPropertyDynamicParameters : string * System.Collections.ObjectModel.Collection&lt;string&gt; -&gt; obj" Usage="fileSystemProvider.GetPropertyDynamicParameters (path, providerSpecificPickList)" />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.Management.Automation.Provider.IPropertyCmdletProvider.GetPropertyDynamicParameters(System.String,System.Collections.ObjectModel.Collection{System.String})</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+        <Parameter Name="providerSpecificPickList" Type="System.Collections.ObjectModel.Collection&lt;System.String&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="path">
+             If the path was specified on the command line, this is the path
+             to the item for which to get the dynamic parameters.
+             </param>
+        <param name="providerSpecificPickList">
+             A list of properties that should be retrieved. If this parameter is null
+             or empty, all properties should be retrieved.
+             </param>
+        <summary>
+             Gets the dynamic property parameters required by the get-itemproperty cmdlet.
+             This feature is not required by the File System provider.
+             </summary>
+        <returns>
+             Null.  This feature is not required by the File System provider.
+             </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetSecurityDescriptor">
+      <MemberSignature Language="C#" Value="public void GetSecurityDescriptor (string path, System.Security.AccessControl.AccessControlSections sections);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void GetSecurityDescriptor(string path, valuetype System.Security.AccessControl.AccessControlSections sections) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Commands.FileSystemProvider.GetSecurityDescriptor(System.String,System.Security.AccessControl.AccessControlSections)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub GetSecurityDescriptor (path As String, sections As AccessControlSections)" />
+      <MemberSignature Language="F#" Value="override this.GetSecurityDescriptor : string * System.Security.AccessControl.AccessControlSections -&gt; unit" Usage="fileSystemProvider.GetSecurityDescriptor (path, sections)" />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.Management.Automation.Provider.ISecurityDescriptorCmdletProvider.GetSecurityDescriptor(System.String,System.Security.AccessControl.AccessControlSections)</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+        <Parameter Name="sections" Type="System.Security.AccessControl.AccessControlSections" />
+      </Parameters>
+      <Docs>
+        <param name="path">
+             The path of the item to retrieve. It may be a drive or provider-qualified path and may include.
+             glob characters.
+             </param>
+        <param name="sections">
+             The sections of the security descriptor to include.
+             </param>
+        <summary>
+             Gets the SecurityDescriptor at the specified path, including only the specified
+             AccessControlSections.
+             </summary>
+        <returns>
+             Nothing. An object that represents the security descriptor for the item
+             specified by path is written to the context's pipeline.
+             </returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">
+                 path is null or empty.
+                 path doesn't exist
+                 sections is not valid.
+             </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="HasChildItems">
+      <MemberSignature Language="C#" Value="protected override bool HasChildItems (string path);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance bool HasChildItems(string path) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Commands.FileSystemProvider.HasChildItems(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Protected Overrides Function HasChildItems (path As String) As Boolean" />
+      <MemberSignature Language="F#" Value="override this.HasChildItems : string -&gt; bool" Usage="fileSystemProvider.HasChildItems path" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="path">
+             The full path to the directory.
+             </param>
+        <summary>
+             Determines if the given path is a directory, and has children.
+             </summary>
+        <returns>
+             True if the path refers to a directory that contains other
+             directories or files.  False otherwise.
+             </returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">
+                 path is null or empty.
+             </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="InitializeDefaultDrives">
+      <MemberSignature Language="C#" Value="protected override System.Collections.ObjectModel.Collection&lt;System.Management.Automation.PSDriveInfo&gt; InitializeDefaultDrives ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Collections.ObjectModel.Collection`1&lt;class System.Management.Automation.PSDriveInfo&gt; InitializeDefaultDrives() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Commands.FileSystemProvider.InitializeDefaultDrives" />
+      <MemberSignature Language="VB.NET" Value="Protected Overrides Function InitializeDefaultDrives () As Collection(Of PSDriveInfo)" />
+      <MemberSignature Language="F#" Value="override this.InitializeDefaultDrives : unit -&gt; System.Collections.ObjectModel.Collection&lt;System.Management.Automation.PSDriveInfo&gt;" Usage="fileSystemProvider.InitializeDefaultDrives " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.Collection&lt;System.Management.Automation.PSDriveInfo&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+             Returns a collection of all logical drives in the system.
+             </summary>
+        <returns>
+             A collection of PSDriveInfo objects, one for each logical drive returned from
+             System.Environment.GetLogicalDrives().
+             </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InvokeDefaultAction">
+      <MemberSignature Language="C#" Value="protected override void InvokeDefaultAction (string path);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void InvokeDefaultAction(string path) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Commands.FileSystemProvider.InvokeDefaultAction(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Protected Overrides Sub InvokeDefaultAction (path As String)" />
+      <MemberSignature Language="F#" Value="override this.InvokeDefaultAction : string -&gt; unit" Usage="fileSystemProvider.InvokeDefaultAction path" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="path">
+             The item to invoke.
+             </param>
+        <summary>
+             Invokes the item at the path using ShellExecute semantics.
+             </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">
+                 path is null or empty.
+             </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="IsItemContainer">
+      <MemberSignature Language="C#" Value="protected override bool IsItemContainer (string path);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance bool IsItemContainer(string path) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Commands.FileSystemProvider.IsItemContainer(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Protected Overrides Function IsItemContainer (path As String) As Boolean" />
+      <MemberSignature Language="F#" Value="override this.IsItemContainer : string -&gt; bool" Usage="fileSystemProvider.IsItemContainer path" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="path">
+             The path to the file or directory to check.
+             </param>
+        <summary>
+             Determines if the item at the specified path is a directory.
+             </summary>
+        <returns>
+             True if the item at the specified path is a directory.
+             False otherwise.
+             </returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">
+                 path is null or empty.
+             </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="IsValidPath">
+      <MemberSignature Language="C#" Value="protected override bool IsValidPath (string path);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance bool IsValidPath(string path) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Commands.FileSystemProvider.IsValidPath(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Protected Overrides Function IsValidPath (path As String) As Boolean" />
+      <MemberSignature Language="F#" Value="override this.IsValidPath : string -&gt; bool" Usage="fileSystemProvider.IsValidPath path" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="path">
+             The fully qualified path to validate.
+             </param>
+        <summary>
+             Determines if the specified path is syntactically and semantically valid.
+             An example path looks like this
+                 C:\WINNT\Media\chimes.wav
+             </summary>
+        <returns>
+             True if the path is valid, false otherwise.
+             </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ItemExists">
+      <MemberSignature Language="C#" Value="protected override bool ItemExists (string path);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance bool ItemExists(string path) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Commands.FileSystemProvider.ItemExists(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Protected Overrides Function ItemExists (path As String) As Boolean" />
+      <MemberSignature Language="F#" Value="override this.ItemExists : string -&gt; bool" Usage="fileSystemProvider.ItemExists path" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="path">
+             The path of the item to check.
+             </param>
+        <summary>
+             Determines if a file or directory exists at the specified path.
+             </summary>
+        <returns>
+             True if a file or directory exists at the specified path, false otherwise.
+             </returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">
+                 path is null or empty.
+             </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ItemExistsDynamicParameters">
+      <MemberSignature Language="C#" Value="protected override object ItemExistsDynamicParameters (string path);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance object ItemExistsDynamicParameters(string path) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Commands.FileSystemProvider.ItemExistsDynamicParameters(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Protected Overrides Function ItemExistsDynamicParameters (path As String) As Object" />
+      <MemberSignature Language="F#" Value="override this.ItemExistsDynamicParameters : string -&gt; obj" Usage="fileSystemProvider.ItemExistsDynamicParameters path" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="path">
+             If the path was specified on the command line, this is the path
+             to the item to get the dynamic parameters for.
+             </param>
+        <summary>
+             Adds -OlderThan, -NewerThan dynamic properties.
+             </summary>
+        <returns>
+             Overrides of this method should return an object that has properties and fields decorated with
+             parsing attributes similar to a cmdlet class or a
+             <see cref="T:System.Management.Automation.RuntimeDefinedParameterDictionary" />.
+            
+             The default implementation returns null. (no additional parameters)
+             </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Mode">
+      <MemberSignature Language="C#" Value="public static string Mode (System.Management.Automation.PSObject instance);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string Mode(class System.Management.Automation.PSObject instance) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Commands.FileSystemProvider.Mode(System.Management.Automation.PSObject)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function Mode (instance As PSObject) As String" />
+      <MemberSignature Language="F#" Value="static member Mode : System.Management.Automation.PSObject -&gt; string" Usage="Microsoft.PowerShell.Commands.FileSystemProvider.Mode instance" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="instance" Type="System.Management.Automation.PSObject" />
+      </Parameters>
+      <Docs>
+        <param name="instance">instance of PSObject wrapping a FileSystemInfo</param>
+        <summary>
+            Provides a mode property for FileSystemInfo
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MoveItem">
+      <MemberSignature Language="C#" Value="protected override void MoveItem (string path, string destination);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void MoveItem(string path, string destination) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Commands.FileSystemProvider.MoveItem(System.String,System.String)" />
+      <MemberSignature Language="VB.NET" Value="Protected Overrides Sub MoveItem (path As String, destination As String)" />
+      <MemberSignature Language="F#" Value="override this.MoveItem : string * string -&gt; unit" Usage="fileSystemProvider.MoveItem (path, destination)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+        <Parameter Name="destination" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="path">
+             The path of the item to move.
+             </param>
+        <param name="destination">
+             The path of the destination.
+             </param>
+        <summary>
+             Moves an item at the specified path to the given destination.
+             </summary>
+        <returns>
+             Nothing.  Moved items are written to the context's pipeline.
+             </returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">
+                 path is null or empty.
+                 destination is null or empty.
+             </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="NewDrive">
+      <MemberSignature Language="C#" Value="protected override System.Management.Automation.PSDriveInfo NewDrive (System.Management.Automation.PSDriveInfo drive);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Management.Automation.PSDriveInfo NewDrive(class System.Management.Automation.PSDriveInfo drive) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Commands.FileSystemProvider.NewDrive(System.Management.Automation.PSDriveInfo)" />
+      <MemberSignature Language="VB.NET" Value="Protected Overrides Function NewDrive (drive As PSDriveInfo) As PSDriveInfo" />
+      <MemberSignature Language="F#" Value="override this.NewDrive : System.Management.Automation.PSDriveInfo -&gt; System.Management.Automation.PSDriveInfo" Usage="fileSystemProvider.NewDrive drive" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.PSDriveInfo</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="drive" Type="System.Management.Automation.PSDriveInfo" />
+      </Parameters>
+      <Docs>
+        <param name="drive">
+             The drive that is going to be mounted.
+             </param>
+        <summary>
+             Determines if the specified drive can be mounted.
+             </summary>
+        <returns>
+             The same drive that was passed in, if the drive can be mounted.
+             null if the drive cannot be mounted.
+             </returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+             drive is null.
+             </exception>
+        <exception cref="T:System.ArgumentException">
+             drive root is null or empty.
+             </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="NewItem">
+      <MemberSignature Language="C#" Value="protected override void NewItem (string path, string type, object value);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void NewItem(string path, string type, object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Commands.FileSystemProvider.NewItem(System.String,System.String,System.Object)" />
+      <MemberSignature Language="VB.NET" Value="Protected Overrides Sub NewItem (path As String, type As String, value As Object)" />
+      <MemberSignature Language="F#" Value="override this.NewItem : string * string * obj -&gt; unit" Usage="fileSystemProvider.NewItem (path, type, value)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+        <Parameter Name="type" Type="System.String" />
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="path">
+             The path of the file or directory to create.
+             </param>
+        <param name="type">
+             Specify "file" to create a file.
+             Specify "directory" or "container" to create a directory.
+             </param>
+        <param name="value">
+             If <paramref name="type" /> is "file" then this parameter becomes the content
+             of the file to be created.
+             </param>
+        <summary>
+             Creates a file or directory with the given path.
+             </summary>
+        <returns>
+             Nothing.  The new DirectoryInfo or FileInfo object is
+             written to the context's pipeline.
+             </returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">
+                 path is null or empty.
+                 type is null or empty.
+             </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="NewSecurityDescriptorFromPath">
+      <MemberSignature Language="C#" Value="public System.Security.AccessControl.ObjectSecurity NewSecurityDescriptorFromPath (string path, System.Security.AccessControl.AccessControlSections sections);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Security.AccessControl.ObjectSecurity NewSecurityDescriptorFromPath(string path, valuetype System.Security.AccessControl.AccessControlSections sections) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Commands.FileSystemProvider.NewSecurityDescriptorFromPath(System.String,System.Security.AccessControl.AccessControlSections)" />
+      <MemberSignature Language="VB.NET" Value="Public Function NewSecurityDescriptorFromPath (path As String, sections As AccessControlSections) As ObjectSecurity" />
+      <MemberSignature Language="F#" Value="abstract member NewSecurityDescriptorFromPath : string * System.Security.AccessControl.AccessControlSections -&gt; System.Security.AccessControl.ObjectSecurity&#xA;override this.NewSecurityDescriptorFromPath : string * System.Security.AccessControl.AccessControlSections -&gt; System.Security.AccessControl.ObjectSecurity" Usage="fileSystemProvider.NewSecurityDescriptorFromPath (path, sections)" />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.Management.Automation.Provider.ISecurityDescriptorCmdletProvider.NewSecurityDescriptorFromPath(System.String,System.Security.AccessControl.AccessControlSections)</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.AccessControl.ObjectSecurity</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+        <Parameter Name="sections" Type="System.Security.AccessControl.AccessControlSections" />
+      </Parameters>
+      <Docs>
+        <param name="path">
+             Path of the item to use to determine the type of resulting
+             SecurityDescriptor.
+             </param>
+        <param name="sections">
+             The sections of the security descriptor to create.
+             </param>
+        <summary>
+             Creates a new empty security descriptor of the same type as
+             the item specified by the path.  If "path" points to a file system directory,
+             then the descriptor returned will be of type DirectorySecurity.
+             </summary>
+        <returns>
+             A new ObjectSecurity object of the same type as
+             the item specified by the path.
+             </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NewSecurityDescriptorOfType">
+      <MemberSignature Language="C#" Value="public System.Security.AccessControl.ObjectSecurity NewSecurityDescriptorOfType (string type, System.Security.AccessControl.AccessControlSections sections);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Security.AccessControl.ObjectSecurity NewSecurityDescriptorOfType(string type, valuetype System.Security.AccessControl.AccessControlSections sections) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Commands.FileSystemProvider.NewSecurityDescriptorOfType(System.String,System.Security.AccessControl.AccessControlSections)" />
+      <MemberSignature Language="VB.NET" Value="Public Function NewSecurityDescriptorOfType (type As String, sections As AccessControlSections) As ObjectSecurity" />
+      <MemberSignature Language="F#" Value="abstract member NewSecurityDescriptorOfType : string * System.Security.AccessControl.AccessControlSections -&gt; System.Security.AccessControl.ObjectSecurity&#xA;override this.NewSecurityDescriptorOfType : string * System.Security.AccessControl.AccessControlSections -&gt; System.Security.AccessControl.ObjectSecurity" Usage="fileSystemProvider.NewSecurityDescriptorOfType (type, sections)" />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.Management.Automation.Provider.ISecurityDescriptorCmdletProvider.NewSecurityDescriptorOfType(System.String,System.Security.AccessControl.AccessControlSections)</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.AccessControl.ObjectSecurity</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="type" Type="System.String" />
+        <Parameter Name="sections" Type="System.Security.AccessControl.AccessControlSections" />
+      </Parameters>
+      <Docs>
+        <param name="type">
+             The type of Security Descriptor to create. Valid types are
+             "file", "directory," and "container."
+             </param>
+        <param name="sections">
+             The sections of the security descriptor to create.
+             </param>
+        <summary>
+             Creates a new empty security descriptor of the specified type.
+             </summary>
+        <returns>
+             A new ObjectSecurity object of the specified type.
+             </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NormalizeRelativePath">
+      <MemberSignature Language="C#" Value="protected override string NormalizeRelativePath (string path, string basePath);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance string NormalizeRelativePath(string path, string basePath) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Commands.FileSystemProvider.NormalizeRelativePath(System.String,System.String)" />
+      <MemberSignature Language="VB.NET" Value="Protected Overrides Function NormalizeRelativePath (path As String, basePath As String) As String" />
+      <MemberSignature Language="F#" Value="override this.NormalizeRelativePath : string * string -&gt; string" Usage="fileSystemProvider.NormalizeRelativePath (path, basePath)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+        <Parameter Name="basePath" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="path">
+             A fully qualifiedpath to an item. The item must exist,
+             or the provider writes out an error.
+             </param>
+        <param name="basePath">
+             The path that the normalized path should be relative to.
+             </param>
+        <summary>
+             Normalizes the path that was passed in and returns it as a normalized
+             path relative to the given basePath.
+             </summary>
+        <returns>
+             A normalized path, relative to the given basePath.
+             </returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">
+                 path is null or empty.
+             </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ProviderName">
+      <MemberSignature Language="C#" Value="public const string ProviderName;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal string ProviderName" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.PowerShell.Commands.FileSystemProvider.ProviderName" />
+      <MemberSignature Language="VB.NET" Value="Public Const ProviderName As String " />
+      <MemberSignature Language="F#" Value="val mutable ProviderName : string" Usage="Microsoft.PowerShell.Commands.FileSystemProvider.ProviderName" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the name of the provider
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveDrive">
+      <MemberSignature Language="C#" Value="protected override System.Management.Automation.PSDriveInfo RemoveDrive (System.Management.Automation.PSDriveInfo drive);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Management.Automation.PSDriveInfo RemoveDrive(class System.Management.Automation.PSDriveInfo drive) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Commands.FileSystemProvider.RemoveDrive(System.Management.Automation.PSDriveInfo)" />
+      <MemberSignature Language="VB.NET" Value="Protected Overrides Function RemoveDrive (drive As PSDriveInfo) As PSDriveInfo" />
+      <MemberSignature Language="F#" Value="override this.RemoveDrive : System.Management.Automation.PSDriveInfo -&gt; System.Management.Automation.PSDriveInfo" Usage="fileSystemProvider.RemoveDrive drive" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.PSDriveInfo</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="drive" Type="System.Management.Automation.PSDriveInfo" />
+      </Parameters>
+      <Docs>
+        <param name="drive">
+            PSDrive info.
+            </param>
+        <summary>
+            RemoveDrive facilitates to remove network mapped persisted PSDrvie.
+            </summary>
+        <returns>PSDrive info.
+            </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveItem">
+      <MemberSignature Language="C#" Value="protected override void RemoveItem (string path, bool recurse);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void RemoveItem(string path, bool recurse) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Commands.FileSystemProvider.RemoveItem(System.String,System.Boolean)" />
+      <MemberSignature Language="VB.NET" Value="Protected Overrides Sub RemoveItem (path As String, recurse As Boolean)" />
+      <MemberSignature Language="F#" Value="override this.RemoveItem : string * bool -&gt; unit" Usage="fileSystemProvider.RemoveItem (path, recurse)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+        <Parameter Name="recurse" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="path">
+             The full path to the file or directory to be removed.
+             </param>
+        <param name="recurse">
+             Specifies if the operation should also remove child items.
+             </param>
+        <summary>
+             Removes the specified file or directory.
+             </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">
+                 path is null or empty.
+             </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveItemDynamicParameters">
+      <MemberSignature Language="C#" Value="protected override object RemoveItemDynamicParameters (string path, bool recurse);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance object RemoveItemDynamicParameters(string path, bool recurse) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Commands.FileSystemProvider.RemoveItemDynamicParameters(System.String,System.Boolean)" />
+      <MemberSignature Language="VB.NET" Value="Protected Overrides Function RemoveItemDynamicParameters (path As String, recurse As Boolean) As Object" />
+      <MemberSignature Language="F#" Value="override this.RemoveItemDynamicParameters : string * bool -&gt; obj" Usage="fileSystemProvider.RemoveItemDynamicParameters (path, recurse)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+        <Parameter Name="recurse" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="path">The path of the file to process</param>
+        <param name="recurse">Whether to recurse into containers</param>
+        <summary>
+            Retrieves the dynamic parameters required for the Remove-Item cmdlet
+            </summary>
+        <returns>An instance of the FileSystemProviderRemoveItemDynamicParameters class that represents the dynamic parameters.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RenameItem">
+      <MemberSignature Language="C#" Value="protected override void RenameItem (string path, string newName);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void RenameItem(string path, string newName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Commands.FileSystemProvider.RenameItem(System.String,System.String)" />
+      <MemberSignature Language="VB.NET" Value="Protected Overrides Sub RenameItem (path As String, newName As String)" />
+      <MemberSignature Language="F#" Value="override this.RenameItem : string * string -&gt; unit" Usage="fileSystemProvider.RenameItem (path, newName)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+        <Parameter Name="newName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="path">
+             The current full path to the file or directory.
+             </param>
+        <param name="newName">
+             The new full path to the file or directory.
+             </param>
+        <summary>
+             Renames a file or directory.
+             </summary>
+        <returns>
+             Nothing.  The renamed DirectoryInfo or FileInfo object is
+             written to the context's pipeline.
+             </returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">
+                 path is null or empty.
+                 newName is null or empty
+             </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SetProperty">
+      <MemberSignature Language="C#" Value="public void SetProperty (string path, System.Management.Automation.PSObject propertyToSet);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void SetProperty(string path, class System.Management.Automation.PSObject propertyToSet) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Commands.FileSystemProvider.SetProperty(System.String,System.Management.Automation.PSObject)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub SetProperty (path As String, propertyToSet As PSObject)" />
+      <MemberSignature Language="F#" Value="override this.SetProperty : string * System.Management.Automation.PSObject -&gt; unit" Usage="fileSystemProvider.SetProperty (path, propertyToSet)" />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.Management.Automation.Provider.IPropertyCmdletProvider.SetProperty(System.String,System.Management.Automation.PSObject)</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+        <Parameter Name="propertyToSet" Type="System.Management.Automation.PSObject" />
+      </Parameters>
+      <Docs>
+        <param name="path">
+             The path of the item on which to set the properties.
+             </param>
+        <param name="propertyToSet">
+             A PSObject which contains a collection of the names and values
+             of the properties to be set.  The File System provider supports setting
+             only the "Attributes" property.
+             </param>
+        <summary>
+             Sets the specified properties on the item at the given path.
+             </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">
+                 path is null or empty.
+             </exception>
+        <exception cref="T:System.ArgumentNullException">
+                 propertyToSet is null.
+             </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SetPropertyDynamicParameters">
+      <MemberSignature Language="C#" Value="public object SetPropertyDynamicParameters (string path, System.Management.Automation.PSObject propertyValue);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object SetPropertyDynamicParameters(string path, class System.Management.Automation.PSObject propertyValue) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Commands.FileSystemProvider.SetPropertyDynamicParameters(System.String,System.Management.Automation.PSObject)" />
+      <MemberSignature Language="VB.NET" Value="Public Function SetPropertyDynamicParameters (path As String, propertyValue As PSObject) As Object" />
+      <MemberSignature Language="F#" Value="override this.SetPropertyDynamicParameters : string * System.Management.Automation.PSObject -&gt; obj" Usage="fileSystemProvider.SetPropertyDynamicParameters (path, propertyValue)" />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.Management.Automation.Provider.IPropertyCmdletProvider.SetPropertyDynamicParameters(System.String,System.Management.Automation.PSObject)</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+        <Parameter Name="propertyValue" Type="System.Management.Automation.PSObject" />
+      </Parameters>
+      <Docs>
+        <param name="path">
+             If the path was specified on the command line, this is the path
+             to the item for which to set the dynamic parameters.
+             </param>
+        <param name="propertyValue">
+             A PSObject which contains a collection of the name, type, value
+             of the properties to be set.
+             </param>
+        <summary>
+             Gets the dynamic property parameters required by the set-itemproperty cmdlet.
+             This feature is not required by the File System provider.
+             </summary>
+        <returns>
+             Null.  This feature is not required by the File System provider.
+             </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetSecurityDescriptor">
+      <MemberSignature Language="C#" Value="public void SetSecurityDescriptor (string path, System.Security.AccessControl.ObjectSecurity securityDescriptor);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void SetSecurityDescriptor(string path, class System.Security.AccessControl.ObjectSecurity securityDescriptor) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Commands.FileSystemProvider.SetSecurityDescriptor(System.String,System.Security.AccessControl.ObjectSecurity)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub SetSecurityDescriptor (path As String, securityDescriptor As ObjectSecurity)" />
+      <MemberSignature Language="F#" Value="override this.SetSecurityDescriptor : string * System.Security.AccessControl.ObjectSecurity -&gt; unit" Usage="fileSystemProvider.SetSecurityDescriptor (path, securityDescriptor)" />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.Management.Automation.Provider.ISecurityDescriptorCmdletProvider.SetSecurityDescriptor(System.String,System.Security.AccessControl.ObjectSecurity)</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+        <Parameter Name="securityDescriptor" Type="System.Security.AccessControl.ObjectSecurity" />
+      </Parameters>
+      <Docs>
+        <param name="path">
+             The path of the item to set the security descriptor on.
+             It may be a drive or provider-qualified path and may include.
+             glob characters.
+             </param>
+        <param name="securityDescriptor">
+             The new security descriptor for the item.
+             </param>
+        <summary>
+             Sets the SecurityDescriptor at the specified path.
+             </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">
+                 path is null or empty.
+             </exception>
+        <exception cref="T:System.ArgumentNullException">
+                 securitydescriptor is null.
+             </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Start">
+      <MemberSignature Language="C#" Value="protected override System.Management.Automation.ProviderInfo Start (System.Management.Automation.ProviderInfo providerInfo);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Management.Automation.ProviderInfo Start(class System.Management.Automation.ProviderInfo providerInfo) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Commands.FileSystemProvider.Start(System.Management.Automation.ProviderInfo)" />
+      <MemberSignature Language="F#" Value="override this.Start : System.Management.Automation.ProviderInfo -&gt; System.Management.Automation.ProviderInfo" Usage="fileSystemProvider.Start providerInfo" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.ProviderInfo</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="providerInfo" Type="System.Management.Automation.ProviderInfo" />
+      </Parameters>
+      <Docs>
+        <param name="providerInfo">
+            The ProviderInfo object that holds the provider's configuration.
+            </param>
+        <summary>
+            Starts the File System provider.  This method sets the Home for the
+            provider to providerInfo.Home if specified, and %USERPROFILE%
+            otherwise.
+            </summary>
+        <returns>
+            The updated ProviderInfo object that holds the provider's configuration.
+            </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

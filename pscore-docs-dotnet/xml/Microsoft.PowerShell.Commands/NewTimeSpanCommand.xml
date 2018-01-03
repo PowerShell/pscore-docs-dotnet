@@ -1,0 +1,237 @@
+﻿<Type Name="NewTimeSpanCommand" FullName="Microsoft.PowerShell.Commands.NewTimeSpanCommand">
+  <TypeSignature Language="C#" Value="public sealed class NewTimeSpanCommand : System.Management.Automation.PSCmdlet" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit NewTimeSpanCommand extends System.Management.Automation.PSCmdlet" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.PowerShell.Commands.NewTimeSpanCommand" />
+  <TypeSignature Language="VB.NET" Value="Public NotInheritable Class NewTimeSpanCommand&#xA;Inherits PSCmdlet" />
+  <TypeSignature Language="F#" Value="type NewTimeSpanCommand = class&#xA;    inherit PSCmdlet" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.PowerShell.Commands.Utility</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Management.Automation.PSCmdlet</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Management.Automation.Cmdlet("New", "TimeSpan", DefaultParameterSetName="Date", HelpUri="https://go.microsoft.com/fwlink/?LinkID=113360", RemotingCapability=System.Management.Automation.RemotingCapability.None)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Management.Automation.OutputType(typeof(System.TimeSpan))</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>
+            implementation for the new-timespan command
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public NewTimeSpanCommand ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Commands.NewTimeSpanCommand.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New ()" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Commands.Utility</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Days">
+      <MemberSignature Language="C#" Value="public int Days { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Days" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.NewTimeSpanCommand.Days" />
+      <MemberSignature Language="VB.NET" Value="Public Property Days As Integer" />
+      <MemberSignature Language="F#" Value="member this.Days : int with get, set" Usage="Microsoft.PowerShell.Commands.NewTimeSpanCommand.Days" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Commands.Utility</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="Time")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Allows the user to override the day
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="End">
+      <MemberSignature Language="C#" Value="public DateTime End { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.DateTime End" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.NewTimeSpanCommand.End" />
+      <MemberSignature Language="VB.NET" Value="Public Property End As DateTime" />
+      <MemberSignature Language="F#" Value="member this.End : DateTime with get, set" Usage="Microsoft.PowerShell.Commands.NewTimeSpanCommand.End" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Commands.Utility</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="Date", Position=1, ValueFromPipelineByPropertyName=true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.DateTime</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            This parameter indicates the end of a time span.  It is used if two
+            times are being compared.  If one of the times is not specified,
+            the current system time is used.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Hours">
+      <MemberSignature Language="C#" Value="public int Hours { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Hours" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.NewTimeSpanCommand.Hours" />
+      <MemberSignature Language="VB.NET" Value="Public Property Hours As Integer" />
+      <MemberSignature Language="F#" Value="member this.Hours : int with get, set" Usage="Microsoft.PowerShell.Commands.NewTimeSpanCommand.Hours" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Commands.Utility</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="Time")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Allows the user to override the hour
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Minutes">
+      <MemberSignature Language="C#" Value="public int Minutes { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Minutes" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.NewTimeSpanCommand.Minutes" />
+      <MemberSignature Language="VB.NET" Value="Public Property Minutes As Integer" />
+      <MemberSignature Language="F#" Value="member this.Minutes : int with get, set" Usage="Microsoft.PowerShell.Commands.NewTimeSpanCommand.Minutes" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Commands.Utility</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="Time")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Allows the user to override the minute
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ProcessRecord">
+      <MemberSignature Language="C#" Value="protected override void ProcessRecord ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void ProcessRecord() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Commands.NewTimeSpanCommand.ProcessRecord" />
+      <MemberSignature Language="VB.NET" Value="Protected Overrides Sub ProcessRecord ()" />
+      <MemberSignature Language="F#" Value="override this.ProcessRecord : unit -&gt; unit" Usage="newTimeSpanCommand.ProcessRecord " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Commands.Utility</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Calculate and write out the appropriate timespan
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Seconds">
+      <MemberSignature Language="C#" Value="public int Seconds { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Seconds" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.NewTimeSpanCommand.Seconds" />
+      <MemberSignature Language="VB.NET" Value="Public Property Seconds As Integer" />
+      <MemberSignature Language="F#" Value="member this.Seconds : int with get, set" Usage="Microsoft.PowerShell.Commands.NewTimeSpanCommand.Seconds" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Commands.Utility</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="Time")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Allows the user to override the second
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Start">
+      <MemberSignature Language="C#" Value="public DateTime Start { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.DateTime Start" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.NewTimeSpanCommand.Start" />
+      <MemberSignature Language="VB.NET" Value="Public Property Start As DateTime" />
+      <MemberSignature Language="F#" Value="member this.Start : DateTime with get, set" Usage="Microsoft.PowerShell.Commands.NewTimeSpanCommand.Start" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Commands.Utility</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Alias(Mono.Cecil.CustomAttributeArgument[])</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="Date", Position=0, ValueFromPipeline=true, ValueFromPipelineByPropertyName=true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.DateTime</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            This parameter indicates the date the time span begins;
+            it is used if two times are being compared
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

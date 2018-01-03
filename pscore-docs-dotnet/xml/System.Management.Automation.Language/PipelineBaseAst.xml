@@ -1,0 +1,72 @@
+﻿<Type Name="PipelineBaseAst" FullName="System.Management.Automation.Language.PipelineBaseAst">
+  <TypeSignature Language="C#" Value="public abstract class PipelineBaseAst : System.Management.Automation.Language.StatementAst" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit PipelineBaseAst extends System.Management.Automation.Language.StatementAst" />
+  <TypeSignature Language="DocId" Value="T:System.Management.Automation.Language.PipelineBaseAst" />
+  <TypeSignature Language="VB.NET" Value="Public MustInherit Class PipelineBaseAst&#xA;Inherits StatementAst" />
+  <TypeSignature Language="F#" Value="type PipelineBaseAst = class&#xA;    inherit StatementAst" />
+  <AssemblyInfo>
+    <AssemblyName>System.Management.Automation</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Management.Automation.Language.StatementAst</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            An abstract base class for statements that include command invocations, pipelines, expressions, and assignments.
+            Any statement that does not begin with a keyword is derives from PipelineBastAst.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected PipelineBaseAst (System.Management.Automation.Language.IScriptExtent extent);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(class System.Management.Automation.Language.IScriptExtent extent) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Language.PipelineBaseAst.#ctor(System.Management.Automation.Language.IScriptExtent)" />
+      <MemberSignature Language="VB.NET" Value="Protected Sub New (extent As IScriptExtent)" />
+      <MemberSignature Language="F#" Value="new System.Management.Automation.Language.PipelineBaseAst : System.Management.Automation.Language.IScriptExtent -&gt; System.Management.Automation.Language.PipelineBaseAst" Usage="new System.Management.Automation.Language.PipelineBaseAst extent" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="extent" Type="System.Management.Automation.Language.IScriptExtent" />
+      </Parameters>
+      <Docs>
+        <param name="extent">The extent of the statement.</param>
+        <summary>
+            Initialize the common parts of a PipelineBaseAst.
+            </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.Management.Automation.PSArgumentNullException">
+            If <paramref name="extent" /> is null.
+            </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetPureExpression">
+      <MemberSignature Language="C#" Value="public virtual System.Management.Automation.Language.ExpressionAst GetPureExpression ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Management.Automation.Language.ExpressionAst GetPureExpression() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Language.PipelineBaseAst.GetPureExpression" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function GetPureExpression () As ExpressionAst" />
+      <MemberSignature Language="F#" Value="abstract member GetPureExpression : unit -&gt; System.Management.Automation.Language.ExpressionAst&#xA;override this.GetPureExpression : unit -&gt; System.Management.Automation.Language.ExpressionAst" Usage="pipelineBaseAst.GetPureExpression " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.Language.ExpressionAst</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            If the pipeline represents a pure expression, the expression is returned, otherwise null is returned.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

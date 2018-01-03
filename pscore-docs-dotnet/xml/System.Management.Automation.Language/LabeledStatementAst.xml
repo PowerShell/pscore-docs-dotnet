@@ -1,0 +1,97 @@
+﻿<Type Name="LabeledStatementAst" FullName="System.Management.Automation.Language.LabeledStatementAst">
+  <TypeSignature Language="C#" Value="public abstract class LabeledStatementAst : System.Management.Automation.Language.StatementAst" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit LabeledStatementAst extends System.Management.Automation.Language.StatementAst" />
+  <TypeSignature Language="DocId" Value="T:System.Management.Automation.Language.LabeledStatementAst" />
+  <TypeSignature Language="VB.NET" Value="Public MustInherit Class LabeledStatementAst&#xA;Inherits StatementAst" />
+  <TypeSignature Language="F#" Value="type LabeledStatementAst = class&#xA;    inherit StatementAst" />
+  <AssemblyInfo>
+    <AssemblyName>System.Management.Automation</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Management.Automation.Language.StatementAst</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            An abstract base class for statements that have labels such as a while statement or a switch statement.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected LabeledStatementAst (System.Management.Automation.Language.IScriptExtent extent, string label, System.Management.Automation.Language.PipelineBaseAst condition);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(class System.Management.Automation.Language.IScriptExtent extent, string label, class System.Management.Automation.Language.PipelineBaseAst condition) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Language.LabeledStatementAst.#ctor(System.Management.Automation.Language.IScriptExtent,System.String,System.Management.Automation.Language.PipelineBaseAst)" />
+      <MemberSignature Language="VB.NET" Value="Protected Sub New (extent As IScriptExtent, label As String, condition As PipelineBaseAst)" />
+      <MemberSignature Language="F#" Value="new System.Management.Automation.Language.LabeledStatementAst : System.Management.Automation.Language.IScriptExtent * string * System.Management.Automation.Language.PipelineBaseAst -&gt; System.Management.Automation.Language.LabeledStatementAst" Usage="new System.Management.Automation.Language.LabeledStatementAst (extent, label, condition)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="extent" Type="System.Management.Automation.Language.IScriptExtent" />
+        <Parameter Name="label" Type="System.String" />
+        <Parameter Name="condition" Type="System.Management.Automation.Language.PipelineBaseAst" />
+      </Parameters>
+      <Docs>
+        <param name="extent">The extent of the statement.</param>
+        <param name="label">The optionally null label for the statement.</param>
+        <param name="condition">The optionally null pipeline for the condition test of the statement.</param>
+        <summary>
+            Initialize the properties common to labeled statements.
+            </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.Management.Automation.PSArgumentNullException">
+            If <paramref name="extent" /> is null.
+            </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Condition">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.Language.PipelineBaseAst Condition { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Management.Automation.Language.PipelineBaseAst Condition" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.Language.LabeledStatementAst.Condition" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Condition As PipelineBaseAst" />
+      <MemberSignature Language="F#" Value="member this.Condition : System.Management.Automation.Language.PipelineBaseAst" Usage="System.Management.Automation.Language.LabeledStatementAst.Condition" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.Language.PipelineBaseAst</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The ast for the condition that is tested on each iteration of the loop, or the condition tested on a switch.
+            This property may be null if the statement is a <see cref="T:System.Management.Automation.Language.ForStatementAst" />, otherwise it is never null.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Label">
+      <MemberSignature Language="C#" Value="public string Label { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Label" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.Language.LabeledStatementAst.Label" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Label As String" />
+      <MemberSignature Language="F#" Value="member this.Label : string" Usage="System.Management.Automation.Language.LabeledStatementAst.Label" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The label name if specified, otherwise null.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

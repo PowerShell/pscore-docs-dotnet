@@ -1,0 +1,246 @@
+﻿<Type Name="WildcardPattern" FullName="System.Management.Automation.WildcardPattern">
+  <TypeSignature Language="C#" Value="public sealed class WildcardPattern" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit WildcardPattern extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Management.Automation.WildcardPattern" />
+  <TypeSignature Language="VB.NET" Value="Public NotInheritable Class WildcardPattern" />
+  <TypeSignature Language="F#" Value="type WildcardPattern = class" />
+  <AssemblyInfo>
+    <AssemblyName>System.Management.Automation</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Represents a wildcard pattern.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WildcardPattern (string pattern);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string pattern) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.WildcardPattern.#ctor(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (pattern As String)" />
+      <MemberSignature Language="F#" Value="new System.Management.Automation.WildcardPattern : string -&gt; System.Management.Automation.WildcardPattern" Usage="new System.Management.Automation.WildcardPattern pattern" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="pattern" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="pattern">The wildcard pattern to match</param>
+        <summary>
+            Initializes and instance of the WildcardPattern class
+            for the specified wildcard pattern.
+            </summary>
+        <returns>The constructed WildcardPattern object</returns>
+        <remarks> if wildCardType == None, the pattern does not have wild cards</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WildcardPattern (string pattern, System.Management.Automation.WildcardOptions options);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string pattern, valuetype System.Management.Automation.WildcardOptions options) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.WildcardPattern.#ctor(System.String,System.Management.Automation.WildcardOptions)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (pattern As String, options As WildcardOptions)" />
+      <MemberSignature Language="F#" Value="new System.Management.Automation.WildcardPattern : string * System.Management.Automation.WildcardOptions -&gt; System.Management.Automation.WildcardPattern" Usage="new System.Management.Automation.WildcardPattern (pattern, options)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="pattern" Type="System.String" />
+        <Parameter Name="options" Type="System.Management.Automation.WildcardOptions" />
+      </Parameters>
+      <Docs>
+        <param name="pattern">The wildcard pattern to match.</param>
+        <param name="options">Wildcard options</param>
+        <summary>
+            Initializes an instance of the WildcardPattern class for
+            the specified wildcard pattern expression, with options
+            that modify the pattern.
+            </summary>
+        <returns>The constructed WildcardPattern object</returns>
+        <remarks> if wildCardType == None, the pattern does not have wild cards  </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContainsWildcardCharacters">
+      <MemberSignature Language="C#" Value="public static bool ContainsWildcardCharacters (string pattern);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool ContainsWildcardCharacters(string pattern) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.WildcardPattern.ContainsWildcardCharacters(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function ContainsWildcardCharacters (pattern As String) As Boolean" />
+      <MemberSignature Language="F#" Value="static member ContainsWildcardCharacters : string -&gt; bool" Usage="System.Management.Automation.WildcardPattern.ContainsWildcardCharacters pattern" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pattern" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="pattern">
+            String which needs to be checked for the presence of wildcard chars
+            </param>
+        <summary>
+            Checks to see if the given string has any wild card characters in it.
+            </summary>
+        <returns> true if the string has wild card chars, false otherwise. </returns>
+        <remarks>
+            Currently { '*', '?', '[' } are considered wild card chars and
+            '`' is the escape character.
+            </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Escape">
+      <MemberSignature Language="C#" Value="public static string Escape (string pattern);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string Escape(string pattern) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.WildcardPattern.Escape(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function Escape (pattern As String) As String" />
+      <MemberSignature Language="F#" Value="static member Escape : string -&gt; string" Usage="System.Management.Automation.WildcardPattern.Escape pattern" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pattern" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="pattern">The input string containing the text to convert.</param>
+        <summary>
+            Escape special chars in a string by replacing them with their escape codes.
+            </summary>
+        <returns>
+            A string of characters with any metacharacters converted to their escaped form.
+            </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Get">
+      <MemberSignature Language="C#" Value="public static System.Management.Automation.WildcardPattern Get (string pattern, System.Management.Automation.WildcardOptions options);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Management.Automation.WildcardPattern Get(string pattern, valuetype System.Management.Automation.WildcardOptions options) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.WildcardPattern.Get(System.String,System.Management.Automation.WildcardOptions)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function Get (pattern As String, options As WildcardOptions) As WildcardPattern" />
+      <MemberSignature Language="F#" Value="static member Get : string * System.Management.Automation.WildcardOptions -&gt; System.Management.Automation.WildcardPattern" Usage="System.Management.Automation.WildcardPattern.Get (pattern, options)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.WildcardPattern</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pattern" Type="System.String" />
+        <Parameter Name="options" Type="System.Management.Automation.WildcardOptions" />
+      </Parameters>
+      <Docs>
+        <param name="pattern">The pattern</param>
+        <param name="options"></param>
+        <summary>
+            Create a new WildcardPattern, or return an already created one.
+            </summary>
+        <returns />
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsMatch">
+      <MemberSignature Language="C#" Value="public bool IsMatch (string input);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool IsMatch(string input) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.WildcardPattern.IsMatch(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Function IsMatch (input As String) As Boolean" />
+      <MemberSignature Language="F#" Value="member this.IsMatch : string -&gt; bool" Usage="wildcardPattern.IsMatch input" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="input" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="input">The string to search for a match.</param>
+        <summary>
+            Indicates whether the wildcard pattern specified in the WildcardPattern
+            constructor finds a match in the input string.
+            </summary>
+        <returns>true if the wildcard pattern finds a match; otherwise, false</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToWql">
+      <MemberSignature Language="C#" Value="public string ToWql ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance string ToWql() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.WildcardPattern.ToWql" />
+      <MemberSignature Language="VB.NET" Value="Public Function ToWql () As String" />
+      <MemberSignature Language="F#" Value="member this.ToWql : unit -&gt; string" Usage="wildcardPattern.ToWql " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Converts this wildcard to a string that can be used as a right-hand-side operand of the LIKE operator of WQL.
+            For example: "a*" will be converted to "a%".
+            </summary>
+        <returns />
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Unescape">
+      <MemberSignature Language="C#" Value="public static string Unescape (string pattern);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string Unescape(string pattern) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.WildcardPattern.Unescape(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function Unescape (pattern As String) As String" />
+      <MemberSignature Language="F#" Value="static member Unescape : string -&gt; string" Usage="System.Management.Automation.WildcardPattern.Unescape pattern" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pattern" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="pattern">
+            The input string containing the text to convert.
+            </param>
+        <summary>
+            Unescapes any escaped characters in the input string.
+            </summary>
+        <returns>
+            A string of characters with any escaped characters
+            converted to their unescaped form.
+            </returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+            If <paramref name="pattern" /> is null.
+            </exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

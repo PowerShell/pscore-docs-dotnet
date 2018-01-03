@@ -1,0 +1,232 @@
+﻿<Type Name="PipelineAst" FullName="System.Management.Automation.Language.PipelineAst">
+  <TypeSignature Language="C#" Value="public class PipelineAst : System.Management.Automation.Language.PipelineBaseAst" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit PipelineAst extends System.Management.Automation.Language.PipelineBaseAst" />
+  <TypeSignature Language="DocId" Value="T:System.Management.Automation.Language.PipelineAst" />
+  <TypeSignature Language="VB.NET" Value="Public Class PipelineAst&#xA;Inherits PipelineBaseAst" />
+  <TypeSignature Language="F#" Value="type PipelineAst = class&#xA;    inherit PipelineBaseAst" />
+  <AssemblyInfo>
+    <AssemblyName>System.Management.Automation</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Management.Automation.Language.PipelineBaseAst</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            The ast that represents a PowerShell pipeline, e.g. <c>gci -re . *.cs | select-string Foo</c> or <c> 65..90 | % { [char]$_ }</c>.
+            A pipeline must have at least 1 command.  The first command may be an expression or a command invocation.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public PipelineAst (System.Management.Automation.Language.IScriptExtent extent, System.Collections.Generic.IEnumerable&lt;System.Management.Automation.Language.CommandBaseAst&gt; pipelineElements);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Management.Automation.Language.IScriptExtent extent, class System.Collections.Generic.IEnumerable`1&lt;class System.Management.Automation.Language.CommandBaseAst&gt; pipelineElements) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Language.PipelineAst.#ctor(System.Management.Automation.Language.IScriptExtent,System.Collections.Generic.IEnumerable{System.Management.Automation.Language.CommandBaseAst})" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (extent As IScriptExtent, pipelineElements As IEnumerable(Of CommandBaseAst))" />
+      <MemberSignature Language="F#" Value="new System.Management.Automation.Language.PipelineAst : System.Management.Automation.Language.IScriptExtent * seq&lt;System.Management.Automation.Language.CommandBaseAst&gt; -&gt; System.Management.Automation.Language.PipelineAst" Usage="new System.Management.Automation.Language.PipelineAst (extent, pipelineElements)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="extent" Type="System.Management.Automation.Language.IScriptExtent" />
+        <Parameter Name="pipelineElements" Type="System.Collections.Generic.IEnumerable&lt;System.Management.Automation.Language.CommandBaseAst&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="extent">The extent of the pipeline.</param>
+        <param name="pipelineElements">The collection of commands representing the pipeline.</param>
+        <summary>
+            Construct a pipeline from a collection of commands.
+            </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.Management.Automation.PSArgumentNullException">
+            If <paramref name="extent" /> is null.
+            </exception>
+        <exception cref="T:System.Management.Automation.PSArgumentException">
+            If <paramref name="pipelineElements" /> is null or is an empty collection.
+            </exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public PipelineAst (System.Management.Automation.Language.IScriptExtent extent, System.Management.Automation.Language.CommandBaseAst commandAst);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Management.Automation.Language.IScriptExtent extent, class System.Management.Automation.Language.CommandBaseAst commandAst) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Language.PipelineAst.#ctor(System.Management.Automation.Language.IScriptExtent,System.Management.Automation.Language.CommandBaseAst)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (extent As IScriptExtent, commandAst As CommandBaseAst)" />
+      <MemberSignature Language="F#" Value="new System.Management.Automation.Language.PipelineAst : System.Management.Automation.Language.IScriptExtent * System.Management.Automation.Language.CommandBaseAst -&gt; System.Management.Automation.Language.PipelineAst" Usage="new System.Management.Automation.Language.PipelineAst (extent, commandAst)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="extent" Type="System.Management.Automation.Language.IScriptExtent" />
+        <Parameter Name="commandAst" Type="System.Management.Automation.Language.CommandBaseAst" />
+      </Parameters>
+      <Docs>
+        <param name="extent">The extent of the pipeline (which should be the extent of the command).</param>
+        <param name="commandAst">The command for the pipeline.</param>
+        <summary>
+            Construct a pipeline from a single command.
+            </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.Management.Automation.PSArgumentNullException">
+            If <paramref name="extent" /> or <paramref name="commandAst" /> is null.
+            </exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public PipelineAst (System.Management.Automation.Language.IScriptExtent extent, System.Collections.Generic.IEnumerable&lt;System.Management.Automation.Language.CommandBaseAst&gt; pipelineElements, bool background);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Management.Automation.Language.IScriptExtent extent, class System.Collections.Generic.IEnumerable`1&lt;class System.Management.Automation.Language.CommandBaseAst&gt; pipelineElements, bool background) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Language.PipelineAst.#ctor(System.Management.Automation.Language.IScriptExtent,System.Collections.Generic.IEnumerable{System.Management.Automation.Language.CommandBaseAst},System.Boolean)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (extent As IScriptExtent, pipelineElements As IEnumerable(Of CommandBaseAst), background As Boolean)" />
+      <MemberSignature Language="F#" Value="new System.Management.Automation.Language.PipelineAst : System.Management.Automation.Language.IScriptExtent * seq&lt;System.Management.Automation.Language.CommandBaseAst&gt; * bool -&gt; System.Management.Automation.Language.PipelineAst" Usage="new System.Management.Automation.Language.PipelineAst (extent, pipelineElements, background)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="extent" Type="System.Management.Automation.Language.IScriptExtent" />
+        <Parameter Name="pipelineElements" Type="System.Collections.Generic.IEnumerable&lt;System.Management.Automation.Language.CommandBaseAst&gt;" />
+        <Parameter Name="background" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="extent">The extent of the pipeline.</param>
+        <param name="pipelineElements">The collection of commands representing the pipeline.</param>
+        <param name="background">Indicates that this pipeline should be run in the background</param>
+        <summary>
+            Construct a pipeline from a collection of commands.
+            </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.Management.Automation.PSArgumentNullException">
+            If <paramref name="extent" /> is null.
+            </exception>
+        <exception cref="T:System.Management.Automation.PSArgumentException">
+            If <paramref name="pipelineElements" /> is null or is an empty collection.
+            </exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public PipelineAst (System.Management.Automation.Language.IScriptExtent extent, System.Management.Automation.Language.CommandBaseAst commandAst, bool background);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Management.Automation.Language.IScriptExtent extent, class System.Management.Automation.Language.CommandBaseAst commandAst, bool background) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Language.PipelineAst.#ctor(System.Management.Automation.Language.IScriptExtent,System.Management.Automation.Language.CommandBaseAst,System.Boolean)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (extent As IScriptExtent, commandAst As CommandBaseAst, background As Boolean)" />
+      <MemberSignature Language="F#" Value="new System.Management.Automation.Language.PipelineAst : System.Management.Automation.Language.IScriptExtent * System.Management.Automation.Language.CommandBaseAst * bool -&gt; System.Management.Automation.Language.PipelineAst" Usage="new System.Management.Automation.Language.PipelineAst (extent, commandAst, background)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="extent" Type="System.Management.Automation.Language.IScriptExtent" />
+        <Parameter Name="commandAst" Type="System.Management.Automation.Language.CommandBaseAst" />
+        <Parameter Name="background" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="extent">The extent of the pipeline (which should be the extent of the command).</param>
+        <param name="commandAst">The command for the pipeline.</param>
+        <param name="background">Indicates that this pipeline should be run in the background</param>
+        <summary>
+            Construct a pipeline from a single command.
+            </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.Management.Automation.PSArgumentNullException">
+            If <paramref name="extent" /> or <paramref name="commandAst" /> is null.
+            </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Background">
+      <MemberSignature Language="C#" Value="public bool Background { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Background" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.Language.PipelineAst.Background" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Background As Boolean" />
+      <MemberSignature Language="F#" Value="member this.Background : bool" Usage="System.Management.Automation.Language.PipelineAst.Background" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Indicates that this pipeline should be run in the background.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Copy">
+      <MemberSignature Language="C#" Value="public override System.Management.Automation.Language.Ast Copy ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Management.Automation.Language.Ast Copy() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Language.PipelineAst.Copy" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Function Copy () As Ast" />
+      <MemberSignature Language="F#" Value="override this.Copy : unit -&gt; System.Management.Automation.Language.Ast" Usage="pipelineAst.Copy " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.Language.Ast</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Copy the PipelineAst instance
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetPureExpression">
+      <MemberSignature Language="C#" Value="public override System.Management.Automation.Language.ExpressionAst GetPureExpression ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Management.Automation.Language.ExpressionAst GetPureExpression() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Language.PipelineAst.GetPureExpression" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Function GetPureExpression () As ExpressionAst" />
+      <MemberSignature Language="F#" Value="override this.GetPureExpression : unit -&gt; System.Management.Automation.Language.ExpressionAst" Usage="pipelineAst.GetPureExpression " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.Language.ExpressionAst</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            If the pipeline represents a pure expression, the expression is returned, otherwise null is returned.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PipelineElements">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.ReadOnlyCollection&lt;System.Management.Automation.Language.CommandBaseAst&gt; PipelineElements { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ObjectModel.ReadOnlyCollection`1&lt;class System.Management.Automation.Language.CommandBaseAst&gt; PipelineElements" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.Language.PipelineAst.PipelineElements" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property PipelineElements As ReadOnlyCollection(Of CommandBaseAst)" />
+      <MemberSignature Language="F#" Value="member this.PipelineElements : System.Collections.ObjectModel.ReadOnlyCollection&lt;System.Management.Automation.Language.CommandBaseAst&gt;" Usage="System.Management.Automation.Language.PipelineAst.PipelineElements" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.ReadOnlyCollection&lt;System.Management.Automation.Language.CommandBaseAst&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            A non-null, non-empty collection of commands that represent the pipeline.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

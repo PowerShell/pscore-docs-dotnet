@@ -1,0 +1,163 @@
+﻿<Type Name="ConvertToSecureStringCommand" FullName="Microsoft.PowerShell.Commands.ConvertToSecureStringCommand">
+  <TypeSignature Language="C#" Value="public sealed class ConvertToSecureStringCommand : Microsoft.PowerShell.Commands.ConvertFromToSecureStringCommandBase" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit ConvertToSecureStringCommand extends Microsoft.PowerShell.Commands.ConvertFromToSecureStringCommandBase" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.PowerShell.Commands.ConvertToSecureStringCommand" />
+  <TypeSignature Language="VB.NET" Value="Public NotInheritable Class ConvertToSecureStringCommand&#xA;Inherits ConvertFromToSecureStringCommandBase" />
+  <TypeSignature Language="F#" Value="type ConvertToSecureStringCommand = class&#xA;    inherit ConvertFromToSecureStringCommandBase" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.PowerShell.Security</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Microsoft.PowerShell.Commands.ConvertFromToSecureStringCommandBase</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Management.Automation.Cmdlet("ConvertTo", "SecureString", DefaultParameterSetName="Secure", HelpUri="https://go.microsoft.com/fwlink/?LinkID=113291")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Management.Automation.OutputType(typeof(System.Security.SecureString))</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>
+            Defines the implementation of the 'ConvertTo-SecureString' cmdlet.
+            This cmdlet imports a new SecureString from encrypted data --
+            one that represents text that should be kept confidential.
+            The text is encrypted for privacy when being used, and deleted
+            from computer memory when no longer needed.  When no key is
+            specified, the command uses the DPAPI to decrypt the data.
+            When a key is specified, the command uses the AES algorithm
+            to decrypt the data.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ConvertToSecureStringCommand ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Commands.ConvertToSecureStringCommand.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New ()" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Security</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>
+            Initializes a new instance of the ImportSecureStringCommand class.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AsPlainText">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.SwitchParameter AsPlainText { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Management.Automation.SwitchParameter AsPlainText" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.ConvertToSecureStringCommand.AsPlainText" />
+      <MemberSignature Language="VB.NET" Value="Public Property AsPlainText As SwitchParameter" />
+      <MemberSignature Language="F#" Value="member this.AsPlainText : System.Management.Automation.SwitchParameter with get, set" Usage="Microsoft.PowerShell.Commands.ConvertToSecureStringCommand.AsPlainText" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Security</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="PlainText", Position=1)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.SwitchParameter</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+             Gets or sets the flag that marks the unsecured string as a plain
+             text string.
+             </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Force">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.SwitchParameter Force { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Management.Automation.SwitchParameter Force" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.ConvertToSecureStringCommand.Force" />
+      <MemberSignature Language="VB.NET" Value="Public Property Force As SwitchParameter" />
+      <MemberSignature Language="F#" Value="member this.Force : System.Management.Automation.SwitchParameter with get, set" Usage="Microsoft.PowerShell.Commands.ConvertToSecureStringCommand.Force" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Security</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="PlainText", Position=2)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.SwitchParameter</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+             Gets or sets the flag that will force the import of a plaintext
+             unsecured string.
+             </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ProcessRecord">
+      <MemberSignature Language="C#" Value="protected override void ProcessRecord ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void ProcessRecord() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Commands.ConvertToSecureStringCommand.ProcessRecord" />
+      <MemberSignature Language="VB.NET" Value="Protected Overrides Sub ProcessRecord ()" />
+      <MemberSignature Language="F#" Value="override this.ProcessRecord : unit -&gt; unit" Usage="convertToSecureStringCommand.ProcessRecord " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Security</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Processes records from the input pipeline.
+            For each input object, the command decrypts the data,
+            then exports a new SecureString created from the object.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="String">
+      <MemberSignature Language="C#" Value="public string String { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string String" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.ConvertToSecureStringCommand.String" />
+      <MemberSignature Language="VB.NET" Value="Public Property String As String" />
+      <MemberSignature Language="F#" Value="member this.String : string with get, set" Usage="Microsoft.PowerShell.Commands.ConvertToSecureStringCommand.String" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Security</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(Mandatory=true, Position=0, ValueFromPipeline=true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+             Gets or sets the unsecured string to be imported.
+             </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

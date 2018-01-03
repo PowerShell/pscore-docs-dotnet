@@ -1,0 +1,420 @@
+﻿<Type Name="PSCmdlet" FullName="System.Management.Automation.PSCmdlet">
+  <TypeSignature Language="C#" Value="public abstract class PSCmdlet : System.Management.Automation.Cmdlet" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit PSCmdlet extends System.Management.Automation.Cmdlet" />
+  <TypeSignature Language="DocId" Value="T:System.Management.Automation.PSCmdlet" />
+  <TypeSignature Language="VB.NET" Value="Public MustInherit Class PSCmdlet&#xA;Inherits Cmdlet" />
+  <TypeSignature Language="F#" Value="type PSCmdlet = class&#xA;    inherit Cmdlet" />
+  <AssemblyInfo>
+    <AssemblyName>System.Management.Automation</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Management.Automation.Cmdlet</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Defines members and overrides used by Cmdlets.
+            All Cmdlets must derive from <see cref="T:System.Management.Automation.Cmdlet" />.
+            </summary>
+    <remarks>
+            There are two ways to create a Cmdlet: by deriving from the Cmdlet base class, and by
+            deriving from the PSCmdlet base class.  The Cmdlet base class is the primary means by
+            which users create their own Cmdlets.  Extending this class provides support for the most
+            common functionality, including object output and record processing.
+            If your Cmdlet requires access to the MSH Runtime (for example, variables in the session state,
+            access to the host, or information about the current Cmdlet Providers,) then you should instead
+            derive from the PSCmdlet base class.
+            The public members defined by the PSCmdlet class are not designed to be overridden; instead, they
+            provided access to different aspects of the MSH runtime.
+            In both cases, users should first develop and implement an object model to accomplish their
+            task, extending the Cmdlet or PSCmdlet classes only as a thin management layer.
+            </remarks>
+    <remarks>
+            Do not attempt to create instances of
+            <see cref="T:System.Management.Automation.Cmdlet" />
+            or its subclasses.
+            Instead, derive your own subclasses and mark them with
+            <see cref="T:System.Management.Automation.CmdletAttribute" />,
+            and when your assembly is included in a shell, the Engine will
+            take care of instantiating your subclass.
+            </remarks>
+    <altmember cref="T:System.Management.Automation.Internal.InternalCommand" />
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected PSCmdlet ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.PSCmdlet.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Protected Sub New ()" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>
+            Initializes the new instance of PSCmdlet class.
+            </summary>
+        <remarks>
+            Only subclasses of <see cref="T:System.Management.Automation.Cmdlet" />
+            can be created.
+            </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CurrentProviderLocation">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.PathInfo CurrentProviderLocation (string providerId);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Management.Automation.PathInfo CurrentProviderLocation(string providerId) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.PSCmdlet.CurrentProviderLocation(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Function CurrentProviderLocation (providerId As String) As PathInfo" />
+      <MemberSignature Language="F#" Value="member this.CurrentProviderLocation : string -&gt; System.Management.Automation.PathInfo" Usage="pSCmdlet.CurrentProviderLocation providerId" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.PathInfo</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="providerId" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="providerId">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+        <Content contentref="System.Management.Automation.PathIntrinsics.CurrentProviderLocation" />
+      </Docs>
+    </Member>
+    <Member MemberName="Events">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.PSEventManager Events { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Management.Automation.PSEventManager Events" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.PSCmdlet.Events" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Events As PSEventManager" />
+      <MemberSignature Language="F#" Value="member this.Events : System.Management.Automation.PSEventManager" Usage="System.Management.Automation.PSCmdlet.Events" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.PSEventManager</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the event manager for the current runspace.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetResolvedProviderPathFromPSPath">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.Collection&lt;string&gt; GetResolvedProviderPathFromPSPath (string path, out System.Management.Automation.ProviderInfo provider);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Collections.ObjectModel.Collection`1&lt;string&gt; GetResolvedProviderPathFromPSPath(string path, [out] class System.Management.Automation.ProviderInfo&amp; provider) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.PSCmdlet.GetResolvedProviderPathFromPSPath(System.String,System.Management.Automation.ProviderInfo@)" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetResolvedProviderPathFromPSPath (path As String, ByRef provider As ProviderInfo) As Collection(Of String)" />
+      <MemberSignature Language="F#" Value="member this.GetResolvedProviderPathFromPSPath : string *  -&gt; System.Collections.ObjectModel.Collection&lt;string&gt;" Usage="pSCmdlet.GetResolvedProviderPathFromPSPath (path, provider)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.Collection&lt;System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+        <Parameter Name="provider" Type="System.Management.Automation.ProviderInfo&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="path">To be added.</param>
+        <param name="provider">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+        <Content contentref="System.Management.Automation.PathIntrinsics.GetResolvedProviderPathFromPSPath" />
+      </Docs>
+    </Member>
+    <Member MemberName="GetUnresolvedProviderPathFromPSPath">
+      <MemberSignature Language="C#" Value="public string GetUnresolvedProviderPathFromPSPath (string path);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance string GetUnresolvedProviderPathFromPSPath(string path) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.PSCmdlet.GetUnresolvedProviderPathFromPSPath(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetUnresolvedProviderPathFromPSPath (path As String) As String" />
+      <MemberSignature Language="F#" Value="member this.GetUnresolvedProviderPathFromPSPath : string -&gt; string" Usage="pSCmdlet.GetUnresolvedProviderPathFromPSPath path" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="path">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+        <Content contentref="System.Management.Automation.PathIntrinsics.GetUnresolvedProviderPathFromPSPath" />
+      </Docs>
+    </Member>
+    <Member MemberName="GetVariableValue">
+      <MemberSignature Language="C#" Value="public object GetVariableValue (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance object GetVariableValue(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.PSCmdlet.GetVariableValue(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetVariableValue (name As String) As Object" />
+      <MemberSignature Language="F#" Value="member this.GetVariableValue : string -&gt; obj" Usage="pSCmdlet.GetVariableValue name" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+        <Content contentref="System.Management.Automation.VariableIntrinsics.GetValue" />
+      </Docs>
+    </Member>
+    <Member MemberName="GetVariableValue">
+      <MemberSignature Language="C#" Value="public object GetVariableValue (string name, object defaultValue);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance object GetVariableValue(string name, object defaultValue) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.PSCmdlet.GetVariableValue(System.String,System.Object)" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetVariableValue (name As String, defaultValue As Object) As Object" />
+      <MemberSignature Language="F#" Value="member this.GetVariableValue : string * obj -&gt; obj" Usage="pSCmdlet.GetVariableValue (name, defaultValue)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="defaultValue" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="name">To be added.</param>
+        <param name="defaultValue">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+        <Content contentref="System.Management.Automation.VariableIntrinsics.GetValue" />
+      </Docs>
+    </Member>
+    <Member MemberName="Host">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.Host.PSHost Host { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Management.Automation.Host.PSHost Host" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.PSCmdlet.Host" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Host As PSHost" />
+      <MemberSignature Language="F#" Value="member this.Host : System.Management.Automation.Host.PSHost" Usage="System.Management.Automation.PSCmdlet.Host" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.Host.PSHost</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the host interaction APIs.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InvokeCommand">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.CommandInvocationIntrinsics InvokeCommand { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Management.Automation.CommandInvocationIntrinsics InvokeCommand" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.PSCmdlet.InvokeCommand" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property InvokeCommand As CommandInvocationIntrinsics" />
+      <MemberSignature Language="F#" Value="member this.InvokeCommand : System.Management.Automation.CommandInvocationIntrinsics" Usage="System.Management.Automation.PSCmdlet.InvokeCommand" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.CommandInvocationIntrinsics</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Provides access to utility routines for executing scripts
+            and creating script blocks.
+            </summary>
+        <value>Returns an object exposing the utility routines.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InvokeProvider">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.ProviderIntrinsics InvokeProvider { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Management.Automation.ProviderIntrinsics InvokeProvider" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.PSCmdlet.InvokeProvider" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property InvokeProvider As ProviderIntrinsics" />
+      <MemberSignature Language="F#" Value="member this.InvokeProvider : System.Management.Automation.ProviderIntrinsics" Usage="System.Management.Automation.PSCmdlet.InvokeProvider" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.ProviderIntrinsics</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the instance of the provider interface APIs for the current runspace.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="JobManager">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.JobManager JobManager { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Management.Automation.JobManager JobManager" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.PSCmdlet.JobManager" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property JobManager As JobManager" />
+      <MemberSignature Language="F#" Value="member this.JobManager : System.Management.Automation.JobManager" Usage="System.Management.Automation.PSCmdlet.JobManager" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.JobManager</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Manager for JobSourceAdapters registered.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="JobRepository">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.JobRepository JobRepository { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Management.Automation.JobRepository JobRepository" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.PSCmdlet.JobRepository" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property JobRepository As JobRepository" />
+      <MemberSignature Language="F#" Value="member this.JobRepository : System.Management.Automation.JobRepository" Usage="System.Management.Automation.PSCmdlet.JobRepository" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.JobRepository</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Repository for jobs
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MyInvocation">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.InvocationInfo MyInvocation { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Management.Automation.InvocationInfo MyInvocation" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.PSCmdlet.MyInvocation" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property MyInvocation As InvocationInfo" />
+      <MemberSignature Language="F#" Value="member this.MyInvocation : System.Management.Automation.InvocationInfo" Usage="System.Management.Automation.PSCmdlet.MyInvocation" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.InvocationInfo</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Contains information about the identity of this cmdlet
+            and how it was invoked.
+            </summary>
+        <value />
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PagingParameters">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.PagingParameters PagingParameters { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Management.Automation.PagingParameters PagingParameters" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.PSCmdlet.PagingParameters" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property PagingParameters As PagingParameters" />
+      <MemberSignature Language="F#" Value="member this.PagingParameters : System.Management.Automation.PagingParameters" Usage="System.Management.Automation.PSCmdlet.PagingParameters" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.PagingParameters</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            If the cmdlet declares paging support (via <see cref="P:System.Management.Automation.CmdletCommonMetadataAttribute.SupportsPaging" />),
+            then <see cref="P:System.Management.Automation.PSCmdlet.PagingParameters" /> property contains arguments of the paging parameters.
+            Otherwise <see cref="P:System.Management.Automation.PSCmdlet.PagingParameters" /> property is <c>null</c>.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ParameterSetName">
+      <MemberSignature Language="C#" Value="public string ParameterSetName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ParameterSetName" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.PSCmdlet.ParameterSetName" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ParameterSetName As String" />
+      <MemberSignature Language="F#" Value="member this.ParameterSetName : string" Usage="System.Management.Automation.PSCmdlet.ParameterSetName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The name of the parameter set in effect.
+            </summary>
+        <value>the parameter set name</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SessionState">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.SessionState SessionState { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Management.Automation.SessionState SessionState" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.PSCmdlet.SessionState" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property SessionState As SessionState" />
+      <MemberSignature Language="F#" Value="member this.SessionState : System.Management.Automation.SessionState" Usage="System.Management.Automation.PSCmdlet.SessionState" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.SessionState</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the instance of session state for the current runspace.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

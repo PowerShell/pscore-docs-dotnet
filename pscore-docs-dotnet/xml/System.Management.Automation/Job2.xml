@@ -1,0 +1,836 @@
+﻿<Type Name="Job2" FullName="System.Management.Automation.Job2">
+  <TypeSignature Language="C#" Value="public abstract class Job2 : System.Management.Automation.Job" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit Job2 extends System.Management.Automation.Job" />
+  <TypeSignature Language="DocId" Value="T:System.Management.Automation.Job2" />
+  <TypeSignature Language="VB.NET" Value="Public MustInherit Class Job2&#xA;Inherits Job" />
+  <TypeSignature Language="F#" Value="type Job2 = class&#xA;    inherit Job" />
+  <AssemblyInfo>
+    <AssemblyName>System.Management.Automation</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Management.Automation.Job</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+             New base class for a job that provides extended state
+             management functionality on the job. Since the existing
+             Job class is an abstract class and there are existing
+             implementations of the same, it is required to have a
+             new class that will have the extended functionality. This
+             is to ensure that backwards compatibility is maintained
+            
+             However, this class will derive from the existing Job
+             class. The option of deprecating the existing class was
+             considered as well. In order to maintain backwards
+             compatibility of PowerShell job cmdlets they will have
+             to work with the old interface and hence deprecating
+             the Job class did not add any benefit rather than
+             deriving from the same
+             </summary>
+    <remarks>The following are some of the notes about
+             why the asynchronous operations are provided this way
+             in this class. There are two possible options in which
+             asynchronous support can be provided:
+                 1. Classical pattern (Begin and End)
+                 2. Event based pattern
+            
+             Although the PowerShell API uses the classical pattern
+             and we would like the Job API and PowerShell API to be
+             as close as possible, the classical pattern is inherently
+             complex to use.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected Job2 ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Job2.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Protected Sub New ()" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>
+            Default no argument constructor
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected Job2 (string command);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(string command) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Job2.#ctor(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Protected Sub New (command As String)" />
+      <MemberSignature Language="F#" Value="new System.Management.Automation.Job2 : string -&gt; System.Management.Automation.Job2" Usage="new System.Management.Automation.Job2 command" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="command" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="command">string representation
+            of the command the job is running</param>
+        <summary>
+            Constructor which will initialize the job
+            with the associated command string
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected Job2 (string command, string name);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(string command, string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Job2.#ctor(System.String,System.String)" />
+      <MemberSignature Language="VB.NET" Value="Protected Sub New (command As String, name As String)" />
+      <MemberSignature Language="F#" Value="new System.Management.Automation.Job2 : string * string -&gt; System.Management.Automation.Job2" Usage="new System.Management.Automation.Job2 (command, name)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="command" Type="System.String" />
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="command">Command invoked by this job object</param>
+        <param name="name">Friendly name for the job object</param>
+        <summary>
+            Creates an instance of this class
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected Job2 (string command, string name, System.Collections.Generic.IList&lt;System.Management.Automation.Job&gt; childJobs);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(string command, string name, class System.Collections.Generic.IList`1&lt;class System.Management.Automation.Job&gt; childJobs) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Job2.#ctor(System.String,System.String,System.Collections.Generic.IList{System.Management.Automation.Job})" />
+      <MemberSignature Language="VB.NET" Value="Protected Sub New (command As String, name As String, childJobs As IList(Of Job))" />
+      <MemberSignature Language="F#" Value="new System.Management.Automation.Job2 : string * string * System.Collections.Generic.IList&lt;System.Management.Automation.Job&gt; -&gt; System.Management.Automation.Job2" Usage="new System.Management.Automation.Job2 (command, name, childJobs)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="command" Type="System.String" />
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="childJobs" Type="System.Collections.Generic.IList&lt;System.Management.Automation.Job&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="command">Command invoked by this job object</param>
+        <param name="name">Friendly name for the job object</param>
+        <param name="childJobs">Child jobs of this job object</param>
+        <summary>
+            Creates an instance of this class
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected Job2 (string command, string name, Guid instanceId);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(string command, string name, valuetype System.Guid instanceId) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Job2.#ctor(System.String,System.String,System.Guid)" />
+      <MemberSignature Language="VB.NET" Value="Protected Sub New (command As String, name As String, instanceId As Guid)" />
+      <MemberSignature Language="F#" Value="new System.Management.Automation.Job2 : string * string * Guid -&gt; System.Management.Automation.Job2" Usage="new System.Management.Automation.Job2 (command, name, instanceId)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="command" Type="System.String" />
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="instanceId" Type="System.Guid" />
+      </Parameters>
+      <Docs>
+        <param name="command">Command string</param>
+        <param name="name">Friendly name for the job</param>
+        <param name="instanceId">Instance ID to allow job identification across sessions.</param>
+        <summary>
+            Creates an instance of this class
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected Job2 (string command, string name, System.Management.Automation.JobIdentifier token);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(string command, string name, class System.Management.Automation.JobIdentifier token) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Job2.#ctor(System.String,System.String,System.Management.Automation.JobIdentifier)" />
+      <MemberSignature Language="VB.NET" Value="Protected Sub New (command As String, name As String, token As JobIdentifier)" />
+      <MemberSignature Language="F#" Value="new System.Management.Automation.Job2 : string * string * System.Management.Automation.JobIdentifier -&gt; System.Management.Automation.Job2" Usage="new System.Management.Automation.Job2 (command, name, token)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="command" Type="System.String" />
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="token" Type="System.Management.Automation.JobIdentifier" />
+      </Parameters>
+      <Docs>
+        <param name="command">Command invoked by this job object</param>
+        <param name="name">Friendly name for the job object</param>
+        <param name="token">JobIdentifier token used to assign Id and InstanceId</param>
+        <summary>
+            Creates an instance of this class
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnResumeJobCompleted">
+      <MemberSignature Language="C#" Value="protected virtual void OnResumeJobCompleted (System.ComponentModel.AsyncCompletedEventArgs eventArgs);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnResumeJobCompleted(class System.ComponentModel.AsyncCompletedEventArgs eventArgs) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Job2.OnResumeJobCompleted(System.ComponentModel.AsyncCompletedEventArgs)" />
+      <MemberSignature Language="VB.NET" Value="Protected Overridable Sub OnResumeJobCompleted (eventArgs As AsyncCompletedEventArgs)" />
+      <MemberSignature Language="F#" Value="abstract member OnResumeJobCompleted : System.ComponentModel.AsyncCompletedEventArgs -&gt; unit&#xA;override this.OnResumeJobCompleted : System.ComponentModel.AsyncCompletedEventArgs -&gt; unit" Usage="job2.OnResumeJobCompleted eventArgs" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="eventArgs" Type="System.ComponentModel.AsyncCompletedEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="eventArgs">argument describing
+            an exception that is associated with the event</param>
+        <summary>
+            Method which can be extended or called by derived
+            classes to raise the event when resuming a
+            suspended job is completed
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnStartJobCompleted">
+      <MemberSignature Language="C#" Value="protected virtual void OnStartJobCompleted (System.ComponentModel.AsyncCompletedEventArgs eventArgs);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnStartJobCompleted(class System.ComponentModel.AsyncCompletedEventArgs eventArgs) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Job2.OnStartJobCompleted(System.ComponentModel.AsyncCompletedEventArgs)" />
+      <MemberSignature Language="VB.NET" Value="Protected Overridable Sub OnStartJobCompleted (eventArgs As AsyncCompletedEventArgs)" />
+      <MemberSignature Language="F#" Value="abstract member OnStartJobCompleted : System.ComponentModel.AsyncCompletedEventArgs -&gt; unit&#xA;override this.OnStartJobCompleted : System.ComponentModel.AsyncCompletedEventArgs -&gt; unit" Usage="job2.OnStartJobCompleted eventArgs" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="eventArgs" Type="System.ComponentModel.AsyncCompletedEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="eventArgs">arguments describing
+            an exception that is associated with the event</param>
+        <summary>
+            Method which can be extended or called by derived
+            classes to raise the event when start of
+            the job is completed
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnStopJobCompleted">
+      <MemberSignature Language="C#" Value="protected virtual void OnStopJobCompleted (System.ComponentModel.AsyncCompletedEventArgs eventArgs);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnStopJobCompleted(class System.ComponentModel.AsyncCompletedEventArgs eventArgs) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Job2.OnStopJobCompleted(System.ComponentModel.AsyncCompletedEventArgs)" />
+      <MemberSignature Language="VB.NET" Value="Protected Overridable Sub OnStopJobCompleted (eventArgs As AsyncCompletedEventArgs)" />
+      <MemberSignature Language="F#" Value="abstract member OnStopJobCompleted : System.ComponentModel.AsyncCompletedEventArgs -&gt; unit&#xA;override this.OnStopJobCompleted : System.ComponentModel.AsyncCompletedEventArgs -&gt; unit" Usage="job2.OnStopJobCompleted eventArgs" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="eventArgs" Type="System.ComponentModel.AsyncCompletedEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="eventArgs">argument describing
+            an exception that is associated with the event</param>
+        <summary>
+            Method which can be extended or called by derived
+            classes to raise the event when stopping a
+            job is completed
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnSuspendJobCompleted">
+      <MemberSignature Language="C#" Value="protected virtual void OnSuspendJobCompleted (System.ComponentModel.AsyncCompletedEventArgs eventArgs);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnSuspendJobCompleted(class System.ComponentModel.AsyncCompletedEventArgs eventArgs) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Job2.OnSuspendJobCompleted(System.ComponentModel.AsyncCompletedEventArgs)" />
+      <MemberSignature Language="VB.NET" Value="Protected Overridable Sub OnSuspendJobCompleted (eventArgs As AsyncCompletedEventArgs)" />
+      <MemberSignature Language="F#" Value="abstract member OnSuspendJobCompleted : System.ComponentModel.AsyncCompletedEventArgs -&gt; unit&#xA;override this.OnSuspendJobCompleted : System.ComponentModel.AsyncCompletedEventArgs -&gt; unit" Usage="job2.OnSuspendJobCompleted eventArgs" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="eventArgs" Type="System.ComponentModel.AsyncCompletedEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="eventArgs">argument describing
+            an exception that is associated with the event</param>
+        <summary>
+            Method which can be extended or called by derived
+            classes to raise the event when suspending a
+            job is completed
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnUnblockJobCompleted">
+      <MemberSignature Language="C#" Value="protected virtual void OnUnblockJobCompleted (System.ComponentModel.AsyncCompletedEventArgs eventArgs);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnUnblockJobCompleted(class System.ComponentModel.AsyncCompletedEventArgs eventArgs) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Job2.OnUnblockJobCompleted(System.ComponentModel.AsyncCompletedEventArgs)" />
+      <MemberSignature Language="VB.NET" Value="Protected Overridable Sub OnUnblockJobCompleted (eventArgs As AsyncCompletedEventArgs)" />
+      <MemberSignature Language="F#" Value="abstract member OnUnblockJobCompleted : System.ComponentModel.AsyncCompletedEventArgs -&gt; unit&#xA;override this.OnUnblockJobCompleted : System.ComponentModel.AsyncCompletedEventArgs -&gt; unit" Usage="job2.OnUnblockJobCompleted eventArgs" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="eventArgs" Type="System.ComponentModel.AsyncCompletedEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="eventArgs">argument describing
+            an exception that is associated with the event</param>
+        <summary>
+            Method which can be extended or called by derived
+            classes to raise the event when unblocking a
+            blocked job is completed
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ResumeJob">
+      <MemberSignature Language="C#" Value="public abstract void ResumeJob ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void ResumeJob() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Job2.ResumeJob" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Sub ResumeJob ()" />
+      <MemberSignature Language="F#" Value="abstract member ResumeJob : unit -&gt; unit" Usage="job2.ResumeJob " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Resume a suspended job
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ResumeJobAsync">
+      <MemberSignature Language="C#" Value="public abstract void ResumeJobAsync ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void ResumeJobAsync() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Job2.ResumeJobAsync" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Sub ResumeJobAsync ()" />
+      <MemberSignature Language="F#" Value="abstract member ResumeJobAsync : unit -&gt; unit" Usage="job2.ResumeJobAsync " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Resume a suspended job asynchronously.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ResumeJobCompleted">
+      <MemberSignature Language="C#" Value="public event EventHandler&lt;System.ComponentModel.AsyncCompletedEventArgs&gt; ResumeJobCompleted;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class System.ComponentModel.AsyncCompletedEventArgs&gt; ResumeJobCompleted" />
+      <MemberSignature Language="DocId" Value="E:System.Management.Automation.Job2.ResumeJobCompleted" />
+      <MemberSignature Language="VB.NET" Value="Public Event ResumeJobCompleted As EventHandler(Of AsyncCompletedEventArgs) " />
+      <MemberSignature Language="F#" Value="member this.ResumeJobCompleted : EventHandler&lt;System.ComponentModel.AsyncCompletedEventArgs&gt; " Usage="member this.ResumeJobCompleted : System.EventHandler&lt;System.ComponentModel.AsyncCompletedEventArgs&gt; " />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;System.ComponentModel.AsyncCompletedEventArgs&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            This event should be raised whenever the asynchronous resume of
+            a suspended job is completed. This event should not be raised for
+            synchronous operation
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetJobState">
+      <MemberSignature Language="C#" Value="protected void SetJobState (System.Management.Automation.JobState state, Exception reason);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void SetJobState(valuetype System.Management.Automation.JobState state, class System.Exception reason) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Job2.SetJobState(System.Management.Automation.JobState,System.Exception)" />
+      <MemberSignature Language="VB.NET" Value="Protected Sub SetJobState (state As JobState, reason As Exception)" />
+      <MemberSignature Language="F#" Value="override this.SetJobState : System.Management.Automation.JobState * Exception -&gt; unit" Usage="job2.SetJobState (state, reason)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="state" Type="System.Management.Automation.JobState" />
+        <Parameter Name="reason" Type="System.Exception" />
+      </Parameters>
+      <Docs>
+        <param name="state">state of the job</param>
+        <param name="reason">exception associated with the
+            job entering this state</param>
+        <summary>
+            There is an internal method in Job which is not made
+            public. In order to make this available to someone
+            implementing a job it has to be added here. If the
+            original method is made public it has changes of
+            colliding with some implementation which may have
+            added that method
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StartJob">
+      <MemberSignature Language="C#" Value="public abstract void StartJob ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void StartJob() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Job2.StartJob" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Sub StartJob ()" />
+      <MemberSignature Language="F#" Value="abstract member StartJob : unit -&gt; unit" Usage="job2.StartJob " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            start a job. The job will be started with the parameters
+            specified in StartParameters
+            </summary>
+        <remarks>It is redundant to have a method named StartJob
+            on a job class. However, this is done so as to avoid
+            an FxCop violation "CA1716:IdentifiersShouldNotMatchKeywords"
+            Stop and Resume are reserved keyworks in C# and hence cannot
+            be used as method names. Therefore to be consistent it has
+            been decided to use *Job in the name of the methods</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StartJobAsync">
+      <MemberSignature Language="C#" Value="public abstract void StartJobAsync ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void StartJobAsync() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Job2.StartJobAsync" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Sub StartJobAsync ()" />
+      <MemberSignature Language="F#" Value="abstract member StartJobAsync : unit -&gt; unit" Usage="job2.StartJobAsync " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Start a job asynchronously
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StartJobCompleted">
+      <MemberSignature Language="C#" Value="public event EventHandler&lt;System.ComponentModel.AsyncCompletedEventArgs&gt; StartJobCompleted;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class System.ComponentModel.AsyncCompletedEventArgs&gt; StartJobCompleted" />
+      <MemberSignature Language="DocId" Value="E:System.Management.Automation.Job2.StartJobCompleted" />
+      <MemberSignature Language="VB.NET" Value="Public Event StartJobCompleted As EventHandler(Of AsyncCompletedEventArgs) " />
+      <MemberSignature Language="F#" Value="member this.StartJobCompleted : EventHandler&lt;System.ComponentModel.AsyncCompletedEventArgs&gt; " Usage="member this.StartJobCompleted : System.EventHandler&lt;System.ComponentModel.AsyncCompletedEventArgs&gt; " />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;System.ComponentModel.AsyncCompletedEventArgs&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Event to be raise when the start job activity is completed.
+            This event should not be raised for
+            synchronous operation
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StartParameters">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.List&lt;System.Management.Automation.Runspaces.CommandParameterCollection&gt; StartParameters { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.List`1&lt;class System.Management.Automation.Runspaces.CommandParameterCollection&gt; StartParameters" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.Job2.StartParameters" />
+      <MemberSignature Language="VB.NET" Value="Public Property StartParameters As List(Of CommandParameterCollection)" />
+      <MemberSignature Language="F#" Value="member this.StartParameters : System.Collections.Generic.List&lt;System.Management.Automation.Runspaces.CommandParameterCollection&gt; with get, set" Usage="System.Management.Automation.Job2.StartParameters" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.List&lt;System.Management.Automation.Runspaces.CommandParameterCollection&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Parameters to be used to start a job.
+            This is a property because CommandParameterCollection
+            does not have a public constructor. Hence the
+            infrastructure creates an instance and provides
+            it for the implementations to use
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StopJob">
+      <MemberSignature Language="C#" Value="public abstract void StopJob (bool force, string reason);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void StopJob(bool force, string reason) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Job2.StopJob(System.Boolean,System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Sub StopJob (force As Boolean, reason As String)" />
+      <MemberSignature Language="F#" Value="override this.StopJob : bool * string -&gt; unit" Usage="job2.StopJob (force, reason)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="force" Type="System.Boolean" />
+        <Parameter Name="reason" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="force"></param>
+        <param name="reason"></param>
+        <summary>
+            StopJob
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StopJobAsync">
+      <MemberSignature Language="C#" Value="public abstract void StopJobAsync ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void StopJobAsync() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Job2.StopJobAsync" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Sub StopJobAsync ()" />
+      <MemberSignature Language="F#" Value="abstract member StopJobAsync : unit -&gt; unit" Usage="job2.StopJobAsync " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Stop a job asynchronously
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StopJobAsync">
+      <MemberSignature Language="C#" Value="public abstract void StopJobAsync (bool force, string reason);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void StopJobAsync(bool force, string reason) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Job2.StopJobAsync(System.Boolean,System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Sub StopJobAsync (force As Boolean, reason As String)" />
+      <MemberSignature Language="F#" Value="abstract member StopJobAsync : bool * string -&gt; unit" Usage="job2.StopJobAsync (force, reason)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="force" Type="System.Boolean" />
+        <Parameter Name="reason" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="force"></param>
+        <param name="reason"></param>
+        <summary>
+            StopJobAsync
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StopJobCompleted">
+      <MemberSignature Language="C#" Value="public event EventHandler&lt;System.ComponentModel.AsyncCompletedEventArgs&gt; StopJobCompleted;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class System.ComponentModel.AsyncCompletedEventArgs&gt; StopJobCompleted" />
+      <MemberSignature Language="DocId" Value="E:System.Management.Automation.Job2.StopJobCompleted" />
+      <MemberSignature Language="VB.NET" Value="Public Event StopJobCompleted As EventHandler(Of AsyncCompletedEventArgs) " />
+      <MemberSignature Language="F#" Value="member this.StopJobCompleted : EventHandler&lt;System.ComponentModel.AsyncCompletedEventArgs&gt; " Usage="member this.StopJobCompleted : System.EventHandler&lt;System.ComponentModel.AsyncCompletedEventArgs&gt; " />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;System.ComponentModel.AsyncCompletedEventArgs&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Event to be raised when the asynchronous stopping of a job
+            is completed.This event should not be raised for
+            synchronous operation
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SuspendJob">
+      <MemberSignature Language="C#" Value="public abstract void SuspendJob ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void SuspendJob() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Job2.SuspendJob" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Sub SuspendJob ()" />
+      <MemberSignature Language="F#" Value="abstract member SuspendJob : unit -&gt; unit" Usage="job2.SuspendJob " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Suspend a job
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SuspendJob">
+      <MemberSignature Language="C#" Value="public abstract void SuspendJob (bool force, string reason);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void SuspendJob(bool force, string reason) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Job2.SuspendJob(System.Boolean,System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Sub SuspendJob (force As Boolean, reason As String)" />
+      <MemberSignature Language="F#" Value="abstract member SuspendJob : bool * string -&gt; unit" Usage="job2.SuspendJob (force, reason)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="force" Type="System.Boolean" />
+        <Parameter Name="reason" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="force"></param>
+        <param name="reason"></param>
+        <summary>
+            SuspendJob
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SuspendJobAsync">
+      <MemberSignature Language="C#" Value="public abstract void SuspendJobAsync ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void SuspendJobAsync() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Job2.SuspendJobAsync" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Sub SuspendJobAsync ()" />
+      <MemberSignature Language="F#" Value="abstract member SuspendJobAsync : unit -&gt; unit" Usage="job2.SuspendJobAsync " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Asynchronously suspend a job
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SuspendJobAsync">
+      <MemberSignature Language="C#" Value="public abstract void SuspendJobAsync (bool force, string reason);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void SuspendJobAsync(bool force, string reason) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Job2.SuspendJobAsync(System.Boolean,System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Sub SuspendJobAsync (force As Boolean, reason As String)" />
+      <MemberSignature Language="F#" Value="abstract member SuspendJobAsync : bool * string -&gt; unit" Usage="job2.SuspendJobAsync (force, reason)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="force" Type="System.Boolean" />
+        <Parameter Name="reason" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="force"></param>
+        <param name="reason"></param>
+        <summary>
+            SuspendJobAsync
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SuspendJobCompleted">
+      <MemberSignature Language="C#" Value="public event EventHandler&lt;System.ComponentModel.AsyncCompletedEventArgs&gt; SuspendJobCompleted;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class System.ComponentModel.AsyncCompletedEventArgs&gt; SuspendJobCompleted" />
+      <MemberSignature Language="DocId" Value="E:System.Management.Automation.Job2.SuspendJobCompleted" />
+      <MemberSignature Language="VB.NET" Value="Public Event SuspendJobCompleted As EventHandler(Of AsyncCompletedEventArgs) " />
+      <MemberSignature Language="F#" Value="member this.SuspendJobCompleted : EventHandler&lt;System.ComponentModel.AsyncCompletedEventArgs&gt; " Usage="member this.SuspendJobCompleted : System.EventHandler&lt;System.ComponentModel.AsyncCompletedEventArgs&gt; " />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;System.ComponentModel.AsyncCompletedEventArgs&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            This event should be raised whenever the asynchronous suspend of
+            a job is completed. This event should not be raised for
+            synchronous operation
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SyncRoot">
+      <MemberSignature Language="C#" Value="protected object SyncRoot { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object SyncRoot" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.Job2.SyncRoot" />
+      <MemberSignature Language="VB.NET" Value="Protected ReadOnly Property SyncRoot As Object" />
+      <MemberSignature Language="F#" Value="member this.SyncRoot : obj" Usage="System.Management.Automation.Job2.SyncRoot" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary />
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UnblockJob">
+      <MemberSignature Language="C#" Value="public abstract void UnblockJob ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void UnblockJob() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Job2.UnblockJob" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Sub UnblockJob ()" />
+      <MemberSignature Language="F#" Value="abstract member UnblockJob : unit -&gt; unit" Usage="job2.UnblockJob " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Unblock a blocked job
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UnblockJobAsync">
+      <MemberSignature Language="C#" Value="public abstract void UnblockJobAsync ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void UnblockJobAsync() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Job2.UnblockJobAsync" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Sub UnblockJobAsync ()" />
+      <MemberSignature Language="F#" Value="abstract member UnblockJobAsync : unit -&gt; unit" Usage="job2.UnblockJobAsync " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Unblock a blocked job asynchronously
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UnblockJobCompleted">
+      <MemberSignature Language="C#" Value="public event EventHandler&lt;System.ComponentModel.AsyncCompletedEventArgs&gt; UnblockJobCompleted;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class System.ComponentModel.AsyncCompletedEventArgs&gt; UnblockJobCompleted" />
+      <MemberSignature Language="DocId" Value="E:System.Management.Automation.Job2.UnblockJobCompleted" />
+      <MemberSignature Language="VB.NET" Value="Public Event UnblockJobCompleted As EventHandler(Of AsyncCompletedEventArgs) " />
+      <MemberSignature Language="F#" Value="member this.UnblockJobCompleted : EventHandler&lt;System.ComponentModel.AsyncCompletedEventArgs&gt; " Usage="member this.UnblockJobCompleted : System.EventHandler&lt;System.ComponentModel.AsyncCompletedEventArgs&gt; " />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;System.ComponentModel.AsyncCompletedEventArgs&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            This event should be raised whenever the asynchronous unblock
+            of a blocked job is completed. This event should not be raised for
+            synchronous operation
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

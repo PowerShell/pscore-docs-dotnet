@@ -1,0 +1,271 @@
+﻿<Type Name="Ast" FullName="System.Management.Automation.Language.Ast">
+  <TypeSignature Language="C#" Value="public abstract class Ast" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit Ast extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Management.Automation.Language.Ast" />
+  <TypeSignature Language="VB.NET" Value="Public MustInherit Class Ast" />
+  <TypeSignature Language="F#" Value="type Ast = class" />
+  <AssemblyInfo>
+    <AssemblyName>System.Management.Automation</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            The abstract base class for all PowerShell abstract syntax tree nodes.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected Ast (System.Management.Automation.Language.IScriptExtent extent);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(class System.Management.Automation.Language.IScriptExtent extent) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Language.Ast.#ctor(System.Management.Automation.Language.IScriptExtent)" />
+      <MemberSignature Language="VB.NET" Value="Protected Sub New (extent As IScriptExtent)" />
+      <MemberSignature Language="F#" Value="new System.Management.Automation.Language.Ast : System.Management.Automation.Language.IScriptExtent -&gt; System.Management.Automation.Language.Ast" Usage="new System.Management.Automation.Language.Ast extent" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="extent" Type="System.Management.Automation.Language.IScriptExtent" />
+      </Parameters>
+      <Docs>
+        <param name="extent">The extent of the expression.</param>
+        <summary>
+            Initialize the common fields of an ast.
+            </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.Management.Automation.PSArgumentNullException">
+            If <paramref name="extent" /> is null.
+            </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Copy">
+      <MemberSignature Language="C#" Value="public abstract System.Management.Automation.Language.Ast Copy ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Management.Automation.Language.Ast Copy() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Language.Ast.Copy" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Function Copy () As Ast" />
+      <MemberSignature Language="F#" Value="abstract member Copy : unit -&gt; System.Management.Automation.Language.Ast" Usage="ast.Copy " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.Language.Ast</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Duplicates the AST, allowing it to be composed into other ASTs.
+            </summary>
+        <returns>A copy of the AST, with the link to the previous parent removed.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Extent">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.Language.IScriptExtent Extent { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Management.Automation.Language.IScriptExtent Extent" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.Language.Ast.Extent" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Extent As IScriptExtent" />
+      <MemberSignature Language="F#" Value="member this.Extent : System.Management.Automation.Language.IScriptExtent" Usage="System.Management.Automation.Language.Ast.Extent" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.Language.IScriptExtent</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The extent in the source this ast represents.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Find">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.Language.Ast Find (Func&lt;System.Management.Automation.Language.Ast,bool&gt; predicate, bool searchNestedScriptBlocks);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Management.Automation.Language.Ast Find(class System.Func`2&lt;class System.Management.Automation.Language.Ast, bool&gt; predicate, bool searchNestedScriptBlocks) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Language.Ast.Find(System.Func{System.Management.Automation.Language.Ast,System.Boolean},System.Boolean)" />
+      <MemberSignature Language="VB.NET" Value="Public Function Find (predicate As Func(Of Ast, Boolean), searchNestedScriptBlocks As Boolean) As Ast" />
+      <MemberSignature Language="F#" Value="member this.Find : Func&lt;System.Management.Automation.Language.Ast, bool&gt; * bool -&gt; System.Management.Automation.Language.Ast" Usage="ast.Find (predicate, searchNestedScriptBlocks)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.Language.Ast</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="predicate" Type="System.Func&lt;System.Management.Automation.Language.Ast,System.Boolean&gt;" />
+        <Parameter Name="searchNestedScriptBlocks" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="predicate">The predicate</param>
+        <param name="searchNestedScriptBlocks">Search nested functions and script block expressions.</param>
+        <summary>
+            Traverse the entire Ast, returning the first node in the tree for which <paramref name="predicate" /> returns true.
+            </summary>
+        <returns>The first matching node, or null if there is no match.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FindAll">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IEnumerable&lt;System.Management.Automation.Language.Ast&gt; FindAll (Func&lt;System.Management.Automation.Language.Ast,bool&gt; predicate, bool searchNestedScriptBlocks);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Collections.Generic.IEnumerable`1&lt;class System.Management.Automation.Language.Ast&gt; FindAll(class System.Func`2&lt;class System.Management.Automation.Language.Ast, bool&gt; predicate, bool searchNestedScriptBlocks) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Language.Ast.FindAll(System.Func{System.Management.Automation.Language.Ast,System.Boolean},System.Boolean)" />
+      <MemberSignature Language="VB.NET" Value="Public Function FindAll (predicate As Func(Of Ast, Boolean), searchNestedScriptBlocks As Boolean) As IEnumerable(Of Ast)" />
+      <MemberSignature Language="F#" Value="member this.FindAll : Func&lt;System.Management.Automation.Language.Ast, bool&gt; * bool -&gt; seq&lt;System.Management.Automation.Language.Ast&gt;" Usage="ast.FindAll (predicate, searchNestedScriptBlocks)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerable&lt;System.Management.Automation.Language.Ast&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="predicate" Type="System.Func&lt;System.Management.Automation.Language.Ast,System.Boolean&gt;" />
+        <Parameter Name="searchNestedScriptBlocks" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="predicate">The predicate function.</param>
+        <param name="searchNestedScriptBlocks">Search nested functions and script block expressions.</param>
+        <summary>
+            Traverse the entire Ast, returning all nodes in the tree for which <paramref name="predicate" /> returns true.
+            </summary>
+        <returns>A possibly empty collection of matching Ast nodes.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Parent">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.Language.Ast Parent { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Management.Automation.Language.Ast Parent" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.Language.Ast.Parent" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Parent As Ast" />
+      <MemberSignature Language="F#" Value="member this.Parent : System.Management.Automation.Language.Ast" Usage="System.Management.Automation.Language.Ast.Parent" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.Language.Ast</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The parent tree for this node.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SafeGetValue">
+      <MemberSignature Language="C#" Value="public object SafeGetValue ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance object SafeGetValue() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Language.Ast.SafeGetValue" />
+      <MemberSignature Language="VB.NET" Value="Public Function SafeGetValue () As Object" />
+      <MemberSignature Language="F#" Value="member this.SafeGetValue : unit -&gt; obj" Usage="ast.SafeGetValue " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Constructs the resultant object from the AST and returns it if it is safe.
+            </summary>
+        <returns>The object represented by the AST as a safe object</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidOperationException">
+            If <paramref name="extent" /> is deemed unsafe
+            </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Language.Ast.ToString" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Function ToString () As String" />
+      <MemberSignature Language="F#" Value="override this.ToString : unit -&gt; string" Usage="ast.ToString " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Formats the ast and returns a string.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Visit">
+      <MemberSignature Language="C#" Value="public void Visit (System.Management.Automation.Language.AstVisitor astVisitor);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Visit(class System.Management.Automation.Language.AstVisitor astVisitor) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Language.Ast.Visit(System.Management.Automation.Language.AstVisitor)" />
+      <MemberSignature Language="F#" Value="member this.Visit : System.Management.Automation.Language.AstVisitor -&gt; unit" Usage="ast.Visit astVisitor" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="astVisitor" Type="System.Management.Automation.Language.AstVisitor" />
+      </Parameters>
+      <Docs>
+        <param name="astVisitor">The visitor</param>
+        <summary>
+            Visit each node in the Ast, calling the methods in <paramref name="astVisitor" /> for each node in the ast.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Visit">
+      <MemberSignature Language="C#" Value="public object Visit (System.Management.Automation.Language.ICustomAstVisitor astVisitor);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance object Visit(class System.Management.Automation.Language.ICustomAstVisitor astVisitor) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Language.Ast.Visit(System.Management.Automation.Language.ICustomAstVisitor)" />
+      <MemberSignature Language="VB.NET" Value="Public Function Visit (astVisitor As ICustomAstVisitor) As Object" />
+      <MemberSignature Language="F#" Value="member this.Visit : System.Management.Automation.Language.ICustomAstVisitor -&gt; obj" Usage="ast.Visit astVisitor" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="astVisitor" Type="System.Management.Automation.Language.ICustomAstVisitor" />
+      </Parameters>
+      <Docs>
+        <param name="astVisitor">The visitor</param>
+        <summary>
+            Visit the Ast using a visitor that can choose how the tree traversal is performed.  This visit method is
+            for advanced uses of the visitor pattern where an <see cref="T:System.Management.Automation.Language.AstVisitor" /> is insufficient.
+            </summary>
+        <returns>Returns the value returned by the visitor.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

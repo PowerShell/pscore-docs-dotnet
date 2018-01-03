@@ -1,0 +1,96 @@
+﻿<Type Name="GettingValueExceptionEventArgs" FullName="System.Management.Automation.GettingValueExceptionEventArgs">
+  <TypeSignature Language="C#" Value="public class GettingValueExceptionEventArgs : EventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit GettingValueExceptionEventArgs extends System.EventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Management.Automation.GettingValueExceptionEventArgs" />
+  <TypeSignature Language="VB.NET" Value="Public Class GettingValueExceptionEventArgs&#xA;Inherits EventArgs" />
+  <TypeSignature Language="F#" Value="type GettingValueExceptionEventArgs = class&#xA;    inherit EventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>System.Management.Automation</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.EventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Serves as the arguments for events triggered by exceptions in the GetValue
+            method of <see cref="T:System.Management.Automation.PSObjectPropertyDescriptor" /></summary>
+    <remarks>
+            The sender of this event is an object of type <see cref="T:System.Management.Automation.PSObjectPropertyDescriptor" />.
+            It is permitted to subclass <see cref="T:System.Management.Automation.GettingValueExceptionEventArgs" />
+            but there is no established scenario for doing this, nor has it been tested.
+            </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Exception">
+      <MemberSignature Language="C#" Value="public Exception Exception { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Exception Exception" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.GettingValueExceptionEventArgs.Exception" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Exception As Exception" />
+      <MemberSignature Language="F#" Value="member this.Exception : Exception" Usage="System.Management.Automation.GettingValueExceptionEventArgs.Exception" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Exception</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the Exception that triggered the associated event.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ShouldThrow">
+      <MemberSignature Language="C#" Value="public bool ShouldThrow { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ShouldThrow" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.GettingValueExceptionEventArgs.ShouldThrow" />
+      <MemberSignature Language="VB.NET" Value="Public Property ShouldThrow As Boolean" />
+      <MemberSignature Language="F#" Value="member this.ShouldThrow : bool with get, set" Usage="System.Management.Automation.GettingValueExceptionEventArgs.ShouldThrow" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets and sets a <see cref="T:System.Boolean" /> indicating if the GetValue method of <see cref="T:System.Management.Automation.PSObjectPropertyDescriptor" />
+            should throw the exception associated with this event.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ValueReplacement">
+      <MemberSignature Language="C#" Value="public object ValueReplacement { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object ValueReplacement" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.GettingValueExceptionEventArgs.ValueReplacement" />
+      <MemberSignature Language="VB.NET" Value="Public Property ValueReplacement As Object" />
+      <MemberSignature Language="F#" Value="member this.ValueReplacement : obj with get, set" Usage="System.Management.Automation.GettingValueExceptionEventArgs.ValueReplacement" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets and sets the value that will serve as a replacement to the return of the GetValue
+            method of <see cref="T:System.Management.Automation.PSObjectPropertyDescriptor" />. If this property is not set
+            to a value other than null then the exception associated with this event is thrown.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

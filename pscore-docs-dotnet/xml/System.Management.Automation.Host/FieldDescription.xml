@@ -1,0 +1,370 @@
+﻿<Type Name="FieldDescription" FullName="System.Management.Automation.Host.FieldDescription">
+  <TypeSignature Language="C#" Value="public class FieldDescription" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit FieldDescription extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Management.Automation.Host.FieldDescription" />
+  <TypeSignature Language="VB.NET" Value="Public Class FieldDescription" />
+  <TypeSignature Language="F#" Value="type FieldDescription = class" />
+  <AssemblyInfo>
+    <AssemblyName>System.Management.Automation</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            
+             Provides a description of a field for use by <see cref="M:System.Management.Automation.Host.PSHostUserInterface.Prompt(System.String,System.String,System.Collections.ObjectModel.Collection{System.Management.Automation.Host.FieldDescription})" />.
+             <!--Used by the Msh engine to describe cmdlet parameters.--></summary>
+    <remarks>
+             It is permitted to subclass <see cref="T:System.Management.Automation.Host.FieldDescription" />
+             but there is no established scenario for doing this, nor has it been tested.
+             </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public FieldDescription (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Host.FieldDescription.#ctor(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (name As String)" />
+      <MemberSignature Language="F#" Value="new System.Management.Automation.Host.FieldDescription : string -&gt; System.Management.Automation.Host.FieldDescription" Usage="new System.Management.Automation.Host.FieldDescription name" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">
+            
+             The name to identify this field description
+            
+             </param>
+        <summary>
+            
+             Initializes a new instance of FieldDescription and defines the Name value.
+            
+             </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.Management.Automation.PSArgumentException">
+          <paramref name="name" /> is null or empty.
+            
+             </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Attributes">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.Collection&lt;Attribute&gt; Attributes { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ObjectModel.Collection`1&lt;class System.Attribute&gt; Attributes" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.Host.FieldDescription.Attributes" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Attributes As Collection(Of Attribute)" />
+      <MemberSignature Language="F#" Value="member this.Attributes : System.Collections.ObjectModel.Collection&lt;Attribute&gt;" Usage="System.Management.Automation.Host.FieldDescription.Attributes" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.Collection&lt;System.Attribute&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            
+             Gets the Attribute classes that apply to the field. In the case that <seealso cref="M:System.Management.Automation.Host.PSHostUserInterface.Prompt(System.String,System.String,System.Collections.ObjectModel.Collection{System.Management.Automation.Host.FieldDescription})" />
+             is being called from the MSH engine, this will contain the set of prompting attributes that are attached to a
+             cmdlet parameter declaration.
+            
+             </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultValue">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.PSObject DefaultValue { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Management.Automation.PSObject DefaultValue" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.Host.FieldDescription.DefaultValue" />
+      <MemberSignature Language="VB.NET" Value="Public Property DefaultValue As PSObject" />
+      <MemberSignature Language="F#" Value="member this.DefaultValue : System.Management.Automation.PSObject with get, set" Usage="System.Management.Automation.Host.FieldDescription.DefaultValue" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.PSObject</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            
+             Gets and sets the default value, if any, for the implementation of <seealso cref="M:System.Management.Automation.Host.PSHostUserInterface.Prompt(System.String,System.String,System.Collections.ObjectModel.Collection{System.Management.Automation.Host.FieldDescription})" />
+             to pre-populate its UI with. This is a PSObject instance so that the value can be serialized, converted,
+             manipulated like any pipeline object.
+            
+             </summary>
+        <value>To be added.</value>
+        <remarks>
+            
+             It is up to the implementer of <seealso cref="M:System.Management.Automation.Host.PSHostUserInterface.Prompt(System.String,System.String,System.Collections.ObjectModel.Collection{System.Management.Automation.Host.FieldDescription})" /> to decide if it
+             can make use of the object in its presentation of the fields prompt.
+            
+            </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HelpMessage">
+      <MemberSignature Language="C#" Value="public string HelpMessage { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string HelpMessage" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.Host.FieldDescription.HelpMessage" />
+      <MemberSignature Language="VB.NET" Value="Public Property HelpMessage As String" />
+      <MemberSignature Language="F#" Value="member this.HelpMessage : string with get, set" Usage="System.Management.Automation.Host.FieldDescription.HelpMessage" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            
+             Gets and sets the help message for this field.
+            
+             </summary>
+        <value>To be added.</value>
+        <remarks>
+            
+             This should be a few sentences to describe the field, suitable for presentation as a tool tip.
+             Avoid placing including formatting characters such as newline and tab.
+            
+             </remarks>
+        <exception cref="T:System.Management.Automation.PSArgumentNullException">
+            
+             Set to null.
+            
+             </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="IsMandatory">
+      <MemberSignature Language="C#" Value="public bool IsMandatory { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsMandatory" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.Host.FieldDescription.IsMandatory" />
+      <MemberSignature Language="VB.NET" Value="Public Property IsMandatory As Boolean" />
+      <MemberSignature Language="F#" Value="member this.IsMandatory : bool with get, set" Usage="System.Management.Automation.Host.FieldDescription.IsMandatory" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            
+             Gets and sets whether a value must be supplied for this field
+            
+             </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Label">
+      <MemberSignature Language="C#" Value="public string Label { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Label" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.Host.FieldDescription.Label" />
+      <MemberSignature Language="VB.NET" Value="Public Property Label As String" />
+      <MemberSignature Language="F#" Value="member this.Label : string with get, set" Usage="System.Management.Automation.Host.FieldDescription.Label" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            
+             A short, human-presentable message to describe and identify the field.  If supplied, a typical implementation of
+             <seealso cref="M:System.Management.Automation.Host.PSHostUserInterface.Prompt(System.String,System.String,System.Collections.ObjectModel.Collection{System.Management.Automation.Host.FieldDescription})" /> will use this value instead of
+             the field name to identify the field to the user.
+            
+             </summary>
+        <value>To be added.</value>
+        <remarks>
+            
+             Note that the special character &amp; (ampersand) may be embedded in the label string to identify the next
+             character in the label as a "hot key" (aka "keyboard accelerator") that the
+             <seealso cref="M:System.Management.Automation.Host.PSHostUserInterface.Prompt(System.String,System.String,System.Collections.ObjectModel.Collection{System.Management.Automation.Host.FieldDescription})" /> implementation may use
+             to allow the user to quickly set input focus to this field.  The implementation of
+             <seealso cref="M:System.Management.Automation.Host.PSHostUserInterface.Prompt(System.String,System.String,System.Collections.ObjectModel.Collection{System.Management.Automation.Host.FieldDescription})" /> is responsible for parsing
+             the label string for this special character and rendering it accordingly.
+            
+             For example, a field named "SSN" might have "&amp;Social Security Number" as it's label.
+            
+             If no label is set, then the empty string is returned.
+            
+             </remarks>
+        <exception cref="T:System.Management.Automation.PSArgumentNullException">
+            
+             set to null.
+            
+             </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public string Name { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.Host.FieldDescription.Name" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Name As String" />
+      <MemberSignature Language="F#" Value="member this.Name : string" Usage="System.Management.Automation.Host.FieldDescription.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the name of the field.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ParameterAssemblyFullName">
+      <MemberSignature Language="C#" Value="public string ParameterAssemblyFullName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ParameterAssemblyFullName" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.Host.FieldDescription.ParameterAssemblyFullName" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ParameterAssemblyFullName As String" />
+      <MemberSignature Language="F#" Value="member this.ParameterAssemblyFullName : string" Usage="System.Management.Automation.Host.FieldDescription.ParameterAssemblyFullName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            
+             Gets the full name of the assembly containing the type identified by ParameterTypeFullName or ParameterTypeName
+            
+             </summary>
+        <value>To be added.</value>
+        <remarks>
+            
+             If the assembly is not currently loaded in the hosting application's AppDomain, the hosting application needs
+             to load the containing assembly to access the type information. AssemblyName is used for this purpose.
+            
+             If not already set by a call to <see cref="M:System.Management.Automation.Host.FieldDescription.SetParameterType(System.Type)" />,
+             <see cref="T:System.String" /> will be used as the type.
+            
+             </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ParameterTypeFullName">
+      <MemberSignature Language="C#" Value="public string ParameterTypeFullName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ParameterTypeFullName" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.Host.FieldDescription.ParameterTypeFullName" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ParameterTypeFullName As String" />
+      <MemberSignature Language="F#" Value="member this.ParameterTypeFullName : string" Usage="System.Management.Automation.Host.FieldDescription.ParameterTypeFullName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            
+             Gets the full string name of the parameter's type.
+            
+             </summary>
+        <value>To be added.</value>
+        <remarks>
+            
+             If not already set by a call to <see cref="M:System.Management.Automation.Host.FieldDescription.SetParameterType(System.Type)" />,
+             <see cref="T:System.String" /> will be used as the type.
+             <!--The value of ParameterTypeName is the string value returned.
+             by System.Type.Name.--></remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ParameterTypeName">
+      <MemberSignature Language="C#" Value="public string ParameterTypeName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ParameterTypeName" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.Host.FieldDescription.ParameterTypeName" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ParameterTypeName As String" />
+      <MemberSignature Language="F#" Value="member this.ParameterTypeName : string" Usage="System.Management.Automation.Host.FieldDescription.ParameterTypeName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            
+             Gets the short name of the parameter's type.
+            
+             </summary>
+        <value>
+            
+             The type name of the parameter
+            
+             </value>
+        <remarks>
+            
+             If not already set by a call to <see cref="M:System.Management.Automation.Host.FieldDescription.SetParameterType(System.Type)" />,
+             <see cref="T:System.String" /> will be used as the type.
+             <!--The value of ParameterTypeName is the string value returned.
+             by System.Type.Name.--></remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetParameterType">
+      <MemberSignature Language="C#" Value="public void SetParameterType (Type parameterType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetParameterType(class System.Type parameterType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Host.FieldDescription.SetParameterType(System.Type)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub SetParameterType (parameterType As Type)" />
+      <MemberSignature Language="F#" Value="member this.SetParameterType : Type -&gt; unit" Usage="fieldDescription.SetParameterType parameterType" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="parameterType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="parameterType">
+            
+             The Type that sets the properties.
+            
+             </param>
+        <summary>
+            
+             Sets the ParameterTypeName, ParameterTypeFullName, and ParameterAssemblyFullName as a single operation.
+            
+             </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.Management.Automation.PSArgumentNullException">
+            
+             If <paramref name="parameterType" /> is null.
+            
+             </exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

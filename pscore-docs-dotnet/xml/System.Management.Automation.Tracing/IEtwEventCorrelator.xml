@@ -1,0 +1,100 @@
+﻿<Type Name="IEtwEventCorrelator" FullName="System.Management.Automation.Tracing.IEtwEventCorrelator">
+  <TypeSignature Language="C#" Value="public interface IEtwEventCorrelator" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IEtwEventCorrelator" />
+  <TypeSignature Language="DocId" Value="T:System.Management.Automation.Tracing.IEtwEventCorrelator" />
+  <TypeSignature Language="VB.NET" Value="Public Interface IEtwEventCorrelator" />
+  <TypeSignature Language="F#" Value="type IEtwEventCorrelator = interface" />
+  <AssemblyInfo>
+    <AssemblyName>System.Management.Automation</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>
+                An object that can be used to manage the ETW activity ID of the current thread.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="CurrentActivityId">
+      <MemberSignature Language="C#" Value="public Guid CurrentActivityId { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Guid CurrentActivityId" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.Tracing.IEtwEventCorrelator.CurrentActivityId" />
+      <MemberSignature Language="VB.NET" Value="Public Property CurrentActivityId As Guid" />
+      <MemberSignature Language="F#" Value="member this.CurrentActivityId : Guid with get, set" Usage="System.Management.Automation.Tracing.IEtwEventCorrelator.CurrentActivityId" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Guid</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+                Gets or sets the ETW activity ID of the current thread.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+          <para>This method should only be used for advanced scenarios
+                    or diagnostics.  Prefer using <see cref="M:System.Management.Automation.Tracing.IEtwEventCorrelator.StartActivity" />
+                    or <see cref="M:System.Management.Automation.Tracing.IEtwEventCorrelator.StartActivity(System.Guid)" /> instead.</para>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StartActivity">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.Tracing.IEtwActivityReverter StartActivity ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Management.Automation.Tracing.IEtwActivityReverter StartActivity() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Tracing.IEtwEventCorrelator.StartActivity" />
+      <MemberSignature Language="VB.NET" Value="Public Function StartActivity () As IEtwActivityReverter" />
+      <MemberSignature Language="F#" Value="abstract member StartActivity : unit -&gt; System.Management.Automation.Tracing.IEtwActivityReverter" Usage="iEtwEventCorrelator.StartActivity " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.Tracing.IEtwActivityReverter</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+                Creates and sets a new activity ID for the current thread.  If the current thread
+                has an existing activity ID, it will be correlated with the new activity ID.
+            </summary>
+        <returns>An object which can be used to revert the activity ID of the current thread once
+                the new activity yields control of the current thread.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StartActivity">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.Tracing.IEtwActivityReverter StartActivity (Guid relatedActivityId);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Management.Automation.Tracing.IEtwActivityReverter StartActivity(valuetype System.Guid relatedActivityId) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Tracing.IEtwEventCorrelator.StartActivity(System.Guid)" />
+      <MemberSignature Language="VB.NET" Value="Public Function StartActivity (relatedActivityId As Guid) As IEtwActivityReverter" />
+      <MemberSignature Language="F#" Value="abstract member StartActivity : Guid -&gt; System.Management.Automation.Tracing.IEtwActivityReverter" Usage="iEtwEventCorrelator.StartActivity relatedActivityId" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.Tracing.IEtwActivityReverter</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="relatedActivityId" Type="System.Guid" />
+      </Parameters>
+      <Docs>
+        <param name="relatedActivityId">The ID of an existing activity to be correlated with the
+                new activity or <see cref="F:System.Guid.Empty" /> if correlation is not desired.</param>
+        <summary>
+                Creates and sets a new activity ID for the current thread, optionally correlating
+                the new activity with another activity.
+            </summary>
+        <returns>An object which can be used to revert the activity ID of the current thread once
+                the new activity yields control of the current thread.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

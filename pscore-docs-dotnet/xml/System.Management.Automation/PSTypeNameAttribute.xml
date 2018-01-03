@@ -1,0 +1,74 @@
+﻿<Type Name="PSTypeNameAttribute" FullName="System.Management.Automation.PSTypeNameAttribute">
+  <TypeSignature Language="C#" Value="public class PSTypeNameAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit PSTypeNameAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.Management.Automation.PSTypeNameAttribute" />
+  <TypeSignature Language="VB.NET" Value="Public Class PSTypeNameAttribute&#xA;Inherits Attribute" />
+  <TypeSignature Language="F#" Value="type PSTypeNameAttribute = class&#xA;    inherit Attribute" />
+  <AssemblyInfo>
+    <AssemblyName>System.Management.Automation</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Property | System.AttributeTargets.Field, AllowMultiple=false)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>
+            Specifies PSTypeName of a cmdlet or function parameter.
+            </summary>
+    <remarks>
+            This attribute is used to restrict the type name of the parameter, when the type goes beyond the .NET type system.
+            For example one could say: [PSTypeName("System.Management.ManagementObject#root\cimv2\Win32_Process")]
+            to only allow Win32_Process objects to be bound to the parameter.
+            </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public PSTypeNameAttribute (string psTypeName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string psTypeName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.PSTypeNameAttribute.#ctor(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (psTypeName As String)" />
+      <MemberSignature Language="F#" Value="new System.Management.Automation.PSTypeNameAttribute : string -&gt; System.Management.Automation.PSTypeNameAttribute" Usage="new System.Management.Automation.PSTypeNameAttribute psTypeName" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="psTypeName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="psTypeName"></param>
+        <summary>
+            Creates a new PSTypeNameAttribute
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PSTypeName">
+      <MemberSignature Language="C#" Value="public string PSTypeName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string PSTypeName" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.PSTypeNameAttribute.PSTypeName" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property PSTypeName As String" />
+      <MemberSignature Language="F#" Value="member this.PSTypeName : string" Usage="System.Management.Automation.PSTypeNameAttribute.PSTypeName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary />
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

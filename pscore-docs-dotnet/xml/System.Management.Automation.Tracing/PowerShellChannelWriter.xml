@@ -1,0 +1,333 @@
+﻿<Type Name="PowerShellChannelWriter" FullName="System.Management.Automation.Tracing.PowerShellChannelWriter">
+  <TypeSignature Language="C#" Value="public sealed class PowerShellChannelWriter : System.Management.Automation.Tracing.BaseChannelWriter" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit PowerShellChannelWriter extends System.Management.Automation.Tracing.BaseChannelWriter" />
+  <TypeSignature Language="DocId" Value="T:System.Management.Automation.Tracing.PowerShellChannelWriter" />
+  <TypeSignature Language="VB.NET" Value="Public NotInheritable Class PowerShellChannelWriter&#xA;Inherits BaseChannelWriter" />
+  <TypeSignature Language="F#" Value="type PowerShellChannelWriter = class&#xA;    inherit BaseChannelWriter" />
+  <AssemblyInfo>
+    <AssemblyName>System.Management.Automation</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Management.Automation.Tracing.BaseChannelWriter</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            ChannelWrite is the concrete implementation of IChannelWrite.  It writes all the traces to the specified traceChannel.
+            TraceChannel is specified in the constructor.
+            It always uses PowerShell event provider Id.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="public override void Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Dispose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Tracing.PowerShellChannelWriter.Dispose" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Sub Dispose ()" />
+      <MemberSignature Language="F#" Value="override this.Dispose : unit -&gt; unit" Usage="powerShellChannelWriter.Dispose " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Dispose method
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Keywords">
+      <MemberSignature Language="C#" Value="public override System.Management.Automation.Tracing.PowerShellTraceKeywords Keywords { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Management.Automation.Tracing.PowerShellTraceKeywords Keywords" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.Tracing.PowerShellChannelWriter.Keywords" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Property Keywords As PowerShellTraceKeywords" />
+      <MemberSignature Language="F#" Value="member this.Keywords : System.Management.Automation.Tracing.PowerShellTraceKeywords with get, set" Usage="System.Management.Automation.Tracing.PowerShellChannelWriter.Keywords" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.Tracing.PowerShellTraceKeywords</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary />
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TraceCritical">
+      <MemberSignature Language="C#" Value="public override bool TraceCritical (System.Management.Automation.Tracing.PowerShellTraceEvent traceEvent, System.Management.Automation.Tracing.PowerShellTraceOperationCode operationCode, System.Management.Automation.Tracing.PowerShellTraceTask task, params object[] args);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool TraceCritical(valuetype System.Management.Automation.Tracing.PowerShellTraceEvent traceEvent, valuetype System.Management.Automation.Tracing.PowerShellTraceOperationCode operationCode, valuetype System.Management.Automation.Tracing.PowerShellTraceTask task, object[] args) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Tracing.PowerShellChannelWriter.TraceCritical(System.Management.Automation.Tracing.PowerShellTraceEvent,System.Management.Automation.Tracing.PowerShellTraceOperationCode,System.Management.Automation.Tracing.PowerShellTraceTask,System.Object[])" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Function TraceCritical (traceEvent As PowerShellTraceEvent, operationCode As PowerShellTraceOperationCode, task As PowerShellTraceTask, ParamArray args As Object()) As Boolean" />
+      <MemberSignature Language="F#" Value="override this.TraceCritical : System.Management.Automation.Tracing.PowerShellTraceEvent * System.Management.Automation.Tracing.PowerShellTraceOperationCode * System.Management.Automation.Tracing.PowerShellTraceTask * obj[] -&gt; bool" Usage="powerShellChannelWriter.TraceCritical (traceEvent, operationCode, task, args)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="traceEvent" Type="System.Management.Automation.Tracing.PowerShellTraceEvent" />
+        <Parameter Name="operationCode" Type="System.Management.Automation.Tracing.PowerShellTraceOperationCode" />
+        <Parameter Name="task" Type="System.Management.Automation.Tracing.PowerShellTraceTask" />
+        <Parameter Name="args" Type="System.Object[]">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.ParamArray</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="traceEvent">To be added.</param>
+        <param name="operationCode">To be added.</param>
+        <param name="task">To be added.</param>
+        <param name="args">To be added.</param>
+        <summary>
+            TraceCritical
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TraceDebug">
+      <MemberSignature Language="C#" Value="public override bool TraceDebug (System.Management.Automation.Tracing.PowerShellTraceEvent traceEvent, System.Management.Automation.Tracing.PowerShellTraceOperationCode operationCode, System.Management.Automation.Tracing.PowerShellTraceTask task, params object[] args);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool TraceDebug(valuetype System.Management.Automation.Tracing.PowerShellTraceEvent traceEvent, valuetype System.Management.Automation.Tracing.PowerShellTraceOperationCode operationCode, valuetype System.Management.Automation.Tracing.PowerShellTraceTask task, object[] args) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Tracing.PowerShellChannelWriter.TraceDebug(System.Management.Automation.Tracing.PowerShellTraceEvent,System.Management.Automation.Tracing.PowerShellTraceOperationCode,System.Management.Automation.Tracing.PowerShellTraceTask,System.Object[])" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Function TraceDebug (traceEvent As PowerShellTraceEvent, operationCode As PowerShellTraceOperationCode, task As PowerShellTraceTask, ParamArray args As Object()) As Boolean" />
+      <MemberSignature Language="F#" Value="override this.TraceDebug : System.Management.Automation.Tracing.PowerShellTraceEvent * System.Management.Automation.Tracing.PowerShellTraceOperationCode * System.Management.Automation.Tracing.PowerShellTraceTask * obj[] -&gt; bool" Usage="powerShellChannelWriter.TraceDebug (traceEvent, operationCode, task, args)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="traceEvent" Type="System.Management.Automation.Tracing.PowerShellTraceEvent" />
+        <Parameter Name="operationCode" Type="System.Management.Automation.Tracing.PowerShellTraceOperationCode" />
+        <Parameter Name="task" Type="System.Management.Automation.Tracing.PowerShellTraceTask" />
+        <Parameter Name="args" Type="System.Object[]">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.ParamArray</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="traceEvent">To be added.</param>
+        <param name="operationCode">To be added.</param>
+        <param name="task">To be added.</param>
+        <param name="args">To be added.</param>
+        <summary>
+            TraceDebug
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TraceError">
+      <MemberSignature Language="C#" Value="public override bool TraceError (System.Management.Automation.Tracing.PowerShellTraceEvent traceEvent, System.Management.Automation.Tracing.PowerShellTraceOperationCode operationCode, System.Management.Automation.Tracing.PowerShellTraceTask task, params object[] args);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool TraceError(valuetype System.Management.Automation.Tracing.PowerShellTraceEvent traceEvent, valuetype System.Management.Automation.Tracing.PowerShellTraceOperationCode operationCode, valuetype System.Management.Automation.Tracing.PowerShellTraceTask task, object[] args) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Tracing.PowerShellChannelWriter.TraceError(System.Management.Automation.Tracing.PowerShellTraceEvent,System.Management.Automation.Tracing.PowerShellTraceOperationCode,System.Management.Automation.Tracing.PowerShellTraceTask,System.Object[])" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Function TraceError (traceEvent As PowerShellTraceEvent, operationCode As PowerShellTraceOperationCode, task As PowerShellTraceTask, ParamArray args As Object()) As Boolean" />
+      <MemberSignature Language="F#" Value="override this.TraceError : System.Management.Automation.Tracing.PowerShellTraceEvent * System.Management.Automation.Tracing.PowerShellTraceOperationCode * System.Management.Automation.Tracing.PowerShellTraceTask * obj[] -&gt; bool" Usage="powerShellChannelWriter.TraceError (traceEvent, operationCode, task, args)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="traceEvent" Type="System.Management.Automation.Tracing.PowerShellTraceEvent" />
+        <Parameter Name="operationCode" Type="System.Management.Automation.Tracing.PowerShellTraceOperationCode" />
+        <Parameter Name="task" Type="System.Management.Automation.Tracing.PowerShellTraceTask" />
+        <Parameter Name="args" Type="System.Object[]">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.ParamArray</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="traceEvent">To be added.</param>
+        <param name="operationCode">To be added.</param>
+        <param name="task">To be added.</param>
+        <param name="args">To be added.</param>
+        <summary>
+            TraceError
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TraceInformational">
+      <MemberSignature Language="C#" Value="public override bool TraceInformational (System.Management.Automation.Tracing.PowerShellTraceEvent traceEvent, System.Management.Automation.Tracing.PowerShellTraceOperationCode operationCode, System.Management.Automation.Tracing.PowerShellTraceTask task, params object[] args);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool TraceInformational(valuetype System.Management.Automation.Tracing.PowerShellTraceEvent traceEvent, valuetype System.Management.Automation.Tracing.PowerShellTraceOperationCode operationCode, valuetype System.Management.Automation.Tracing.PowerShellTraceTask task, object[] args) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Tracing.PowerShellChannelWriter.TraceInformational(System.Management.Automation.Tracing.PowerShellTraceEvent,System.Management.Automation.Tracing.PowerShellTraceOperationCode,System.Management.Automation.Tracing.PowerShellTraceTask,System.Object[])" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Function TraceInformational (traceEvent As PowerShellTraceEvent, operationCode As PowerShellTraceOperationCode, task As PowerShellTraceTask, ParamArray args As Object()) As Boolean" />
+      <MemberSignature Language="F#" Value="override this.TraceInformational : System.Management.Automation.Tracing.PowerShellTraceEvent * System.Management.Automation.Tracing.PowerShellTraceOperationCode * System.Management.Automation.Tracing.PowerShellTraceTask * obj[] -&gt; bool" Usage="powerShellChannelWriter.TraceInformational (traceEvent, operationCode, task, args)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="traceEvent" Type="System.Management.Automation.Tracing.PowerShellTraceEvent" />
+        <Parameter Name="operationCode" Type="System.Management.Automation.Tracing.PowerShellTraceOperationCode" />
+        <Parameter Name="task" Type="System.Management.Automation.Tracing.PowerShellTraceTask" />
+        <Parameter Name="args" Type="System.Object[]">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.ParamArray</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="traceEvent">To be added.</param>
+        <param name="operationCode">To be added.</param>
+        <param name="task">To be added.</param>
+        <param name="args">To be added.</param>
+        <summary>
+            TraceInformational
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TraceLogAlways">
+      <MemberSignature Language="C#" Value="public override bool TraceLogAlways (System.Management.Automation.Tracing.PowerShellTraceEvent traceEvent, System.Management.Automation.Tracing.PowerShellTraceOperationCode operationCode, System.Management.Automation.Tracing.PowerShellTraceTask task, params object[] args);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool TraceLogAlways(valuetype System.Management.Automation.Tracing.PowerShellTraceEvent traceEvent, valuetype System.Management.Automation.Tracing.PowerShellTraceOperationCode operationCode, valuetype System.Management.Automation.Tracing.PowerShellTraceTask task, object[] args) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Tracing.PowerShellChannelWriter.TraceLogAlways(System.Management.Automation.Tracing.PowerShellTraceEvent,System.Management.Automation.Tracing.PowerShellTraceOperationCode,System.Management.Automation.Tracing.PowerShellTraceTask,System.Object[])" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Function TraceLogAlways (traceEvent As PowerShellTraceEvent, operationCode As PowerShellTraceOperationCode, task As PowerShellTraceTask, ParamArray args As Object()) As Boolean" />
+      <MemberSignature Language="F#" Value="override this.TraceLogAlways : System.Management.Automation.Tracing.PowerShellTraceEvent * System.Management.Automation.Tracing.PowerShellTraceOperationCode * System.Management.Automation.Tracing.PowerShellTraceTask * obj[] -&gt; bool" Usage="powerShellChannelWriter.TraceLogAlways (traceEvent, operationCode, task, args)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="traceEvent" Type="System.Management.Automation.Tracing.PowerShellTraceEvent" />
+        <Parameter Name="operationCode" Type="System.Management.Automation.Tracing.PowerShellTraceOperationCode" />
+        <Parameter Name="task" Type="System.Management.Automation.Tracing.PowerShellTraceTask" />
+        <Parameter Name="args" Type="System.Object[]">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.ParamArray</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="traceEvent">To be added.</param>
+        <param name="operationCode">To be added.</param>
+        <param name="task">To be added.</param>
+        <param name="args">To be added.</param>
+        <summary>
+            TraceLogAlways
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TraceVerbose">
+      <MemberSignature Language="C#" Value="public override bool TraceVerbose (System.Management.Automation.Tracing.PowerShellTraceEvent traceEvent, System.Management.Automation.Tracing.PowerShellTraceOperationCode operationCode, System.Management.Automation.Tracing.PowerShellTraceTask task, params object[] args);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool TraceVerbose(valuetype System.Management.Automation.Tracing.PowerShellTraceEvent traceEvent, valuetype System.Management.Automation.Tracing.PowerShellTraceOperationCode operationCode, valuetype System.Management.Automation.Tracing.PowerShellTraceTask task, object[] args) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Tracing.PowerShellChannelWriter.TraceVerbose(System.Management.Automation.Tracing.PowerShellTraceEvent,System.Management.Automation.Tracing.PowerShellTraceOperationCode,System.Management.Automation.Tracing.PowerShellTraceTask,System.Object[])" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Function TraceVerbose (traceEvent As PowerShellTraceEvent, operationCode As PowerShellTraceOperationCode, task As PowerShellTraceTask, ParamArray args As Object()) As Boolean" />
+      <MemberSignature Language="F#" Value="override this.TraceVerbose : System.Management.Automation.Tracing.PowerShellTraceEvent * System.Management.Automation.Tracing.PowerShellTraceOperationCode * System.Management.Automation.Tracing.PowerShellTraceTask * obj[] -&gt; bool" Usage="powerShellChannelWriter.TraceVerbose (traceEvent, operationCode, task, args)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="traceEvent" Type="System.Management.Automation.Tracing.PowerShellTraceEvent" />
+        <Parameter Name="operationCode" Type="System.Management.Automation.Tracing.PowerShellTraceOperationCode" />
+        <Parameter Name="task" Type="System.Management.Automation.Tracing.PowerShellTraceTask" />
+        <Parameter Name="args" Type="System.Object[]">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.ParamArray</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="traceEvent">To be added.</param>
+        <param name="operationCode">To be added.</param>
+        <param name="task">To be added.</param>
+        <param name="args">To be added.</param>
+        <summary>
+            TraceVerbose
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TraceWarning">
+      <MemberSignature Language="C#" Value="public override bool TraceWarning (System.Management.Automation.Tracing.PowerShellTraceEvent traceEvent, System.Management.Automation.Tracing.PowerShellTraceOperationCode operationCode, System.Management.Automation.Tracing.PowerShellTraceTask task, params object[] args);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool TraceWarning(valuetype System.Management.Automation.Tracing.PowerShellTraceEvent traceEvent, valuetype System.Management.Automation.Tracing.PowerShellTraceOperationCode operationCode, valuetype System.Management.Automation.Tracing.PowerShellTraceTask task, object[] args) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Tracing.PowerShellChannelWriter.TraceWarning(System.Management.Automation.Tracing.PowerShellTraceEvent,System.Management.Automation.Tracing.PowerShellTraceOperationCode,System.Management.Automation.Tracing.PowerShellTraceTask,System.Object[])" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Function TraceWarning (traceEvent As PowerShellTraceEvent, operationCode As PowerShellTraceOperationCode, task As PowerShellTraceTask, ParamArray args As Object()) As Boolean" />
+      <MemberSignature Language="F#" Value="override this.TraceWarning : System.Management.Automation.Tracing.PowerShellTraceEvent * System.Management.Automation.Tracing.PowerShellTraceOperationCode * System.Management.Automation.Tracing.PowerShellTraceTask * obj[] -&gt; bool" Usage="powerShellChannelWriter.TraceWarning (traceEvent, operationCode, task, args)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="traceEvent" Type="System.Management.Automation.Tracing.PowerShellTraceEvent" />
+        <Parameter Name="operationCode" Type="System.Management.Automation.Tracing.PowerShellTraceOperationCode" />
+        <Parameter Name="task" Type="System.Management.Automation.Tracing.PowerShellTraceTask" />
+        <Parameter Name="args" Type="System.Object[]">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.ParamArray</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="traceEvent">To be added.</param>
+        <param name="operationCode">To be added.</param>
+        <param name="task">To be added.</param>
+        <param name="args">To be added.</param>
+        <summary>
+            TraceWarning
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

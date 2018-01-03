@@ -1,0 +1,556 @@
+﻿<Type Name="GetWinEventCommand" FullName="Microsoft.PowerShell.Commands.GetWinEventCommand">
+  <TypeSignature Language="C#" Value="public sealed class GetWinEventCommand : System.Management.Automation.PSCmdlet" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit GetWinEventCommand extends System.Management.Automation.PSCmdlet" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.PowerShell.Commands.GetWinEventCommand" />
+  <TypeSignature Language="VB.NET" Value="Public NotInheritable Class GetWinEventCommand&#xA;Inherits PSCmdlet" />
+  <TypeSignature Language="F#" Value="type GetWinEventCommand = class&#xA;    inherit PSCmdlet" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.PowerShell.Commands.Diagnostics</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Management.Automation.PSCmdlet</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Management.Automation.Cmdlet("Get", "WinEvent", DefaultParameterSetName="GetLogSet", HelpUri="https://go.microsoft.com/fwlink/?LinkID=138336")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>To be added.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public GetWinEventCommand ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Commands.GetWinEventCommand.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New ()" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Commands.Diagnostics</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginProcessing">
+      <MemberSignature Language="C#" Value="protected override void BeginProcessing ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void BeginProcessing() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Commands.GetWinEventCommand.BeginProcessing" />
+      <MemberSignature Language="VB.NET" Value="Protected Overrides Sub BeginProcessing ()" />
+      <MemberSignature Language="F#" Value="override this.BeginProcessing : unit -&gt; unit" Usage="getWinEventCommand.BeginProcessing " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Commands.Diagnostics</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            BeginProcessing() is invoked once per pipeline: we will load System.Core.dll here
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ComputerName">
+      <MemberSignature Language="C#" Value="public string ComputerName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ComputerName" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.GetWinEventCommand.ComputerName" />
+      <MemberSignature Language="VB.NET" Value="Public Property ComputerName As String" />
+      <MemberSignature Language="F#" Value="member this.ComputerName : string with get, set" Usage="Microsoft.PowerShell.Commands.GetWinEventCommand.ComputerName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Commands.Diagnostics</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Alias(Mono.Cecil.CustomAttributeArgument[])</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(HelpMessageBaseName="GetEventResources", HelpMessageResourceId="ComputerNameParamHelp", ParameterSetName="ListProviderSet")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(HelpMessageBaseName="GetEventResources", HelpMessageResourceId="ComputerNameParamHelp", ParameterSetName="GetProviderSet")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(HelpMessageBaseName="GetEventResources", HelpMessageResourceId="ComputerNameParamHelp", ParameterSetName="ListLogSet")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(HelpMessageBaseName="GetEventResources", HelpMessageResourceId="ComputerNameParamHelp", ParameterSetName="GetLogSet")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(HelpMessageBaseName="GetEventResources", HelpMessageResourceId="ComputerNameParamHelp", ParameterSetName="HashQuerySet")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(HelpMessageBaseName="GetEventResources", HelpMessageResourceId="ComputerNameParamHelp", ParameterSetName="XmlQuerySet")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.ValidateNotNull</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            ComputerName parameter
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Credential">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.PSCredential Credential { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Management.Automation.PSCredential Credential" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.GetWinEventCommand.Credential" />
+      <MemberSignature Language="VB.NET" Value="Public Property Credential As PSCredential" />
+      <MemberSignature Language="F#" Value="member this.Credential : System.Management.Automation.PSCredential with get, set" Usage="Microsoft.PowerShell.Commands.GetWinEventCommand.Credential" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Commands.Diagnostics</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Credential</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="ListProviderSet")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="GetProviderSet")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="ListLogSet")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="GetLogSet")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="HashQuerySet")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="XmlQuerySet")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="FileSet")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.PSCredential</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Credential parameter
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EndProcessing">
+      <MemberSignature Language="C#" Value="protected override void EndProcessing ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void EndProcessing() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Commands.GetWinEventCommand.EndProcessing" />
+      <MemberSignature Language="VB.NET" Value="Protected Overrides Sub EndProcessing ()" />
+      <MemberSignature Language="F#" Value="override this.EndProcessing : unit -&gt; unit" Usage="getWinEventCommand.EndProcessing " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Commands.Diagnostics</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            EndProcessing() is invoked once per pipeline
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FilterHashtable">
+      <MemberSignature Language="C#" Value="public System.Collections.Hashtable[] FilterHashtable { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Hashtable[] FilterHashtable" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.GetWinEventCommand.FilterHashtable" />
+      <MemberSignature Language="VB.NET" Value="Public Property FilterHashtable As Hashtable()" />
+      <MemberSignature Language="F#" Value="member this.FilterHashtable : System.Collections.Hashtable[] with get, set" Usage="Microsoft.PowerShell.Commands.GetWinEventCommand.FilterHashtable" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Commands.Diagnostics</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(HelpMessageBaseName="GetEventResources", Mandatory=true, ParameterSetName="HashQuerySet", Position=0, ValueFromPipeline=false, ValueFromPipelineByPropertyName=false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Collections.Hashtable[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            FilterHashtable parameter
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FilterXml">
+      <MemberSignature Language="C#" Value="public System.Xml.XmlDocument FilterXml { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Xml.XmlDocument FilterXml" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.GetWinEventCommand.FilterXml" />
+      <MemberSignature Language="VB.NET" Value="Public Property FilterXml As XmlDocument" />
+      <MemberSignature Language="F#" Value="member this.FilterXml : System.Xml.XmlDocument with get, set" Usage="Microsoft.PowerShell.Commands.GetWinEventCommand.FilterXml" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Commands.Diagnostics</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(HelpMessageBaseName="GetEventResources", Mandatory=true, ParameterSetName="XmlQuerySet", Position=0, ValueFromPipeline=false, ValueFromPipelineByPropertyName=false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Xml.XmlDocument</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            FilterXml parameter
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FilterXPath">
+      <MemberSignature Language="C#" Value="public string FilterXPath { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string FilterXPath" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.GetWinEventCommand.FilterXPath" />
+      <MemberSignature Language="VB.NET" Value="Public Property FilterXPath As String" />
+      <MemberSignature Language="F#" Value="member this.FilterXPath : string with get, set" Usage="Microsoft.PowerShell.Commands.GetWinEventCommand.FilterXPath" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Commands.Diagnostics</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(HelpMessageBaseName="GetEventResources", ParameterSetName="FileSet", ValueFromPipeline=false, ValueFromPipelineByPropertyName=false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(HelpMessageBaseName="GetEventResources", ParameterSetName="GetProviderSet", ValueFromPipeline=false, ValueFromPipelineByPropertyName=false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(HelpMessageBaseName="GetEventResources", ParameterSetName="GetLogSet", ValueFromPipeline=false, ValueFromPipelineByPropertyName=false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.ValidateNotNull</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            FilterXPath parameter
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Force">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.SwitchParameter Force { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Management.Automation.SwitchParameter Force" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.GetWinEventCommand.Force" />
+      <MemberSignature Language="VB.NET" Value="Public Property Force As SwitchParameter" />
+      <MemberSignature Language="F#" Value="member this.Force : System.Management.Automation.SwitchParameter with get, set" Usage="Microsoft.PowerShell.Commands.GetWinEventCommand.Force" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Commands.Diagnostics</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="ListLogSet")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="GetProviderSet")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="GetLogSet")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="HashQuerySet")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.SwitchParameter</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Force switch
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ListLog">
+      <MemberSignature Language="C#" Value="public string[] ListLog { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string[] ListLog" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.GetWinEventCommand.ListLog" />
+      <MemberSignature Language="VB.NET" Value="Public Property ListLog As String()" />
+      <MemberSignature Language="F#" Value="member this.ListLog : string[] with get, set" Usage="Microsoft.PowerShell.Commands.GetWinEventCommand.ListLog" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Commands.Diagnostics</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.AllowEmptyCollection</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(HelpMessageBaseName="GetEventResources", HelpMessageResourceId="ListLogParamHelp", Mandatory=true, ParameterSetName="ListLogSet", Position=0, ValueFromPipeline=false, ValueFromPipelineByPropertyName=false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            ListLog parameter
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ListProvider">
+      <MemberSignature Language="C#" Value="public string[] ListProvider { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string[] ListProvider" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.GetWinEventCommand.ListProvider" />
+      <MemberSignature Language="VB.NET" Value="Public Property ListProvider As String()" />
+      <MemberSignature Language="F#" Value="member this.ListProvider : string[] with get, set" Usage="Microsoft.PowerShell.Commands.GetWinEventCommand.ListProvider" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Commands.Diagnostics</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.AllowEmptyCollection</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(HelpMessageBaseName="GetEventResources", HelpMessageResourceId="ListProviderParamHelp", Mandatory=true, ParameterSetName="ListProviderSet", Position=0, ValueFromPipeline=false, ValueFromPipelineByPropertyName=false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            ListProvider parameter
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LogName">
+      <MemberSignature Language="C#" Value="public string[] LogName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string[] LogName" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.GetWinEventCommand.LogName" />
+      <MemberSignature Language="VB.NET" Value="Public Property LogName As String()" />
+      <MemberSignature Language="F#" Value="member this.LogName : string[] with get, set" Usage="Microsoft.PowerShell.Commands.GetWinEventCommand.LogName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Commands.Diagnostics</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(HelpMessageBaseName="GetEventResources", HelpMessageResourceId="GetLogParamHelp", ParameterSetName="GetLogSet", Position=0, ValueFromPipeline=true, ValueFromPipelineByPropertyName=true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            GetLog parameter
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MaxEvents">
+      <MemberSignature Language="C#" Value="public long MaxEvents { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int64 MaxEvents" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.GetWinEventCommand.MaxEvents" />
+      <MemberSignature Language="VB.NET" Value="Public Property MaxEvents As Long" />
+      <MemberSignature Language="F#" Value="member this.MaxEvents : int64 with get, set" Usage="Microsoft.PowerShell.Commands.GetWinEventCommand.MaxEvents" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Commands.Diagnostics</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(HelpMessageBaseName="GetEventResources", HelpMessageResourceId="MaxEventsParamHelp", ParameterSetName="FileSet", ValueFromPipeline=false, ValueFromPipelineByPropertyName=false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(HelpMessageBaseName="GetEventResources", HelpMessageResourceId="MaxEventsParamHelp", ParameterSetName="GetProviderSet", ValueFromPipeline=false, ValueFromPipelineByPropertyName=false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(HelpMessageBaseName="GetEventResources", HelpMessageResourceId="MaxEventsParamHelp", ParameterSetName="GetLogSet", ValueFromPipeline=false, ValueFromPipelineByPropertyName=false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(HelpMessageBaseName="GetEventResources", HelpMessageResourceId="MaxEventsParamHelp", ParameterSetName="HashQuerySet", ValueFromPipeline=false, ValueFromPipelineByPropertyName=false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(HelpMessageBaseName="GetEventResources", HelpMessageResourceId="MaxEventsParamHelp", ParameterSetName="XmlQuerySet", ValueFromPipeline=false, ValueFromPipelineByPropertyName=false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.ValidateRange(Mono.Cecil.CustomAttributeArgument, Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            MaxEvents parameter
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Oldest">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.SwitchParameter Oldest { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Management.Automation.SwitchParameter Oldest" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.GetWinEventCommand.Oldest" />
+      <MemberSignature Language="VB.NET" Value="Public Property Oldest As SwitchParameter" />
+      <MemberSignature Language="F#" Value="member this.Oldest : System.Management.Automation.SwitchParameter with get, set" Usage="Microsoft.PowerShell.Commands.GetWinEventCommand.Oldest" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Commands.Diagnostics</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="FileSet")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="GetProviderSet")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="GetLogSet")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="HashQuerySet")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="XmlQuerySet")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.SwitchParameter</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Oldest switch
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Path">
+      <MemberSignature Language="C#" Value="public string[] Path { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string[] Path" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.GetWinEventCommand.Path" />
+      <MemberSignature Language="VB.NET" Value="Public Property Path As String()" />
+      <MemberSignature Language="F#" Value="member this.Path : string[] with get, set" Usage="Microsoft.PowerShell.Commands.GetWinEventCommand.Path" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Commands.Diagnostics</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Alias(Mono.Cecil.CustomAttributeArgument[])</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(HelpMessageBaseName="GetEventResources", HelpMessageResourceId="PathParamHelp", Mandatory=true, ParameterSetName="FileSet", Position=0, ValueFromPipelineByPropertyName=true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Path parameter
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ProcessRecord">
+      <MemberSignature Language="C#" Value="protected override void ProcessRecord ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void ProcessRecord() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Commands.GetWinEventCommand.ProcessRecord" />
+      <MemberSignature Language="VB.NET" Value="Protected Overrides Sub ProcessRecord ()" />
+      <MemberSignature Language="F#" Value="override this.ProcessRecord : unit -&gt; unit" Usage="getWinEventCommand.ProcessRecord " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Commands.Diagnostics</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            ProcessRecord() override.
+            This is the main entry point for the cmdlet.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ProviderName">
+      <MemberSignature Language="C#" Value="public string[] ProviderName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string[] ProviderName" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.GetWinEventCommand.ProviderName" />
+      <MemberSignature Language="VB.NET" Value="Public Property ProviderName As String()" />
+      <MemberSignature Language="F#" Value="member this.ProviderName : string[] with get, set" Usage="Microsoft.PowerShell.Commands.GetWinEventCommand.ProviderName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Commands.Diagnostics</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(HelpMessageBaseName="GetEventResources", HelpMessageResourceId="GetProviderParamHelp", Mandatory=true, ParameterSetName="GetProviderSet", Position=0, ValueFromPipelineByPropertyName=true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            ProviderName parameter
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,207 @@
+﻿<Type Name="InvokeRestMethodCommand" FullName="Microsoft.PowerShell.Commands.InvokeRestMethodCommand">
+  <TypeSignature Language="C#" Value="public class InvokeRestMethodCommand : Microsoft.PowerShell.Commands.WebRequestPSCmdlet" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit InvokeRestMethodCommand extends Microsoft.PowerShell.Commands.WebRequestPSCmdlet" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.PowerShell.Commands.InvokeRestMethodCommand" />
+  <TypeSignature Language="VB.NET" Value="Public Class InvokeRestMethodCommand&#xA;Inherits WebRequestPSCmdlet" />
+  <TypeSignature Language="F#" Value="type InvokeRestMethodCommand = class&#xA;    inherit WebRequestPSCmdlet" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.PowerShell.Commands.Utility</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Microsoft.PowerShell.Commands.WebRequestPSCmdlet</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Management.Automation.Cmdlet("Invoke", "RestMethod", DefaultParameterSetName="StandardMethod", HelpUri="https://go.microsoft.com/fwlink/?LinkID=217034")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>
+            The Invoke-RestMethod command
+            This command makes an HTTP or HTTPS request to a web service,
+            and returns the response in an appropriate way.
+            Intended to work against the wide spectrum of "RESTful" web services
+            currently deployed across the web.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public InvokeRestMethodCommand ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Commands.InvokeRestMethodCommand.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New ()" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Commands.Utility</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CustomMethod">
+      <MemberSignature Language="C#" Value="public override string CustomMethod { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string CustomMethod" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.InvokeRestMethodCommand.CustomMethod" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Property CustomMethod As String" />
+      <MemberSignature Language="F#" Value="member this.CustomMethod : string with get, set" Usage="Microsoft.PowerShell.Commands.InvokeRestMethodCommand.CustomMethod" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Commands.Utility</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Alias(Mono.Cecil.CustomAttributeArgument[])</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(Mandatory=true, ParameterSetName="CustomMethod")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(Mandatory=true, ParameterSetName="CustomMethodNoProxy")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.ValidateNotNullOrEmpty</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            gets or sets the parameter CustomMethod
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FollowRelLink">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.SwitchParameter FollowRelLink { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Management.Automation.SwitchParameter FollowRelLink" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.InvokeRestMethodCommand.FollowRelLink" />
+      <MemberSignature Language="VB.NET" Value="Public Property FollowRelLink As SwitchParameter" />
+      <MemberSignature Language="F#" Value="member this.FollowRelLink : System.Management.Automation.SwitchParameter with get, set" Usage="Microsoft.PowerShell.Commands.InvokeRestMethodCommand.FollowRelLink" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Commands.Utility</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Alias(Mono.Cecil.CustomAttributeArgument[])</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.SwitchParameter</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            enable automatic following of rel links
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MaximumFollowRelLink">
+      <MemberSignature Language="C#" Value="public int MaximumFollowRelLink { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 MaximumFollowRelLink" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.InvokeRestMethodCommand.MaximumFollowRelLink" />
+      <MemberSignature Language="VB.NET" Value="Public Property MaximumFollowRelLink As Integer" />
+      <MemberSignature Language="F#" Value="member this.MaximumFollowRelLink : int with get, set" Usage="Microsoft.PowerShell.Commands.InvokeRestMethodCommand.MaximumFollowRelLink" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Commands.Utility</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Alias(Mono.Cecil.CustomAttributeArgument[])</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.ValidateRange(Mono.Cecil.CustomAttributeArgument, Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            gets or sets the maximum number of rel links to follow
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Method">
+      <MemberSignature Language="C#" Value="public override Microsoft.PowerShell.Commands.WebRequestMethod Method { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.PowerShell.Commands.WebRequestMethod Method" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.InvokeRestMethodCommand.Method" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Property Method As WebRequestMethod" />
+      <MemberSignature Language="F#" Value="member this.Method : Microsoft.PowerShell.Commands.WebRequestMethod with get, set" Usage="Microsoft.PowerShell.Commands.InvokeRestMethodCommand.Method" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Commands.Utility</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="StandardMethod")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="StandardMethodNoProxy")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Microsoft.PowerShell.Commands.WebRequestMethod</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            gets or sets the parameter Method
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ResponseHeadersVariable">
+      <MemberSignature Language="C#" Value="public string ResponseHeadersVariable { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ResponseHeadersVariable" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.InvokeRestMethodCommand.ResponseHeadersVariable" />
+      <MemberSignature Language="VB.NET" Value="Public Property ResponseHeadersVariable As String" />
+      <MemberSignature Language="F#" Value="member this.ResponseHeadersVariable : string with get, set" Usage="Microsoft.PowerShell.Commands.InvokeRestMethodCommand.ResponseHeadersVariable" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Commands.Utility</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Alias(Mono.Cecil.CustomAttributeArgument[])</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets the ResponseHeadersVariable property.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

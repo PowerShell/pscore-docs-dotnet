@@ -1,0 +1,678 @@
+﻿<Type Name="PSSessionConfigurationCommandBase" FullName="Microsoft.PowerShell.Commands.PSSessionConfigurationCommandBase">
+  <TypeSignature Language="C#" Value="public class PSSessionConfigurationCommandBase : System.Management.Automation.PSCmdlet" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit PSSessionConfigurationCommandBase extends System.Management.Automation.PSCmdlet" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.PowerShell.Commands.PSSessionConfigurationCommandBase" />
+  <TypeSignature Language="VB.NET" Value="Public Class PSSessionConfigurationCommandBase&#xA;Inherits PSCmdlet" />
+  <TypeSignature Language="F#" Value="type PSSessionConfigurationCommandBase = class&#xA;    inherit PSCmdlet" />
+  <AssemblyInfo>
+    <AssemblyName>System.Management.Automation</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Management.Automation.PSCmdlet</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Base class for PSCustomShell commands Register-PSSessionConfiguration, Set-PSSessionConfiguration
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="AccessMode">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.Runspaces.PSSessionConfigurationAccessMode AccessMode { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Management.Automation.Runspaces.PSSessionConfigurationAccessMode AccessMode" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.PSSessionConfigurationCommandBase.AccessMode" />
+      <MemberSignature Language="VB.NET" Value="Public Property AccessMode As PSSessionConfigurationAccessMode" />
+      <MemberSignature Language="F#" Value="member this.AccessMode : System.Management.Automation.Runspaces.PSSessionConfigurationAccessMode with get, set" Usage="Microsoft.PowerShell.Commands.PSSessionConfigurationCommandBase.AccessMode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.Runspaces.PSSessionConfigurationAccessMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Set access mode
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ApplicationBase">
+      <MemberSignature Language="C#" Value="public string ApplicationBase { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ApplicationBase" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.PSSessionConfigurationCommandBase.ApplicationBase" />
+      <MemberSignature Language="VB.NET" Value="Public Property ApplicationBase As String" />
+      <MemberSignature Language="F#" Value="member this.ApplicationBase : string with get, set" Usage="Microsoft.PowerShell.Commands.PSSessionConfigurationCommandBase.ApplicationBase" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="NameParameterSet")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="AssemblyNameParameterSet")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            This parameter can accompany with AssemblyName. This supplies
+            the directory to search while loading the assembly specified
+            with parameter AssemblyName. Environment variables are accepted
+            in the string value.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AssemblyName">
+      <MemberSignature Language="C#" Value="public string AssemblyName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string AssemblyName" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.PSSessionConfigurationCommandBase.AssemblyName" />
+      <MemberSignature Language="VB.NET" Value="Public Property AssemblyName As String" />
+      <MemberSignature Language="F#" Value="member this.AssemblyName : string with get, set" Usage="Microsoft.PowerShell.Commands.PSSessionConfigurationCommandBase.AssemblyName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(Mandatory=true, ParameterSetName="AssemblyNameParameterSet", Position=1)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            This parameter enables the user to load an Assembly and supply
+            InitialSessionstate for each user connecting to the shell.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ConfigurationTypeName">
+      <MemberSignature Language="C#" Value="public string ConfigurationTypeName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ConfigurationTypeName" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.PSSessionConfigurationCommandBase.ConfigurationTypeName" />
+      <MemberSignature Language="VB.NET" Value="Public Property ConfigurationTypeName As String" />
+      <MemberSignature Language="F#" Value="member this.ConfigurationTypeName : string with get, set" Usage="Microsoft.PowerShell.Commands.PSSessionConfigurationCommandBase.ConfigurationTypeName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(Mandatory=true, ParameterSetName="AssemblyNameParameterSet", Position=2)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            This parameter should be specified with AssemblyName. This supplies
+            the type to load to get the InitialSessionState. The type should
+            be derived from <see cref="T:System.Management.Automation.Remoting.PSSessionConfiguration" />.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Force">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.SwitchParameter Force { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Management.Automation.SwitchParameter Force" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.PSSessionConfigurationCommandBase.Force" />
+      <MemberSignature Language="VB.NET" Value="Public Property Force As SwitchParameter" />
+      <MemberSignature Language="F#" Value="member this.Force : System.Management.Automation.SwitchParameter with get, set" Usage="Microsoft.PowerShell.Commands.PSSessionConfigurationCommandBase.Force" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.SwitchParameter</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Property that sets force parameter. This will allow
+            restarting the WinRM service after the changes were
+            made.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MaximumReceivedDataSizePerCommandMB">
+      <MemberSignature Language="C#" Value="public Nullable&lt;double&gt; MaximumReceivedDataSizePerCommandMB { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Nullable`1&lt;float64&gt; MaximumReceivedDataSizePerCommandMB" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.PSSessionConfigurationCommandBase.MaximumReceivedDataSizePerCommandMB" />
+      <MemberSignature Language="VB.NET" Value="Public Property MaximumReceivedDataSizePerCommandMB As Nullable(Of Double)" />
+      <MemberSignature Language="F#" Value="member this.MaximumReceivedDataSizePerCommandMB : Nullable&lt;double&gt; with get, set" Usage="Microsoft.PowerShell.Commands.PSSessionConfigurationCommandBase.MaximumReceivedDataSizePerCommandMB" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.AllowNull</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Nullable&lt;System.Double&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Total data (in MB) that can be received from a remote machine
+            targeted towards a command.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MaximumReceivedObjectSizeMB">
+      <MemberSignature Language="C#" Value="public Nullable&lt;double&gt; MaximumReceivedObjectSizeMB { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Nullable`1&lt;float64&gt; MaximumReceivedObjectSizeMB" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.PSSessionConfigurationCommandBase.MaximumReceivedObjectSizeMB" />
+      <MemberSignature Language="VB.NET" Value="Public Property MaximumReceivedObjectSizeMB As Nullable(Of Double)" />
+      <MemberSignature Language="F#" Value="member this.MaximumReceivedObjectSizeMB : Nullable&lt;double&gt; with get, set" Usage="Microsoft.PowerShell.Commands.PSSessionConfigurationCommandBase.MaximumReceivedObjectSizeMB" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.AllowNull</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Nullable&lt;System.Double&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Maximum size (in MB) of a deserialized object received from a remote machine.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ModulesToImport">
+      <MemberSignature Language="C#" Value="public object[] ModulesToImport { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object[] ModulesToImport" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.PSSessionConfigurationCommandBase.ModulesToImport" />
+      <MemberSignature Language="VB.NET" Value="Public Property ModulesToImport As Object()" />
+      <MemberSignature Language="F#" Value="member this.ModulesToImport : obj[] with get, set" Usage="Microsoft.PowerShell.Commands.PSSessionConfigurationCommandBase.ModulesToImport" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="NameParameterSet")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="AssemblyNameParameterSet")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Object[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            ModulesToImport
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public string Name { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.PSSessionConfigurationCommandBase.Name" />
+      <MemberSignature Language="VB.NET" Value="Public Property Name As String" />
+      <MemberSignature Language="F#" Value="member this.Name : string with get, set" Usage="Microsoft.PowerShell.Commands.PSSessionConfigurationCommandBase.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(Mandatory=true, ParameterSetName="NameParameterSet", Position=0, ValueFromPipelineByPropertyName=true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(Mandatory=true, ParameterSetName="AssemblyNameParameterSet", Position=0, ValueFromPipelineByPropertyName=true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(Mandatory=true, ParameterSetName="SessionConfigurationFile", Position=0, ValueFromPipelineByPropertyName=true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.ValidateNotNullOrEmpty</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            This parameter enables the user to specify a shell name for the
+            created custom shell.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NoServiceRestart">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.SwitchParameter NoServiceRestart { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Management.Automation.SwitchParameter NoServiceRestart" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.PSSessionConfigurationCommandBase.NoServiceRestart" />
+      <MemberSignature Language="VB.NET" Value="Public Property NoServiceRestart As SwitchParameter" />
+      <MemberSignature Language="F#" Value="member this.NoServiceRestart : System.Management.Automation.SwitchParameter with get, set" Usage="Microsoft.PowerShell.Commands.PSSessionConfigurationCommandBase.NoServiceRestart" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.SwitchParameter</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            If true, then the cmdlet will not attempt to restart
+            WinRM service after completion. Typically WinRM service
+            need to be restarted for changes to take place.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Path">
+      <MemberSignature Language="C#" Value="public string Path { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Path" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.PSSessionConfigurationCommandBase.Path" />
+      <MemberSignature Language="VB.NET" Value="Public Property Path As String" />
+      <MemberSignature Language="F#" Value="member this.Path : string with get, set" Usage="Microsoft.PowerShell.Commands.PSSessionConfigurationCommandBase.Path" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(Mandatory=true, ParameterSetName="SessionConfigurationFile")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.ValidateNotNullOrEmpty</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Declaration initial session config file path
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PSVersion">
+      <MemberSignature Language="C#" Value="public Version PSVersion { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Version PSVersion" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.PSSessionConfigurationCommandBase.PSVersion" />
+      <MemberSignature Language="VB.NET" Value="Public Property PSVersion As Version" />
+      <MemberSignature Language="F#" Value="member this.PSVersion : Version with get, set" Usage="Microsoft.PowerShell.Commands.PSSessionConfigurationCommandBase.PSVersion" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Alias(Mono.Cecil.CustomAttributeArgument[])</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="NameParameterSet")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="AssemblyNameParameterSet")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.ValidateNotNullOrEmpty</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Version</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Property corresponding to PSVersion parameter in the ConfigXML. This is treated as the minimum PowerShell version to load.
+            This will allow existing endpoints creating during migration or upgrade that have PSVersion=2.0 to roll forward to PowerShell 3.0 automatically without changing the ConfigXML.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RunAsCredential">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.PSCredential RunAsCredential { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Management.Automation.PSCredential RunAsCredential" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.PSSessionConfigurationCommandBase.RunAsCredential" />
+      <MemberSignature Language="VB.NET" Value="Public Property RunAsCredential As PSCredential" />
+      <MemberSignature Language="F#" Value="member this.RunAsCredential : System.Management.Automation.PSCredential with get, set" Usage="Microsoft.PowerShell.Commands.PSSessionConfigurationCommandBase.RunAsCredential" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Credential</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.PSCredential</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Parameter used to specify the RunAs credentials.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RunAsVirtualAccount">
+      <MemberSignature Language="C#" Value="protected bool RunAsVirtualAccount { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool RunAsVirtualAccount" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.PSSessionConfigurationCommandBase.RunAsVirtualAccount" />
+      <MemberSignature Language="VB.NET" Value="Protected Property RunAsVirtualAccount As Boolean" />
+      <MemberSignature Language="F#" Value="member this.RunAsVirtualAccount : bool with get, set" Usage="Microsoft.PowerShell.Commands.PSSessionConfigurationCommandBase.RunAsVirtualAccount" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary />
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RunAsVirtualAccountGroups">
+      <MemberSignature Language="C#" Value="protected string RunAsVirtualAccountGroups { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string RunAsVirtualAccountGroups" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.PSSessionConfigurationCommandBase.RunAsVirtualAccountGroups" />
+      <MemberSignature Language="VB.NET" Value="Protected Property RunAsVirtualAccountGroups As String" />
+      <MemberSignature Language="F#" Value="member this.RunAsVirtualAccountGroups : string with get, set" Usage="Microsoft.PowerShell.Commands.PSSessionConfigurationCommandBase.RunAsVirtualAccountGroups" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Comma delimited string specifying groups a virtual account is associated with
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RunAsVirtualAccountSpecified">
+      <MemberSignature Language="C#" Value="protected bool RunAsVirtualAccountSpecified { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool RunAsVirtualAccountSpecified" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.PSSessionConfigurationCommandBase.RunAsVirtualAccountSpecified" />
+      <MemberSignature Language="VB.NET" Value="Protected Property RunAsVirtualAccountSpecified As Boolean" />
+      <MemberSignature Language="F#" Value="member this.RunAsVirtualAccountSpecified : bool with get, set" Usage="Microsoft.PowerShell.Commands.PSSessionConfigurationCommandBase.RunAsVirtualAccountSpecified" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary />
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SecurityDescriptorSddl">
+      <MemberSignature Language="C#" Value="public string SecurityDescriptorSddl { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string SecurityDescriptorSddl" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.PSSessionConfigurationCommandBase.SecurityDescriptorSddl" />
+      <MemberSignature Language="VB.NET" Value="Public Property SecurityDescriptorSddl As String" />
+      <MemberSignature Language="F#" Value="member this.SecurityDescriptorSddl : string with get, set" Usage="Microsoft.PowerShell.Commands.PSSessionConfigurationCommandBase.SecurityDescriptorSddl" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            This enables the user to specify an SDDL on the shell.
+            The default SDDL is the default used by Wsman.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SessionTypeOption">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.PSSessionTypeOption SessionTypeOption { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Management.Automation.PSSessionTypeOption SessionTypeOption" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.PSSessionConfigurationCommandBase.SessionTypeOption" />
+      <MemberSignature Language="VB.NET" Value="Public Property SessionTypeOption As PSSessionTypeOption" />
+      <MemberSignature Language="F#" Value="member this.SessionTypeOption : System.Management.Automation.PSSessionTypeOption with get, set" Usage="Microsoft.PowerShell.Commands.PSSessionConfigurationCommandBase.SessionTypeOption" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="NameParameterSet")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="AssemblyNameParameterSet")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.PSSessionTypeOption</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            SessionTypeOption
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ShowSecurityDescriptorUI">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.SwitchParameter ShowSecurityDescriptorUI { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Management.Automation.SwitchParameter ShowSecurityDescriptorUI" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.PSSessionConfigurationCommandBase.ShowSecurityDescriptorUI" />
+      <MemberSignature Language="VB.NET" Value="Public Property ShowSecurityDescriptorUI As SwitchParameter" />
+      <MemberSignature Language="F#" Value="member this.ShowSecurityDescriptorUI : System.Management.Automation.SwitchParameter with get, set" Usage="Microsoft.PowerShell.Commands.PSSessionConfigurationCommandBase.ShowSecurityDescriptorUI" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.SwitchParameter</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Shows a UI to choose permissions/access rights for this session configuration.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StartupScript">
+      <MemberSignature Language="C#" Value="public string StartupScript { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string StartupScript" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.PSSessionConfigurationCommandBase.StartupScript" />
+      <MemberSignature Language="VB.NET" Value="Public Property StartupScript As String" />
+      <MemberSignature Language="F#" Value="member this.StartupScript : string with get, set" Usage="Microsoft.PowerShell.Commands.PSSessionConfigurationCommandBase.StartupScript" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Initialization script to run upon Runspace creation for this shell.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ThreadOptions">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.Runspaces.PSThreadOptions ThreadOptions { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Management.Automation.Runspaces.PSThreadOptions ThreadOptions" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.PSSessionConfigurationCommandBase.ThreadOptions" />
+      <MemberSignature Language="VB.NET" Value="Public Property ThreadOptions As PSThreadOptions" />
+      <MemberSignature Language="F#" Value="member this.ThreadOptions : System.Management.Automation.Runspaces.PSThreadOptions with get, set" Usage="Microsoft.PowerShell.Commands.PSSessionConfigurationCommandBase.ThreadOptions" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.Runspaces.PSThreadOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            ThreadOptions of the Runspace created for the shell.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TransportOption">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.PSTransportOption TransportOption { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Management.Automation.PSTransportOption TransportOption" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.PSSessionConfigurationCommandBase.TransportOption" />
+      <MemberSignature Language="VB.NET" Value="Public Property TransportOption As PSTransportOption" />
+      <MemberSignature Language="F#" Value="member this.TransportOption : System.Management.Automation.PSTransportOption with get, set" Usage="Microsoft.PowerShell.Commands.PSSessionConfigurationCommandBase.TransportOption" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.PSTransportOption</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            TransportOption
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UseSharedProcess">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.SwitchParameter UseSharedProcess { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Management.Automation.SwitchParameter UseSharedProcess" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.PSSessionConfigurationCommandBase.UseSharedProcess" />
+      <MemberSignature Language="VB.NET" Value="Public Property UseSharedProcess As SwitchParameter" />
+      <MemberSignature Language="F#" Value="member this.UseSharedProcess : System.Management.Automation.SwitchParameter with get, set" Usage="Microsoft.PowerShell.Commands.PSSessionConfigurationCommandBase.UseSharedProcess" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.SwitchParameter</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Host mode
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

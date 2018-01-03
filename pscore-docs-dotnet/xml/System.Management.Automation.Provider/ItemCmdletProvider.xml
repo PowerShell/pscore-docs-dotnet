@@ -1,0 +1,522 @@
+﻿<Type Name="ItemCmdletProvider" FullName="System.Management.Automation.Provider.ItemCmdletProvider">
+  <TypeSignature Language="C#" Value="public abstract class ItemCmdletProvider : System.Management.Automation.Provider.DriveCmdletProvider" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit ItemCmdletProvider extends System.Management.Automation.Provider.DriveCmdletProvider" />
+  <TypeSignature Language="DocId" Value="T:System.Management.Automation.Provider.ItemCmdletProvider" />
+  <TypeSignature Language="VB.NET" Value="Public MustInherit Class ItemCmdletProvider&#xA;Inherits DriveCmdletProvider" />
+  <TypeSignature Language="F#" Value="type ItemCmdletProvider = class&#xA;    inherit DriveCmdletProvider" />
+  <AssemblyInfo>
+    <AssemblyName>System.Management.Automation</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Management.Automation.Provider.DriveCmdletProvider</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+             The base class for Cmdlet providers that expose an item as an MSH path.
+             </summary>
+    <remarks>
+             The ItemCmdletProvider class is a base class that a provider derives from to
+             inherit a set of methods that allows the Monad engine
+             to provide a core set of commands for getting and setting of data on one or
+             more items. A provider should derive from this class if they want
+             to take advantage of the item core commands that are
+             already implemented by the Monad engine. This allows users to have common
+             commands and semantics across multiple providers.
+             </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected ItemCmdletProvider ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Provider.ItemCmdletProvider.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Protected Sub New ()" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ClearItem">
+      <MemberSignature Language="C#" Value="protected virtual void ClearItem (string path);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void ClearItem(string path) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Provider.ItemCmdletProvider.ClearItem(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Protected Overridable Sub ClearItem (path As String)" />
+      <MemberSignature Language="F#" Value="abstract member ClearItem : string -&gt; unit&#xA;override this.ClearItem : string -&gt; unit" Usage="itemCmdletProvider.ClearItem path" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="path">
+             The path to the item to clear.
+             </param>
+        <summary>
+             Clears the item specified by the path.
+             </summary>
+        <returns>
+             Nothing.  The item that was cleared should be passed to the WriteItemObject method.
+             </returns>
+        <remarks>
+             Providers override this method to give the user the ability to clear provider objects using
+             the clear-item cmdlet.
+            
+             Providers that declare <see cref="T:System.Management.Automation.Provider.ProviderCapabilities" />
+             of ExpandWildcards, Filter, Include, or Exclude should ensure that the path passed meets those
+             requirements by accessing the appropriate property from the base class.
+            
+             By default overrides of this method should not clear or write objects that are generally hidden from
+             the user unless the Force property is set to true. An error should be sent to the WriteError method if
+             the path represents an item that is hidden from the user and Force is set to false.
+            
+             The default implementation of this method throws an <see cref="T:System.Management.Automation.PSNotSupportedException" />.
+             </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ClearItemDynamicParameters">
+      <MemberSignature Language="C#" Value="protected virtual object ClearItemDynamicParameters (string path);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance object ClearItemDynamicParameters(string path) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Provider.ItemCmdletProvider.ClearItemDynamicParameters(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Protected Overridable Function ClearItemDynamicParameters (path As String) As Object" />
+      <MemberSignature Language="F#" Value="abstract member ClearItemDynamicParameters : string -&gt; obj&#xA;override this.ClearItemDynamicParameters : string -&gt; obj" Usage="itemCmdletProvider.ClearItemDynamicParameters path" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="path">
+             If the path was specified on the command line, this is the path
+             to the item to get the dynamic parameters for.
+             </param>
+        <summary>
+             Gives the provider an opportunity to attach additional parameters to
+             the clear-item cmdlet.
+             </summary>
+        <returns>
+             Overrides of this method should return an object that has properties and fields decorated with
+             parsing attributes similar to a cmdlet class or a
+             <see cref="T:System.Management.Automation.RuntimeDefinedParameterDictionary" />.
+            
+             The default implementation returns null. (no additional parameters)
+             </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ExpandPath">
+      <MemberSignature Language="C#" Value="protected virtual string[] ExpandPath (string path);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance string[] ExpandPath(string path) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Provider.ItemCmdletProvider.ExpandPath(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Protected Overridable Function ExpandPath (path As String) As String()" />
+      <MemberSignature Language="F#" Value="abstract member ExpandPath : string -&gt; string[]&#xA;override this.ExpandPath : string -&gt; string[]" Usage="itemCmdletProvider.ExpandPath path" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="path">
+             The path to expand. Expansion must be consistent with the wildcarding
+             rules of PowerShell's WildcardPattern class.
+             </param>
+        <summary>
+             Expand a provider path that contains wildcards to a list of provider
+             paths that the path represents.Only called for providers that declare
+             the ExpandWildcards capability.
+             </summary>
+        <returns>
+             A list of provider paths that this path expands to. They must all exist.
+             </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetItem">
+      <MemberSignature Language="C#" Value="protected virtual void GetItem (string path);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void GetItem(string path) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Provider.ItemCmdletProvider.GetItem(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Protected Overridable Sub GetItem (path As String)" />
+      <MemberSignature Language="F#" Value="abstract member GetItem : string -&gt; unit&#xA;override this.GetItem : string -&gt; unit" Usage="itemCmdletProvider.GetItem path" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="path">
+             The path to the item to retrieve.
+             </param>
+        <summary>
+             Gets the item at the specified path.
+             </summary>
+        <returns>
+             Nothing is returned, but all objects should be written to the WriteItemObject method.
+             </returns>
+        <remarks>
+             Providers override this method to give the user access to the provider objects using
+             the get-item and get-childitem cmdlets.
+            
+             Providers that declare <see cref="T:System.Management.Automation.Provider.ProviderCapabilities" />
+             of ExpandWildcards, Filter, Include, or Exclude should ensure that the path passed meets those
+             requirements by accessing the appropriate property from the base class.
+            
+             By default overrides of this method should not write objects that are generally hidden from
+             the user unless the Force property is set to true. For instance, the FileSystem provider should
+             not call WriteItemObject for hidden or system files unless the Force property is set to true.
+            
+             The default implementation of this method throws an <see cref="T:System.Management.Automation.PSNotSupportedException" />.
+             </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetItemDynamicParameters">
+      <MemberSignature Language="C#" Value="protected virtual object GetItemDynamicParameters (string path);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance object GetItemDynamicParameters(string path) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Provider.ItemCmdletProvider.GetItemDynamicParameters(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Protected Overridable Function GetItemDynamicParameters (path As String) As Object" />
+      <MemberSignature Language="F#" Value="abstract member GetItemDynamicParameters : string -&gt; obj&#xA;override this.GetItemDynamicParameters : string -&gt; obj" Usage="itemCmdletProvider.GetItemDynamicParameters path" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="path">
+             If the path was specified on the command line, this is the path
+             to the item to get the dynamic parameters for.
+             </param>
+        <summary>
+             Gives the provider an opportunity to attach additional parameters to
+             the get-item cmdlet.
+             </summary>
+        <returns>
+             Overrides of this method should return an object that has properties and fields decorated with
+             parsing attributes similar to a cmdlet class or a
+             <see cref="T:System.Management.Automation.RuntimeDefinedParameterDictionary" />.
+            
+             The default implementation returns null. (no additional parameters)
+             </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InvokeDefaultAction">
+      <MemberSignature Language="C#" Value="protected virtual void InvokeDefaultAction (string path);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void InvokeDefaultAction(string path) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Provider.ItemCmdletProvider.InvokeDefaultAction(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Protected Overridable Sub InvokeDefaultAction (path As String)" />
+      <MemberSignature Language="F#" Value="abstract member InvokeDefaultAction : string -&gt; unit&#xA;override this.InvokeDefaultAction : string -&gt; unit" Usage="itemCmdletProvider.InvokeDefaultAction path" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="path">
+             The path to the item to perform the default action on.
+             </param>
+        <summary>
+             Invokes the default action on the specified item.
+             </summary>
+        <returns>
+             Nothing.  The item that was set should be passed to the WriteItemObject method.
+             </returns>
+        <remarks>
+             The default implementation does nothing.
+            
+             Providers override this method to give the user the ability to invoke provider objects using
+             the invoke-item cmdlet. Think of the invocation as a double click in the Windows Shell. This
+             method provides a default action based on the path that was passed.
+            
+             Providers that declare <see cref="T:System.Management.Automation.Provider.ProviderCapabilities" />
+             of ExpandWildcards, Filter, Include, or Exclude should ensure that the path passed meets those
+             requirements by accessing the appropriate property from the base class.
+            
+             By default overrides of this method should not invoke objects that are generally hidden from
+             the user unless the Force property is set to true. An error should be sent to the WriteError method if
+             the path represents an item that is hidden from the user and Force is set to false.
+             </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InvokeDefaultActionDynamicParameters">
+      <MemberSignature Language="C#" Value="protected virtual object InvokeDefaultActionDynamicParameters (string path);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance object InvokeDefaultActionDynamicParameters(string path) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Provider.ItemCmdletProvider.InvokeDefaultActionDynamicParameters(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Protected Overridable Function InvokeDefaultActionDynamicParameters (path As String) As Object" />
+      <MemberSignature Language="F#" Value="abstract member InvokeDefaultActionDynamicParameters : string -&gt; obj&#xA;override this.InvokeDefaultActionDynamicParameters : string -&gt; obj" Usage="itemCmdletProvider.InvokeDefaultActionDynamicParameters path" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="path">
+             If the path was specified on the command line, this is the path
+             to the item to get the dynamic parameters for.
+             </param>
+        <summary>
+             Gives the provider an opportunity to attach additional parameters to
+             the invoke-item cmdlet.
+             </summary>
+        <returns>
+             Overrides of this method should return an object that has properties and fields decorated with
+             parsing attributes similar to a cmdlet class or a
+             <see cref="T:System.Management.Automation.RuntimeDefinedParameterDictionary" />.
+            
+             The default implementation returns null. (no additional parameters)
+             </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsValidPath">
+      <MemberSignature Language="C#" Value="protected abstract bool IsValidPath (string path);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance bool IsValidPath(string path) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Provider.ItemCmdletProvider.IsValidPath(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Protected MustOverride Function IsValidPath (path As String) As Boolean" />
+      <MemberSignature Language="F#" Value="abstract member IsValidPath : string -&gt; bool" Usage="itemCmdletProvider.IsValidPath path" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="path">
+             The path to check for validity.
+             </param>
+        <summary>
+             Providers must override this method to verify the syntax and semantics
+             of their paths.
+             </summary>
+        <returns>
+             True if the path is syntactically and semantically valid for the provider, or
+             false otherwise.
+             </returns>
+        <remarks>
+             This test should not verify the existence of the item at the path. It should
+             only perform syntactic and semantic validation of the path.  For instance, for
+             the file system provider, that path should be canonicalized, syntactically verified,
+             and ensure that the path does not refer to a device.
+             </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ItemExists">
+      <MemberSignature Language="C#" Value="protected virtual bool ItemExists (string path);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance bool ItemExists(string path) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Provider.ItemCmdletProvider.ItemExists(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Protected Overridable Function ItemExists (path As String) As Boolean" />
+      <MemberSignature Language="F#" Value="abstract member ItemExists : string -&gt; bool&#xA;override this.ItemExists : string -&gt; bool" Usage="itemCmdletProvider.ItemExists path" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="path">
+             The path to the item to see if it exists.
+             </param>
+        <summary>
+             Determines if an item exists at the specified path.
+             </summary>
+        <returns>
+             True if the item exists, false otherwise.
+             </returns>
+        <remarks>
+             Providers override this method to give the user the ability to check for the existence of provider objects using
+             the set-item cmdlet.
+            
+             Providers that declare <see cref="T:System.Management.Automation.Provider.ProviderCapabilities" />
+             of ExpandWildcards, Filter, Include, or Exclude should ensure that the path passed meets those
+             requirements by accessing the appropriate property from the base class.
+            
+             The implementation of this method should take into account any form of access to the object that may
+             make it visible to the user.  For instance, if a user has write access to a file in the file system
+             provider bug not read access, the file still exists and the method should return true.  Sometimes this
+             may require checking the parent to see if the child can be enumerated.
+            
+             The default implementation of this method throws an <see cref="T:System.Management.Automation.PSNotSupportedException" />.
+             </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ItemExistsDynamicParameters">
+      <MemberSignature Language="C#" Value="protected virtual object ItemExistsDynamicParameters (string path);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance object ItemExistsDynamicParameters(string path) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Provider.ItemCmdletProvider.ItemExistsDynamicParameters(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Protected Overridable Function ItemExistsDynamicParameters (path As String) As Object" />
+      <MemberSignature Language="F#" Value="abstract member ItemExistsDynamicParameters : string -&gt; obj&#xA;override this.ItemExistsDynamicParameters : string -&gt; obj" Usage="itemCmdletProvider.ItemExistsDynamicParameters path" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="path">
+             If the path was specified on the command line, this is the path
+             to the item to get the dynamic parameters for.
+             </param>
+        <summary>
+             Gives the provider an opportunity to attach additional parameters to
+             the test-path cmdlet.
+             </summary>
+        <returns>
+             Overrides of this method should return an object that has properties and fields decorated with
+             parsing attributes similar to a cmdlet class or a
+             <see cref="T:System.Management.Automation.RuntimeDefinedParameterDictionary" />.
+            
+             The default implementation returns null. (no additional parameters)
+             </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetItem">
+      <MemberSignature Language="C#" Value="protected virtual void SetItem (string path, object value);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void SetItem(string path, object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Provider.ItemCmdletProvider.SetItem(System.String,System.Object)" />
+      <MemberSignature Language="VB.NET" Value="Protected Overridable Sub SetItem (path As String, value As Object)" />
+      <MemberSignature Language="F#" Value="abstract member SetItem : string * obj -&gt; unit&#xA;override this.SetItem : string * obj -&gt; unit" Usage="itemCmdletProvider.SetItem (path, value)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="path">
+             The path to the item to set.
+             </param>
+        <param name="value">
+             The value of the item specified by the path.
+             </param>
+        <summary>
+             Sets the item specified by the path.
+             </summary>
+        <returns>
+             Nothing.  The item that was set should be passed to the WriteItemObject method.
+             </returns>
+        <remarks>
+             Providers override this method to give the user the ability to modify provider objects using
+             the set-item cmdlet.
+            
+             Providers that declare <see cref="T:System.Management.Automation.Provider.ProviderCapabilities" />
+             of ExpandWildcards, Filter, Include, or Exclude should ensure that the path passed meets those
+             requirements by accessing the appropriate property from the base class.
+            
+             By default overrides of this method should not set or write objects that are generally hidden from
+             the user unless the Force property is set to true. An error should be sent to the WriteError method if
+             the path represents an item that is hidden from the user and Force is set to false.
+            
+             The default implementation of this method throws an <see cref="T:System.Management.Automation.PSNotSupportedException" />.
+             </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetItemDynamicParameters">
+      <MemberSignature Language="C#" Value="protected virtual object SetItemDynamicParameters (string path, object value);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance object SetItemDynamicParameters(string path, object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Provider.ItemCmdletProvider.SetItemDynamicParameters(System.String,System.Object)" />
+      <MemberSignature Language="VB.NET" Value="Protected Overridable Function SetItemDynamicParameters (path As String, value As Object) As Object" />
+      <MemberSignature Language="F#" Value="abstract member SetItemDynamicParameters : string * obj -&gt; obj&#xA;override this.SetItemDynamicParameters : string * obj -&gt; obj" Usage="itemCmdletProvider.SetItemDynamicParameters (path, value)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="path">
+             If the path was specified on the command line, this is the path
+             to the item to get the dynamic parameters for.
+             </param>
+        <param name="value">
+             The value of the item specified by the path.
+             </param>
+        <summary>
+             Gives the provider an opportunity to attach additional parameters to
+             the set-item cmdlet.
+             </summary>
+        <returns>
+             Overrides of this method should return an object that has properties and fields decorated with
+             parsing attributes similar to a cmdlet class or a
+             <see cref="T:System.Management.Automation.RuntimeDefinedParameterDictionary" />.
+            
+             The default implementation returns null. (no additional parameters)
+             </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

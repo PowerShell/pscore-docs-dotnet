@@ -1,0 +1,555 @@
+﻿<Type Name="StartProcessCommand" FullName="Microsoft.PowerShell.Commands.StartProcessCommand">
+  <TypeSignature Language="C#" Value="public sealed class StartProcessCommand : System.Management.Automation.PSCmdlet, IDisposable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit StartProcessCommand extends System.Management.Automation.PSCmdlet implements class System.IDisposable" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.PowerShell.Commands.StartProcessCommand" />
+  <TypeSignature Language="VB.NET" Value="Public NotInheritable Class StartProcessCommand&#xA;Inherits PSCmdlet&#xA;Implements IDisposable" />
+  <TypeSignature Language="F#" Value="type StartProcessCommand = class&#xA;    inherit PSCmdlet&#xA;    interface IDisposable" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.PowerShell.Commands.Management</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Management.Automation.PSCmdlet</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Management.Automation.Cmdlet("Start", "Process", DefaultParameterSetName="Default", HelpUri="https://go.microsoft.com/fwlink/?LinkID=135261", SupportsShouldProcess=true)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Management.Automation.OutputType(typeof(System.Diagnostics.Process))</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>
+            This class implements the Start-process command
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public StartProcessCommand ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Commands.StartProcessCommand.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New ()" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Commands.Management</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ArgumentList">
+      <MemberSignature Language="C#" Value="public string[] ArgumentList { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string[] ArgumentList" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.StartProcessCommand.ArgumentList" />
+      <MemberSignature Language="VB.NET" Value="Public Property ArgumentList As String()" />
+      <MemberSignature Language="F#" Value="member this.ArgumentList : string[] with get, set" Usage="Microsoft.PowerShell.Commands.StartProcessCommand.ArgumentList" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Commands.Management</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Alias(Mono.Cecil.CustomAttributeArgument[])</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(Position=1)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.ValidateNotNullOrEmpty</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Arguments for the process
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginProcessing">
+      <MemberSignature Language="C#" Value="protected override void BeginProcessing ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void BeginProcessing() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Commands.StartProcessCommand.BeginProcessing" />
+      <MemberSignature Language="VB.NET" Value="Protected Overrides Sub BeginProcessing ()" />
+      <MemberSignature Language="F#" Value="override this.BeginProcessing : unit -&gt; unit" Usage="startProcessCommand.BeginProcessing " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Commands.Management</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            BeginProcessing
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Credential">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.PSCredential Credential { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Management.Automation.PSCredential Credential" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.StartProcessCommand.Credential" />
+      <MemberSignature Language="VB.NET" Value="Public Property Credential As PSCredential" />
+      <MemberSignature Language="F#" Value="member this.Credential : System.Management.Automation.PSCredential with get, set" Usage="Microsoft.PowerShell.Commands.StartProcessCommand.Credential" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Commands.Management</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Alias(Mono.Cecil.CustomAttributeArgument[])</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Credential</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="Default")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.ValidateNotNullOrEmpty</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.PSCredential</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Credentials for the process
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="public void Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Dispose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Commands.StartProcessCommand.Dispose" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Dispose ()" />
+      <MemberSignature Language="F#" Value="abstract member Dispose : unit -&gt; unit&#xA;override this.Dispose : unit -&gt; unit" Usage="startProcessCommand.Dispose " />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.IDisposable.Dispose</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Commands.Management</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Dispose WaitHandle used to honor -Wait parameter
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FilePath">
+      <MemberSignature Language="C#" Value="public string FilePath { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string FilePath" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.StartProcessCommand.FilePath" />
+      <MemberSignature Language="VB.NET" Value="Public Property FilePath As String" />
+      <MemberSignature Language="F#" Value="member this.FilePath : string with get, set" Usage="Microsoft.PowerShell.Commands.StartProcessCommand.FilePath" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Commands.Management</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Alias(Mono.Cecil.CustomAttributeArgument[])</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(Mandatory=true, Position=0)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.ValidateNotNullOrEmpty</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Path/FileName of the process to start
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LoadUserProfile">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.SwitchParameter LoadUserProfile { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Management.Automation.SwitchParameter LoadUserProfile" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.StartProcessCommand.LoadUserProfile" />
+      <MemberSignature Language="VB.NET" Value="Public Property LoadUserProfile As SwitchParameter" />
+      <MemberSignature Language="F#" Value="member this.LoadUserProfile : System.Management.Automation.SwitchParameter with get, set" Usage="Microsoft.PowerShell.Commands.StartProcessCommand.LoadUserProfile" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Commands.Management</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Alias(Mono.Cecil.CustomAttributeArgument[])</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="Default")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.SwitchParameter</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            load user profile from registry
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NoNewWindow">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.SwitchParameter NoNewWindow { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Management.Automation.SwitchParameter NoNewWindow" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.StartProcessCommand.NoNewWindow" />
+      <MemberSignature Language="VB.NET" Value="Public Property NoNewWindow As SwitchParameter" />
+      <MemberSignature Language="F#" Value="member this.NoNewWindow : System.Management.Automation.SwitchParameter with get, set" Usage="Microsoft.PowerShell.Commands.StartProcessCommand.NoNewWindow" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Commands.Management</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Alias(Mono.Cecil.CustomAttributeArgument[])</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="Default")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.SwitchParameter</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            starts process in a new window
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PassThru">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.SwitchParameter PassThru { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Management.Automation.SwitchParameter PassThru" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.StartProcessCommand.PassThru" />
+      <MemberSignature Language="VB.NET" Value="Public Property PassThru As SwitchParameter" />
+      <MemberSignature Language="F#" Value="member this.PassThru : System.Management.Automation.SwitchParameter with get, set" Usage="Microsoft.PowerShell.Commands.StartProcessCommand.PassThru" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Commands.Management</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.SwitchParameter</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            passthru parameter
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RedirectStandardError">
+      <MemberSignature Language="C#" Value="public string RedirectStandardError { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string RedirectStandardError" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.StartProcessCommand.RedirectStandardError" />
+      <MemberSignature Language="VB.NET" Value="Public Property RedirectStandardError As String" />
+      <MemberSignature Language="F#" Value="member this.RedirectStandardError : string with get, set" Usage="Microsoft.PowerShell.Commands.StartProcessCommand.RedirectStandardError" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Commands.Management</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Alias(Mono.Cecil.CustomAttributeArgument[])</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="Default")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.ValidateNotNullOrEmpty</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Redirect error
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RedirectStandardInput">
+      <MemberSignature Language="C#" Value="public string RedirectStandardInput { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string RedirectStandardInput" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.StartProcessCommand.RedirectStandardInput" />
+      <MemberSignature Language="VB.NET" Value="Public Property RedirectStandardInput As String" />
+      <MemberSignature Language="F#" Value="member this.RedirectStandardInput : string with get, set" Usage="Microsoft.PowerShell.Commands.StartProcessCommand.RedirectStandardInput" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Commands.Management</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Alias(Mono.Cecil.CustomAttributeArgument[])</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="Default")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.ValidateNotNullOrEmpty</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Redirect input
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RedirectStandardOutput">
+      <MemberSignature Language="C#" Value="public string RedirectStandardOutput { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string RedirectStandardOutput" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.StartProcessCommand.RedirectStandardOutput" />
+      <MemberSignature Language="VB.NET" Value="Public Property RedirectStandardOutput As String" />
+      <MemberSignature Language="F#" Value="member this.RedirectStandardOutput : string with get, set" Usage="Microsoft.PowerShell.Commands.StartProcessCommand.RedirectStandardOutput" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Commands.Management</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Alias(Mono.Cecil.CustomAttributeArgument[])</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="Default")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.ValidateNotNullOrEmpty</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Redirect output
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StopProcessing">
+      <MemberSignature Language="C#" Value="protected override void StopProcessing ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void StopProcessing() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Commands.StartProcessCommand.StopProcessing" />
+      <MemberSignature Language="VB.NET" Value="Protected Overrides Sub StopProcessing ()" />
+      <MemberSignature Language="F#" Value="override this.StopProcessing : unit -&gt; unit" Usage="startProcessCommand.StopProcessing " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Commands.Management</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Implements ^c, after creating a process.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UseNewEnvironment">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.SwitchParameter UseNewEnvironment { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Management.Automation.SwitchParameter UseNewEnvironment" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.StartProcessCommand.UseNewEnvironment" />
+      <MemberSignature Language="VB.NET" Value="Public Property UseNewEnvironment As SwitchParameter" />
+      <MemberSignature Language="F#" Value="member this.UseNewEnvironment : System.Management.Automation.SwitchParameter with get, set" Usage="Microsoft.PowerShell.Commands.StartProcessCommand.UseNewEnvironment" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Commands.Management</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="Default")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.SwitchParameter</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+             Default Environment
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Verb">
+      <MemberSignature Language="C#" Value="public string Verb { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Verb" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.StartProcessCommand.Verb" />
+      <MemberSignature Language="VB.NET" Value="Public Property Verb As String" />
+      <MemberSignature Language="F#" Value="member this.Verb : string with get, set" Usage="Microsoft.PowerShell.Commands.StartProcessCommand.Verb" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Commands.Management</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="UseShellExecute")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.ValidateNotNullOrEmpty</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Verb
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+            The 'Verb' parameter is not supported in OneCore PowerShell
+            because 'UseShellExecute' is not supported in CoreCLR.
+            </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Wait">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.SwitchParameter Wait { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Management.Automation.SwitchParameter Wait" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.StartProcessCommand.Wait" />
+      <MemberSignature Language="VB.NET" Value="Public Property Wait As SwitchParameter" />
+      <MemberSignature Language="F#" Value="member this.Wait : System.Management.Automation.SwitchParameter with get, set" Usage="Microsoft.PowerShell.Commands.StartProcessCommand.Wait" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Commands.Management</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.SwitchParameter</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+             wait for th eprocess to terminate
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WindowStyle">
+      <MemberSignature Language="C#" Value="public System.Diagnostics.ProcessWindowStyle WindowStyle { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Diagnostics.ProcessWindowStyle WindowStyle" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.StartProcessCommand.WindowStyle" />
+      <MemberSignature Language="VB.NET" Value="Public Property WindowStyle As ProcessWindowStyle" />
+      <MemberSignature Language="F#" Value="member this.WindowStyle : System.Diagnostics.ProcessWindowStyle with get, set" Usage="Microsoft.PowerShell.Commands.StartProcessCommand.WindowStyle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Commands.Management</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.ValidateNotNullOrEmpty</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Diagnostics.ProcessWindowStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Window style of the process window
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WorkingDirectory">
+      <MemberSignature Language="C#" Value="public string WorkingDirectory { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string WorkingDirectory" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.StartProcessCommand.WorkingDirectory" />
+      <MemberSignature Language="VB.NET" Value="Public Property WorkingDirectory As String" />
+      <MemberSignature Language="F#" Value="member this.WorkingDirectory : string with get, set" Usage="Microsoft.PowerShell.Commands.StartProcessCommand.WorkingDirectory" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Commands.Management</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.ValidateNotNullOrEmpty</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+             working directory of the process
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

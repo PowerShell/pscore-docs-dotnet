@@ -1,0 +1,197 @@
+﻿<Type Name="SessionStateProviderBaseContentReaderWriter" FullName="Microsoft.PowerShell.Commands.SessionStateProviderBaseContentReaderWriter">
+  <TypeSignature Language="C#" Value="public class SessionStateProviderBaseContentReaderWriter : IDisposable, System.Management.Automation.Provider.IContentReader, System.Management.Automation.Provider.IContentWriter" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit SessionStateProviderBaseContentReaderWriter extends System.Object implements class System.IDisposable, class System.Management.Automation.Provider.IContentReader, class System.Management.Automation.Provider.IContentWriter" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.PowerShell.Commands.SessionStateProviderBaseContentReaderWriter" />
+  <TypeSignature Language="VB.NET" Value="Public Class SessionStateProviderBaseContentReaderWriter&#xA;Implements IContentReader, IContentWriter, IDisposable" />
+  <TypeSignature Language="F#" Value="type SessionStateProviderBaseContentReaderWriter = class&#xA;    interface IContentReader&#xA;    interface IDisposable&#xA;    interface IContentWriter" />
+  <AssemblyInfo>
+    <AssemblyName>System.Management.Automation</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.Management.Automation.Provider.IContentReader</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.Management.Automation.Provider.IContentWriter</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>
+             The content reader/writer for all providers deriving from SessionStateProviderBase
+             </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Close">
+      <MemberSignature Language="C#" Value="public void Close ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Close() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Commands.SessionStateProviderBaseContentReaderWriter.Close" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Close ()" />
+      <MemberSignature Language="F#" Value="abstract member Close : unit -&gt; unit&#xA;override this.Close : unit -&gt; unit" Usage="sessionStateProviderBaseContentReaderWriter.Close " />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.Management.Automation.Provider.IContentReader.Close</InterfaceMember>
+        <InterfaceMember>M:System.Management.Automation.Provider.IContentWriter.Close</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+             Closes the reader. None of the derived providers need to
+             close their reader so do nothing.
+             </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="public void Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Dispose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Commands.SessionStateProviderBaseContentReaderWriter.Dispose" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Dispose ()" />
+      <MemberSignature Language="F#" Value="abstract member Dispose : unit -&gt; unit&#xA;override this.Dispose : unit -&gt; unit" Usage="sessionStateProviderBaseContentReaderWriter.Dispose " />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.IDisposable.Dispose</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+             Closes the reader. None of the derived providers need to
+             close their reader so do nothing.
+             </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Read">
+      <MemberSignature Language="C#" Value="public System.Collections.IList Read (long readCount);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Collections.IList Read(int64 readCount) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Commands.SessionStateProviderBaseContentReaderWriter.Read(System.Int64)" />
+      <MemberSignature Language="VB.NET" Value="Public Function Read (readCount As Long) As IList" />
+      <MemberSignature Language="F#" Value="abstract member Read : int64 -&gt; System.Collections.IList&#xA;override this.Read : int64 -&gt; System.Collections.IList" Usage="sessionStateProviderBaseContentReaderWriter.Read readCount" />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.Management.Automation.Provider.IContentReader.Read(System.Int64)</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IList</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="readCount" Type="System.Int64" />
+      </Parameters>
+      <Docs>
+        <param name="readCount">
+             The number of "blocks" of data to be read from the item.
+             </param>
+        <summary>
+             Reads the content from the item
+             </summary>
+        <returns>
+             An array of the blocks of data read from the item.
+             </returns>
+        <remarks>
+             A "block" of content is provider specific.  For the file system
+             a "block" may be considered a byte, a character, or delimited string.
+             </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Seek">
+      <MemberSignature Language="C#" Value="public void Seek (long offset, System.IO.SeekOrigin origin);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Seek(int64 offset, valuetype System.IO.SeekOrigin origin) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Commands.SessionStateProviderBaseContentReaderWriter.Seek(System.Int64,System.IO.SeekOrigin)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Seek (offset As Long, origin As SeekOrigin)" />
+      <MemberSignature Language="F#" Value="abstract member Seek : int64 * System.IO.SeekOrigin -&gt; unit&#xA;override this.Seek : int64 * System.IO.SeekOrigin -&gt; unit" Usage="sessionStateProviderBaseContentReaderWriter.Seek (offset, origin)" />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.Management.Automation.Provider.IContentReader.Seek(System.Int64,System.IO.SeekOrigin)</InterfaceMember>
+        <InterfaceMember>M:System.Management.Automation.Provider.IContentWriter.Seek(System.Int64,System.IO.SeekOrigin)</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="offset" Type="System.Int64" />
+        <Parameter Name="origin" Type="System.IO.SeekOrigin" />
+      </Parameters>
+      <Docs>
+        <param name="offset">
+             ignored
+             </param>
+        <param name="origin">
+             ignored
+             </param>
+        <summary>
+             None of the derived providers supports seeking for V1 so this
+             always throws a NotSupportedException
+             </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NotSupportedException">
+             This exception is always thrown.
+             </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Write">
+      <MemberSignature Language="C#" Value="public System.Collections.IList Write (System.Collections.IList content);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Collections.IList Write(class System.Collections.IList content) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Commands.SessionStateProviderBaseContentReaderWriter.Write(System.Collections.IList)" />
+      <MemberSignature Language="VB.NET" Value="Public Function Write (content As IList) As IList" />
+      <MemberSignature Language="F#" Value="abstract member Write : System.Collections.IList -&gt; System.Collections.IList&#xA;override this.Write : System.Collections.IList -&gt; System.Collections.IList" Usage="sessionStateProviderBaseContentReaderWriter.Write content" />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.Management.Automation.Provider.IContentWriter.Write(System.Collections.IList)</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IList</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="content" Type="System.Collections.IList" />
+      </Parameters>
+      <Docs>
+        <param name="content">
+             An array of content "blocks" to be written to the item.
+             </param>
+        <summary>
+             Writes content to the item.
+             </summary>
+        <returns>
+             The blocks of content that were successfully written to the item.
+             </returns>
+        <remarks>
+             A "block" of content is provider specific.  For the file system
+             a "block" may be considered a byte, a character, or delimited string.
+             </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,106 @@
+﻿<Type Name="ConvertFromSecureStringCommand" FullName="Microsoft.PowerShell.Commands.ConvertFromSecureStringCommand">
+  <TypeSignature Language="C#" Value="public sealed class ConvertFromSecureStringCommand : Microsoft.PowerShell.Commands.ConvertFromToSecureStringCommandBase" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit ConvertFromSecureStringCommand extends Microsoft.PowerShell.Commands.ConvertFromToSecureStringCommandBase" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.PowerShell.Commands.ConvertFromSecureStringCommand" />
+  <TypeSignature Language="VB.NET" Value="Public NotInheritable Class ConvertFromSecureStringCommand&#xA;Inherits ConvertFromToSecureStringCommandBase" />
+  <TypeSignature Language="F#" Value="type ConvertFromSecureStringCommand = class&#xA;    inherit ConvertFromToSecureStringCommandBase" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.PowerShell.Security</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Microsoft.PowerShell.Commands.ConvertFromToSecureStringCommandBase</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Management.Automation.Cmdlet("ConvertFrom", "SecureString", DefaultParameterSetName="Secure", HelpUri="https://go.microsoft.com/fwlink/?LinkID=113287")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Management.Automation.OutputType(typeof(System.String))</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>
+            Defines the implementation of the 'ConvertFrom-SecureString' cmdlet.
+            This cmdlet exports a new SecureString -- one that represents
+            text that should be kept confidential. The text is encrypted
+            for privacy when being used, and deleted from computer memory
+            when no longer needed.  When no key is specified, the command
+            uses the DPAPI to encrypt the string. When a key is specified, the
+            command uses the AES algorithm to encrypt the string.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ConvertFromSecureStringCommand ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Commands.ConvertFromSecureStringCommand.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New ()" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Security</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>
+            Initializes a new instance of the ExportSecureStringCommand class
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ProcessRecord">
+      <MemberSignature Language="C#" Value="protected override void ProcessRecord ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void ProcessRecord() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Commands.ConvertFromSecureStringCommand.ProcessRecord" />
+      <MemberSignature Language="VB.NET" Value="Protected Overrides Sub ProcessRecord ()" />
+      <MemberSignature Language="F#" Value="override this.ProcessRecord : unit -&gt; unit" Usage="convertFromSecureStringCommand.ProcessRecord " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Security</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Processes records from the input pipeline.
+            For each input object, the command encrypts
+            and exports the object.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SecureString">
+      <MemberSignature Language="C#" Value="public System.Security.SecureString SecureString { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Security.SecureString SecureString" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.ConvertFromSecureStringCommand.SecureString" />
+      <MemberSignature Language="VB.NET" Value="Public Property SecureString As SecureString" />
+      <MemberSignature Language="F#" Value="member this.SecureString : System.Security.SecureString with get, set" Usage="Microsoft.PowerShell.Commands.ConvertFromSecureStringCommand.SecureString" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Security</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(Mandatory=true, Position=0, ValueFromPipeline=true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Security.SecureString</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets the secure string to be exported.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

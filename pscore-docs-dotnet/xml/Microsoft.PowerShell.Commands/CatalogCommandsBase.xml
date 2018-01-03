@@ -1,0 +1,157 @@
+﻿<Type Name="CatalogCommandsBase" FullName="Microsoft.PowerShell.Commands.CatalogCommandsBase">
+  <TypeSignature Language="C#" Value="public abstract class CatalogCommandsBase : System.Management.Automation.PSCmdlet" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit CatalogCommandsBase extends System.Management.Automation.PSCmdlet" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.PowerShell.Commands.CatalogCommandsBase" />
+  <TypeSignature Language="VB.NET" Value="Public MustInherit Class CatalogCommandsBase&#xA;Inherits PSCmdlet" />
+  <TypeSignature Language="F#" Value="type CatalogCommandsBase = class&#xA;    inherit PSCmdlet" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.PowerShell.Security</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Management.Automation.PSCmdlet</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Defines the base class from which all catalog commands are derived.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected CatalogCommandsBase (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Commands.CatalogCommandsBase.#ctor(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Protected Sub New (name As String)" />
+      <MemberSignature Language="F#" Value="new Microsoft.PowerShell.Commands.CatalogCommandsBase : string -&gt; Microsoft.PowerShell.Commands.CatalogCommandsBase" Usage="new Microsoft.PowerShell.Commands.CatalogCommandsBase name" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Security</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">
+            The name of the command.
+            </param>
+        <summary>
+            Initializes a new instance of the CatalogCommandsBase class,
+            using the given command name.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CatalogFilePath">
+      <MemberSignature Language="C#" Value="public string CatalogFilePath { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string CatalogFilePath" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.CatalogCommandsBase.CatalogFilePath" />
+      <MemberSignature Language="VB.NET" Value="Public Property CatalogFilePath As String" />
+      <MemberSignature Language="F#" Value="member this.CatalogFilePath : string with get, set" Usage="Microsoft.PowerShell.Commands.CatalogCommandsBase.CatalogFilePath" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Security</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(Mandatory=true, ParameterSetName="ByPath", Position=0, ValueFromPipeline=true, ValueFromPipelineByPropertyName=true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Path of folder/file to generate or validate the catalog file
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Path">
+      <MemberSignature Language="C#" Value="public string[] Path { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string[] Path" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.CatalogCommandsBase.Path" />
+      <MemberSignature Language="VB.NET" Value="Public Property Path As String()" />
+      <MemberSignature Language="F#" Value="member this.Path : string[] with get, set" Usage="Microsoft.PowerShell.Commands.CatalogCommandsBase.Path" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Security</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="ByPath", Position=1, ValueFromPipeline=true, ValueFromPipelineByPropertyName=true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Path of folder/file to generate or validate the catalog file
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PerformAction">
+      <MemberSignature Language="C#" Value="protected abstract void PerformAction (System.Collections.ObjectModel.Collection&lt;string&gt; path, string catalogFilePath);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void PerformAction(class System.Collections.ObjectModel.Collection`1&lt;string&gt; path, string catalogFilePath) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Commands.CatalogCommandsBase.PerformAction(System.Collections.ObjectModel.Collection{System.String},System.String)" />
+      <MemberSignature Language="VB.NET" Value="Protected MustOverride Sub PerformAction (path As Collection(Of String), catalogFilePath As String)" />
+      <MemberSignature Language="F#" Value="abstract member PerformAction : System.Collections.ObjectModel.Collection&lt;string&gt; * string -&gt; unit" Usage="catalogCommandsBase.PerformAction (path, catalogFilePath)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Security</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="path" Type="System.Collections.ObjectModel.Collection&lt;System.String&gt;" />
+        <Parameter Name="catalogFilePath" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="path">
+            The name of the Folder or file on which to perform the action.
+            </param>
+        <param name="catalogFilePath">
+            Path to Catalog
+            </param>
+        <summary>
+            Performs the action i.e. Generate or Validate the Windows Catalog File
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ProcessRecord">
+      <MemberSignature Language="C#" Value="protected override void ProcessRecord ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void ProcessRecord() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Commands.CatalogCommandsBase.ProcessRecord" />
+      <MemberSignature Language="VB.NET" Value="Protected Overrides Sub ProcessRecord ()" />
+      <MemberSignature Language="F#" Value="override this.ProcessRecord : unit -&gt; unit" Usage="catalogCommandsBase.ProcessRecord " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Security</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Processes records from the input pipeline.
+            For each input object, the command either generate the Catalog or
+            Validates the existing Catalog
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>
