@@ -1,0 +1,903 @@
+﻿<Type Name="PathIntrinsics" FullName="System.Management.Automation.PathIntrinsics">
+  <TypeSignature Language="C#" Value="public sealed class PathIntrinsics" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit PathIntrinsics extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Management.Automation.PathIntrinsics" />
+  <TypeSignature Language="VB.NET" Value="Public NotInheritable Class PathIntrinsics" />
+  <TypeSignature Language="F#" Value="type PathIntrinsics = class" />
+  <AssemblyInfo>
+    <AssemblyName>System.Management.Automation</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Exposes the path manipulation and location APIs to the Cmdlet base class.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Combine">
+      <MemberSignature Language="C#" Value="public string Combine (string parent, string child);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance string Combine(string parent, string child) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.PathIntrinsics.Combine(System.String,System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Function Combine (parent As String, child As String) As String" />
+      <MemberSignature Language="F#" Value="member this.Combine : string * string -&gt; string" Usage="pathIntrinsics.Combine (parent, child)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="parent" Type="System.String" />
+        <Parameter Name="child" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="parent">
+             The parent path to be joined with the child.
+             </param>
+        <param name="child">
+             The child path to be joined with the parent.
+             </param>
+        <summary>
+             Combines two strings with a provider specific path separator.
+             </summary>
+        <returns>
+             The combined path of the parent and child with the provider
+             specific path separator between them.
+             </returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+             If <paramref name="context" /> is null.
+             </exception>
+        <exception cref="T:System.ArgumentException">
+             If both <paramref name="parent" /> and <paramref name="child" /> is null.
+             </exception>
+        <exception cref="T:System.NotSupportedException">
+             If the <paramref name="providerId" /> does not support this operation.
+             </exception>
+        <exception cref="T:System.Management.Automation.PipelineStoppedException">
+             If the pipeline is being stopped while executing the command.
+             </exception>
+        <exception cref="T:System.Management.Automation.ProviderInvocationException">
+             If the provider threw an exception.
+             </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CurrentFileSystemLocation">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.PathInfo CurrentFileSystemLocation { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Management.Automation.PathInfo CurrentFileSystemLocation" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.PathIntrinsics.CurrentFileSystemLocation" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property CurrentFileSystemLocation As PathInfo" />
+      <MemberSignature Language="F#" Value="member this.CurrentFileSystemLocation : System.Management.Automation.PathInfo" Usage="System.Management.Automation.PathIntrinsics.CurrentFileSystemLocation" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.PathInfo</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+             Gets the current location for the file system provider
+             </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.Management.Automation.DriveNotFoundException">
+             If a current drive cannot be found for the FileSystem provider
+             </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CurrentLocation">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.PathInfo CurrentLocation { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Management.Automation.PathInfo CurrentLocation" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.PathIntrinsics.CurrentLocation" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property CurrentLocation As PathInfo" />
+      <MemberSignature Language="F#" Value="member this.CurrentLocation : System.Management.Automation.PathInfo" Usage="System.Management.Automation.PathIntrinsics.CurrentLocation" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.PathInfo</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+             Gets the current location.
+             </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidOperationException">
+             If a location has not been set yet.
+             </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CurrentProviderLocation">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.PathInfo CurrentProviderLocation (string providerName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Management.Automation.PathInfo CurrentProviderLocation(string providerName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.PathIntrinsics.CurrentProviderLocation(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Function CurrentProviderLocation (providerName As String) As PathInfo" />
+      <MemberSignature Language="F#" Value="member this.CurrentProviderLocation : string -&gt; System.Management.Automation.PathInfo" Usage="pathIntrinsics.CurrentProviderLocation providerName" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.PathInfo</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="providerName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="providerName">
+             The name of the provider to get the current location for.
+             </param>
+        <summary>
+             Gets the current location for a specific provider
+             </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+             If <paramref name="providerName" /> is null.
+             </exception>
+        <exception cref="T:System.Management.Automation.ProviderNotFoundException">
+             If <paramref name="namespacesID" /> refers to a provider that does not exist.
+             </exception>
+        <exception cref="T:System.Management.Automation.DriveNotFoundException">
+             If a current drive cannot be found for the provider <paramref name="providerName" /></exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetResolvedProviderPathFromProviderPath">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.Collection&lt;string&gt; GetResolvedProviderPathFromProviderPath (string path, string providerId);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Collections.ObjectModel.Collection`1&lt;string&gt; GetResolvedProviderPathFromProviderPath(string path, string providerId) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.PathIntrinsics.GetResolvedProviderPathFromProviderPath(System.String,System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetResolvedProviderPathFromProviderPath (path As String, providerId As String) As Collection(Of String)" />
+      <MemberSignature Language="F#" Value="member this.GetResolvedProviderPathFromProviderPath : string * string -&gt; System.Collections.ObjectModel.Collection&lt;string&gt;" Usage="pathIntrinsics.GetResolvedProviderPathFromProviderPath (path, providerId)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.Collection&lt;System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+        <Parameter Name="providerId" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="path">
+             The drive or provider qualified path to be resolved. This path may contain wildcard
+             characters which will get resolved.
+             </param>
+        <param name="providerId">
+             The provider for which the returned paths should be used.
+             </param>
+        <summary>
+             Resolves a drive or provider qualified absolute or relative path that may contain
+             wildcard characters into one or more provider-internal paths.
+             </summary>
+        <returns>
+             An array of provider-internal paths that resolved from the given path.
+             </returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+             If <paramref name="path" /> is null.
+             </exception>
+        <exception cref="T:System.Management.Automation.ProviderNotFoundException">
+             If <paramref name="providerId" /> references a provider that does not exist.
+             </exception>
+        <exception cref="T:System.NotSupportedException">
+             If the <paramref name="providerId" /> references a provider that is not
+             a ContainerCmdletProvider.
+             </exception>
+        <exception cref="T:System.Management.Automation.ProviderInvocationException">
+             If the provider used to build the path threw an exception.
+             </exception>
+        <exception cref="T:System.InvalidOperationException">
+             If the <paramref name="path" /> starts with "~" and the home location is not set for
+             the provider.
+             </exception>
+        <exception cref="T:System.Management.Automation.ItemNotFoundException">
+             If <paramref name="path" /> does not contain wildcard characters and
+             could not be found.
+             </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetResolvedProviderPathFromPSPath">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.Collection&lt;string&gt; GetResolvedProviderPathFromPSPath (string path, out System.Management.Automation.ProviderInfo provider);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Collections.ObjectModel.Collection`1&lt;string&gt; GetResolvedProviderPathFromPSPath(string path, [out] class System.Management.Automation.ProviderInfo&amp; provider) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.PathIntrinsics.GetResolvedProviderPathFromPSPath(System.String,System.Management.Automation.ProviderInfo@)" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetResolvedProviderPathFromPSPath (path As String, ByRef provider As ProviderInfo) As Collection(Of String)" />
+      <MemberSignature Language="F#" Value="member this.GetResolvedProviderPathFromPSPath : string *  -&gt; System.Collections.ObjectModel.Collection&lt;string&gt;" Usage="pathIntrinsics.GetResolvedProviderPathFromPSPath (path, provider)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.Collection&lt;System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+        <Parameter Name="provider" Type="System.Management.Automation.ProviderInfo&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="path">
+             The drive or provider qualified path to be resolved. This path may contain wildcard
+             characters which will get resolved.
+             </param>
+        <param name="provider">
+             The provider for which the returned paths should be used.
+             </param>
+        <summary>
+             Resolves a drive or provider qualified absolute or relative path that may contain
+             wildcard characters into one or more provider-internal paths.
+             </summary>
+        <returns>
+             An array of provider-internal paths that resolved from the given path.
+             </returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+             If <paramref name="path" /> is null.
+             </exception>
+        <exception cref="T:System.Management.Automation.ProviderNotFoundException">
+             If the path is a provider-qualified path for a provider that is
+             not loaded into the system.
+             </exception>
+        <exception cref="T:System.Management.Automation.DriveNotFoundException">
+             If the <paramref name="path" /> refers to a drive that could not be found.
+             </exception>
+        <exception cref="T:System.Management.Automation.ProviderInvocationException">
+             If the provider associated with the <paramref name="path" /> threw an
+             exception when building its path.
+             </exception>
+        <exception cref="T:System.NotSupportedException">
+             If the provider that the <paramref name="path" /> represents is not a NavigationCmdletProvider
+             or ContainerCmdletProvider.
+             </exception>
+        <exception cref="T:System.InvalidOperationException">
+             If the <paramref name="path" /> starts with "~" and the home location is not set for
+             the provider.
+             </exception>
+        <exception cref="T:System.Management.Automation.ItemNotFoundException">
+             If <paramref name="path" /> does not contain wildcard characters and
+             could not be found.
+             </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetResolvedPSPathFromPSPath">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.Collection&lt;System.Management.Automation.PathInfo&gt; GetResolvedPSPathFromPSPath (string path);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Collections.ObjectModel.Collection`1&lt;class System.Management.Automation.PathInfo&gt; GetResolvedPSPathFromPSPath(string path) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.PathIntrinsics.GetResolvedPSPathFromPSPath(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetResolvedPSPathFromPSPath (path As String) As Collection(Of PathInfo)" />
+      <MemberSignature Language="F#" Value="member this.GetResolvedPSPathFromPSPath : string -&gt; System.Collections.ObjectModel.Collection&lt;System.Management.Automation.PathInfo&gt;" Usage="pathIntrinsics.GetResolvedPSPathFromPSPath path" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.Collection&lt;System.Management.Automation.PathInfo&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="path">
+             The drive or provider qualified path to be resolved. This path may contain wildcard
+             characters which will get resolved.
+             </param>
+        <summary>
+             Resolves a drive or provider qualified absolute or relative path that may contain
+             wildcard characters into one or more absolute drive or provider qualified paths.
+             </summary>
+        <returns>
+             An array of Msh paths that resolved from the given path.
+             </returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+             If <paramref name="path" /> is null.
+             </exception>
+        <exception cref="T:System.Management.Automation.ProviderNotFoundException">
+             If <paramref name="path" /> is a provider-qualified path
+             and the specified provider does not exist.
+             </exception>
+        <exception cref="T:System.Management.Automation.DriveNotFoundException">
+             If <paramref name="path" /> is a drive-qualified path and
+             the specified drive does not exist.
+             </exception>
+        <exception cref="T:System.Management.Automation.ProviderInvocationException">
+             If the provider throws an exception when its MakePath gets
+             called.
+             </exception>
+        <exception cref="T:System.NotSupportedException">
+             If the provider does not support multiple items.
+             </exception>
+        <exception cref="T:System.InvalidOperationException">
+             If the home location for the provider is not set and
+             <paramref name="path" /> starts with a "~".
+             </exception>
+        <exception cref="T:System.Management.Automation.ItemNotFoundException">
+             If <paramref name="path" /> does not contain wildcard characters and
+             could not be found.
+             </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetUnresolvedProviderPathFromPSPath">
+      <MemberSignature Language="C#" Value="public string GetUnresolvedProviderPathFromPSPath (string path);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance string GetUnresolvedProviderPathFromPSPath(string path) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.PathIntrinsics.GetUnresolvedProviderPathFromPSPath(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetUnresolvedProviderPathFromPSPath (path As String) As String" />
+      <MemberSignature Language="F#" Value="member this.GetUnresolvedProviderPathFromPSPath : string -&gt; string" Usage="pathIntrinsics.GetUnresolvedProviderPathFromPSPath path" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="path">
+             The drive or provider qualified path to be converted. This path may contain wildcard
+             characters which will not get resolved.
+             </param>
+        <summary>
+             Converts a drive or provider qualified absolute or relative path that may contain
+             wildcard characters into one a provider-internal path still containing the wildcard characters.
+             </summary>
+        <returns>
+             A provider-internal path that does not have the wildcard characters resolved.
+             </returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+             If <paramref name="path" /> is null.
+             </exception>
+        <exception cref="T:System.Management.Automation.ProviderNotFoundException">
+             If the path is a provider-qualified path for a provider that is
+             not loaded into the system.
+             </exception>
+        <exception cref="T:System.Management.Automation.DriveNotFoundException">
+             If the <paramref name="path" /> refers to a drive that could not be found.
+             </exception>
+        <exception cref="T:System.Management.Automation.ProviderInvocationException">
+             If the provider specified by <paramref name="path" /> threw an
+             exception.
+             </exception>
+        <exception cref="T:System.NotSupportedException">
+             If the provider that the <paramref name="path" /> represents is not a NavigationCmdletProvider
+             or ContainerCmdletProvider.
+             </exception>
+        <exception cref="T:System.InvalidOperationException">
+             If the <paramref name="path" /> starts with "~" and the home location is not set for
+             the provider.
+             </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetUnresolvedProviderPathFromPSPath">
+      <MemberSignature Language="C#" Value="public string GetUnresolvedProviderPathFromPSPath (string path, out System.Management.Automation.ProviderInfo provider, out System.Management.Automation.PSDriveInfo drive);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance string GetUnresolvedProviderPathFromPSPath(string path, [out] class System.Management.Automation.ProviderInfo&amp; provider, [out] class System.Management.Automation.PSDriveInfo&amp; drive) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.PathIntrinsics.GetUnresolvedProviderPathFromPSPath(System.String,System.Management.Automation.ProviderInfo@,System.Management.Automation.PSDriveInfo@)" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetUnresolvedProviderPathFromPSPath (path As String, ByRef provider As ProviderInfo, ByRef drive As PSDriveInfo) As String" />
+      <MemberSignature Language="F#" Value="member this.GetUnresolvedProviderPathFromPSPath : string *  *  -&gt; string" Usage="pathIntrinsics.GetUnresolvedProviderPathFromPSPath (path, provider, drive)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+        <Parameter Name="provider" Type="System.Management.Automation.ProviderInfo&amp;" RefType="out" />
+        <Parameter Name="drive" Type="System.Management.Automation.PSDriveInfo&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="path">
+             The drive or provider qualified path to be converted. This path may contain wildcard
+             characters which will not get resolved.
+             </param>
+        <param name="provider">
+             The information for the provider for which the returned path should be used.
+             </param>
+        <param name="drive">
+             The drive of the Msh path that was used to convert the path. Note, this may be null
+             if the <paramref name="path" /> was a provider-qualified path.
+             </param>
+        <summary>
+             Converts a drive or provider qualified absolute or relative path that may contain
+             wildcard characters into one a provider-internal path still containing the wildcard characters.
+             </summary>
+        <returns>
+             A provider-internal path that does not have the wildcard characters resolved.
+             </returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+             If <paramref name="path" /> or <paramref name="context" /> is null.
+             </exception>
+        <exception cref="T:System.Management.Automation.ProviderNotFoundException">
+             If the path is a provider-qualified path for a provider that is
+             not loaded into the system.
+             </exception>
+        <exception cref="T:System.Management.Automation.DriveNotFoundException">
+             If the <paramref name="path" /> refers to a drive that could not be found.
+             </exception>
+        <exception cref="T:System.Management.Automation.ProviderInvocationException">
+             If the provider specified by <paramref name="provider" /> threw an
+             exception when its GetParentPath or MakePath was called while
+             processing the <paramref name="path" />.
+             </exception>
+        <exception cref="T:System.NotSupportedException">
+             If the provider that the <paramref name="path" /> represents is not a NavigationCmdletProvider
+             or ContainerCmdletProvider.
+             </exception>
+        <exception cref="T:System.InvalidOperationException">
+             If the <paramref name="path" /> starts with "~" and the home location is not set for
+             the provider.
+             </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="IsProviderQualified">
+      <MemberSignature Language="C#" Value="public bool IsProviderQualified (string path);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool IsProviderQualified(string path) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.PathIntrinsics.IsProviderQualified(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Function IsProviderQualified (path As String) As Boolean" />
+      <MemberSignature Language="F#" Value="member this.IsProviderQualified : string -&gt; bool" Usage="pathIntrinsics.IsProviderQualified path" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="path">
+             The path to check.
+             </param>
+        <summary>
+             Determines if the give path is an Msh provider-qualified path.
+             </summary>
+        <returns>
+             True if the specified path is provider-qualified, false otherwise.
+             </returns>
+        <remarks>
+             A provider-qualified path is a path in the following form:
+             providerId::provider-internal-path
+             </remarks>
+        <exception cref="T:System.ArgumentNullException">
+             If <paramref name="path" /> is null.
+             </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="IsPSAbsolute">
+      <MemberSignature Language="C#" Value="public bool IsPSAbsolute (string path, out string driveName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool IsPSAbsolute(string path, [out] string&amp; driveName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.PathIntrinsics.IsPSAbsolute(System.String,System.String@)" />
+      <MemberSignature Language="VB.NET" Value="Public Function IsPSAbsolute (path As String, ByRef driveName As String) As Boolean" />
+      <MemberSignature Language="F#" Value="member this.IsPSAbsolute : string *  -&gt; bool" Usage="pathIntrinsics.IsPSAbsolute (path, driveName)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+        <Parameter Name="driveName" Type="System.String&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="path">
+             The path to check.
+             </param>
+        <param name="driveName">
+             If the path is an Msh absolute path then the returned value is
+             the name of the drive that the path is absolute to.
+             </param>
+        <summary>
+             Determines if the given path is a drive-qualified absolute path.
+             </summary>
+        <returns>
+             True if the specified path is an Msh absolute drive-qualified path.
+             False otherwise.
+             </returns>
+        <remarks>
+             A path is an absolute drive-qualified path if it has the following
+             form:
+             drive-name:drive-relative-path
+             </remarks>
+        <exception cref="T:System.ArgumentNullException">
+             If <paramref name="path" /> is null.
+             </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="IsValid">
+      <MemberSignature Language="C#" Value="public bool IsValid (string path);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool IsValid(string path) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.PathIntrinsics.IsValid(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Function IsValid (path As String) As Boolean" />
+      <MemberSignature Language="F#" Value="member this.IsValid : string -&gt; bool" Usage="pathIntrinsics.IsValid path" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="path">
+             The path to validate.
+             </param>
+        <summary>
+             Determines if the MSH path is a syntactically and semantically valid path for the provider.
+             </summary>
+        <returns>
+             true if the object specified by path is syntactically and semantically valid, false otherwise.
+             </returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+             If <paramref name="path" /> is null.
+             </exception>
+        <exception cref="T:System.Management.Automation.ProviderNotFoundException">
+             If the <paramref name="path" /> refers to a provider that could not be found.
+             </exception>
+        <exception cref="T:System.Management.Automation.DriveNotFoundException">
+             If the <paramref name="path" /> refers to a drive that could not be found.
+             </exception>
+        <exception cref="T:System.NotSupportedException">
+             If the provider that the <paramref name="path" /> refers to does
+             not support this operation.
+             </exception>
+        <exception cref="T:System.Management.Automation.ProviderInvocationException">
+             If the provider threw an exception.
+             </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="LocationStack">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.PathInfoStack LocationStack (string stackName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Management.Automation.PathInfoStack LocationStack(string stackName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.PathIntrinsics.LocationStack(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Function LocationStack (stackName As String) As PathInfoStack" />
+      <MemberSignature Language="F#" Value="member this.LocationStack : string -&gt; System.Management.Automation.PathInfoStack" Usage="pathIntrinsics.LocationStack stackName" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.PathInfoStack</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="stackName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="stackName">
+             The stack ID of the stack to get the stack info for.
+             </param>
+        <summary>
+             Gets the location stack and all the locations on it.
+             </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NormalizeRelativePath">
+      <MemberSignature Language="C#" Value="public string NormalizeRelativePath (string path, string basePath);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance string NormalizeRelativePath(string path, string basePath) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.PathIntrinsics.NormalizeRelativePath(System.String,System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Function NormalizeRelativePath (path As String, basePath As String) As String" />
+      <MemberSignature Language="F#" Value="member this.NormalizeRelativePath : string * string -&gt; string" Usage="pathIntrinsics.NormalizeRelativePath (path, basePath)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+        <Parameter Name="basePath" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="path">
+             An MSH path to an item. The item should exist
+             or the provider should write out an error.
+             </param>
+        <param name="basePath">
+             The path that the return value should be relative to.
+             </param>
+        <summary>
+             Normalizes the path that was passed in and returns the normalized path
+             as a relative path to the basePath that was passed.
+             </summary>
+        <returns>
+             A normalized path that is relative to the basePath that was passed.
+             </returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+             If <paramref name="path" /> is null.
+             </exception>
+        <exception cref="T:System.NotSupportedException">
+             If the <paramref name="providerInstance" /> does not support this operation.
+             </exception>
+        <exception cref="T:System.Management.Automation.PipelineStoppedException">
+             If the pipeline is being stopped while executing the command.
+             </exception>
+        <exception cref="T:System.Management.Automation.ProviderInvocationException">
+             If the provider threw an exception.
+             </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ParseChildName">
+      <MemberSignature Language="C#" Value="public string ParseChildName (string path);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance string ParseChildName(string path) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.PathIntrinsics.ParseChildName(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Function ParseChildName (path As String) As String" />
+      <MemberSignature Language="F#" Value="member this.ParseChildName : string -&gt; string" Usage="pathIntrinsics.ParseChildName path" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="path">
+             The path to get the child name from.
+             </param>
+        <summary>
+             Gets the child name of the specified path.
+             </summary>
+        <returns>
+             The last element of the path.
+             </returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+             If <paramref name="path" /> is null.
+             </exception>
+        <exception cref="T:System.Management.Automation.ProviderNotFoundException">
+             If the <paramref name="path" /> refers to a provider that could not be found.
+             </exception>
+        <exception cref="T:System.Management.Automation.DriveNotFoundException">
+             If the <paramref name="path" /> refers to a drive that could not be found.
+             </exception>
+        <exception cref="T:System.NotSupportedException">
+             If the provider that the <paramref name="path" /> refers to does
+             not support this operation.
+             </exception>
+        <exception cref="T:System.Management.Automation.ProviderInvocationException">
+             If the provider threw an exception.
+             </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ParseParent">
+      <MemberSignature Language="C#" Value="public string ParseParent (string path, string root);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance string ParseParent(string path, string root) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.PathIntrinsics.ParseParent(System.String,System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Function ParseParent (path As String, root As String) As String" />
+      <MemberSignature Language="F#" Value="member this.ParseParent : string * string -&gt; string" Usage="pathIntrinsics.ParseParent (path, root)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+        <Parameter Name="root" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="path">
+             The path to get the parent path from.
+             </param>
+        <param name="root">
+             If the root is specified the path returned will not be any higher than the root.
+             </param>
+        <summary>
+             Gets the parent path of the specified path.
+             </summary>
+        <returns>
+             The parent path of the specified path.
+             </returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+             If <paramref name="path" /> is null.
+             </exception>
+        <exception cref="T:System.NotSupportedException">
+             If the <paramref name="providerInstance" /> does not support this operation.
+             </exception>
+        <exception cref="T:System.Management.Automation.PipelineStoppedException">
+             If the pipeline is being stopped while executing the command.
+             </exception>
+        <exception cref="T:System.Management.Automation.ProviderInvocationException">
+             If the provider threw an exception.
+             </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="PopLocation">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.PathInfo PopLocation (string stackName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Management.Automation.PathInfo PopLocation(string stackName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.PathIntrinsics.PopLocation(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Function PopLocation (stackName As String) As PathInfo" />
+      <MemberSignature Language="F#" Value="member this.PopLocation : string -&gt; System.Management.Automation.PathInfo" Usage="pathIntrinsics.PopLocation stackName" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.PathInfo</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="stackName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="stackName">
+             The ID of the stack to pop the location from. If stackName is null or empty
+             the default stack is used.
+             </param>
+        <summary>
+             Gets the location off the top of the location stack.
+             </summary>
+        <returns>
+             The path information for the location that was on the top of the location stack.
+             </returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">
+             If the path on the stack does not exist, is not a container, or
+             resolved to multiple containers.
+             or
+             If <paramref name="stackName" /> contains wildcard characters and resolves
+             to multiple location stacks.
+             or
+             A stack was not found with the specified name.
+             </exception>
+        <exception cref="T:System.Management.Automation.ProviderNotFoundException">
+             If the path on the stack refers to a provider that does not exist.
+             </exception>
+        <exception cref="T:System.Management.Automation.DriveNotFoundException">
+             If the path on the stack refers to a drive that does not exist.
+             </exception>
+        <exception cref="T:System.Management.Automation.ProviderInvocationException">
+             If the provider associated with the path on the stack threw an
+             exception.
+             </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="PushCurrentLocation">
+      <MemberSignature Language="C#" Value="public void PushCurrentLocation (string stackName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void PushCurrentLocation(string stackName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.PathIntrinsics.PushCurrentLocation(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub PushCurrentLocation (stackName As String)" />
+      <MemberSignature Language="F#" Value="member this.PushCurrentLocation : string -&gt; unit" Usage="pathIntrinsics.PushCurrentLocation stackName" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="stackName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="stackName">
+             The ID of the stack to push the location onto.
+             </param>
+        <summary>
+             Pushes the current location onto the location stack so that it can be retrieved later.
+             </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetDefaultLocationStack">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.PathInfoStack SetDefaultLocationStack (string stackName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Management.Automation.PathInfoStack SetDefaultLocationStack(string stackName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.PathIntrinsics.SetDefaultLocationStack(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Function SetDefaultLocationStack (stackName As String) As PathInfoStack" />
+      <MemberSignature Language="F#" Value="member this.SetDefaultLocationStack : string -&gt; System.Management.Automation.PathInfoStack" Usage="pathIntrinsics.SetDefaultLocationStack stackName" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.PathInfoStack</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="stackName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="stackName">
+             The stack ID of the stack to use as the default location stack.
+             </param>
+        <summary>
+             Sets the default location stack to that specified by the stack ID.
+             </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.Management.Automation.ItemNotFoundException">
+             If <paramref name="stackName" /> does not exist as a location stack.
+             </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SetLocation">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.PathInfo SetLocation (string path);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Management.Automation.PathInfo SetLocation(string path) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.PathIntrinsics.SetLocation(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Function SetLocation (path As String) As PathInfo" />
+      <MemberSignature Language="F#" Value="member this.SetLocation : string -&gt; System.Management.Automation.PathInfo" Usage="pathIntrinsics.SetLocation path" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.PathInfo</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="path">
+             The path to change the location to. This can be either a drive-relative or provider-relative
+             path. It cannot be a provider-internal path.
+             </param>
+        <summary>
+             Changes the current location to the specified path.
+             </summary>
+        <returns>
+             The path of the new current location.
+             </returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+             If <paramref name="path" /> is null.
+             </exception>
+        <exception cref="T:System.ArgumentException">
+             If <paramref name="path" /> does not exist, is not a container, or
+             resolved to multiple containers.
+             </exception>
+        <exception cref="T:System.Management.Automation.ProviderNotFoundException">
+             If <paramref name="path" /> refers to a provider that does not exist.
+             </exception>
+        <exception cref="T:System.Management.Automation.DriveNotFoundException">
+             If <paramref name="path" /> refers to a drive that does not exist.
+             </exception>
+        <exception cref="T:System.Management.Automation.ProviderInvocationException">
+             If the provider associated with <paramref name="path" /> threw an
+             exception.
+             </exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

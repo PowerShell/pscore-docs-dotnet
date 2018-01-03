@@ -1,0 +1,197 @@
+﻿<Type Name="ParentContainsErrorRecordException" FullName="System.Management.Automation.ParentContainsErrorRecordException">
+  <TypeSignature Language="C#" Value="public class ParentContainsErrorRecordException : SystemException" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable beforefieldinit ParentContainsErrorRecordException extends System.SystemException" />
+  <TypeSignature Language="DocId" Value="T:System.Management.Automation.ParentContainsErrorRecordException" />
+  <TypeSignature Language="VB.NET" Value="Public Class ParentContainsErrorRecordException&#xA;Inherits SystemException" />
+  <TypeSignature Language="F#" Value="type ParentContainsErrorRecordException = class&#xA;    inherit SystemException" />
+  <AssemblyInfo>
+    <AssemblyName>System.Management.Automation</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.SystemException</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            ParentContainsErrorRecordException is the exception contained by the ErrorRecord
+            which is associated with a Monad engine custom exception through
+            the IContainsErrorRecord interface.
+            </summary>
+    <remarks>
+            We use this exception class
+            so that there is not a recursive "containment" relationship
+            between the Monad engine exception and its ErrorRecord.
+            </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ParentContainsErrorRecordException ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.ParentContainsErrorRecordException.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New ()" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>
+            Instantiates a new instance of the ParentContainsErrorRecordException class
+            </summary>
+        <returns> constructed object </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ParentContainsErrorRecordException (Exception wrapperException);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Exception wrapperException) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.ParentContainsErrorRecordException.#ctor(System.Exception)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (wrapperException As Exception)" />
+      <MemberSignature Language="F#" Value="new System.Management.Automation.ParentContainsErrorRecordException : Exception -&gt; System.Management.Automation.ParentContainsErrorRecordException" Usage="new System.Management.Automation.ParentContainsErrorRecordException wrapperException" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="wrapperException" Type="System.Exception" />
+      </Parameters>
+      <Docs>
+        <param name="wrapperException">To be added.</param>
+        <summary>
+            Instantiates a new instance of the ParentContainsErrorRecordException class.
+            Note that this sets the Message and not the InnerException.
+            </summary>
+        <returns> constructed object </returns>
+        <remarks>
+            I leave this non-standard constructor form public.
+            </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ParentContainsErrorRecordException (string message);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string message) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.ParentContainsErrorRecordException.#ctor(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (message As String)" />
+      <MemberSignature Language="F#" Value="new System.Management.Automation.ParentContainsErrorRecordException : string -&gt; System.Management.Automation.ParentContainsErrorRecordException" Usage="new System.Management.Automation.ParentContainsErrorRecordException message" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="message"></param>
+        <summary>
+            Instantiates a new instance of the ParentContainsErrorRecordException class
+            </summary>
+        <returns> constructed object </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected ParentContainsErrorRecordException (System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(class System.Runtime.Serialization.SerializationInfo info, valuetype System.Runtime.Serialization.StreamingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.ParentContainsErrorRecordException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" />
+      <MemberSignature Language="VB.NET" Value="Protected Sub New (info As SerializationInfo, context As StreamingContext)" />
+      <MemberSignature Language="F#" Value="new System.Management.Automation.ParentContainsErrorRecordException : System.Runtime.Serialization.SerializationInfo * System.Runtime.Serialization.StreamingContext -&gt; System.Management.Automation.ParentContainsErrorRecordException" Usage="new System.Management.Automation.ParentContainsErrorRecordException (info, context)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="info" Type="System.Runtime.Serialization.SerializationInfo" />
+        <Parameter Name="context" Type="System.Runtime.Serialization.StreamingContext" />
+      </Parameters>
+      <Docs>
+        <param name="info"> serialization information </param>
+        <param name="context"> streaming context </param>
+        <summary>
+            Initializes a new instance of the ParentContainsErrorRecordException class
+            using data serialized via
+            <see cref="T:System.Runtime.Serialization.ISerializable" /></summary>
+        <returns> doesn't return </returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NotImplementedException">always</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ParentContainsErrorRecordException (string message, Exception innerException);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string message, class System.Exception innerException) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.ParentContainsErrorRecordException.#ctor(System.String,System.Exception)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (message As String, innerException As Exception)" />
+      <MemberSignature Language="F#" Value="new System.Management.Automation.ParentContainsErrorRecordException : string * Exception -&gt; System.Management.Automation.ParentContainsErrorRecordException" Usage="new System.Management.Automation.ParentContainsErrorRecordException (message, innerException)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+        <Parameter Name="innerException" Type="System.Exception" />
+      </Parameters>
+      <Docs>
+        <param name="message"></param>
+        <param name="innerException"></param>
+        <summary>
+            Instantiates a new instance of the ParentContainsErrorRecordException class
+            </summary>
+        <returns> constructed object </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetObjectData">
+      <MemberSignature Language="C#" Value="public override void GetObjectData (System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void GetObjectData(class System.Runtime.Serialization.SerializationInfo info, valuetype System.Runtime.Serialization.StreamingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.ParentContainsErrorRecordException.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Sub GetObjectData (info As SerializationInfo, context As StreamingContext)" />
+      <MemberSignature Language="F#" Value="abstract member GetObjectData : System.Runtime.Serialization.SerializationInfo * System.Runtime.Serialization.StreamingContext -&gt; unit&#xA;override this.GetObjectData : System.Runtime.Serialization.SerializationInfo * System.Runtime.Serialization.StreamingContext -&gt; unit" Usage="parentContainsErrorRecordException.GetObjectData (info, context)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="info" Type="System.Runtime.Serialization.SerializationInfo" />
+        <Parameter Name="context" Type="System.Runtime.Serialization.StreamingContext" />
+      </Parameters>
+      <Docs>
+        <param name="info">serialization information</param>
+        <param name="context">context</param>
+        <summary>
+            Serializer for <see cref="T:System.Runtime.Serialization.ISerializable" /></summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Message">
+      <MemberSignature Language="C#" Value="public override string Message { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Message" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.ParentContainsErrorRecordException.Message" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides ReadOnly Property Message As String" />
+      <MemberSignature Language="F#" Value="member this.Message : string" Usage="System.Management.Automation.ParentContainsErrorRecordException.Message" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the message for the exception
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

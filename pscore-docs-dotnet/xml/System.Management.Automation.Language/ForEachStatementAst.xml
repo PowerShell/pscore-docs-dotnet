@@ -1,0 +1,188 @@
+﻿<Type Name="ForEachStatementAst" FullName="System.Management.Automation.Language.ForEachStatementAst">
+  <TypeSignature Language="C#" Value="public class ForEachStatementAst : System.Management.Automation.Language.LoopStatementAst" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ForEachStatementAst extends System.Management.Automation.Language.LoopStatementAst" />
+  <TypeSignature Language="DocId" Value="T:System.Management.Automation.Language.ForEachStatementAst" />
+  <TypeSignature Language="VB.NET" Value="Public Class ForEachStatementAst&#xA;Inherits LoopStatementAst" />
+  <TypeSignature Language="F#" Value="type ForEachStatementAst = class&#xA;    inherit LoopStatementAst" />
+  <AssemblyInfo>
+    <AssemblyName>System.Management.Automation</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Management.Automation.Language.LoopStatementAst</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            The ast representing the foreach statement.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ForEachStatementAst (System.Management.Automation.Language.IScriptExtent extent, string label, System.Management.Automation.Language.ForEachFlags flags, System.Management.Automation.Language.VariableExpressionAst variable, System.Management.Automation.Language.PipelineBaseAst expression, System.Management.Automation.Language.StatementBlockAst body);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Management.Automation.Language.IScriptExtent extent, string label, valuetype System.Management.Automation.Language.ForEachFlags flags, class System.Management.Automation.Language.VariableExpressionAst variable, class System.Management.Automation.Language.PipelineBaseAst expression, class System.Management.Automation.Language.StatementBlockAst body) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Language.ForEachStatementAst.#ctor(System.Management.Automation.Language.IScriptExtent,System.String,System.Management.Automation.Language.ForEachFlags,System.Management.Automation.Language.VariableExpressionAst,System.Management.Automation.Language.PipelineBaseAst,System.Management.Automation.Language.StatementBlockAst)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (extent As IScriptExtent, label As String, flags As ForEachFlags, variable As VariableExpressionAst, expression As PipelineBaseAst, body As StatementBlockAst)" />
+      <MemberSignature Language="F#" Value="new System.Management.Automation.Language.ForEachStatementAst : System.Management.Automation.Language.IScriptExtent * string * System.Management.Automation.Language.ForEachFlags * System.Management.Automation.Language.VariableExpressionAst * System.Management.Automation.Language.PipelineBaseAst * System.Management.Automation.Language.StatementBlockAst -&gt; System.Management.Automation.Language.ForEachStatementAst" Usage="new System.Management.Automation.Language.ForEachStatementAst (extent, label, flags, variable, expression, body)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="extent" Type="System.Management.Automation.Language.IScriptExtent" />
+        <Parameter Name="label" Type="System.String" />
+        <Parameter Name="flags" Type="System.Management.Automation.Language.ForEachFlags" />
+        <Parameter Name="variable" Type="System.Management.Automation.Language.VariableExpressionAst" />
+        <Parameter Name="expression" Type="System.Management.Automation.Language.PipelineBaseAst" />
+        <Parameter Name="body" Type="System.Management.Automation.Language.StatementBlockAst" />
+      </Parameters>
+      <Docs>
+        <param name="extent">
+            The extent of the statement, starting from the optional label or the foreach keyword and ending at the closing curly brace.
+            </param>
+        <param name="label">The optionally null label.</param>
+        <param name="flags">Any flags that affect how the foreach statement is processed.</param>
+        <param name="variable">The variable set on each iteration of the loop.</param>
+        <param name="expression">The pipeline generating values to iterate through.</param>
+        <param name="body">The body to execute for each element written from pipeline.</param>
+        <summary>
+            Construct a foreach statement.
+            </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.Management.Automation.PSArgumentNullException">
+            If <paramref name="extent" />, <paramref name="expression" />, or <paramref name="variable" /> is null.
+            </exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ForEachStatementAst (System.Management.Automation.Language.IScriptExtent extent, string label, System.Management.Automation.Language.ForEachFlags flags, System.Management.Automation.Language.ExpressionAst throttleLimit, System.Management.Automation.Language.VariableExpressionAst variable, System.Management.Automation.Language.PipelineBaseAst expression, System.Management.Automation.Language.StatementBlockAst body);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Management.Automation.Language.IScriptExtent extent, string label, valuetype System.Management.Automation.Language.ForEachFlags flags, class System.Management.Automation.Language.ExpressionAst throttleLimit, class System.Management.Automation.Language.VariableExpressionAst variable, class System.Management.Automation.Language.PipelineBaseAst expression, class System.Management.Automation.Language.StatementBlockAst body) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Language.ForEachStatementAst.#ctor(System.Management.Automation.Language.IScriptExtent,System.String,System.Management.Automation.Language.ForEachFlags,System.Management.Automation.Language.ExpressionAst,System.Management.Automation.Language.VariableExpressionAst,System.Management.Automation.Language.PipelineBaseAst,System.Management.Automation.Language.StatementBlockAst)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (extent As IScriptExtent, label As String, flags As ForEachFlags, throttleLimit As ExpressionAst, variable As VariableExpressionAst, expression As PipelineBaseAst, body As StatementBlockAst)" />
+      <MemberSignature Language="F#" Value="new System.Management.Automation.Language.ForEachStatementAst : System.Management.Automation.Language.IScriptExtent * string * System.Management.Automation.Language.ForEachFlags * System.Management.Automation.Language.ExpressionAst * System.Management.Automation.Language.VariableExpressionAst * System.Management.Automation.Language.PipelineBaseAst * System.Management.Automation.Language.StatementBlockAst -&gt; System.Management.Automation.Language.ForEachStatementAst" Usage="new System.Management.Automation.Language.ForEachStatementAst (extent, label, flags, throttleLimit, variable, expression, body)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="extent" Type="System.Management.Automation.Language.IScriptExtent" />
+        <Parameter Name="label" Type="System.String" />
+        <Parameter Name="flags" Type="System.Management.Automation.Language.ForEachFlags" />
+        <Parameter Name="throttleLimit" Type="System.Management.Automation.Language.ExpressionAst" />
+        <Parameter Name="variable" Type="System.Management.Automation.Language.VariableExpressionAst" />
+        <Parameter Name="expression" Type="System.Management.Automation.Language.PipelineBaseAst" />
+        <Parameter Name="body" Type="System.Management.Automation.Language.StatementBlockAst" />
+      </Parameters>
+      <Docs>
+        <param name="extent">
+            The extent of the statement, starting from the optional label or the foreach keyword and ending at the closing curly brace.
+            </param>
+        <param name="label">The optionally null label.</param>
+        <param name="flags">Any flags that affect how the foreach statement is processed.</param>
+        <param name="throttleLimit">The limit to be obeyed during parallel processing, if any.</param>
+        <param name="variable">The variable set on each iteration of the loop.</param>
+        <param name="expression">The pipeline generating values to iterate through.</param>
+        <param name="body">The body to execute for each element written from pipeline.</param>
+        <summary>
+            Construct a foreach statement.
+            </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.Management.Automation.PSArgumentNullException">
+            If <paramref name="extent" />, <paramref name="expression" />, or <paramref name="variable" /> is null.
+            </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Copy">
+      <MemberSignature Language="C#" Value="public override System.Management.Automation.Language.Ast Copy ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Management.Automation.Language.Ast Copy() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Language.ForEachStatementAst.Copy" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Function Copy () As Ast" />
+      <MemberSignature Language="F#" Value="override this.Copy : unit -&gt; System.Management.Automation.Language.Ast" Usage="forEachStatementAst.Copy " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.Language.Ast</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Copy the ForEachStatementAst instance
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Flags">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.Language.ForEachFlags Flags { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Management.Automation.Language.ForEachFlags Flags" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.Language.ForEachStatementAst.Flags" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Flags As ForEachFlags" />
+      <MemberSignature Language="F#" Value="member this.Flags : System.Management.Automation.Language.ForEachFlags" Usage="System.Management.Automation.Language.ForEachStatementAst.Flags" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.Language.ForEachFlags</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The flags, if any specified on the foreach statement.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ThrottleLimit">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.Language.ExpressionAst ThrottleLimit { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Management.Automation.Language.ExpressionAst ThrottleLimit" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.Language.ForEachStatementAst.ThrottleLimit" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ThrottleLimit As ExpressionAst" />
+      <MemberSignature Language="F#" Value="member this.ThrottleLimit : System.Management.Automation.Language.ExpressionAst" Usage="System.Management.Automation.Language.ForEachStatementAst.ThrottleLimit" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.Language.ExpressionAst</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The limit to be obeyed during parallel processing, if any.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Variable">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.Language.VariableExpressionAst Variable { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Management.Automation.Language.VariableExpressionAst Variable" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.Language.ForEachStatementAst.Variable" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Variable As VariableExpressionAst" />
+      <MemberSignature Language="F#" Value="member this.Variable : System.Management.Automation.Language.VariableExpressionAst" Usage="System.Management.Automation.Language.ForEachStatementAst.Variable" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.Language.VariableExpressionAst</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The name of the variable set for each item as the loop iterates.  This property is never null.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

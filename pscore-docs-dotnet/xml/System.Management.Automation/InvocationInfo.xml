@@ -1,0 +1,434 @@
+﻿<Type Name="InvocationInfo" FullName="System.Management.Automation.InvocationInfo">
+  <TypeSignature Language="C#" Value="public class InvocationInfo" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit InvocationInfo extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Management.Automation.InvocationInfo" />
+  <TypeSignature Language="VB.NET" Value="Public Class InvocationInfo" />
+  <TypeSignature Language="F#" Value="type InvocationInfo = class" />
+  <AssemblyInfo>
+    <AssemblyName>System.Management.Automation</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Diagnostics.DebuggerDisplay("Command = {MyCommand}")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>
+            Describes how and where this command was invoked
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="BoundParameters">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.Dictionary&lt;string,object&gt; BoundParameters { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.Dictionary`2&lt;string, object&gt; BoundParameters" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.InvocationInfo.BoundParameters" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property BoundParameters As Dictionary(Of String, Object)" />
+      <MemberSignature Language="F#" Value="member this.BoundParameters : System.Collections.Generic.Dictionary&lt;string, obj&gt;" Usage="System.Management.Automation.InvocationInfo.BoundParameters" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.Dictionary&lt;System.String,System.Object&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            This member provides a dictionary of the parameters that were bound for this
+            script or command.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CommandOrigin">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.CommandOrigin CommandOrigin { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Management.Automation.CommandOrigin CommandOrigin" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.InvocationInfo.CommandOrigin" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property CommandOrigin As CommandOrigin" />
+      <MemberSignature Language="F#" Value="member this.CommandOrigin : System.Management.Automation.CommandOrigin" Usage="System.Management.Automation.InvocationInfo.CommandOrigin" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.CommandOrigin</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            This property tells you if you were being invoked inside the runspace or
+            if it was an external request.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Create">
+      <MemberSignature Language="C#" Value="public static System.Management.Automation.InvocationInfo Create (System.Management.Automation.CommandInfo commandInfo, System.Management.Automation.Language.IScriptExtent scriptPosition);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Management.Automation.InvocationInfo Create(class System.Management.Automation.CommandInfo commandInfo, class System.Management.Automation.Language.IScriptExtent scriptPosition) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.InvocationInfo.Create(System.Management.Automation.CommandInfo,System.Management.Automation.Language.IScriptExtent)" />
+      <MemberSignature Language="F#" Value="static member Create : System.Management.Automation.CommandInfo * System.Management.Automation.Language.IScriptExtent -&gt; System.Management.Automation.InvocationInfo" Usage="System.Management.Automation.InvocationInfo.Create (commandInfo, scriptPosition)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.InvocationInfo</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="commandInfo" Type="System.Management.Automation.CommandInfo" />
+        <Parameter Name="scriptPosition" Type="System.Management.Automation.Language.IScriptExtent" />
+      </Parameters>
+      <Docs>
+        <param name="commandInfo"></param>
+        <param name="scriptPosition"></param>
+        <summary>
+            Create
+            </summary>
+        <returns />
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DisplayScriptPosition">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.Language.IScriptExtent DisplayScriptPosition { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Management.Automation.Language.IScriptExtent DisplayScriptPosition" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.InvocationInfo.DisplayScriptPosition" />
+      <MemberSignature Language="VB.NET" Value="Public Property DisplayScriptPosition As IScriptExtent" />
+      <MemberSignature Language="F#" Value="member this.DisplayScriptPosition : System.Management.Automation.Language.IScriptExtent with get, set" Usage="System.Management.Automation.InvocationInfo.DisplayScriptPosition" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.Language.IScriptExtent</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The position for the invocation or error.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ExpectingInput">
+      <MemberSignature Language="C#" Value="public bool ExpectingInput { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ExpectingInput" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.InvocationInfo.ExpectingInput" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ExpectingInput As Boolean" />
+      <MemberSignature Language="F#" Value="member this.ExpectingInput : bool" Usage="System.Management.Automation.InvocationInfo.ExpectingInput" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Is true if this command is expecting input...
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HistoryId">
+      <MemberSignature Language="C#" Value="public long HistoryId { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int64 HistoryId" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.InvocationInfo.HistoryId" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property HistoryId As Long" />
+      <MemberSignature Language="F#" Value="member this.HistoryId : int64" Usage="System.Management.Automation.InvocationInfo.HistoryId" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            History ID that represents the command. If unavailable, this will be -1.
+            </summary>
+        <value>The history ID or -1 if not available.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InvocationName">
+      <MemberSignature Language="C#" Value="public string InvocationName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string InvocationName" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.InvocationInfo.InvocationName" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property InvocationName As String" />
+      <MemberSignature Language="F#" Value="member this.InvocationName : string" Usage="System.Management.Automation.InvocationInfo.InvocationName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Command name used to invoke this string - if invoked through an alias, then
+            this would be the alias name.
+            </summary>
+        <value>The name string.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Line">
+      <MemberSignature Language="C#" Value="public string Line { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Line" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.InvocationInfo.Line" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Line As String" />
+      <MemberSignature Language="F#" Value="member this.Line : string" Usage="System.Management.Automation.InvocationInfo.Line" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The text of the line that contained this cmdlet invocation.
+            </summary>
+        <value>Line that was entered to invoke this command</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MyCommand">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.CommandInfo MyCommand { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Management.Automation.CommandInfo MyCommand" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.InvocationInfo.MyCommand" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property MyCommand As CommandInfo" />
+      <MemberSignature Language="F#" Value="member this.MyCommand : System.Management.Automation.CommandInfo" Usage="System.Management.Automation.InvocationInfo.MyCommand" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.CommandInfo</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Provide basic information about the command
+            </summary>
+        <value>may be null</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OffsetInLine">
+      <MemberSignature Language="C#" Value="public int OffsetInLine { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 OffsetInLine" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.InvocationInfo.OffsetInLine" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property OffsetInLine As Integer" />
+      <MemberSignature Language="F#" Value="member this.OffsetInLine : int" Usage="System.Management.Automation.InvocationInfo.OffsetInLine" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Command's character offset in that line. If the command was
+            executed directly through the host interfaces, this will be -1.
+            </summary>
+        <value>The line offset or -1 if not executed from a text line.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PipelineLength">
+      <MemberSignature Language="C#" Value="public int PipelineLength { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 PipelineLength" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.InvocationInfo.PipelineLength" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property PipelineLength As Integer" />
+      <MemberSignature Language="F#" Value="member this.PipelineLength : int" Usage="System.Management.Automation.InvocationInfo.PipelineLength" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            How many elements are in the containing pipeline
+            </summary>
+        <value>number of elements in the containing pipeline</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PipelinePosition">
+      <MemberSignature Language="C#" Value="public int PipelinePosition { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 PipelinePosition" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.InvocationInfo.PipelinePosition" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property PipelinePosition As Integer" />
+      <MemberSignature Language="F#" Value="member this.PipelinePosition : int" Usage="System.Management.Automation.InvocationInfo.PipelinePosition" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            which element this command was in the containing pipeline
+            </summary>
+        <value>which element this command was in the containing pipeline</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PositionMessage">
+      <MemberSignature Language="C#" Value="public string PositionMessage { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string PositionMessage" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.InvocationInfo.PositionMessage" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property PositionMessage As String" />
+      <MemberSignature Language="F#" Value="member this.PositionMessage : string" Usage="System.Management.Automation.InvocationInfo.PositionMessage" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Formatted message indicating where the cmdlet appeared
+            in the line
+            </summary>
+        <value>Formatted string indicating the command's position in the line</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PSCommandPath">
+      <MemberSignature Language="C#" Value="public string PSCommandPath { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string PSCommandPath" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.InvocationInfo.PSCommandPath" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property PSCommandPath As String" />
+      <MemberSignature Language="F#" Value="member this.PSCommandPath : string" Usage="System.Management.Automation.InvocationInfo.PSCommandPath" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            This property tells you the full path to the command from where you were being invoked
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PSScriptRoot">
+      <MemberSignature Language="C#" Value="public string PSScriptRoot { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string PSScriptRoot" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.InvocationInfo.PSScriptRoot" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property PSScriptRoot As String" />
+      <MemberSignature Language="F#" Value="member this.PSScriptRoot : string" Usage="System.Management.Automation.InvocationInfo.PSScriptRoot" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            This property tells you the directory from where you were being invoked
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ScriptLineNumber">
+      <MemberSignature Language="C#" Value="public int ScriptLineNumber { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 ScriptLineNumber" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.InvocationInfo.ScriptLineNumber" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ScriptLineNumber As Integer" />
+      <MemberSignature Language="F#" Value="member this.ScriptLineNumber : int" Usage="System.Management.Automation.InvocationInfo.ScriptLineNumber" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+             The line number in the executing script that contained this cmdlet.
+            </summary>
+        <value>The script line number or -1 if not executing in a script.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ScriptName">
+      <MemberSignature Language="C#" Value="public string ScriptName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ScriptName" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.InvocationInfo.ScriptName" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ScriptName As String" />
+      <MemberSignature Language="F#" Value="member this.ScriptName : string" Usage="System.Management.Automation.InvocationInfo.ScriptName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The name of the script containing the cmdlet.
+            </summary>
+        <value>The script name or "" if there was no script.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UnboundArguments">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.List&lt;object&gt; UnboundArguments { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.List`1&lt;object&gt; UnboundArguments" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.InvocationInfo.UnboundArguments" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property UnboundArguments As List(Of Object)" />
+      <MemberSignature Language="F#" Value="member this.UnboundArguments : System.Collections.Generic.List&lt;obj&gt;" Usage="System.Management.Automation.InvocationInfo.UnboundArguments" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.List&lt;System.Object&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            This member provides a list of the arguments that were not bound to any parameter
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

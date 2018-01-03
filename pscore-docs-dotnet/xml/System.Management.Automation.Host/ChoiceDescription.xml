@@ -1,0 +1,165 @@
+﻿<Type Name="ChoiceDescription" FullName="System.Management.Automation.Host.ChoiceDescription">
+  <TypeSignature Language="C#" Value="public sealed class ChoiceDescription" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit ChoiceDescription extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Management.Automation.Host.ChoiceDescription" />
+  <TypeSignature Language="VB.NET" Value="Public NotInheritable Class ChoiceDescription" />
+  <TypeSignature Language="F#" Value="type ChoiceDescription = class" />
+  <AssemblyInfo>
+    <AssemblyName>System.Management.Automation</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            
+             Provides a description of a choice for use by <seealso cref="M:System.Management.Automation.Host.PSHostUserInterface.PromptForChoice(System.String,System.String,System.Collections.ObjectModel.Collection{System.Management.Automation.Host.ChoiceDescription},System.Int32)" />.
+             <!--Used by the Msh engine to describe cmdlet parameters.--></summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ChoiceDescription (string label);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string label) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Host.ChoiceDescription.#ctor(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (label As String)" />
+      <MemberSignature Language="F#" Value="new System.Management.Automation.Host.ChoiceDescription : string -&gt; System.Management.Automation.Host.ChoiceDescription" Usage="new System.Management.Automation.Host.ChoiceDescription label" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="label" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="label">
+            
+             The label to identify this field description
+            
+             </param>
+        <summary>
+            
+             Initializes an new instance of ChoiceDescription and defines the Label value.
+            
+             </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.Management.Automation.PSArgumentException">
+          <paramref name="label" /> is null or empty.
+            
+             </exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ChoiceDescription (string label, string helpMessage);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string label, string helpMessage) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Host.ChoiceDescription.#ctor(System.String,System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (label As String, helpMessage As String)" />
+      <MemberSignature Language="F#" Value="new System.Management.Automation.Host.ChoiceDescription : string * string -&gt; System.Management.Automation.Host.ChoiceDescription" Usage="new System.Management.Automation.Host.ChoiceDescription (label, helpMessage)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="label" Type="System.String" />
+        <Parameter Name="helpMessage" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="label">
+            
+             The label to identify this field description.
+            
+             </param>
+        <param name="helpMessage">
+            
+             The help message for this field.
+            
+             </param>
+        <summary>
+            
+             Initializes an new instance of ChoiceDescription and defines the Label and HelpMessage values.
+            
+             </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.Management.Automation.PSArgumentException">
+          <paramref name="label" /> is null or empty.
+            
+             </exception>
+        <exception cref="T:System.Management.Automation.PSArgumentNullException">
+          <paramref name="helpMessage" /> is null.
+            
+             </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="HelpMessage">
+      <MemberSignature Language="C#" Value="public string HelpMessage { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string HelpMessage" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.Host.ChoiceDescription.HelpMessage" />
+      <MemberSignature Language="VB.NET" Value="Public Property HelpMessage As String" />
+      <MemberSignature Language="F#" Value="member this.HelpMessage : string with get, set" Usage="System.Management.Automation.Host.ChoiceDescription.HelpMessage" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            
+             Gets and sets the help message for this field.
+            
+             </summary>
+        <value>To be added.</value>
+        <remarks>
+            
+             This should be a few sentences to describe the field, suitable for presentation as a tool tip.
+             Avoid placing including formatting characters such as newline and tab.
+            
+             </remarks>
+        <exception cref="T:System.Management.Automation.PSArgumentNullException">
+            
+             Set to null.
+            
+             </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Label">
+      <MemberSignature Language="C#" Value="public string Label { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Label" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.Host.ChoiceDescription.Label" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Label As String" />
+      <MemberSignature Language="F#" Value="member this.Label : string" Usage="System.Management.Automation.Host.ChoiceDescription.Label" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            
+             Gets a short, human-presentable message to describe and identify the choice.  Think Button label.
+            
+             </summary>
+        <value>To be added.</value>
+        <remarks>
+            
+             Note that the special character &amp; (ampersand) may be embedded in the label string to identify the next character in the label
+             as a "hot key" (aka "keyboard accelerator") that the Console.PromptForChoice implementation may use to allow the user to
+             quickly set input focus to this choice.  The implementation of <seealso cref="M:System.Management.Automation.Host.PSHostUserInterface.PromptForChoice(System.String,System.String,System.Collections.ObjectModel.Collection{System.Management.Automation.Host.ChoiceDescription},System.Int32)" />
+             is responsible for parsing the label string for this special character and rendering it accordingly.
+            
+             For examples, a choice named "Yes to All" might have "Yes to &amp;All" as it's label.
+            
+             </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

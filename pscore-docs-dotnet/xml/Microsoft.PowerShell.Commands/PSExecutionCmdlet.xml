@@ -1,0 +1,839 @@
+﻿<Type Name="PSExecutionCmdlet" FullName="Microsoft.PowerShell.Commands.PSExecutionCmdlet">
+  <TypeSignature Language="C#" Value="public abstract class PSExecutionCmdlet : Microsoft.PowerShell.Commands.PSRemotingBaseCmdlet" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit PSExecutionCmdlet extends Microsoft.PowerShell.Commands.PSRemotingBaseCmdlet" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.PowerShell.Commands.PSExecutionCmdlet" />
+  <TypeSignature Language="VB.NET" Value="Public MustInherit Class PSExecutionCmdlet&#xA;Inherits PSRemotingBaseCmdlet" />
+  <TypeSignature Language="F#" Value="type PSExecutionCmdlet = class&#xA;    inherit PSRemotingBaseCmdlet" />
+  <AssemblyInfo>
+    <AssemblyName>System.Management.Automation</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Microsoft.PowerShell.Commands.PSRemotingBaseCmdlet</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Base class for any cmdlet which has to execute a pipeline. The
+            following cmdlets currently fall under this category:
+                1. Invoke-Expression
+                2. Start-PSJob
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected PSExecutionCmdlet ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Commands.PSExecutionCmdlet.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Protected Sub New ()" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ArgumentList">
+      <MemberSignature Language="C#" Value="public virtual object[] ArgumentList { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object[] ArgumentList" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.PSExecutionCmdlet.ArgumentList" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Property ArgumentList As Object()" />
+      <MemberSignature Language="F#" Value="member this.ArgumentList : obj[] with get, set" Usage="Microsoft.PowerShell.Commands.PSExecutionCmdlet.ArgumentList" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Alias(Mono.Cecil.CustomAttributeArgument[])</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Object[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Arguments that are passed to this scriptblock
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginProcessing">
+      <MemberSignature Language="C#" Value="protected override void BeginProcessing ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void BeginProcessing() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Commands.PSExecutionCmdlet.BeginProcessing" />
+      <MemberSignature Language="VB.NET" Value="Protected Overrides Sub BeginProcessing ()" />
+      <MemberSignature Language="F#" Value="override this.BeginProcessing : unit -&gt; unit" Usage="pSExecutionCmdlet.BeginProcessing " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Creates the helper classes for the specified
+            parameter set
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CloseAllInputStreams">
+      <MemberSignature Language="C#" Value="protected void CloseAllInputStreams ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void CloseAllInputStreams() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Commands.PSExecutionCmdlet.CloseAllInputStreams" />
+      <MemberSignature Language="VB.NET" Value="Protected Sub CloseAllInputStreams ()" />
+      <MemberSignature Language="F#" Value="member this.CloseAllInputStreams : unit -&gt; unit" Usage="pSExecutionCmdlet.CloseAllInputStreams " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Closes the input streams on all the pipelines
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ConfigurationName">
+      <MemberSignature Language="C#" Value="public virtual string ConfigurationName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ConfigurationName" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.PSExecutionCmdlet.ConfigurationName" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Property ConfigurationName As String" />
+      <MemberSignature Language="F#" Value="member this.ConfigurationName : string with get, set" Usage="Microsoft.PowerShell.Commands.PSExecutionCmdlet.ConfigurationName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="ComputerName", ValueFromPipelineByPropertyName=true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="Uri", ValueFromPipelineByPropertyName=true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="FilePathComputerName", ValueFromPipelineByPropertyName=true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="FilePathUri", ValueFromPipelineByPropertyName=true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="ContainerId", ValueFromPipelineByPropertyName=true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="VMId", ValueFromPipelineByPropertyName=true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="VMName", ValueFromPipelineByPropertyName=true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="FilePathContainerId", ValueFromPipelineByPropertyName=true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="FilePathVMId", ValueFromPipelineByPropertyName=true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="FilePathVMName", ValueFromPipelineByPropertyName=true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+             For WSMan session:
+             If this parameter is not specified then the value specified in
+             the environment variable DEFAULTREMOTESHELLNAME will be used. If
+             this is not set as well, then Microsoft.PowerShell is used.
+            
+             For VM/Container sessions:
+             If this parameter is not specified then no configuration is used.
+             </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContainerId">
+      <MemberSignature Language="C#" Value="public override string[] ContainerId { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string[] ContainerId" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.PSExecutionCmdlet.ContainerId" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Property ContainerId As String()" />
+      <MemberSignature Language="F#" Value="member this.ContainerId : string[] with get, set" Usage="Microsoft.PowerShell.Commands.PSExecutionCmdlet.ContainerId" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(Mandatory=true, ParameterSetName="ContainerId", ValueFromPipelineByPropertyName=true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(Mandatory=true, ParameterSetName="FilePathContainerId", ValueFromPipelineByPropertyName=true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.ValidateNotNullOrEmpty</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            ID of target container.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateHelpersForSpecifiedComputerNames">
+      <MemberSignature Language="C#" Value="protected virtual void CreateHelpersForSpecifiedComputerNames ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void CreateHelpersForSpecifiedComputerNames() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Commands.PSExecutionCmdlet.CreateHelpersForSpecifiedComputerNames" />
+      <MemberSignature Language="VB.NET" Value="Protected Overridable Sub CreateHelpersForSpecifiedComputerNames ()" />
+      <MemberSignature Language="F#" Value="abstract member CreateHelpersForSpecifiedComputerNames : unit -&gt; unit&#xA;override this.CreateHelpersForSpecifiedComputerNames : unit -&gt; unit" Usage="pSExecutionCmdlet.CreateHelpersForSpecifiedComputerNames " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Creates helper objects with the command for the specified
+            remote computer names
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateHelpersForSpecifiedContainerSession">
+      <MemberSignature Language="C#" Value="protected virtual void CreateHelpersForSpecifiedContainerSession ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void CreateHelpersForSpecifiedContainerSession() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Commands.PSExecutionCmdlet.CreateHelpersForSpecifiedContainerSession" />
+      <MemberSignature Language="VB.NET" Value="Protected Overridable Sub CreateHelpersForSpecifiedContainerSession ()" />
+      <MemberSignature Language="F#" Value="abstract member CreateHelpersForSpecifiedContainerSession : unit -&gt; unit&#xA;override this.CreateHelpersForSpecifiedContainerSession : unit -&gt; unit" Usage="pSExecutionCmdlet.CreateHelpersForSpecifiedContainerSession " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Creates helper objects with the command for the specified
+            container IDs or names.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateHelpersForSpecifiedRunspaces">
+      <MemberSignature Language="C#" Value="protected void CreateHelpersForSpecifiedRunspaces ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void CreateHelpersForSpecifiedRunspaces() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Commands.PSExecutionCmdlet.CreateHelpersForSpecifiedRunspaces" />
+      <MemberSignature Language="VB.NET" Value="Protected Sub CreateHelpersForSpecifiedRunspaces ()" />
+      <MemberSignature Language="F#" Value="member this.CreateHelpersForSpecifiedRunspaces : unit -&gt; unit" Usage="pSExecutionCmdlet.CreateHelpersForSpecifiedRunspaces " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Creates helper objects with the specified command for
+            the specified remote runspaceinfo objects
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateHelpersForSpecifiedSSHComputerNames">
+      <MemberSignature Language="C#" Value="protected void CreateHelpersForSpecifiedSSHComputerNames ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void CreateHelpersForSpecifiedSSHComputerNames() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Commands.PSExecutionCmdlet.CreateHelpersForSpecifiedSSHComputerNames" />
+      <MemberSignature Language="VB.NET" Value="Protected Sub CreateHelpersForSpecifiedSSHComputerNames ()" />
+      <MemberSignature Language="F#" Value="member this.CreateHelpersForSpecifiedSSHComputerNames : unit -&gt; unit" Usage="pSExecutionCmdlet.CreateHelpersForSpecifiedSSHComputerNames " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Creates helper objects for SSH remoting computer names
+            remoting.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateHelpersForSpecifiedSSHHashComputerNames">
+      <MemberSignature Language="C#" Value="protected void CreateHelpersForSpecifiedSSHHashComputerNames ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void CreateHelpersForSpecifiedSSHHashComputerNames() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Commands.PSExecutionCmdlet.CreateHelpersForSpecifiedSSHHashComputerNames" />
+      <MemberSignature Language="VB.NET" Value="Protected Sub CreateHelpersForSpecifiedSSHHashComputerNames ()" />
+      <MemberSignature Language="F#" Value="member this.CreateHelpersForSpecifiedSSHHashComputerNames : unit -&gt; unit" Usage="pSExecutionCmdlet.CreateHelpersForSpecifiedSSHHashComputerNames " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Creates helper objects for SSH remoting from HashTable parameters.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateHelpersForSpecifiedUris">
+      <MemberSignature Language="C#" Value="protected void CreateHelpersForSpecifiedUris ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void CreateHelpersForSpecifiedUris() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Commands.PSExecutionCmdlet.CreateHelpersForSpecifiedUris" />
+      <MemberSignature Language="VB.NET" Value="Protected Sub CreateHelpersForSpecifiedUris ()" />
+      <MemberSignature Language="F#" Value="member this.CreateHelpersForSpecifiedUris : unit -&gt; unit" Usage="pSExecutionCmdlet.CreateHelpersForSpecifiedUris " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Creates helper objects with the command for the specified
+            remote connection uris
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateHelpersForSpecifiedVMSession">
+      <MemberSignature Language="C#" Value="protected virtual void CreateHelpersForSpecifiedVMSession ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void CreateHelpersForSpecifiedVMSession() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Commands.PSExecutionCmdlet.CreateHelpersForSpecifiedVMSession" />
+      <MemberSignature Language="VB.NET" Value="Protected Overridable Sub CreateHelpersForSpecifiedVMSession ()" />
+      <MemberSignature Language="F#" Value="abstract member CreateHelpersForSpecifiedVMSession : unit -&gt; unit&#xA;override this.CreateHelpersForSpecifiedVMSession : unit -&gt; unit" Usage="pSExecutionCmdlet.CreateHelpersForSpecifiedVMSession " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Creates helper objects with the command for the specified
+            VM GUIDs or VM names.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DisconnectedSessionName">
+      <MemberSignature Language="C#" Value="protected string[] DisconnectedSessionName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string[] DisconnectedSessionName" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.PSExecutionCmdlet.DisconnectedSessionName" />
+      <MemberSignature Language="VB.NET" Value="Protected Property DisconnectedSessionName As String()" />
+      <MemberSignature Language="F#" Value="member this.DisconnectedSessionName : string[] with get, set" Usage="Microsoft.PowerShell.Commands.PSExecutionCmdlet.DisconnectedSessionName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Session names optionally provided for Disconnected parameter.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EnableNetworkAccess">
+      <MemberSignature Language="C#" Value="public virtual System.Management.Automation.SwitchParameter EnableNetworkAccess { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Management.Automation.SwitchParameter EnableNetworkAccess" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.PSExecutionCmdlet.EnableNetworkAccess" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Property EnableNetworkAccess As SwitchParameter" />
+      <MemberSignature Language="F#" Value="member this.EnableNetworkAccess : System.Management.Automation.SwitchParameter with get, set" Usage="Microsoft.PowerShell.Commands.PSExecutionCmdlet.EnableNetworkAccess" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.SwitchParameter</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            When set and in loopback scenario (localhost) this enables creation of WSMan
+            host process with the user interactive token, allowing PowerShell script network access,
+            i.e., allows going off box.  When this property is true and a PSSession is disconnected,
+            reconnection is allowed only if reconnecting from a PowerShell session on the same box.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FilePath">
+      <MemberSignature Language="C#" Value="public virtual string FilePath { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string FilePath" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.PSExecutionCmdlet.FilePath" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Property FilePath As String" />
+      <MemberSignature Language="F#" Value="member this.FilePath : string with get, set" Usage="Microsoft.PowerShell.Commands.PSExecutionCmdlet.FilePath" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(Mandatory=true, ParameterSetName="FilePathComputerName", Position=1)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(Mandatory=true, ParameterSetName="FilePathRunspace", Position=1)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(Mandatory=true, ParameterSetName="FilePathUri", Position=1)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.ValidateNotNull</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The file containing the script that the user has specified in the
+            cmdlet. This will be converted to a powershell before
+            its actually sent to the remote end
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FilePathComputerNameParameterSet">
+      <MemberSignature Language="C#" Value="protected const string FilePathComputerNameParameterSet;" />
+      <MemberSignature Language="ILAsm" Value=".field family static literal string FilePathComputerNameParameterSet" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.PowerShell.Commands.PSExecutionCmdlet.FilePathComputerNameParameterSet" />
+      <MemberSignature Language="VB.NET" Value="Protected Const FilePathComputerNameParameterSet As String " />
+      <MemberSignature Language="F#" Value="val mutable FilePathComputerNameParameterSet : string" Usage="Microsoft.PowerShell.Commands.PSExecutionCmdlet.FilePathComputerNameParameterSet" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            FilePathComputername parameter set
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FilePathContainerIdParameterSet">
+      <MemberSignature Language="C#" Value="protected const string FilePathContainerIdParameterSet;" />
+      <MemberSignature Language="ILAsm" Value=".field family static literal string FilePathContainerIdParameterSet" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.PowerShell.Commands.PSExecutionCmdlet.FilePathContainerIdParameterSet" />
+      <MemberSignature Language="VB.NET" Value="Protected Const FilePathContainerIdParameterSet As String " />
+      <MemberSignature Language="F#" Value="val mutable FilePathContainerIdParameterSet : string" Usage="Microsoft.PowerShell.Commands.PSExecutionCmdlet.FilePathContainerIdParameterSet" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Container ID file path parameter set.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FilePathSessionParameterSet">
+      <MemberSignature Language="C#" Value="protected const string FilePathSessionParameterSet;" />
+      <MemberSignature Language="ILAsm" Value=".field family static literal string FilePathSessionParameterSet" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.PowerShell.Commands.PSExecutionCmdlet.FilePathSessionParameterSet" />
+      <MemberSignature Language="VB.NET" Value="Protected Const FilePathSessionParameterSet As String " />
+      <MemberSignature Language="F#" Value="val mutable FilePathSessionParameterSet : string" Usage="Microsoft.PowerShell.Commands.PSExecutionCmdlet.FilePathSessionParameterSet" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            FilePathRunspace parameter set
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FilePathSSHHostHashParameterSet">
+      <MemberSignature Language="C#" Value="protected const string FilePathSSHHostHashParameterSet;" />
+      <MemberSignature Language="ILAsm" Value=".field family static literal string FilePathSSHHostHashParameterSet" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.PowerShell.Commands.PSExecutionCmdlet.FilePathSSHHostHashParameterSet" />
+      <MemberSignature Language="VB.NET" Value="Protected Const FilePathSSHHostHashParameterSet As String " />
+      <MemberSignature Language="F#" Value="val mutable FilePathSSHHostHashParameterSet : string" Usage="Microsoft.PowerShell.Commands.PSExecutionCmdlet.FilePathSSHHostHashParameterSet" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            SSH Host file path parameter set with HashTable connection parameter
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FilePathSSHHostParameterSet">
+      <MemberSignature Language="C#" Value="protected const string FilePathSSHHostParameterSet;" />
+      <MemberSignature Language="ILAsm" Value=".field family static literal string FilePathSSHHostParameterSet" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.PowerShell.Commands.PSExecutionCmdlet.FilePathSSHHostParameterSet" />
+      <MemberSignature Language="VB.NET" Value="Protected Const FilePathSSHHostParameterSet As String " />
+      <MemberSignature Language="F#" Value="val mutable FilePathSSHHostParameterSet : string" Usage="Microsoft.PowerShell.Commands.PSExecutionCmdlet.FilePathSSHHostParameterSet" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            SSH Host file path parameter set.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FilePathUriParameterSet">
+      <MemberSignature Language="C#" Value="protected const string FilePathUriParameterSet;" />
+      <MemberSignature Language="ILAsm" Value=".field family static literal string FilePathUriParameterSet" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.PowerShell.Commands.PSExecutionCmdlet.FilePathUriParameterSet" />
+      <MemberSignature Language="VB.NET" Value="Protected Const FilePathUriParameterSet As String " />
+      <MemberSignature Language="F#" Value="val mutable FilePathUriParameterSet : string" Usage="Microsoft.PowerShell.Commands.PSExecutionCmdlet.FilePathUriParameterSet" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            FilePathUri parameter set
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FilePathVMIdParameterSet">
+      <MemberSignature Language="C#" Value="protected const string FilePathVMIdParameterSet;" />
+      <MemberSignature Language="ILAsm" Value=".field family static literal string FilePathVMIdParameterSet" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.PowerShell.Commands.PSExecutionCmdlet.FilePathVMIdParameterSet" />
+      <MemberSignature Language="VB.NET" Value="Protected Const FilePathVMIdParameterSet As String " />
+      <MemberSignature Language="F#" Value="val mutable FilePathVMIdParameterSet : string" Usage="Microsoft.PowerShell.Commands.PSExecutionCmdlet.FilePathVMIdParameterSet" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            VM guid file path parameter set.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FilePathVMNameParameterSet">
+      <MemberSignature Language="C#" Value="protected const string FilePathVMNameParameterSet;" />
+      <MemberSignature Language="ILAsm" Value=".field family static literal string FilePathVMNameParameterSet" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.PowerShell.Commands.PSExecutionCmdlet.FilePathVMNameParameterSet" />
+      <MemberSignature Language="VB.NET" Value="Protected Const FilePathVMNameParameterSet As String " />
+      <MemberSignature Language="F#" Value="val mutable FilePathVMNameParameterSet : string" Usage="Microsoft.PowerShell.Commands.PSExecutionCmdlet.FilePathVMNameParameterSet" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            VM name file path parameter set.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetScriptBlockFromFile">
+      <MemberSignature Language="C#" Value="protected System.Management.Automation.ScriptBlock GetScriptBlockFromFile (string filePath, bool isLiteralPath);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance class System.Management.Automation.ScriptBlock GetScriptBlockFromFile(string filePath, bool isLiteralPath) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Commands.PSExecutionCmdlet.GetScriptBlockFromFile(System.String,System.Boolean)" />
+      <MemberSignature Language="VB.NET" Value="Protected Function GetScriptBlockFromFile (filePath As String, isLiteralPath As Boolean) As ScriptBlock" />
+      <MemberSignature Language="F#" Value="member this.GetScriptBlockFromFile : string * bool -&gt; System.Management.Automation.ScriptBlock" Usage="pSExecutionCmdlet.GetScriptBlockFromFile (filePath, isLiteralPath)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.ScriptBlock</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="filePath" Type="System.String" />
+        <Parameter Name="isLiteralPath" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="filePath"></param>
+        <param name="isLiteralPath"></param>
+        <summary>
+            Reads content of file and converts it to a scriptblock
+            </summary>
+        <returns />
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InputObject">
+      <MemberSignature Language="C#" Value="public virtual System.Management.Automation.PSObject InputObject { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Management.Automation.PSObject InputObject" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.PSExecutionCmdlet.InputObject" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Property InputObject As PSObject" />
+      <MemberSignature Language="F#" Value="member this.InputObject : System.Management.Automation.PSObject with get, set" Usage="Microsoft.PowerShell.Commands.PSExecutionCmdlet.InputObject" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ValueFromPipeline=true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.PSObject</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Input object which gets assigned to $input when executed
+            on the remote machine. This is the only parameter in
+            this cmdlet which will bind with a ValueFromPipeline=true
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InvokeAndDisconnect">
+      <MemberSignature Language="C#" Value="protected bool InvokeAndDisconnect { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool InvokeAndDisconnect" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.PSExecutionCmdlet.InvokeAndDisconnect" />
+      <MemberSignature Language="VB.NET" Value="Protected Property InvokeAndDisconnect As Boolean" />
+      <MemberSignature Language="F#" Value="member this.InvokeAndDisconnect : bool with get, set" Usage="Microsoft.PowerShell.Commands.PSExecutionCmdlet.InvokeAndDisconnect" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+             Indicates that if a job/command is invoked remotely the connection should be severed
+             right have invocation of job/command.
+             </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsLiteralPath">
+      <MemberSignature Language="C#" Value="protected bool IsLiteralPath { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsLiteralPath" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.PSExecutionCmdlet.IsLiteralPath" />
+      <MemberSignature Language="VB.NET" Value="Protected Property IsLiteralPath As Boolean" />
+      <MemberSignature Language="F#" Value="member this.IsLiteralPath : bool with get, set" Usage="Microsoft.PowerShell.Commands.PSExecutionCmdlet.IsLiteralPath" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            True if FilePath should be processed as a literal path
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LiteralFilePathComputerNameParameterSet">
+      <MemberSignature Language="C#" Value="protected const string LiteralFilePathComputerNameParameterSet;" />
+      <MemberSignature Language="ILAsm" Value=".field family static literal string LiteralFilePathComputerNameParameterSet" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.PowerShell.Commands.PSExecutionCmdlet.LiteralFilePathComputerNameParameterSet" />
+      <MemberSignature Language="VB.NET" Value="Protected Const LiteralFilePathComputerNameParameterSet As String " />
+      <MemberSignature Language="F#" Value="val mutable LiteralFilePathComputerNameParameterSet : string" Usage="Microsoft.PowerShell.Commands.PSExecutionCmdlet.LiteralFilePathComputerNameParameterSet" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            LiteralFilePathComputername parameter set
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ScriptBlock">
+      <MemberSignature Language="C#" Value="public virtual System.Management.Automation.ScriptBlock ScriptBlock { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Management.Automation.ScriptBlock ScriptBlock" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.PSExecutionCmdlet.ScriptBlock" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Property ScriptBlock As ScriptBlock" />
+      <MemberSignature Language="F#" Value="member this.ScriptBlock : System.Management.Automation.ScriptBlock with get, set" Usage="Microsoft.PowerShell.Commands.PSExecutionCmdlet.ScriptBlock" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.ScriptBlock</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Command to execute specified as a string. This can be a single
+            cmdlet, an expression or anything that can be internally
+            converted into a ScriptBlock
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="VMId">
+      <MemberSignature Language="C#" Value="public override Guid[] VMId { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Guid[] VMId" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.PSExecutionCmdlet.VMId" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Property VMId As Guid()" />
+      <MemberSignature Language="F#" Value="member this.VMId : Guid[] with get, set" Usage="Microsoft.PowerShell.Commands.PSExecutionCmdlet.VMId" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Alias(Mono.Cecil.CustomAttributeArgument[])</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(Mandatory=true, ParameterSetName="VMId", Position=0, ValueFromPipelineByPropertyName=true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(Mandatory=true, ParameterSetName="FilePathVMId", Position=0, ValueFromPipelineByPropertyName=true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.ValidateNotNullOrEmpty</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Guid[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Guid of target virtual machine.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="VMName">
+      <MemberSignature Language="C#" Value="public override string[] VMName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string[] VMName" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.PSExecutionCmdlet.VMName" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Property VMName As String()" />
+      <MemberSignature Language="F#" Value="member this.VMName : string[] with get, set" Usage="Microsoft.PowerShell.Commands.PSExecutionCmdlet.VMName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(Mandatory=true, ParameterSetName="VMName", ValueFromPipelineByPropertyName=true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(Mandatory=true, ParameterSetName="FilePathVMName", ValueFromPipelineByPropertyName=true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.ValidateNotNullOrEmpty</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Name of target virtual machine.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

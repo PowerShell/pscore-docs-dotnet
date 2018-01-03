@@ -1,0 +1,1001 @@
+﻿<Type Name="WSManConnectionInfo" FullName="System.Management.Automation.Runspaces.WSManConnectionInfo">
+  <TypeSignature Language="C#" Value="public sealed class WSManConnectionInfo : System.Management.Automation.Runspaces.RunspaceConnectionInfo" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit WSManConnectionInfo extends System.Management.Automation.Runspaces.RunspaceConnectionInfo" />
+  <TypeSignature Language="DocId" Value="T:System.Management.Automation.Runspaces.WSManConnectionInfo" />
+  <TypeSignature Language="VB.NET" Value="Public NotInheritable Class WSManConnectionInfo&#xA;Inherits RunspaceConnectionInfo" />
+  <TypeSignature Language="F#" Value="type WSManConnectionInfo = class&#xA;    inherit RunspaceConnectionInfo" />
+  <AssemblyInfo>
+    <AssemblyName>System.Management.Automation</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Management.Automation.Runspaces.RunspaceConnectionInfo</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Class which defines path to a remote runspace that
+            need to be created
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WSManConnectionInfo ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Runspaces.WSManConnectionInfo.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New ()" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>
+            Creates a WSManConnectionInfo for the following URI
+            and with the default credentials, default server
+            life time and default open timeout
+                   http://localhost/
+            The default shellname Microsoft.PowerShell will be 
+            used
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WSManConnectionInfo (System.Management.Automation.Runspaces.PSSessionType configurationType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Management.Automation.Runspaces.PSSessionType configurationType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Runspaces.WSManConnectionInfo.#ctor(System.Management.Automation.Runspaces.PSSessionType)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (configurationType As PSSessionType)" />
+      <MemberSignature Language="F#" Value="new System.Management.Automation.Runspaces.WSManConnectionInfo : System.Management.Automation.Runspaces.PSSessionType -&gt; System.Management.Automation.Runspaces.WSManConnectionInfo" Usage="new System.Management.Automation.Runspaces.WSManConnectionInfo configurationType" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="configurationType" Type="System.Management.Automation.Runspaces.PSSessionType" />
+      </Parameters>
+      <Docs>
+        <param name="configurationType">type of configuration to construct</param>
+        <summary>
+            Constructor that constructs the configuration name from its type
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WSManConnectionInfo (Uri uri);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Uri uri) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Runspaces.WSManConnectionInfo.#ctor(System.Uri)" />
+      <MemberSignature Language="F#" Value="new System.Management.Automation.Runspaces.WSManConnectionInfo : Uri -&gt; System.Management.Automation.Runspaces.WSManConnectionInfo" Usage="new System.Management.Automation.Runspaces.WSManConnectionInfo uri" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="uri" Type="System.Uri" />
+      </Parameters>
+      <Docs>
+        <param name="uri">uri of remote runspace</param>
+        <summary>
+            constructor to create a WSManConnectionInfo with a 
+            uri specified and the default credentials,
+            default server life time and default open
+            timeout
+            </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">When an
+            uri representing an invalid path is specified</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WSManConnectionInfo (Uri uri, string shellUri, System.Management.Automation.PSCredential credential);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Uri uri, string shellUri, class System.Management.Automation.PSCredential credential) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Runspaces.WSManConnectionInfo.#ctor(System.Uri,System.String,System.Management.Automation.PSCredential)" />
+      <MemberSignature Language="F#" Value="new System.Management.Automation.Runspaces.WSManConnectionInfo : Uri * string * System.Management.Automation.PSCredential -&gt; System.Management.Automation.Runspaces.WSManConnectionInfo" Usage="new System.Management.Automation.Runspaces.WSManConnectionInfo (uri, shellUri, credential)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="uri" Type="System.Uri" />
+        <Parameter Name="shellUri" Type="System.String" />
+        <Parameter Name="credential" Type="System.Management.Automation.PSCredential" />
+      </Parameters>
+      <Docs>
+        <param name="uri">uri of remote runspace</param>
+        <param name="shellUri"></param>
+        <param name="credential">credentials to use to 
+            connect to the remote runspace</param>
+        <summary>
+            Constructor to create a WSManConnectionInfo with a uri
+            and explicit credentials - server life time is
+            default and open timeout is default
+            </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">When an
+            uri representing an invalid path is specified</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WSManConnectionInfo (Uri uri, string shellUri, string certificateThumbprint);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Uri uri, string shellUri, string certificateThumbprint) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Runspaces.WSManConnectionInfo.#ctor(System.Uri,System.String,System.String)" />
+      <MemberSignature Language="F#" Value="new System.Management.Automation.Runspaces.WSManConnectionInfo : Uri * string * string -&gt; System.Management.Automation.Runspaces.WSManConnectionInfo" Usage="new System.Management.Automation.Runspaces.WSManConnectionInfo (uri, shellUri, certificateThumbprint)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="uri" Type="System.Uri" />
+        <Parameter Name="shellUri" Type="System.String" />
+        <Parameter Name="certificateThumbprint" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="uri">uri of remote runspace</param>
+        <param name="shellUri"></param>
+        <param name="certificateThumbprint">
+            A thumb print of the certificate to use while connecting to the remote machine.
+            </param>
+        <summary>
+            Constructor used to create a WSManConnectionInfo. This constructor supports a certificate thumbprint to
+            be used while connecting to a remote machine instead of credential.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WSManConnectionInfo (bool useSsl, string computerName, int port, string appName, string shellUri, System.Management.Automation.PSCredential credential);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(bool useSsl, string computerName, int32 port, string appName, string shellUri, class System.Management.Automation.PSCredential credential) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Runspaces.WSManConnectionInfo.#ctor(System.Boolean,System.String,System.Int32,System.String,System.String,System.Management.Automation.PSCredential)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (useSsl As Boolean, computerName As String, port As Integer, appName As String, shellUri As String, credential As PSCredential)" />
+      <MemberSignature Language="F#" Value="new System.Management.Automation.Runspaces.WSManConnectionInfo : bool * string * int * string * string * System.Management.Automation.PSCredential -&gt; System.Management.Automation.Runspaces.WSManConnectionInfo" Usage="new System.Management.Automation.Runspaces.WSManConnectionInfo (useSsl, computerName, port, appName, shellUri, credential)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="useSsl" Type="System.Boolean" />
+        <Parameter Name="computerName" Type="System.String" />
+        <Parameter Name="port" Type="System.Int32" />
+        <Parameter Name="appName" Type="System.String" />
+        <Parameter Name="shellUri" Type="System.String" />
+        <Parameter Name="credential" Type="System.Management.Automation.PSCredential" />
+      </Parameters>
+      <Docs>
+        <param name="useSsl"></param>
+        <param name="computerName"></param>
+        <param name="port"></param>
+        <param name="appName"></param>
+        <param name="shellUri"></param>
+        <param name="credential"></param>
+        <summary>
+            Constructor used to create a WSManConnectionInfo
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WSManConnectionInfo (string scheme, string computerName, int port, string appName, string shellUri, System.Management.Automation.PSCredential credential);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string scheme, string computerName, int32 port, string appName, string shellUri, class System.Management.Automation.PSCredential credential) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Runspaces.WSManConnectionInfo.#ctor(System.String,System.String,System.Int32,System.String,System.String,System.Management.Automation.PSCredential)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (scheme As String, computerName As String, port As Integer, appName As String, shellUri As String, credential As PSCredential)" />
+      <MemberSignature Language="F#" Value="new System.Management.Automation.Runspaces.WSManConnectionInfo : string * string * int * string * string * System.Management.Automation.PSCredential -&gt; System.Management.Automation.Runspaces.WSManConnectionInfo" Usage="new System.Management.Automation.Runspaces.WSManConnectionInfo (scheme, computerName, port, appName, shellUri, credential)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="scheme" Type="System.String" />
+        <Parameter Name="computerName" Type="System.String" />
+        <Parameter Name="port" Type="System.Int32" />
+        <Parameter Name="appName" Type="System.String" />
+        <Parameter Name="shellUri" Type="System.String" />
+        <Parameter Name="credential" Type="System.Management.Automation.PSCredential" />
+      </Parameters>
+      <Docs>
+        <param name="scheme">Scheme to be used for connection.</param>
+        <param name="computerName">computer to connect to</param>
+        <param name="port">port to connect to</param>
+        <param name="appName">application end point to connect to</param>
+        <param name="shellUri">remote shell to launch 
+            on connection</param>
+        <param name="credential">credential to be used 
+            for connection</param>
+        <summary>
+            Constructor used to create a WSManConnectionInfo
+            </summary>
+        <remarks>max server life timeout and open timeout are
+            default in this case</remarks>
+        <exception cref="T:System.ArgumentException">Invalid
+            scheme or invalid port is specified</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WSManConnectionInfo (bool useSsl, string computerName, int port, string appName, string shellUri, System.Management.Automation.PSCredential credential, int openTimeout);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(bool useSsl, string computerName, int32 port, string appName, string shellUri, class System.Management.Automation.PSCredential credential, int32 openTimeout) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Runspaces.WSManConnectionInfo.#ctor(System.Boolean,System.String,System.Int32,System.String,System.String,System.Management.Automation.PSCredential,System.Int32)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (useSsl As Boolean, computerName As String, port As Integer, appName As String, shellUri As String, credential As PSCredential, openTimeout As Integer)" />
+      <MemberSignature Language="F#" Value="new System.Management.Automation.Runspaces.WSManConnectionInfo : bool * string * int * string * string * System.Management.Automation.PSCredential * int -&gt; System.Management.Automation.Runspaces.WSManConnectionInfo" Usage="new System.Management.Automation.Runspaces.WSManConnectionInfo (useSsl, computerName, port, appName, shellUri, credential, openTimeout)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="useSsl" Type="System.Boolean" />
+        <Parameter Name="computerName" Type="System.String" />
+        <Parameter Name="port" Type="System.Int32" />
+        <Parameter Name="appName" Type="System.String" />
+        <Parameter Name="shellUri" Type="System.String" />
+        <Parameter Name="credential" Type="System.Management.Automation.PSCredential" />
+        <Parameter Name="openTimeout" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="useSsl"></param>
+        <param name="computerName"></param>
+        <param name="port"></param>
+        <param name="appName"></param>
+        <param name="shellUri"></param>
+        <param name="credential"></param>
+        <param name="openTimeout"></param>
+        <summary />
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WSManConnectionInfo (string scheme, string computerName, int port, string appName, string shellUri, System.Management.Automation.PSCredential credential, int openTimeout);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string scheme, string computerName, int32 port, string appName, string shellUri, class System.Management.Automation.PSCredential credential, int32 openTimeout) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Runspaces.WSManConnectionInfo.#ctor(System.String,System.String,System.Int32,System.String,System.String,System.Management.Automation.PSCredential,System.Int32)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (scheme As String, computerName As String, port As Integer, appName As String, shellUri As String, credential As PSCredential, openTimeout As Integer)" />
+      <MemberSignature Language="F#" Value="new System.Management.Automation.Runspaces.WSManConnectionInfo : string * string * int * string * string * System.Management.Automation.PSCredential * int -&gt; System.Management.Automation.Runspaces.WSManConnectionInfo" Usage="new System.Management.Automation.Runspaces.WSManConnectionInfo (scheme, computerName, port, appName, shellUri, credential, openTimeout)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="scheme" Type="System.String" />
+        <Parameter Name="computerName" Type="System.String" />
+        <Parameter Name="port" Type="System.Int32" />
+        <Parameter Name="appName" Type="System.String" />
+        <Parameter Name="shellUri" Type="System.String" />
+        <Parameter Name="credential" Type="System.Management.Automation.PSCredential" />
+        <Parameter Name="openTimeout" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="scheme">scheme to be used for connection</param>
+        <param name="computerName">computer to connect to</param>
+        <param name="port">port to connect to</param>
+        <param name="appName">application end point to connect to</param>
+        <param name="shellUri">remote shell to launch 
+            on connection</param>
+        <param name="credential">credential to be used 
+            for connection</param>
+        <param name="openTimeout">Timeout in milliseconds for open
+            call on Runspace to finish</param>
+        <summary>
+            Constructor used to create a WSManConnectionInfo
+            </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">Invalid
+            scheme or invalid port is specified</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AppName">
+      <MemberSignature Language="C#" Value="public string AppName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string AppName" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.Runspaces.WSManConnectionInfo.AppName" />
+      <MemberSignature Language="VB.NET" Value="Public Property AppName As String" />
+      <MemberSignature Language="F#" Value="member this.AppName : string with get, set" Usage="System.Management.Automation.Runspaces.WSManConnectionInfo.AppName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            AppName which identifies the connection 
+            end point in the machine
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AuthenticationMechanism">
+      <MemberSignature Language="C#" Value="public override System.Management.Automation.Runspaces.AuthenticationMechanism AuthenticationMechanism { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Management.Automation.Runspaces.AuthenticationMechanism AuthenticationMechanism" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.Runspaces.WSManConnectionInfo.AuthenticationMechanism" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Property AuthenticationMechanism As AuthenticationMechanism" />
+      <MemberSignature Language="F#" Value="member this.AuthenticationMechanism : System.Management.Automation.Runspaces.AuthenticationMechanism with get, set" Usage="System.Management.Automation.Runspaces.WSManConnectionInfo.AuthenticationMechanism" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.Runspaces.AuthenticationMechanism</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Authentication mechanism to use while connecting to the server
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CertificateThumbprint">
+      <MemberSignature Language="C#" Value="public override string CertificateThumbprint { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string CertificateThumbprint" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.Runspaces.WSManConnectionInfo.CertificateThumbprint" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Property CertificateThumbprint As String" />
+      <MemberSignature Language="F#" Value="member this.CertificateThumbprint : string with get, set" Usage="System.Management.Automation.Runspaces.WSManConnectionInfo.CertificateThumbprint" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            ThumbPrint of a certificate used for connecting to a remote machine.
+            When this is specified, you dont need to supply credential and authentication
+            mechanism.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ComputerName">
+      <MemberSignature Language="C#" Value="public override string ComputerName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ComputerName" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.Runspaces.WSManConnectionInfo.ComputerName" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Property ComputerName As String" />
+      <MemberSignature Language="F#" Value="member this.ComputerName : string with get, set" Usage="System.Management.Automation.Runspaces.WSManConnectionInfo.ComputerName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Name of the computer
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ConnectionUri">
+      <MemberSignature Language="C#" Value="public Uri ConnectionUri { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Uri ConnectionUri" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.Runspaces.WSManConnectionInfo.ConnectionUri" />
+      <MemberSignature Language="VB.NET" Value="Public Property ConnectionUri As Uri" />
+      <MemberSignature Language="F#" Value="member this.ConnectionUri : Uri with get, set" Usage="System.Management.Automation.Runspaces.WSManConnectionInfo.ConnectionUri" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Uri</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Uri associated with this connection path
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Copy">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.Runspaces.WSManConnectionInfo Copy ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Management.Automation.Runspaces.WSManConnectionInfo Copy() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Runspaces.WSManConnectionInfo.Copy" />
+      <MemberSignature Language="VB.NET" Value="Public Function Copy () As WSManConnectionInfo" />
+      <MemberSignature Language="F#" Value="member this.Copy : unit -&gt; System.Management.Automation.Runspaces.WSManConnectionInfo" Usage="wSManConnectionInfo.Copy " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.Runspaces.WSManConnectionInfo</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Does a shallow copy of the current instance
+            </summary>
+        <returns />
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Credential">
+      <MemberSignature Language="C#" Value="public override System.Management.Automation.PSCredential Credential { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Management.Automation.PSCredential Credential" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.Runspaces.WSManConnectionInfo.Credential" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Property Credential As PSCredential" />
+      <MemberSignature Language="F#" Value="member this.Credential : System.Management.Automation.PSCredential with get, set" Usage="System.Management.Automation.Runspaces.WSManConnectionInfo.Credential" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.PSCredential</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Credential used for the connection
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EnableNetworkAccess">
+      <MemberSignature Language="C#" Value="public bool EnableNetworkAccess { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool EnableNetworkAccess" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.Runspaces.WSManConnectionInfo.EnableNetworkAccess" />
+      <MemberSignature Language="VB.NET" Value="Public Property EnableNetworkAccess As Boolean" />
+      <MemberSignature Language="F#" Value="member this.EnableNetworkAccess : bool with get, set" Usage="System.Management.Automation.Runspaces.WSManConnectionInfo.EnableNetworkAccess" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            When true and in loopback scenario (localhost) this enables creation of WSMan
+            host process with the user interactive token, allowing PowerShell script network access, 
+            i.e., allows going off box.  When this property is true and a PSSession is disconnected, 
+            reconnection is allowed only if reconnecting from a PowerShell session on the same box.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HttpScheme">
+      <MemberSignature Language="C#" Value="public const string HttpScheme;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal string HttpScheme" />
+      <MemberSignature Language="DocId" Value="F:System.Management.Automation.Runspaces.WSManConnectionInfo.HttpScheme" />
+      <MemberSignature Language="VB.NET" Value="Public Const HttpScheme As String " />
+      <MemberSignature Language="F#" Value="val mutable HttpScheme : string" Usage="System.Management.Automation.Runspaces.WSManConnectionInfo.HttpScheme" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            string for http scheme
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HttpsScheme">
+      <MemberSignature Language="C#" Value="public const string HttpsScheme;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal string HttpsScheme" />
+      <MemberSignature Language="DocId" Value="F:System.Management.Automation.Runspaces.WSManConnectionInfo.HttpsScheme" />
+      <MemberSignature Language="VB.NET" Value="Public Const HttpsScheme As String " />
+      <MemberSignature Language="F#" Value="val mutable HttpsScheme : string" Usage="System.Management.Automation.Runspaces.WSManConnectionInfo.HttpsScheme" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            string for https scheme
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IncludePortInSPN">
+      <MemberSignature Language="C#" Value="public bool IncludePortInSPN { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IncludePortInSPN" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.Runspaces.WSManConnectionInfo.IncludePortInSPN" />
+      <MemberSignature Language="VB.NET" Value="Public Property IncludePortInSPN As Boolean" />
+      <MemberSignature Language="F#" Value="member this.IncludePortInSPN : bool with get, set" Usage="System.Management.Automation.Runspaces.WSManConnectionInfo.IncludePortInSPN" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Uses Service Principal Name (SPN) along with the Port number during authentication.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MaxConnectionRetryCount">
+      <MemberSignature Language="C#" Value="public int MaxConnectionRetryCount { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 MaxConnectionRetryCount" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.Runspaces.WSManConnectionInfo.MaxConnectionRetryCount" />
+      <MemberSignature Language="VB.NET" Value="Public Property MaxConnectionRetryCount As Integer" />
+      <MemberSignature Language="F#" Value="member this.MaxConnectionRetryCount : int with get, set" Usage="System.Management.Automation.Runspaces.WSManConnectionInfo.MaxConnectionRetryCount" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Specifies the maximum number of connection retries if previous connection attempts fail
+            due to network issues.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MaximumConnectionRedirectionCount">
+      <MemberSignature Language="C#" Value="public int MaximumConnectionRedirectionCount { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 MaximumConnectionRedirectionCount" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.Runspaces.WSManConnectionInfo.MaximumConnectionRedirectionCount" />
+      <MemberSignature Language="VB.NET" Value="Public Property MaximumConnectionRedirectionCount As Integer" />
+      <MemberSignature Language="F#" Value="member this.MaximumConnectionRedirectionCount : int with get, set" Usage="System.Management.Automation.Runspaces.WSManConnectionInfo.MaximumConnectionRedirectionCount" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Maximum uri redirection count
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MaximumReceivedDataSizePerCommand">
+      <MemberSignature Language="C#" Value="public Nullable&lt;int&gt; MaximumReceivedDataSizePerCommand { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Nullable`1&lt;int32&gt; MaximumReceivedDataSizePerCommand" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.Runspaces.WSManConnectionInfo.MaximumReceivedDataSizePerCommand" />
+      <MemberSignature Language="VB.NET" Value="Public Property MaximumReceivedDataSizePerCommand As Nullable(Of Integer)" />
+      <MemberSignature Language="F#" Value="member this.MaximumReceivedDataSizePerCommand : Nullable&lt;int&gt; with get, set" Usage="System.Management.Automation.Runspaces.WSManConnectionInfo.MaximumReceivedDataSizePerCommand" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Nullable&lt;System.Int32&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Total data (in bytes) that can be received from a remote machine
+            targeted towards a command. If null, then the size is unlimited.
+            Default is unlimited data.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MaximumReceivedObjectSize">
+      <MemberSignature Language="C#" Value="public Nullable&lt;int&gt; MaximumReceivedObjectSize { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Nullable`1&lt;int32&gt; MaximumReceivedObjectSize" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.Runspaces.WSManConnectionInfo.MaximumReceivedObjectSize" />
+      <MemberSignature Language="VB.NET" Value="Public Property MaximumReceivedObjectSize As Nullable(Of Integer)" />
+      <MemberSignature Language="F#" Value="member this.MaximumReceivedObjectSize : Nullable&lt;int&gt; with get, set" Usage="System.Management.Automation.Runspaces.WSManConnectionInfo.MaximumReceivedObjectSize" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Nullable&lt;System.Int32&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Maximum size (in bytes) of a deserialized object received from a remote machine.
+            If null, then the size is unlimited. Default is unlimited object size.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NoEncryption">
+      <MemberSignature Language="C#" Value="public bool NoEncryption { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool NoEncryption" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.Runspaces.WSManConnectionInfo.NoEncryption" />
+      <MemberSignature Language="VB.NET" Value="Public Property NoEncryption As Boolean" />
+      <MemberSignature Language="F#" Value="member this.NoEncryption : bool with get, set" Usage="System.Management.Automation.Runspaces.WSManConnectionInfo.NoEncryption" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Specifies that no encryption will be used when doing remote operations over 
+            http. Unencrypted traffic is not allowed by default and must be enabled in 
+            the local configuration
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NoMachineProfile">
+      <MemberSignature Language="C#" Value="public bool NoMachineProfile { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool NoMachineProfile" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.Runspaces.WSManConnectionInfo.NoMachineProfile" />
+      <MemberSignature Language="VB.NET" Value="Public Property NoMachineProfile As Boolean" />
+      <MemberSignature Language="F#" Value="member this.NoMachineProfile : bool with get, set" Usage="System.Management.Automation.Runspaces.WSManConnectionInfo.NoMachineProfile" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            If <c>true</c> then Operating System won't load the user profile (i.e. registry keys under HKCU) on the remote server
+            which can result in a faster session creation time.  This option won't have any effect if the remote machine has
+            already loaded the profile (i.e. in another session). 
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OutputBufferingMode">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.Runspaces.OutputBufferingMode OutputBufferingMode { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Management.Automation.Runspaces.OutputBufferingMode OutputBufferingMode" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.Runspaces.WSManConnectionInfo.OutputBufferingMode" />
+      <MemberSignature Language="VB.NET" Value="Public Property OutputBufferingMode As OutputBufferingMode" />
+      <MemberSignature Language="F#" Value="member this.OutputBufferingMode : System.Management.Automation.Runspaces.OutputBufferingMode with get, set" Usage="System.Management.Automation.Runspaces.WSManConnectionInfo.OutputBufferingMode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.Runspaces.OutputBufferingMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Determines how server in disconnected state deals with cached output
+            data when the cache becomes filled.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Port">
+      <MemberSignature Language="C#" Value="public int Port { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Port" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.Runspaces.WSManConnectionInfo.Port" />
+      <MemberSignature Language="VB.NET" Value="Public Property Port As Integer" />
+      <MemberSignature Language="F#" Value="member this.Port : int with get, set" Usage="System.Management.Automation.Runspaces.WSManConnectionInfo.Port" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Port in which to connect
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ProxyAccessType">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.Remoting.ProxyAccessType ProxyAccessType { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Management.Automation.Remoting.ProxyAccessType ProxyAccessType" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.Runspaces.WSManConnectionInfo.ProxyAccessType" />
+      <MemberSignature Language="VB.NET" Value="Public Property ProxyAccessType As ProxyAccessType" />
+      <MemberSignature Language="F#" Value="member this.ProxyAccessType : System.Management.Automation.Remoting.ProxyAccessType with get, set" Usage="System.Management.Automation.Runspaces.WSManConnectionInfo.ProxyAccessType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.Remoting.ProxyAccessType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            By default, wsman uses IEConfig - the current user 
+             Internet Explorer proxy settings for the current active network connection. 
+             This option requires the user profile to be loaded, so the option can 
+             be directly used when called within a process that is running under 
+             an interactive user account identity; if the client application is running 
+             under a user context different then the interactive user, the client 
+             application has to explicitly load the user profile prior to using this option.
+             
+            IMPORTANT: proxy configuration is supported for HTTPS only; for HTTP, the direct 
+            connection to the server is used 
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ProxyAuthentication">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.Runspaces.AuthenticationMechanism ProxyAuthentication { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Management.Automation.Runspaces.AuthenticationMechanism ProxyAuthentication" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.Runspaces.WSManConnectionInfo.ProxyAuthentication" />
+      <MemberSignature Language="VB.NET" Value="Public Property ProxyAuthentication As AuthenticationMechanism" />
+      <MemberSignature Language="F#" Value="member this.ProxyAuthentication : System.Management.Automation.Runspaces.AuthenticationMechanism with get, set" Usage="System.Management.Automation.Runspaces.WSManConnectionInfo.ProxyAuthentication" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.Runspaces.AuthenticationMechanism</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The following is the definition of the input parameter "ProxyAuthentication".
+            This parameter takes a set of authentication methods the user can select 
+            from.  The available options should be as follows:
+            - Negotiate: Use the default authentication (ad defined by the underlying 
+            protocol) for establishing a remote connection.
+            - Basic:  Use basic authentication for establishing a remote connection
+            - Digest: Use Digest authentication for establishing a remote connection
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ProxyCredential">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.PSCredential ProxyCredential { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Management.Automation.PSCredential ProxyCredential" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.Runspaces.WSManConnectionInfo.ProxyCredential" />
+      <MemberSignature Language="VB.NET" Value="Public Property ProxyCredential As PSCredential" />
+      <MemberSignature Language="F#" Value="member this.ProxyCredential : System.Management.Automation.PSCredential with get, set" Usage="System.Management.Automation.Runspaces.WSManConnectionInfo.ProxyCredential" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.PSCredential</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The following is the definition of the input parameter "ProxyCredential".
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Scheme">
+      <MemberSignature Language="C#" Value="public string Scheme { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Scheme" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.Runspaces.WSManConnectionInfo.Scheme" />
+      <MemberSignature Language="VB.NET" Value="Public Property Scheme As String" />
+      <MemberSignature Language="F#" Value="member this.Scheme : string with get, set" Usage="System.Management.Automation.Runspaces.WSManConnectionInfo.Scheme" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Scheme used for connection
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetSessionOptions">
+      <MemberSignature Language="C#" Value="public override void SetSessionOptions (System.Management.Automation.Remoting.PSSessionOption options);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void SetSessionOptions(class System.Management.Automation.Remoting.PSSessionOption options) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Runspaces.WSManConnectionInfo.SetSessionOptions(System.Management.Automation.Remoting.PSSessionOption)" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Sub SetSessionOptions (options As PSSessionOption)" />
+      <MemberSignature Language="F#" Value="override this.SetSessionOptions : System.Management.Automation.Remoting.PSSessionOption -&gt; unit" Usage="wSManConnectionInfo.SetSessionOptions options" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="options" Type="System.Management.Automation.Remoting.PSSessionOption" />
+      </Parameters>
+      <Docs>
+        <param name="options"></param>
+        <summary>
+            Populates session options from a PSSessionOption instance.
+            </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">
+            1. Proxy credential cannot be specified when proxy accesstype is None. 
+            Either specify a valid proxy accesstype other than None or do not specify proxy credential.
+            </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ShellUri">
+      <MemberSignature Language="C#" Value="public string ShellUri { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ShellUri" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.Runspaces.WSManConnectionInfo.ShellUri" />
+      <MemberSignature Language="VB.NET" Value="Public Property ShellUri As String" />
+      <MemberSignature Language="F#" Value="member this.ShellUri : string with get, set" Usage="System.Management.Automation.Runspaces.WSManConnectionInfo.ShellUri" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary />
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SkipCACheck">
+      <MemberSignature Language="C#" Value="public bool SkipCACheck { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool SkipCACheck" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.Runspaces.WSManConnectionInfo.SkipCACheck" />
+      <MemberSignature Language="VB.NET" Value="Public Property SkipCACheck As Boolean" />
+      <MemberSignature Language="F#" Value="member this.SkipCACheck : bool with get, set" Usage="System.Management.Automation.Runspaces.WSManConnectionInfo.SkipCACheck" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            When connecting over HTTPS, the client does not validate that the server 
+            certificate is signed by a trusted certificate authority (CA). Use only when 
+            the remote computer is trusted by other means, for example, if the remote 
+            computer is part of a network that is physically secure and isolated or the 
+            remote computer is listed as a trusted host in WinRM configuration
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SkipCNCheck">
+      <MemberSignature Language="C#" Value="public bool SkipCNCheck { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool SkipCNCheck" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.Runspaces.WSManConnectionInfo.SkipCNCheck" />
+      <MemberSignature Language="VB.NET" Value="Public Property SkipCNCheck As Boolean" />
+      <MemberSignature Language="F#" Value="member this.SkipCNCheck : bool with get, set" Usage="System.Management.Automation.Runspaces.WSManConnectionInfo.SkipCNCheck" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Indicates that certificate common name (CN) of the server need not match the 
+            hostname of the server. Used only in remote operations using https. This 
+            option should only be used for trusted machines.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SkipRevocationCheck">
+      <MemberSignature Language="C#" Value="public bool SkipRevocationCheck { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool SkipRevocationCheck" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.Runspaces.WSManConnectionInfo.SkipRevocationCheck" />
+      <MemberSignature Language="VB.NET" Value="Public Property SkipRevocationCheck As Boolean" />
+      <MemberSignature Language="F#" Value="member this.SkipRevocationCheck : bool with get, set" Usage="System.Management.Automation.Runspaces.WSManConnectionInfo.SkipRevocationCheck" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Indicates that certificate common name (CN) of the server need not match the 
+            hostname of the server. Used only in remote operations using https. This 
+            option should only be used for trusted machines
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UseCompression">
+      <MemberSignature Language="C#" Value="public bool UseCompression { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool UseCompression" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.Runspaces.WSManConnectionInfo.UseCompression" />
+      <MemberSignature Language="VB.NET" Value="Public Property UseCompression As Boolean" />
+      <MemberSignature Language="F#" Value="member this.UseCompression : bool with get, set" Usage="System.Management.Automation.Runspaces.WSManConnectionInfo.UseCompression" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            If true, underlying WSMan infrastructure will compress data sent on the network.
+            If false, data will not be compressed. Compression improves performance by 
+            reducing the amount of data sent on the network. Compression my require extra
+            memory consumption and CPU usage. In cases where available memory / CPU is less, 
+            set this property to false.
+            By default the value of this property is "true".
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UseUTF16">
+      <MemberSignature Language="C#" Value="public bool UseUTF16 { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool UseUTF16" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.Runspaces.WSManConnectionInfo.UseUTF16" />
+      <MemberSignature Language="VB.NET" Value="Public Property UseUTF16 As Boolean" />
+      <MemberSignature Language="F#" Value="member this.UseUTF16 : bool with get, set" Usage="System.Management.Automation.Runspaces.WSManConnectionInfo.UseUTF16" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Indicates the request is encoded in UTF16 format rather than UTF8 format; 
+            UTF8 is the default.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

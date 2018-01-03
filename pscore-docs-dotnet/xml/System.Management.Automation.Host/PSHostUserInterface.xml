@@ -1,0 +1,705 @@
+﻿<Type Name="PSHostUserInterface" FullName="System.Management.Automation.Host.PSHostUserInterface">
+  <TypeSignature Language="C#" Value="public abstract class PSHostUserInterface" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit PSHostUserInterface extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Management.Automation.Host.PSHostUserInterface" />
+  <TypeSignature Language="VB.NET" Value="Public MustInherit Class PSHostUserInterface" />
+  <TypeSignature Language="F#" Value="type PSHostUserInterface = class" />
+  <AssemblyInfo>
+    <AssemblyName>System.Management.Automation</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            
+             Defines the properties and facilities providing by an hosting application deriving from
+             <see cref="T:System.Management.Automation.Host.PSHost" /> that offers dialog-oriented and
+             line-oriented interactive features.
+            
+             </summary>
+    <remarks>To be added.</remarks>
+    <altmember cref="T:System.Management.Automation.Host.PSHost" />
+    <altmember cref="T:System.Management.Automation.Host.PSHostRawUserInterface" />
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected PSHostUserInterface ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Host.PSHostUserInterface.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Protected Sub New ()" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>
+            Creates a new instance of the PSHostUserInterface class
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Prompt">
+      <MemberSignature Language="C#" Value="public abstract System.Collections.Generic.Dictionary&lt;string,System.Management.Automation.PSObject&gt; Prompt (string caption, string message, System.Collections.ObjectModel.Collection&lt;System.Management.Automation.Host.FieldDescription&gt; descriptions);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Collections.Generic.Dictionary`2&lt;string, class System.Management.Automation.PSObject&gt; Prompt(string caption, string message, class System.Collections.ObjectModel.Collection`1&lt;class System.Management.Automation.Host.FieldDescription&gt; descriptions) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Host.PSHostUserInterface.Prompt(System.String,System.String,System.Collections.ObjectModel.Collection{System.Management.Automation.Host.FieldDescription})" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Function Prompt (caption As String, message As String, descriptions As Collection(Of FieldDescription)) As Dictionary(Of String, PSObject)" />
+      <MemberSignature Language="F#" Value="abstract member Prompt : string * string * System.Collections.ObjectModel.Collection&lt;System.Management.Automation.Host.FieldDescription&gt; -&gt; System.Collections.Generic.Dictionary&lt;string, System.Management.Automation.PSObject&gt;" Usage="pSHostUserInterface.Prompt (caption, message, descriptions)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.Dictionary&lt;System.String,System.Management.Automation.PSObject&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="caption" Type="System.String" />
+        <Parameter Name="message" Type="System.String" />
+        <Parameter Name="descriptions" Type="System.Collections.ObjectModel.Collection&lt;System.Management.Automation.Host.FieldDescription&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="caption">
+            Caption to precede or title the prompt.  E.g. "Parameters for get-foo (instance 1 of 2)"
+            </param>
+        <param name="message">
+            A text description of the set of fields to be prompt.
+            </param>
+        <param name="descriptions">
+            Array of FieldDescriptions that contain information about each field to be prompted for.
+            </param>
+        <summary>
+            Constructs a 'dialog' where the user is presented with a number of fields for which to supply values.
+            </summary>
+        <returns>
+            A Dictionary object with results of prompting.  The keys are the field names from the FieldDescriptions, the values
+            are objects representing the values of the corresponding fields as collected from the user. To the extent possible,
+            the host should return values of the type(s) identified in the FieldDescription.  When that is not possible (for
+            example, the type is not available to the host), the host should return the value as a string.
+            </returns>
+        <remarks>To be added.</remarks>
+        <altmember cref="M:System.Management.Automation.Host.PSHostUserInterface.ReadLine" />
+        <altmember cref="M:System.Management.Automation.Host.PSHostUserInterface.ReadLineAsSecureString" />
+        <altmember cref="M:System.Management.Automation.Host.PSHostUserInterface.PromptForChoice(System.String,System.String,System.Collections.ObjectModel.Collection{System.Management.Automation.Host.ChoiceDescription},System.Int32)" />
+        <altmember cref="M:System.Management.Automation.Host.PSHostUserInterface.PromptForCredential(System.String,System.String,System.String,System.String)" />
+        <altmember cref="M:System.Management.Automation.Host.PSHostUserInterface.PromptForCredential(System.String,System.String,System.String,System.String,System.Management.Automation.PSCredentialTypes,System.Management.Automation.PSCredentialUIOptions)" />
+      </Docs>
+    </Member>
+    <Member MemberName="PromptForChoice">
+      <MemberSignature Language="C#" Value="public abstract int PromptForChoice (string caption, string message, System.Collections.ObjectModel.Collection&lt;System.Management.Automation.Host.ChoiceDescription&gt; choices, int defaultChoice);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance int32 PromptForChoice(string caption, string message, class System.Collections.ObjectModel.Collection`1&lt;class System.Management.Automation.Host.ChoiceDescription&gt; choices, int32 defaultChoice) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Host.PSHostUserInterface.PromptForChoice(System.String,System.String,System.Collections.ObjectModel.Collection{System.Management.Automation.Host.ChoiceDescription},System.Int32)" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Function PromptForChoice (caption As String, message As String, choices As Collection(Of ChoiceDescription), defaultChoice As Integer) As Integer" />
+      <MemberSignature Language="F#" Value="abstract member PromptForChoice : string * string * System.Collections.ObjectModel.Collection&lt;System.Management.Automation.Host.ChoiceDescription&gt; * int -&gt; int" Usage="pSHostUserInterface.PromptForChoice (caption, message, choices, defaultChoice)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="caption" Type="System.String" />
+        <Parameter Name="message" Type="System.String" />
+        <Parameter Name="choices" Type="System.Collections.ObjectModel.Collection&lt;System.Management.Automation.Host.ChoiceDescription&gt;" />
+        <Parameter Name="defaultChoice" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="caption">
+            Caption to precede or title the prompt.  E.g. "Parameters for get-foo (instance 1 of 2)"
+            </param>
+        <param name="message">
+            A message that describes what the choice is for.
+            </param>
+        <param name="choices">
+            An Collection of ChoiceDescription objects that describe each choice.
+            </param>
+        <param name="defaultChoice">
+            The index of the label in the choices collection element to be presented to the user as the default choice.  -1
+            means "no default". Must be a valid index.
+            </param>
+        <summary>
+            Presents a dialog allowing the user to choose an option from a set of options.
+            </summary>
+        <returns>
+            The index of the choices element that corresponds to the option selected.
+            </returns>
+        <remarks>To be added.</remarks>
+        <altmember cref="M:System.Management.Automation.Host.PSHostUserInterface.ReadLine" />
+        <altmember cref="M:System.Management.Automation.Host.PSHostUserInterface.ReadLineAsSecureString" />
+        <altmember cref="M:System.Management.Automation.Host.PSHostUserInterface.Prompt(System.String,System.String,System.Collections.ObjectModel.Collection{System.Management.Automation.Host.FieldDescription})" />
+        <altmember cref="M:System.Management.Automation.Host.PSHostUserInterface.PromptForCredential(System.String,System.String,System.String,System.String)" />
+        <altmember cref="M:System.Management.Automation.Host.PSHostUserInterface.PromptForCredential(System.String,System.String,System.String,System.String,System.Management.Automation.PSCredentialTypes,System.Management.Automation.PSCredentialUIOptions)" />
+      </Docs>
+    </Member>
+    <Member MemberName="PromptForCredential">
+      <MemberSignature Language="C#" Value="public abstract System.Management.Automation.PSCredential PromptForCredential (string caption, string message, string userName, string targetName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Management.Automation.PSCredential PromptForCredential(string caption, string message, string userName, string targetName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Host.PSHostUserInterface.PromptForCredential(System.String,System.String,System.String,System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Function PromptForCredential (caption As String, message As String, userName As String, targetName As String) As PSCredential" />
+      <MemberSignature Language="F#" Value="abstract member PromptForCredential : string * string * string * string -&gt; System.Management.Automation.PSCredential" Usage="pSHostUserInterface.PromptForCredential (caption, message, userName, targetName)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.PSCredential</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="caption" Type="System.String" />
+        <Parameter Name="message" Type="System.String" />
+        <Parameter Name="userName" Type="System.String" />
+        <Parameter Name="targetName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="caption">
+            Caption for the message.
+            </param>
+        <param name="message">
+            Text description for the credential to be prompt.
+            </param>
+        <param name="userName">
+            Name of the user whose credential is to be prompted for. If set to null or empty
+            string, the function will prompt for user name first.
+            </param>
+        <param name="targetName">
+            Name of the target for which the credential is being collected.
+            </param>
+        <summary>
+            Prompt for credentials.
+            <!--In future, when we have Credential object from the security team,
+            this function will be modified to prompt using secure-path
+            if so configured.--></summary>
+        <returns>
+            User input credential.
+            </returns>
+        <remarks>To be added.</remarks>
+        <altmember cref="M:System.Management.Automation.Host.PSHostUserInterface.ReadLine" />
+        <altmember cref="M:System.Management.Automation.Host.PSHostUserInterface.ReadLineAsSecureString" />
+        <altmember cref="M:System.Management.Automation.Host.PSHostUserInterface.Prompt(System.String,System.String,System.Collections.ObjectModel.Collection{System.Management.Automation.Host.FieldDescription})" />
+        <altmember cref="M:System.Management.Automation.Host.PSHostUserInterface.PromptForChoice(System.String,System.String,System.Collections.ObjectModel.Collection{System.Management.Automation.Host.ChoiceDescription},System.Int32)" />
+        <altmember cref="M:System.Management.Automation.Host.PSHostUserInterface.PromptForCredential(System.String,System.String,System.String,System.String,System.Management.Automation.PSCredentialTypes,System.Management.Automation.PSCredentialUIOptions)" />
+      </Docs>
+    </Member>
+    <Member MemberName="PromptForCredential">
+      <MemberSignature Language="C#" Value="public abstract System.Management.Automation.PSCredential PromptForCredential (string caption, string message, string userName, string targetName, System.Management.Automation.PSCredentialTypes allowedCredentialTypes, System.Management.Automation.PSCredentialUIOptions options);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Management.Automation.PSCredential PromptForCredential(string caption, string message, string userName, string targetName, valuetype System.Management.Automation.PSCredentialTypes allowedCredentialTypes, valuetype System.Management.Automation.PSCredentialUIOptions options) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Host.PSHostUserInterface.PromptForCredential(System.String,System.String,System.String,System.String,System.Management.Automation.PSCredentialTypes,System.Management.Automation.PSCredentialUIOptions)" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Function PromptForCredential (caption As String, message As String, userName As String, targetName As String, allowedCredentialTypes As PSCredentialTypes, options As PSCredentialUIOptions) As PSCredential" />
+      <MemberSignature Language="F#" Value="abstract member PromptForCredential : string * string * string * string * System.Management.Automation.PSCredentialTypes * System.Management.Automation.PSCredentialUIOptions -&gt; System.Management.Automation.PSCredential" Usage="pSHostUserInterface.PromptForCredential (caption, message, userName, targetName, allowedCredentialTypes, options)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.PSCredential</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="caption" Type="System.String" />
+        <Parameter Name="message" Type="System.String" />
+        <Parameter Name="userName" Type="System.String" />
+        <Parameter Name="targetName" Type="System.String" />
+        <Parameter Name="allowedCredentialTypes" Type="System.Management.Automation.PSCredentialTypes" />
+        <Parameter Name="options" Type="System.Management.Automation.PSCredentialUIOptions" />
+      </Parameters>
+      <Docs>
+        <param name="caption">
+            Caption for the message.
+            </param>
+        <param name="message">
+            Text description for the credential to be prompt.
+            </param>
+        <param name="userName">
+            Name of the user whose credential is to be prompted for. If set to null or empty
+            string, the function will prompt for user name first.
+            </param>
+        <param name="targetName">
+            Name of the target for which the credential is being collected.
+            </param>
+        <param name="allowedCredentialTypes">
+            Types of credential can be supplied by the user.
+            </param>
+        <param name="options">
+            Options that control the credential gathering UI behavior
+            </param>
+        <summary>
+            Prompt for credential.
+            </summary>
+        <returns>
+            User input credential.
+            </returns>
+        <remarks>To be added.</remarks>
+        <altmember cref="M:System.Management.Automation.Host.PSHostUserInterface.ReadLine" />
+        <altmember cref="M:System.Management.Automation.Host.PSHostUserInterface.ReadLineAsSecureString" />
+        <altmember cref="M:System.Management.Automation.Host.PSHostUserInterface.Prompt(System.String,System.String,System.Collections.ObjectModel.Collection{System.Management.Automation.Host.FieldDescription})" />
+        <altmember cref="M:System.Management.Automation.Host.PSHostUserInterface.PromptForChoice(System.String,System.String,System.Collections.ObjectModel.Collection{System.Management.Automation.Host.ChoiceDescription},System.Int32)" />
+        <altmember cref="M:System.Management.Automation.Host.PSHostUserInterface.PromptForCredential(System.String,System.String,System.String,System.String)" />
+      </Docs>
+    </Member>
+    <Member MemberName="RawUI">
+      <MemberSignature Language="C#" Value="public abstract System.Management.Automation.Host.PSHostRawUserInterface RawUI { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Management.Automation.Host.PSHostRawUserInterface RawUI" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.Host.PSHostUserInterface.RawUI" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride ReadOnly Property RawUI As PSHostRawUserInterface" />
+      <MemberSignature Language="F#" Value="member this.RawUI : System.Management.Automation.Host.PSHostRawUserInterface" Usage="System.Management.Automation.Host.PSHostUserInterface.RawUI" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.Host.PSHostRawUserInterface</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets hosting application's implementation of the
+            <see cref="T:System.Management.Automation.Host.PSHostRawUserInterface" /> abstract base class
+            that implements that class.
+            </summary>
+        <value>
+            A reference to an instance of the hosting application's implementation of a class derived from
+            <see cref="T:System.Management.Automation.Host.PSHostUserInterface" />, or null to indicate that
+            low-level user interaction is not supported.
+            </value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReadLine">
+      <MemberSignature Language="C#" Value="public abstract string ReadLine ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance string ReadLine() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Host.PSHostUserInterface.ReadLine" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Function ReadLine () As String" />
+      <MemberSignature Language="F#" Value="abstract member ReadLine : unit -&gt; string" Usage="pSHostUserInterface.ReadLine " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Reads characters from the console until a newline (a carriage return) is encountered.
+            </summary>
+        <returns>
+            The characters typed by the user.
+            </returns>
+        <remarks>To be added.</remarks>
+        <altmember cref="M:System.Management.Automation.Host.PSHostUserInterface.ReadLineAsSecureString" />
+        <altmember cref="M:System.Management.Automation.Host.PSHostUserInterface.PromptForCredential(System.String,System.String,System.String,System.String)" />
+        <altmember cref="M:System.Management.Automation.Host.PSHostUserInterface.PromptForCredential(System.String,System.String,System.String,System.String,System.Management.Automation.PSCredentialTypes,System.Management.Automation.PSCredentialUIOptions)" />
+        <altmember cref="M:System.Management.Automation.Host.PSHostUserInterface.PromptForChoice(System.String,System.String,System.Collections.ObjectModel.Collection{System.Management.Automation.Host.ChoiceDescription},System.Int32)" />
+        <altmember cref="M:System.Management.Automation.Host.PSHostUserInterface.Prompt(System.String,System.String,System.Collections.ObjectModel.Collection{System.Management.Automation.Host.FieldDescription})" />
+      </Docs>
+    </Member>
+    <Member MemberName="ReadLineAsSecureString">
+      <MemberSignature Language="C#" Value="public abstract System.Security.SecureString ReadLineAsSecureString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Security.SecureString ReadLineAsSecureString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Host.PSHostUserInterface.ReadLineAsSecureString" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Function ReadLineAsSecureString () As SecureString" />
+      <MemberSignature Language="F#" Value="abstract member ReadLineAsSecureString : unit -&gt; System.Security.SecureString" Usage="pSHostUserInterface.ReadLineAsSecureString " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.SecureString</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Same as ReadLine, except that the result is a SecureString, and that the input is not echoed to the user while it is
+            collected (or is echoed in some obfuscated way, such as showing a dot for each character).
+            </summary>
+        <returns>
+            The characters typed by the user in an encrypted form.
+            </returns>
+        <remarks>
+            Note that credentials (a user name and password) should be gathered with
+            <see cref="M:System.Management.Automation.Host.PSHostUserInterface.PromptForCredential(System.String,System.String,System.String,System.String)" /><see cref="M:System.Management.Automation.Host.PSHostUserInterface.PromptForCredential(System.String,System.String,System.String,System.String,System.Management.Automation.PSCredentialTypes,System.Management.Automation.PSCredentialUIOptions)" /></remarks>
+        <altmember cref="M:System.Management.Automation.Host.PSHostUserInterface.ReadLine" />
+        <altmember cref="M:System.Management.Automation.Host.PSHostUserInterface.PromptForCredential(System.String,System.String,System.String,System.String)" />
+        <altmember cref="M:System.Management.Automation.Host.PSHostUserInterface.PromptForCredential(System.String,System.String,System.String,System.String,System.Management.Automation.PSCredentialTypes,System.Management.Automation.PSCredentialUIOptions)" />
+        <altmember cref="M:System.Management.Automation.Host.PSHostUserInterface.PromptForChoice(System.String,System.String,System.Collections.ObjectModel.Collection{System.Management.Automation.Host.ChoiceDescription},System.Int32)" />
+        <altmember cref="M:System.Management.Automation.Host.PSHostUserInterface.Prompt(System.String,System.String,System.Collections.ObjectModel.Collection{System.Management.Automation.Host.FieldDescription})" />
+      </Docs>
+    </Member>
+    <Member MemberName="SupportsVirtualTerminal">
+      <MemberSignature Language="C#" Value="public virtual bool SupportsVirtualTerminal { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool SupportsVirtualTerminal" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.Host.PSHostUserInterface.SupportsVirtualTerminal" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable ReadOnly Property SupportsVirtualTerminal As Boolean" />
+      <MemberSignature Language="F#" Value="member this.SupportsVirtualTerminal : bool" Usage="System.Management.Automation.Host.PSHostUserInterface.SupportsVirtualTerminal" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Returns true for hosts that support VT100 like virtual terminals.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Write">
+      <MemberSignature Language="C#" Value="public abstract void Write (string value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Write(string value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Host.PSHostUserInterface.Write(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Sub Write (value As String)" />
+      <MemberSignature Language="F#" Value="abstract member Write : string -&gt; unit" Usage="pSHostUserInterface.Write value" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="value">
+            The characters to be written.  null is not allowed.
+            </param>
+        <summary>
+            Writes characters to the screen buffer.  Does not append a carriage return.
+            <!-- Here we choose to just offer string parameters rather than the 18 overloads from TextWriter --></summary>
+        <remarks>To be added.</remarks>
+        <altmember cref="M:System.Management.Automation.Host.PSHostUserInterface.Write(System.ConsoleColor,System.ConsoleColor,System.String)" />
+        <altmember cref="M:System.Management.Automation.Host.PSHostUserInterface.WriteLine" />
+        <altmember cref="M:System.Management.Automation.Host.PSHostUserInterface.WriteLine(System.String)" />
+        <altmember cref="M:System.Management.Automation.Host.PSHostUserInterface.WriteLine(System.ConsoleColor,System.ConsoleColor,System.String)" />
+      </Docs>
+    </Member>
+    <Member MemberName="Write">
+      <MemberSignature Language="C#" Value="public abstract void Write (ConsoleColor foregroundColor, ConsoleColor backgroundColor, string value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Write(valuetype System.ConsoleColor foregroundColor, valuetype System.ConsoleColor backgroundColor, string value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Host.PSHostUserInterface.Write(System.ConsoleColor,System.ConsoleColor,System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Sub Write (foregroundColor As ConsoleColor, backgroundColor As ConsoleColor, value As String)" />
+      <MemberSignature Language="F#" Value="abstract member Write : ConsoleColor * ConsoleColor * string -&gt; unit" Usage="pSHostUserInterface.Write (foregroundColor, backgroundColor, value)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="foregroundColor" Type="System.ConsoleColor" />
+        <Parameter Name="backgroundColor" Type="System.ConsoleColor" />
+        <Parameter Name="value" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="foregroundColor">
+            The foreground color to display the text with.
+            </param>
+        <param name="backgroundColor">
+            The foreground color to display the text with.
+            </param>
+        <param name="value">
+            The characters to be written.  null is not allowed.
+            </param>
+        <summary>
+            Same as <see cref="M:System.Management.Automation.Host.PSHostUserInterface.Write(System.String)" />,
+            except that colors can be specified.
+            </summary>
+        <remarks>To be added.</remarks>
+        <altmember cref="M:System.Management.Automation.Host.PSHostUserInterface.Write(System.String)" />
+        <altmember cref="M:System.Management.Automation.Host.PSHostUserInterface.WriteLine" />
+        <altmember cref="M:System.Management.Automation.Host.PSHostUserInterface.WriteLine(System.String)" />
+        <altmember cref="M:System.Management.Automation.Host.PSHostUserInterface.WriteLine(System.ConsoleColor,System.ConsoleColor,System.String)" />
+      </Docs>
+    </Member>
+    <Member MemberName="WriteDebugLine">
+      <MemberSignature Language="C#" Value="public abstract void WriteDebugLine (string message);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void WriteDebugLine(string message) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Host.PSHostUserInterface.WriteDebugLine(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Sub WriteDebugLine (message As String)" />
+      <MemberSignature Language="F#" Value="abstract member WriteDebugLine : string -&gt; unit" Usage="pSHostUserInterface.WriteDebugLine message" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="message">To be added.</param>
+        <summary>
+            Invoked by <see cref="M:System.Management.Automation.Cmdlet.WriteDebug(System.String)" /> to display a debugging message
+            to the user.
+            </summary>
+        <remarks>To be added.</remarks>
+        <altmember cref="M:System.Management.Automation.Host.PSHostUserInterface.WriteProgress(System.Int64,System.Management.Automation.ProgressRecord)" />
+        <altmember cref="M:System.Management.Automation.Host.PSHostUserInterface.WriteVerboseLine(System.String)" />
+        <altmember cref="M:System.Management.Automation.Host.PSHostUserInterface.WriteWarningLine(System.String)" />
+      </Docs>
+    </Member>
+    <Member MemberName="WriteErrorLine">
+      <MemberSignature Language="C#" Value="public abstract void WriteErrorLine (string value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void WriteErrorLine(string value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Host.PSHostUserInterface.WriteErrorLine(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Sub WriteErrorLine (value As String)" />
+      <MemberSignature Language="F#" Value="abstract member WriteErrorLine : string -&gt; unit" Usage="pSHostUserInterface.WriteErrorLine value" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="value">
+            The characters to be written.
+            </param>
+        <summary>
+            Writes a line to the "error display" of the host, as opposed to the "output display," which is
+            written to by the variants of
+            <seealso cref="M:System.Management.Automation.Host.PSHostUserInterface.Write(System.String)" /><seealso cref="M:System.Management.Automation.Host.PSHostUserInterface.Write(System.ConsoleColor,System.ConsoleColor,System.String)" /><seealso cref="M:System.Management.Automation.Host.PSHostUserInterface.WriteLine" /> and
+            <seealso cref="M:System.Management.Automation.Host.PSHostUserInterface.WriteLine(System.String)" /></summary>
+        <remarks>To be added.</remarks>
+        <altmember cref="M:System.Management.Automation.Host.PSHostUserInterface.Write(System.String)" />
+        <altmember cref="M:System.Management.Automation.Host.PSHostUserInterface.Write(System.ConsoleColor,System.ConsoleColor,System.String)" />
+        <altmember cref="M:System.Management.Automation.Host.PSHostUserInterface.WriteLine" />
+        <altmember cref="M:System.Management.Automation.Host.PSHostUserInterface.WriteLine(System.String)" />
+      </Docs>
+    </Member>
+    <Member MemberName="WriteInformation">
+      <MemberSignature Language="C#" Value="public virtual void WriteInformation (System.Management.Automation.InformationRecord record);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void WriteInformation(class System.Management.Automation.InformationRecord record) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Host.PSHostUserInterface.WriteInformation(System.Management.Automation.InformationRecord)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Sub WriteInformation (record As InformationRecord)" />
+      <MemberSignature Language="F#" Value="abstract member WriteInformation : System.Management.Automation.InformationRecord -&gt; unit&#xA;override this.WriteInformation : System.Management.Automation.InformationRecord -&gt; unit" Usage="pSHostUserInterface.WriteInformation record" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="record" Type="System.Management.Automation.InformationRecord" />
+      </Parameters>
+      <Docs>
+        <param name="record">To be added.</param>
+        <summary>
+            Invoked by <see cref="M:System.Management.Automation.Cmdlet.WriteInformation(System.Management.Automation.InformationRecord)" /> to give the host a chance to intercept
+            informational messages. These should not be displayed to the user by default, but may be useful to display in
+            a separate area of the user interface.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteLine">
+      <MemberSignature Language="C#" Value="public virtual void WriteLine ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void WriteLine() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Host.PSHostUserInterface.WriteLine" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Sub WriteLine ()" />
+      <MemberSignature Language="F#" Value="abstract member WriteLine : unit -&gt; unit&#xA;override this.WriteLine : unit -&gt; unit" Usage="pSHostUserInterface.WriteLine " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            The default implementation writes a carriage return to the screen buffer.
+            <seealso cref="M:System.Management.Automation.Host.PSHostUserInterface.Write(System.String)" /><seealso cref="M:System.Management.Automation.Host.PSHostUserInterface.Write(System.ConsoleColor,System.ConsoleColor,System.String)" /><seealso cref="M:System.Management.Automation.Host.PSHostUserInterface.WriteLine(System.String)" /><seealso cref="M:System.Management.Automation.Host.PSHostUserInterface.WriteLine(System.ConsoleColor,System.ConsoleColor,System.String)" /></summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteLine">
+      <MemberSignature Language="C#" Value="public abstract void WriteLine (string value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void WriteLine(string value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Host.PSHostUserInterface.WriteLine(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Sub WriteLine (value As String)" />
+      <MemberSignature Language="F#" Value="abstract member WriteLine : string -&gt; unit" Usage="pSHostUserInterface.WriteLine value" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="value">
+            The characters to be written.  null is not allowed.
+            </param>
+        <summary>
+            Writes characters to the screen buffer, and appends a carriage return.
+            </summary>
+        <remarks>To be added.</remarks>
+        <altmember cref="M:System.Management.Automation.Host.PSHostUserInterface.Write(System.String)" />
+        <altmember cref="M:System.Management.Automation.Host.PSHostUserInterface.Write(System.ConsoleColor,System.ConsoleColor,System.String)" />
+        <altmember cref="M:System.Management.Automation.Host.PSHostUserInterface.WriteLine" />
+        <altmember cref="M:System.Management.Automation.Host.PSHostUserInterface.WriteLine(System.ConsoleColor,System.ConsoleColor,System.String)" />
+      </Docs>
+    </Member>
+    <Member MemberName="WriteLine">
+      <MemberSignature Language="C#" Value="public virtual void WriteLine (ConsoleColor foregroundColor, ConsoleColor backgroundColor, string value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void WriteLine(valuetype System.ConsoleColor foregroundColor, valuetype System.ConsoleColor backgroundColor, string value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Host.PSHostUserInterface.WriteLine(System.ConsoleColor,System.ConsoleColor,System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Sub WriteLine (foregroundColor As ConsoleColor, backgroundColor As ConsoleColor, value As String)" />
+      <MemberSignature Language="F#" Value="abstract member WriteLine : ConsoleColor * ConsoleColor * string -&gt; unit&#xA;override this.WriteLine : ConsoleColor * ConsoleColor * string -&gt; unit" Usage="pSHostUserInterface.WriteLine (foregroundColor, backgroundColor, value)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="foregroundColor" Type="System.ConsoleColor" />
+        <Parameter Name="backgroundColor" Type="System.ConsoleColor" />
+        <Parameter Name="value" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="foregroundColor">
+            The foreground color to display the text with.
+            </param>
+        <param name="backgroundColor">
+            The foreground color to display the text with.
+            </param>
+        <param name="value">
+            The characters to be written.  null is not allowed.
+            </param>
+        <summary>
+            Same as <see cref="M:System.Management.Automation.Host.PSHostUserInterface.WriteLine(System.String)" />,
+            except that colors can be specified.
+            </summary>
+        <remarks>To be added.</remarks>
+        <altmember cref="M:System.Management.Automation.Host.PSHostUserInterface.Write(System.String)" />
+        <altmember cref="M:System.Management.Automation.Host.PSHostUserInterface.Write(System.ConsoleColor,System.ConsoleColor,System.String)" />
+        <altmember cref="M:System.Management.Automation.Host.PSHostUserInterface.WriteLine" />
+        <altmember cref="M:System.Management.Automation.Host.PSHostUserInterface.WriteLine(System.String)" />
+      </Docs>
+    </Member>
+    <Member MemberName="WriteProgress">
+      <MemberSignature Language="C#" Value="public abstract void WriteProgress (long sourceId, System.Management.Automation.ProgressRecord record);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void WriteProgress(int64 sourceId, class System.Management.Automation.ProgressRecord record) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Host.PSHostUserInterface.WriteProgress(System.Int64,System.Management.Automation.ProgressRecord)" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Sub WriteProgress (sourceId As Long, record As ProgressRecord)" />
+      <MemberSignature Language="F#" Value="abstract member WriteProgress : int64 * System.Management.Automation.ProgressRecord -&gt; unit" Usage="pSHostUserInterface.WriteProgress (sourceId, record)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sourceId" Type="System.Int64" />
+        <Parameter Name="record" Type="System.Management.Automation.ProgressRecord" />
+      </Parameters>
+      <Docs>
+        <param name="sourceId">
+            Unique identifier of the source of the record.  An int64 is used because typically, the 'this' pointer of
+            the command from whence the record is originating is used, and that may be from a remote Runspace on a 64-bit
+            machine.
+            </param>
+        <param name="record">
+            The record being reported to the host.
+            </param>
+        <summary>
+            Invoked by <see cref="M:System.Management.Automation.Cmdlet.WriteProgress(System.Int64,System.Management.Automation.ProgressRecord)" /> to display a progress record.
+            </summary>
+        <remarks>To be added.</remarks>
+        <altmember cref="M:System.Management.Automation.Host.PSHostUserInterface.WriteDebugLine(System.String)" />
+        <altmember cref="M:System.Management.Automation.Host.PSHostUserInterface.WriteVerboseLine(System.String)" />
+        <altmember cref="M:System.Management.Automation.Host.PSHostUserInterface.WriteWarningLine(System.String)" />
+      </Docs>
+    </Member>
+    <Member MemberName="WriteVerboseLine">
+      <MemberSignature Language="C#" Value="public abstract void WriteVerboseLine (string message);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void WriteVerboseLine(string message) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Host.PSHostUserInterface.WriteVerboseLine(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Sub WriteVerboseLine (message As String)" />
+      <MemberSignature Language="F#" Value="abstract member WriteVerboseLine : string -&gt; unit" Usage="pSHostUserInterface.WriteVerboseLine message" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="message">To be added.</param>
+        <summary>
+            Invoked by <see cref="M:System.Management.Automation.Cmdlet.WriteVerbose(System.String)" /> to display a verbose processing message to the user.
+            </summary>
+        <remarks>To be added.</remarks>
+        <altmember cref="M:System.Management.Automation.Host.PSHostUserInterface.WriteDebugLine(System.String)" />
+        <altmember cref="M:System.Management.Automation.Host.PSHostUserInterface.WriteProgress(System.Int64,System.Management.Automation.ProgressRecord)" />
+        <altmember cref="M:System.Management.Automation.Host.PSHostUserInterface.WriteWarningLine(System.String)" />
+      </Docs>
+    </Member>
+    <Member MemberName="WriteWarningLine">
+      <MemberSignature Language="C#" Value="public abstract void WriteWarningLine (string message);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void WriteWarningLine(string message) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Host.PSHostUserInterface.WriteWarningLine(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Sub WriteWarningLine (message As String)" />
+      <MemberSignature Language="F#" Value="abstract member WriteWarningLine : string -&gt; unit" Usage="pSHostUserInterface.WriteWarningLine message" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="message">To be added.</param>
+        <summary>
+            Invoked by <see cref="M:System.Management.Automation.Cmdlet.WriteWarning(System.String)" /> to display a warning processing message to the user.
+            </summary>
+        <remarks>To be added.</remarks>
+        <altmember cref="M:System.Management.Automation.Host.PSHostUserInterface.WriteDebugLine(System.String)" />
+        <altmember cref="M:System.Management.Automation.Host.PSHostUserInterface.WriteProgress(System.Int64,System.Management.Automation.ProgressRecord)" />
+        <altmember cref="M:System.Management.Automation.Host.PSHostUserInterface.WriteVerboseLine(System.String)" />
+      </Docs>
+    </Member>
+  </Members>
+</Type>

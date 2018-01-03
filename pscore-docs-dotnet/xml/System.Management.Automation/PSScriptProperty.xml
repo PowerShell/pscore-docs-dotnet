@@ -1,0 +1,284 @@
+﻿<Type Name="PSScriptProperty" FullName="System.Management.Automation.PSScriptProperty">
+  <TypeSignature Language="C#" Value="public class PSScriptProperty : System.Management.Automation.PSPropertyInfo" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit PSScriptProperty extends System.Management.Automation.PSPropertyInfo" />
+  <TypeSignature Language="DocId" Value="T:System.Management.Automation.PSScriptProperty" />
+  <TypeSignature Language="VB.NET" Value="Public Class PSScriptProperty&#xA;Inherits PSPropertyInfo" />
+  <TypeSignature Language="F#" Value="type PSScriptProperty = class&#xA;    inherit PSPropertyInfo" />
+  <AssemblyInfo>
+    <AssemblyName>System.Management.Automation</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Management.Automation.PSPropertyInfo</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Serves as a property implemented with getter and setter scripts.
+            </summary>
+    <remarks>
+            It is permitted to subclass <see cref="T:System.Management.Automation.PSScriptProperty" />
+            but there is no established scenario for doing this, nor has it been tested.
+            </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public PSScriptProperty (string name, System.Management.Automation.ScriptBlock getterScript);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string name, class System.Management.Automation.ScriptBlock getterScript) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.PSScriptProperty.#ctor(System.String,System.Management.Automation.ScriptBlock)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (name As String, getterScript As ScriptBlock)" />
+      <MemberSignature Language="F#" Value="new System.Management.Automation.PSScriptProperty : string * System.Management.Automation.ScriptBlock -&gt; System.Management.Automation.PSScriptProperty" Usage="new System.Management.Automation.PSScriptProperty (name, getterScript)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="getterScript" Type="System.Management.Automation.ScriptBlock" />
+      </Parameters>
+      <Docs>
+        <param name="name">name of the property</param>
+        <param name="getterScript">script to be used for the property getter. $this will be this PSObject.</param>
+        <summary>
+            Initializes an instance of the PSScriptProperty class as a read only property.
+            </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">for invalid arguments</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public PSScriptProperty (string name, System.Management.Automation.ScriptBlock getterScript, System.Management.Automation.ScriptBlock setterScript);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string name, class System.Management.Automation.ScriptBlock getterScript, class System.Management.Automation.ScriptBlock setterScript) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.PSScriptProperty.#ctor(System.String,System.Management.Automation.ScriptBlock,System.Management.Automation.ScriptBlock)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (name As String, getterScript As ScriptBlock, setterScript As ScriptBlock)" />
+      <MemberSignature Language="F#" Value="new System.Management.Automation.PSScriptProperty : string * System.Management.Automation.ScriptBlock * System.Management.Automation.ScriptBlock -&gt; System.Management.Automation.PSScriptProperty" Usage="new System.Management.Automation.PSScriptProperty (name, getterScript, setterScript)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="getterScript" Type="System.Management.Automation.ScriptBlock" />
+        <Parameter Name="setterScript" Type="System.Management.Automation.ScriptBlock" />
+      </Parameters>
+      <Docs>
+        <param name="name">Name of this property</param>
+        <param name="getterScript">script to be used for the property getter. $this will be this PSObject.</param>
+        <param name="setterScript">script to be used for the property setter. $this will be this PSObject and $args(1) will be the value to set.</param>
+        <summary>
+            Initializes an instance of the PSScriptProperty class as a read only
+            property. getterScript or setterScript can be null, but not both.
+            </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">for invalid arguments</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Copy">
+      <MemberSignature Language="C#" Value="public override System.Management.Automation.PSMemberInfo Copy ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Management.Automation.PSMemberInfo Copy() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.PSScriptProperty.Copy" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Function Copy () As PSMemberInfo" />
+      <MemberSignature Language="F#" Value="override this.Copy : unit -&gt; System.Management.Automation.PSMemberInfo" Usage="pSScriptProperty.Copy " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.PSMemberInfo</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            returns a new PSMemberInfo that is a copy of this PSMemberInfo
+            </summary>
+        <returns>a new PSMemberInfo that is a copy of this PSMemberInfo</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetterScript">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.ScriptBlock GetterScript { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Management.Automation.ScriptBlock GetterScript" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.PSScriptProperty.GetterScript" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property GetterScript As ScriptBlock" />
+      <MemberSignature Language="F#" Value="member this.GetterScript : System.Management.Automation.ScriptBlock" Usage="System.Management.Automation.PSScriptProperty.GetterScript" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.ScriptBlock</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the script used for the property getter. It might be null.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsGettable">
+      <MemberSignature Language="C#" Value="public override bool IsGettable { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsGettable" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.PSScriptProperty.IsGettable" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides ReadOnly Property IsGettable As Boolean" />
+      <MemberSignature Language="F#" Value="member this.IsGettable : bool" Usage="System.Management.Automation.PSScriptProperty.IsGettable" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets true if this property can be read
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsSettable">
+      <MemberSignature Language="C#" Value="public override bool IsSettable { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsSettable" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.PSScriptProperty.IsSettable" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides ReadOnly Property IsSettable As Boolean" />
+      <MemberSignature Language="F#" Value="member this.IsSettable : bool" Usage="System.Management.Automation.PSScriptProperty.IsSettable" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets true if this property can be set
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MemberType">
+      <MemberSignature Language="C#" Value="public override System.Management.Automation.PSMemberTypes MemberType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Management.Automation.PSMemberTypes MemberType" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.PSScriptProperty.MemberType" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides ReadOnly Property MemberType As PSMemberTypes" />
+      <MemberSignature Language="F#" Value="member this.MemberType : System.Management.Automation.PSMemberTypes" Usage="System.Management.Automation.PSScriptProperty.MemberType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.PSMemberTypes</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the member type
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetterScript">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.ScriptBlock SetterScript { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Management.Automation.ScriptBlock SetterScript" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.PSScriptProperty.SetterScript" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property SetterScript As ScriptBlock" />
+      <MemberSignature Language="F#" Value="member this.SetterScript : System.Management.Automation.ScriptBlock" Usage="System.Management.Automation.PSScriptProperty.SetterScript" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.ScriptBlock</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the script used for the property setter. It might be null.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.PSScriptProperty.ToString" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Function ToString () As String" />
+      <MemberSignature Language="F#" Value="override this.ToString : unit -&gt; string" Usage="pSScriptProperty.ToString " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Returns the string representation of this property
+            </summary>
+        <returns>This property as a string</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TypeNameOfValue">
+      <MemberSignature Language="C#" Value="public override string TypeNameOfValue { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string TypeNameOfValue" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.PSScriptProperty.TypeNameOfValue" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides ReadOnly Property TypeNameOfValue As String" />
+      <MemberSignature Language="F#" Value="member this.TypeNameOfValue : string" Usage="System.Management.Automation.PSScriptProperty.TypeNameOfValue" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the type of the value for this member. Currently this always returns typeof(object).FullName.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Value">
+      <MemberSignature Language="C#" Value="public override object Value { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object Value" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.PSScriptProperty.Value" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Property Value As Object" />
+      <MemberSignature Language="F#" Value="member this.Value : obj with get, set" Usage="System.Management.Automation.PSScriptProperty.Value" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets and Sets the value of this property
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.Management.Automation.GetValueException">When getting and there is no getter,
+            when the getter throws an exception or when there is no Runspace to run the script.
+            </exception>
+        <exception cref="T:System.Management.Automation.SetValueException">When setting and there is no setter,
+            when the setter throws an exception or when there is no Runspace to run the script.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

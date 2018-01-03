@@ -1,0 +1,117 @@
+﻿<Type Name="BlockStatementAst" FullName="System.Management.Automation.Language.BlockStatementAst">
+  <TypeSignature Language="C#" Value="public class BlockStatementAst : System.Management.Automation.Language.StatementAst" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit BlockStatementAst extends System.Management.Automation.Language.StatementAst" />
+  <TypeSignature Language="DocId" Value="T:System.Management.Automation.Language.BlockStatementAst" />
+  <TypeSignature Language="VB.NET" Value="Public Class BlockStatementAst&#xA;Inherits StatementAst" />
+  <TypeSignature Language="F#" Value="type BlockStatementAst = class&#xA;    inherit StatementAst" />
+  <AssemblyInfo>
+    <AssemblyName>System.Management.Automation</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Management.Automation.Language.StatementAst</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            The ast that represents a scriptblock with a keyword name. This is normally allowed only for script workflow.
+            e.g. <c>parallel { ... }</c> or <c>sequence { ... }</c>.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public BlockStatementAst (System.Management.Automation.Language.IScriptExtent extent, System.Management.Automation.Language.Token kind, System.Management.Automation.Language.StatementBlockAst body);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Management.Automation.Language.IScriptExtent extent, class System.Management.Automation.Language.Token kind, class System.Management.Automation.Language.StatementBlockAst body) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Language.BlockStatementAst.#ctor(System.Management.Automation.Language.IScriptExtent,System.Management.Automation.Language.Token,System.Management.Automation.Language.StatementBlockAst)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (extent As IScriptExtent, kind As Token, body As StatementBlockAst)" />
+      <MemberSignature Language="F#" Value="new System.Management.Automation.Language.BlockStatementAst : System.Management.Automation.Language.IScriptExtent * System.Management.Automation.Language.Token * System.Management.Automation.Language.StatementBlockAst -&gt; System.Management.Automation.Language.BlockStatementAst" Usage="new System.Management.Automation.Language.BlockStatementAst (extent, kind, body)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="extent" Type="System.Management.Automation.Language.IScriptExtent" />
+        <Parameter Name="kind" Type="System.Management.Automation.Language.Token" />
+        <Parameter Name="body" Type="System.Management.Automation.Language.StatementBlockAst" />
+      </Parameters>
+      <Docs>
+        <param name="extent"></param>
+        <param name="kind"></param>
+        <param name="body"></param>
+        <summary>
+            Construct a keyword block expression
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Body">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.Language.StatementBlockAst Body { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Management.Automation.Language.StatementBlockAst Body" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.Language.BlockStatementAst.Body" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Body As StatementBlockAst" />
+      <MemberSignature Language="F#" Value="member this.Body : System.Management.Automation.Language.StatementBlockAst" Usage="System.Management.Automation.Language.BlockStatementAst.Body" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.Language.StatementBlockAst</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The scriptblockexpression that has a keyword applied to it. This property is nerver null.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Copy">
+      <MemberSignature Language="C#" Value="public override System.Management.Automation.Language.Ast Copy ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Management.Automation.Language.Ast Copy() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Language.BlockStatementAst.Copy" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Function Copy () As Ast" />
+      <MemberSignature Language="F#" Value="override this.Copy : unit -&gt; System.Management.Automation.Language.Ast" Usage="blockStatementAst.Copy " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.Language.Ast</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Copy the BlockStatementAst instance
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Kind">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.Language.Token Kind { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Management.Automation.Language.Token Kind" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.Language.BlockStatementAst.Kind" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Kind As Token" />
+      <MemberSignature Language="F#" Value="member this.Kind : System.Management.Automation.Language.Token" Usage="System.Management.Automation.Language.BlockStatementAst.Kind" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.Language.Token</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The keyword name
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

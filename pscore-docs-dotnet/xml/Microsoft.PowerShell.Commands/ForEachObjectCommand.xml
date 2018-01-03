@@ -1,0 +1,331 @@
+﻿<Type Name="ForEachObjectCommand" FullName="Microsoft.PowerShell.Commands.ForEachObjectCommand">
+  <TypeSignature Language="C#" Value="public sealed class ForEachObjectCommand : System.Management.Automation.PSCmdlet" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit ForEachObjectCommand extends System.Management.Automation.PSCmdlet" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.PowerShell.Commands.ForEachObjectCommand" />
+  <TypeSignature Language="VB.NET" Value="Public NotInheritable Class ForEachObjectCommand&#xA;Inherits PSCmdlet" />
+  <TypeSignature Language="F#" Value="type ForEachObjectCommand = class&#xA;    inherit PSCmdlet" />
+  <AssemblyInfo>
+    <AssemblyName>System.Management.Automation</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Management.Automation.PSCmdlet</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Management.Automation.Cmdlet("ForEach", "Object", DefaultParameterSetName="ScriptBlockSet", HelpUri="https://go.microsoft.com/fwlink/?LinkID=113300", RemotingCapability=System.Management.Automation.RemotingCapability.None, SupportsShouldProcess=true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>
+            Implements a cmdlet that applies a script block
+            to each element of the pipeline.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ForEachObjectCommand ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Commands.ForEachObjectCommand.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New ()" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ArgumentList">
+      <MemberSignature Language="C#" Value="public object[] ArgumentList { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object[] ArgumentList" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.ForEachObjectCommand.ArgumentList" />
+      <MemberSignature Language="VB.NET" Value="Public Property ArgumentList As Object()" />
+      <MemberSignature Language="F#" Value="member this.ArgumentList : obj[] with get, set" Usage="Microsoft.PowerShell.Commands.ForEachObjectCommand.ArgumentList" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Alias(Mono.Cecil.CustomAttributeArgument[])</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="PropertyAndMethodSet", ValueFromRemainingArguments=true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Object[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The arguments passed to a method invocation
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Begin">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.ScriptBlock Begin { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Management.Automation.ScriptBlock Begin" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.ForEachObjectCommand.Begin" />
+      <MemberSignature Language="VB.NET" Value="Public Property Begin As ScriptBlock" />
+      <MemberSignature Language="F#" Value="member this.Begin : System.Management.Automation.ScriptBlock with get, set" Usage="Microsoft.PowerShell.Commands.ForEachObjectCommand.Begin" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="ScriptBlockSet")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.ScriptBlock</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The script block to apply in begin processing
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginProcessing">
+      <MemberSignature Language="C#" Value="protected override void BeginProcessing ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void BeginProcessing() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Commands.ForEachObjectCommand.BeginProcessing" />
+      <MemberSignature Language="VB.NET" Value="Protected Overrides Sub BeginProcessing ()" />
+      <MemberSignature Language="F#" Value="override this.BeginProcessing : unit -&gt; unit" Usage="forEachObjectCommand.BeginProcessing " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Execute the begin scriptblock at the start of processing
+            </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.Management.Automation.ParseException">could not parse script</exception>
+        <exception cref="T:System.Management.Automation.RuntimeException">see Pipeline.Invoke</exception>
+        <exception cref="T:System.Management.Automation.ParameterBindingException">see Pipeline.Invoke</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="End">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.ScriptBlock End { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Management.Automation.ScriptBlock End" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.ForEachObjectCommand.End" />
+      <MemberSignature Language="VB.NET" Value="Public Property End As ScriptBlock" />
+      <MemberSignature Language="F#" Value="member this.End : System.Management.Automation.ScriptBlock with get, set" Usage="Microsoft.PowerShell.Commands.ForEachObjectCommand.End" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="ScriptBlockSet")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.ScriptBlock</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The script block to apply in complete processing
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EndProcessing">
+      <MemberSignature Language="C#" Value="protected override void EndProcessing ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void EndProcessing() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Commands.ForEachObjectCommand.EndProcessing" />
+      <MemberSignature Language="VB.NET" Value="Protected Overrides Sub EndProcessing ()" />
+      <MemberSignature Language="F#" Value="override this.EndProcessing : unit -&gt; unit" Usage="forEachObjectCommand.EndProcessing " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Execute the end scriptblock when the pipeline is complete
+            </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.Management.Automation.ParseException">could not parse script</exception>
+        <exception cref="T:System.Management.Automation.RuntimeException">see Pipeline.Invoke</exception>
+        <exception cref="T:System.Management.Automation.ParameterBindingException">see Pipeline.Invoke</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="InputObject">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.PSObject InputObject { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Management.Automation.PSObject InputObject" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.ForEachObjectCommand.InputObject" />
+      <MemberSignature Language="VB.NET" Value="Public Property InputObject As PSObject" />
+      <MemberSignature Language="F#" Value="member this.InputObject : System.Management.Automation.PSObject with get, set" Usage="Microsoft.PowerShell.Commands.ForEachObjectCommand.InputObject" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="ScriptBlockSet", ValueFromPipeline=true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="PropertyAndMethodSet", ValueFromPipeline=true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.PSObject</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            This parameter specifies the current pipeline object 
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MemberName">
+      <MemberSignature Language="C#" Value="public string MemberName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string MemberName" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.ForEachObjectCommand.MemberName" />
+      <MemberSignature Language="VB.NET" Value="Public Property MemberName As String" />
+      <MemberSignature Language="F#" Value="member this.MemberName : string with get, set" Usage="Microsoft.PowerShell.Commands.ForEachObjectCommand.MemberName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(Mandatory=true, ParameterSetName="PropertyAndMethodSet", Position=0)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.ValidateNotNullOrEmpty</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The property or method name
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Process">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.ScriptBlock[] Process { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Management.Automation.ScriptBlock[] Process" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.ForEachObjectCommand.Process" />
+      <MemberSignature Language="VB.NET" Value="Public Property Process As ScriptBlock()" />
+      <MemberSignature Language="F#" Value="member this.Process : System.Management.Automation.ScriptBlock[] with get, set" Usage="Microsoft.PowerShell.Commands.ForEachObjectCommand.Process" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.AllowEmptyCollection</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.AllowNull</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(Mandatory=true, ParameterSetName="ScriptBlockSet", Position=0)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.ScriptBlock[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The script block to apply
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ProcessRecord">
+      <MemberSignature Language="C#" Value="protected override void ProcessRecord ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void ProcessRecord() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Commands.ForEachObjectCommand.ProcessRecord" />
+      <MemberSignature Language="VB.NET" Value="Protected Overrides Sub ProcessRecord ()" />
+      <MemberSignature Language="F#" Value="override this.ProcessRecord : unit -&gt; unit" Usage="forEachObjectCommand.ProcessRecord " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Execute the processing script blocks on the current pipeline object
+            which is passed as it's only parameter.
+            </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.Management.Automation.ParseException">could not parse script</exception>
+        <exception cref="T:System.Management.Automation.RuntimeException">see Pipeline.Invoke</exception>
+        <exception cref="T:System.Management.Automation.ParameterBindingException">see Pipeline.Invoke</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="RemainingScripts">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.ScriptBlock[] RemainingScripts { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Management.Automation.ScriptBlock[] RemainingScripts" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.ForEachObjectCommand.RemainingScripts" />
+      <MemberSignature Language="VB.NET" Value="Public Property RemainingScripts As ScriptBlock()" />
+      <MemberSignature Language="F#" Value="member this.RemainingScripts : System.Management.Automation.ScriptBlock[] with get, set" Usage="Microsoft.PowerShell.Commands.ForEachObjectCommand.RemainingScripts" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.AllowEmptyCollection</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.AllowNull</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="ScriptBlockSet", ValueFromRemainingArguments=true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.ScriptBlock[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The remaining script blocks to apply
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

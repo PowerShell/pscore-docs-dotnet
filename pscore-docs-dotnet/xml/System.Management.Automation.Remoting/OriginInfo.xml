@@ -1,0 +1,172 @@
+﻿<Type Name="OriginInfo" FullName="System.Management.Automation.Remoting.OriginInfo">
+  <TypeSignature Language="C#" Value="public class OriginInfo" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable beforefieldinit OriginInfo extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Management.Automation.Remoting.OriginInfo" />
+  <TypeSignature Language="VB.NET" Value="Public Class OriginInfo" />
+  <TypeSignature Language="F#" Value="type OriginInfo = class" />
+  <AssemblyInfo>
+    <AssemblyName>System.Management.Automation</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.Serialization.DataContract</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>
+            Contains OriginInfo for an error record
+            </summary>
+    <remarks>This class should only be used when
+            defining origin information for error records.
+            In case of output objects, the information
+            should directly be added to the object as
+            properties</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public OriginInfo (string computerName, Guid runspaceID);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string computerName, valuetype System.Guid runspaceID) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Remoting.OriginInfo.#ctor(System.String,System.Guid)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (computerName As String, runspaceID As Guid)" />
+      <MemberSignature Language="F#" Value="new System.Management.Automation.Remoting.OriginInfo : string * Guid -&gt; System.Management.Automation.Remoting.OriginInfo" Usage="new System.Management.Automation.Remoting.OriginInfo (computerName, runspaceID)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="computerName" Type="System.String" />
+        <Parameter Name="runspaceID" Type="System.Guid" />
+      </Parameters>
+      <Docs>
+        <param name="computerName">machine name</param>
+        <param name="runspaceID">instance id of runspace</param>
+        <summary>
+            public constructor
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public OriginInfo (string computerName, Guid runspaceID, Guid instanceID);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string computerName, valuetype System.Guid runspaceID, valuetype System.Guid instanceID) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Remoting.OriginInfo.#ctor(System.String,System.Guid,System.Guid)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (computerName As String, runspaceID As Guid, instanceID As Guid)" />
+      <MemberSignature Language="F#" Value="new System.Management.Automation.Remoting.OriginInfo : string * Guid * Guid -&gt; System.Management.Automation.Remoting.OriginInfo" Usage="new System.Management.Automation.Remoting.OriginInfo (computerName, runspaceID, instanceID)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="computerName" Type="System.String" />
+        <Parameter Name="runspaceID" Type="System.Guid" />
+        <Parameter Name="instanceID" Type="System.Guid" />
+      </Parameters>
+      <Docs>
+        <param name="computerName">machine name</param>
+        <param name="runspaceID">instance id of runspace</param>
+        <param name="instanceID">instance id for the origin object</param>
+        <summary>
+            public constructor
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InstanceID">
+      <MemberSignature Language="C#" Value="public Guid InstanceID { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Guid InstanceID" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.Remoting.OriginInfo.InstanceID" />
+      <MemberSignature Language="VB.NET" Value="Public Property InstanceID As Guid" />
+      <MemberSignature Language="F#" Value="member this.InstanceID : Guid with get, set" Usage="System.Management.Automation.Remoting.OriginInfo.InstanceID" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Guid</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Error record source instance ID
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PSComputerName">
+      <MemberSignature Language="C#" Value="public string PSComputerName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string PSComputerName" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.Remoting.OriginInfo.PSComputerName" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property PSComputerName As String" />
+      <MemberSignature Language="F#" Value="member this.PSComputerName : string" Usage="System.Management.Automation.Remoting.OriginInfo.PSComputerName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The HostEntry information for the machine on
+            which this information originated
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RunspaceID">
+      <MemberSignature Language="C#" Value="public Guid RunspaceID { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Guid RunspaceID" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.Remoting.OriginInfo.RunspaceID" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property RunspaceID As Guid" />
+      <MemberSignature Language="F#" Value="member this.RunspaceID : Guid" Usage="System.Management.Automation.Remoting.OriginInfo.RunspaceID" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Guid</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Runspace instance ID
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Remoting.OriginInfo.ToString" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Function ToString () As String" />
+      <MemberSignature Language="F#" Value="override this.ToString : unit -&gt; string" Usage="originInfo.ToString " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Overridden ToString() method
+            </summary>
+        <returns>returns the computername</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

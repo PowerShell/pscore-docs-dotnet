@@ -1,0 +1,1105 @@
+﻿<Type Name="PSJobProxy" FullName="System.Management.Automation.PSJobProxy">
+  <TypeSignature Language="C#" Value="public sealed class PSJobProxy : System.Management.Automation.Job2" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit PSJobProxy extends System.Management.Automation.Job2" />
+  <TypeSignature Language="DocId" Value="T:System.Management.Automation.PSJobProxy" />
+  <TypeSignature Language="VB.NET" Value="Public NotInheritable Class PSJobProxy&#xA;Inherits Job2" />
+  <TypeSignature Language="F#" Value="type PSJobProxy = class&#xA;    inherit Job2" />
+  <AssemblyInfo>
+    <AssemblyName>System.Management.Automation</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Management.Automation.Job2</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Class that will serve as the API for hosting and executing
+            workflows in PowerShell. This class will have a behavior
+            similar to how the Runspace and PowerShell APIs behave in
+            the remoting scenario. The objects on the client side act
+            as proxies to the real objects on the server
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Create">
+      <MemberSignature Language="C#" Value="public static System.Collections.Generic.ICollection&lt;System.Management.Automation.PSJobProxy&gt; Create (System.Management.Automation.Runspaces.Runspace runspace);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Collections.Generic.ICollection`1&lt;class System.Management.Automation.PSJobProxy&gt; Create(class System.Management.Automation.Runspaces.Runspace runspace) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.PSJobProxy.Create(System.Management.Automation.Runspaces.Runspace)" />
+      <MemberSignature Language="F#" Value="static member Create : System.Management.Automation.Runspaces.Runspace -&gt; System.Collections.Generic.ICollection&lt;System.Management.Automation.PSJobProxy&gt;" Usage="System.Management.Automation.PSJobProxy.Create runspace" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.ICollection&lt;System.Management.Automation.PSJobProxy&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="runspace" Type="System.Management.Automation.Runspaces.Runspace" />
+      </Parameters>
+      <Docs>
+        <param name="runspace">Runspace containing the jobs to base the proxy on.</param>
+        <summary>
+            Queries the runspace for jobs and constructs a collection of job proxies to interact with them.
+            </summary>
+        <returns>A collection of job proxies that represent the jobs collected based on the filter.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Create">
+      <MemberSignature Language="C#" Value="public static System.Collections.Generic.ICollection&lt;System.Management.Automation.PSJobProxy&gt; Create (System.Management.Automation.Runspaces.RunspacePool runspacePool);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Collections.Generic.ICollection`1&lt;class System.Management.Automation.PSJobProxy&gt; Create(class System.Management.Automation.Runspaces.RunspacePool runspacePool) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.PSJobProxy.Create(System.Management.Automation.Runspaces.RunspacePool)" />
+      <MemberSignature Language="F#" Value="static member Create : System.Management.Automation.Runspaces.RunspacePool -&gt; System.Collections.Generic.ICollection&lt;System.Management.Automation.PSJobProxy&gt;" Usage="System.Management.Automation.PSJobProxy.Create runspacePool" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.ICollection&lt;System.Management.Automation.PSJobProxy&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="runspacePool" Type="System.Management.Automation.Runspaces.RunspacePool" />
+      </Parameters>
+      <Docs>
+        <param name="runspacePool">RunspacePool containing the jobs to base the proxy on.</param>
+        <summary>
+            Queries the runspace for jobs and constructs a collection of job proxies to interact with them.
+            </summary>
+        <returns>A collection of job proxies that represent the jobs collected based on the filter.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Create">
+      <MemberSignature Language="C#" Value="public static System.Collections.Generic.ICollection&lt;System.Management.Automation.PSJobProxy&gt; Create (System.Management.Automation.Runspaces.Runspace runspace, System.Collections.Hashtable filter);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Collections.Generic.ICollection`1&lt;class System.Management.Automation.PSJobProxy&gt; Create(class System.Management.Automation.Runspaces.Runspace runspace, class System.Collections.Hashtable filter) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.PSJobProxy.Create(System.Management.Automation.Runspaces.Runspace,System.Collections.Hashtable)" />
+      <MemberSignature Language="F#" Value="static member Create : System.Management.Automation.Runspaces.Runspace * System.Collections.Hashtable -&gt; System.Collections.Generic.ICollection&lt;System.Management.Automation.PSJobProxy&gt;" Usage="System.Management.Automation.PSJobProxy.Create (runspace, filter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.ICollection&lt;System.Management.Automation.PSJobProxy&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="runspace" Type="System.Management.Automation.Runspaces.Runspace" />
+        <Parameter Name="filter" Type="System.Collections.Hashtable" />
+      </Parameters>
+      <Docs>
+        <param name="runspace">Runspace containing the jobs to base the proxy on.</param>
+        <param name="filter">Hashtable to use for the Get-Job -filter command.</param>
+        <summary>
+            Queries the runspace for jobs and constructs a collection of job proxies to interact with them.
+            </summary>
+        <returns>A collection of job proxies that represent the jobs collected based on the filter.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Create">
+      <MemberSignature Language="C#" Value="public static System.Collections.Generic.ICollection&lt;System.Management.Automation.PSJobProxy&gt; Create (System.Management.Automation.Runspaces.RunspacePool runspacePool, System.Collections.Hashtable filter);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Collections.Generic.ICollection`1&lt;class System.Management.Automation.PSJobProxy&gt; Create(class System.Management.Automation.Runspaces.RunspacePool runspacePool, class System.Collections.Hashtable filter) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.PSJobProxy.Create(System.Management.Automation.Runspaces.RunspacePool,System.Collections.Hashtable)" />
+      <MemberSignature Language="F#" Value="static member Create : System.Management.Automation.Runspaces.RunspacePool * System.Collections.Hashtable -&gt; System.Collections.Generic.ICollection&lt;System.Management.Automation.PSJobProxy&gt;" Usage="System.Management.Automation.PSJobProxy.Create (runspacePool, filter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.ICollection&lt;System.Management.Automation.PSJobProxy&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="runspacePool" Type="System.Management.Automation.Runspaces.RunspacePool" />
+        <Parameter Name="filter" Type="System.Collections.Hashtable" />
+      </Parameters>
+      <Docs>
+        <param name="runspacePool">RunspacePool containing the jobs to base the proxy on.</param>
+        <param name="filter">Hashtable to use for the Get-Job -filter command.</param>
+        <summary>
+            Queries the runspace for jobs and constructs a collection of job proxies to interact with them.
+            </summary>
+        <returns>A collection of job proxies that represent the jobs collected based on the filter.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Create">
+      <MemberSignature Language="C#" Value="public static System.Collections.Generic.ICollection&lt;System.Management.Automation.PSJobProxy&gt; Create (System.Management.Automation.Runspaces.Runspace runspace, System.Collections.Hashtable filter, bool receiveImmediately);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Collections.Generic.ICollection`1&lt;class System.Management.Automation.PSJobProxy&gt; Create(class System.Management.Automation.Runspaces.Runspace runspace, class System.Collections.Hashtable filter, bool receiveImmediately) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.PSJobProxy.Create(System.Management.Automation.Runspaces.Runspace,System.Collections.Hashtable,System.Boolean)" />
+      <MemberSignature Language="F#" Value="static member Create : System.Management.Automation.Runspaces.Runspace * System.Collections.Hashtable * bool -&gt; System.Collections.Generic.ICollection&lt;System.Management.Automation.PSJobProxy&gt;" Usage="System.Management.Automation.PSJobProxy.Create (runspace, filter, receiveImmediately)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.ICollection&lt;System.Management.Automation.PSJobProxy&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="runspace" Type="System.Management.Automation.Runspaces.Runspace" />
+        <Parameter Name="filter" Type="System.Collections.Hashtable" />
+        <Parameter Name="receiveImmediately" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="runspace">Runspace containing the jobs to base the proxy on.</param>
+        <param name="filter">Hashtable to use for the Get-Job -filter command.</param>
+        <param name="receiveImmediately">If true, the data streaming will start immediately. If false,
+            the user must call "ReceiveJob()" to start data streaming.</param>
+        <summary>
+            Queries the runspace for jobs and constructs a collection of job proxies to interact with them.
+            </summary>
+        <returns>A collection of job proxies that represent the jobs collected based on the filter.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Create">
+      <MemberSignature Language="C#" Value="public static System.Collections.Generic.ICollection&lt;System.Management.Automation.PSJobProxy&gt; Create (System.Management.Automation.Runspaces.RunspacePool runspacePool, System.Collections.Hashtable filter, bool receiveImmediately);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Collections.Generic.ICollection`1&lt;class System.Management.Automation.PSJobProxy&gt; Create(class System.Management.Automation.Runspaces.RunspacePool runspacePool, class System.Collections.Hashtable filter, bool receiveImmediately) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.PSJobProxy.Create(System.Management.Automation.Runspaces.RunspacePool,System.Collections.Hashtable,System.Boolean)" />
+      <MemberSignature Language="F#" Value="static member Create : System.Management.Automation.Runspaces.RunspacePool * System.Collections.Hashtable * bool -&gt; System.Collections.Generic.ICollection&lt;System.Management.Automation.PSJobProxy&gt;" Usage="System.Management.Automation.PSJobProxy.Create (runspacePool, filter, receiveImmediately)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.ICollection&lt;System.Management.Automation.PSJobProxy&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="runspacePool" Type="System.Management.Automation.Runspaces.RunspacePool" />
+        <Parameter Name="filter" Type="System.Collections.Hashtable" />
+        <Parameter Name="receiveImmediately" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="runspacePool">RunspacePool containing the jobs to base the proxy on.</param>
+        <param name="filter">Hashtable to use for the Get-Job -filter command.</param>
+        <param name="receiveImmediately">If true, the data streaming will start immediately. If false,
+            the user must call "ReceiveJob()" to start data streaming.</param>
+        <summary>
+            Queries the runspace for jobs and constructs a collection of job proxies to interact with them.
+            </summary>
+        <returns>A collection of job proxies that represent the jobs collected based on the filter.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Create">
+      <MemberSignature Language="C#" Value="public static System.Collections.Generic.ICollection&lt;System.Management.Automation.PSJobProxy&gt; Create (System.Management.Automation.Runspaces.Runspace runspace, System.Collections.Hashtable filter, EventHandler&lt;System.Management.Automation.JobDataAddedEventArgs&gt; dataAdded, EventHandler&lt;System.Management.Automation.JobStateEventArgs&gt; stateChanged);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Collections.Generic.ICollection`1&lt;class System.Management.Automation.PSJobProxy&gt; Create(class System.Management.Automation.Runspaces.Runspace runspace, class System.Collections.Hashtable filter, class System.EventHandler`1&lt;class System.Management.Automation.JobDataAddedEventArgs&gt; dataAdded, class System.EventHandler`1&lt;class System.Management.Automation.JobStateEventArgs&gt; stateChanged) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.PSJobProxy.Create(System.Management.Automation.Runspaces.Runspace,System.Collections.Hashtable,System.EventHandler{System.Management.Automation.JobDataAddedEventArgs},System.EventHandler{System.Management.Automation.JobStateEventArgs})" />
+      <MemberSignature Language="F#" Value="static member Create : System.Management.Automation.Runspaces.Runspace * System.Collections.Hashtable * EventHandler&lt;System.Management.Automation.JobDataAddedEventArgs&gt; * EventHandler&lt;System.Management.Automation.JobStateEventArgs&gt; -&gt; System.Collections.Generic.ICollection&lt;System.Management.Automation.PSJobProxy&gt;" Usage="System.Management.Automation.PSJobProxy.Create (runspace, filter, dataAdded, stateChanged)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.ICollection&lt;System.Management.Automation.PSJobProxy&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="runspace" Type="System.Management.Automation.Runspaces.Runspace" />
+        <Parameter Name="filter" Type="System.Collections.Hashtable" />
+        <Parameter Name="dataAdded" Type="System.EventHandler&lt;System.Management.Automation.JobDataAddedEventArgs&gt;" />
+        <Parameter Name="stateChanged" Type="System.EventHandler&lt;System.Management.Automation.JobStateEventArgs&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="runspace">Runspace containing the jobs to base the proxy on.</param>
+        <param name="filter">Hashtable to use for the Get-Job -filter command.</param>
+        <param name="dataAdded">Handler to subscribe to any child job data added events.</param>
+        <param name="stateChanged">Handler to subscribe to any child job state changed events.</param>
+        <summary>
+            Queries the runspace for jobs and constructs a collection of job proxies to interact with them.
+            </summary>
+        <returns>A collection of job proxies that represent the jobs collected based on the filter.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Create">
+      <MemberSignature Language="C#" Value="public static System.Collections.Generic.ICollection&lt;System.Management.Automation.PSJobProxy&gt; Create (System.Management.Automation.Runspaces.RunspacePool runspacePool, System.Collections.Hashtable filter, EventHandler&lt;System.Management.Automation.JobDataAddedEventArgs&gt; dataAdded, EventHandler&lt;System.Management.Automation.JobStateEventArgs&gt; stateChanged);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Collections.Generic.ICollection`1&lt;class System.Management.Automation.PSJobProxy&gt; Create(class System.Management.Automation.Runspaces.RunspacePool runspacePool, class System.Collections.Hashtable filter, class System.EventHandler`1&lt;class System.Management.Automation.JobDataAddedEventArgs&gt; dataAdded, class System.EventHandler`1&lt;class System.Management.Automation.JobStateEventArgs&gt; stateChanged) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.PSJobProxy.Create(System.Management.Automation.Runspaces.RunspacePool,System.Collections.Hashtable,System.EventHandler{System.Management.Automation.JobDataAddedEventArgs},System.EventHandler{System.Management.Automation.JobStateEventArgs})" />
+      <MemberSignature Language="F#" Value="static member Create : System.Management.Automation.Runspaces.RunspacePool * System.Collections.Hashtable * EventHandler&lt;System.Management.Automation.JobDataAddedEventArgs&gt; * EventHandler&lt;System.Management.Automation.JobStateEventArgs&gt; -&gt; System.Collections.Generic.ICollection&lt;System.Management.Automation.PSJobProxy&gt;" Usage="System.Management.Automation.PSJobProxy.Create (runspacePool, filter, dataAdded, stateChanged)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.ICollection&lt;System.Management.Automation.PSJobProxy&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="runspacePool" Type="System.Management.Automation.Runspaces.RunspacePool" />
+        <Parameter Name="filter" Type="System.Collections.Hashtable" />
+        <Parameter Name="dataAdded" Type="System.EventHandler&lt;System.Management.Automation.JobDataAddedEventArgs&gt;" />
+        <Parameter Name="stateChanged" Type="System.EventHandler&lt;System.Management.Automation.JobStateEventArgs&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="runspacePool">RunspacePool containing the jobs to base the proxy on.</param>
+        <param name="filter">Hashtable to use for the Get-Job -filter command.</param>
+        <param name="dataAdded">Handler to subscribe to any child job data added events.</param>
+        <param name="stateChanged">Handler to subscribe to any child job state changed events.</param>
+        <summary>
+            Queries the runspace for jobs and constructs a collection of job proxies to interact with them.
+            </summary>
+        <returns>A collection of job proxies that represent the jobs collected based on the filter.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="protected override void Dispose (bool disposing);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void Dispose(bool disposing) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.PSJobProxy.Dispose(System.Boolean)" />
+      <MemberSignature Language="VB.NET" Value="Protected Overrides Sub Dispose (disposing As Boolean)" />
+      <MemberSignature Language="F#" Value="override this.Dispose : bool -&gt; unit" Usage="pSJobProxy.Dispose disposing" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="disposing" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="disposing">true when being disposed</param>
+        <summary>
+            Dispose all managed resources
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HasMoreData">
+      <MemberSignature Language="C#" Value="public override bool HasMoreData { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool HasMoreData" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.PSJobProxy.HasMoreData" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides ReadOnly Property HasMoreData As Boolean" />
+      <MemberSignature Language="F#" Value="member this.HasMoreData : bool" Usage="System.Management.Automation.PSJobProxy.HasMoreData" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Indicates that more data is available in this
+            result object for reading.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Location">
+      <MemberSignature Language="C#" Value="public override string Location { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Location" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.PSJobProxy.Location" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides ReadOnly Property Location As String" />
+      <MemberSignature Language="F#" Value="member this.Location : string" Usage="System.Management.Automation.PSJobProxy.Location" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            This is the location string from the remote job.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReceiveJob">
+      <MemberSignature Language="C#" Value="public void ReceiveJob ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void ReceiveJob() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.PSJobProxy.ReceiveJob" />
+      <MemberSignature Language="VB.NET" Value="Public Sub ReceiveJob ()" />
+      <MemberSignature Language="F#" Value="member this.ReceiveJob : unit -&gt; unit" Usage="pSJobProxy.ReceiveJob " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Will begin streaming data for a job object created by the "create" method that is in a not started state.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReceiveJob">
+      <MemberSignature Language="C#" Value="public void ReceiveJob (EventHandler&lt;System.Management.Automation.JobDataAddedEventArgs&gt; dataAdded, EventHandler&lt;System.Management.Automation.JobStateEventArgs&gt; stateChanged);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void ReceiveJob(class System.EventHandler`1&lt;class System.Management.Automation.JobDataAddedEventArgs&gt; dataAdded, class System.EventHandler`1&lt;class System.Management.Automation.JobStateEventArgs&gt; stateChanged) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.PSJobProxy.ReceiveJob(System.EventHandler{System.Management.Automation.JobDataAddedEventArgs},System.EventHandler{System.Management.Automation.JobStateEventArgs})" />
+      <MemberSignature Language="VB.NET" Value="Public Sub ReceiveJob (dataAdded As EventHandler(Of JobDataAddedEventArgs), stateChanged As EventHandler(Of JobStateEventArgs))" />
+      <MemberSignature Language="F#" Value="member this.ReceiveJob : EventHandler&lt;System.Management.Automation.JobDataAddedEventArgs&gt; * EventHandler&lt;System.Management.Automation.JobStateEventArgs&gt; -&gt; unit" Usage="pSJobProxy.ReceiveJob (dataAdded, stateChanged)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dataAdded" Type="System.EventHandler&lt;System.Management.Automation.JobDataAddedEventArgs&gt;" />
+        <Parameter Name="stateChanged" Type="System.EventHandler&lt;System.Management.Automation.JobStateEventArgs&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="dataAdded">delegate used to subscribe to data added events on the child jobs</param>
+        <param name="stateChanged">delegate used to subscribe to state changed events on the child jobs</param>
+        <summary>
+            Will begin streaming data for a job object created by the "create" method that is in a not started state.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoteJobInstanceId">
+      <MemberSignature Language="C#" Value="public Guid RemoteJobInstanceId { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Guid RemoteJobInstanceId" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.PSJobProxy.RemoteJobInstanceId" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property RemoteJobInstanceId As Guid" />
+      <MemberSignature Language="F#" Value="member this.RemoteJobInstanceId : Guid" Usage="System.Management.Automation.PSJobProxy.RemoteJobInstanceId" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Guid</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The instance ID of the remote job that this proxy interacts with.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveJob">
+      <MemberSignature Language="C#" Value="public void RemoveJob (bool removeRemoteJob);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void RemoveJob(bool removeRemoteJob) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.PSJobProxy.RemoveJob(System.Boolean)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub RemoveJob (removeRemoteJob As Boolean)" />
+      <MemberSignature Language="F#" Value="member this.RemoveJob : bool -&gt; unit" Usage="pSJobProxy.RemoveJob removeRemoteJob" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="removeRemoteJob" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="removeRemoteJob">Indicates whether the remove operation should
+            be applied to the remote or local job.</param>
+        <summary>
+            Removes the job.
+            If remoteJob is true, the job output that has been transferred to this
+            client object will be preserved.
+            </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidOperationException">Thrown if the job is not in
+            a completed state.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveJob">
+      <MemberSignature Language="C#" Value="public void RemoveJob (bool removeRemoteJob, bool force);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void RemoveJob(bool removeRemoteJob, bool force) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.PSJobProxy.RemoveJob(System.Boolean,System.Boolean)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub RemoveJob (removeRemoteJob As Boolean, force As Boolean)" />
+      <MemberSignature Language="F#" Value="member this.RemoveJob : bool * bool -&gt; unit" Usage="pSJobProxy.RemoveJob (removeRemoteJob, force)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="removeRemoteJob" Type="System.Boolean" />
+        <Parameter Name="force" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="removeRemoteJob">Indicates whether the remove operation should
+            be applied to the remote or local job.</param>
+        <param name="force">Force will stop the job on the server before
+            attempting removal. Default value is false.</param>
+        <summary>
+            Removes the job.
+            If remoteJob is true, the job output that has been transferred to this
+            client object will be preserved.
+            </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidOperationException">Thrown if the job is not in
+            a completed state.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveJobAsync">
+      <MemberSignature Language="C#" Value="public void RemoveJobAsync (bool removeRemoteJob);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void RemoveJobAsync(bool removeRemoteJob) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.PSJobProxy.RemoveJobAsync(System.Boolean)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub RemoveJobAsync (removeRemoteJob As Boolean)" />
+      <MemberSignature Language="F#" Value="member this.RemoveJobAsync : bool -&gt; unit" Usage="pSJobProxy.RemoveJobAsync removeRemoteJob" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="removeRemoteJob" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="removeRemoteJob">Indicates whether the remove operation should
+            be applied to the remote or local job.</param>
+        <summary>
+            Removes the job on the remote server.
+            The job output that has been transferred to this client object will be
+            preserved.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveJobAsync">
+      <MemberSignature Language="C#" Value="public void RemoveJobAsync (bool removeRemoteJob, bool force);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void RemoveJobAsync(bool removeRemoteJob, bool force) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.PSJobProxy.RemoveJobAsync(System.Boolean,System.Boolean)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub RemoveJobAsync (removeRemoteJob As Boolean, force As Boolean)" />
+      <MemberSignature Language="F#" Value="member this.RemoveJobAsync : bool * bool -&gt; unit" Usage="pSJobProxy.RemoveJobAsync (removeRemoteJob, force)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="removeRemoteJob" Type="System.Boolean" />
+        <Parameter Name="force" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="removeRemoteJob">Indicates whether the remove operation should
+            be applied to the remote or local job.</param>
+        <param name="force">Force will stop the job on the server before
+            attempting removal.</param>
+        <summary>
+            Removes the job on the remote server.
+            The job output that has been transferred to this client object will be
+            preserved.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveJobCompleted">
+      <MemberSignature Language="C#" Value="public event EventHandler&lt;System.ComponentModel.AsyncCompletedEventArgs&gt; RemoveJobCompleted;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class System.ComponentModel.AsyncCompletedEventArgs&gt; RemoveJobCompleted" />
+      <MemberSignature Language="DocId" Value="E:System.Management.Automation.PSJobProxy.RemoveJobCompleted" />
+      <MemberSignature Language="VB.NET" Value="Public Event RemoveJobCompleted As EventHandler(Of AsyncCompletedEventArgs) " />
+      <MemberSignature Language="F#" Value="member this.RemoveJobCompleted : EventHandler&lt;System.ComponentModel.AsyncCompletedEventArgs&gt; " Usage="member this.RemoveJobCompleted : System.EventHandler&lt;System.ComponentModel.AsyncCompletedEventArgs&gt; " />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;System.ComponentModel.AsyncCompletedEventArgs&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            This event should be raised whenever the asynchronous removal of
+            a server side job is completed.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveRemoteJobOnCompletion">
+      <MemberSignature Language="C#" Value="public bool RemoveRemoteJobOnCompletion { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool RemoveRemoteJobOnCompletion" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.PSJobProxy.RemoveRemoteJobOnCompletion" />
+      <MemberSignature Language="VB.NET" Value="Public Property RemoveRemoteJobOnCompletion As Boolean" />
+      <MemberSignature Language="F#" Value="member this.RemoveRemoteJobOnCompletion : bool with get, set" Usage="System.Management.Automation.PSJobProxy.RemoveRemoteJobOnCompletion" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            If set, the remote job will be removed when it has been completed and the data has been received.
+            This can only be set prior to a job being started.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ResumeJob">
+      <MemberSignature Language="C#" Value="public override void ResumeJob ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void ResumeJob() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.PSJobProxy.ResumeJob" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Sub ResumeJob ()" />
+      <MemberSignature Language="F#" Value="override this.ResumeJob : unit -&gt; unit" Usage="pSJobProxy.ResumeJob " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Resume a suspended job
+            </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.Management.Automation.InvalidJobStateException">Throws if the job
+            is not in a suspended or running state.</exception>
+        <exception cref="T:System.ObjectDisposedException">Thrown if job is
+            disposed.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ResumeJobAsync">
+      <MemberSignature Language="C#" Value="public override void ResumeJobAsync ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void ResumeJobAsync() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.PSJobProxy.ResumeJobAsync" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Sub ResumeJobAsync ()" />
+      <MemberSignature Language="F#" Value="override this.ResumeJobAsync : unit -&gt; unit" Usage="pSJobProxy.ResumeJobAsync " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Resume a suspended job asynchronously.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Runspace">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.Runspaces.Runspace Runspace { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Management.Automation.Runspaces.Runspace Runspace" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.PSJobProxy.Runspace" />
+      <MemberSignature Language="VB.NET" Value="Public Property Runspace As Runspace" />
+      <MemberSignature Language="F#" Value="member this.Runspace : System.Management.Automation.Runspaces.Runspace with get, set" Usage="System.Management.Automation.PSJobProxy.Runspace" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.Runspaces.Runspace</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Runspace in which this job will be executed
+            </summary>
+        <value>To be added.</value>
+        <remarks>At any point of time only a runspace or a
+            runspacepool may be specified</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RunspacePool">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.Runspaces.RunspacePool RunspacePool { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Management.Automation.Runspaces.RunspacePool RunspacePool" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.PSJobProxy.RunspacePool" />
+      <MemberSignature Language="VB.NET" Value="Public Property RunspacePool As RunspacePool" />
+      <MemberSignature Language="F#" Value="member this.RunspacePool : System.Management.Automation.Runspaces.RunspacePool with get, set" Usage="System.Management.Automation.PSJobProxy.RunspacePool" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.Runspaces.RunspacePool</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            RunspacePool in which this job will be executed
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StartJob">
+      <MemberSignature Language="C#" Value="public override void StartJob ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void StartJob() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.PSJobProxy.StartJob" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Sub StartJob ()" />
+      <MemberSignature Language="F#" Value="override this.StartJob : unit -&gt; unit" Usage="pSJobProxy.StartJob " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            start a job. The job will be started with the parameters
+            specified in StartParameters
+            </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.Management.Automation.InvalidJobStateException">Thrown if the job
+             is already running, if there is no runspace or runspace pool
+             assigned.</exception>
+        <exception cref="T:System.NotSupportedException">Thrown if the job is
+             otherwise started, finished, or suspended.</exception>
+        <exception cref="T:System.ObjectDisposedException">Thrown if job is
+            disposed.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="StartJob">
+      <MemberSignature Language="C#" Value="public void StartJob (System.Management.Automation.PSDataCollection&lt;object&gt; input);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void StartJob(class System.Management.Automation.PSDataCollection`1&lt;object&gt; input) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.PSJobProxy.StartJob(System.Management.Automation.PSDataCollection{System.Object})" />
+      <MemberSignature Language="VB.NET" Value="Public Sub StartJob (input As PSDataCollection(Of Object))" />
+      <MemberSignature Language="F#" Value="override this.StartJob : System.Management.Automation.PSDataCollection&lt;obj&gt; -&gt; unit" Usage="pSJobProxy.StartJob input" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="input" Type="System.Management.Automation.PSDataCollection&lt;System.Object&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="input"></param>
+        <summary>
+            Start execution of the job with the
+            specified input. This input will serve as
+            input to the underlying pipeline
+            </summary>
+        <remarks>Not sure if this method is needed. This has
+            been added just to be in sync with the PowerShell
+            APIs</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StartJob">
+      <MemberSignature Language="C#" Value="public void StartJob (EventHandler&lt;System.Management.Automation.JobDataAddedEventArgs&gt; dataAdded, EventHandler&lt;System.Management.Automation.JobStateEventArgs&gt; stateChanged, System.Management.Automation.PSDataCollection&lt;object&gt; input);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void StartJob(class System.EventHandler`1&lt;class System.Management.Automation.JobDataAddedEventArgs&gt; dataAdded, class System.EventHandler`1&lt;class System.Management.Automation.JobStateEventArgs&gt; stateChanged, class System.Management.Automation.PSDataCollection`1&lt;object&gt; input) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.PSJobProxy.StartJob(System.EventHandler{System.Management.Automation.JobDataAddedEventArgs},System.EventHandler{System.Management.Automation.JobStateEventArgs},System.Management.Automation.PSDataCollection{System.Object})" />
+      <MemberSignature Language="VB.NET" Value="Public Sub StartJob (dataAdded As EventHandler(Of JobDataAddedEventArgs), stateChanged As EventHandler(Of JobStateEventArgs), input As PSDataCollection(Of Object))" />
+      <MemberSignature Language="F#" Value="override this.StartJob : EventHandler&lt;System.Management.Automation.JobDataAddedEventArgs&gt; * EventHandler&lt;System.Management.Automation.JobStateEventArgs&gt; * System.Management.Automation.PSDataCollection&lt;obj&gt; -&gt; unit" Usage="pSJobProxy.StartJob (dataAdded, stateChanged, input)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dataAdded" Type="System.EventHandler&lt;System.Management.Automation.JobDataAddedEventArgs&gt;" />
+        <Parameter Name="stateChanged" Type="System.EventHandler&lt;System.Management.Automation.JobStateEventArgs&gt;" />
+        <Parameter Name="input" Type="System.Management.Automation.PSDataCollection&lt;System.Object&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="dataAdded">delegate used to subscribe to data added events on the child jobs</param>
+        <param name="stateChanged">delegate used to subscribe to state changed events on the child jobs</param>
+        <param name="input">collection of input
+            objects</param>
+        <summary>
+            Start execution of the workflow with the
+            specified input. This input will serve as
+            input to the underlying pipeline.
+            Because the number of child jobs is unknown before starting
+            the job, delegates may be indicated to ensure that no events will be missed
+            after the child job is created if data begins streaming back immediately.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StartJobAsync">
+      <MemberSignature Language="C#" Value="public override void StartJobAsync ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void StartJobAsync() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.PSJobProxy.StartJobAsync" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Sub StartJobAsync ()" />
+      <MemberSignature Language="F#" Value="override this.StartJobAsync : unit -&gt; unit" Usage="pSJobProxy.StartJobAsync " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Start a job asynchronously
+            </summary>
+        <remarks>When a job is started all the data in the
+            job streams from a previous invocation will be cleared</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StartJobAsync">
+      <MemberSignature Language="C#" Value="public void StartJobAsync (System.Management.Automation.PSDataCollection&lt;object&gt; input);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void StartJobAsync(class System.Management.Automation.PSDataCollection`1&lt;object&gt; input) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.PSJobProxy.StartJobAsync(System.Management.Automation.PSDataCollection{System.Object})" />
+      <MemberSignature Language="VB.NET" Value="Public Sub StartJobAsync (input As PSDataCollection(Of Object))" />
+      <MemberSignature Language="F#" Value="override this.StartJobAsync : System.Management.Automation.PSDataCollection&lt;obj&gt; -&gt; unit" Usage="pSJobProxy.StartJobAsync input" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="input" Type="System.Management.Automation.PSDataCollection&lt;System.Object&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="input">collection of input
+            objects</param>
+        <summary>
+            Start execution of the workflow with the
+            specified input. This input will serve as
+            input to the underlying pipeline
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StartJobAsync">
+      <MemberSignature Language="C#" Value="public void StartJobAsync (EventHandler&lt;System.Management.Automation.JobDataAddedEventArgs&gt; dataAdded, EventHandler&lt;System.Management.Automation.JobStateEventArgs&gt; stateChanged, System.Management.Automation.PSDataCollection&lt;object&gt; input);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void StartJobAsync(class System.EventHandler`1&lt;class System.Management.Automation.JobDataAddedEventArgs&gt; dataAdded, class System.EventHandler`1&lt;class System.Management.Automation.JobStateEventArgs&gt; stateChanged, class System.Management.Automation.PSDataCollection`1&lt;object&gt; input) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.PSJobProxy.StartJobAsync(System.EventHandler{System.Management.Automation.JobDataAddedEventArgs},System.EventHandler{System.Management.Automation.JobStateEventArgs},System.Management.Automation.PSDataCollection{System.Object})" />
+      <MemberSignature Language="VB.NET" Value="Public Sub StartJobAsync (dataAdded As EventHandler(Of JobDataAddedEventArgs), stateChanged As EventHandler(Of JobStateEventArgs), input As PSDataCollection(Of Object))" />
+      <MemberSignature Language="F#" Value="override this.StartJobAsync : EventHandler&lt;System.Management.Automation.JobDataAddedEventArgs&gt; * EventHandler&lt;System.Management.Automation.JobStateEventArgs&gt; * System.Management.Automation.PSDataCollection&lt;obj&gt; -&gt; unit" Usage="pSJobProxy.StartJobAsync (dataAdded, stateChanged, input)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dataAdded" Type="System.EventHandler&lt;System.Management.Automation.JobDataAddedEventArgs&gt;" />
+        <Parameter Name="stateChanged" Type="System.EventHandler&lt;System.Management.Automation.JobStateEventArgs&gt;" />
+        <Parameter Name="input" Type="System.Management.Automation.PSDataCollection&lt;System.Object&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="dataAdded">delegate used to subscribe to data added events on the child jobs</param>
+        <param name="stateChanged">delegate used to subscribe to state changed events on the child jobs</param>
+        <param name="input">collection of input
+            objects</param>
+        <summary>
+            Start asynchronous execution of the workflow with the
+            specified input. This input will serve as
+            input to the underlying pipeline.
+            Because the number of child jobs is unknown before starting
+            the job, delegates may be indicated to ensure that no events will be missed
+            after the child job is created if data begins streaming back immediately.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StatusMessage">
+      <MemberSignature Language="C#" Value="public override string StatusMessage { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string StatusMessage" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.PSJobProxy.StatusMessage" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides ReadOnly Property StatusMessage As String" />
+      <MemberSignature Language="F#" Value="member this.StatusMessage : string" Usage="System.Management.Automation.PSJobProxy.StatusMessage" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+             Success status of the command execution.
+             </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StopJob">
+      <MemberSignature Language="C#" Value="public override void StopJob ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void StopJob() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.PSJobProxy.StopJob" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Sub StopJob ()" />
+      <MemberSignature Language="F#" Value="override this.StopJob : unit -&gt; unit" Usage="pSJobProxy.StopJob " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Stop a job synchronously. In order to be consistent, this method
+            should be used in place of StopJob which was introduced in the
+            v2 Job API
+            </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.Management.Automation.InvalidJobStateException">Thrown if job is blocked.</exception>
+        <exception cref="T:System.ObjectDisposedException">Thrown if job is disposed.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="StopJob">
+      <MemberSignature Language="C#" Value="public override void StopJob (bool force, string reason);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void StopJob(bool force, string reason) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.PSJobProxy.StopJob(System.Boolean,System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Sub StopJob (force As Boolean, reason As String)" />
+      <MemberSignature Language="F#" Value="override this.StopJob : bool * string -&gt; unit" Usage="pSJobProxy.StopJob (force, reason)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="force" Type="System.Boolean" />
+        <Parameter Name="reason" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="force"></param>
+        <param name="reason"></param>
+        <summary>
+            StopJob
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StopJobAsync">
+      <MemberSignature Language="C#" Value="public override void StopJobAsync ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void StopJobAsync() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.PSJobProxy.StopJobAsync" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Sub StopJobAsync ()" />
+      <MemberSignature Language="F#" Value="override this.StopJobAsync : unit -&gt; unit" Usage="pSJobProxy.StopJobAsync " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Stop a job asynchronously
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StopJobAsync">
+      <MemberSignature Language="C#" Value="public override void StopJobAsync (bool force, string reason);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void StopJobAsync(bool force, string reason) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.PSJobProxy.StopJobAsync(System.Boolean,System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Sub StopJobAsync (force As Boolean, reason As String)" />
+      <MemberSignature Language="F#" Value="override this.StopJobAsync : bool * string -&gt; unit" Usage="pSJobProxy.StopJobAsync (force, reason)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="force" Type="System.Boolean" />
+        <Parameter Name="reason" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="force"></param>
+        <param name="reason"></param>
+        <summary>
+            StopJobAsync
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SuspendJob">
+      <MemberSignature Language="C#" Value="public override void SuspendJob ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void SuspendJob() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.PSJobProxy.SuspendJob" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Sub SuspendJob ()" />
+      <MemberSignature Language="F#" Value="override this.SuspendJob : unit -&gt; unit" Usage="pSJobProxy.SuspendJob " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Suspend a job
+            </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.Management.Automation.InvalidJobStateException">Throws if the job is not in
+            a running or suspended state.</exception>
+        <exception cref="T:System.ObjectDisposedException">Thrown if job is
+            disposed.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SuspendJob">
+      <MemberSignature Language="C#" Value="public override void SuspendJob (bool force, string reason);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void SuspendJob(bool force, string reason) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.PSJobProxy.SuspendJob(System.Boolean,System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Sub SuspendJob (force As Boolean, reason As String)" />
+      <MemberSignature Language="F#" Value="override this.SuspendJob : bool * string -&gt; unit" Usage="pSJobProxy.SuspendJob (force, reason)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="force" Type="System.Boolean" />
+        <Parameter Name="reason" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="force"></param>
+        <param name="reason"></param>
+        <summary>
+            SuspendJob
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SuspendJobAsync">
+      <MemberSignature Language="C#" Value="public override void SuspendJobAsync ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void SuspendJobAsync() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.PSJobProxy.SuspendJobAsync" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Sub SuspendJobAsync ()" />
+      <MemberSignature Language="F#" Value="override this.SuspendJobAsync : unit -&gt; unit" Usage="pSJobProxy.SuspendJobAsync " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Asynchronously suspend a job
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SuspendJobAsync">
+      <MemberSignature Language="C#" Value="public override void SuspendJobAsync (bool force, string reason);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void SuspendJobAsync(bool force, string reason) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.PSJobProxy.SuspendJobAsync(System.Boolean,System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Sub SuspendJobAsync (force As Boolean, reason As String)" />
+      <MemberSignature Language="F#" Value="override this.SuspendJobAsync : bool * string -&gt; unit" Usage="pSJobProxy.SuspendJobAsync (force, reason)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="force" Type="System.Boolean" />
+        <Parameter Name="reason" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="force"></param>
+        <param name="reason"></param>
+        <summary>
+            SuspendJobAsync
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UnblockJob">
+      <MemberSignature Language="C#" Value="public override void UnblockJob ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void UnblockJob() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.PSJobProxy.UnblockJob" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Sub UnblockJob ()" />
+      <MemberSignature Language="F#" Value="override this.UnblockJob : unit -&gt; unit" Usage="pSJobProxy.UnblockJob " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Unblock a blocked job
+            </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NotSupportedException">Unblock job is not supported on PSJobProxy.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="UnblockJobAsync">
+      <MemberSignature Language="C#" Value="public override void UnblockJobAsync ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void UnblockJobAsync() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.PSJobProxy.UnblockJobAsync" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Sub UnblockJobAsync ()" />
+      <MemberSignature Language="F#" Value="override this.UnblockJobAsync : unit -&gt; unit" Usage="pSJobProxy.UnblockJobAsync " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Unblock a blocked job asynchronously
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

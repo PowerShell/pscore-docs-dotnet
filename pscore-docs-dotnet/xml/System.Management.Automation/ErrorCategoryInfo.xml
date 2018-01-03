@@ -1,0 +1,251 @@
+﻿<Type Name="ErrorCategoryInfo" FullName="System.Management.Automation.ErrorCategoryInfo">
+  <TypeSignature Language="C#" Value="public class ErrorCategoryInfo" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ErrorCategoryInfo extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Management.Automation.ErrorCategoryInfo" />
+  <TypeSignature Language="VB.NET" Value="Public Class ErrorCategoryInfo" />
+  <TypeSignature Language="F#" Value="type ErrorCategoryInfo = class" />
+  <AssemblyInfo>
+    <AssemblyName>System.Management.Automation</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Contains auxiliary information about an
+            <see cref="T:System.Management.Automation.ErrorRecord" /></summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Activity">
+      <MemberSignature Language="C#" Value="public string Activity { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Activity" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.ErrorCategoryInfo.Activity" />
+      <MemberSignature Language="VB.NET" Value="Public Property Activity As String" />
+      <MemberSignature Language="F#" Value="member this.Activity : string with get, set" Usage="System.Management.Automation.ErrorCategoryInfo.Activity" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            text description of the operation which
+            encountered the error
+            </summary>
+        <value>text description of the operation</value>
+        <remarks>
+            By default, this is the cmdlet name.
+            The default can be overridden by calling Set with a
+            non-empty value, for example "Delete".
+            </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Category">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.ErrorCategory Category { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Management.Automation.ErrorCategory Category" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.ErrorCategoryInfo.Category" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Category As ErrorCategory" />
+      <MemberSignature Language="F#" Value="member this.Category : System.Management.Automation.ErrorCategory" Usage="System.Management.Automation.ErrorCategoryInfo.Category" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.ErrorCategory</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary />
+        <value />
+        <remarks>To be added.</remarks>
+        <see cref="T:System.Management.Automation.ErrorCategory" />
+      </Docs>
+    </Member>
+    <Member MemberName="GetMessage">
+      <MemberSignature Language="C#" Value="public string GetMessage ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance string GetMessage() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.ErrorCategoryInfo.GetMessage" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetMessage () As String" />
+      <MemberSignature Language="F#" Value="member this.GetMessage : unit -&gt; string" Usage="errorCategoryInfo.GetMessage " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            concise text description based on
+            <see cref="P:System.Management.Automation.ErrorCategoryInfo.Category" /></summary>
+        <returns>concise text description</returns>
+        <remarks>
+            GetMessage returns a concise string which categorizes the error,
+            based on
+            <see cref="P:System.Management.Automation.ErrorCategoryInfo.Category" />
+            and including the other fields of
+            <see cref="T:System.Management.Automation.ErrorCategoryInfo" />
+            as appropriate.  This string is much shorter
+            than
+            <see cref="P:System.Management.Automation.ErrorDetails.Message" /> or
+            <see cref="P:System.Exception.Message" />, since it only
+            categorizes the error and does not contain a full description
+            or recommended actions.  The default host will display this
+            string instead of the full message if shell variable
+            $ErrorView is set to "CategoryView".
+            </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetMessage">
+      <MemberSignature Language="C#" Value="public string GetMessage (System.Globalization.CultureInfo uiCultureInfo);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance string GetMessage(class System.Globalization.CultureInfo uiCultureInfo) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.ErrorCategoryInfo.GetMessage(System.Globalization.CultureInfo)" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetMessage (uiCultureInfo As CultureInfo) As String" />
+      <MemberSignature Language="F#" Value="member this.GetMessage : System.Globalization.CultureInfo -&gt; string" Usage="errorCategoryInfo.GetMessage uiCultureInfo" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="uiCultureInfo" Type="System.Globalization.CultureInfo" />
+      </Parameters>
+      <Docs>
+        <param name="uiCultureInfo">Culture in which to display message</param>
+        <summary>
+            concise text description based on
+            <see cref="P:System.Management.Automation.ErrorCategoryInfo.Category" /></summary>
+        <returns>concise text description</returns>
+        <remarks>
+            GetMessage returns a concise string which categorizes the error,
+            based on
+            <see cref="P:System.Management.Automation.ErrorCategoryInfo.Category" />
+            and including the other fields of
+            <see cref="T:System.Management.Automation.ErrorCategoryInfo" />
+            as appropriate.  This string is much shorter
+            than
+            <see cref="P:System.Management.Automation.ErrorDetails.Message" /> or
+            <see cref="P:System.Exception.Message" />, since it only
+            categorizes the error and does not contain a full description
+            or recommended actions.  The default host will display this
+            string instead of the full message if shell variable
+            $ErrorView is set to "CategoryView".
+            </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Reason">
+      <MemberSignature Language="C#" Value="public string Reason { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Reason" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.ErrorCategoryInfo.Reason" />
+      <MemberSignature Language="VB.NET" Value="Public Property Reason As String" />
+      <MemberSignature Language="F#" Value="member this.Reason : string with get, set" Usage="System.Management.Automation.ErrorCategoryInfo.Reason" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            text description of the error
+            </summary>
+        <value>text description of the error</value>
+        <remarks>
+            By default, this is the exception type.
+            The default can be overridden by calling Set with a
+            non-empty value, for example "Permission Denied".
+            </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TargetName">
+      <MemberSignature Language="C#" Value="public string TargetName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string TargetName" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.ErrorCategoryInfo.TargetName" />
+      <MemberSignature Language="VB.NET" Value="Public Property TargetName As String" />
+      <MemberSignature Language="F#" Value="member this.TargetName : string with get, set" Usage="System.Management.Automation.ErrorCategoryInfo.TargetName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            text description of the target object
+            </summary>
+        <value>text description of the target object</value>
+        <remarks>
+            By default, this is TargetObject.ToString(), or the empty string
+            if the target object is null.
+            The default can be overridden by calling Set with a
+            non-empty value, for example "John Doe".
+            </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TargetType">
+      <MemberSignature Language="C#" Value="public string TargetType { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string TargetType" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.ErrorCategoryInfo.TargetType" />
+      <MemberSignature Language="VB.NET" Value="Public Property TargetType As String" />
+      <MemberSignature Language="F#" Value="member this.TargetType : string with get, set" Usage="System.Management.Automation.ErrorCategoryInfo.TargetType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            text description of the type of the target object
+            </summary>
+        <value>text description of the type of the target object</value>
+        <remarks>
+            By default, this is TargetObject.GetType().ToString(),
+            or the empty string if the target object is null.
+            The default can be overridden by calling Set with a
+            non-empty value, for example "Active Directory User".
+            </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.ErrorCategoryInfo.ToString" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Function ToString () As String" />
+      <MemberSignature Language="F#" Value="override this.ToString : unit -&gt; string" Usage="errorCategoryInfo.ToString " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Same as
+            <see cref="M:System.Management.Automation.ErrorCategoryInfo.GetMessage" /></summary>
+        <returns>developer-readable identifier</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

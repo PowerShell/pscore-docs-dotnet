@@ -1,0 +1,111 @@
+﻿<Type Name="NewFileCatalogCommand" FullName="Microsoft.PowerShell.Commands.NewFileCatalogCommand">
+  <TypeSignature Language="C#" Value="public sealed class NewFileCatalogCommand : Microsoft.PowerShell.Commands.CatalogCommandsBase" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit NewFileCatalogCommand extends Microsoft.PowerShell.Commands.CatalogCommandsBase" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.PowerShell.Commands.NewFileCatalogCommand" />
+  <TypeSignature Language="VB.NET" Value="Public NotInheritable Class NewFileCatalogCommand&#xA;Inherits CatalogCommandsBase" />
+  <TypeSignature Language="F#" Value="type NewFileCatalogCommand = class&#xA;    inherit CatalogCommandsBase" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.PowerShell.Security</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Microsoft.PowerShell.Commands.CatalogCommandsBase</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Management.Automation.Cmdlet("New", "FileCatalog", DefaultParameterSetName="ByPath", HelpUri="https://go.microsoft.com/fwlink/?LinkId=786749", SupportsShouldProcess=true)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Management.Automation.OutputType(typeof(System.IO.FileInfo))</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>
+            Defines the implementation of the 'New-FileCatalog' cmdlet.
+            This cmdlet generates the catalog for File or Folder
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public NewFileCatalogCommand ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Commands.NewFileCatalogCommand.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New ()" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Security</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>
+            Initializes a new instance of the New-FileCatalog class.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CatalogVersion">
+      <MemberSignature Language="C#" Value="public int CatalogVersion { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 CatalogVersion" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.NewFileCatalogCommand.CatalogVersion" />
+      <MemberSignature Language="VB.NET" Value="Public Property CatalogVersion As Integer" />
+      <MemberSignature Language="F#" Value="member this.CatalogVersion : int with get, set" Usage="Microsoft.PowerShell.Commands.NewFileCatalogCommand.CatalogVersion" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Security</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Catalog version
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PerformAction">
+      <MemberSignature Language="C#" Value="protected override void PerformAction (System.Collections.ObjectModel.Collection&lt;string&gt; path, string catalogFilePath);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void PerformAction(class System.Collections.ObjectModel.Collection`1&lt;string&gt; path, string catalogFilePath) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Commands.NewFileCatalogCommand.PerformAction(System.Collections.ObjectModel.Collection{System.String},System.String)" />
+      <MemberSignature Language="VB.NET" Value="Protected Overrides Sub PerformAction (path As Collection(Of String), catalogFilePath As String)" />
+      <MemberSignature Language="F#" Value="override this.PerformAction : System.Collections.ObjectModel.Collection&lt;string&gt; * string -&gt; unit" Usage="newFileCatalogCommand.PerformAction (path, catalogFilePath)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Security</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="path" Type="System.Collections.ObjectModel.Collection&lt;System.String&gt;" />
+        <Parameter Name="catalogFilePath" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="path">
+            File or Folder Path
+            </param>
+        <param name="catalogFilePath">
+            Path to Catalog
+            </param>
+        <summary>
+            Generate the Catalog for the Path
+            </summary>
+        <returns>
+            True if able to Create Catalog or else False
+            </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

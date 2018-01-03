@@ -1,0 +1,125 @@
+﻿<Type Name="ForStatementAst" FullName="System.Management.Automation.Language.ForStatementAst">
+  <TypeSignature Language="C#" Value="public class ForStatementAst : System.Management.Automation.Language.LoopStatementAst" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ForStatementAst extends System.Management.Automation.Language.LoopStatementAst" />
+  <TypeSignature Language="DocId" Value="T:System.Management.Automation.Language.ForStatementAst" />
+  <TypeSignature Language="VB.NET" Value="Public Class ForStatementAst&#xA;Inherits LoopStatementAst" />
+  <TypeSignature Language="F#" Value="type ForStatementAst = class&#xA;    inherit LoopStatementAst" />
+  <AssemblyInfo>
+    <AssemblyName>System.Management.Automation</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Management.Automation.Language.LoopStatementAst</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            The ast for a for statement.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ForStatementAst (System.Management.Automation.Language.IScriptExtent extent, string label, System.Management.Automation.Language.PipelineBaseAst initializer, System.Management.Automation.Language.PipelineBaseAst condition, System.Management.Automation.Language.PipelineBaseAst iterator, System.Management.Automation.Language.StatementBlockAst body);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Management.Automation.Language.IScriptExtent extent, string label, class System.Management.Automation.Language.PipelineBaseAst initializer, class System.Management.Automation.Language.PipelineBaseAst condition, class System.Management.Automation.Language.PipelineBaseAst iterator, class System.Management.Automation.Language.StatementBlockAst body) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Language.ForStatementAst.#ctor(System.Management.Automation.Language.IScriptExtent,System.String,System.Management.Automation.Language.PipelineBaseAst,System.Management.Automation.Language.PipelineBaseAst,System.Management.Automation.Language.PipelineBaseAst,System.Management.Automation.Language.StatementBlockAst)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (extent As IScriptExtent, label As String, initializer As PipelineBaseAst, condition As PipelineBaseAst, iterator As PipelineBaseAst, body As StatementBlockAst)" />
+      <MemberSignature Language="F#" Value="new System.Management.Automation.Language.ForStatementAst : System.Management.Automation.Language.IScriptExtent * string * System.Management.Automation.Language.PipelineBaseAst * System.Management.Automation.Language.PipelineBaseAst * System.Management.Automation.Language.PipelineBaseAst * System.Management.Automation.Language.StatementBlockAst -&gt; System.Management.Automation.Language.ForStatementAst" Usage="new System.Management.Automation.Language.ForStatementAst (extent, label, initializer, condition, iterator, body)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="extent" Type="System.Management.Automation.Language.IScriptExtent" />
+        <Parameter Name="label" Type="System.String" />
+        <Parameter Name="initializer" Type="System.Management.Automation.Language.PipelineBaseAst" />
+        <Parameter Name="condition" Type="System.Management.Automation.Language.PipelineBaseAst" />
+        <Parameter Name="iterator" Type="System.Management.Automation.Language.PipelineBaseAst" />
+        <Parameter Name="body" Type="System.Management.Automation.Language.StatementBlockAst" />
+      </Parameters>
+      <Docs>
+        <param name="extent">The extent of the statement, from the label or for keyword to the closing curly.</param>
+        <param name="label">The optionally null label.</param>
+        <param name="initializer">The optionally null initialization expression executed before the loop.</param>
+        <param name="condition">The optionally null condition expression tested on each iteration of the loop.</param>
+        <param name="iterator">The optionally null iteration expression executed after each iteration of the loop.</param>
+        <param name="body">The body executed on each iteration of the loop.</param>
+        <summary>
+            Construct a for statement.
+            </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.Management.Automation.PSArgumentNullException">
+            If <paramref name="extent" /> is null.
+            </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Copy">
+      <MemberSignature Language="C#" Value="public override System.Management.Automation.Language.Ast Copy ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Management.Automation.Language.Ast Copy() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Language.ForStatementAst.Copy" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Function Copy () As Ast" />
+      <MemberSignature Language="F#" Value="override this.Copy : unit -&gt; System.Management.Automation.Language.Ast" Usage="forStatementAst.Copy " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.Language.Ast</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Copy the ForStatementAst instance
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Initializer">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.Language.PipelineBaseAst Initializer { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Management.Automation.Language.PipelineBaseAst Initializer" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.Language.ForStatementAst.Initializer" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Initializer As PipelineBaseAst" />
+      <MemberSignature Language="F#" Value="member this.Initializer : System.Management.Automation.Language.PipelineBaseAst" Usage="System.Management.Automation.Language.ForStatementAst.Initializer" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.Language.PipelineBaseAst</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The ast for the initialization expression of a for statement, or null if none was specified.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Iterator">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.Language.PipelineBaseAst Iterator { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Management.Automation.Language.PipelineBaseAst Iterator" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.Language.ForStatementAst.Iterator" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Iterator As PipelineBaseAst" />
+      <MemberSignature Language="F#" Value="member this.Iterator : System.Management.Automation.Language.PipelineBaseAst" Usage="System.Management.Automation.Language.ForStatementAst.Iterator" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.Language.PipelineBaseAst</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The ast for the iteration expression of a for statement, or null if none was specified.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

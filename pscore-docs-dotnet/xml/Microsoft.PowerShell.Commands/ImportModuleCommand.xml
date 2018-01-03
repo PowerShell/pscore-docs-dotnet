@@ -1,0 +1,875 @@
+﻿<Type Name="ImportModuleCommand" FullName="Microsoft.PowerShell.Commands.ImportModuleCommand">
+  <TypeSignature Language="C#" Value="public sealed class ImportModuleCommand : Microsoft.PowerShell.Commands.ModuleCmdletBase, IDisposable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit ImportModuleCommand extends Microsoft.PowerShell.Commands.ModuleCmdletBase implements class System.IDisposable" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.PowerShell.Commands.ImportModuleCommand" />
+  <TypeSignature Language="VB.NET" Value="Public NotInheritable Class ImportModuleCommand&#xA;Inherits ModuleCmdletBase&#xA;Implements IDisposable" />
+  <TypeSignature Language="F#" Value="type ImportModuleCommand = class&#xA;    inherit ModuleCmdletBase&#xA;    interface IDisposable" />
+  <AssemblyInfo>
+    <AssemblyName>System.Management.Automation</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Microsoft.PowerShell.Commands.ModuleCmdletBase</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Management.Automation.Cmdlet("Import", "Module", DefaultParameterSetName="Name", HelpUri="https://go.microsoft.com/fwlink/?LinkID=141553")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Management.Automation.OutputType(typeof(System.Management.Automation.PSModuleInfo))</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>
+            Implements a cmdlet that loads a module
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ImportModuleCommand ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Commands.ImportModuleCommand.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New ()" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Alias">
+      <MemberSignature Language="C#" Value="public string[] Alias { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string[] Alias" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.ImportModuleCommand.Alias" />
+      <MemberSignature Language="VB.NET" Value="Public Property Alias As String()" />
+      <MemberSignature Language="F#" Value="member this.Alias : string[] with get, set" Usage="Microsoft.PowerShell.Commands.ImportModuleCommand.Alias" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.ValidateNotNull</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            This parameter specifies the aliases to import from the module...
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ArgumentList">
+      <MemberSignature Language="C#" Value="public object[] ArgumentList { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object[] ArgumentList" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.ImportModuleCommand.ArgumentList" />
+      <MemberSignature Language="VB.NET" Value="Public Property ArgumentList As Object()" />
+      <MemberSignature Language="F#" Value="member this.ArgumentList : obj[] with get, set" Usage="Microsoft.PowerShell.Commands.ImportModuleCommand.ArgumentList" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Alias(Mono.Cecil.CustomAttributeArgument[])</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Object[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The arguments to pass to the module script.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AsCustomObject">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.SwitchParameter AsCustomObject { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Management.Automation.SwitchParameter AsCustomObject" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.ImportModuleCommand.AsCustomObject" />
+      <MemberSignature Language="VB.NET" Value="Public Property AsCustomObject As SwitchParameter" />
+      <MemberSignature Language="F#" Value="member this.AsCustomObject : System.Management.Automation.SwitchParameter with get, set" Usage="Microsoft.PowerShell.Commands.ImportModuleCommand.AsCustomObject" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.SwitchParameter</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            This parameter causes the session state instance to be written as a custom object...
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Assembly">
+      <MemberSignature Language="C#" Value="public System.Reflection.Assembly[] Assembly { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Reflection.Assembly[] Assembly" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.ImportModuleCommand.Assembly" />
+      <MemberSignature Language="VB.NET" Value="Public Property Assembly As Assembly()" />
+      <MemberSignature Language="F#" Value="member this.Assembly : System.Reflection.Assembly[] with get, set" Usage="Microsoft.PowerShell.Commands.ImportModuleCommand.Assembly" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(Mandatory=true, ParameterSetName="Assembly", Position=0, ValueFromPipeline=true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Reflection.Assembly[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            A list of assembly objects to process as modules.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginProcessing">
+      <MemberSignature Language="C#" Value="protected override void BeginProcessing ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void BeginProcessing() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Commands.ImportModuleCommand.BeginProcessing" />
+      <MemberSignature Language="VB.NET" Value="Protected Overrides Sub BeginProcessing ()" />
+      <MemberSignature Language="F#" Value="override this.BeginProcessing : unit -&gt; unit" Usage="importModuleCommand.BeginProcessing " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            BeginProcessing override
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CimNamespace">
+      <MemberSignature Language="C#" Value="public string CimNamespace { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string CimNamespace" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.ImportModuleCommand.CimNamespace" />
+      <MemberSignature Language="VB.NET" Value="Public Property CimNamespace As String" />
+      <MemberSignature Language="F#" Value="member this.CimNamespace : string with get, set" Usage="Microsoft.PowerShell.Commands.ImportModuleCommand.CimNamespace" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(Mandatory=false, ParameterSetName="CimSession")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.ValidateNotNullOrEmpty</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            For interoperability with 3rd party CIM servers, user can specify custom namespace
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CimResourceUri">
+      <MemberSignature Language="C#" Value="public Uri CimResourceUri { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Uri CimResourceUri" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.ImportModuleCommand.CimResourceUri" />
+      <MemberSignature Language="VB.NET" Value="Public Property CimResourceUri As Uri" />
+      <MemberSignature Language="F#" Value="member this.CimResourceUri : Uri with get, set" Usage="Microsoft.PowerShell.Commands.ImportModuleCommand.CimResourceUri" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(Mandatory=false, ParameterSetName="CimSession")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.ValidateNotNull</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Uri</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            For interoperability with 3rd party CIM servers, user can specify custom resource URI
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CimSession">
+      <MemberSignature Language="C#" Value="public Microsoft.Management.Infrastructure.CimSession CimSession { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Management.Infrastructure.CimSession CimSession" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.ImportModuleCommand.CimSession" />
+      <MemberSignature Language="VB.NET" Value="Public Property CimSession As CimSession" />
+      <MemberSignature Language="F#" Value="member this.CimSession : Microsoft.Management.Infrastructure.CimSession with get, set" Usage="Microsoft.PowerShell.Commands.ImportModuleCommand.CimSession" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(Mandatory=true, ParameterSetName="CimSession")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.ValidateNotNull</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Microsoft.Management.Infrastructure.CimSession</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            If specified, then Import-Module will attempt to import PS-CIM modules from a remote computer using the specified session
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Cmdlet">
+      <MemberSignature Language="C#" Value="public string[] Cmdlet { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string[] Cmdlet" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.ImportModuleCommand.Cmdlet" />
+      <MemberSignature Language="VB.NET" Value="Public Property Cmdlet As String()" />
+      <MemberSignature Language="F#" Value="member this.Cmdlet : string[] with get, set" Usage="Microsoft.PowerShell.Commands.ImportModuleCommand.Cmdlet" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.ValidateNotNull</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            This patterns matching the names of cmdlets to import from the module...
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DisableNameChecking">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.SwitchParameter DisableNameChecking { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Management.Automation.SwitchParameter DisableNameChecking" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.ImportModuleCommand.DisableNameChecking" />
+      <MemberSignature Language="VB.NET" Value="Public Property DisableNameChecking As SwitchParameter" />
+      <MemberSignature Language="F#" Value="member this.DisableNameChecking : System.Management.Automation.SwitchParameter with get, set" Usage="Microsoft.PowerShell.Commands.ImportModuleCommand.DisableNameChecking" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.SwitchParameter</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Disable warnings on cmdlet and function names that have non-standard verbs
+            or non-standard characters in the noun.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="public void Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Dispose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Commands.ImportModuleCommand.Dispose" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Dispose ()" />
+      <MemberSignature Language="F#" Value="abstract member Dispose : unit -&gt; unit&#xA;override this.Dispose : unit -&gt; unit" Usage="importModuleCommand.Dispose " />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.IDisposable.Dispose</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Releases resources associated with this object
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Force">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.SwitchParameter Force { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Management.Automation.SwitchParameter Force" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.ImportModuleCommand.Force" />
+      <MemberSignature Language="VB.NET" Value="Public Property Force As SwitchParameter" />
+      <MemberSignature Language="F#" Value="member this.Force : System.Management.Automation.SwitchParameter with get, set" Usage="Microsoft.PowerShell.Commands.ImportModuleCommand.Force" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.SwitchParameter</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            This parameter causes a module to be loaded over top of the current one...
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FullyQualifiedName">
+      <MemberSignature Language="C#" Value="public Microsoft.PowerShell.Commands.ModuleSpecification[] FullyQualifiedName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.PowerShell.Commands.ModuleSpecification[] FullyQualifiedName" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.ImportModuleCommand.FullyQualifiedName" />
+      <MemberSignature Language="VB.NET" Value="Public Property FullyQualifiedName As ModuleSpecification()" />
+      <MemberSignature Language="F#" Value="member this.FullyQualifiedName : Microsoft.PowerShell.Commands.ModuleSpecification[] with get, set" Usage="Microsoft.PowerShell.Commands.ImportModuleCommand.FullyQualifiedName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(Mandatory=true, ParameterSetName="FullyQualifiedName", Position=0, ValueFromPipeline=true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(Mandatory=true, ParameterSetName="FullyQualifiedNameAndPSSession", Position=0, ValueFromPipeline=true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Microsoft.PowerShell.Commands.ModuleSpecification[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            This parameter specifies the current pipeline object
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Function">
+      <MemberSignature Language="C#" Value="public string[] Function { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string[] Function" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.ImportModuleCommand.Function" />
+      <MemberSignature Language="VB.NET" Value="Public Property Function As String()" />
+      <MemberSignature Language="F#" Value="member this.Function : string[] with get, set" Usage="Microsoft.PowerShell.Commands.ImportModuleCommand.Function" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.ValidateNotNull</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            This patterns matching the names of functions to import from the module...
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Global">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.SwitchParameter Global { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Management.Automation.SwitchParameter Global" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.ImportModuleCommand.Global" />
+      <MemberSignature Language="VB.NET" Value="Public Property Global As SwitchParameter" />
+      <MemberSignature Language="F#" Value="member this.Global : System.Management.Automation.SwitchParameter with get, set" Usage="Microsoft.PowerShell.Commands.ImportModuleCommand.Global" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.SwitchParameter</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            This parameter specifies whether to import to the current session state
+            or to the global / top-level session state
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MaximumVersion">
+      <MemberSignature Language="C#" Value="public string MaximumVersion { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string MaximumVersion" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.ImportModuleCommand.MaximumVersion" />
+      <MemberSignature Language="VB.NET" Value="Public Property MaximumVersion As String" />
+      <MemberSignature Language="F#" Value="member this.MaximumVersion : string with get, set" Usage="Microsoft.PowerShell.Commands.ImportModuleCommand.MaximumVersion" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="Name")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="PSSession")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="CimSession")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The maximum version of the module to load.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MinimumVersion">
+      <MemberSignature Language="C#" Value="public Version MinimumVersion { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Version MinimumVersion" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.ImportModuleCommand.MinimumVersion" />
+      <MemberSignature Language="VB.NET" Value="Public Property MinimumVersion As Version" />
+      <MemberSignature Language="F#" Value="member this.MinimumVersion : Version with get, set" Usage="Microsoft.PowerShell.Commands.ImportModuleCommand.MinimumVersion" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Alias(Mono.Cecil.CustomAttributeArgument[])</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="Name")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="PSSession")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="CimSession")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Version</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The minimum version of the module to load.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ModuleInfo">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.PSModuleInfo[] ModuleInfo { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Management.Automation.PSModuleInfo[] ModuleInfo" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.ImportModuleCommand.ModuleInfo" />
+      <MemberSignature Language="VB.NET" Value="Public Property ModuleInfo As PSModuleInfo()" />
+      <MemberSignature Language="F#" Value="member this.ModuleInfo : System.Management.Automation.PSModuleInfo[] with get, set" Usage="Microsoft.PowerShell.Commands.ImportModuleCommand.ModuleInfo" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(Mandatory=true, ParameterSetName="ModuleInfo", Position=0, ValueFromPipeline=true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.PSModuleInfo[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            This parameter specifies the current pipeline object
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public string[] Name { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string[] Name" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.ImportModuleCommand.Name" />
+      <MemberSignature Language="VB.NET" Value="Public Property Name As String()" />
+      <MemberSignature Language="F#" Value="member this.Name : string[] with get, set" Usage="Microsoft.PowerShell.Commands.ImportModuleCommand.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(Mandatory=true, ParameterSetName="Name", Position=0, ValueFromPipeline=true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(Mandatory=true, ParameterSetName="PSSession", Position=0, ValueFromPipeline=true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(Mandatory=true, ParameterSetName="CimSession", Position=0, ValueFromPipeline=true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            This parameter names the module to load.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NoClobber">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.SwitchParameter NoClobber { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Management.Automation.SwitchParameter NoClobber" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.ImportModuleCommand.NoClobber" />
+      <MemberSignature Language="VB.NET" Value="Public Property NoClobber As SwitchParameter" />
+      <MemberSignature Language="F#" Value="member this.NoClobber : System.Management.Automation.SwitchParameter with get, set" Usage="Microsoft.PowerShell.Commands.ImportModuleCommand.NoClobber" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Alias(Mono.Cecil.CustomAttributeArgument[])</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.SwitchParameter</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Does not import a command if a command with same name exists on the target sessionstate.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PassThru">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.SwitchParameter PassThru { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Management.Automation.SwitchParameter PassThru" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.ImportModuleCommand.PassThru" />
+      <MemberSignature Language="VB.NET" Value="Public Property PassThru As SwitchParameter" />
+      <MemberSignature Language="F#" Value="member this.PassThru : System.Management.Automation.SwitchParameter with get, set" Usage="Microsoft.PowerShell.Commands.ImportModuleCommand.PassThru" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.SwitchParameter</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            This parameter causes the session state instance to be written...
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Prefix">
+      <MemberSignature Language="C#" Value="public string Prefix { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Prefix" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.ImportModuleCommand.Prefix" />
+      <MemberSignature Language="VB.NET" Value="Public Property Prefix As String" />
+      <MemberSignature Language="F#" Value="member this.Prefix : string with get, set" Usage="Microsoft.PowerShell.Commands.ImportModuleCommand.Prefix" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.ValidateNotNull</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            This parameter specified a prefix used to modify names of imported commands
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ProcessRecord">
+      <MemberSignature Language="C#" Value="protected override void ProcessRecord ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void ProcessRecord() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Commands.ImportModuleCommand.ProcessRecord" />
+      <MemberSignature Language="VB.NET" Value="Protected Overrides Sub ProcessRecord ()" />
+      <MemberSignature Language="F#" Value="override this.ProcessRecord : unit -&gt; unit" Usage="importModuleCommand.ProcessRecord " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Load the specified modules...
+            </summary>
+        <remarks>
+            Examples:
+                c:\temp\mdir\mdir.psm1  # load absolute path
+                ./mdir.psm1             # load relative path
+                c:\temp\mdir\mdir       # resolve by using extensions. mdir is a directory, mdir.xxx is a file.
+                c:\temp\mdir            # load default module if mdir is directory
+                module                  # $PSScriptRoot/module/module.psd1 (ps1,psm1,dll)
+                module/foobar.psm1      # $PSScriptRoot/module/module.psm1
+                module/foobar           # $PSScriptRoot/module/foobar.XXX if foobar is not a directory...
+                module/foobar           # $PSScriptRoot/module/foobar is a directory and $PSScriptRoot/module/foobar/foobar.XXX exists
+                module/foobar/foobar.XXX
+            </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PSSession">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.Runspaces.PSSession PSSession { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Management.Automation.Runspaces.PSSession PSSession" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.ImportModuleCommand.PSSession" />
+      <MemberSignature Language="VB.NET" Value="Public Property PSSession As PSSession" />
+      <MemberSignature Language="F#" Value="member this.PSSession : System.Management.Automation.Runspaces.PSSession with get, set" Usage="Microsoft.PowerShell.Commands.ImportModuleCommand.PSSession" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(Mandatory=true, ParameterSetName="PSSession")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(Mandatory=true, ParameterSetName="FullyQualifiedNameAndPSSession")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.ValidateNotNull</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.Runspaces.PSSession</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            If specified, then Import-Module will attempt to import PowerShell modules from a remote computer using the specified session
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RequiredVersion">
+      <MemberSignature Language="C#" Value="public Version RequiredVersion { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Version RequiredVersion" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.ImportModuleCommand.RequiredVersion" />
+      <MemberSignature Language="VB.NET" Value="Public Property RequiredVersion As Version" />
+      <MemberSignature Language="F#" Value="member this.RequiredVersion : Version with get, set" Usage="Microsoft.PowerShell.Commands.ImportModuleCommand.RequiredVersion" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="Name")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="PSSession")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="CimSession")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Version</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The version of the module to load.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Scope">
+      <MemberSignature Language="C#" Value="public string Scope { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Scope" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.ImportModuleCommand.Scope" />
+      <MemberSignature Language="VB.NET" Value="Public Property Scope As String" />
+      <MemberSignature Language="F#" Value="member this.Scope : string with get, set" Usage="Microsoft.PowerShell.Commands.ImportModuleCommand.Scope" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.ValidateSet(Mono.Cecil.CustomAttributeArgument[])</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Imports a command to the scope specified
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StopProcessing">
+      <MemberSignature Language="C#" Value="protected override void StopProcessing ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void StopProcessing() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Commands.ImportModuleCommand.StopProcessing" />
+      <MemberSignature Language="VB.NET" Value="Protected Overrides Sub StopProcessing ()" />
+      <MemberSignature Language="F#" Value="override this.StopProcessing : unit -&gt; unit" Usage="importModuleCommand.StopProcessing " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            When overridden in the derived class, interrupts currently
+            running code within the command. It should interrupt BeginProcessing,
+            ProcessRecord, and EndProcessing.
+            Default implementation in the base class just returns.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Variable">
+      <MemberSignature Language="C#" Value="public string[] Variable { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string[] Variable" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.ImportModuleCommand.Variable" />
+      <MemberSignature Language="VB.NET" Value="Public Property Variable As String()" />
+      <MemberSignature Language="F#" Value="member this.Variable : string[] with get, set" Usage="Microsoft.PowerShell.Commands.ImportModuleCommand.Variable" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.ValidateNotNull</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            This parameter specifies the variables to import from the module...
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

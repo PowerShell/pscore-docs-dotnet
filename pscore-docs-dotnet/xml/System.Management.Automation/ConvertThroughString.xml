@@ -1,0 +1,168 @@
+﻿<Type Name="ConvertThroughString" FullName="System.Management.Automation.ConvertThroughString">
+  <TypeSignature Language="C#" Value="public class ConvertThroughString : System.Management.Automation.PSTypeConverter" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ConvertThroughString extends System.Management.Automation.PSTypeConverter" />
+  <TypeSignature Language="DocId" Value="T:System.Management.Automation.ConvertThroughString" />
+  <TypeSignature Language="VB.NET" Value="Public Class ConvertThroughString&#xA;Inherits PSTypeConverter" />
+  <TypeSignature Language="F#" Value="type ConvertThroughString = class&#xA;    inherit PSTypeConverter" />
+  <AssemblyInfo>
+    <AssemblyName>System.Management.Automation</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Management.Automation.PSTypeConverter</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Enables a type that only has conversion from string to be converted from all other
+            types through string
+            </summary>
+    <remarks>
+            It is permitted to subclass <see cref="T:System.Management.Automation.ConvertThroughString" />
+            but there is no established scenario for doing this, nor has it been tested.
+            </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ConvertThroughString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.ConvertThroughString.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New ()" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanConvertFrom">
+      <MemberSignature Language="C#" Value="public override bool CanConvertFrom (object sourceValue, Type destinationType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool CanConvertFrom(object sourceValue, class System.Type destinationType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.ConvertThroughString.CanConvertFrom(System.Object,System.Type)" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Function CanConvertFrom (sourceValue As Object, destinationType As Type) As Boolean" />
+      <MemberSignature Language="F#" Value="override this.CanConvertFrom : obj * Type -&gt; bool" Usage="convertThroughString.CanConvertFrom (sourceValue, destinationType)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sourceValue" Type="System.Object" />
+        <Parameter Name="destinationType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="sourceValue">value to convert from</param>
+        <param name="destinationType">ignored</param>
+        <summary>
+            This will return false only if sourceValue is string
+            </summary>
+        <returns>false only if sourceValue is string</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanConvertTo">
+      <MemberSignature Language="C#" Value="public override bool CanConvertTo (object sourceValue, Type destinationType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool CanConvertTo(object sourceValue, class System.Type destinationType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.ConvertThroughString.CanConvertTo(System.Object,System.Type)" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Function CanConvertTo (sourceValue As Object, destinationType As Type) As Boolean" />
+      <MemberSignature Language="F#" Value="override this.CanConvertTo : obj * Type -&gt; bool" Usage="convertThroughString.CanConvertTo (sourceValue, destinationType)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sourceValue" Type="System.Object" />
+        <Parameter Name="destinationType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="sourceValue">The value to convert from</param>
+        <param name="destinationType">The value to convert from</param>
+        <summary>
+            Returns false, since this converter is not designed to be used to
+            convert from the type associated with the converted to other types.
+            </summary>
+        <returns>false</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ConvertFrom">
+      <MemberSignature Language="C#" Value="public override object ConvertFrom (object sourceValue, Type destinationType, IFormatProvider formatProvider, bool ignoreCase);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance object ConvertFrom(object sourceValue, class System.Type destinationType, class System.IFormatProvider formatProvider, bool ignoreCase) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.ConvertThroughString.ConvertFrom(System.Object,System.Type,System.IFormatProvider,System.Boolean)" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Function ConvertFrom (sourceValue As Object, destinationType As Type, formatProvider As IFormatProvider, ignoreCase As Boolean) As Object" />
+      <MemberSignature Language="F#" Value="override this.ConvertFrom : obj * Type * IFormatProvider * bool -&gt; obj" Usage="convertThroughString.ConvertFrom (sourceValue, destinationType, formatProvider, ignoreCase)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sourceValue" Type="System.Object" />
+        <Parameter Name="destinationType" Type="System.Type" />
+        <Parameter Name="formatProvider" Type="System.IFormatProvider" />
+        <Parameter Name="ignoreCase" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="sourceValue">The value to convert from</param>
+        <param name="destinationType">The type this converter is associated with</param>
+        <param name="formatProvider">The IFormatProvider to use</param>
+        <param name="ignoreCase">true if case should be ignored</param>
+        <summary>
+            Converts to destinationType by first converting sourceValue to string
+            and then converting the result to destinationType.
+            </summary>
+        <returns>sourceValue converted to destinationType</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.Management.Automation.PSInvalidCastException">When no conversion was possible</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ConvertTo">
+      <MemberSignature Language="C#" Value="public override object ConvertTo (object sourceValue, Type destinationType, IFormatProvider formatProvider, bool ignoreCase);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance object ConvertTo(object sourceValue, class System.Type destinationType, class System.IFormatProvider formatProvider, bool ignoreCase) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.ConvertThroughString.ConvertTo(System.Object,System.Type,System.IFormatProvider,System.Boolean)" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Function ConvertTo (sourceValue As Object, destinationType As Type, formatProvider As IFormatProvider, ignoreCase As Boolean) As Object" />
+      <MemberSignature Language="F#" Value="override this.ConvertTo : obj * Type * IFormatProvider * bool -&gt; obj" Usage="convertThroughString.ConvertTo (sourceValue, destinationType, formatProvider, ignoreCase)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sourceValue" Type="System.Object" />
+        <Parameter Name="destinationType" Type="System.Type" />
+        <Parameter Name="formatProvider" Type="System.IFormatProvider" />
+        <Parameter Name="ignoreCase" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="sourceValue">The value to convert from</param>
+        <param name="destinationType">The value to convert from</param>
+        <param name="formatProvider">The IFormatProvider to use</param>
+        <param name="ignoreCase">true if case should be ignored</param>
+        <summary>
+            Throws NotSupportedException, since this converter is not designed to be used to
+            convert from the type associated with the converted to other types.
+            </summary>
+        <returns>This method does not return a value.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NotSupportedException">NotSupportedException is always thrown</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

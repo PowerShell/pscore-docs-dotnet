@@ -1,0 +1,1575 @@
+﻿<Type Name="RegistryProvider" FullName="Microsoft.PowerShell.Commands.RegistryProvider">
+  <TypeSignature Language="C#" Value="public sealed class RegistryProvider : System.Management.Automation.Provider.NavigationCmdletProvider, System.Management.Automation.Provider.IDynamicPropertyCmdletProvider, System.Management.Automation.Provider.ISecurityDescriptorCmdletProvider" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit RegistryProvider extends System.Management.Automation.Provider.NavigationCmdletProvider implements class System.Management.Automation.Provider.IDynamicPropertyCmdletProvider, class System.Management.Automation.Provider.IPropertyCmdletProvider, class System.Management.Automation.Provider.ISecurityDescriptorCmdletProvider" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.PowerShell.Commands.RegistryProvider" />
+  <TypeSignature Language="VB.NET" Value="Public NotInheritable Class RegistryProvider&#xA;Inherits NavigationCmdletProvider&#xA;Implements IDynamicPropertyCmdletProvider, ISecurityDescriptorCmdletProvider" />
+  <TypeSignature Language="F#" Value="type RegistryProvider = class&#xA;    inherit NavigationCmdletProvider&#xA;    interface IPropertyCmdletProvider&#xA;    interface IDynamicPropertyCmdletProvider&#xA;    interface ISecurityDescriptorCmdletProvider" />
+  <AssemblyInfo>
+    <AssemblyName>System.Management.Automation</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Management.Automation.Provider.NavigationCmdletProvider</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Management.Automation.Provider.IDynamicPropertyCmdletProvider</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.Management.Automation.Provider.ISecurityDescriptorCmdletProvider</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Management.Automation.OutputType(typeof(System.String), ProviderCmdlet="Move-ItemProperty")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Management.Automation.OutputType(Mono.Cecil.CustomAttributeArgument[], ProviderCmdlet="Get-ChildItem")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Management.Automation.OutputType(typeof(Microsoft.Win32.RegistryKey), ProviderCmdlet="Get-Item")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Management.Automation.OutputType(typeof(System.Security.AccessControl.RegistrySecurity), ProviderCmdlet="Get-Acl")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Management.Automation.OutputType(typeof(Microsoft.Win32.RegistryKey), ProviderCmdlet="Get-ChildItem")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Management.Automation.OutputType(typeof(Microsoft.Win32.RegistryKey), ProviderCmdlet="Get-Item")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Management.Automation.OutputType(Mono.Cecil.CustomAttributeArgument[], ProviderCmdlet="Get-ItemProperty")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Management.Automation.OutputType(typeof(Microsoft.Win32.RegistryKey), ProviderCmdlet="New-Item")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Management.Automation.Provider.CmdletProvider("Registry", System.Management.Automation.Provider.ProviderCapabilities.ShouldProcess)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>
+             Provider that provides access to Registry through cmdlets. This provider
+             implements <see cref="T:System.Management.Automation.Provider.NavigationCmdletProvider" />,
+             <see cref="T:System.Management.Automation.Provider.IPropertyCmdletProvider" />,
+             <see cref="T:System.Management.Automation.Provider.IDynamicPropertyCmdletProvider" />,
+             <see cref="T:System.Management.Automation.Provider.ISecurityDescriptorCmdletProvider" />
+             interfaces.
+             </summary>
+    <remarks>To be added.</remarks>
+    <!--
+            
+             INSTALLATION:
+            
+             Type the following at an msh prompt:
+            
+             new-PSProvider -Path "REG.cmdletprovider" -description "My registry navigation provider"
+            
+             TO EXERCISE THE PROVIDER:
+            
+             Get-PSDrive
+             set-location HKLM:\software
+             get-childitem
+             New-PSDrive -PSProvider REG -name HKCR -root HKEY_CLASSES_ROOT\CLSID
+             set-location HKCR:
+             get-childitem "{0000*"
+            
+             The CmdletProvider attribute defines the name and capabilities of the provider.
+             The first parameter is the default friendly name for the provider. The second parameter
+             is the provider name which, along with some assembly information like version, company, etc.
+             is used as a fully-qualified provider name which can be used for disambiguation.
+             The third parameter states the capabilities of the provider.
+            
+             -->
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public RegistryProvider ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Commands.RegistryProvider.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New ()" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ClearItem">
+      <MemberSignature Language="C#" Value="protected override void ClearItem (string path);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void ClearItem(string path) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Commands.RegistryProvider.ClearItem(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Protected Overrides Sub ClearItem (path As String)" />
+      <MemberSignature Language="F#" Value="override this.ClearItem : string -&gt; unit" Usage="registryProvider.ClearItem path" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="path">
+            The path to the item that is to be cleared. Only registry values can be cleared using
+            this method.
+            </param>
+        <summary>
+            Clears the item at the specified <paramref name="path" />.
+            </summary>
+        <remarks>
+            The registry provider implements this by removing all the values for the specified key.
+            The item that is cleared is written to the WriteObject method.
+            If the path is to a value, then an ArgumentException is written.
+            </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ClearProperty">
+      <MemberSignature Language="C#" Value="public void ClearProperty (string path, System.Collections.ObjectModel.Collection&lt;string&gt; propertyToClear);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void ClearProperty(string path, class System.Collections.ObjectModel.Collection`1&lt;string&gt; propertyToClear) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Commands.RegistryProvider.ClearProperty(System.String,System.Collections.ObjectModel.Collection{System.String})" />
+      <MemberSignature Language="VB.NET" Value="Public Sub ClearProperty (path As String, propertyToClear As Collection(Of String))" />
+      <MemberSignature Language="F#" Value="override this.ClearProperty : string * System.Collections.ObjectModel.Collection&lt;string&gt; -&gt; unit" Usage="registryProvider.ClearProperty (path, propertyToClear)" />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.Management.Automation.Provider.IPropertyCmdletProvider.ClearProperty(System.String,System.Collections.ObjectModel.Collection{System.String})</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+        <Parameter Name="propertyToClear" Type="System.Collections.ObjectModel.Collection&lt;System.String&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="path">
+             The path to the item on which to clear the property.
+             </param>
+        <param name="propertyToClear">
+             The name of the property to clear.
+             </param>
+        <summary>
+             Clears a property of the item at the specified <paramref name="path" />.
+             </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ClearPropertyDynamicParameters">
+      <MemberSignature Language="C#" Value="public object ClearPropertyDynamicParameters (string path, System.Collections.ObjectModel.Collection&lt;string&gt; propertyToClear);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object ClearPropertyDynamicParameters(string path, class System.Collections.ObjectModel.Collection`1&lt;string&gt; propertyToClear) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Commands.RegistryProvider.ClearPropertyDynamicParameters(System.String,System.Collections.ObjectModel.Collection{System.String})" />
+      <MemberSignature Language="VB.NET" Value="Public Function ClearPropertyDynamicParameters (path As String, propertyToClear As Collection(Of String)) As Object" />
+      <MemberSignature Language="F#" Value="override this.ClearPropertyDynamicParameters : string * System.Collections.ObjectModel.Collection&lt;string&gt; -&gt; obj" Usage="registryProvider.ClearPropertyDynamicParameters (path, propertyToClear)" />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.Management.Automation.Provider.IPropertyCmdletProvider.ClearPropertyDynamicParameters(System.String,System.Collections.ObjectModel.Collection{System.String})</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+        <Parameter Name="propertyToClear" Type="System.Collections.ObjectModel.Collection&lt;System.String&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="path">
+             If the path was specified on the command line, this is the path
+             to the item to get the dynamic parameters for.
+             </param>
+        <param name="propertyToClear">
+             The name of the property to clear.
+             </param>
+        <summary>
+             Gives the provider a chance to attach additional parameters to the
+             clear-itemproperty cmdlet.
+             </summary>
+        <returns>
+             An object that has properties and fields decorated with
+             parsing attributes similar to a cmdlet class.
+             </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CopyItem">
+      <MemberSignature Language="C#" Value="protected override void CopyItem (string path, string destination, bool recurse);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void CopyItem(string path, string destination, bool recurse) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Commands.RegistryProvider.CopyItem(System.String,System.String,System.Boolean)" />
+      <MemberSignature Language="VB.NET" Value="Protected Overrides Sub CopyItem (path As String, destination As String, recurse As Boolean)" />
+      <MemberSignature Language="F#" Value="override this.CopyItem : string * string * bool -&gt; unit" Usage="registryProvider.CopyItem (path, destination, recurse)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+        <Parameter Name="destination" Type="System.String" />
+        <Parameter Name="recurse" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="path">
+             The path of the registry key to copy.
+             </param>
+        <param name="destination">
+             The path to copy the key to.
+             </param>
+        <param name="recurse">
+             If true all subkeys should be copied. If false, only the
+             specified key should be copied.
+             </param>
+        <summary>
+             Copies the specified registry key to the specified <paramref name="path" />.
+             </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CopyProperty">
+      <MemberSignature Language="C#" Value="public void CopyProperty (string sourcePath, string sourceProperty, string destinationPath, string destinationProperty);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void CopyProperty(string sourcePath, string sourceProperty, string destinationPath, string destinationProperty) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Commands.RegistryProvider.CopyProperty(System.String,System.String,System.String,System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub CopyProperty (sourcePath As String, sourceProperty As String, destinationPath As String, destinationProperty As String)" />
+      <MemberSignature Language="F#" Value="override this.CopyProperty : string * string * string * string -&gt; unit" Usage="registryProvider.CopyProperty (sourcePath, sourceProperty, destinationPath, destinationProperty)" />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.Management.Automation.Provider.IDynamicPropertyCmdletProvider.CopyProperty(System.String,System.String,System.String,System.String)</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sourcePath" Type="System.String" />
+        <Parameter Name="sourceProperty" Type="System.String" />
+        <Parameter Name="destinationPath" Type="System.String" />
+        <Parameter Name="destinationProperty" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="sourcePath">
+             The path to the item on which to copy the property.
+             </param>
+        <param name="sourceProperty">
+             The name of the property to copy.
+             </param>
+        <param name="destinationPath">
+             The path to the item on which to copy the property to.
+             </param>
+        <param name="destinationProperty">
+             The destination property to copy to.
+             </param>
+        <summary>
+             Copies a property of the item at the specified <paramref name="path" /> to a new property on the
+             destination <paramref name="path" />.
+             </summary>
+        <returns>
+             Nothing. A PSObject that represents the property that was copied should be
+             passed to the WriteObject() method.
+             </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CopyPropertyDynamicParameters">
+      <MemberSignature Language="C#" Value="public object CopyPropertyDynamicParameters (string sourcePath, string sourceProperty, string destinationPath, string destinationProperty);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object CopyPropertyDynamicParameters(string sourcePath, string sourceProperty, string destinationPath, string destinationProperty) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Commands.RegistryProvider.CopyPropertyDynamicParameters(System.String,System.String,System.String,System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Function CopyPropertyDynamicParameters (sourcePath As String, sourceProperty As String, destinationPath As String, destinationProperty As String) As Object" />
+      <MemberSignature Language="F#" Value="override this.CopyPropertyDynamicParameters : string * string * string * string -&gt; obj" Usage="registryProvider.CopyPropertyDynamicParameters (sourcePath, sourceProperty, destinationPath, destinationProperty)" />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.Management.Automation.Provider.IDynamicPropertyCmdletProvider.CopyPropertyDynamicParameters(System.String,System.String,System.String,System.String)</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sourcePath" Type="System.String" />
+        <Parameter Name="sourceProperty" Type="System.String" />
+        <Parameter Name="destinationPath" Type="System.String" />
+        <Parameter Name="destinationProperty" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="sourcePath">
+             If the path was specified on the command line, this is the path
+             to the item to get the dynamic parameters for.
+             </param>
+        <param name="sourceProperty">
+             The name of the property to copy.
+             </param>
+        <param name="destinationPath">
+             The path to the item on which to copy the property to.
+             </param>
+        <param name="destinationProperty">
+             The destination property to copy to.
+             </param>
+        <summary>
+             Gives the provider a chance to attach additional parameters to the
+             copy-itemproperty cmdlet.
+             </summary>
+        <returns>
+             An object that has properties and fields decorated with
+             parsing attributes similar to a cmdlet class.
+             </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetChildItems">
+      <MemberSignature Language="C#" Value="protected override void GetChildItems (string path, bool recurse, uint depth);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void GetChildItems(string path, bool recurse, unsigned int32 depth) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Commands.RegistryProvider.GetChildItems(System.String,System.Boolean,System.UInt32)" />
+      <MemberSignature Language="VB.NET" Value="Protected Overrides Sub GetChildItems (path As String, recurse As Boolean, depth As UInteger)" />
+      <MemberSignature Language="F#" Value="override this.GetChildItems : string * bool * uint32 -&gt; unit" Usage="registryProvider.GetChildItems (path, recurse, depth)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+        <Parameter Name="recurse" Type="System.Boolean" />
+        <Parameter Name="depth" Type="System.UInt32" />
+      </Parameters>
+      <Docs>
+        <param name="path">
+            The path to the key to get the child keys of.
+            </param>
+        <param name="recurse">
+            Determines if the call should be recursive. If true, all subkeys of
+            the key at the specified path will be written. If false, only the
+            immediate children of the key at the specified path will be written.
+            </param>
+        <param name="depth">
+            Current depth of recursion; special case uint.MaxValue performs full recursion.
+            </param>
+        <summary>
+            Gets all the child keys and values of the key at the specified <paramref name="path" />.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetChildName">
+      <MemberSignature Language="C#" Value="protected override string GetChildName (string path);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance string GetChildName(string path) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Commands.RegistryProvider.GetChildName(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Protected Overrides Function GetChildName (path As String) As String" />
+      <MemberSignature Language="F#" Value="override this.GetChildName : string -&gt; string" Usage="registryProvider.GetChildName path" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="path">
+             The path to get the leaf element of.
+             </param>
+        <summary>
+             Gets the child name for the given <paramref name="path" />.
+             </summary>
+        <returns>
+             The leaf element of the given path.
+             </returns>
+        <remarks>
+             Since the base class implementation of GetChildName will return
+             normalized paths (with \), we must change them to forward slashes..
+             </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetChildNames">
+      <MemberSignature Language="C#" Value="protected override void GetChildNames (string path, System.Management.Automation.ReturnContainers returnContainers);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void GetChildNames(string path, valuetype System.Management.Automation.ReturnContainers returnContainers) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Commands.RegistryProvider.GetChildNames(System.String,System.Management.Automation.ReturnContainers)" />
+      <MemberSignature Language="F#" Value="override this.GetChildNames : string * System.Management.Automation.ReturnContainers -&gt; unit" Usage="registryProvider.GetChildNames (path, returnContainers)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+        <Parameter Name="returnContainers" Type="System.Management.Automation.ReturnContainers" />
+      </Parameters>
+      <Docs>
+        <param name="path">
+             The path to the key to get the child names from.
+             </param>
+        <param name="returnContainers">
+             Ignored since the registry provider does not implement filtering.
+             Normally, if this parameter is ReturnAllContainers then all subkeys should be
+             returned. If it is false, then only those subkeys that match the
+             filter should be returned.
+             </param>
+        <summary>
+             Gets all the child key and value names of the key at the specified <paramref name="path" />.
+             </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetItem">
+      <MemberSignature Language="C#" Value="protected override void GetItem (string path);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void GetItem(string path) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Commands.RegistryProvider.GetItem(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Protected Overrides Sub GetItem (path As String)" />
+      <MemberSignature Language="F#" Value="override this.GetItem : string -&gt; unit" Usage="registryProvider.GetItem path" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="path">
+             The path to the key to retrieve.
+             </param>
+        <summary>
+             Gets the RegistryKey item at the specified <paramref name="path" />
+             and writes it to the pipeline using the WriteObject method.
+             Any non-terminating exceptions are written to the WriteError method.
+             </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetParentPath">
+      <MemberSignature Language="C#" Value="protected override string GetParentPath (string path, string root);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance string GetParentPath(string path, string root) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Commands.RegistryProvider.GetParentPath(System.String,System.String)" />
+      <MemberSignature Language="VB.NET" Value="Protected Overrides Function GetParentPath (path As String, root As String) As String" />
+      <MemberSignature Language="F#" Value="override this.GetParentPath : string * string -&gt; string" Usage="registryProvider.GetParentPath (path, root)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+        <Parameter Name="root" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="path">
+             The path to get the parent of.
+             </param>
+        <param name="root">
+             The root of the drive.
+             </param>
+        <summary>
+             Gets the parent path of the given <paramref name="path" />.
+             </summary>
+        <returns>
+             The parent path of the given path.
+             </returns>
+        <remarks>
+             Since the base class implementation of GetParentPath of HKLM:\foo would return
+             HKLM: we must add the \ back on.
+             </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetProperty">
+      <MemberSignature Language="C#" Value="public void GetProperty (string path, System.Collections.ObjectModel.Collection&lt;string&gt; providerSpecificPickList);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void GetProperty(string path, class System.Collections.ObjectModel.Collection`1&lt;string&gt; providerSpecificPickList) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Commands.RegistryProvider.GetProperty(System.String,System.Collections.ObjectModel.Collection{System.String})" />
+      <MemberSignature Language="VB.NET" Value="Public Sub GetProperty (path As String, providerSpecificPickList As Collection(Of String))" />
+      <MemberSignature Language="F#" Value="override this.GetProperty : string * System.Collections.ObjectModel.Collection&lt;string&gt; -&gt; unit" Usage="registryProvider.GetProperty (path, providerSpecificPickList)" />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.Management.Automation.Provider.IPropertyCmdletProvider.GetProperty(System.String,System.Collections.ObjectModel.Collection{System.String})</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+        <Parameter Name="providerSpecificPickList" Type="System.Collections.ObjectModel.Collection&lt;System.String&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="path">
+             The path to the item to retrieve properties from.
+             </param>
+        <param name="providerSpecificPickList">
+             A list of properties that should be retrieved. If this parameter is null
+             or empty, all properties should be retrieved.
+             </param>
+        <summary>
+             Gets the properties of the item specified by the <paramref name="path" />.
+             </summary>
+        <returns>
+             Nothing. An instance of PSObject representing the properties that were retrieved
+             should be passed to the WriteObject() method.
+             </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetPropertyDynamicParameters">
+      <MemberSignature Language="C#" Value="public object GetPropertyDynamicParameters (string path, System.Collections.ObjectModel.Collection&lt;string&gt; providerSpecificPickList);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object GetPropertyDynamicParameters(string path, class System.Collections.ObjectModel.Collection`1&lt;string&gt; providerSpecificPickList) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Commands.RegistryProvider.GetPropertyDynamicParameters(System.String,System.Collections.ObjectModel.Collection{System.String})" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetPropertyDynamicParameters (path As String, providerSpecificPickList As Collection(Of String)) As Object" />
+      <MemberSignature Language="F#" Value="override this.GetPropertyDynamicParameters : string * System.Collections.ObjectModel.Collection&lt;string&gt; -&gt; obj" Usage="registryProvider.GetPropertyDynamicParameters (path, providerSpecificPickList)" />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.Management.Automation.Provider.IPropertyCmdletProvider.GetPropertyDynamicParameters(System.String,System.Collections.ObjectModel.Collection{System.String})</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+        <Parameter Name="providerSpecificPickList" Type="System.Collections.ObjectModel.Collection&lt;System.String&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="path">
+             If the path was specified on the command line, this is the path
+             to the item to get the dynamic parameters for.
+             </param>
+        <param name="providerSpecificPickList">
+             A list of properties that should be retrieved. If this parameter is null
+             or empty, all properties should be retrieved.
+             </param>
+        <summary>
+             Gives the provider a chance to attach additional parameters to the
+             get-itemproperty cmdlet.
+             </summary>
+        <returns>
+             An object that has properties and fields decorated with
+             parsing attributes similar to a cmdlet class.
+             </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetSecurityDescriptor">
+      <MemberSignature Language="C#" Value="public void GetSecurityDescriptor (string path, System.Security.AccessControl.AccessControlSections sections);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void GetSecurityDescriptor(string path, valuetype System.Security.AccessControl.AccessControlSections sections) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Commands.RegistryProvider.GetSecurityDescriptor(System.String,System.Security.AccessControl.AccessControlSections)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub GetSecurityDescriptor (path As String, sections As AccessControlSections)" />
+      <MemberSignature Language="F#" Value="override this.GetSecurityDescriptor : string * System.Security.AccessControl.AccessControlSections -&gt; unit" Usage="registryProvider.GetSecurityDescriptor (path, sections)" />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.Management.Automation.Provider.ISecurityDescriptorCmdletProvider.GetSecurityDescriptor(System.String,System.Security.AccessControl.AccessControlSections)</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+        <Parameter Name="sections" Type="System.Security.AccessControl.AccessControlSections" />
+      </Parameters>
+      <Docs>
+        <param name="path">
+             The path to the item.
+             </param>
+        <param name="sections">
+             Specifies the parts of a security descriptor to retrieve.
+             </param>
+        <summary>
+             Gets the security descriptor for the item specified by <paramref name="path" />.
+             </summary>
+        <returns>
+             Nothing. An object that represents the security descriptor for the item
+             specified by path is written to the WriteSecurityDescriptorObject method.
+             </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HasChildItems">
+      <MemberSignature Language="C#" Value="protected override bool HasChildItems (string path);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance bool HasChildItems(string path) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Commands.RegistryProvider.HasChildItems(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Protected Overrides Function HasChildItems (path As String) As Boolean" />
+      <MemberSignature Language="F#" Value="override this.HasChildItems : string -&gt; bool" Usage="registryProvider.HasChildItems path" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="path">
+             The path to the key to determine if it has sub keys.
+             </param>
+        <summary>
+             Determines if the specified key has subkeys.
+             </summary>
+        <returns>
+             True if the specified key has subkeys, false otherwise.
+             </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InitializeDefaultDrives">
+      <MemberSignature Language="C#" Value="protected override System.Collections.ObjectModel.Collection&lt;System.Management.Automation.PSDriveInfo&gt; InitializeDefaultDrives ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Collections.ObjectModel.Collection`1&lt;class System.Management.Automation.PSDriveInfo&gt; InitializeDefaultDrives() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Commands.RegistryProvider.InitializeDefaultDrives" />
+      <MemberSignature Language="VB.NET" Value="Protected Overrides Function InitializeDefaultDrives () As Collection(Of PSDriveInfo)" />
+      <MemberSignature Language="F#" Value="override this.InitializeDefaultDrives : unit -&gt; System.Collections.ObjectModel.Collection&lt;System.Management.Automation.PSDriveInfo&gt;" Usage="registryProvider.InitializeDefaultDrives " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.Collection&lt;System.Management.Automation.PSDriveInfo&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Creates HKEY_LOCAL_MACHINE and HKEY_CURRENT_USER registry drives during provider initialization.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>
+            After the Start method is called on a provider, the InitializeDefaultDrives
+            method is called. This is an opportunity for the provider to
+            mount drives that are important to it. For instance, the Active Directory
+            provider might mount a drive for the defaultNamingContext if the
+            machine is joined to a domain.  The FileSystem mounts all drives then available.
+            </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsItemContainer">
+      <MemberSignature Language="C#" Value="protected override bool IsItemContainer (string path);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance bool IsItemContainer(string path) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Commands.RegistryProvider.IsItemContainer(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Protected Overrides Function IsItemContainer (path As String) As Boolean" />
+      <MemberSignature Language="F#" Value="override this.IsItemContainer : string -&gt; bool" Usage="registryProvider.IsItemContainer path" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="path">
+            The path to a key.
+            </param>
+        <summary>
+            Determines if the key at the specified <paramref name="path" /> is a container.
+            </summary>
+        <returns>
+            Since all registry keys are containers this method just checks
+            to see if the key exists and returns true if it is does or
+            false otherwise.
+            </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsValidPath">
+      <MemberSignature Language="C#" Value="protected override bool IsValidPath (string path);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance bool IsValidPath(string path) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Commands.RegistryProvider.IsValidPath(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Protected Overrides Function IsValidPath (path As String) As Boolean" />
+      <MemberSignature Language="F#" Value="override this.IsValidPath : string -&gt; bool" Usage="registryProvider.IsValidPath path" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="path">
+             The path to validate.
+             </param>
+        <summary>
+             Determines if the specified <paramref name="path" /> is syntactically and semantically valid.
+             </summary>
+        <returns>
+             True if the path is valid, or False otherwise.
+             </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ItemExists">
+      <MemberSignature Language="C#" Value="protected override bool ItemExists (string path);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance bool ItemExists(string path) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Commands.RegistryProvider.ItemExists(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Protected Overrides Function ItemExists (path As String) As Boolean" />
+      <MemberSignature Language="F#" Value="override this.ItemExists : string -&gt; bool" Usage="registryProvider.ItemExists path" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="path">
+             The path to the key to determine if it exists.
+             </param>
+        <summary>
+             Determines if the key at the specified path exists.
+             </summary>
+        <returns>
+             True if the key at the specified path exists, false otherwise.
+             </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MoveItem">
+      <MemberSignature Language="C#" Value="protected override void MoveItem (string path, string destination);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void MoveItem(string path, string destination) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Commands.RegistryProvider.MoveItem(System.String,System.String)" />
+      <MemberSignature Language="VB.NET" Value="Protected Overrides Sub MoveItem (path As String, destination As String)" />
+      <MemberSignature Language="F#" Value="override this.MoveItem : string * string -&gt; unit" Usage="registryProvider.MoveItem (path, destination)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+        <Parameter Name="destination" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="path">
+             The path of the key to move.
+             </param>
+        <param name="destination">
+             The path to move the key to.
+             </param>
+        <summary>
+             Moves the specified key.
+             </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MoveProperty">
+      <MemberSignature Language="C#" Value="public void MoveProperty (string sourcePath, string sourceProperty, string destinationPath, string destinationProperty);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void MoveProperty(string sourcePath, string sourceProperty, string destinationPath, string destinationProperty) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Commands.RegistryProvider.MoveProperty(System.String,System.String,System.String,System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub MoveProperty (sourcePath As String, sourceProperty As String, destinationPath As String, destinationProperty As String)" />
+      <MemberSignature Language="F#" Value="override this.MoveProperty : string * string * string * string -&gt; unit" Usage="registryProvider.MoveProperty (sourcePath, sourceProperty, destinationPath, destinationProperty)" />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.Management.Automation.Provider.IDynamicPropertyCmdletProvider.MoveProperty(System.String,System.String,System.String,System.String)</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sourcePath" Type="System.String" />
+        <Parameter Name="sourceProperty" Type="System.String" />
+        <Parameter Name="destinationPath" Type="System.String" />
+        <Parameter Name="destinationProperty" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="sourcePath">
+             The path to the item on which to move the property.
+             </param>
+        <param name="sourceProperty">
+             The name of the property to move.
+             </param>
+        <param name="destinationPath">
+             The path to the item on which to move the property to.
+             </param>
+        <param name="destinationProperty">
+             The destination property to move to.
+             </param>
+        <summary>
+             Moves a property on an item specified by <paramref name="sourcePath" />.
+             </summary>
+        <returns>
+             Nothing. A PSObject that represents the property that was moved should be
+             passed to the WriteObject() method.
+             </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MovePropertyDynamicParameters">
+      <MemberSignature Language="C#" Value="public object MovePropertyDynamicParameters (string sourcePath, string sourceProperty, string destinationPath, string destinationProperty);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object MovePropertyDynamicParameters(string sourcePath, string sourceProperty, string destinationPath, string destinationProperty) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Commands.RegistryProvider.MovePropertyDynamicParameters(System.String,System.String,System.String,System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Function MovePropertyDynamicParameters (sourcePath As String, sourceProperty As String, destinationPath As String, destinationProperty As String) As Object" />
+      <MemberSignature Language="F#" Value="override this.MovePropertyDynamicParameters : string * string * string * string -&gt; obj" Usage="registryProvider.MovePropertyDynamicParameters (sourcePath, sourceProperty, destinationPath, destinationProperty)" />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.Management.Automation.Provider.IDynamicPropertyCmdletProvider.MovePropertyDynamicParameters(System.String,System.String,System.String,System.String)</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sourcePath" Type="System.String" />
+        <Parameter Name="sourceProperty" Type="System.String" />
+        <Parameter Name="destinationPath" Type="System.String" />
+        <Parameter Name="destinationProperty" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="sourcePath">
+             If the path was specified on the command line, this is the path
+             to the item to get the dynamic parameters for.
+             </param>
+        <param name="sourceProperty">
+             The name of the property to copy.
+             </param>
+        <param name="destinationPath">
+             The path to the item on which to copy the property to.
+             </param>
+        <param name="destinationProperty">
+             The destination property to copy to.
+             </param>
+        <summary>
+             Gives the provider a chance to attach additional parameters to the
+             move-itemproperty cmdlet.
+             </summary>
+        <returns>
+             An object that has properties and fields decorated with
+             parsing attributes similar to a cmdlet class.
+             </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NewDrive">
+      <MemberSignature Language="C#" Value="protected override System.Management.Automation.PSDriveInfo NewDrive (System.Management.Automation.PSDriveInfo drive);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Management.Automation.PSDriveInfo NewDrive(class System.Management.Automation.PSDriveInfo drive) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Commands.RegistryProvider.NewDrive(System.Management.Automation.PSDriveInfo)" />
+      <MemberSignature Language="VB.NET" Value="Protected Overrides Function NewDrive (drive As PSDriveInfo) As PSDriveInfo" />
+      <MemberSignature Language="F#" Value="override this.NewDrive : System.Management.Automation.PSDriveInfo -&gt; System.Management.Automation.PSDriveInfo" Usage="registryProvider.NewDrive drive" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.PSDriveInfo</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="drive" Type="System.Management.Automation.PSDriveInfo" />
+      </Parameters>
+      <Docs>
+        <param name="drive">To be added.</param>
+        <summary>
+            Verifies that the new drive has a valid root.
+            </summary>
+        <returns>A PSDriveInfo object.</returns>
+        <remarks>To be added.</remarks>
+        <!--
+            It also givesthe provider an opportunity to return a
+            derived class of PSDriveInfo which can contain provider specific
+            information about the drive.This may be done for performance
+            or reliability reasons or toprovide extra data to all calls
+            using the drive
+            -->
+      </Docs>
+    </Member>
+    <Member MemberName="NewItem">
+      <MemberSignature Language="C#" Value="protected override void NewItem (string path, string type, object newItem);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void NewItem(string path, string type, object newItem) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Commands.RegistryProvider.NewItem(System.String,System.String,System.Object)" />
+      <MemberSignature Language="VB.NET" Value="Protected Overrides Sub NewItem (path As String, type As String, newItem As Object)" />
+      <MemberSignature Language="F#" Value="override this.NewItem : string * string * obj -&gt; unit" Usage="registryProvider.NewItem (path, type, newItem)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+        <Parameter Name="type" Type="System.String" />
+        <Parameter Name="newItem" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="path">
+             The path to the new key to create.
+             </param>
+        <param name="type">
+             The type is ignored because this provider only creates
+             registry keys.
+             </param>
+        <param name="newItem">
+             The newItem is ignored because the provider creates the
+             key based on the path.
+             </param>
+        <summary>
+             Creates a new registry key or value at the specified <paramref name="path" />.
+             </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NewProperty">
+      <MemberSignature Language="C#" Value="public void NewProperty (string path, string propertyName, string type, object value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void NewProperty(string path, string propertyName, string type, object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Commands.RegistryProvider.NewProperty(System.String,System.String,System.String,System.Object)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub NewProperty (path As String, propertyName As String, type As String, value As Object)" />
+      <MemberSignature Language="F#" Value="override this.NewProperty : string * string * string * obj -&gt; unit" Usage="registryProvider.NewProperty (path, propertyName, type, value)" />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.Management.Automation.Provider.IDynamicPropertyCmdletProvider.NewProperty(System.String,System.String,System.String,System.Object)</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+        <Parameter Name="propertyName" Type="System.String" />
+        <Parameter Name="type" Type="System.String" />
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="path">
+             The path to the item on which the new property should be created.
+             </param>
+        <param name="propertyName">
+             The name of the property that should be created.
+             </param>
+        <param name="type">
+             The type of the property that should be created.
+             </param>
+        <param name="value">
+             The new value of the property that should be created.
+             </param>
+        <summary>
+             Creates a new property on the specified item
+             </summary>
+        <returns>
+             Nothing. A PSObject representing the property that was created should
+             be passed to the WriteObject() method.
+             </returns>
+        <remarks>To be added.</remarks>
+        <!--
+             Implement this method when you are providing access to a data store
+             that allows dynamic creation of properties.
+             -->
+      </Docs>
+    </Member>
+    <Member MemberName="NewPropertyDynamicParameters">
+      <MemberSignature Language="C#" Value="public object NewPropertyDynamicParameters (string path, string propertyName, string type, object value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object NewPropertyDynamicParameters(string path, string propertyName, string type, object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Commands.RegistryProvider.NewPropertyDynamicParameters(System.String,System.String,System.String,System.Object)" />
+      <MemberSignature Language="VB.NET" Value="Public Function NewPropertyDynamicParameters (path As String, propertyName As String, type As String, value As Object) As Object" />
+      <MemberSignature Language="F#" Value="override this.NewPropertyDynamicParameters : string * string * string * obj -&gt; obj" Usage="registryProvider.NewPropertyDynamicParameters (path, propertyName, type, value)" />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.Management.Automation.Provider.IDynamicPropertyCmdletProvider.NewPropertyDynamicParameters(System.String,System.String,System.String,System.Object)</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+        <Parameter Name="propertyName" Type="System.String" />
+        <Parameter Name="type" Type="System.String" />
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="path">
+             If the path was specified on the command line, this is the path
+             to the item to get the dynamic parameters for.
+             </param>
+        <param name="propertyName">
+             The name of the property that should be created.
+             </param>
+        <param name="type">
+             The type of the property that should be created.
+             </param>
+        <param name="value">
+             The new value of the property that should be created.
+             </param>
+        <summary>
+             Gives the provider a chance to attach additional parameters to the
+             new-itemproperty cmdlet.
+             </summary>
+        <returns>
+             An object that has properties and fields decorated with
+             parsing attributes similar to a cmdlet class.
+             </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NewSecurityDescriptorFromPath">
+      <MemberSignature Language="C#" Value="public System.Security.AccessControl.ObjectSecurity NewSecurityDescriptorFromPath (string path, System.Security.AccessControl.AccessControlSections sections);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Security.AccessControl.ObjectSecurity NewSecurityDescriptorFromPath(string path, valuetype System.Security.AccessControl.AccessControlSections sections) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Commands.RegistryProvider.NewSecurityDescriptorFromPath(System.String,System.Security.AccessControl.AccessControlSections)" />
+      <MemberSignature Language="VB.NET" Value="Public Function NewSecurityDescriptorFromPath (path As String, sections As AccessControlSections) As ObjectSecurity" />
+      <MemberSignature Language="F#" Value="abstract member NewSecurityDescriptorFromPath : string * System.Security.AccessControl.AccessControlSections -&gt; System.Security.AccessControl.ObjectSecurity&#xA;override this.NewSecurityDescriptorFromPath : string * System.Security.AccessControl.AccessControlSections -&gt; System.Security.AccessControl.ObjectSecurity" Usage="registryProvider.NewSecurityDescriptorFromPath (path, sections)" />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.Management.Automation.Provider.ISecurityDescriptorCmdletProvider.NewSecurityDescriptorFromPath(System.String,System.Security.AccessControl.AccessControlSections)</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.AccessControl.ObjectSecurity</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+        <Parameter Name="sections" Type="System.Security.AccessControl.AccessControlSections" />
+      </Parameters>
+      <Docs>
+        <param name="path">
+            The path to the item whose type is to be used when
+            creating a new descriptor.
+            </param>
+        <param name="sections">
+            Specifies the parts of a security descriptor to create.
+            </param>
+        <summary>
+            Creates a new empty security descriptor.
+            </summary>
+        <returns>
+            An instance of <see cref="T:System.Security.AccessControl.ObjectSecurity" /> object.
+            </returns>
+        <remarks>
+          <paramref name="path" /> and <paramref name="sections" /> are not used by this method.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NewSecurityDescriptorOfType">
+      <MemberSignature Language="C#" Value="public System.Security.AccessControl.ObjectSecurity NewSecurityDescriptorOfType (string type, System.Security.AccessControl.AccessControlSections sections);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Security.AccessControl.ObjectSecurity NewSecurityDescriptorOfType(string type, valuetype System.Security.AccessControl.AccessControlSections sections) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Commands.RegistryProvider.NewSecurityDescriptorOfType(System.String,System.Security.AccessControl.AccessControlSections)" />
+      <MemberSignature Language="VB.NET" Value="Public Function NewSecurityDescriptorOfType (type As String, sections As AccessControlSections) As ObjectSecurity" />
+      <MemberSignature Language="F#" Value="abstract member NewSecurityDescriptorOfType : string * System.Security.AccessControl.AccessControlSections -&gt; System.Security.AccessControl.ObjectSecurity&#xA;override this.NewSecurityDescriptorOfType : string * System.Security.AccessControl.AccessControlSections -&gt; System.Security.AccessControl.ObjectSecurity" Usage="registryProvider.NewSecurityDescriptorOfType (type, sections)" />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.Management.Automation.Provider.ISecurityDescriptorCmdletProvider.NewSecurityDescriptorOfType(System.String,System.Security.AccessControl.AccessControlSections)</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.AccessControl.ObjectSecurity</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="type" Type="System.String" />
+        <Parameter Name="sections" Type="System.Security.AccessControl.AccessControlSections" />
+      </Parameters>
+      <Docs>
+        <param name="type">
+             The type of item associated with this security descriptor
+             </param>
+        <param name="sections">
+             Specifies the parts of a security descriptor to create.
+             </param>
+        <summary>
+             Creates a new empty security descriptor.
+             </summary>
+        <returns>
+             An instance of <see cref="T:System.Security.AccessControl.ObjectSecurity" /> object.
+             </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ProviderName">
+      <MemberSignature Language="C#" Value="public const string ProviderName;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal string ProviderName" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.PowerShell.Commands.RegistryProvider.ProviderName" />
+      <MemberSignature Language="VB.NET" Value="Public Const ProviderName As String " />
+      <MemberSignature Language="F#" Value="val mutable ProviderName : string" Usage="Microsoft.PowerShell.Commands.RegistryProvider.ProviderName" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the name of the provider
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveItem">
+      <MemberSignature Language="C#" Value="protected override void RemoveItem (string path, bool recurse);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void RemoveItem(string path, bool recurse) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Commands.RegistryProvider.RemoveItem(System.String,System.Boolean)" />
+      <MemberSignature Language="VB.NET" Value="Protected Overrides Sub RemoveItem (path As String, recurse As Boolean)" />
+      <MemberSignature Language="F#" Value="override this.RemoveItem : string * bool -&gt; unit" Usage="registryProvider.RemoveItem (path, recurse)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+        <Parameter Name="recurse" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="path">
+             The path to the key to remove.
+             </param>
+        <param name="recurse">
+             Ignored. All removes are recursive because the
+             registry provider does not support filters.
+             </param>
+        <summary>
+             Removes the specified registry key and all sub-keys
+             </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveProperty">
+      <MemberSignature Language="C#" Value="public void RemoveProperty (string path, string propertyName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void RemoveProperty(string path, string propertyName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Commands.RegistryProvider.RemoveProperty(System.String,System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub RemoveProperty (path As String, propertyName As String)" />
+      <MemberSignature Language="F#" Value="override this.RemoveProperty : string * string -&gt; unit" Usage="registryProvider.RemoveProperty (path, propertyName)" />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.Management.Automation.Provider.IDynamicPropertyCmdletProvider.RemoveProperty(System.String,System.String)</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+        <Parameter Name="propertyName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="path">
+             The path to the item on which the property should be removed.
+             </param>
+        <param name="propertyName">
+             The name of the property to be removed.
+             </param>
+        <summary>
+             Removes a property on the item specified by the path.
+             </summary>
+        <remarks>
+             Implement this method when you are providing access to a data store
+             that allows dynamic removal of properties.
+             </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemovePropertyDynamicParameters">
+      <MemberSignature Language="C#" Value="public object RemovePropertyDynamicParameters (string path, string propertyName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object RemovePropertyDynamicParameters(string path, string propertyName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Commands.RegistryProvider.RemovePropertyDynamicParameters(System.String,System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Function RemovePropertyDynamicParameters (path As String, propertyName As String) As Object" />
+      <MemberSignature Language="F#" Value="override this.RemovePropertyDynamicParameters : string * string -&gt; obj" Usage="registryProvider.RemovePropertyDynamicParameters (path, propertyName)" />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.Management.Automation.Provider.IDynamicPropertyCmdletProvider.RemovePropertyDynamicParameters(System.String,System.String)</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+        <Parameter Name="propertyName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="path">
+             If the path was specified on the command line, this is the path
+             to the item to get the dynamic parameters for.
+             </param>
+        <param name="propertyName">
+             The name of the property that should be removed.
+             </param>
+        <summary>
+             Gives the provider a chance to attach additional parameters to the
+             remove-itemproperty cmdlet.
+             </summary>
+        <returns>
+             An object that has properties and fields decorated with
+             parsing attributes similar to a cmdlet class.
+             </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RenameItem">
+      <MemberSignature Language="C#" Value="protected override void RenameItem (string path, string newName);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void RenameItem(string path, string newName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Commands.RegistryProvider.RenameItem(System.String,System.String)" />
+      <MemberSignature Language="VB.NET" Value="Protected Overrides Sub RenameItem (path As String, newName As String)" />
+      <MemberSignature Language="F#" Value="override this.RenameItem : string * string -&gt; unit" Usage="registryProvider.RenameItem (path, newName)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+        <Parameter Name="newName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="path">
+             The path to the key to rename.
+             </param>
+        <param name="newName">
+             The new name of the key.
+             </param>
+        <summary>
+             Renames the key at the specified <paramref name="path" /> to <paramref name="newName" />.
+             </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RenameProperty">
+      <MemberSignature Language="C#" Value="public void RenameProperty (string path, string sourceProperty, string destinationProperty);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void RenameProperty(string path, string sourceProperty, string destinationProperty) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Commands.RegistryProvider.RenameProperty(System.String,System.String,System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub RenameProperty (path As String, sourceProperty As String, destinationProperty As String)" />
+      <MemberSignature Language="F#" Value="override this.RenameProperty : string * string * string -&gt; unit" Usage="registryProvider.RenameProperty (path, sourceProperty, destinationProperty)" />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.Management.Automation.Provider.IDynamicPropertyCmdletProvider.RenameProperty(System.String,System.String,System.String)</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+        <Parameter Name="sourceProperty" Type="System.String" />
+        <Parameter Name="destinationProperty" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="path">
+             The path to the item on which to rename the property.
+             </param>
+        <param name="sourceProperty">
+             The property to rename.
+             </param>
+        <param name="destinationProperty">
+             The new name of the property.
+             </param>
+        <summary>
+             Renames a property of the item at the specified <paramref name="path" />.
+             </summary>
+        <returns>
+             Nothing. A PSObject that represents the property that was renamed should be
+             passed to the WriteObject() method.
+             </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RenamePropertyDynamicParameters">
+      <MemberSignature Language="C#" Value="public object RenamePropertyDynamicParameters (string path, string sourceProperty, string destinationProperty);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object RenamePropertyDynamicParameters(string path, string sourceProperty, string destinationProperty) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Commands.RegistryProvider.RenamePropertyDynamicParameters(System.String,System.String,System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Function RenamePropertyDynamicParameters (path As String, sourceProperty As String, destinationProperty As String) As Object" />
+      <MemberSignature Language="F#" Value="override this.RenamePropertyDynamicParameters : string * string * string -&gt; obj" Usage="registryProvider.RenamePropertyDynamicParameters (path, sourceProperty, destinationProperty)" />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.Management.Automation.Provider.IDynamicPropertyCmdletProvider.RenamePropertyDynamicParameters(System.String,System.String,System.String)</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+        <Parameter Name="sourceProperty" Type="System.String" />
+        <Parameter Name="destinationProperty" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="path">
+             If the path was specified on the command line, this is the path
+             to the item to get the dynamic parameters for.
+             </param>
+        <param name="sourceProperty">
+             The property to rename.
+             </param>
+        <param name="destinationProperty">
+             The new name of the property.
+             </param>
+        <summary>
+             Gives the provider a chance to attach additional parameters to the
+             rename-itemproperty cmdlet.
+             </summary>
+        <returns>
+             An object that has properties and fields decorated with
+             parsing attributes similar to a cmdlet class.
+             </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetItem">
+      <MemberSignature Language="C#" Value="protected override void SetItem (string path, object value);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void SetItem(string path, object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Commands.RegistryProvider.SetItem(System.String,System.Object)" />
+      <MemberSignature Language="VB.NET" Value="Protected Overrides Sub SetItem (path As String, value As Object)" />
+      <MemberSignature Language="F#" Value="override this.SetItem : string * obj -&gt; unit" Usage="registryProvider.SetItem (path, value)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="path">
+             The path to the item that is to be set. Only registry values can be set using
+             this method.
+             </param>
+        <param name="value">
+             The new value for the registry value.
+             </param>
+        <summary>
+             Sets registry values at <paramref name="path " /> to the <paramref name="value" /> specified.
+             </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetItemDynamicParameters">
+      <MemberSignature Language="C#" Value="protected override object SetItemDynamicParameters (string path, object value);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance object SetItemDynamicParameters(string path, object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Commands.RegistryProvider.SetItemDynamicParameters(System.String,System.Object)" />
+      <MemberSignature Language="VB.NET" Value="Protected Overrides Function SetItemDynamicParameters (path As String, value As Object) As Object" />
+      <MemberSignature Language="F#" Value="override this.SetItemDynamicParameters : string * obj -&gt; obj" Usage="registryProvider.SetItemDynamicParameters (path, value)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="path">
+             Ignored.
+             </param>
+        <param name="value">
+             Ignored.
+             </param>
+        <summary>
+             Gets the dynamic parameters for the SetItem method.
+             </summary>
+        <returns>
+             An instance of the <see cref="T:Microsoft.PowerShell.Commands.RegistryProviderSetItemDynamicParameter" /> class which
+             contains a parameter for the Type.
+             </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetProperty">
+      <MemberSignature Language="C#" Value="public void SetProperty (string path, System.Management.Automation.PSObject propertyValue);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void SetProperty(string path, class System.Management.Automation.PSObject propertyValue) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Commands.RegistryProvider.SetProperty(System.String,System.Management.Automation.PSObject)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub SetProperty (path As String, propertyValue As PSObject)" />
+      <MemberSignature Language="F#" Value="override this.SetProperty : string * System.Management.Automation.PSObject -&gt; unit" Usage="registryProvider.SetProperty (path, propertyValue)" />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.Management.Automation.Provider.IPropertyCmdletProvider.SetProperty(System.String,System.Management.Automation.PSObject)</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+        <Parameter Name="propertyValue" Type="System.Management.Automation.PSObject" />
+      </Parameters>
+      <Docs>
+        <param name="path">
+             The path to the item to set the properties on.
+             </param>
+        <param name="propertyValue">
+             A PSObject which contains a collection of the name, type, value
+             of the properties to be set.
+             </param>
+        <summary>
+             Sets the specified properties of the item at the specified <paramref name="path" />.
+             </summary>
+        <returns>
+             Nothing. An instance of PSObject representing the properties that were set
+             should be passed to the WriteObject() method.
+             </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetPropertyDynamicParameters">
+      <MemberSignature Language="C#" Value="public object SetPropertyDynamicParameters (string path, System.Management.Automation.PSObject propertyValue);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object SetPropertyDynamicParameters(string path, class System.Management.Automation.PSObject propertyValue) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Commands.RegistryProvider.SetPropertyDynamicParameters(System.String,System.Management.Automation.PSObject)" />
+      <MemberSignature Language="VB.NET" Value="Public Function SetPropertyDynamicParameters (path As String, propertyValue As PSObject) As Object" />
+      <MemberSignature Language="F#" Value="override this.SetPropertyDynamicParameters : string * System.Management.Automation.PSObject -&gt; obj" Usage="registryProvider.SetPropertyDynamicParameters (path, propertyValue)" />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.Management.Automation.Provider.IPropertyCmdletProvider.SetPropertyDynamicParameters(System.String,System.Management.Automation.PSObject)</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+        <Parameter Name="propertyValue" Type="System.Management.Automation.PSObject" />
+      </Parameters>
+      <Docs>
+        <param name="path">
+             If the path was specified on the command line, this is the path
+             to the item to get the dynamic parameters for.
+             </param>
+        <param name="propertyValue">
+             A PSObject which contains a collection of the name, type, value
+             of the properties to be set.
+             </param>
+        <summary>
+             Gives the provider a chance to attach additional parameters to the
+             get-itemproperty cmdlet.
+             </summary>
+        <returns>
+             An object that has properties and fields decorated with
+             parsing attributes similar to a cmdlet class.
+             </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetSecurityDescriptor">
+      <MemberSignature Language="C#" Value="public void SetSecurityDescriptor (string path, System.Security.AccessControl.ObjectSecurity securityDescriptor);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void SetSecurityDescriptor(string path, class System.Security.AccessControl.ObjectSecurity securityDescriptor) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Commands.RegistryProvider.SetSecurityDescriptor(System.String,System.Security.AccessControl.ObjectSecurity)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub SetSecurityDescriptor (path As String, securityDescriptor As ObjectSecurity)" />
+      <MemberSignature Language="F#" Value="override this.SetSecurityDescriptor : string * System.Security.AccessControl.ObjectSecurity -&gt; unit" Usage="registryProvider.SetSecurityDescriptor (path, securityDescriptor)" />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.Management.Automation.Provider.ISecurityDescriptorCmdletProvider.SetSecurityDescriptor(System.String,System.Security.AccessControl.ObjectSecurity)</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+        <Parameter Name="securityDescriptor" Type="System.Security.AccessControl.ObjectSecurity" />
+      </Parameters>
+      <Docs>
+        <param name="path">
+             The path to the item to set the security descriptor on.
+             </param>
+        <param name="securityDescriptor">
+             The new security descriptor for the item.
+             </param>
+        <summary>
+             Sets the security descriptor for the item specified by <paramref name="path" /></summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,83 @@
+﻿<Type Name="ProgressRecordType" FullName="System.Management.Automation.ProgressRecordType">
+  <TypeSignature Language="C#" Value="public enum ProgressRecordType" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed ProgressRecordType extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Management.Automation.ProgressRecordType" />
+  <TypeSignature Language="VB.NET" Value="Public Enum ProgressRecordType" />
+  <TypeSignature Language="F#" Value="type ProgressRecordType = " />
+  <AssemblyInfo>
+    <AssemblyName>System.Management.Automation</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>
+            
+             Defines two types of progress record that refer to the beginning (or middle) and end of an operation.
+            
+             </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Completed">
+      <MemberSignature Language="C#" Value="Completed" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Management.Automation.ProgressRecordType Completed = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Management.Automation.ProgressRecordType.Completed" />
+      <MemberSignature Language="VB.NET" Value="Completed" />
+      <MemberSignature Language="F#" Value="Completed = 1" Usage="System.Management.Automation.ProgressRecordType.Completed" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.ProgressRecordType</ReturnType>
+      </ReturnValue>
+      <MemberValue>1</MemberValue>
+      <Docs>
+        <summary>
+            Operation is complete
+            </summary>
+        <remarks>
+            If a cmdlet uses WriteProgress, it should use
+            ProgressRecordType.Completed exactly once, in the last call
+            to WriteProgress.
+            </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Processing">
+      <MemberSignature Language="C#" Value="Processing" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Management.Automation.ProgressRecordType Processing = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Management.Automation.ProgressRecordType.Processing" />
+      <MemberSignature Language="VB.NET" Value="Processing" />
+      <MemberSignature Language="F#" Value="Processing = 0" Usage="System.Management.Automation.ProgressRecordType.Processing" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.ProgressRecordType</ReturnType>
+      </ReturnValue>
+      <MemberValue>0</MemberValue>
+      <Docs>
+        <summary>
+             Operation just started or is not yet complete
+             </summary>
+        <remarks>
+             A cmdlet can call WriteProgress with ProgressRecordType.Processing
+             as many times as it wishes.  However, at the end of the operation,
+             it should call once more with ProgressRecordType.Completed.
+            
+             The first time that a host receives a progress record
+             for a given activity, it will typically display a progress
+             indicator for that activity.  For each subsequent record
+             of the same Id, the host will update that display.
+             Finally, when the host receives a 'completed' record
+             for that activity, it will remove the progress indicator.
+             </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

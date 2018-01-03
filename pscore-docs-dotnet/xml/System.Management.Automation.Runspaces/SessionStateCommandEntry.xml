@@ -1,0 +1,93 @@
+﻿<Type Name="SessionStateCommandEntry" FullName="System.Management.Automation.Runspaces.SessionStateCommandEntry">
+  <TypeSignature Language="C#" Value="public abstract class SessionStateCommandEntry : System.Management.Automation.Runspaces.ConstrainedSessionStateEntry" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit SessionStateCommandEntry extends System.Management.Automation.Runspaces.ConstrainedSessionStateEntry" />
+  <TypeSignature Language="DocId" Value="T:System.Management.Automation.Runspaces.SessionStateCommandEntry" />
+  <TypeSignature Language="VB.NET" Value="Public MustInherit Class SessionStateCommandEntry&#xA;Inherits ConstrainedSessionStateEntry" />
+  <TypeSignature Language="F#" Value="type SessionStateCommandEntry = class&#xA;    inherit ConstrainedSessionStateEntry" />
+  <AssemblyInfo>
+    <AssemblyName>System.Management.Automation</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Management.Automation.Runspaces.ConstrainedSessionStateEntry</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Command class so that all the commands can derive off this one.
+            Adds the flexibility of adding additional derived class,
+            such as ProxyCommand for Exchange.
+            Derived classes - Alias, Application, Cmdlet, Function, Script.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected SessionStateCommandEntry (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Runspaces.SessionStateCommandEntry.#ctor(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Protected Sub New (name As String)" />
+      <MemberSignature Language="F#" Value="new System.Management.Automation.Runspaces.SessionStateCommandEntry : string -&gt; System.Management.Automation.Runspaces.SessionStateCommandEntry" Usage="new System.Management.Automation.Runspaces.SessionStateCommandEntry name" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name"></param>
+        <summary>
+            Base constructor for all SessionState commands.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected internal SessionStateCommandEntry (string name, System.Management.Automation.SessionStateEntryVisibility visibility);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig specialname rtspecialname instance void .ctor(string name, valuetype System.Management.Automation.SessionStateEntryVisibility visibility) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Runspaces.SessionStateCommandEntry.#ctor(System.String,System.Management.Automation.SessionStateEntryVisibility)" />
+      <MemberSignature Language="VB.NET" Value="Protected Friend Sub New (name As String, visibility As SessionStateEntryVisibility)" />
+      <MemberSignature Language="F#" Value="new System.Management.Automation.Runspaces.SessionStateCommandEntry : string * System.Management.Automation.SessionStateEntryVisibility -&gt; System.Management.Automation.Runspaces.SessionStateCommandEntry" Usage="new System.Management.Automation.Runspaces.SessionStateCommandEntry (name, visibility)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="visibility" Type="System.Management.Automation.SessionStateEntryVisibility" />
+      </Parameters>
+      <Docs>
+        <param name="name"></param>
+        <param name="visibility"></param>
+        <summary />
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CommandType">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.CommandTypes CommandType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Management.Automation.CommandTypes CommandType" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.Runspaces.SessionStateCommandEntry.CommandType" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property CommandType As CommandTypes" />
+      <MemberSignature Language="F#" Value="member this.CommandType : System.Management.Automation.CommandTypes" Usage="System.Management.Automation.Runspaces.SessionStateCommandEntry.CommandType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.CommandTypes</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Returns the type of the command using an enum
+            instead of requiring a full reflection type check.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

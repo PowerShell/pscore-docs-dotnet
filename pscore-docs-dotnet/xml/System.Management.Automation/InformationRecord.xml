@@ -1,0 +1,323 @@
+﻿<Type Name="InformationRecord" FullName="System.Management.Automation.InformationRecord">
+  <TypeSignature Language="C#" Value="public class InformationRecord" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit InformationRecord extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Management.Automation.InformationRecord" />
+  <TypeSignature Language="VB.NET" Value="Public Class InformationRecord" />
+  <TypeSignature Language="F#" Value="type InformationRecord = class" />
+  <AssemblyInfo>
+    <AssemblyName>System.Management.Automation</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.Serialization.DataContract</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>
+            
+             Defines a data structure used to represent informational context destined for the host or user.
+            
+             </summary>
+    <remarks>
+            
+             InformationRecords are passed to <see cref="M:System.Management.Automation.Cmdlet.WriteInformation(System.Object,System.String[])" />,
+             which, according to host or user preference, forwards that information on to the host for rendering to the user.
+            
+             </remarks>
+    <altmember cref="M:System.Management.Automation.Cmdlet.WriteInformation(System.Object,System.String[])" />
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public InformationRecord (object messageData, string source);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(object messageData, string source) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.InformationRecord.#ctor(System.Object,System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (messageData As Object, source As String)" />
+      <MemberSignature Language="F#" Value="new System.Management.Automation.InformationRecord : obj * string -&gt; System.Management.Automation.InformationRecord" Usage="new System.Management.Automation.InformationRecord (messageData, source)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="messageData" Type="System.Object" />
+        <Parameter Name="source" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="messageData">The object to be transmitted to the host.</param>
+        <param name="source">The source of the message (i.e.: script path, function name, etc.)</param>
+        <summary>
+            
+             Initializes a new instance of the InformationRecord class.
+            
+             </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Computer">
+      <MemberSignature Language="C#" Value="public string Computer { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Computer" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.InformationRecord.Computer" />
+      <MemberSignature Language="VB.NET" Value="Public Property Computer As String" />
+      <MemberSignature Language="F#" Value="member this.Computer : string with get, set" Usage="System.Management.Automation.InformationRecord.Computer" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.Serialization.DataMember</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The computer that generated this informational record
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ManagedThreadId">
+      <MemberSignature Language="C#" Value="public uint ManagedThreadId { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance unsigned int32 ManagedThreadId" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.InformationRecord.ManagedThreadId" />
+      <MemberSignature Language="VB.NET" Value="Public Property ManagedThreadId As UInteger" />
+      <MemberSignature Language="F#" Value="member this.ManagedThreadId : uint32 with get, set" Usage="System.Management.Automation.InformationRecord.ManagedThreadId" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.Serialization.DataMember</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.UInt32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The managed thread that generated this informational record
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MessageData">
+      <MemberSignature Language="C#" Value="public object MessageData { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object MessageData" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.InformationRecord.MessageData" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property MessageData As Object" />
+      <MemberSignature Language="F#" Value="member this.MessageData : obj" Usage="System.Management.Automation.InformationRecord.MessageData" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.Serialization.DataMember</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The message data for this informational record
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NativeThreadId">
+      <MemberSignature Language="C#" Value="public uint NativeThreadId { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance unsigned int32 NativeThreadId" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.InformationRecord.NativeThreadId" />
+      <MemberSignature Language="VB.NET" Value="Public Property NativeThreadId As UInteger" />
+      <MemberSignature Language="F#" Value="member this.NativeThreadId : uint32 with get, set" Usage="System.Management.Automation.InformationRecord.NativeThreadId" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.UInt32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The native thread that generated this informational record
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ProcessId">
+      <MemberSignature Language="C#" Value="public uint ProcessId { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance unsigned int32 ProcessId" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.InformationRecord.ProcessId" />
+      <MemberSignature Language="VB.NET" Value="Public Property ProcessId As UInteger" />
+      <MemberSignature Language="F#" Value="member this.ProcessId : uint32 with get, set" Usage="System.Management.Automation.InformationRecord.ProcessId" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.Serialization.DataMember</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.UInt32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The process that generated this informational record
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Source">
+      <MemberSignature Language="C#" Value="public string Source { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Source" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.InformationRecord.Source" />
+      <MemberSignature Language="VB.NET" Value="Public Property Source As String" />
+      <MemberSignature Language="F#" Value="member this.Source : string with get, set" Usage="System.Management.Automation.InformationRecord.Source" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.Serialization.DataMember</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The source of this informational record (script path, function name, etc.)
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Tags">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.List&lt;string&gt; Tags { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.List`1&lt;string&gt; Tags" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.InformationRecord.Tags" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Tags As List(Of String)" />
+      <MemberSignature Language="F#" Value="member this.Tags : System.Collections.Generic.List&lt;string&gt;" Usage="System.Management.Automation.InformationRecord.Tags" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.Serialization.DataMember</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.List&lt;System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The tags associated with this informational record (if any)
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TimeGenerated">
+      <MemberSignature Language="C#" Value="public DateTime TimeGenerated { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.DateTime TimeGenerated" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.InformationRecord.TimeGenerated" />
+      <MemberSignature Language="VB.NET" Value="Public Property TimeGenerated As DateTime" />
+      <MemberSignature Language="F#" Value="member this.TimeGenerated : DateTime with get, set" Usage="System.Management.Automation.InformationRecord.TimeGenerated" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.Serialization.DataMember</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.DateTime</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The time this informational record was generated.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.InformationRecord.ToString" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Function ToString () As String" />
+      <MemberSignature Language="F#" Value="override this.ToString : unit -&gt; string" Usage="informationRecord.ToString " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Converts an InformationRecord to a string-based representation.
+            </summary>
+        <returns />
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="User">
+      <MemberSignature Language="C#" Value="public string User { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string User" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.InformationRecord.User" />
+      <MemberSignature Language="VB.NET" Value="Public Property User As String" />
+      <MemberSignature Language="F#" Value="member this.User : string with get, set" Usage="System.Management.Automation.InformationRecord.User" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.Serialization.DataMember</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The user that generated this informational record
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

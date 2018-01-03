@@ -1,0 +1,73 @@
+﻿<Type Name="ArgumentToConfigurationDataTransformationAttribute" FullName="Microsoft.PowerShell.DesiredStateConfiguration.ArgumentToConfigurationDataTransformationAttribute">
+  <TypeSignature Language="C#" Value="public sealed class ArgumentToConfigurationDataTransformationAttribute : System.Management.Automation.ArgumentTransformationAttribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit ArgumentToConfigurationDataTransformationAttribute extends System.Management.Automation.ArgumentTransformationAttribute" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.PowerShell.DesiredStateConfiguration.ArgumentToConfigurationDataTransformationAttribute" />
+  <TypeSignature Language="VB.NET" Value="Public NotInheritable Class ArgumentToConfigurationDataTransformationAttribute&#xA;Inherits ArgumentTransformationAttribute" />
+  <TypeSignature Language="F#" Value="type ArgumentToConfigurationDataTransformationAttribute = class&#xA;    inherit ArgumentTransformationAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System.Management.Automation</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Management.Automation.ArgumentTransformationAttribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Property | System.AttributeTargets.Field | System.AttributeTargets.Parameter, AllowMultiple=false)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>
+            To make it easier to specify -ConfigurationData parameter, we add an ArgumentTransformationAttribute here.
+            When the input data is of type string and is valid path to a file that can be converted to hashtable, we do
+            the conversion and return the converted value. Otherwise, we just return the input data.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ArgumentToConfigurationDataTransformationAttribute ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.DesiredStateConfiguration.ArgumentToConfigurationDataTransformationAttribute.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New ()" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Transform">
+      <MemberSignature Language="C#" Value="public override object Transform (System.Management.Automation.EngineIntrinsics engineIntrinsics, object inputData);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance object Transform(class System.Management.Automation.EngineIntrinsics engineIntrinsics, object inputData) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.DesiredStateConfiguration.ArgumentToConfigurationDataTransformationAttribute.Transform(System.Management.Automation.EngineIntrinsics,System.Object)" />
+      <MemberSignature Language="F#" Value="override this.Transform : System.Management.Automation.EngineIntrinsics * obj -&gt; obj" Usage="argumentToConfigurationDataTransformationAttribute.Transform (engineIntrinsics, inputData)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="engineIntrinsics" Type="System.Management.Automation.EngineIntrinsics" />
+        <Parameter Name="inputData" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="engineIntrinsics"></param>
+        <param name="inputData"></param>
+        <summary>
+            convert a file of ConfigurationData into a hashtable
+            </summary>
+        <returns />
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

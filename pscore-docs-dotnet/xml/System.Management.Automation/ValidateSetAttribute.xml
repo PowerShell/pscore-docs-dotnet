@@ -1,0 +1,184 @@
+﻿<Type Name="ValidateSetAttribute" FullName="System.Management.Automation.ValidateSetAttribute">
+  <TypeSignature Language="C#" Value="public sealed class ValidateSetAttribute : System.Management.Automation.ValidateEnumeratedArgumentsAttribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit ValidateSetAttribute extends System.Management.Automation.ValidateEnumeratedArgumentsAttribute" />
+  <TypeSignature Language="DocId" Value="T:System.Management.Automation.ValidateSetAttribute" />
+  <TypeSignature Language="VB.NET" Value="Public NotInheritable Class ValidateSetAttribute&#xA;Inherits ValidateEnumeratedArgumentsAttribute" />
+  <TypeSignature Language="F#" Value="type ValidateSetAttribute = class&#xA;    inherit ValidateEnumeratedArgumentsAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System.Management.Automation</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Management.Automation.ValidateEnumeratedArgumentsAttribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Property | System.AttributeTargets.Field)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>
+            Validates that each parameter argument is present in a specified set
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ValidateSetAttribute (params string[] validValues);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string[] validValues) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.ValidateSetAttribute.#ctor(System.String[])" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (ParamArray validValues As String())" />
+      <MemberSignature Language="F#" Value="new System.Management.Automation.ValidateSetAttribute : string[] -&gt; System.Management.Automation.ValidateSetAttribute" Usage="new System.Management.Automation.ValidateSetAttribute validValues" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="validValues" Type="System.String[]">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.ParamArray</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="validValues">list of valid values</param>
+        <summary>
+            Initializes a new instance of the ValidateSetAttribute class
+            </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">for null arguments</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">for invalid arguments</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ValidateSetAttribute (Type valuesGeneratorType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Type valuesGeneratorType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.ValidateSetAttribute.#ctor(System.Type)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (valuesGeneratorType As Type)" />
+      <MemberSignature Language="F#" Value="new System.Management.Automation.ValidateSetAttribute : Type -&gt; System.Management.Automation.ValidateSetAttribute" Usage="new System.Management.Automation.ValidateSetAttribute valuesGeneratorType" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="valuesGeneratorType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="valuesGeneratorType">class that implements the 'IValidateSetValuesGenerator' interface</param>
+        <summary>
+            Initializes a new instance of the ValidateSetAttribute class.
+            Valid values is returned dynamically from a custom class implementing 'IValidateSetValuesGenerator' interface.
+            </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">for null arguments</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ErrorMessage">
+      <MemberSignature Language="C#" Value="public string ErrorMessage { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ErrorMessage" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.ValidateSetAttribute.ErrorMessage" />
+      <MemberSignature Language="VB.NET" Value="Public Property ErrorMessage As String" />
+      <MemberSignature Language="F#" Value="member this.ErrorMessage : string with get, set" Usage="System.Management.Automation.ValidateSetAttribute.ErrorMessage" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+             Gets or sets the custom error message that is displayed to the user
+            
+             The item being validated and a text representation of the validation set
+             is passed as the first and second formatting argument to the ErrorMessage formatting pattern.
+            
+             <example>
+             [ValidateSet("A","B","C", ErrorMessage="The item '{0}' is not part of the set '{1}'.")
+             </example></summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IgnoreCase">
+      <MemberSignature Language="C#" Value="public bool IgnoreCase { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IgnoreCase" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.ValidateSetAttribute.IgnoreCase" />
+      <MemberSignature Language="VB.NET" Value="Public Property IgnoreCase As Boolean" />
+      <MemberSignature Language="F#" Value="member this.IgnoreCase : bool with get, set" Usage="System.Management.Automation.ValidateSetAttribute.IgnoreCase" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets a flag specifying if we should ignore the case when performing string comparison. The
+            default is true.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ValidateElement">
+      <MemberSignature Language="C#" Value="protected override void ValidateElement (object element);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void ValidateElement(object element) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.ValidateSetAttribute.ValidateElement(System.Object)" />
+      <MemberSignature Language="VB.NET" Value="Protected Overrides Sub ValidateElement (element As Object)" />
+      <MemberSignature Language="F#" Value="override this.ValidateElement : obj -&gt; unit" Usage="validateSetAttribute.ValidateElement element" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="element">Object to validate</param>
+        <summary>
+            Validates that each parameter argument is present in the specified set
+            </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.Management.Automation.ValidationMetadataException">
+            if element is not in the set
+            for invalid argument
+            </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ValidValues">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IList&lt;string&gt; ValidValues { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IList`1&lt;string&gt; ValidValues" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.ValidateSetAttribute.ValidValues" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ValidValues As IList(Of String)" />
+      <MemberSignature Language="F#" Value="member this.ValidValues : System.Collections.Generic.IList&lt;string&gt;" Usage="System.Management.Automation.ValidateSetAttribute.ValidValues" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IList&lt;System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the valid values in the set.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,235 @@
+﻿<Type Name="PSListModifier" FullName="System.Management.Automation.PSListModifier">
+  <TypeSignature Language="C#" Value="public class PSListModifier" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit PSListModifier extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Management.Automation.PSListModifier" />
+  <TypeSignature Language="VB.NET" Value="Public Class PSListModifier" />
+  <TypeSignature Language="F#" Value="type PSListModifier = class" />
+  <AssemblyInfo>
+    <AssemblyName>System.Management.Automation</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+             PSListModifier is a simple helper class created by the update-list cmdlet.
+             The update-list cmdlet will either return an instance of this class, or
+             it will internally use an instance of this class to implement the updates.
+            
+             Cmdlets can also take a PSListModifier as a parameter.  Usage might look like:
+            
+                 Get-Mailbox | Set-Mailbox -Alias @{Add='jim'}
+            
+             Alias would take a PSListModifier and the Cmdlet code would be responsible
+             for apply updates (possibly using PSListModifier.ApplyTo or else using custom logic).
+             </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public PSListModifier ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.PSListModifier.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New ()" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>
+            Create a new PSListModifier with empty lists for Add/Remove.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public PSListModifier (System.Collections.Hashtable hash);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Collections.Hashtable hash) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.PSListModifier.#ctor(System.Collections.Hashtable)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (hash As Hashtable)" />
+      <MemberSignature Language="F#" Value="new System.Management.Automation.PSListModifier : System.Collections.Hashtable -&gt; System.Management.Automation.PSListModifier" Usage="new System.Management.Automation.PSListModifier hash" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="hash" Type="System.Collections.Hashtable" />
+      </Parameters>
+      <Docs>
+        <param name="hash">A hashtable, where the value for key Add is the list to add
+            and the value for Remove is the list to remove.</param>
+        <summary>
+            Create a new PSListModifier with the specified add and remove lists (in the hash.)
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public PSListModifier (object replacementItems);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(object replacementItems) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.PSListModifier.#ctor(System.Object)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (replacementItems As Object)" />
+      <MemberSignature Language="F#" Value="new System.Management.Automation.PSListModifier : obj -&gt; System.Management.Automation.PSListModifier" Usage="new System.Management.Automation.PSListModifier replacementItems" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="replacementItems" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="replacementItems">The item(s) to replace an existing list with</param>
+        <summary>
+            Create a new PSListModifier to replace a given list with replaceItems.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public PSListModifier (System.Collections.ObjectModel.Collection&lt;object&gt; removeItems, System.Collections.ObjectModel.Collection&lt;object&gt; addItems);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Collections.ObjectModel.Collection`1&lt;object&gt; removeItems, class System.Collections.ObjectModel.Collection`1&lt;object&gt; addItems) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.PSListModifier.#ctor(System.Collections.ObjectModel.Collection{System.Object},System.Collections.ObjectModel.Collection{System.Object})" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (removeItems As Collection(Of Object), addItems As Collection(Of Object))" />
+      <MemberSignature Language="F#" Value="new System.Management.Automation.PSListModifier : System.Collections.ObjectModel.Collection&lt;obj&gt; * System.Collections.ObjectModel.Collection&lt;obj&gt; -&gt; System.Management.Automation.PSListModifier" Usage="new System.Management.Automation.PSListModifier (removeItems, addItems)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="removeItems" Type="System.Collections.ObjectModel.Collection&lt;System.Object&gt;" />
+        <Parameter Name="addItems" Type="System.Collections.ObjectModel.Collection&lt;System.Object&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="removeItems">The items to remove</param>
+        <param name="addItems">The items to add</param>
+        <summary>
+            Create a new PSListModifier with the specified add and remove lists.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.Collection&lt;object&gt; Add { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ObjectModel.Collection`1&lt;object&gt; Add" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.PSListModifier.Add" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Add As Collection(Of Object)" />
+      <MemberSignature Language="F#" Value="member this.Add : System.Collections.ObjectModel.Collection&lt;obj&gt;" Usage="System.Management.Automation.PSListModifier.Add" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.Collection&lt;System.Object&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The list of items to add when ApplyTo is called.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ApplyTo">
+      <MemberSignature Language="C#" Value="public void ApplyTo (System.Collections.IList collectionToUpdate);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void ApplyTo(class System.Collections.IList collectionToUpdate) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.PSListModifier.ApplyTo(System.Collections.IList)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub ApplyTo (collectionToUpdate As IList)" />
+      <MemberSignature Language="F#" Value="member this.ApplyTo : System.Collections.IList -&gt; unit" Usage="pSListModifier.ApplyTo collectionToUpdate" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="collectionToUpdate" Type="System.Collections.IList" />
+      </Parameters>
+      <Docs>
+        <param name="collectionToUpdate">The collection to update</param>
+        <summary>
+            Update the given collection with the items in Add and Remove.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ApplyTo">
+      <MemberSignature Language="C#" Value="public void ApplyTo (object collectionToUpdate);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void ApplyTo(object collectionToUpdate) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.PSListModifier.ApplyTo(System.Object)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub ApplyTo (collectionToUpdate As Object)" />
+      <MemberSignature Language="F#" Value="member this.ApplyTo : obj -&gt; unit" Usage="pSListModifier.ApplyTo collectionToUpdate" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="collectionToUpdate" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="collectionToUpdate">The collection to update</param>
+        <summary>
+            Update the given collection with the items in Add and Remove.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Remove">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.Collection&lt;object&gt; Remove { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ObjectModel.Collection`1&lt;object&gt; Remove" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.PSListModifier.Remove" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Remove As Collection(Of Object)" />
+      <MemberSignature Language="F#" Value="member this.Remove : System.Collections.ObjectModel.Collection&lt;obj&gt;" Usage="System.Management.Automation.PSListModifier.Remove" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.Collection&lt;System.Object&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The list of items to remove when AppyTo is called.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Replace">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.Collection&lt;object&gt; Replace { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ObjectModel.Collection`1&lt;object&gt; Replace" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.PSListModifier.Replace" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Replace As Collection(Of Object)" />
+      <MemberSignature Language="F#" Value="member this.Replace : System.Collections.ObjectModel.Collection&lt;obj&gt;" Usage="System.Management.Automation.PSListModifier.Replace" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.Collection&lt;System.Object&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The list of items to replace an existing list with.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

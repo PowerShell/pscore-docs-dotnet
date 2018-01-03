@@ -1,0 +1,245 @@
+﻿<Type Name="IWSMan" FullName="Microsoft.WSMan.Management.IWSMan">
+  <TypeSignature Language="C#" Value="public interface IWSMan" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IWSMan" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.WSMan.Management.IWSMan" />
+  <TypeSignature Language="VB.NET" Value="Public Interface IWSMan" />
+  <TypeSignature Language="F#" Value="type IWSMan = interface" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.WSMan.Management</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.Guid("190D8637-5CD3-496D-AD24-69636BB5A3B5")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.InterfaceType(System.Runtime.InteropServices.ComInterfaceType.InterfaceIsIUnknown)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.TypeLibType(4304)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>
+      <para>
+        <c>IWSMan</c> interface.</para>
+    </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="CommandLine">
+      <MemberSignature Language="C#" Value="public string CommandLine { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string CommandLine" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.WSMan.Management.IWSMan.CommandLine" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property CommandLine As String" />
+      <MemberSignature Language="F#" Value="member this.CommandLine : string" Usage="Microsoft.WSMan.Management.IWSMan.CommandLine" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.WSMan.Management</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: System.Runtime.InteropServices.DispId(3)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+          <para>
+            <c>CommandLine</c> property of <c>IWSMan</c> interface.</para>
+        </summary>
+        <value>To be added.</value>
+        <remarks>
+          <para>An original IDL definition of <c>CommandLine</c> property was the following:  <c>BSTR CommandLine</c>;</para>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateConnectionOptions">
+      <MemberSignature Language="C#" Value="public object CreateConnectionOptions ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object CreateConnectionOptions() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.WSMan.Management.IWSMan.CreateConnectionOptions" />
+      <MemberSignature Language="VB.NET" Value="Public Function CreateConnectionOptions () As Object" />
+      <MemberSignature Language="F#" Value="abstract member CreateConnectionOptions : unit -&gt; obj" Usage="iWSMan.CreateConnectionOptions " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.WSMan.Management</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.DispId(2)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+          <para>
+            <c>CreateConnectionOptions</c> method of <c>IWSMan</c> interface.</para>
+        </summary>
+        <returns>To be added.</returns>
+        <remarks>
+          <para>An original IDL definition of <c>CreateConnectionOptions</c> method was the following:  <c>HRESULT CreateConnectionOptions ([out, retval] IDispatch** ReturnValue)</c>;</para>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateSession">
+      <MemberSignature Language="C#" Value="public object CreateSession (string connection, int flags, object connectionOptions);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object CreateSession(string connection, int32 flags, object connectionOptions) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.WSMan.Management.IWSMan.CreateSession(System.String,System.Int32,System.Object)" />
+      <MemberSignature Language="VB.NET" Value="Public Function CreateSession (connection As String, flags As Integer, connectionOptions As Object) As Object" />
+      <MemberSignature Language="F#" Value="abstract member CreateSession : string * int * obj -&gt; obj" Usage="iWSMan.CreateSession (connection, flags, connectionOptions)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.WSMan.Management</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.DispId(1)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="connection" Type="System.String" />
+        <Parameter Name="flags" Type="System.Int32" />
+        <Parameter Name="connectionOptions" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="connection">To be added.</param>
+        <param name="flags">To be added.</param>
+        <param name="connectionOptions">To be added.</param>
+        <summary>
+          <para>
+            <c>CreateSession</c> method of <c>IWSMan</c> interface.</para>
+        </summary>
+        <returns>To be added.</returns>
+        <remarks>
+          <para>An original IDL definition of <c>CreateSession</c> method was the following:  <c>HRESULT CreateSession ([optional, defaultvalue("")] BSTR connection, [optional, defaultvalue(0)] long flags, [optional] IDispatch* connectionOptions, [out, retval] IDispatch** ReturnValue)</c>;</para>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Error">
+      <MemberSignature Language="C#" Value="public string Error { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Error" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.WSMan.Management.IWSMan.Error" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Error As String" />
+      <MemberSignature Language="F#" Value="member this.Error : string" Usage="Microsoft.WSMan.Management.IWSMan.Error" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.WSMan.Management</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: System.Runtime.InteropServices.DispId(4)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+          <para>
+            <c>Error</c> property of <c>IWSMan</c> interface.</para>
+        </summary>
+        <value>To be added.</value>
+        <remarks>
+          <para>An original IDL definition of <c>Error</c> property was the following:  <c>BSTR Error</c>;</para>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetIDsOfNames">
+      <MemberSignature Language="C#" Value="public object GetIDsOfNames ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object GetIDsOfNames() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.WSMan.Management.IWSMan.GetIDsOfNames" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetIDsOfNames () As Object" />
+      <MemberSignature Language="F#" Value="abstract member GetIDsOfNames : unit -&gt; obj" Usage="iWSMan.GetIDsOfNames " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.WSMan.Management</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetTypeInfo">
+      <MemberSignature Language="C#" Value="public object GetTypeInfo ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object GetTypeInfo() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.WSMan.Management.IWSMan.GetTypeInfo" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetTypeInfo () As Object" />
+      <MemberSignature Language="F#" Value="abstract member GetTypeInfo : unit -&gt; obj" Usage="iWSMan.GetTypeInfo " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.WSMan.Management</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetTypeInfoCount">
+      <MemberSignature Language="C#" Value="public object GetTypeInfoCount ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object GetTypeInfoCount() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.WSMan.Management.IWSMan.GetTypeInfoCount" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetTypeInfoCount () As Object" />
+      <MemberSignature Language="F#" Value="abstract member GetTypeInfoCount : unit -&gt; obj" Usage="iWSMan.GetTypeInfoCount " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.WSMan.Management</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Invoke">
+      <MemberSignature Language="C#" Value="public object Invoke ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object Invoke() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.WSMan.Management.IWSMan.Invoke" />
+      <MemberSignature Language="VB.NET" Value="Public Function Invoke () As Object" />
+      <MemberSignature Language="F#" Value="abstract member Invoke : unit -&gt; obj" Usage="iWSMan.Invoke " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.WSMan.Management</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

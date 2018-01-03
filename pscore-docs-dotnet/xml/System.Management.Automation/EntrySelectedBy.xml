@@ -1,0 +1,88 @@
+﻿<Type Name="EntrySelectedBy" FullName="System.Management.Automation.EntrySelectedBy">
+  <TypeSignature Language="C#" Value="public sealed class EntrySelectedBy" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit EntrySelectedBy extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Management.Automation.EntrySelectedBy" />
+  <TypeSignature Language="VB.NET" Value="Public NotInheritable Class EntrySelectedBy" />
+  <TypeSignature Language="F#" Value="type EntrySelectedBy = class" />
+  <AssemblyInfo>
+    <AssemblyName>System.Management.Automation</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Each control (table, list, wide, or custom) may have multiple entries. If there are multiple
+            entries, there must be a default entry with no condition, all other entries must have EntrySelectedBy
+            specified. This is useful when you need a single view for grouping or otherwise just selecting the
+            shape of formatting, but need distinct formatting rules for each instance.  For example, when
+            listing files, you may want to group based on the parent path, but select different entries
+            depending on if the item is a file or directory.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public EntrySelectedBy ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.EntrySelectedBy.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New ()" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SelectionCondition">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.List&lt;System.Management.Automation.DisplayEntry&gt; SelectionCondition { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.List`1&lt;class System.Management.Automation.DisplayEntry&gt; SelectionCondition" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.EntrySelectedBy.SelectionCondition" />
+      <MemberSignature Language="VB.NET" Value="Public Property SelectionCondition As List(Of DisplayEntry)" />
+      <MemberSignature Language="F#" Value="member this.SelectionCondition : System.Collections.Generic.List&lt;System.Management.Automation.DisplayEntry&gt; with get, set" Usage="System.Management.Automation.EntrySelectedBy.SelectionCondition" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.List&lt;System.Management.Automation.DisplayEntry&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            An optional condition that applies to the entry.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TypeNames">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.List&lt;string&gt; TypeNames { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.List`1&lt;string&gt; TypeNames" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.EntrySelectedBy.TypeNames" />
+      <MemberSignature Language="VB.NET" Value="Public Property TypeNames As List(Of String)" />
+      <MemberSignature Language="F#" Value="member this.TypeNames : System.Collections.Generic.List&lt;string&gt; with get, set" Usage="System.Management.Automation.EntrySelectedBy.TypeNames" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.List&lt;System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            An optional list of typenames that apply to the entry.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

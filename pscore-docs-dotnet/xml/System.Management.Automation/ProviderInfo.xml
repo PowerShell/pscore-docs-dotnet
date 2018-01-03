@@ -1,0 +1,334 @@
+﻿<Type Name="ProviderInfo" FullName="System.Management.Automation.ProviderInfo">
+  <TypeSignature Language="C#" Value="public class ProviderInfo" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ProviderInfo extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Management.Automation.ProviderInfo" />
+  <TypeSignature Language="VB.NET" Value="Public Class ProviderInfo" />
+  <TypeSignature Language="F#" Value="type ProviderInfo = class" />
+  <AssemblyInfo>
+    <AssemblyName>System.Management.Automation</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+             Information about a loaded Cmdlet Provider
+             </summary>
+    <remarks>
+             A cmdlet provider may want to derive from this class to provide their
+             own public members to expose to the user or to cache information related to the provider.
+             </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected ProviderInfo (System.Management.Automation.ProviderInfo providerInfo);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(class System.Management.Automation.ProviderInfo providerInfo) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.ProviderInfo.#ctor(System.Management.Automation.ProviderInfo)" />
+      <MemberSignature Language="F#" Value="new System.Management.Automation.ProviderInfo : System.Management.Automation.ProviderInfo -&gt; System.Management.Automation.ProviderInfo" Usage="new System.Management.Automation.ProviderInfo providerInfo" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="providerInfo" Type="System.Management.Automation.ProviderInfo" />
+      </Parameters>
+      <Docs>
+        <param name="providerInfo">
+             The provider information to copy to this instance.
+             </param>
+        <summary>
+             Constructs an instance of the class using an existing reference
+             as a template.
+             </summary>
+        <remarks>
+             This constructor should be used by derived types to easily copying
+             the base class members from an existing ProviderInfo.
+             This is designed for use by a <see cref="T:System.Management.Automation.Provider.CmdletProvider" />
+             during calls to their <see cref="M:System.Management.Automation.Provider.CmdletProvider.Start(System.Management.Automation.ProviderInfo)" /> method.
+             </remarks>
+        <exception cref="T:System.ArgumentNullException">
+             If <paramref name="providerInfo" /> is null.
+             </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Capabilities">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.Provider.ProviderCapabilities Capabilities { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Management.Automation.Provider.ProviderCapabilities Capabilities" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.ProviderInfo.Capabilities" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Capabilities As ProviderCapabilities" />
+      <MemberSignature Language="F#" Value="member this.Capabilities : System.Management.Automation.Provider.ProviderCapabilities" Usage="System.Management.Automation.ProviderInfo.Capabilities" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.Provider.ProviderCapabilities</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the capabilities that are implemented by the provider.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Description">
+      <MemberSignature Language="C#" Value="public string Description { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Description" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.ProviderInfo.Description" />
+      <MemberSignature Language="VB.NET" Value="Public Property Description As String" />
+      <MemberSignature Language="F#" Value="member this.Description : string with get, set" Usage="System.Management.Automation.ProviderInfo.Description" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets the description for the provider
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Drives">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.Collection&lt;System.Management.Automation.PSDriveInfo&gt; Drives { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ObjectModel.Collection`1&lt;class System.Management.Automation.PSDriveInfo&gt; Drives" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.ProviderInfo.Drives" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Drives As Collection(Of PSDriveInfo)" />
+      <MemberSignature Language="F#" Value="member this.Drives : System.Collections.ObjectModel.Collection&lt;System.Management.Automation.PSDriveInfo&gt;" Usage="System.Management.Automation.ProviderInfo.Drives" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.Collection&lt;System.Management.Automation.PSDriveInfo&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets an enumeration of drives that are available for
+            this provider.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HelpFile">
+      <MemberSignature Language="C#" Value="public string HelpFile { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string HelpFile" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.ProviderInfo.HelpFile" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property HelpFile As String" />
+      <MemberSignature Language="F#" Value="member this.HelpFile : string" Usage="System.Management.Automation.ProviderInfo.HelpFile" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the help file path for the provider.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Home">
+      <MemberSignature Language="C#" Value="public string Home { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Home" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.ProviderInfo.Home" />
+      <MemberSignature Language="VB.NET" Value="Public Property Home As String" />
+      <MemberSignature Language="F#" Value="member this.Home : string with get, set" Usage="System.Management.Automation.ProviderInfo.Home" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+             Gets or sets the home for the provider.
+             </summary>
+        <value>To be added.</value>
+        <remarks>
+             The location can be either a fully qualified provider path
+             or an Msh path. This is the location that is substituted for the ~.
+             </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ImplementingType">
+      <MemberSignature Language="C#" Value="public Type ImplementingType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type ImplementingType" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.ProviderInfo.ImplementingType" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ImplementingType As Type" />
+      <MemberSignature Language="F#" Value="member this.ImplementingType : Type" Usage="System.Management.Automation.ProviderInfo.ImplementingType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the System.Type of the class that implements the provider.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Module">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.PSModuleInfo Module { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Management.Automation.PSModuleInfo Module" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.ProviderInfo.Module" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Module As PSModuleInfo" />
+      <MemberSignature Language="F#" Value="member this.Module : System.Management.Automation.PSModuleInfo" Usage="System.Management.Automation.ProviderInfo.Module" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.PSModuleInfo</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the module the defined this provider.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ModuleName">
+      <MemberSignature Language="C#" Value="public string ModuleName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ModuleName" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.ProviderInfo.ModuleName" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ModuleName As String" />
+      <MemberSignature Language="F#" Value="member this.ModuleName : string" Usage="System.Management.Automation.ProviderInfo.ModuleName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Get the name of the module exporting this provider.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public string Name { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.ProviderInfo.Name" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Name As String" />
+      <MemberSignature Language="F#" Value="member this.Name : string" Usage="System.Management.Automation.ProviderInfo.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the name of the provider.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PSSnapIn">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.PSSnapInInfo PSSnapIn { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Management.Automation.PSSnapInInfo PSSnapIn" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.ProviderInfo.PSSnapIn" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property PSSnapIn As PSSnapInInfo" />
+      <MemberSignature Language="F#" Value="member this.PSSnapIn : System.Management.Automation.PSSnapInInfo" Usage="System.Management.Automation.ProviderInfo.PSSnapIn" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.PSSnapInInfo</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the Snap-in in which the provider is implemented.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.ProviderInfo.ToString" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Function ToString () As String" />
+      <MemberSignature Language="F#" Value="override this.ToString : unit -&gt; string" Usage="providerInfo.ToString " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+             Gets the string representation of the instance which is the name of the provider.
+             </summary>
+        <returns>
+             The name of the provider. If single-shell, the name is pssnapin-qualified. If custom-shell,
+             the name is just the provider name.
+             </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="VolumeSeparatedByColon">
+      <MemberSignature Language="C#" Value="public bool VolumeSeparatedByColon { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool VolumeSeparatedByColon" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.ProviderInfo.VolumeSeparatedByColon" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property VolumeSeparatedByColon As Boolean" />
+      <MemberSignature Language="F#" Value="member this.VolumeSeparatedByColon : bool" Usage="System.Management.Automation.ProviderInfo.VolumeSeparatedByColon" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+             Gets or sets if the drive-root relative paths on drives of this provider
+              are separated by a colon or not.
+            
+             This is true for all PSDrives on all platforms, except for filesystems on
+             non-windows platforms
+             </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

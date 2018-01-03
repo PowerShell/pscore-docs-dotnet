@@ -1,0 +1,240 @@
+﻿<Type Name="CimInstanceAdapter" FullName="Microsoft.PowerShell.Cim.CimInstanceAdapter">
+  <TypeSignature Language="C#" Value="public sealed class CimInstanceAdapter : System.Management.Automation.PSPropertyAdapter" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit CimInstanceAdapter extends System.Management.Automation.PSPropertyAdapter" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.PowerShell.Cim.CimInstanceAdapter" />
+  <TypeSignature Language="VB.NET" Value="Public NotInheritable Class CimInstanceAdapter&#xA;Inherits PSPropertyAdapter" />
+  <TypeSignature Language="F#" Value="type CimInstanceAdapter = class&#xA;    inherit PSPropertyAdapter" />
+  <AssemblyInfo>
+    <AssemblyName>System.Management.Automation</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Management.Automation.PSPropertyAdapter</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+             Adapter that deals with CimInstance objects.
+             </summary>
+    <remarks>
+             Implementing the PropertyOnlyAdapter for the time being as CimInstanceTypeAdapter currently
+             supports only properties. If method support is needed in future, this should derive from
+             Adapter class.
+            
+             The Adapter registration is done in monad\src\singleshell\installer\MshManagementMshSnapin.cs
+             </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CimInstanceAdapter ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Cim.CimInstanceAdapter.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New ()" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetProperties">
+      <MemberSignature Language="C#" Value="public override System.Collections.ObjectModel.Collection&lt;System.Management.Automation.PSAdaptedProperty&gt; GetProperties (object baseObject);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Collections.ObjectModel.Collection`1&lt;class System.Management.Automation.PSAdaptedProperty&gt; GetProperties(object baseObject) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Cim.CimInstanceAdapter.GetProperties(System.Object)" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Function GetProperties (baseObject As Object) As Collection(Of PSAdaptedProperty)" />
+      <MemberSignature Language="F#" Value="override this.GetProperties : obj -&gt; System.Collections.ObjectModel.Collection&lt;System.Management.Automation.PSAdaptedProperty&gt;" Usage="cimInstanceAdapter.GetProperties baseObject" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.Collection&lt;System.Management.Automation.PSAdaptedProperty&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="baseObject" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="baseObject"></param>
+        <summary />
+        <returns />
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetProperty">
+      <MemberSignature Language="C#" Value="public override System.Management.Automation.PSAdaptedProperty GetProperty (object baseObject, string propertyName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Management.Automation.PSAdaptedProperty GetProperty(object baseObject, string propertyName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Cim.CimInstanceAdapter.GetProperty(System.Object,System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Function GetProperty (baseObject As Object, propertyName As String) As PSAdaptedProperty" />
+      <MemberSignature Language="F#" Value="override this.GetProperty : obj * string -&gt; System.Management.Automation.PSAdaptedProperty" Usage="cimInstanceAdapter.GetProperty (baseObject, propertyName)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.PSAdaptedProperty</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="baseObject" Type="System.Object" />
+        <Parameter Name="propertyName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="baseObject"></param>
+        <param name="propertyName"></param>
+        <summary />
+        <returns />
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetPropertyTypeName">
+      <MemberSignature Language="C#" Value="public override string GetPropertyTypeName (System.Management.Automation.PSAdaptedProperty adaptedProperty);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string GetPropertyTypeName(class System.Management.Automation.PSAdaptedProperty adaptedProperty) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Cim.CimInstanceAdapter.GetPropertyTypeName(System.Management.Automation.PSAdaptedProperty)" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Function GetPropertyTypeName (adaptedProperty As PSAdaptedProperty) As String" />
+      <MemberSignature Language="F#" Value="override this.GetPropertyTypeName : System.Management.Automation.PSAdaptedProperty -&gt; string" Usage="cimInstanceAdapter.GetPropertyTypeName adaptedProperty" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="adaptedProperty" Type="System.Management.Automation.PSAdaptedProperty" />
+      </Parameters>
+      <Docs>
+        <param name="adaptedProperty"></param>
+        <summary />
+        <returns />
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetPropertyValue">
+      <MemberSignature Language="C#" Value="public override object GetPropertyValue (System.Management.Automation.PSAdaptedProperty adaptedProperty);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance object GetPropertyValue(class System.Management.Automation.PSAdaptedProperty adaptedProperty) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Cim.CimInstanceAdapter.GetPropertyValue(System.Management.Automation.PSAdaptedProperty)" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Function GetPropertyValue (adaptedProperty As PSAdaptedProperty) As Object" />
+      <MemberSignature Language="F#" Value="override this.GetPropertyValue : System.Management.Automation.PSAdaptedProperty -&gt; obj" Usage="cimInstanceAdapter.GetPropertyValue adaptedProperty" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="adaptedProperty" Type="System.Management.Automation.PSAdaptedProperty" />
+      </Parameters>
+      <Docs>
+        <param name="adaptedProperty"></param>
+        <summary />
+        <returns />
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetTypeNameHierarchy">
+      <MemberSignature Language="C#" Value="public override System.Collections.ObjectModel.Collection&lt;string&gt; GetTypeNameHierarchy (object baseObject);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Collections.ObjectModel.Collection`1&lt;string&gt; GetTypeNameHierarchy(object baseObject) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Cim.CimInstanceAdapter.GetTypeNameHierarchy(System.Object)" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Function GetTypeNameHierarchy (baseObject As Object) As Collection(Of String)" />
+      <MemberSignature Language="F#" Value="override this.GetTypeNameHierarchy : obj -&gt; System.Collections.ObjectModel.Collection&lt;string&gt;" Usage="cimInstanceAdapter.GetTypeNameHierarchy baseObject" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.Collection&lt;System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="baseObject" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="baseObject"></param>
+        <summary />
+        <returns />
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsGettable">
+      <MemberSignature Language="C#" Value="public override bool IsGettable (System.Management.Automation.PSAdaptedProperty adaptedProperty);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool IsGettable(class System.Management.Automation.PSAdaptedProperty adaptedProperty) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Cim.CimInstanceAdapter.IsGettable(System.Management.Automation.PSAdaptedProperty)" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Function IsGettable (adaptedProperty As PSAdaptedProperty) As Boolean" />
+      <MemberSignature Language="F#" Value="override this.IsGettable : System.Management.Automation.PSAdaptedProperty -&gt; bool" Usage="cimInstanceAdapter.IsGettable adaptedProperty" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="adaptedProperty" Type="System.Management.Automation.PSAdaptedProperty" />
+      </Parameters>
+      <Docs>
+        <param name="adaptedProperty"></param>
+        <summary />
+        <returns />
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsSettable">
+      <MemberSignature Language="C#" Value="public override bool IsSettable (System.Management.Automation.PSAdaptedProperty adaptedProperty);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool IsSettable(class System.Management.Automation.PSAdaptedProperty adaptedProperty) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Cim.CimInstanceAdapter.IsSettable(System.Management.Automation.PSAdaptedProperty)" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Function IsSettable (adaptedProperty As PSAdaptedProperty) As Boolean" />
+      <MemberSignature Language="F#" Value="override this.IsSettable : System.Management.Automation.PSAdaptedProperty -&gt; bool" Usage="cimInstanceAdapter.IsSettable adaptedProperty" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="adaptedProperty" Type="System.Management.Automation.PSAdaptedProperty" />
+      </Parameters>
+      <Docs>
+        <param name="adaptedProperty"></param>
+        <summary />
+        <returns />
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetPropertyValue">
+      <MemberSignature Language="C#" Value="public override void SetPropertyValue (System.Management.Automation.PSAdaptedProperty adaptedProperty, object value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void SetPropertyValue(class System.Management.Automation.PSAdaptedProperty adaptedProperty, object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Cim.CimInstanceAdapter.SetPropertyValue(System.Management.Automation.PSAdaptedProperty,System.Object)" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Sub SetPropertyValue (adaptedProperty As PSAdaptedProperty, value As Object)" />
+      <MemberSignature Language="F#" Value="override this.SetPropertyValue : System.Management.Automation.PSAdaptedProperty * obj -&gt; unit" Usage="cimInstanceAdapter.SetPropertyValue (adaptedProperty, value)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="adaptedProperty" Type="System.Management.Automation.PSAdaptedProperty" />
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="adaptedProperty"></param>
+        <param name="value"></param>
+        <summary />
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,259 @@
+﻿<Type Name="ModuleSpecification" FullName="Microsoft.PowerShell.Commands.ModuleSpecification">
+  <TypeSignature Language="C#" Value="public class ModuleSpecification" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ModuleSpecification extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.PowerShell.Commands.ModuleSpecification" />
+  <TypeSignature Language="VB.NET" Value="Public Class ModuleSpecification" />
+  <TypeSignature Language="F#" Value="type ModuleSpecification = class" />
+  <AssemblyInfo>
+    <AssemblyName>System.Management.Automation</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+             Represents module specification written in a module manifest (i.e. in RequiredModules member/field).
+            
+             Module manifest allows 2 forms of module specification:
+             1. string - module name
+             2. hashtable - [string]ModuleName (required) + [Version]ModuleVersion/RequiredVersion (required) + [Guid]GUID (optional)
+            
+             so we have a constructor that takes a string and a constructor that takes a hashtable
+             (so that LanguagePrimitives.ConvertTo can cast a string or a hashtable to this type)
+             </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ModuleSpecification ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Commands.ModuleSpecification.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New ()" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>
+            Default constructor
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ModuleSpecification (System.Collections.Hashtable moduleSpecification);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Collections.Hashtable moduleSpecification) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Commands.ModuleSpecification.#ctor(System.Collections.Hashtable)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (moduleSpecification As Hashtable)" />
+      <MemberSignature Language="F#" Value="new Microsoft.PowerShell.Commands.ModuleSpecification : System.Collections.Hashtable -&gt; Microsoft.PowerShell.Commands.ModuleSpecification" Usage="new Microsoft.PowerShell.Commands.ModuleSpecification moduleSpecification" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="moduleSpecification" Type="System.Collections.Hashtable" />
+      </Parameters>
+      <Docs>
+        <param name="moduleSpecification">The module specification as a hashtable.</param>
+        <summary>
+            Construct a module specification from a hashtable.
+            Keys can be ModuleName, ModuleVersion, and Guid.
+            ModuleName must be convertible to <see cref="T:System.String" />.
+            ModuleVersion must be convertible to <see cref="P:Microsoft.PowerShell.Commands.ModuleSpecification.Version" />.
+            Guid must be convertible to <see cref="P:Microsoft.PowerShell.Commands.ModuleSpecification.Guid" />.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ModuleSpecification (string moduleName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string moduleName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Commands.ModuleSpecification.#ctor(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (moduleName As String)" />
+      <MemberSignature Language="F#" Value="new Microsoft.PowerShell.Commands.ModuleSpecification : string -&gt; Microsoft.PowerShell.Commands.ModuleSpecification" Usage="new Microsoft.PowerShell.Commands.ModuleSpecification moduleName" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="moduleName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="moduleName">The module name.</param>
+        <summary>
+            Construct a module specification from the module name.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Guid">
+      <MemberSignature Language="C#" Value="public Nullable&lt;Guid&gt; Guid { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Nullable`1&lt;valuetype System.Guid&gt; Guid" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.ModuleSpecification.Guid" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Guid As Nullable(Of Guid)" />
+      <MemberSignature Language="F#" Value="member this.Guid : Nullable&lt;Guid&gt;" Usage="Microsoft.PowerShell.Commands.ModuleSpecification.Guid" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Nullable&lt;System.Guid&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The module GUID, if specified.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MaximumVersion">
+      <MemberSignature Language="C#" Value="public string MaximumVersion { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string MaximumVersion" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.ModuleSpecification.MaximumVersion" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property MaximumVersion As String" />
+      <MemberSignature Language="F#" Value="member this.MaximumVersion : string" Usage="Microsoft.PowerShell.Commands.ModuleSpecification.MaximumVersion" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The module maxVersion number if specified, otherwise null.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public string Name { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.ModuleSpecification.Name" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Name As String" />
+      <MemberSignature Language="F#" Value="member this.Name : string" Usage="Microsoft.PowerShell.Commands.ModuleSpecification.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The module name.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RequiredVersion">
+      <MemberSignature Language="C#" Value="public Version RequiredVersion { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Version RequiredVersion" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.ModuleSpecification.RequiredVersion" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property RequiredVersion As Version" />
+      <MemberSignature Language="F#" Value="member this.RequiredVersion : Version" Usage="Microsoft.PowerShell.Commands.ModuleSpecification.RequiredVersion" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Version</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The exact version of the module if specified, otherwise null.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Commands.ModuleSpecification.ToString" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Function ToString () As String" />
+      <MemberSignature Language="F#" Value="override this.ToString : unit -&gt; string" Usage="moduleSpecification.ToString " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Implements ToString() for a module specification. If the specification
+            just contains a Name, then that is returned as is. Otherwise, the object is
+            formatted as a PowerSHell hashtable.
+            </summary>
+        <returns />
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TryParse">
+      <MemberSignature Language="C#" Value="public static bool TryParse (string input, out Microsoft.PowerShell.Commands.ModuleSpecification result);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool TryParse(string input, [out] class Microsoft.PowerShell.Commands.ModuleSpecification&amp; result) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Commands.ModuleSpecification.TryParse(System.String,Microsoft.PowerShell.Commands.ModuleSpecification@)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function TryParse (input As String, ByRef result As ModuleSpecification) As Boolean" />
+      <MemberSignature Language="F#" Value="static member TryParse : string *  -&gt; bool" Usage="Microsoft.PowerShell.Commands.ModuleSpecification.TryParse (input, result)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="input" Type="System.String" />
+        <Parameter Name="result" Type="Microsoft.PowerShell.Commands.ModuleSpecification&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="input">The module specification string</param>
+        <param name="result">the ModuleSpecification object</param>
+        <summary>
+            Parse the specified string into a ModuleSpecification object
+            </summary>
+        <returns />
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Version">
+      <MemberSignature Language="C#" Value="public Version Version { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Version Version" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.ModuleSpecification.Version" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Version As Version" />
+      <MemberSignature Language="F#" Value="member this.Version : Version" Usage="Microsoft.PowerShell.Commands.ModuleSpecification.Version" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Version</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The module version number if specified, otherwise null.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,177 @@
+﻿<Type Name="AuthenticationMechanism" FullName="System.Management.Automation.Runspaces.AuthenticationMechanism">
+  <TypeSignature Language="C#" Value="public enum AuthenticationMechanism" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed AuthenticationMechanism extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Management.Automation.Runspaces.AuthenticationMechanism" />
+  <TypeSignature Language="VB.NET" Value="Public Enum AuthenticationMechanism" />
+  <TypeSignature Language="F#" Value="type AuthenticationMechanism = " />
+  <AssemblyInfo>
+    <AssemblyName>System.Management.Automation</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>
+            Different Authentication Mechanisms supported by New-Runspace command to connect
+            to remote server.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Basic">
+      <MemberSignature Language="C#" Value="Basic" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Management.Automation.Runspaces.AuthenticationMechanism Basic = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Management.Automation.Runspaces.AuthenticationMechanism.Basic" />
+      <MemberSignature Language="VB.NET" Value="Basic" />
+      <MemberSignature Language="F#" Value="Basic = 1" Usage="System.Management.Automation.Runspaces.AuthenticationMechanism.Basic" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.Runspaces.AuthenticationMechanism</ReturnType>
+      </ReturnValue>
+      <MemberValue>1</MemberValue>
+      <Docs>
+        <summary>
+            Use Basic authentication for establishing a remote connection.
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Credssp">
+      <MemberSignature Language="C#" Value="Credssp" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Management.Automation.Runspaces.AuthenticationMechanism Credssp = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:System.Management.Automation.Runspaces.AuthenticationMechanism.Credssp" />
+      <MemberSignature Language="VB.NET" Value="Credssp" />
+      <MemberSignature Language="F#" Value="Credssp = 4" Usage="System.Management.Automation.Runspaces.AuthenticationMechanism.Credssp" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.Runspaces.AuthenticationMechanism</ReturnType>
+      </ReturnValue>
+      <MemberValue>4</MemberValue>
+      <Docs>
+        <summary>
+            Use CredSSP authentication for establishing a remote connection.
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Default">
+      <MemberSignature Language="C#" Value="Default" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Management.Automation.Runspaces.AuthenticationMechanism Default = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Management.Automation.Runspaces.AuthenticationMechanism.Default" />
+      <MemberSignature Language="VB.NET" Value="Default" />
+      <MemberSignature Language="F#" Value="Default = 0" Usage="System.Management.Automation.Runspaces.AuthenticationMechanism.Default" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.Runspaces.AuthenticationMechanism</ReturnType>
+      </ReturnValue>
+      <MemberValue>0</MemberValue>
+      <Docs>
+        <summary>
+            Use the default authentication (as defined by the underlying protocol) 
+            for establishing a remote connection.
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Digest">
+      <MemberSignature Language="C#" Value="Digest" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Management.Automation.Runspaces.AuthenticationMechanism Digest = int32(5)" />
+      <MemberSignature Language="DocId" Value="F:System.Management.Automation.Runspaces.AuthenticationMechanism.Digest" />
+      <MemberSignature Language="VB.NET" Value="Digest" />
+      <MemberSignature Language="F#" Value="Digest = 5" Usage="System.Management.Automation.Runspaces.AuthenticationMechanism.Digest" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.Runspaces.AuthenticationMechanism</ReturnType>
+      </ReturnValue>
+      <MemberValue>5</MemberValue>
+      <Docs>
+        <summary>
+            Use Digest authentication mechanism. Digest authentication operates much 
+            like Basic authentication. However, unlike Basic authentication, Digest authentication 
+            transmits credentials across the network as a hash value, also known as a message digest.
+            The user name and password cannot be deciphered from the hash value. Conversely, Basic 
+            authentication sends a Base 64 encoded password, essentially in clear text, across the 
+            network.
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Kerberos">
+      <MemberSignature Language="C#" Value="Kerberos" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Management.Automation.Runspaces.AuthenticationMechanism Kerberos = int32(6)" />
+      <MemberSignature Language="DocId" Value="F:System.Management.Automation.Runspaces.AuthenticationMechanism.Kerberos" />
+      <MemberSignature Language="VB.NET" Value="Kerberos" />
+      <MemberSignature Language="F#" Value="Kerberos = 6" Usage="System.Management.Automation.Runspaces.AuthenticationMechanism.Kerberos" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.Runspaces.AuthenticationMechanism</ReturnType>
+      </ReturnValue>
+      <MemberValue>6</MemberValue>
+      <Docs>
+        <summary>
+            Use Kerberos authentication for establishing a remote connection.
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Negotiate">
+      <MemberSignature Language="C#" Value="Negotiate" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Management.Automation.Runspaces.AuthenticationMechanism Negotiate = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Management.Automation.Runspaces.AuthenticationMechanism.Negotiate" />
+      <MemberSignature Language="VB.NET" Value="Negotiate" />
+      <MemberSignature Language="F#" Value="Negotiate = 2" Usage="System.Management.Automation.Runspaces.AuthenticationMechanism.Negotiate" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.Runspaces.AuthenticationMechanism</ReturnType>
+      </ReturnValue>
+      <MemberValue>2</MemberValue>
+      <Docs>
+        <summary>
+            Use Negotiate authentication for establishing a remote connection.
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="NegotiateWithImplicitCredential">
+      <MemberSignature Language="C#" Value="NegotiateWithImplicitCredential" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Management.Automation.Runspaces.AuthenticationMechanism NegotiateWithImplicitCredential = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:System.Management.Automation.Runspaces.AuthenticationMechanism.NegotiateWithImplicitCredential" />
+      <MemberSignature Language="VB.NET" Value="NegotiateWithImplicitCredential" />
+      <MemberSignature Language="F#" Value="NegotiateWithImplicitCredential = 3" Usage="System.Management.Automation.Runspaces.AuthenticationMechanism.NegotiateWithImplicitCredential" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.Runspaces.AuthenticationMechanism</ReturnType>
+      </ReturnValue>
+      <MemberValue>3</MemberValue>
+      <Docs>
+        <summary>
+            Use Negotiate authentication for establishing a remote connection.
+            Allow implicit credentials for Negotiate.
+            </summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

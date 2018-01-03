@@ -1,0 +1,202 @@
+﻿<Type Name="ScriptCallDepthException" FullName="System.Management.Automation.ScriptCallDepthException">
+  <TypeSignature Language="C#" Value="public class ScriptCallDepthException : SystemException, System.Management.Automation.IContainsErrorRecord" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable beforefieldinit ScriptCallDepthException extends System.SystemException implements class System.Management.Automation.IContainsErrorRecord" />
+  <TypeSignature Language="DocId" Value="T:System.Management.Automation.ScriptCallDepthException" />
+  <TypeSignature Language="VB.NET" Value="Public Class ScriptCallDepthException&#xA;Inherits SystemException&#xA;Implements IContainsErrorRecord" />
+  <TypeSignature Language="F#" Value="type ScriptCallDepthException = class&#xA;    inherit SystemException&#xA;    interface IContainsErrorRecord" />
+  <AssemblyInfo>
+    <AssemblyName>System.Management.Automation</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.SystemException</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Management.Automation.IContainsErrorRecord</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>
+            ScriptCallDepthException occurs when the number of
+            session state objects of this type in this scope
+            exceeds the configured maximum.
+            </summary>
+    <remarks>
+            When one Monad command or script calls another, this creates an additional
+            scope.  Some script expressions also create a scope.  Monad imposes a maximum
+            call depth to prevent stack overflows.  The maximum call depth is configurable
+            but generally high enough that scripts which are not deeply recursive
+            should not have a problem.
+            </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ScriptCallDepthException ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.ScriptCallDepthException.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New ()" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>
+            Instantiates a new instance of the ScriptCallDepthException class
+            </summary>
+        <returns> constructed object </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ScriptCallDepthException (string message);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string message) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.ScriptCallDepthException.#ctor(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (message As String)" />
+      <MemberSignature Language="F#" Value="new System.Management.Automation.ScriptCallDepthException : string -&gt; System.Management.Automation.ScriptCallDepthException" Usage="new System.Management.Automation.ScriptCallDepthException message" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="message"></param>
+        <summary>
+            Instantiates a new instance of the ScriptCallDepthException class
+            </summary>
+        <returns> constructed object </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected ScriptCallDepthException (System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(class System.Runtime.Serialization.SerializationInfo info, valuetype System.Runtime.Serialization.StreamingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.ScriptCallDepthException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" />
+      <MemberSignature Language="VB.NET" Value="Protected Sub New (info As SerializationInfo, context As StreamingContext)" />
+      <MemberSignature Language="F#" Value="new System.Management.Automation.ScriptCallDepthException : System.Runtime.Serialization.SerializationInfo * System.Runtime.Serialization.StreamingContext -&gt; System.Management.Automation.ScriptCallDepthException" Usage="new System.Management.Automation.ScriptCallDepthException (info, context)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="info" Type="System.Runtime.Serialization.SerializationInfo" />
+        <Parameter Name="context" Type="System.Runtime.Serialization.StreamingContext" />
+      </Parameters>
+      <Docs>
+        <param name="info"> serialization information </param>
+        <param name="context"> streaming context </param>
+        <summary>
+            Initializes a new instance of the ScriptCallDepthException class
+            using data serialized via
+            <see cref="T:System.Runtime.Serialization.ISerializable" /></summary>
+        <returns> constructed object </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ScriptCallDepthException (string message, Exception innerException);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string message, class System.Exception innerException) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.ScriptCallDepthException.#ctor(System.String,System.Exception)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (message As String, innerException As Exception)" />
+      <MemberSignature Language="F#" Value="new System.Management.Automation.ScriptCallDepthException : string * Exception -&gt; System.Management.Automation.ScriptCallDepthException" Usage="new System.Management.Automation.ScriptCallDepthException (message, innerException)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+        <Parameter Name="innerException" Type="System.Exception" />
+      </Parameters>
+      <Docs>
+        <param name="message"></param>
+        <param name="innerException"></param>
+        <summary>
+            Instantiates a new instance of the ScriptCallDepthException class
+            </summary>
+        <returns> constructed object </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CallDepth">
+      <MemberSignature Language="C#" Value="public int CallDepth { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 CallDepth" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.ScriptCallDepthException.CallDepth" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property CallDepth As Integer" />
+      <MemberSignature Language="F#" Value="member this.CallDepth : int" Usage="System.Management.Automation.ScriptCallDepthException.CallDepth" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Always 0 - depth is not tracked as there is no hard coded maximum.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ErrorRecord">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.ErrorRecord ErrorRecord { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Management.Automation.ErrorRecord ErrorRecord" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.ScriptCallDepthException.ErrorRecord" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ErrorRecord As ErrorRecord" />
+      <MemberSignature Language="F#" Value="member this.ErrorRecord : System.Management.Automation.ErrorRecord" Usage="System.Management.Automation.ScriptCallDepthException.ErrorRecord" />
+      <MemberType>Property</MemberType>
+      <Implements>
+        <InterfaceMember>P:System.Management.Automation.IContainsErrorRecord.ErrorRecord</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.ErrorRecord</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            see <see cref="T:System.Management.Automation.IContainsErrorRecord" /></summary>
+        <value />
+        <remarks>
+            TargetObject is the offending call depth
+            </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetObjectData">
+      <MemberSignature Language="C#" Value="public override void GetObjectData (System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void GetObjectData(class System.Runtime.Serialization.SerializationInfo info, valuetype System.Runtime.Serialization.StreamingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.ScriptCallDepthException.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Sub GetObjectData (info As SerializationInfo, context As StreamingContext)" />
+      <MemberSignature Language="F#" Value="abstract member GetObjectData : System.Runtime.Serialization.SerializationInfo * System.Runtime.Serialization.StreamingContext -&gt; unit&#xA;override this.GetObjectData : System.Runtime.Serialization.SerializationInfo * System.Runtime.Serialization.StreamingContext -&gt; unit" Usage="scriptCallDepthException.GetObjectData (info, context)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="info" Type="System.Runtime.Serialization.SerializationInfo" />
+        <Parameter Name="context" Type="System.Runtime.Serialization.StreamingContext" />
+      </Parameters>
+      <Docs>
+        <param name="info">serialization information</param>
+        <param name="context">context</param>
+        <summary>
+            Serializer for <see cref="T:System.Runtime.Serialization.ISerializable" /></summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

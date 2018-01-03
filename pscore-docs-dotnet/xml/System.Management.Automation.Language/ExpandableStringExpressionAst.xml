@@ -1,0 +1,167 @@
+﻿<Type Name="ExpandableStringExpressionAst" FullName="System.Management.Automation.Language.ExpandableStringExpressionAst">
+  <TypeSignature Language="C#" Value="public class ExpandableStringExpressionAst : System.Management.Automation.Language.ExpressionAst" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ExpandableStringExpressionAst extends System.Management.Automation.Language.ExpressionAst" />
+  <TypeSignature Language="DocId" Value="T:System.Management.Automation.Language.ExpandableStringExpressionAst" />
+  <TypeSignature Language="VB.NET" Value="Public Class ExpandableStringExpressionAst&#xA;Inherits ExpressionAst" />
+  <TypeSignature Language="F#" Value="type ExpandableStringExpressionAst = class&#xA;    inherit ExpressionAst" />
+  <AssemblyInfo>
+    <AssemblyName>System.Management.Automation</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Management.Automation.Language.ExpressionAst</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            The ast that represents a double quoted string (here string or normal string) and can have nested variable
+            references or sub-expressions, e.g. <c>"Name: $name`nAge: $([DateTime]::Now.Year - $dob.Year)"</c>.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ExpandableStringExpressionAst (System.Management.Automation.Language.IScriptExtent extent, string value, System.Management.Automation.Language.StringConstantType type);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Management.Automation.Language.IScriptExtent extent, string value, valuetype System.Management.Automation.Language.StringConstantType type) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Language.ExpandableStringExpressionAst.#ctor(System.Management.Automation.Language.IScriptExtent,System.String,System.Management.Automation.Language.StringConstantType)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (extent As IScriptExtent, value As String, type As StringConstantType)" />
+      <MemberSignature Language="F#" Value="new System.Management.Automation.Language.ExpandableStringExpressionAst : System.Management.Automation.Language.IScriptExtent * string * System.Management.Automation.Language.StringConstantType -&gt; System.Management.Automation.Language.ExpandableStringExpressionAst" Usage="new System.Management.Automation.Language.ExpandableStringExpressionAst (extent, value, type)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="extent" Type="System.Management.Automation.Language.IScriptExtent" />
+        <Parameter Name="value" Type="System.String" />
+        <Parameter Name="type" Type="System.Management.Automation.Language.StringConstantType" />
+      </Parameters>
+      <Docs>
+        <param name="extent">The extent of the string.</param>
+        <param name="value">The unexpanded value of the string.</param>
+        <param name="type">The kind of string, must be one of<list><see cref="F:System.Management.Automation.Language.StringConstantType.DoubleQuoted" /><see cref="F:System.Management.Automation.Language.StringConstantType.DoubleQuotedHereString" /><see cref="F:System.Management.Automation.Language.StringConstantType.BareWord" /></list></param>
+        <summary>
+            Construct an expandable string.  The value is scanned for nested variable references and expressions
+            which are evaluated at runtime when this ast is compiled.
+            </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.Management.Automation.PSArgumentNullException">
+            If <paramref name="value" /> or <paramref name="extent" /> is null.
+            </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Copy">
+      <MemberSignature Language="C#" Value="public override System.Management.Automation.Language.Ast Copy ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Management.Automation.Language.Ast Copy() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Language.ExpandableStringExpressionAst.Copy" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Function Copy () As Ast" />
+      <MemberSignature Language="F#" Value="override this.Copy : unit -&gt; System.Management.Automation.Language.Ast" Usage="expandableStringExpressionAst.Copy " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.Language.Ast</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Copy the ExpandableStringExpressionAst instance
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NestedExpressions">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.ReadOnlyCollection&lt;System.Management.Automation.Language.ExpressionAst&gt; NestedExpressions { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ObjectModel.ReadOnlyCollection`1&lt;class System.Management.Automation.Language.ExpressionAst&gt; NestedExpressions" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.Language.ExpandableStringExpressionAst.NestedExpressions" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property NestedExpressions As ReadOnlyCollection(Of ExpressionAst)" />
+      <MemberSignature Language="F#" Value="member this.NestedExpressions : System.Collections.ObjectModel.ReadOnlyCollection&lt;System.Management.Automation.Language.ExpressionAst&gt;" Usage="System.Management.Automation.Language.ExpandableStringExpressionAst.NestedExpressions" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.ReadOnlyCollection&lt;System.Management.Automation.Language.ExpressionAst&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            A non-empty collection of expressions contained within the string.  The nested expressions are always either
+            instances of <see cref="T:System.Management.Automation.Language.VariableExpressionAst" /> or <see cref="T:System.Management.Automation.Language.SubExpressionAst" />.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StaticType">
+      <MemberSignature Language="C#" Value="public override Type StaticType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type StaticType" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.Language.ExpandableStringExpressionAst.StaticType" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides ReadOnly Property StaticType As Type" />
+      <MemberSignature Language="F#" Value="member this.StaticType : Type" Usage="System.Management.Automation.Language.ExpandableStringExpressionAst.StaticType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The type of a StringConstantExpressionAst is always <c>typeof(string)</c>.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StringConstantType">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.Language.StringConstantType StringConstantType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Management.Automation.Language.StringConstantType StringConstantType" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.Language.ExpandableStringExpressionAst.StringConstantType" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property StringConstantType As StringConstantType" />
+      <MemberSignature Language="F#" Value="member this.StringConstantType : System.Management.Automation.Language.StringConstantType" Usage="System.Management.Automation.Language.ExpandableStringExpressionAst.StringConstantType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.Language.StringConstantType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The type of string.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Value">
+      <MemberSignature Language="C#" Value="public string Value { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Value" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.Language.ExpandableStringExpressionAst.Value" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Value As String" />
+      <MemberSignature Language="F#" Value="member this.Value : string" Usage="System.Management.Automation.Language.ExpandableStringExpressionAst.Value" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The value of string, not including the quote characters and without any variables replaced.
+            This property is never null.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

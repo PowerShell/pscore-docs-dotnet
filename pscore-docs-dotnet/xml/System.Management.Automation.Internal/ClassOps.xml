@@ -1,0 +1,140 @@
+﻿<Type Name="ClassOps" FullName="System.Management.Automation.Internal.ClassOps">
+  <TypeSignature Language="C#" Value="public static class ClassOps" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract sealed beforefieldinit ClassOps extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Management.Automation.Internal.ClassOps" />
+  <TypeSignature Language="VB.NET" Value="Public Class ClassOps" />
+  <TypeSignature Language="F#" Value="type ClassOps = class" />
+  <AssemblyInfo>
+    <AssemblyName>System.Management.Automation</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Support methods for PowerShell classes.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="CallBaseCtor">
+      <MemberSignature Language="C#" Value="public static void CallBaseCtor (object target, System.Reflection.ConstructorInfo ci, object[] args);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void CallBaseCtor(object target, class System.Reflection.ConstructorInfo ci, object[] args) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Internal.ClassOps.CallBaseCtor(System.Object,System.Reflection.ConstructorInfo,System.Object[])" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Sub CallBaseCtor (target As Object, ci As ConstructorInfo, args As Object())" />
+      <MemberSignature Language="F#" Value="static member CallBaseCtor : obj * System.Reflection.ConstructorInfo * obj[] -&gt; unit" Usage="System.Management.Automation.Internal.ClassOps.CallBaseCtor (target, ci, args)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="target" Type="System.Object" />
+        <Parameter Name="ci" Type="System.Reflection.ConstructorInfo" />
+        <Parameter Name="args" Type="System.Object[]" />
+      </Parameters>
+      <Docs>
+        <param name="target">object for invocation</param>
+        <param name="ci">ctor info for invocation</param>
+        <param name="args">arguments for invocation</param>
+        <summary>
+            Performs base ctor call as a method call.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CallMethodNonVirtually">
+      <MemberSignature Language="C#" Value="public static object CallMethodNonVirtually (object target, System.Reflection.MethodInfo mi, object[] args);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig object CallMethodNonVirtually(object target, class System.Reflection.MethodInfo mi, object[] args) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Internal.ClassOps.CallMethodNonVirtually(System.Object,System.Reflection.MethodInfo,System.Object[])" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function CallMethodNonVirtually (target As Object, mi As MethodInfo, args As Object()) As Object" />
+      <MemberSignature Language="F#" Value="static member CallMethodNonVirtually : obj * System.Reflection.MethodInfo * obj[] -&gt; obj" Usage="System.Management.Automation.Internal.ClassOps.CallMethodNonVirtually (target, mi, args)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="target" Type="System.Object" />
+        <Parameter Name="mi" Type="System.Reflection.MethodInfo" />
+        <Parameter Name="args" Type="System.Object[]" />
+      </Parameters>
+      <Docs>
+        <param name="target">object for invocation</param>
+        <param name="mi">method info for invocation</param>
+        <param name="args">arguments for invocation</param>
+        <summary>
+            Performs non-virtual method call with return value. Main usage: base class method call inside subclass method.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CallVoidMethodNonVirtually">
+      <MemberSignature Language="C#" Value="public static void CallVoidMethodNonVirtually (object target, System.Reflection.MethodInfo mi, object[] args);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void CallVoidMethodNonVirtually(object target, class System.Reflection.MethodInfo mi, object[] args) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Internal.ClassOps.CallVoidMethodNonVirtually(System.Object,System.Reflection.MethodInfo,System.Object[])" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Sub CallVoidMethodNonVirtually (target As Object, mi As MethodInfo, args As Object())" />
+      <MemberSignature Language="F#" Value="static member CallVoidMethodNonVirtually : obj * System.Reflection.MethodInfo * obj[] -&gt; unit" Usage="System.Management.Automation.Internal.ClassOps.CallVoidMethodNonVirtually (target, mi, args)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="target" Type="System.Object" />
+        <Parameter Name="mi" Type="System.Reflection.MethodInfo" />
+        <Parameter Name="args" Type="System.Object[]" />
+      </Parameters>
+      <Docs>
+        <param name="target">object for invocation</param>
+        <param name="mi">method info for invocation</param>
+        <param name="args">arguments for invocation</param>
+        <summary>
+            Performs non-virtual void method call. Main usage: base class method call inside subclass method.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ValidateSetProperty">
+      <MemberSignature Language="C#" Value="public static void ValidateSetProperty (Type type, string propertyName, object value);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void ValidateSetProperty(class System.Type type, string propertyName, object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Internal.ClassOps.ValidateSetProperty(System.Type,System.String,System.Object)" />
+      <MemberSignature Language="F#" Value="static member ValidateSetProperty : Type * string * obj -&gt; unit" Usage="System.Management.Automation.Internal.ClassOps.ValidateSetProperty (type, propertyName, value)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="type" Type="System.Type" />
+        <Parameter Name="propertyName" Type="System.String" />
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="type"></param>
+        <param name="propertyName"></param>
+        <param name="value"></param>
+        <summary>
+            This method calls all Validate attributes for the property to validate value.
+            Called from class property setters with ValidateArgumentsAttribute attributes.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

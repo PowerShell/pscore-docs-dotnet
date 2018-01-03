@@ -1,0 +1,71 @@
+﻿<Type Name="PowerShellAssemblyLoadContextInitializer" FullName="System.Management.Automation.PowerShellAssemblyLoadContextInitializer">
+  <TypeSignature Language="C#" Value="public class PowerShellAssemblyLoadContextInitializer" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit PowerShellAssemblyLoadContextInitializer extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Management.Automation.PowerShellAssemblyLoadContextInitializer" />
+  <TypeSignature Language="VB.NET" Value="Public Class PowerShellAssemblyLoadContextInitializer" />
+  <TypeSignature Language="F#" Value="type PowerShellAssemblyLoadContextInitializer = class" />
+  <AssemblyInfo>
+    <AssemblyName>System.Management.Automation</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            This is the managed entry point for Microsoft.PowerShell.CoreCLR.AssemblyLoadContext.dll.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public PowerShellAssemblyLoadContextInitializer ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.PowerShellAssemblyLoadContextInitializer.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New ()" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetPowerShellAssemblyLoadContext">
+      <MemberSignature Language="C#" Value="public static void SetPowerShellAssemblyLoadContext (string basePaths);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void SetPowerShellAssemblyLoadContext(string basePaths) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.PowerShellAssemblyLoadContextInitializer.SetPowerShellAssemblyLoadContext(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Sub SetPowerShellAssemblyLoadContext (basePaths As String)" />
+      <MemberSignature Language="F#" Value="static member SetPowerShellAssemblyLoadContext : string -&gt; unit" Usage="System.Management.Automation.PowerShellAssemblyLoadContextInitializer.SetPowerShellAssemblyLoadContext basePaths" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="basePaths" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="basePaths">
+            Base directory paths that are separated by semicolon ';'.
+            They will be the default paths to probe assemblies.
+            </param>
+        <summary>
+            Create a singleton of PowerShellAssemblyLoadContext.
+            Then register to the Resolving event of the load context that loads this assembly.
+            </summary>
+        <remarks>
+            This method is to be used by native host whose TPA list doesn't include PS assemblies, such as the
+            in-box Nano powershell, the PS remote WinRM plugin, in-box Nano DSC and in-box Nano SCOM agent.
+            </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

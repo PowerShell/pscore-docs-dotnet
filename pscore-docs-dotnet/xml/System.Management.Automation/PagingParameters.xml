@@ -1,0 +1,142 @@
+﻿<Type Name="PagingParameters" FullName="System.Management.Automation.PagingParameters">
+  <TypeSignature Language="C#" Value="public sealed class PagingParameters" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit PagingParameters extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Management.Automation.PagingParameters" />
+  <TypeSignature Language="VB.NET" Value="Public NotInheritable Class PagingParameters" />
+  <TypeSignature Language="F#" Value="type PagingParameters = class" />
+  <AssemblyInfo>
+    <AssemblyName>System.Management.Automation</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            The parameters for the paging support enabled by <see cref="P:System.Management.Automation.CmdletCommonMetadataAttribute.SupportsPaging" />.
+            Includes: -IncludeTotalCount, -Skip [int], -First [int]
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="First">
+      <MemberSignature Language="C#" Value="public ulong First { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance unsigned int64 First" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.PagingParameters.First" />
+      <MemberSignature Language="VB.NET" Value="Public Property First As ULong" />
+      <MemberSignature Language="F#" Value="member this.First : uint64 with get, set" Usage="System.Management.Automation.PagingParameters.First" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.UInt64</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets the value of the -First parameter for all cmdlets that support paging.
+            If the user doesn't specify anything, the default is <see cref="F:System.UInt64.MaxValue" />.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IncludeTotalCount">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.SwitchParameter IncludeTotalCount { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Management.Automation.SwitchParameter IncludeTotalCount" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.PagingParameters.IncludeTotalCount" />
+      <MemberSignature Language="VB.NET" Value="Public Property IncludeTotalCount As SwitchParameter" />
+      <MemberSignature Language="F#" Value="member this.IncludeTotalCount : System.Management.Automation.SwitchParameter with get, set" Usage="System.Management.Automation.PagingParameters.IncludeTotalCount" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.SwitchParameter</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets the value of the -IncludeTotalCount parameter for all cmdlets that support paging.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NewTotalCount">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.PSObject NewTotalCount (ulong totalCount, double accuracy);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Management.Automation.PSObject NewTotalCount(unsigned int64 totalCount, float64 accuracy) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.PagingParameters.NewTotalCount(System.UInt64,System.Double)" />
+      <MemberSignature Language="VB.NET" Value="Public Function NewTotalCount (totalCount As ULong, accuracy As Double) As PSObject" />
+      <MemberSignature Language="F#" Value="member this.NewTotalCount : uint64 * double -&gt; System.Management.Automation.PSObject" Usage="pagingParameters.NewTotalCount (totalCount, accuracy)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.PSObject</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="totalCount" Type="System.UInt64" />
+        <Parameter Name="accuracy" Type="System.Double" />
+      </Parameters>
+      <Docs>
+        <param name="totalCount">a total count of objects that the cmdlet would return without paging</param>
+        <param name="accuracy">
+            accuracy of the <paramref name="totalCount" /> parameter.
+            <c>1.0</c> means 100% accurate;
+            <c>0.0</c> means that total count is unknown;
+            anything in-between means that total count is estimated
+            </param>
+        <summary>
+            A helper method for creating an object that represents a total count
+            of objects that the cmdlet would return without paging
+            (this can be more than the size of the page specified in the <see cref="P:System.Management.Automation.PagingParameters.First" /> cmdlet parameter).
+            </summary>
+        <returns>An object that represents a total count of objects that the cmdlet would return without paging</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Skip">
+      <MemberSignature Language="C#" Value="public ulong Skip { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance unsigned int64 Skip" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.PagingParameters.Skip" />
+      <MemberSignature Language="VB.NET" Value="Public Property Skip As ULong" />
+      <MemberSignature Language="F#" Value="member this.Skip : uint64 with get, set" Usage="System.Management.Automation.PagingParameters.Skip" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.UInt64</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets the value of the -Skip parameter for all cmdlets that support paging.
+            If the user doesn't specify anything, the default is <c>0</c>.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

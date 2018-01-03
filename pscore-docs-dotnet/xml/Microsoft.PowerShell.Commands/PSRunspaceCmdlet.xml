@@ -1,0 +1,521 @@
+﻿<Type Name="PSRunspaceCmdlet" FullName="Microsoft.PowerShell.Commands.PSRunspaceCmdlet">
+  <TypeSignature Language="C#" Value="public abstract class PSRunspaceCmdlet : Microsoft.PowerShell.Commands.PSRemotingCmdlet" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit PSRunspaceCmdlet extends Microsoft.PowerShell.Commands.PSRemotingCmdlet" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.PowerShell.Commands.PSRunspaceCmdlet" />
+  <TypeSignature Language="VB.NET" Value="Public MustInherit Class PSRunspaceCmdlet&#xA;Inherits PSRemotingCmdlet" />
+  <TypeSignature Language="F#" Value="type PSRunspaceCmdlet = class&#xA;    inherit PSRemotingCmdlet" />
+  <AssemblyInfo>
+    <AssemblyName>System.Management.Automation</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Microsoft.PowerShell.Commands.PSRemotingCmdlet</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Base class for any cmdlet which operates on a runspace. The
+            following cmdlets currently fall under this category:
+                1. Get-PSSession
+                2. Remove-PSSession
+                3. Disconnect-PSSession
+                4. Connect-PSSession
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected PSRunspaceCmdlet ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Commands.PSRunspaceCmdlet.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Protected Sub New ()" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ComputerName">
+      <MemberSignature Language="C#" Value="public virtual string[] ComputerName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string[] ComputerName" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.PSRunspaceCmdlet.ComputerName" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Property ComputerName As String()" />
+      <MemberSignature Language="F#" Value="member this.ComputerName : string[] with get, set" Usage="Microsoft.PowerShell.Commands.PSRunspaceCmdlet.ComputerName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Alias(Mono.Cecil.CustomAttributeArgument[])</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(Mandatory=true, ParameterSetName="ComputerName", Position=0, ValueFromPipelineByPropertyName=true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.ValidateNotNullOrEmpty</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Name of the computer for which the runspace needs to be
+            returned
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContainerId">
+      <MemberSignature Language="C#" Value="public virtual string[] ContainerId { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string[] ContainerId" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.PSRunspaceCmdlet.ContainerId" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Property ContainerId As String()" />
+      <MemberSignature Language="F#" Value="member this.ContainerId : string[] with get, set" Usage="Microsoft.PowerShell.Commands.PSRunspaceCmdlet.ContainerId" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(Mandatory=true, ParameterSetName="ContainerId", ValueFromPipelineByPropertyName=true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(Mandatory=true, ParameterSetName="ContainerIdInstanceId", ValueFromPipelineByPropertyName=true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.ValidateNotNullOrEmpty</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            ID of target container.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContainerIdInstanceIdParameterSet">
+      <MemberSignature Language="C#" Value="protected const string ContainerIdInstanceIdParameterSet;" />
+      <MemberSignature Language="ILAsm" Value=".field family static literal string ContainerIdInstanceIdParameterSet" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.PowerShell.Commands.PSRunspaceCmdlet.ContainerIdInstanceIdParameterSet" />
+      <MemberSignature Language="VB.NET" Value="Protected Const ContainerIdInstanceIdParameterSet As String " />
+      <MemberSignature Language="F#" Value="val mutable ContainerIdInstanceIdParameterSet : string" Usage="Microsoft.PowerShell.Commands.PSRunspaceCmdlet.ContainerIdInstanceIdParameterSet" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            ContainerIdInstanceId parameter set: container id + session instance id
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetMatchingRunspaces">
+      <MemberSignature Language="C#" Value="protected System.Collections.Generic.Dictionary&lt;Guid,System.Management.Automation.Runspaces.PSSession&gt; GetMatchingRunspaces (bool writeobject, bool writeErrorOnNoMatch);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance class System.Collections.Generic.Dictionary`2&lt;valuetype System.Guid, class System.Management.Automation.Runspaces.PSSession&gt; GetMatchingRunspaces(bool writeobject, bool writeErrorOnNoMatch) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Commands.PSRunspaceCmdlet.GetMatchingRunspaces(System.Boolean,System.Boolean)" />
+      <MemberSignature Language="VB.NET" Value="Protected Function GetMatchingRunspaces (writeobject As Boolean, writeErrorOnNoMatch As Boolean) As Dictionary(Of Guid, PSSession)" />
+      <MemberSignature Language="F#" Value="member this.GetMatchingRunspaces : bool * bool -&gt; System.Collections.Generic.Dictionary&lt;Guid, System.Management.Automation.Runspaces.PSSession&gt;" Usage="pSRunspaceCmdlet.GetMatchingRunspaces (writeobject, writeErrorOnNoMatch)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.Dictionary&lt;System.Guid,System.Management.Automation.Runspaces.PSSession&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writeobject" Type="System.Boolean" />
+        <Parameter Name="writeErrorOnNoMatch" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="writeobject">if true write the object down
+            the pipeline</param>
+        <param name="writeErrorOnNoMatch">write an error record when
+            no matches are found</param>
+        <summary>
+            Gets the matching runspaces based on the parameterset
+            </summary>
+        <returns>list of matching runspaces</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetMatchingRunspaces">
+      <MemberSignature Language="C#" Value="protected System.Collections.Generic.Dictionary&lt;Guid,System.Management.Automation.Runspaces.PSSession&gt; GetMatchingRunspaces (bool writeobject, bool writeErrorOnNoMatch, Microsoft.PowerShell.Commands.SessionFilterState filterState, string configurationName);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance class System.Collections.Generic.Dictionary`2&lt;valuetype System.Guid, class System.Management.Automation.Runspaces.PSSession&gt; GetMatchingRunspaces(bool writeobject, bool writeErrorOnNoMatch, valuetype Microsoft.PowerShell.Commands.SessionFilterState filterState, string configurationName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Commands.PSRunspaceCmdlet.GetMatchingRunspaces(System.Boolean,System.Boolean,Microsoft.PowerShell.Commands.SessionFilterState,System.String)" />
+      <MemberSignature Language="VB.NET" Value="Protected Function GetMatchingRunspaces (writeobject As Boolean, writeErrorOnNoMatch As Boolean, filterState As SessionFilterState, configurationName As String) As Dictionary(Of Guid, PSSession)" />
+      <MemberSignature Language="F#" Value="member this.GetMatchingRunspaces : bool * bool * Microsoft.PowerShell.Commands.SessionFilterState * string -&gt; System.Collections.Generic.Dictionary&lt;Guid, System.Management.Automation.Runspaces.PSSession&gt;" Usage="pSRunspaceCmdlet.GetMatchingRunspaces (writeobject, writeErrorOnNoMatch, filterState, configurationName)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.Dictionary&lt;System.Guid,System.Management.Automation.Runspaces.PSSession&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writeobject" Type="System.Boolean" />
+        <Parameter Name="writeErrorOnNoMatch" Type="System.Boolean" />
+        <Parameter Name="filterState" Type="Microsoft.PowerShell.Commands.SessionFilterState" />
+        <Parameter Name="configurationName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="writeobject">if true write the object down
+            the pipeline</param>
+        <param name="writeErrorOnNoMatch">write an error record when
+            no matches are found</param>
+        <param name="filterState">Runspace state filter value.</param>
+        <param name="configurationName">Runspace configuration name filter value.</param>
+        <summary>
+            Gets the matching runspaces based on the parameterset
+            </summary>
+        <returns>list of matching runspaces</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetMatchingRunspacesByName">
+      <MemberSignature Language="C#" Value="protected System.Collections.Generic.Dictionary&lt;Guid,System.Management.Automation.Runspaces.PSSession&gt; GetMatchingRunspacesByName (bool writeobject, bool writeErrorOnNoMatch);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance class System.Collections.Generic.Dictionary`2&lt;valuetype System.Guid, class System.Management.Automation.Runspaces.PSSession&gt; GetMatchingRunspacesByName(bool writeobject, bool writeErrorOnNoMatch) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Commands.PSRunspaceCmdlet.GetMatchingRunspacesByName(System.Boolean,System.Boolean)" />
+      <MemberSignature Language="VB.NET" Value="Protected Function GetMatchingRunspacesByName (writeobject As Boolean, writeErrorOnNoMatch As Boolean) As Dictionary(Of Guid, PSSession)" />
+      <MemberSignature Language="F#" Value="member this.GetMatchingRunspacesByName : bool * bool -&gt; System.Collections.Generic.Dictionary&lt;Guid, System.Management.Automation.Runspaces.PSSession&gt;" Usage="pSRunspaceCmdlet.GetMatchingRunspacesByName (writeobject, writeErrorOnNoMatch)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.Dictionary&lt;System.Guid,System.Management.Automation.Runspaces.PSSession&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writeobject" Type="System.Boolean" />
+        <Parameter Name="writeErrorOnNoMatch" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="writeobject">if true write the object down
+            the pipeline</param>
+        <param name="writeErrorOnNoMatch">write an error record when
+            no matches are found</param>
+        <summary>
+            Gets the matching runspaces based on name
+            </summary>
+        <returns>list of matching runspaces</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetMatchingRunspacesByRunspaceId">
+      <MemberSignature Language="C#" Value="protected System.Collections.Generic.Dictionary&lt;Guid,System.Management.Automation.Runspaces.PSSession&gt; GetMatchingRunspacesByRunspaceId (bool writeobject, bool writeErrorOnNoMatch);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance class System.Collections.Generic.Dictionary`2&lt;valuetype System.Guid, class System.Management.Automation.Runspaces.PSSession&gt; GetMatchingRunspacesByRunspaceId(bool writeobject, bool writeErrorOnNoMatch) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Commands.PSRunspaceCmdlet.GetMatchingRunspacesByRunspaceId(System.Boolean,System.Boolean)" />
+      <MemberSignature Language="VB.NET" Value="Protected Function GetMatchingRunspacesByRunspaceId (writeobject As Boolean, writeErrorOnNoMatch As Boolean) As Dictionary(Of Guid, PSSession)" />
+      <MemberSignature Language="F#" Value="member this.GetMatchingRunspacesByRunspaceId : bool * bool -&gt; System.Collections.Generic.Dictionary&lt;Guid, System.Management.Automation.Runspaces.PSSession&gt;" Usage="pSRunspaceCmdlet.GetMatchingRunspacesByRunspaceId (writeobject, writeErrorOnNoMatch)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.Dictionary&lt;System.Guid,System.Management.Automation.Runspaces.PSSession&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writeobject" Type="System.Boolean" />
+        <Parameter Name="writeErrorOnNoMatch" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="writeobject">if true write the object down
+            the pipeline</param>
+        <param name="writeErrorOnNoMatch">write an error record when
+            no matches are found</param>
+        <summary>
+            Gets the matching runspaces based on the runspaces instance id
+            </summary>
+        <returns>list of matching runspaces</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Id">
+      <MemberSignature Language="C#" Value="public int[] Id { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32[] Id" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.PSRunspaceCmdlet.Id" />
+      <MemberSignature Language="VB.NET" Value="Public Property Id As Integer()" />
+      <MemberSignature Language="F#" Value="member this.Id : int[] with get, set" Usage="Microsoft.PowerShell.Commands.PSRunspaceCmdlet.Id" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(Mandatory=true, ParameterSetName="Id", Position=0, ValueFromPipelineByPropertyName=true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.ValidateNotNull</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Session Id of the remoterunspace info object
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IdParameterSet">
+      <MemberSignature Language="C#" Value="protected const string IdParameterSet;" />
+      <MemberSignature Language="ILAsm" Value=".field family static literal string IdParameterSet" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.PowerShell.Commands.PSRunspaceCmdlet.IdParameterSet" />
+      <MemberSignature Language="VB.NET" Value="Protected Const IdParameterSet As String " />
+      <MemberSignature Language="F#" Value="val mutable IdParameterSet : string" Usage="Microsoft.PowerShell.Commands.PSRunspaceCmdlet.IdParameterSet" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            session id parameter set
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InstanceId">
+      <MemberSignature Language="C#" Value="public virtual Guid[] InstanceId { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Guid[] InstanceId" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.PSRunspaceCmdlet.InstanceId" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Property InstanceId As Guid()" />
+      <MemberSignature Language="F#" Value="member this.InstanceId : Guid[] with get, set" Usage="Microsoft.PowerShell.Commands.PSRunspaceCmdlet.InstanceId" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(Mandatory=true, ParameterSetName="InstanceId", ValueFromPipelineByPropertyName=true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.ValidateNotNull</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Guid[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            RemoteRunspaceId to retrieve corresponding PSSession
+            object
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InstanceIdParameterSet">
+      <MemberSignature Language="C#" Value="protected const string InstanceIdParameterSet;" />
+      <MemberSignature Language="ILAsm" Value=".field family static literal string InstanceIdParameterSet" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.PowerShell.Commands.PSRunspaceCmdlet.InstanceIdParameterSet" />
+      <MemberSignature Language="VB.NET" Value="Protected Const InstanceIdParameterSet As String " />
+      <MemberSignature Language="F#" Value="val mutable InstanceIdParameterSet : string" Usage="Microsoft.PowerShell.Commands.PSRunspaceCmdlet.InstanceIdParameterSet" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Runspace Id parameter set
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public virtual string[] Name { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string[] Name" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.PSRunspaceCmdlet.Name" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Property Name As String()" />
+      <MemberSignature Language="F#" Value="member this.Name : string[] with get, set" Usage="Microsoft.PowerShell.Commands.PSRunspaceCmdlet.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(Mandatory=true, ParameterSetName="Name", ValueFromPipelineByPropertyName=true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.ValidateNotNullOrEmpty</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Name of the remote runspaceinfo object
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NameParameterSet">
+      <MemberSignature Language="C#" Value="protected const string NameParameterSet;" />
+      <MemberSignature Language="ILAsm" Value=".field family static literal string NameParameterSet" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.PowerShell.Commands.PSRunspaceCmdlet.NameParameterSet" />
+      <MemberSignature Language="VB.NET" Value="Protected Const NameParameterSet As String " />
+      <MemberSignature Language="F#" Value="val mutable NameParameterSet : string" Usage="Microsoft.PowerShell.Commands.PSRunspaceCmdlet.NameParameterSet" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            name parameter set
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="VMId">
+      <MemberSignature Language="C#" Value="public virtual Guid[] VMId { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Guid[] VMId" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.PSRunspaceCmdlet.VMId" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Property VMId As Guid()" />
+      <MemberSignature Language="F#" Value="member this.VMId : Guid[] with get, set" Usage="Microsoft.PowerShell.Commands.PSRunspaceCmdlet.VMId" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Alias(Mono.Cecil.CustomAttributeArgument[])</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(Mandatory=true, ParameterSetName="VMId", ValueFromPipelineByPropertyName=true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(Mandatory=true, ParameterSetName="VMIdInstanceId", ValueFromPipelineByPropertyName=true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.ValidateNotNullOrEmpty</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Guid[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Guid of target virtual machine.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="VMIdInstanceIdParameterSet">
+      <MemberSignature Language="C#" Value="protected const string VMIdInstanceIdParameterSet;" />
+      <MemberSignature Language="ILAsm" Value=".field family static literal string VMIdInstanceIdParameterSet" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.PowerShell.Commands.PSRunspaceCmdlet.VMIdInstanceIdParameterSet" />
+      <MemberSignature Language="VB.NET" Value="Protected Const VMIdInstanceIdParameterSet As String " />
+      <MemberSignature Language="F#" Value="val mutable VMIdInstanceIdParameterSet : string" Usage="Microsoft.PowerShell.Commands.PSRunspaceCmdlet.VMIdInstanceIdParameterSet" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            VMIdInstanceId parameter set: vm id + session instance id
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="VMName">
+      <MemberSignature Language="C#" Value="public virtual string[] VMName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string[] VMName" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.PSRunspaceCmdlet.VMName" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Property VMName As String()" />
+      <MemberSignature Language="F#" Value="member this.VMName : string[] with get, set" Usage="Microsoft.PowerShell.Commands.PSRunspaceCmdlet.VMName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(Mandatory=true, ParameterSetName="VMName", ValueFromPipelineByPropertyName=true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(Mandatory=true, ParameterSetName="VMNameInstanceId", ValueFromPipelineByPropertyName=true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.ValidateNotNullOrEmpty</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Name of target virtual machine.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="VMNameInstanceIdParameterSet">
+      <MemberSignature Language="C#" Value="protected const string VMNameInstanceIdParameterSet;" />
+      <MemberSignature Language="ILAsm" Value=".field family static literal string VMNameInstanceIdParameterSet" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.PowerShell.Commands.PSRunspaceCmdlet.VMNameInstanceIdParameterSet" />
+      <MemberSignature Language="VB.NET" Value="Protected Const VMNameInstanceIdParameterSet As String " />
+      <MemberSignature Language="F#" Value="val mutable VMNameInstanceIdParameterSet : string" Usage="Microsoft.PowerShell.Commands.PSRunspaceCmdlet.VMNameInstanceIdParameterSet" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            VMNameInstanceId parameter set: vm name + session instance id
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

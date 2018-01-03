@@ -1,0 +1,161 @@
+﻿<Type Name="CompletionResult" FullName="System.Management.Automation.CompletionResult">
+  <TypeSignature Language="C#" Value="public class CompletionResult" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit CompletionResult extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Management.Automation.CompletionResult" />
+  <TypeSignature Language="VB.NET" Value="Public Class CompletionResult" />
+  <TypeSignature Language="F#" Value="type CompletionResult = class" />
+  <AssemblyInfo>
+    <AssemblyName>System.Management.Automation</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Class used to store a tab completion or Intellisense result
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CompletionResult (string completionText);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string completionText) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.CompletionResult.#ctor(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (completionText As String)" />
+      <MemberSignature Language="F#" Value="new System.Management.Automation.CompletionResult : string -&gt; System.Management.Automation.CompletionResult" Usage="new System.Management.Automation.CompletionResult completionText" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="completionText" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="completionText">completion text</param>
+        <summary>
+            Initializes a new instance of this class internally if the result out of TabExpansion is a string
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CompletionResult (string completionText, string listItemText, System.Management.Automation.CompletionResultType resultType, string toolTip);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string completionText, string listItemText, valuetype System.Management.Automation.CompletionResultType resultType, string toolTip) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.CompletionResult.#ctor(System.String,System.String,System.Management.Automation.CompletionResultType,System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (completionText As String, listItemText As String, resultType As CompletionResultType, toolTip As String)" />
+      <MemberSignature Language="F#" Value="new System.Management.Automation.CompletionResult : string * string * System.Management.Automation.CompletionResultType * string -&gt; System.Management.Automation.CompletionResult" Usage="new System.Management.Automation.CompletionResult (completionText, listItemText, resultType, toolTip)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="completionText" Type="System.String" />
+        <Parameter Name="listItemText" Type="System.String" />
+        <Parameter Name="resultType" Type="System.Management.Automation.CompletionResultType" />
+        <Parameter Name="toolTip" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="completionText">the text to be used as the auto completion result</param>
+        <param name="listItemText">he text to be displayed in a list</param>
+        <param name="resultType">the type of completion result</param>
+        <param name="toolTip">the text for the tooltip with details to be displayed about the object</param>
+        <summary>
+            Initializes a new instance of the CompletionResult class
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CompletionText">
+      <MemberSignature Language="C#" Value="public string CompletionText { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string CompletionText" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.CompletionResult.CompletionText" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property CompletionText As String" />
+      <MemberSignature Language="F#" Value="member this.CompletionText : string" Usage="System.Management.Automation.CompletionResult.CompletionText" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the text to be used as the auto completion result
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ListItemText">
+      <MemberSignature Language="C#" Value="public string ListItemText { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ListItemText" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.CompletionResult.ListItemText" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ListItemText As String" />
+      <MemberSignature Language="F#" Value="member this.ListItemText : string" Usage="System.Management.Automation.CompletionResult.ListItemText" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the text to be displayed in a list
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ResultType">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.CompletionResultType ResultType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Management.Automation.CompletionResultType ResultType" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.CompletionResult.ResultType" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ResultType As CompletionResultType" />
+      <MemberSignature Language="F#" Value="member this.ResultType : System.Management.Automation.CompletionResultType" Usage="System.Management.Automation.CompletionResult.ResultType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.CompletionResultType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the type of completion result
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToolTip">
+      <MemberSignature Language="C#" Value="public string ToolTip { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ToolTip" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.CompletionResult.ToolTip" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ToolTip As String" />
+      <MemberSignature Language="F#" Value="member this.ToolTip : string" Usage="System.Management.Automation.CompletionResult.ToolTip" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the text for the tooltip with details to be displayed about the object
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

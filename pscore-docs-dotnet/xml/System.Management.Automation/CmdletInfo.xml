@@ -1,0 +1,273 @@
+﻿<Type Name="CmdletInfo" FullName="System.Management.Automation.CmdletInfo">
+  <TypeSignature Language="C#" Value="public class CmdletInfo : System.Management.Automation.CommandInfo" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit CmdletInfo extends System.Management.Automation.CommandInfo" />
+  <TypeSignature Language="DocId" Value="T:System.Management.Automation.CmdletInfo" />
+  <TypeSignature Language="VB.NET" Value="Public Class CmdletInfo&#xA;Inherits CommandInfo" />
+  <TypeSignature Language="F#" Value="type CmdletInfo = class&#xA;    inherit CommandInfo" />
+  <AssemblyInfo>
+    <AssemblyName>System.Management.Automation</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Management.Automation.CommandInfo</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            The command information for MSH cmdlets that are directly executable by MSH
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CmdletInfo (string name, Type implementingType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string name, class System.Type implementingType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.CmdletInfo.#ctor(System.String,System.Type)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (name As String, implementingType As Type)" />
+      <MemberSignature Language="F#" Value="new System.Management.Automation.CmdletInfo : string * Type -&gt; System.Management.Automation.CmdletInfo" Usage="new System.Management.Automation.CmdletInfo (name, implementingType)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="implementingType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="name">The name to use for the cmdlet, must be in the form Noun-Verb.</param>
+        <param name="implementingType">The .NET class implementing this cmdlet.</param>
+        <summary>
+            Directly create a cmdlet object from a type. This allows
+            unregistered commands to be called. It also allows the overhead of
+            command discovery to be bypassed.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultParameterSet">
+      <MemberSignature Language="C#" Value="public string DefaultParameterSet { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string DefaultParameterSet" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.CmdletInfo.DefaultParameterSet" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property DefaultParameterSet As String" />
+      <MemberSignature Language="F#" Value="member this.DefaultParameterSet : string" Usage="System.Management.Automation.CmdletInfo.DefaultParameterSet" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the name of the default parameter set.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Definition">
+      <MemberSignature Language="C#" Value="public override string Definition { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Definition" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.CmdletInfo.Definition" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides ReadOnly Property Definition As String" />
+      <MemberSignature Language="F#" Value="member this.Definition : string" Usage="System.Management.Automation.CmdletInfo.Definition" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the synopsis of the cmdlet
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HelpFile">
+      <MemberSignature Language="C#" Value="public string HelpFile { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string HelpFile" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.CmdletInfo.HelpFile" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property HelpFile As String" />
+      <MemberSignature Language="F#" Value="member this.HelpFile : string" Usage="System.Management.Automation.CmdletInfo.HelpFile" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the help file path for the cmdlet.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ImplementingType">
+      <MemberSignature Language="C#" Value="public Type ImplementingType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type ImplementingType" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.CmdletInfo.ImplementingType" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ImplementingType As Type" />
+      <MemberSignature Language="F#" Value="member this.ImplementingType : Type" Usage="System.Management.Automation.CmdletInfo.ImplementingType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the type that implements the cmdlet
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Noun">
+      <MemberSignature Language="C#" Value="public string Noun { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Noun" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.CmdletInfo.Noun" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Noun As String" />
+      <MemberSignature Language="F#" Value="member this.Noun : string" Usage="System.Management.Automation.CmdletInfo.Noun" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the noun of the cmdlet.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Options">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.ScopedItemOptions Options { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Management.Automation.ScopedItemOptions Options" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.CmdletInfo.Options" />
+      <MemberSignature Language="VB.NET" Value="Public Property Options As ScopedItemOptions" />
+      <MemberSignature Language="F#" Value="member this.Options : System.Management.Automation.ScopedItemOptions with get, set" Usage="System.Management.Automation.CmdletInfo.Options" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.ScopedItemOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+             Gets or sets the scope options for the alias
+             </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.Management.Automation.SessionStateUnauthorizedAccessException">
+             If the trying to set an cmdlet that is constant or
+                 if the value trying to be set is ScopedItemOptions.Constant
+             </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="OutputType">
+      <MemberSignature Language="C#" Value="public override System.Collections.ObjectModel.ReadOnlyCollection&lt;System.Management.Automation.PSTypeName&gt; OutputType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ObjectModel.ReadOnlyCollection`1&lt;class System.Management.Automation.PSTypeName&gt; OutputType" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.CmdletInfo.OutputType" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides ReadOnly Property OutputType As ReadOnlyCollection(Of PSTypeName)" />
+      <MemberSignature Language="F#" Value="member this.OutputType : System.Collections.ObjectModel.ReadOnlyCollection&lt;System.Management.Automation.PSTypeName&gt;" Usage="System.Management.Automation.CmdletInfo.OutputType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.ReadOnlyCollection&lt;System.Management.Automation.PSTypeName&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Return the output types specified on the cmdlet.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PSSnapIn">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.PSSnapInInfo PSSnapIn { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Management.Automation.PSSnapInInfo PSSnapIn" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.CmdletInfo.PSSnapIn" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property PSSnapIn As PSSnapInInfo" />
+      <MemberSignature Language="F#" Value="member this.PSSnapIn : System.Management.Automation.PSSnapInInfo" Usage="System.Management.Automation.CmdletInfo.PSSnapIn" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.PSSnapInInfo</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the Snap-in in which the cmdlet is implemented.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Verb">
+      <MemberSignature Language="C#" Value="public string Verb { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Verb" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.CmdletInfo.Verb" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Verb As String" />
+      <MemberSignature Language="F#" Value="member this.Verb : string" Usage="System.Management.Automation.CmdletInfo.Verb" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the verb of the cmdlet
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Version">
+      <MemberSignature Language="C#" Value="public override Version Version { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Version Version" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.CmdletInfo.Version" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides ReadOnly Property Version As Version" />
+      <MemberSignature Language="F#" Value="member this.Version : Version" Usage="System.Management.Automation.CmdletInfo.Version" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Version</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the source version
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

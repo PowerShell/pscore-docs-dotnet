@@ -1,0 +1,366 @@
+﻿<Type Name="ProxyCommand" FullName="System.Management.Automation.ProxyCommand">
+  <TypeSignature Language="C#" Value="public sealed class ProxyCommand" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit ProxyCommand extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Management.Automation.ProxyCommand" />
+  <TypeSignature Language="VB.NET" Value="Public NotInheritable Class ProxyCommand" />
+  <TypeSignature Language="F#" Value="type ProxyCommand = class" />
+  <AssemblyInfo>
+    <AssemblyName>System.Management.Automation</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            A ProxyCommand class used to represent a Command constructed Dynamically
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Create">
+      <MemberSignature Language="C#" Value="public static string Create (System.Management.Automation.CommandMetadata commandMetadata);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string Create(class System.Management.Automation.CommandMetadata commandMetadata) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.ProxyCommand.Create(System.Management.Automation.CommandMetadata)" />
+      <MemberSignature Language="F#" Value="static member Create : System.Management.Automation.CommandMetadata -&gt; string" Usage="System.Management.Automation.ProxyCommand.Create commandMetadata" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="commandMetadata" Type="System.Management.Automation.CommandMetadata" />
+      </Parameters>
+      <Docs>
+        <param name="commandMetadata">
+            An instance of CommandMetadata representing a command.
+            </param>
+        <summary>
+            This method constructs a string representing the command specified by <paramref name="commandMetadata" />.
+            The returned string is a ScriptBlock which can be used to configure a Cmdlet/Function in a Runspace.
+            </summary>
+        <returns>
+            A string representing Command ScriptBlock.
+            </returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+            commandMetadata is null.
+            </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Create">
+      <MemberSignature Language="C#" Value="public static string Create (System.Management.Automation.CommandMetadata commandMetadata, string helpComment);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string Create(class System.Management.Automation.CommandMetadata commandMetadata, string helpComment) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.ProxyCommand.Create(System.Management.Automation.CommandMetadata,System.String)" />
+      <MemberSignature Language="F#" Value="static member Create : System.Management.Automation.CommandMetadata * string -&gt; string" Usage="System.Management.Automation.ProxyCommand.Create (commandMetadata, helpComment)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="commandMetadata" Type="System.Management.Automation.CommandMetadata" />
+        <Parameter Name="helpComment" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="commandMetadata">
+            An instance of CommandMetadata representing a command.
+            </param>
+        <param name="helpComment">
+            The string to be used as the help comment.
+            </param>
+        <summary>
+            This method constructs a string representing the command specified by <paramref name="commandMetadata" />.
+            The returned string is a ScriptBlock which can be used to configure a Cmdlet/Function in a Runspace.
+            </summary>
+        <returns>
+            A string representing Command ScriptBlock.
+            </returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+            commandMetadata is null.
+            </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Create">
+      <MemberSignature Language="C#" Value="public static string Create (System.Management.Automation.CommandMetadata commandMetadata, string helpComment, bool generateDynamicParameters);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string Create(class System.Management.Automation.CommandMetadata commandMetadata, string helpComment, bool generateDynamicParameters) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.ProxyCommand.Create(System.Management.Automation.CommandMetadata,System.String,System.Boolean)" />
+      <MemberSignature Language="F#" Value="static member Create : System.Management.Automation.CommandMetadata * string * bool -&gt; string" Usage="System.Management.Automation.ProxyCommand.Create (commandMetadata, helpComment, generateDynamicParameters)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="commandMetadata" Type="System.Management.Automation.CommandMetadata" />
+        <Parameter Name="helpComment" Type="System.String" />
+        <Parameter Name="generateDynamicParameters" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="commandMetadata">
+            An instance of CommandMetadata representing a command.
+            </param>
+        <param name="helpComment">
+            The string to be used as the help comment.
+            </param>
+        <param name="generateDynamicParameters">
+            A boolean that determines whether the generated proxy command should include the functionality required
+            to proxy dynamic parameters of the underlying command.
+            </param>
+        <summary>
+            This method constructs a string representing the command specified by <paramref name="commandMetadata" />.
+            The returned string is a ScriptBlock which can be used to configure a Cmdlet/Function in a Runspace.
+            </summary>
+        <returns>
+            A string representing Command ScriptBlock.
+            </returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+            commandMetadata is null.
+            </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetBegin">
+      <MemberSignature Language="C#" Value="public static string GetBegin (System.Management.Automation.CommandMetadata commandMetadata);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string GetBegin(class System.Management.Automation.CommandMetadata commandMetadata) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.ProxyCommand.GetBegin(System.Management.Automation.CommandMetadata)" />
+      <MemberSignature Language="F#" Value="static member GetBegin : System.Management.Automation.CommandMetadata -&gt; string" Usage="System.Management.Automation.ProxyCommand.GetBegin commandMetadata" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="commandMetadata" Type="System.Management.Automation.CommandMetadata" />
+      </Parameters>
+      <Docs>
+        <param name="commandMetadata">
+            An instance of CommandMetadata representing a command.
+            </param>
+        <summary>
+            This method constructs a string representing the begin block of the command
+            specified by <paramref name="commandMetadata" />.  The returned string only contains the
+            script, it is not enclosed in "begin { }".
+            </summary>
+        <returns>
+            A string representing the begin block of the command.
+            </returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+            commandMetadata is null.
+            </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetCmdletBindingAttribute">
+      <MemberSignature Language="C#" Value="public static string GetCmdletBindingAttribute (System.Management.Automation.CommandMetadata commandMetadata);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string GetCmdletBindingAttribute(class System.Management.Automation.CommandMetadata commandMetadata) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.ProxyCommand.GetCmdletBindingAttribute(System.Management.Automation.CommandMetadata)" />
+      <MemberSignature Language="F#" Value="static member GetCmdletBindingAttribute : System.Management.Automation.CommandMetadata -&gt; string" Usage="System.Management.Automation.ProxyCommand.GetCmdletBindingAttribute commandMetadata" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="commandMetadata" Type="System.Management.Automation.CommandMetadata" />
+      </Parameters>
+      <Docs>
+        <param name="commandMetadata">
+            An instance of CommandMetadata representing a command.
+            </param>
+        <summary>
+            This method constructs a string representing the CmdletBinding attribute of the command
+            specified by <paramref name="commandMetadata" />.
+            </summary>
+        <returns>
+            A string representing the CmdletBinding attribute of the command.
+            </returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+            commandMetadata is null.
+            </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetDynamicParam">
+      <MemberSignature Language="C#" Value="public static string GetDynamicParam (System.Management.Automation.CommandMetadata commandMetadata);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string GetDynamicParam(class System.Management.Automation.CommandMetadata commandMetadata) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.ProxyCommand.GetDynamicParam(System.Management.Automation.CommandMetadata)" />
+      <MemberSignature Language="F#" Value="static member GetDynamicParam : System.Management.Automation.CommandMetadata -&gt; string" Usage="System.Management.Automation.ProxyCommand.GetDynamicParam commandMetadata" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="commandMetadata" Type="System.Management.Automation.CommandMetadata" />
+      </Parameters>
+      <Docs>
+        <param name="commandMetadata">
+            An instance of CommandMetadata representing a command.
+            </param>
+        <summary>
+            This method constructs a string representing the dynamic parameter block of the command
+            specified by <paramref name="commandMetadata" />.  The returned string only contains the
+            script, it is not enclosed in "dynamicparam { }".
+            </summary>
+        <returns>
+            A string representing the dynamic parameter block of the command.
+            </returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+            commandMetadata is null.
+            </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetEnd">
+      <MemberSignature Language="C#" Value="public static string GetEnd (System.Management.Automation.CommandMetadata commandMetadata);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string GetEnd(class System.Management.Automation.CommandMetadata commandMetadata) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.ProxyCommand.GetEnd(System.Management.Automation.CommandMetadata)" />
+      <MemberSignature Language="F#" Value="static member GetEnd : System.Management.Automation.CommandMetadata -&gt; string" Usage="System.Management.Automation.ProxyCommand.GetEnd commandMetadata" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="commandMetadata" Type="System.Management.Automation.CommandMetadata" />
+      </Parameters>
+      <Docs>
+        <param name="commandMetadata">
+            An instance of CommandMetadata representing a command.
+            </param>
+        <summary>
+            This method constructs a string representing the end block of the command
+            specified by <paramref name="commandMetadata" />.  The returned string only contains the
+            script, it is not enclosed in "end { }".
+            </summary>
+        <returns>
+            A string representing the end block of the command.
+            </returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+            commandMetadata is null.
+            </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHelpComments">
+      <MemberSignature Language="C#" Value="public static string GetHelpComments (System.Management.Automation.PSObject help);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string GetHelpComments(class System.Management.Automation.PSObject help) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.ProxyCommand.GetHelpComments(System.Management.Automation.PSObject)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function GetHelpComments (help As PSObject) As String" />
+      <MemberSignature Language="F#" Value="static member GetHelpComments : System.Management.Automation.PSObject -&gt; string" Usage="System.Management.Automation.ProxyCommand.GetHelpComments help" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="help" Type="System.Management.Automation.PSObject" />
+      </Parameters>
+      <Docs>
+        <param name="help">A custom PSObject created by Get-Help.</param>
+        <summary>
+            Construct the text that can be used in a multi-line comment for get-help.
+            </summary>
+        <returns>A string that can be used as the help comment for script for the input HelpInfo object.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">When the help argument is null.</exception>
+        <exception cref="T:System.InvalidOperationException">When the help argument is not recognized as a HelpInfo object.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetParamBlock">
+      <MemberSignature Language="C#" Value="public static string GetParamBlock (System.Management.Automation.CommandMetadata commandMetadata);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string GetParamBlock(class System.Management.Automation.CommandMetadata commandMetadata) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.ProxyCommand.GetParamBlock(System.Management.Automation.CommandMetadata)" />
+      <MemberSignature Language="F#" Value="static member GetParamBlock : System.Management.Automation.CommandMetadata -&gt; string" Usage="System.Management.Automation.ProxyCommand.GetParamBlock commandMetadata" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="commandMetadata" Type="System.Management.Automation.CommandMetadata" />
+      </Parameters>
+      <Docs>
+        <param name="commandMetadata">
+            An instance of CommandMetadata representing a command.
+            </param>
+        <summary>
+            This method constructs a string representing the param block of the command
+            specified by <paramref name="commandMetadata" />.  The returned string only contains the
+            parameters, it is not enclosed in "param()".
+            </summary>
+        <returns>
+            A string representing the parameters of the command.
+            </returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+            commandMetadata is null.
+            </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetProcess">
+      <MemberSignature Language="C#" Value="public static string GetProcess (System.Management.Automation.CommandMetadata commandMetadata);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string GetProcess(class System.Management.Automation.CommandMetadata commandMetadata) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.ProxyCommand.GetProcess(System.Management.Automation.CommandMetadata)" />
+      <MemberSignature Language="F#" Value="static member GetProcess : System.Management.Automation.CommandMetadata -&gt; string" Usage="System.Management.Automation.ProxyCommand.GetProcess commandMetadata" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="commandMetadata" Type="System.Management.Automation.CommandMetadata" />
+      </Parameters>
+      <Docs>
+        <param name="commandMetadata">
+            An instance of CommandMetadata representing a command.
+            </param>
+        <summary>
+            This method constructs a string representing the process block of the command
+            specified by <paramref name="commandMetadata" />.  The returned string only contains the
+            script, it is not enclosed in "process { }".
+            </summary>
+        <returns>
+            A string representing the process block of the command.
+            </returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+            commandMetadata is null.
+            </exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,390 @@
+﻿<Type Name="SessionBasedCmdletAdapter&lt;TObjectInstance,TSession&gt;" FullName="Microsoft.PowerShell.Cmdletization.SessionBasedCmdletAdapter&lt;TObjectInstance,TSession&gt;">
+  <TypeSignature Language="C#" Value="public abstract class SessionBasedCmdletAdapter&lt;TObjectInstance,TSession&gt; : Microsoft.PowerShell.Cmdletization.CmdletAdapter&lt;TObjectInstance&gt;, IDisposable where TObjectInstance : class where TSession : class" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit SessionBasedCmdletAdapter`2&lt;class TObjectInstance, class TSession&gt; extends Microsoft.PowerShell.Cmdletization.CmdletAdapter`1&lt;!TObjectInstance&gt; implements class System.IDisposable" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.PowerShell.Cmdletization.SessionBasedCmdletAdapter`2" />
+  <TypeSignature Language="VB.NET" Value="Public MustInherit Class SessionBasedCmdletAdapter(Of TObjectInstance, TSession)&#xA;Inherits CmdletAdapter(Of TObjectInstance)&#xA;Implements IDisposable" />
+  <TypeSignature Language="F#" Value="type SessionBasedCmdletAdapter&lt;'ObjectInstance, 'Session (requires 'ObjectInstance : null and 'Session : null)&gt; = class&#xA;    inherit CmdletAdapter&lt;'ObjectInstance (requires 'ObjectInstance : null)&gt;&#xA;    interface IDisposable" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.PowerShell.Commands.Management</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <TypeParameters>
+    <TypeParameter Name="TObjectInstance">
+      <Constraints>
+        <ParameterAttribute>ReferenceTypeConstraint</ParameterAttribute>
+      </Constraints>
+    </TypeParameter>
+    <TypeParameter Name="TSession">
+      <Constraints>
+        <ParameterAttribute>ReferenceTypeConstraint</ParameterAttribute>
+      </Constraints>
+    </TypeParameter>
+  </TypeParameters>
+  <Base>
+    <BaseTypeName>Microsoft.PowerShell.Cmdletization.CmdletAdapter&lt;TObjectInstance&gt;</BaseTypeName>
+    <BaseTypeArguments>
+      <BaseTypeArgument TypeParamName="!0">TObjectInstance</BaseTypeArgument>
+    </BaseTypeArguments>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <typeparam name="TObjectInstance">Type that represents instances of objects from the wrapped object model</typeparam>
+    <typeparam name="TSession">Type representing remote sessions</typeparam>
+    <summary>
+            Provides common code for processing session-based object models.  The common code
+            Session, ThrottleLimit, AsJob parameters and delegates creation of jobs to derived classes.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="AsJob">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.SwitchParameter AsJob { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Management.Automation.SwitchParameter AsJob" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Cmdletization.SessionBasedCmdletAdapter`2.AsJob" />
+      <MemberSignature Language="VB.NET" Value="Public Property AsJob As SwitchParameter" />
+      <MemberSignature Language="F#" Value="member this.AsJob : System.Management.Automation.SwitchParameter with get, set" Usage="Microsoft.PowerShell.Cmdletization.SessionBasedCmdletAdapter&lt;'ObjectInstance, 'Session (requires 'ObjectInstance : null and 'Session : null)&gt;.AsJob" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Commands.Management</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.SwitchParameter</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Whether to wrap and emit the whole operation as a background job
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginProcessing">
+      <MemberSignature Language="C#" Value="public override void BeginProcessing ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void BeginProcessing() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Cmdletization.SessionBasedCmdletAdapter`2.BeginProcessing" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Sub BeginProcessing ()" />
+      <MemberSignature Language="F#" Value="override this.BeginProcessing : unit -&gt; unit" Usage="sessionBasedCmdletAdapter.BeginProcessing " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Commands.Management</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Performs initialization of cmdlet execution.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultSession">
+      <MemberSignature Language="C#" Value="protected abstract TSession DefaultSession { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance !TSession DefaultSession" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Cmdletization.SessionBasedCmdletAdapter`2.DefaultSession" />
+      <MemberSignature Language="VB.NET" Value="Protected MustOverride ReadOnly Property DefaultSession As TSession" />
+      <MemberSignature Language="F#" Value="member this.DefaultSession : 'Session" Usage="Microsoft.PowerShell.Cmdletization.SessionBasedCmdletAdapter&lt;'ObjectInstance, 'Session (requires 'ObjectInstance : null and 'Session : null)&gt;.DefaultSession" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Commands.Management</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>TSession</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Returns default sessions to use when the user doesn't specify the -Session cmdlet parameter.
+            </summary>
+        <value>Default sessions to use when the user doesn't specify the -Session cmdlet parameter</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="public void Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Dispose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Cmdletization.SessionBasedCmdletAdapter`2.Dispose" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Dispose ()" />
+      <MemberSignature Language="F#" Value="abstract member Dispose : unit -&gt; unit&#xA;override this.Dispose : unit -&gt; unit" Usage="sessionBasedCmdletAdapter.Dispose " />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.IDisposable.Dispose</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Commands.Management</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Releases resources associated with this object
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="protected virtual void Dispose (bool disposing);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void Dispose(bool disposing) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Cmdletization.SessionBasedCmdletAdapter`2.Dispose(System.Boolean)" />
+      <MemberSignature Language="VB.NET" Value="Protected Overridable Sub Dispose (disposing As Boolean)" />
+      <MemberSignature Language="F#" Value="abstract member Dispose : bool -&gt; unit&#xA;override this.Dispose : bool -&gt; unit" Usage="sessionBasedCmdletAdapter.Dispose disposing" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Commands.Management</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="disposing" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="disposing">To be added.</param>
+        <summary>
+            Releases resources associated with this object
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EndProcessing">
+      <MemberSignature Language="C#" Value="public override void EndProcessing ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void EndProcessing() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Cmdletization.SessionBasedCmdletAdapter`2.EndProcessing" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Sub EndProcessing ()" />
+      <MemberSignature Language="F#" Value="override this.EndProcessing : unit -&gt; unit" Usage="sessionBasedCmdletAdapter.EndProcessing " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Commands.Management</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Performs cleanup after cmdlet execution.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GenerateParentJobName">
+      <MemberSignature Language="C#" Value="protected abstract string GenerateParentJobName ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance string GenerateParentJobName() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Cmdletization.SessionBasedCmdletAdapter`2.GenerateParentJobName" />
+      <MemberSignature Language="VB.NET" Value="Protected MustOverride Function GenerateParentJobName () As String" />
+      <MemberSignature Language="F#" Value="abstract member GenerateParentJobName : unit -&gt; string" Usage="sessionBasedCmdletAdapter.GenerateParentJobName " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Commands.Management</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            A new job name to use for the parent job that handles throttling of the child jobs that actually perform querying and method invocation.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ProcessRecord">
+      <MemberSignature Language="C#" Value="public override void ProcessRecord (Microsoft.PowerShell.Cmdletization.MethodInvocationInfo methodInvocationInfo);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void ProcessRecord(class Microsoft.PowerShell.Cmdletization.MethodInvocationInfo methodInvocationInfo) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Cmdletization.SessionBasedCmdletAdapter`2.ProcessRecord(Microsoft.PowerShell.Cmdletization.MethodInvocationInfo)" />
+      <MemberSignature Language="F#" Value="override this.ProcessRecord : Microsoft.PowerShell.Cmdletization.MethodInvocationInfo -&gt; unit" Usage="sessionBasedCmdletAdapter.ProcessRecord methodInvocationInfo" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Commands.Management</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="methodInvocationInfo" Type="Microsoft.PowerShell.Cmdletization.MethodInvocationInfo" />
+      </Parameters>
+      <Docs>
+        <param name="methodInvocationInfo">Method invocation details</param>
+        <summary>
+            Invokes a static method in the object model.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ProcessRecord">
+      <MemberSignature Language="C#" Value="public override void ProcessRecord (Microsoft.PowerShell.Cmdletization.QueryBuilder query);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void ProcessRecord(class Microsoft.PowerShell.Cmdletization.QueryBuilder query) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Cmdletization.SessionBasedCmdletAdapter`2.ProcessRecord(Microsoft.PowerShell.Cmdletization.QueryBuilder)" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Sub ProcessRecord (query As QueryBuilder)" />
+      <MemberSignature Language="F#" Value="override this.ProcessRecord : Microsoft.PowerShell.Cmdletization.QueryBuilder -&gt; unit" Usage="sessionBasedCmdletAdapter.ProcessRecord query" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Commands.Management</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="query" Type="Microsoft.PowerShell.Cmdletization.QueryBuilder" />
+      </Parameters>
+      <Docs>
+        <param name="query">Query parameters</param>
+        <summary>
+            Queries for object instances in the object model.
+            </summary>
+        <returns>A lazy evaluated collection of object instances</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ProcessRecord">
+      <MemberSignature Language="C#" Value="public override void ProcessRecord (Microsoft.PowerShell.Cmdletization.QueryBuilder query, Microsoft.PowerShell.Cmdletization.MethodInvocationInfo methodInvocationInfo, bool passThru);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void ProcessRecord(class Microsoft.PowerShell.Cmdletization.QueryBuilder query, class Microsoft.PowerShell.Cmdletization.MethodInvocationInfo methodInvocationInfo, bool passThru) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Cmdletization.SessionBasedCmdletAdapter`2.ProcessRecord(Microsoft.PowerShell.Cmdletization.QueryBuilder,Microsoft.PowerShell.Cmdletization.MethodInvocationInfo,System.Boolean)" />
+      <MemberSignature Language="F#" Value="override this.ProcessRecord : Microsoft.PowerShell.Cmdletization.QueryBuilder * Microsoft.PowerShell.Cmdletization.MethodInvocationInfo * bool -&gt; unit" Usage="sessionBasedCmdletAdapter.ProcessRecord (query, methodInvocationInfo, passThru)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Commands.Management</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="query" Type="Microsoft.PowerShell.Cmdletization.QueryBuilder" />
+        <Parameter Name="methodInvocationInfo" Type="Microsoft.PowerShell.Cmdletization.MethodInvocationInfo" />
+        <Parameter Name="passThru" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="query">Query parameters</param>
+        <param name="methodInvocationInfo">Method invocation details</param>
+        <param name="passThru">
+          <c>true</c> if successful method invocations should emit downstream the object instance being operated on</param>
+        <summary>
+            Queries for instance and invokes an instance method
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ProcessRecord">
+      <MemberSignature Language="C#" Value="public override void ProcessRecord (TObjectInstance objectInstance, Microsoft.PowerShell.Cmdletization.MethodInvocationInfo methodInvocationInfo, bool passThru);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void ProcessRecord(!TObjectInstance objectInstance, class Microsoft.PowerShell.Cmdletization.MethodInvocationInfo methodInvocationInfo, bool passThru) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Cmdletization.SessionBasedCmdletAdapter`2.ProcessRecord(`0,Microsoft.PowerShell.Cmdletization.MethodInvocationInfo,System.Boolean)" />
+      <MemberSignature Language="F#" Value="override this.ProcessRecord : 'ObjectInstance * Microsoft.PowerShell.Cmdletization.MethodInvocationInfo * bool -&gt; unit" Usage="sessionBasedCmdletAdapter.ProcessRecord (objectInstance, methodInvocationInfo, passThru)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Commands.Management</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="objectInstance" Type="TObjectInstance" />
+        <Parameter Name="methodInvocationInfo" Type="Microsoft.PowerShell.Cmdletization.MethodInvocationInfo" />
+        <Parameter Name="passThru" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="objectInstance">The object on which to invoke the method</param>
+        <param name="methodInvocationInfo">Method invocation details</param>
+        <param name="passThru">
+          <c>true</c> if successful method invocations should emit downstream the <paramref name="objectInstance" /> being operated on</param>
+        <summary>
+            Invokes an instance method in the object model.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Session">
+      <MemberSignature Language="C#" Value="protected TSession[] Session { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance !TSession[] Session" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Cmdletization.SessionBasedCmdletAdapter`2.Session" />
+      <MemberSignature Language="VB.NET" Value="Protected Property Session As TSession()" />
+      <MemberSignature Language="F#" Value="member this.Session : 'Session[] with get, set" Usage="Microsoft.PowerShell.Cmdletization.SessionBasedCmdletAdapter&lt;'ObjectInstance, 'Session (requires 'ObjectInstance : null and 'Session : null)&gt;.Session" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Commands.Management</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>TSession[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Session to operate on
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StopProcessing">
+      <MemberSignature Language="C#" Value="public override void StopProcessing ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void StopProcessing() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Cmdletization.SessionBasedCmdletAdapter`2.StopProcessing" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Sub StopProcessing ()" />
+      <MemberSignature Language="F#" Value="override this.StopProcessing : unit -&gt; unit" Usage="sessionBasedCmdletAdapter.StopProcessing " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Commands.Management</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Stops the parent job when called.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ThrottleLimit">
+      <MemberSignature Language="C#" Value="public virtual int ThrottleLimit { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 ThrottleLimit" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Cmdletization.SessionBasedCmdletAdapter`2.ThrottleLimit" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Property ThrottleLimit As Integer" />
+      <MemberSignature Language="F#" Value="member this.ThrottleLimit : int with get, set" Usage="Microsoft.PowerShell.Cmdletization.SessionBasedCmdletAdapter&lt;'ObjectInstance, 'Session (requires 'ObjectInstance : null and 'Session : null)&gt;.ThrottleLimit" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Commands.Management</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Maximum number of remote connections that can remain active at any given time.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

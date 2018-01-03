@@ -1,0 +1,51 @@
+﻿<Type Name="AutomationNull" FullName="System.Management.Automation.Internal.AutomationNull">
+  <TypeSignature Language="C#" Value="public static class AutomationNull" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract sealed beforefieldinit AutomationNull extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Management.Automation.Internal.AutomationNull" />
+  <TypeSignature Language="VB.NET" Value="Public Class AutomationNull" />
+  <TypeSignature Language="F#" Value="type AutomationNull = class" />
+  <AssemblyInfo>
+    <AssemblyName>System.Management.Automation</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            This is a singleton object that is used to indicate a void return result.
+            </summary>
+    <remarks>
+            It's a singleton class. Sealed to prevent subclassing. Any operation that
+            returns no actual value should return this object AutomationNull.Value.
+            Anything that evaluates an MSH expression should be prepared to deal
+            with receiving this result and discarding it. When received in an
+            evaluation where a value is required, it should be replaced with null.
+            </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Value">
+      <MemberSignature Language="C#" Value="public static System.Management.Automation.PSObject Value { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Management.Automation.PSObject Value" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.Internal.AutomationNull.Value" />
+      <MemberSignature Language="VB.NET" Value="Public Shared ReadOnly Property Value As PSObject" />
+      <MemberSignature Language="F#" Value="member this.Value : System.Management.Automation.PSObject" Usage="System.Management.Automation.Internal.AutomationNull.Value" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.PSObject</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Returns the singleton instance of this object.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

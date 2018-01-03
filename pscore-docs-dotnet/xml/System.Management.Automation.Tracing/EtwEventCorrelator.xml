@@ -1,0 +1,133 @@
+﻿<Type Name="EtwEventCorrelator" FullName="System.Management.Automation.Tracing.EtwEventCorrelator">
+  <TypeSignature Language="C#" Value="public class EtwEventCorrelator : System.Management.Automation.Tracing.IEtwEventCorrelator" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit EtwEventCorrelator extends System.Object implements class System.Management.Automation.Tracing.IEtwEventCorrelator" />
+  <TypeSignature Language="DocId" Value="T:System.Management.Automation.Tracing.EtwEventCorrelator" />
+  <TypeSignature Language="VB.NET" Value="Public Class EtwEventCorrelator&#xA;Implements IEtwEventCorrelator" />
+  <TypeSignature Language="F#" Value="type EtwEventCorrelator = class&#xA;    interface IEtwEventCorrelator" />
+  <AssemblyInfo>
+    <AssemblyName>System.Management.Automation</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Management.Automation.Tracing.IEtwEventCorrelator</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>
+                A simple implementation of <see cref="T:System.Management.Automation.Tracing.IEtwEventCorrelator" />.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public EtwEventCorrelator (System.Diagnostics.Eventing.EventProvider transferProvider, System.Diagnostics.Eventing.EventDescriptor transferEvent);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Diagnostics.Eventing.EventProvider transferProvider, valuetype System.Diagnostics.Eventing.EventDescriptor transferEvent) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Tracing.EtwEventCorrelator.#ctor(System.Diagnostics.Eventing.EventProvider,System.Diagnostics.Eventing.EventDescriptor)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (transferProvider As EventProvider, transferEvent As EventDescriptor)" />
+      <MemberSignature Language="F#" Value="new System.Management.Automation.Tracing.EtwEventCorrelator : System.Diagnostics.Eventing.EventProvider * System.Diagnostics.Eventing.EventDescriptor -&gt; System.Management.Automation.Tracing.EtwEventCorrelator" Usage="new System.Management.Automation.Tracing.EtwEventCorrelator (transferProvider, transferEvent)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="transferProvider" Type="System.Diagnostics.Eventing.EventProvider" />
+        <Parameter Name="transferEvent" Type="System.Diagnostics.Eventing.EventDescriptor" />
+      </Parameters>
+      <Docs>
+        <param name="transferProvider">The <see cref="T:System.Diagnostics.Eventing.EventProvider" /> to use when logging transfer events
+                during activity correlation.</param>
+        <param name="transferEvent">The <see cref="T:System.Diagnostics.Eventing.EventDescriptor" /> to use when logging transfer events
+                during activity correlation.</param>
+        <summary>
+                Creates an <see cref="T:System.Management.Automation.Tracing.EtwEventCorrelator" />.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CurrentActivityId">
+      <MemberSignature Language="C#" Value="public Guid CurrentActivityId { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Guid CurrentActivityId" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.Tracing.EtwEventCorrelator.CurrentActivityId" />
+      <MemberSignature Language="VB.NET" Value="Public Property CurrentActivityId As Guid" />
+      <MemberSignature Language="F#" Value="member this.CurrentActivityId : Guid with get, set" Usage="System.Management.Automation.Tracing.EtwEventCorrelator.CurrentActivityId" />
+      <MemberType>Property</MemberType>
+      <Implements>
+        <InterfaceMember>P:System.Management.Automation.Tracing.IEtwEventCorrelator.CurrentActivityId</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Guid</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+                Implements <see cref="P:System.Management.Automation.Tracing.IEtwEventCorrelator.CurrentActivityId" />.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StartActivity">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.Tracing.IEtwActivityReverter StartActivity ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Management.Automation.Tracing.IEtwActivityReverter StartActivity() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Tracing.EtwEventCorrelator.StartActivity" />
+      <MemberSignature Language="VB.NET" Value="Public Function StartActivity () As IEtwActivityReverter" />
+      <MemberSignature Language="F#" Value="abstract member StartActivity : unit -&gt; System.Management.Automation.Tracing.IEtwActivityReverter&#xA;override this.StartActivity : unit -&gt; System.Management.Automation.Tracing.IEtwActivityReverter" Usage="etwEventCorrelator.StartActivity " />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.Management.Automation.Tracing.IEtwEventCorrelator.StartActivity</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.Tracing.IEtwActivityReverter</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+                Implements <see cref="M:System.Management.Automation.Tracing.IEtwEventCorrelator.StartActivity" />.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StartActivity">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.Tracing.IEtwActivityReverter StartActivity (Guid relatedActivityId);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Management.Automation.Tracing.IEtwActivityReverter StartActivity(valuetype System.Guid relatedActivityId) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Tracing.EtwEventCorrelator.StartActivity(System.Guid)" />
+      <MemberSignature Language="VB.NET" Value="Public Function StartActivity (relatedActivityId As Guid) As IEtwActivityReverter" />
+      <MemberSignature Language="F#" Value="abstract member StartActivity : Guid -&gt; System.Management.Automation.Tracing.IEtwActivityReverter&#xA;override this.StartActivity : Guid -&gt; System.Management.Automation.Tracing.IEtwActivityReverter" Usage="etwEventCorrelator.StartActivity relatedActivityId" />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.Management.Automation.Tracing.IEtwEventCorrelator.StartActivity(System.Guid)</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.Tracing.IEtwActivityReverter</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="relatedActivityId" Type="System.Guid" />
+      </Parameters>
+      <Docs>
+        <param name="relatedActivityId">To be added.</param>
+        <summary>
+                Implements <see cref="M:System.Management.Automation.Tracing.IEtwEventCorrelator.StartActivity(System.Guid)" />.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

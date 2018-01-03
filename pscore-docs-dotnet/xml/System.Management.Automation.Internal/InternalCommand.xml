@@ -1,0 +1,70 @@
+﻿<Type Name="InternalCommand" FullName="System.Management.Automation.Internal.InternalCommand">
+  <TypeSignature Language="C#" Value="public abstract class InternalCommand" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit InternalCommand extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Management.Automation.Internal.InternalCommand" />
+  <TypeSignature Language="VB.NET" Value="Public MustInherit Class InternalCommand" />
+  <TypeSignature Language="F#" Value="type InternalCommand = class" />
+  <AssemblyInfo>
+    <AssemblyName>System.Management.Automation</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Diagnostics.DebuggerDisplay("Command = {commandInfo}")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>
+             Defines members used by Cmdlets.
+             All Cmdlets must derive from
+             <see cref="T:System.Management.Automation.Cmdlet" />.
+             </summary>
+    <remarks>
+             Only use <see cref="T:System.Management.Automation.Internal.InternalCommand" />
+             as a subclass of
+             <see cref="T:System.Management.Automation.Cmdlet" />.
+             Do not attempt to create instances of
+             <see cref="T:System.Management.Automation.Internal.InternalCommand" />
+             independently, or to derive other classes than
+             <see cref="T:System.Management.Automation.Cmdlet" /> from
+             <see cref="T:System.Management.Automation.Internal.InternalCommand" />.
+             </remarks>
+    <altmember cref="T:System.Management.Automation.Cmdlet" />
+    <!--
+             These are the Cmdlet members which are also used by other
+             non-public command types.
+            
+             Ideally this would be an internal class, but C# does not support
+             public classes deriving from internal classes.
+             -->
+  </Docs>
+  <Members>
+    <Member MemberName="CommandOrigin">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.CommandOrigin CommandOrigin { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Management.Automation.CommandOrigin CommandOrigin" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.Internal.InternalCommand.CommandOrigin" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property CommandOrigin As CommandOrigin" />
+      <MemberSignature Language="F#" Value="member this.CommandOrigin : System.Management.Automation.CommandOrigin" Usage="System.Management.Automation.Internal.InternalCommand.CommandOrigin" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.CommandOrigin</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            This property tells you if you were being invoked inside the runspace or
+            if it was an external request.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

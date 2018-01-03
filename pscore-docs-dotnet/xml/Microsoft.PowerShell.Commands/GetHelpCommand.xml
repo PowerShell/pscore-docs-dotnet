@@ -1,0 +1,429 @@
+﻿<Type Name="GetHelpCommand" FullName="Microsoft.PowerShell.Commands.GetHelpCommand">
+  <TypeSignature Language="C#" Value="public sealed class GetHelpCommand : System.Management.Automation.PSCmdlet" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit GetHelpCommand extends System.Management.Automation.PSCmdlet" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.PowerShell.Commands.GetHelpCommand" />
+  <TypeSignature Language="VB.NET" Value="Public NotInheritable Class GetHelpCommand&#xA;Inherits PSCmdlet" />
+  <TypeSignature Language="F#" Value="type GetHelpCommand = class&#xA;    inherit PSCmdlet" />
+  <AssemblyInfo>
+    <AssemblyName>System.Management.Automation</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Management.Automation.PSCmdlet</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Management.Automation.Cmdlet("Get", "Help", DefaultParameterSetName="AllUsersView", HelpUri="https://go.microsoft.com/fwlink/?LinkID=113316")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>
+            This class implements get-help command
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public GetHelpCommand ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Commands.GetHelpCommand.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New ()" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>
+            Default constructor for the GetHelpCommand class
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginProcessing">
+      <MemberSignature Language="C#" Value="protected override void BeginProcessing ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void BeginProcessing() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Commands.GetHelpCommand.BeginProcessing" />
+      <MemberSignature Language="VB.NET" Value="Protected Overrides Sub BeginProcessing ()" />
+      <MemberSignature Language="F#" Value="override this.BeginProcessing : unit -&gt; unit" Usage="getHelpCommand.BeginProcessing " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Implements the BeginProcessing() method for get-help command
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Category">
+      <MemberSignature Language="C#" Value="public string[] Category { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string[] Category" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.GetHelpCommand.Category" />
+      <MemberSignature Language="VB.NET" Value="Public Property Category As String()" />
+      <MemberSignature Language="F#" Value="member this.Category : string[] with get, set" Usage="Microsoft.PowerShell.Commands.GetHelpCommand.Category" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.ValidateSet(Mono.Cecil.CustomAttributeArgument[], IgnoreCase=true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            List of help categories to search for help
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Component">
+      <MemberSignature Language="C#" Value="public string[] Component { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string[] Component" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.GetHelpCommand.Component" />
+      <MemberSignature Language="VB.NET" Value="Public Property Component As String()" />
+      <MemberSignature Language="F#" Value="member this.Component : string[] with get, set" Usage="Microsoft.PowerShell.Commands.GetHelpCommand.Component" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            List of Component's to search on.
+            </summary>
+        <value />
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Detailed">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.SwitchParameter Detailed { set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Management.Automation.SwitchParameter Detailed" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.GetHelpCommand.Detailed" />
+      <MemberSignature Language="VB.NET" Value="Public Property Detailed As SwitchParameter" />
+      <MemberSignature Language="F#" Value="member this.Detailed : System.Management.Automation.SwitchParameter" Usage="Microsoft.PowerShell.Commands.GetHelpCommand.Detailed" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(Mandatory=true, ParameterSetName="DetailedView")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.SwitchParameter</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+             Changes the view of HelpObject returned
+             </summary>
+        <value>To be added.</value>
+        <remarks>
+             Currently we support following views:
+            
+             1. Reminder (Default - Experienced User)
+             2. Detailed (Beginner - Beginning User)
+             3. Full     (All Users)
+             4. Examples
+             5. Parameters
+            
+             Currently we support these views only for Cmdlets.
+             A SnapIn developer can however change these views.
+             </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Examples">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.SwitchParameter Examples { set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Management.Automation.SwitchParameter Examples" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.GetHelpCommand.Examples" />
+      <MemberSignature Language="VB.NET" Value="Public Property Examples As SwitchParameter" />
+      <MemberSignature Language="F#" Value="member this.Examples : System.Management.Automation.SwitchParameter" Usage="Microsoft.PowerShell.Commands.GetHelpCommand.Examples" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(Mandatory=true, ParameterSetName="Examples")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.SwitchParameter</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+             Changes the view of HelpObject returned
+             </summary>
+        <value>To be added.</value>
+        <remarks>
+             Currently we support following views:
+            
+             1. Reminder (Default - Experienced User)
+             2. Detailed (Beginner - Beginning User)
+             3. Full     (All Users)
+             4. Examples
+            
+             Currently we support these views only for Cmdlets.
+             A SnapIn developer can however change these views.
+             </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Full">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.SwitchParameter Full { set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Management.Automation.SwitchParameter Full" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.GetHelpCommand.Full" />
+      <MemberSignature Language="VB.NET" Value="Public Property Full As SwitchParameter" />
+      <MemberSignature Language="F#" Value="member this.Full : System.Management.Automation.SwitchParameter" Usage="Microsoft.PowerShell.Commands.GetHelpCommand.Full" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="AllUsersView")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.SwitchParameter</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+             Changes the view of HelpObject returned
+             </summary>
+        <value>To be added.</value>
+        <remarks>
+             Currently we support following views:
+            
+             1. Reminder (Default - Experienced User)
+             2. Detailed (Beginner - Beginning User)
+             3. Full     (All Users)
+             4. Examples
+             5. Parameters
+            
+             Currently we support these views only for Cmdlets.
+             A SnapIn developer can however change these views.
+             </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Functionality">
+      <MemberSignature Language="C#" Value="public string[] Functionality { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string[] Functionality" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.GetHelpCommand.Functionality" />
+      <MemberSignature Language="VB.NET" Value="Public Property Functionality As String()" />
+      <MemberSignature Language="F#" Value="member this.Functionality : string[] with get, set" Usage="Microsoft.PowerShell.Commands.GetHelpCommand.Functionality" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            List of Functionality's to search on.
+            </summary>
+        <value />
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public string Name { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.GetHelpCommand.Name" />
+      <MemberSignature Language="VB.NET" Value="Public Property Name As String" />
+      <MemberSignature Language="F#" Value="member this.Name : string with get, set" Usage="Microsoft.PowerShell.Commands.GetHelpCommand.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(Position=0, ValueFromPipelineByPropertyName=true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.ValidateNotNullOrEmpty</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Target to search for help
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Online">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.SwitchParameter Online { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Management.Automation.SwitchParameter Online" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.GetHelpCommand.Online" />
+      <MemberSignature Language="VB.NET" Value="Public Property Online As SwitchParameter" />
+      <MemberSignature Language="F#" Value="member this.Online : System.Management.Automation.SwitchParameter with get, set" Usage="Microsoft.PowerShell.Commands.GetHelpCommand.Online" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(Mandatory=true, ParameterSetName="Online")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.SwitchParameter</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            This parameter,if true, will direct get-help cmdlet to
+            navigate to a URL (stored in the command MAML file under
+            the uri node).
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Parameter">
+      <MemberSignature Language="C#" Value="public string Parameter { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Parameter" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.GetHelpCommand.Parameter" />
+      <MemberSignature Language="VB.NET" Value="Public Property Parameter As String" />
+      <MemberSignature Language="F#" Value="member this.Parameter : string with get, set" Usage="Microsoft.PowerShell.Commands.GetHelpCommand.Parameter" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(Mandatory=true, ParameterSetName="Parameters")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Parameter name.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+            Support WildCard strings as supported by WildcardPattern class.
+            </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Path">
+      <MemberSignature Language="C#" Value="public string Path { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Path" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.GetHelpCommand.Path" />
+      <MemberSignature Language="VB.NET" Value="Public Property Path As String" />
+      <MemberSignature Language="F#" Value="member this.Path : string with get, set" Usage="Microsoft.PowerShell.Commands.GetHelpCommand.Path" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Path to provider location that user is curious about.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ProcessRecord">
+      <MemberSignature Language="C#" Value="protected override void ProcessRecord ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void ProcessRecord() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Commands.GetHelpCommand.ProcessRecord" />
+      <MemberSignature Language="VB.NET" Value="Protected Overrides Sub ProcessRecord ()" />
+      <MemberSignature Language="F#" Value="override this.ProcessRecord : unit -&gt; unit" Usage="getHelpCommand.ProcessRecord " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Implements the ProcessRecord() method for get-help command
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Role">
+      <MemberSignature Language="C#" Value="public string[] Role { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string[] Role" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.GetHelpCommand.Role" />
+      <MemberSignature Language="VB.NET" Value="Public Property Role As String()" />
+      <MemberSignature Language="F#" Value="member this.Role : string[] with get, set" Usage="Microsoft.PowerShell.Commands.GetHelpCommand.Role" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            List of Role's to search on.
+            </summary>
+        <value />
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

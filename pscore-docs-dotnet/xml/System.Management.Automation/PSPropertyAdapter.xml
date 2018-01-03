@@ -1,0 +1,252 @@
+﻿<Type Name="PSPropertyAdapter" FullName="System.Management.Automation.PSPropertyAdapter">
+  <TypeSignature Language="C#" Value="public abstract class PSPropertyAdapter" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit PSPropertyAdapter extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Management.Automation.PSPropertyAdapter" />
+  <TypeSignature Language="VB.NET" Value="Public MustInherit Class PSPropertyAdapter" />
+  <TypeSignature Language="F#" Value="type PSPropertyAdapter = class" />
+  <AssemblyInfo>
+    <AssemblyName>System.Management.Automation</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            User-defined property adapter
+            </summary>
+    <remarks>
+            This class is used to expose a simplified version of the type adapter API
+            </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected PSPropertyAdapter ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.PSPropertyAdapter.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Protected Sub New ()" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetProperties">
+      <MemberSignature Language="C#" Value="public abstract System.Collections.ObjectModel.Collection&lt;System.Management.Automation.PSAdaptedProperty&gt; GetProperties (object baseObject);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Collections.ObjectModel.Collection`1&lt;class System.Management.Automation.PSAdaptedProperty&gt; GetProperties(object baseObject) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.PSPropertyAdapter.GetProperties(System.Object)" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Function GetProperties (baseObject As Object) As Collection(Of PSAdaptedProperty)" />
+      <MemberSignature Language="F#" Value="abstract member GetProperties : obj -&gt; System.Collections.ObjectModel.Collection&lt;System.Management.Automation.PSAdaptedProperty&gt;" Usage="pSPropertyAdapter.GetProperties baseObject" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.Collection&lt;System.Management.Automation.PSAdaptedProperty&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="baseObject" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="baseObject">To be added.</param>
+        <summary>
+            Returns a list of the adapted properties
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetProperty">
+      <MemberSignature Language="C#" Value="public abstract System.Management.Automation.PSAdaptedProperty GetProperty (object baseObject, string propertyName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Management.Automation.PSAdaptedProperty GetProperty(object baseObject, string propertyName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.PSPropertyAdapter.GetProperty(System.Object,System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Function GetProperty (baseObject As Object, propertyName As String) As PSAdaptedProperty" />
+      <MemberSignature Language="F#" Value="abstract member GetProperty : obj * string -&gt; System.Management.Automation.PSAdaptedProperty" Usage="pSPropertyAdapter.GetProperty (baseObject, propertyName)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.PSAdaptedProperty</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="baseObject" Type="System.Object" />
+        <Parameter Name="propertyName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="baseObject">To be added.</param>
+        <param name="propertyName">To be added.</param>
+        <summary>
+            Returns a specific property, or null if the base object does not contain the given property
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetPropertyTypeName">
+      <MemberSignature Language="C#" Value="public abstract string GetPropertyTypeName (System.Management.Automation.PSAdaptedProperty adaptedProperty);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance string GetPropertyTypeName(class System.Management.Automation.PSAdaptedProperty adaptedProperty) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.PSPropertyAdapter.GetPropertyTypeName(System.Management.Automation.PSAdaptedProperty)" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Function GetPropertyTypeName (adaptedProperty As PSAdaptedProperty) As String" />
+      <MemberSignature Language="F#" Value="abstract member GetPropertyTypeName : System.Management.Automation.PSAdaptedProperty -&gt; string" Usage="pSPropertyAdapter.GetPropertyTypeName adaptedProperty" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="adaptedProperty" Type="System.Management.Automation.PSAdaptedProperty" />
+      </Parameters>
+      <Docs>
+        <param name="adaptedProperty">To be added.</param>
+        <summary>
+            Returns the type for a given property
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetPropertyValue">
+      <MemberSignature Language="C#" Value="public abstract object GetPropertyValue (System.Management.Automation.PSAdaptedProperty adaptedProperty);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object GetPropertyValue(class System.Management.Automation.PSAdaptedProperty adaptedProperty) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.PSPropertyAdapter.GetPropertyValue(System.Management.Automation.PSAdaptedProperty)" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Function GetPropertyValue (adaptedProperty As PSAdaptedProperty) As Object" />
+      <MemberSignature Language="F#" Value="abstract member GetPropertyValue : System.Management.Automation.PSAdaptedProperty -&gt; obj" Usage="pSPropertyAdapter.GetPropertyValue adaptedProperty" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="adaptedProperty" Type="System.Management.Automation.PSAdaptedProperty" />
+      </Parameters>
+      <Docs>
+        <param name="adaptedProperty">To be added.</param>
+        <summary>
+            Returns the value of a given property
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetTypeNameHierarchy">
+      <MemberSignature Language="C#" Value="public virtual System.Collections.ObjectModel.Collection&lt;string&gt; GetTypeNameHierarchy (object baseObject);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Collections.ObjectModel.Collection`1&lt;string&gt; GetTypeNameHierarchy(object baseObject) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.PSPropertyAdapter.GetTypeNameHierarchy(System.Object)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function GetTypeNameHierarchy (baseObject As Object) As Collection(Of String)" />
+      <MemberSignature Language="F#" Value="abstract member GetTypeNameHierarchy : obj -&gt; System.Collections.ObjectModel.Collection&lt;string&gt;&#xA;override this.GetTypeNameHierarchy : obj -&gt; System.Collections.ObjectModel.Collection&lt;string&gt;" Usage="pSPropertyAdapter.GetTypeNameHierarchy baseObject" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.Collection&lt;System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="baseObject" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="baseObject">To be added.</param>
+        <summary>
+            Returns the type hierarchy for the given object
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsGettable">
+      <MemberSignature Language="C#" Value="public abstract bool IsGettable (System.Management.Automation.PSAdaptedProperty adaptedProperty);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool IsGettable(class System.Management.Automation.PSAdaptedProperty adaptedProperty) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.PSPropertyAdapter.IsGettable(System.Management.Automation.PSAdaptedProperty)" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Function IsGettable (adaptedProperty As PSAdaptedProperty) As Boolean" />
+      <MemberSignature Language="F#" Value="abstract member IsGettable : System.Management.Automation.PSAdaptedProperty -&gt; bool" Usage="pSPropertyAdapter.IsGettable adaptedProperty" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="adaptedProperty" Type="System.Management.Automation.PSAdaptedProperty" />
+      </Parameters>
+      <Docs>
+        <param name="adaptedProperty">To be added.</param>
+        <summary>
+            Returns true if the given property is gettable
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsSettable">
+      <MemberSignature Language="C#" Value="public abstract bool IsSettable (System.Management.Automation.PSAdaptedProperty adaptedProperty);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool IsSettable(class System.Management.Automation.PSAdaptedProperty adaptedProperty) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.PSPropertyAdapter.IsSettable(System.Management.Automation.PSAdaptedProperty)" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Function IsSettable (adaptedProperty As PSAdaptedProperty) As Boolean" />
+      <MemberSignature Language="F#" Value="abstract member IsSettable : System.Management.Automation.PSAdaptedProperty -&gt; bool" Usage="pSPropertyAdapter.IsSettable adaptedProperty" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="adaptedProperty" Type="System.Management.Automation.PSAdaptedProperty" />
+      </Parameters>
+      <Docs>
+        <param name="adaptedProperty">To be added.</param>
+        <summary>
+            Returns true if the given property is settable
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetPropertyValue">
+      <MemberSignature Language="C#" Value="public abstract void SetPropertyValue (System.Management.Automation.PSAdaptedProperty adaptedProperty, object value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void SetPropertyValue(class System.Management.Automation.PSAdaptedProperty adaptedProperty, object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.PSPropertyAdapter.SetPropertyValue(System.Management.Automation.PSAdaptedProperty,System.Object)" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Sub SetPropertyValue (adaptedProperty As PSAdaptedProperty, value As Object)" />
+      <MemberSignature Language="F#" Value="abstract member SetPropertyValue : System.Management.Automation.PSAdaptedProperty * obj -&gt; unit" Usage="pSPropertyAdapter.SetPropertyValue (adaptedProperty, value)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="adaptedProperty" Type="System.Management.Automation.PSAdaptedProperty" />
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="adaptedProperty">To be added.</param>
+        <param name="value">To be added.</param>
+        <summary>
+            Sets the value of a given property
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

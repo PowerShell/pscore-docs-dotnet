@@ -1,0 +1,342 @@
+﻿<Type Name="ContentCmdletProviderIntrinsics" FullName="System.Management.Automation.ContentCmdletProviderIntrinsics">
+  <TypeSignature Language="C#" Value="public sealed class ContentCmdletProviderIntrinsics" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit ContentCmdletProviderIntrinsics extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Management.Automation.ContentCmdletProviderIntrinsics" />
+  <TypeSignature Language="VB.NET" Value="Public NotInheritable Class ContentCmdletProviderIntrinsics" />
+  <TypeSignature Language="F#" Value="type ContentCmdletProviderIntrinsics = class" />
+  <AssemblyInfo>
+    <AssemblyName>System.Management.Automation</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Exposes the Content nouns to the Cmdlet Providers to the Cmdlet base class. The methods of this class
+            use the providers to perform operations.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Clear">
+      <MemberSignature Language="C#" Value="public void Clear (string path);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Clear(string path) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.ContentCmdletProviderIntrinsics.Clear(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Clear (path As String)" />
+      <MemberSignature Language="F#" Value="member this.Clear : string -&gt; unit" Usage="contentCmdletProviderIntrinsics.Clear path" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="path">
+             The path to the item(s) to clear the content from.
+             </param>
+        <summary>
+             Clears the content from the item(s) specified by the path
+             </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+             If <paramref name="path" /> is null.
+             </exception>
+        <exception cref="T:System.Management.Automation.ProviderNotFoundException">
+             If the <paramref name="path" /> refers to a provider that could not be found.
+             </exception>
+        <exception cref="T:System.Management.Automation.DriveNotFoundException">
+             If the <paramref name="path" /> refers to a drive that could not be found.
+             </exception>
+        <exception cref="T:System.Management.Automation.ItemNotFoundException">
+             If <paramref name="path" /> does not contain glob characters and
+             could not be found.
+             </exception>
+        <exception cref="T:System.NotSupportedException">
+             If the provider that the <paramref name="path" /> refers to does
+             not support this operation.
+             </exception>
+        <exception cref="T:System.Management.Automation.ProviderInvocationException">
+             If the provider threw an exception.
+             </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Clear">
+      <MemberSignature Language="C#" Value="public void Clear (string[] path, bool force, bool literalPath);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Clear(string[] path, bool force, bool literalPath) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.ContentCmdletProviderIntrinsics.Clear(System.String[],System.Boolean,System.Boolean)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Clear (path As String(), force As Boolean, literalPath As Boolean)" />
+      <MemberSignature Language="F#" Value="member this.Clear : string[] * bool * bool -&gt; unit" Usage="contentCmdletProviderIntrinsics.Clear (path, force, literalPath)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="path" Type="System.String[]" />
+        <Parameter Name="force" Type="System.Boolean" />
+        <Parameter Name="literalPath" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="path">
+             The path(s) to the item(s) to clear the content from.
+             </param>
+        <param name="force">
+             Passed on to providers to force operations.
+             </param>
+        <param name="literalPath">
+             If true, globbing is not done on paths.
+             </param>
+        <summary>
+             Clears the content from the item(s) specified by the path
+             </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+             If <paramref name="path" /> is null.
+             </exception>
+        <exception cref="T:System.Management.Automation.ProviderNotFoundException">
+             If the <paramref name="path" /> refers to a provider that could not be found.
+             </exception>
+        <exception cref="T:System.Management.Automation.DriveNotFoundException">
+             If the <paramref name="path" /> refers to a drive that could not be found.
+             </exception>
+        <exception cref="T:System.Management.Automation.ItemNotFoundException">
+             If <paramref name="path" /> does not contain glob characters and
+             could not be found.
+             </exception>
+        <exception cref="T:System.NotSupportedException">
+             If the provider that the <paramref name="path" /> refers to does
+             not support this operation.
+             </exception>
+        <exception cref="T:System.Management.Automation.ProviderInvocationException">
+             If the provider threw an exception.
+             </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetReader">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.Collection&lt;System.Management.Automation.Provider.IContentReader&gt; GetReader (string path);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Collections.ObjectModel.Collection`1&lt;class System.Management.Automation.Provider.IContentReader&gt; GetReader(string path) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.ContentCmdletProviderIntrinsics.GetReader(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetReader (path As String) As Collection(Of IContentReader)" />
+      <MemberSignature Language="F#" Value="member this.GetReader : string -&gt; System.Collections.ObjectModel.Collection&lt;System.Management.Automation.Provider.IContentReader&gt;" Usage="contentCmdletProviderIntrinsics.GetReader path" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.Collection&lt;System.Management.Automation.Provider.IContentReader&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="path">
+             The path to the item to get the content reader for.
+             </param>
+        <summary>
+             Gets the content reader for the item at the specified path
+             </summary>
+        <returns>
+             The IContentReader for the item(s) at the specified path.
+             </returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+             If <paramref name="path" /> is null.
+             </exception>
+        <exception cref="T:System.Management.Automation.ProviderNotFoundException">
+             If the <paramref name="path" /> refers to a provider that could not be found.
+             </exception>
+        <exception cref="T:System.Management.Automation.DriveNotFoundException">
+             If the <paramref name="path" /> refers to a drive that could not be found.
+             </exception>
+        <exception cref="T:System.Management.Automation.ItemNotFoundException">
+             If <paramref name="path" /> does not contain glob characters and
+             could not be found.
+             </exception>
+        <exception cref="T:System.NotSupportedException">
+             If the provider that the <paramref name="path" /> refers to does
+             not support this operation.
+             </exception>
+        <exception cref="T:System.Management.Automation.ProviderInvocationException">
+             If the provider threw an exception.
+             </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetReader">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.Collection&lt;System.Management.Automation.Provider.IContentReader&gt; GetReader (string[] path, bool force, bool literalPath);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Collections.ObjectModel.Collection`1&lt;class System.Management.Automation.Provider.IContentReader&gt; GetReader(string[] path, bool force, bool literalPath) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.ContentCmdletProviderIntrinsics.GetReader(System.String[],System.Boolean,System.Boolean)" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetReader (path As String(), force As Boolean, literalPath As Boolean) As Collection(Of IContentReader)" />
+      <MemberSignature Language="F#" Value="member this.GetReader : string[] * bool * bool -&gt; System.Collections.ObjectModel.Collection&lt;System.Management.Automation.Provider.IContentReader&gt;" Usage="contentCmdletProviderIntrinsics.GetReader (path, force, literalPath)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.Collection&lt;System.Management.Automation.Provider.IContentReader&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="path" Type="System.String[]" />
+        <Parameter Name="force" Type="System.Boolean" />
+        <Parameter Name="literalPath" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="path">
+             The path(s) to the item(s) to get the content reader for.
+             </param>
+        <param name="force">
+             Passed on to providers to force operations.
+             </param>
+        <param name="literalPath">
+             If true, globbing is not done on paths.
+             </param>
+        <summary>
+             Gets the content reader for the item at the specified path
+             </summary>
+        <returns>
+             The IContentReader for the item(s) at the specified path.
+             </returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+             If <paramref name="path" /> is null.
+             </exception>
+        <exception cref="T:System.Management.Automation.ProviderNotFoundException">
+             If the <paramref name="path" /> refers to a provider that could not be found.
+             </exception>
+        <exception cref="T:System.Management.Automation.DriveNotFoundException">
+             If the <paramref name="path" /> refers to a drive that could not be found.
+             </exception>
+        <exception cref="T:System.Management.Automation.ItemNotFoundException">
+             If <paramref name="path" /> does not contain glob characters and
+             could not be found.
+             </exception>
+        <exception cref="T:System.NotSupportedException">
+             If the provider that the <paramref name="path" /> refers to does
+             not support this operation.
+             </exception>
+        <exception cref="T:System.Management.Automation.ProviderInvocationException">
+             If the provider threw an exception.
+             </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetWriter">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.Collection&lt;System.Management.Automation.Provider.IContentWriter&gt; GetWriter (string path);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Collections.ObjectModel.Collection`1&lt;class System.Management.Automation.Provider.IContentWriter&gt; GetWriter(string path) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.ContentCmdletProviderIntrinsics.GetWriter(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetWriter (path As String) As Collection(Of IContentWriter)" />
+      <MemberSignature Language="F#" Value="member this.GetWriter : string -&gt; System.Collections.ObjectModel.Collection&lt;System.Management.Automation.Provider.IContentWriter&gt;" Usage="contentCmdletProviderIntrinsics.GetWriter path" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.Collection&lt;System.Management.Automation.Provider.IContentWriter&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="path">
+             The path to the item(s) to get the content writer for.
+             </param>
+        <summary>
+             Gets the content writer for the item(s) at the specified path.
+             </summary>
+        <returns>
+             The IContentWriter for the item(s) at the specified path.
+             </returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+             If <paramref name="path" /> is null.
+             </exception>
+        <exception cref="T:System.Management.Automation.ProviderNotFoundException">
+             If the <paramref name="path" /> refers to a provider that could not be found.
+             </exception>
+        <exception cref="T:System.Management.Automation.DriveNotFoundException">
+             If the <paramref name="path" /> refers to a drive that could not be found.
+             </exception>
+        <exception cref="T:System.Management.Automation.ItemNotFoundException">
+             If <paramref name="path" /> does not contain glob characters and
+             could not be found.
+             </exception>
+        <exception cref="T:System.NotSupportedException">
+             If the provider that the <paramref name="path" /> refers to does
+             not support this operation.
+             </exception>
+        <exception cref="T:System.Management.Automation.ProviderInvocationException">
+             If the provider threw an exception.
+             </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetWriter">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.Collection&lt;System.Management.Automation.Provider.IContentWriter&gt; GetWriter (string[] path, bool force, bool literalPath);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Collections.ObjectModel.Collection`1&lt;class System.Management.Automation.Provider.IContentWriter&gt; GetWriter(string[] path, bool force, bool literalPath) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.ContentCmdletProviderIntrinsics.GetWriter(System.String[],System.Boolean,System.Boolean)" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetWriter (path As String(), force As Boolean, literalPath As Boolean) As Collection(Of IContentWriter)" />
+      <MemberSignature Language="F#" Value="member this.GetWriter : string[] * bool * bool -&gt; System.Collections.ObjectModel.Collection&lt;System.Management.Automation.Provider.IContentWriter&gt;" Usage="contentCmdletProviderIntrinsics.GetWriter (path, force, literalPath)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.Collection&lt;System.Management.Automation.Provider.IContentWriter&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="path" Type="System.String[]" />
+        <Parameter Name="force" Type="System.Boolean" />
+        <Parameter Name="literalPath" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="path">
+             The path(s) to the item(s) to get the content writer for.
+             </param>
+        <param name="force">
+             Passed on to providers to force operations.
+             </param>
+        <param name="literalPath">
+             If true, globbing is not done on paths.
+             </param>
+        <summary>
+             Gets the content writer for the item(s) at the specified path.
+             </summary>
+        <returns>
+             The IContentWriter for the item(s) at the specified path.
+             </returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+             If <paramref name="path" /> is null.
+             </exception>
+        <exception cref="T:System.Management.Automation.ProviderNotFoundException">
+             If the <paramref name="path" /> refers to a provider that could not be found.
+             </exception>
+        <exception cref="T:System.Management.Automation.DriveNotFoundException">
+             If the <paramref name="path" /> refers to a drive that could not be found.
+             </exception>
+        <exception cref="T:System.Management.Automation.ItemNotFoundException">
+             If <paramref name="path" /> does not contain glob characters and
+             could not be found.
+             </exception>
+        <exception cref="T:System.NotSupportedException">
+             If the provider that the <paramref name="path" /> refers to does
+             not support this operation.
+             </exception>
+        <exception cref="T:System.Management.Automation.ProviderInvocationException">
+             If the provider threw an exception.
+             </exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

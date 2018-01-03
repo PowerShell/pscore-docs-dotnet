@@ -1,0 +1,503 @@
+﻿<Type Name="PSCommand" FullName="System.Management.Automation.PSCommand">
+  <TypeSignature Language="C#" Value="public sealed class PSCommand" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit PSCommand extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Management.Automation.PSCommand" />
+  <TypeSignature Language="VB.NET" Value="Public NotInheritable Class PSCommand" />
+  <TypeSignature Language="F#" Value="type PSCommand = class" />
+  <AssemblyInfo>
+    <AssemblyName>System.Management.Automation</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Defines a PowerShell command / script object which can be used with
+            <see cref="T:System.Management.Automation.PowerShell" /> object.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public PSCommand ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.PSCommand.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New ()" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>
+            Creates an empty PSCommand; a command or script must be added to this PSCommand before it can be executed.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddArgument">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.PSCommand AddArgument (object value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Management.Automation.PSCommand AddArgument(object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.PSCommand.AddArgument(System.Object)" />
+      <MemberSignature Language="VB.NET" Value="Public Function AddArgument (value As Object) As PSCommand" />
+      <MemberSignature Language="F#" Value="member this.AddArgument : obj -&gt; System.Management.Automation.PSCommand" Usage="pSCommand.AddArgument value" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.PSCommand</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="value">
+             Value for the parameter.
+             </param>
+        <summary>
+             Adds an argument to the last added command.
+             For example, to construct a command string "get-process | select-object name"
+                 <code>
+                     PSCommand command = new PSCommand("get-process").
+                                                 AddCommand("select-object").AddParameter("name");
+                 </code>
+            
+             This will add the value "name" to the positional parameter list of "select-object"
+             cmdlet. When the command is invoked, this value will get bound to positional parameter 0
+             of the "select-object" cmdlet which is "Property".
+             </summary>
+        <returns>
+             A PSCommand instance parameter value <paramref name="value" /> added
+             to the parameter list of the last command.
+             </returns>
+        <remarks>
+             This method is not thread safe.
+             </remarks>
+        <exception cref="T:System.Management.Automation.InvalidPowerShellStateException">
+             Powershell instance cannot be changed in its
+             current state.
+             </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AddCommand">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.PSCommand AddCommand (System.Management.Automation.Runspaces.Command command);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Management.Automation.PSCommand AddCommand(class System.Management.Automation.Runspaces.Command command) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.PSCommand.AddCommand(System.Management.Automation.Runspaces.Command)" />
+      <MemberSignature Language="F#" Value="member this.AddCommand : System.Management.Automation.Runspaces.Command -&gt; System.Management.Automation.PSCommand" Usage="pSCommand.AddCommand command" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.PSCommand</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="command" Type="System.Management.Automation.Runspaces.Command" />
+      </Parameters>
+      <Docs>
+        <param name="command">
+            Command to add.
+            </param>
+        <summary>
+            Add a <see cref="T:System.Management.Automation.Runspaces.Command" /> element to the current command
+            pipeline.
+            </summary>
+        <returns>
+            A PSCommand instance with <paramref name="command" /> added.
+            </returns>
+        <remarks>
+            This method is not thread-safe.
+            </remarks>
+        <exception cref="T:System.ArgumentNullException">
+            command is null.
+            </exception>
+        <exception cref="T:System.Management.Automation.InvalidPowerShellStateException">
+            Powershell instance cannot be changed in its
+            current state.
+            </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AddCommand">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.PSCommand AddCommand (string command);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Management.Automation.PSCommand AddCommand(string command) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.PSCommand.AddCommand(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Function AddCommand (command As String) As PSCommand" />
+      <MemberSignature Language="F#" Value="member this.AddCommand : string -&gt; System.Management.Automation.PSCommand" Usage="pSCommand.AddCommand command" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.PSCommand</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="command" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="command">
+            A string representing the command.
+            </param>
+        <summary>
+            Add a command to construct a command pipeline.
+            For example, to construct a command string "get-process | sort-object",
+                <code>
+                    PSCommand command = new PSCommand("get-process").AddCommand("sort-object");
+                </code></summary>
+        <returns>
+            A PSCommand instance with <paramref name="cmdlet" /> added.
+            </returns>
+        <remarks>
+            This method is not thread safe.
+            </remarks>
+        <exception cref="T:System.Management.Automation.InvalidPowerShellStateException">
+            Powershell instance cannot be changed in its
+            current state.
+            </exception>
+        <exception cref="T:System.ArgumentNullException">
+            cmdlet is null.
+            </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AddCommand">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.PSCommand AddCommand (string cmdlet, bool useLocalScope);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Management.Automation.PSCommand AddCommand(string cmdlet, bool useLocalScope) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.PSCommand.AddCommand(System.String,System.Boolean)" />
+      <MemberSignature Language="VB.NET" Value="Public Function AddCommand (cmdlet As String, useLocalScope As Boolean) As PSCommand" />
+      <MemberSignature Language="F#" Value="member this.AddCommand : string * bool -&gt; System.Management.Automation.PSCommand" Usage="pSCommand.AddCommand (cmdlet, useLocalScope)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.PSCommand</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="cmdlet" Type="System.String" />
+        <Parameter Name="useLocalScope" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="cmdlet">
+            A string representing cmdlet.
+            </param>
+        <param name="useLocalScope">
+            if true local scope is used to run the script command.
+            </param>
+        <summary>
+            Add a cmdlet to construct a command pipeline.
+            For example, to construct a command string "get-process | sort-object",
+                <code>
+                    PSCommand command = new PSCommand("get-process").AddCommand("sort-object");
+                </code></summary>
+        <returns>
+            A PSCommand instance with <paramref name="cmdlet" /> added.
+            </returns>
+        <remarks>
+            This method is not thread safe.
+            </remarks>
+        <exception cref="T:System.Management.Automation.InvalidPowerShellStateException">
+            Powershell instance cannot be changed in its
+            current state.
+            </exception>
+        <exception cref="T:System.ArgumentNullException">
+            cmdlet is null.
+            </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AddParameter">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.PSCommand AddParameter (string parameterName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Management.Automation.PSCommand AddParameter(string parameterName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.PSCommand.AddParameter(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Function AddParameter (parameterName As String) As PSCommand" />
+      <MemberSignature Language="F#" Value="member this.AddParameter : string -&gt; System.Management.Automation.PSCommand" Usage="pSCommand.AddParameter parameterName" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.PSCommand</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="parameterName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="parameterName">
+            Name of the parameter.
+            </param>
+        <summary>
+            Adds a switch parameter to the last added command.
+            For example, to construct a command string "get-process | sort-object -descending"
+                <code>
+                    PSCommand command = new PSCommand("get-process").
+                                                AddCommand("sort-object").AddParameter("descending");
+                </code></summary>
+        <returns>
+            A PSCommand instance with <paramref name="parameterName" /> added
+            to the parameter list of the last command.
+            </returns>
+        <remarks>
+            This method is not thread safe.
+            </remarks>
+        <exception cref="T:System.ArgumentException">
+            Name is non null and name length is zero after trimming whitespace.
+            </exception>
+        <exception cref="T:System.Management.Automation.InvalidPowerShellStateException">
+            Powershell instance cannot be changed in its
+            current state.
+            </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AddParameter">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.PSCommand AddParameter (string parameterName, object value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Management.Automation.PSCommand AddParameter(string parameterName, object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.PSCommand.AddParameter(System.String,System.Object)" />
+      <MemberSignature Language="VB.NET" Value="Public Function AddParameter (parameterName As String, value As Object) As PSCommand" />
+      <MemberSignature Language="F#" Value="member this.AddParameter : string * obj -&gt; System.Management.Automation.PSCommand" Usage="pSCommand.AddParameter (parameterName, value)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.PSCommand</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="parameterName" Type="System.String" />
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="parameterName">
+            Name of the parameter.
+            </param>
+        <param name="value">
+            Value for the parameter.
+            </param>
+        <summary>
+            Add a parameter to the last added command.
+            For example, to construct a command string "get-process | select-object -property name"
+                <code>
+                    PSCommand command = new PSCommand("get-process").
+                                                AddCommand("select-object").AddParameter("property","name");
+                </code></summary>
+        <returns>
+            A PSCommand instance with <paramref name="parameterName" /> added
+            to the parameter list of the last command.
+            </returns>
+        <remarks>
+            This method is not thread safe.
+            </remarks>
+        <exception cref="T:System.ArgumentException">
+            Name is non null and name length is zero after trimming whitespace.
+            </exception>
+        <exception cref="T:System.Management.Automation.InvalidPowerShellStateException">
+            Powershell instance cannot be changed in its
+            current state.
+            </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AddScript">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.PSCommand AddScript (string script);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Management.Automation.PSCommand AddScript(string script) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.PSCommand.AddScript(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Function AddScript (script As String) As PSCommand" />
+      <MemberSignature Language="F#" Value="member this.AddScript : string -&gt; System.Management.Automation.PSCommand" Usage="pSCommand.AddScript script" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.PSCommand</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="script" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="script">
+            A string representing the script.
+            </param>
+        <summary>
+            Add a piece of script to construct a command pipeline.
+            For example, to construct a command string "get-process | foreach { $_.Name }"
+                <code>
+                    PSCommand command = new PSCommand("get-process").
+                                                AddCommand("foreach { $_.Name }", true);
+                </code></summary>
+        <returns>
+            A PSCommand instance with <paramref name="command" /> added.
+            </returns>
+        <remarks>
+            This method is not thread-safe.
+            </remarks>
+        <exception cref="T:System.ArgumentNullException">
+            command is null.
+            </exception>
+        <exception cref="T:System.Management.Automation.InvalidPowerShellStateException">
+            Powershell instance cannot be changed in its
+            current state.
+            </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AddScript">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.PSCommand AddScript (string script, bool useLocalScope);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Management.Automation.PSCommand AddScript(string script, bool useLocalScope) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.PSCommand.AddScript(System.String,System.Boolean)" />
+      <MemberSignature Language="VB.NET" Value="Public Function AddScript (script As String, useLocalScope As Boolean) As PSCommand" />
+      <MemberSignature Language="F#" Value="member this.AddScript : string * bool -&gt; System.Management.Automation.PSCommand" Usage="pSCommand.AddScript (script, useLocalScope)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.PSCommand</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="script" Type="System.String" />
+        <Parameter Name="useLocalScope" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="script">
+            A string representing the script.
+            </param>
+        <param name="useLocalScope">
+            if true local scope is used to run the script command.
+            </param>
+        <summary>
+            Add a piece of script to construct a command pipeline.
+            For example, to construct a command string "get-process | foreach { $_.Name }"
+                <code>
+                    PSCommand command = new PSCommand("get-process").
+                                                AddCommand("foreach { $_.Name }", true);
+                </code></summary>
+        <returns>
+            A PSCommand instance with <paramref name="command" /> added.
+            </returns>
+        <remarks>
+            This method is not thread-safe.
+            </remarks>
+        <exception cref="T:System.ArgumentNullException">
+            command is null.
+            </exception>
+        <exception cref="T:System.Management.Automation.InvalidPowerShellStateException">
+            Powershell instance cannot be changed in its
+            current state.
+            </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AddStatement">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.PSCommand AddStatement ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Management.Automation.PSCommand AddStatement() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.PSCommand.AddStatement" />
+      <MemberSignature Language="VB.NET" Value="Public Function AddStatement () As PSCommand" />
+      <MemberSignature Language="F#" Value="member this.AddStatement : unit -&gt; System.Management.Automation.PSCommand" Usage="pSCommand.AddStatement " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.PSCommand</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+             Adds an additional statement for execution
+            
+             For example,
+                 <code>
+                     Runspace rs = RunspaceFactory.CreateRunspace();
+                     PowerShell ps = PowerShell.Create();
+            
+                     ps.Runspace = rs;
+                     ps.AddCommand("Get-Process").AddArgument("idle");
+                     ps.AddStatement().AddCommand("Get-Service").AddArgument("audiosrv");
+                     ps.Invoke();
+                 </code></summary>
+        <returns>
+             A PowerShell instance with the items in <paramref name="parameters" /> added
+             to the parameter list of the last command.
+             </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Clear">
+      <MemberSignature Language="C#" Value="public void Clear ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Clear() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.PSCommand.Clear" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Clear ()" />
+      <MemberSignature Language="F#" Value="member this.Clear : unit -&gt; unit" Usage="pSCommand.Clear " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Clears the command(s).
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Clone">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.PSCommand Clone ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Management.Automation.PSCommand Clone() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.PSCommand.Clone" />
+      <MemberSignature Language="VB.NET" Value="Public Function Clone () As PSCommand" />
+      <MemberSignature Language="F#" Value="member this.Clone : unit -&gt; System.Management.Automation.PSCommand" Usage="pSCommand.Clone " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.PSCommand</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Creates a shallow copy of the current PSCommand.
+            </summary>
+        <returns>
+            A shallow copy of the current PSCommand
+            </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Commands">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.Runspaces.CommandCollection Commands { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Management.Automation.Runspaces.CommandCollection Commands" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.PSCommand.Commands" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Commands As CommandCollection" />
+      <MemberSignature Language="F#" Value="member this.Commands : System.Management.Automation.Runspaces.CommandCollection" Usage="System.Management.Automation.PSCommand.Commands" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.Runspaces.CommandCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the collection of commands from this PSCommand
+            instance.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

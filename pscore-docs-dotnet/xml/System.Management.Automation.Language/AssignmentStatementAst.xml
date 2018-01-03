@@ -1,0 +1,198 @@
+﻿<Type Name="AssignmentStatementAst" FullName="System.Management.Automation.Language.AssignmentStatementAst">
+  <TypeSignature Language="C#" Value="public class AssignmentStatementAst : System.Management.Automation.Language.PipelineBaseAst" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit AssignmentStatementAst extends System.Management.Automation.Language.PipelineBaseAst" />
+  <TypeSignature Language="DocId" Value="T:System.Management.Automation.Language.AssignmentStatementAst" />
+  <TypeSignature Language="VB.NET" Value="Public Class AssignmentStatementAst&#xA;Inherits PipelineBaseAst" />
+  <TypeSignature Language="F#" Value="type AssignmentStatementAst = class&#xA;    inherit PipelineBaseAst" />
+  <AssemblyInfo>
+    <AssemblyName>System.Management.Automation</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Management.Automation.Language.PipelineBaseAst</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            The ast that represents an assignment statement, e.g. <c>$x = 42</c>.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public AssignmentStatementAst (System.Management.Automation.Language.IScriptExtent extent, System.Management.Automation.Language.ExpressionAst left, System.Management.Automation.Language.TokenKind operator, System.Management.Automation.Language.StatementAst right, System.Management.Automation.Language.IScriptExtent errorPosition);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Management.Automation.Language.IScriptExtent extent, class System.Management.Automation.Language.ExpressionAst left, valuetype System.Management.Automation.Language.TokenKind operator, class System.Management.Automation.Language.StatementAst right, class System.Management.Automation.Language.IScriptExtent errorPosition) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Language.AssignmentStatementAst.#ctor(System.Management.Automation.Language.IScriptExtent,System.Management.Automation.Language.ExpressionAst,System.Management.Automation.Language.TokenKind,System.Management.Automation.Language.StatementAst,System.Management.Automation.Language.IScriptExtent)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (extent As IScriptExtent, left As ExpressionAst, operator As TokenKind, right As StatementAst, errorPosition As IScriptExtent)" />
+      <MemberSignature Language="F#" Value="new System.Management.Automation.Language.AssignmentStatementAst : System.Management.Automation.Language.IScriptExtent * System.Management.Automation.Language.ExpressionAst * System.Management.Automation.Language.TokenKind * System.Management.Automation.Language.StatementAst * System.Management.Automation.Language.IScriptExtent -&gt; System.Management.Automation.Language.AssignmentStatementAst" Usage="new System.Management.Automation.Language.AssignmentStatementAst (extent, left, operator, right, errorPosition)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="extent" Type="System.Management.Automation.Language.IScriptExtent" />
+        <Parameter Name="left" Type="System.Management.Automation.Language.ExpressionAst" />
+        <Parameter Name="operator" Type="System.Management.Automation.Language.TokenKind" />
+        <Parameter Name="right" Type="System.Management.Automation.Language.StatementAst" />
+        <Parameter Name="errorPosition" Type="System.Management.Automation.Language.IScriptExtent" />
+      </Parameters>
+      <Docs>
+        <param name="extent">The extent of the assignment statement.</param>
+        <param name="left">The value being assigned.</param>
+        <param name="operator">The assignment operator, e.g. '=' or '+='.</param>
+        <param name="right">The value to assign.</param>
+        <param name="errorPosition">The position to report an error if an error occurs at runtime.</param>
+        <summary>
+            Construct an assignment statement.
+            </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.Management.Automation.PSArgumentNullException">
+            If <paramref name="extent" />, <paramref name="left" />, <paramref name="right" />,
+            or <paramref name="errorPosition" /> is null.
+            </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Copy">
+      <MemberSignature Language="C#" Value="public override System.Management.Automation.Language.Ast Copy ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Management.Automation.Language.Ast Copy() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Language.AssignmentStatementAst.Copy" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Function Copy () As Ast" />
+      <MemberSignature Language="F#" Value="override this.Copy : unit -&gt; System.Management.Automation.Language.Ast" Usage="assignmentStatementAst.Copy " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.Language.Ast</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Copy the AssignmentStatementAst instance
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ErrorPosition">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.Language.IScriptExtent ErrorPosition { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Management.Automation.Language.IScriptExtent ErrorPosition" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.Language.AssignmentStatementAst.ErrorPosition" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ErrorPosition As IScriptExtent" />
+      <MemberSignature Language="F#" Value="member this.ErrorPosition : System.Management.Automation.Language.IScriptExtent" Usage="System.Management.Automation.Language.AssignmentStatementAst.ErrorPosition" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.Language.IScriptExtent</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The position to report at runtime if there is an error during assignment.  This property is never null.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetAssignmentTargets">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IEnumerable&lt;System.Management.Automation.Language.ExpressionAst&gt; GetAssignmentTargets ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Collections.Generic.IEnumerable`1&lt;class System.Management.Automation.Language.ExpressionAst&gt; GetAssignmentTargets() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Language.AssignmentStatementAst.GetAssignmentTargets" />
+      <MemberSignature Language="VB.NET" Value="Public Iterator Function GetAssignmentTargets () As IEnumerable(Of ExpressionAst)" />
+      <MemberSignature Language="F#" Value="member this.GetAssignmentTargets : unit -&gt; seq&lt;System.Management.Automation.Language.ExpressionAst&gt;" Usage="assignmentStatementAst.GetAssignmentTargets " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.CompilerServices.IteratorStateMachine(typeof(System.Management.Automation.Language.AssignmentStatementAst/&lt;GetAssignmentTargets&gt;d__18))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerable&lt;System.Management.Automation.Language.ExpressionAst&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Return all of the expressions assigned by the assignment statement.  Typically
+            it's just a variable expression, but if <see cref="P:System.Management.Automation.Language.AssignmentStatementAst.Left" /> is an <see cref="T:System.Management.Automation.Language.ArrayLiteralAst" />,
+            then all of the elements are assigned.
+            </summary>
+        <returns>All of the expressions assigned by the assignment statement.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Left">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.Language.ExpressionAst Left { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Management.Automation.Language.ExpressionAst Left" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.Language.AssignmentStatementAst.Left" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Left As ExpressionAst" />
+      <MemberSignature Language="F#" Value="member this.Left : System.Management.Automation.Language.ExpressionAst" Usage="System.Management.Automation.Language.AssignmentStatementAst.Left" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.Language.ExpressionAst</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The ast for the location being assigned.  This property is never null.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Operator">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.Language.TokenKind Operator { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Management.Automation.Language.TokenKind Operator" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.Language.AssignmentStatementAst.Operator" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Operator As TokenKind" />
+      <MemberSignature Language="F#" Value="member this.Operator : System.Management.Automation.Language.TokenKind" Usage="System.Management.Automation.Language.AssignmentStatementAst.Operator" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.Language.TokenKind</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The operator for token assignment (such as =, +=, -=, etc.).  The value is always some assignment operator.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Right">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.Language.StatementAst Right { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Management.Automation.Language.StatementAst Right" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.Language.AssignmentStatementAst.Right" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Right As StatementAst" />
+      <MemberSignature Language="F#" Value="member this.Right : System.Management.Automation.Language.StatementAst" Usage="System.Management.Automation.Language.AssignmentStatementAst.Right" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.Language.StatementAst</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The ast for the value to assign.  This property is never null.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

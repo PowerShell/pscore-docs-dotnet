@@ -1,0 +1,89 @@
+﻿<Type Name="AuthorizationManager" FullName="System.Management.Automation.AuthorizationManager">
+  <TypeSignature Language="C#" Value="public class AuthorizationManager" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit AuthorizationManager extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Management.Automation.AuthorizationManager" />
+  <TypeSignature Language="VB.NET" Value="Public Class AuthorizationManager" />
+  <TypeSignature Language="F#" Value="type AuthorizationManager = class" />
+  <AssemblyInfo>
+    <AssemblyName>System.Management.Automation</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+             Defines the base class for an authorization manager of a Runspace.
+            
+             An authorization manager helps a host control and restrict the
+             execution of commands.  For each of the command types listed in
+             the <see cref="T:System.Management.Automation.CommandTypes" />
+             enumeration, the engine requests permission from the AuthorizationManager
+             to run the command.
+            
+             Extending this class requires that you override the ShouldRun method with
+             the logic specific to your needs.  The base class gives permission to run
+             every command.  The default
+             Microsoft.PowerShell.PSAuthorizationManager
+             provides a customized and much more complete authorization policy.
+             </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public AuthorizationManager (string shellId);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string shellId) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.AuthorizationManager.#ctor(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (shellId As String)" />
+      <MemberSignature Language="F#" Value="new System.Management.Automation.AuthorizationManager : string -&gt; System.Management.Automation.AuthorizationManager" Usage="new System.Management.Automation.AuthorizationManager shellId" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="shellId" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="shellId"></param>
+        <summary>
+            Creates an instance of authorization manager using specified shellID
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ShouldRun">
+      <MemberSignature Language="C#" Value="protected internal virtual bool ShouldRun (System.Management.Automation.CommandInfo commandInfo, System.Management.Automation.CommandOrigin origin, System.Management.Automation.Host.PSHost host, out Exception reason);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig newslot virtual instance bool ShouldRun(class System.Management.Automation.CommandInfo commandInfo, valuetype System.Management.Automation.CommandOrigin origin, class System.Management.Automation.Host.PSHost host, [out] class System.Exception&amp; reason) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.AuthorizationManager.ShouldRun(System.Management.Automation.CommandInfo,System.Management.Automation.CommandOrigin,System.Management.Automation.Host.PSHost,System.Exception@)" />
+      <MemberSignature Language="F#" Value="abstract member ShouldRun : System.Management.Automation.CommandInfo * System.Management.Automation.CommandOrigin * System.Management.Automation.Host.PSHost *  -&gt; bool&#xA;override this.ShouldRun : System.Management.Automation.CommandInfo * System.Management.Automation.CommandOrigin * System.Management.Automation.Host.PSHost *  -&gt; bool" Usage="authorizationManager.ShouldRun (commandInfo, origin, host, reason)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="commandInfo" Type="System.Management.Automation.CommandInfo" />
+        <Parameter Name="origin" Type="System.Management.Automation.CommandOrigin" />
+        <Parameter Name="host" Type="System.Management.Automation.Host.PSHost" />
+        <Parameter Name="reason" Type="System.Exception&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="commandInfo"> Information about the command to be run </param>
+        <param name="origin"> The origin of the command </param>
+        <param name="host"> The host running the command </param>
+        <param name="reason"> The reason for preventing execution, if applicable </param>
+        <summary>
+             Determines if the host should run the command a specified by the CommandInfo parameter.
+             The default implementation gives permission to run every command.
+             </summary>
+        <returns> True if the host should run the command.  False otherwise </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,210 @@
+﻿<Type Name="SetWSManQuickConfigCommand" FullName="Microsoft.WSMan.Management.SetWSManQuickConfigCommand">
+  <TypeSignature Language="C#" Value="public class SetWSManQuickConfigCommand : System.Management.Automation.PSCmdlet, IDisposable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit SetWSManQuickConfigCommand extends System.Management.Automation.PSCmdlet implements class System.IDisposable" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.WSMan.Management.SetWSManQuickConfigCommand" />
+  <TypeSignature Language="VB.NET" Value="Public Class SetWSManQuickConfigCommand&#xA;Inherits PSCmdlet&#xA;Implements IDisposable" />
+  <TypeSignature Language="F#" Value="type SetWSManQuickConfigCommand = class&#xA;    inherit PSCmdlet&#xA;    interface IDisposable" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.WSMan.Management</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Management.Automation.PSCmdlet</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Management.Automation.Cmdlet("Set", "WSManQuickConfig", HelpUri="https://go.microsoft.com/fwlink/?LinkID=141463")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>
+            Performs configuration actions to enable the local machine for remote
+            management. Steps include:
+            1. Check if WinRM service is running. If not start the WinRM service
+            2. Set the WinRM service type to auto start
+            3. Create a listener to accept request on any IP address. By default
+            transport is http
+            4. Enable firewall exception for WS-Management traffic
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SetWSManQuickConfigCommand ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.WSMan.Management.SetWSManQuickConfigCommand.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New ()" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.WSMan.Management</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginProcessing">
+      <MemberSignature Language="C#" Value="protected override void BeginProcessing ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void BeginProcessing() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.WSMan.Management.SetWSManQuickConfigCommand.BeginProcessing" />
+      <MemberSignature Language="VB.NET" Value="Protected Overrides Sub BeginProcessing ()" />
+      <MemberSignature Language="F#" Value="override this.BeginProcessing : unit -&gt; unit" Usage="setWSManQuickConfigCommand.BeginProcessing " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.WSMan.Management</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            BeginProcessing method.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="public void Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Dispose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.WSMan.Management.SetWSManQuickConfigCommand.Dispose" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Dispose ()" />
+      <MemberSignature Language="F#" Value="abstract member Dispose : unit -&gt; unit&#xA;override this.Dispose : unit -&gt; unit" Usage="setWSManQuickConfigCommand.Dispose " />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.IDisposable.Dispose</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.WSMan.Management</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            public dispose method
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="public void Dispose (Microsoft.WSMan.Management.IWSManSession sessionObject);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Dispose(class Microsoft.WSMan.Management.IWSManSession sessionObject) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.WSMan.Management.SetWSManQuickConfigCommand.Dispose(Microsoft.WSMan.Management.IWSManSession)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Dispose (sessionObject As IWSManSession)" />
+      <MemberSignature Language="F#" Value="member this.Dispose : Microsoft.WSMan.Management.IWSManSession -&gt; unit" Usage="setWSManQuickConfigCommand.Dispose sessionObject" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.WSMan.Management</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sessionObject" Type="Microsoft.WSMan.Management.IWSManSession" />
+      </Parameters>
+      <Docs>
+        <param name="sessionObject">To be added.</param>
+        <summary>
+            public dispose method
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Force">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.SwitchParameter Force { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Management.Automation.SwitchParameter Force" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.WSMan.Management.SetWSManQuickConfigCommand.Force" />
+      <MemberSignature Language="VB.NET" Value="Public Property Force As SwitchParameter" />
+      <MemberSignature Language="F#" Value="member this.Force : System.Management.Automation.SwitchParameter with get, set" Usage="Microsoft.WSMan.Management.SetWSManQuickConfigCommand.Force" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.WSMan.Management</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.SwitchParameter</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Property that sets force parameter. This will allow
+            configuring WinRM without prompting the user.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SkipNetworkProfileCheck">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.SwitchParameter SkipNetworkProfileCheck { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Management.Automation.SwitchParameter SkipNetworkProfileCheck" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.WSMan.Management.SetWSManQuickConfigCommand.SkipNetworkProfileCheck" />
+      <MemberSignature Language="VB.NET" Value="Public Property SkipNetworkProfileCheck As SwitchParameter" />
+      <MemberSignature Language="F#" Value="member this.SkipNetworkProfileCheck : System.Management.Automation.SwitchParameter with get, set" Usage="Microsoft.WSMan.Management.SetWSManQuickConfigCommand.SkipNetworkProfileCheck" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.WSMan.Management</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.SwitchParameter</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Property that will allow configuring WinRM with Public profile exception enabled.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UseSSL">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.SwitchParameter UseSSL { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Management.Automation.SwitchParameter UseSSL" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.WSMan.Management.SetWSManQuickConfigCommand.UseSSL" />
+      <MemberSignature Language="VB.NET" Value="Public Property UseSSL As SwitchParameter" />
+      <MemberSignature Language="F#" Value="member this.UseSSL : System.Management.Automation.SwitchParameter with get, set" Usage="Microsoft.WSMan.Management.SetWSManQuickConfigCommand.UseSSL" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.WSMan.Management</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.SwitchParameter</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The following is the definition of the input parameter "UseSSL".
+            Indicates a https listener to be created. If this switch is not specified
+            then by default a http listener will be created
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

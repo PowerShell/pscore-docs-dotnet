@@ -1,0 +1,134 @@
+﻿<Type Name="CommandLookupEventArgs" FullName="System.Management.Automation.CommandLookupEventArgs">
+  <TypeSignature Language="C#" Value="public class CommandLookupEventArgs : EventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit CommandLookupEventArgs extends System.EventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Management.Automation.CommandLookupEventArgs" />
+  <TypeSignature Language="VB.NET" Value="Public Class CommandLookupEventArgs&#xA;Inherits EventArgs" />
+  <TypeSignature Language="F#" Value="type CommandLookupEventArgs = class&#xA;    inherit EventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>System.Management.Automation</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.EventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            EventArgs for the ScriptCmdletVariableUpdate event
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Command">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.CommandInfo Command { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Management.Automation.CommandInfo Command" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.CommandLookupEventArgs.Command" />
+      <MemberSignature Language="VB.NET" Value="Public Property Command As CommandInfo" />
+      <MemberSignature Language="F#" Value="member this.Command : System.Management.Automation.CommandInfo with get, set" Usage="System.Management.Automation.CommandLookupEventArgs.Command" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.CommandInfo</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The CommandInfo obejct for the command that was found.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CommandName">
+      <MemberSignature Language="C#" Value="public string CommandName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string CommandName" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.CommandLookupEventArgs.CommandName" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property CommandName As String" />
+      <MemberSignature Language="F#" Value="member this.CommandName : string" Usage="System.Management.Automation.CommandLookupEventArgs.CommandName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The name of the command we're looking for
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CommandOrigin">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.CommandOrigin CommandOrigin { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Management.Automation.CommandOrigin CommandOrigin" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.CommandLookupEventArgs.CommandOrigin" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property CommandOrigin As CommandOrigin" />
+      <MemberSignature Language="F#" Value="member this.CommandOrigin : System.Management.Automation.CommandOrigin" Usage="System.Management.Automation.CommandLookupEventArgs.CommandOrigin" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.CommandOrigin</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The origin of the command internal or runspace (external)
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CommandScriptBlock">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.ScriptBlock CommandScriptBlock { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Management.Automation.ScriptBlock CommandScriptBlock" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.CommandLookupEventArgs.CommandScriptBlock" />
+      <MemberSignature Language="VB.NET" Value="Public Property CommandScriptBlock As ScriptBlock" />
+      <MemberSignature Language="F#" Value="member this.CommandScriptBlock : System.Management.Automation.ScriptBlock with get, set" Usage="System.Management.Automation.CommandLookupEventArgs.CommandScriptBlock" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.ScriptBlock</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Scriptblock to be returned as the found command. If it is set to
+            null, then the command to return and the StopSearch flag will be reset.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StopSearch">
+      <MemberSignature Language="C#" Value="public bool StopSearch { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool StopSearch" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.CommandLookupEventArgs.StopSearch" />
+      <MemberSignature Language="VB.NET" Value="Public Property StopSearch As Boolean" />
+      <MemberSignature Language="F#" Value="member this.StopSearch : bool with get, set" Usage="System.Management.Automation.CommandLookupEventArgs.StopSearch" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            If true on return from event handler, the search is stopped.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

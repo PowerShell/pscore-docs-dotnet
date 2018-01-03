@@ -1,0 +1,815 @@
+﻿<Type Name="InitialSessionState" FullName="System.Management.Automation.Runspaces.InitialSessionState">
+  <TypeSignature Language="C#" Value="public class InitialSessionState" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit InitialSessionState extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Management.Automation.Runspaces.InitialSessionState" />
+  <TypeSignature Language="VB.NET" Value="Public Class InitialSessionState" />
+  <TypeSignature Language="F#" Value="type InitialSessionState = class" />
+  <AssemblyInfo>
+    <AssemblyName>System.Management.Automation</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Allows you to define the set of elements that should be
+            present when Session State is created.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected InitialSessionState ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Runspaces.InitialSessionState.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Protected Sub New ()" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>
+            ctor for Custom-Shell - Do we need this?
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Assemblies">
+      <MemberSignature Language="C#" Value="public virtual System.Management.Automation.Runspaces.InitialSessionStateEntryCollection&lt;System.Management.Automation.Runspaces.SessionStateAssemblyEntry&gt; Assemblies { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Management.Automation.Runspaces.InitialSessionStateEntryCollection`1&lt;class System.Management.Automation.Runspaces.SessionStateAssemblyEntry&gt; Assemblies" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.Runspaces.InitialSessionState.Assemblies" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable ReadOnly Property Assemblies As InitialSessionStateEntryCollection(Of SessionStateAssemblyEntry)" />
+      <MemberSignature Language="F#" Value="member this.Assemblies : System.Management.Automation.Runspaces.InitialSessionStateEntryCollection&lt;System.Management.Automation.Runspaces.SessionStateAssemblyEntry&gt;" Usage="System.Management.Automation.Runspaces.InitialSessionState.Assemblies" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.Runspaces.InitialSessionStateEntryCollection&lt;System.Management.Automation.Runspaces.SessionStateAssemblyEntry&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The list of assemblies to load...
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AuthorizationManager">
+      <MemberSignature Language="C#" Value="public virtual System.Management.Automation.AuthorizationManager AuthorizationManager { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Management.Automation.AuthorizationManager AuthorizationManager" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.Runspaces.InitialSessionState.AuthorizationManager" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Property AuthorizationManager As AuthorizationManager" />
+      <MemberSignature Language="F#" Value="member this.AuthorizationManager : System.Management.Automation.AuthorizationManager with get, set" Usage="System.Management.Automation.Runspaces.InitialSessionState.AuthorizationManager" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.AuthorizationManager</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Specifies the authorization manager to be used for this session state instance.
+            If no authorization manager is specified, then the default authorization manager
+            for PowerShell will be used which checks the ExecutionPolicy before running a command.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Clone">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.Runspaces.InitialSessionState Clone ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Management.Automation.Runspaces.InitialSessionState Clone() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Runspaces.InitialSessionState.Clone" />
+      <MemberSignature Language="VB.NET" Value="Public Function Clone () As InitialSessionState" />
+      <MemberSignature Language="F#" Value="member this.Clone : unit -&gt; System.Management.Automation.Runspaces.InitialSessionState" Usage="initialSessionState.Clone " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.Runspaces.InitialSessionState</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Clone this InitialSessionState object. The collections are
+            recursively cloned as well as the elements in the collections.
+            Note however, that the contents of the individual entries
+            are not deep-cloned. This is only an issue for variable
+            entries which may have reference types. These objects
+            will be added by reference rather than by value.
+            </summary>
+        <returns>The cloned object.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Commands">
+      <MemberSignature Language="C#" Value="public virtual System.Management.Automation.Runspaces.InitialSessionStateEntryCollection&lt;System.Management.Automation.Runspaces.SessionStateCommandEntry&gt; Commands { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Management.Automation.Runspaces.InitialSessionStateEntryCollection`1&lt;class System.Management.Automation.Runspaces.SessionStateCommandEntry&gt; Commands" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.Runspaces.InitialSessionState.Commands" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable ReadOnly Property Commands As InitialSessionStateEntryCollection(Of SessionStateCommandEntry)" />
+      <MemberSignature Language="F#" Value="member this.Commands : System.Management.Automation.Runspaces.InitialSessionStateEntryCollection&lt;System.Management.Automation.Runspaces.SessionStateCommandEntry&gt;" Usage="System.Management.Automation.Runspaces.InitialSessionState.Commands" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.Runspaces.InitialSessionStateEntryCollection&lt;System.Management.Automation.Runspaces.SessionStateCommandEntry&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            List of commands (Alias, Application, Cmdlets, Function, Script) for this entry.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Create">
+      <MemberSignature Language="C#" Value="public static System.Management.Automation.Runspaces.InitialSessionState Create ();" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Management.Automation.Runspaces.InitialSessionState Create() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Runspaces.InitialSessionState.Create" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function Create () As InitialSessionState" />
+      <MemberSignature Language="F#" Value="static member Create : unit -&gt; System.Management.Automation.Runspaces.InitialSessionState" Usage="System.Management.Automation.Runspaces.InitialSessionState.Create " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.Runspaces.InitialSessionState</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Creates an empty InitialSessionState object...
+            </summary>
+        <returns />
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Create">
+      <MemberSignature Language="C#" Value="public static System.Management.Automation.Runspaces.InitialSessionState Create (string snapInName);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Management.Automation.Runspaces.InitialSessionState Create(string snapInName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Runspaces.InitialSessionState.Create(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function Create (snapInName As String) As InitialSessionState" />
+      <MemberSignature Language="F#" Value="static member Create : string -&gt; System.Management.Automation.Runspaces.InitialSessionState" Usage="System.Management.Automation.Runspaces.InitialSessionState.Create snapInName" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.Runspaces.InitialSessionState</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="snapInName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="snapInName"></param>
+        <summary>
+            Want to get away from SnapIn and console file. Have modules and assemblies instead.
+            Specify the registered SnapIn name or name collection
+            </summary>
+        <returns />
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Create">
+      <MemberSignature Language="C#" Value="public static System.Management.Automation.Runspaces.InitialSessionState Create (string[] snapInNameCollection, out System.Management.Automation.Runspaces.PSConsoleLoadException warning);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Management.Automation.Runspaces.InitialSessionState Create(string[] snapInNameCollection, [out] class System.Management.Automation.Runspaces.PSConsoleLoadException&amp; warning) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Runspaces.InitialSessionState.Create(System.String[],System.Management.Automation.Runspaces.PSConsoleLoadException@)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function Create (snapInNameCollection As String(), ByRef warning As PSConsoleLoadException) As InitialSessionState" />
+      <MemberSignature Language="F#" Value="static member Create : string[] *  -&gt; System.Management.Automation.Runspaces.InitialSessionState" Usage="System.Management.Automation.Runspaces.InitialSessionState.Create (snapInNameCollection, warning)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.Runspaces.InitialSessionState</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="snapInNameCollection" Type="System.String[]" />
+        <Parameter Name="warning" Type="System.Management.Automation.Runspaces.PSConsoleLoadException&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="snapInNameCollection"></param>
+        <param name="warning"></param>
+        <summary />
+        <returns />
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateDefault">
+      <MemberSignature Language="C#" Value="public static System.Management.Automation.Runspaces.InitialSessionState CreateDefault ();" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Management.Automation.Runspaces.InitialSessionState CreateDefault() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Runspaces.InitialSessionState.CreateDefault" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function CreateDefault () As InitialSessionState" />
+      <MemberSignature Language="F#" Value="static member CreateDefault : unit -&gt; System.Management.Automation.Runspaces.InitialSessionState" Usage="System.Management.Automation.Runspaces.InitialSessionState.CreateDefault " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.Runspaces.InitialSessionState</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Creates the default PowerShell one with default cmdlets, provider etc.
+            BuiltIn functions, aliases need to be available through default
+            InitialSessionstate constructor. Need to have this discussion for packaging as well.
+            </summary>
+        <returns />
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateDefault2">
+      <MemberSignature Language="C#" Value="public static System.Management.Automation.Runspaces.InitialSessionState CreateDefault2 ();" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Management.Automation.Runspaces.InitialSessionState CreateDefault2() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Runspaces.InitialSessionState.CreateDefault2" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function CreateDefault2 () As InitialSessionState" />
+      <MemberSignature Language="F#" Value="static member CreateDefault2 : unit -&gt; System.Management.Automation.Runspaces.InitialSessionState" Usage="System.Management.Automation.Runspaces.InitialSessionState.CreateDefault2 " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.Runspaces.InitialSessionState</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Creates the default PowerShell one with default cmdlets, provider etc.
+            The default cmdlets, provider, etc are loaded via Modules
+            For loading Microsoft.PowerShell.Core module only.
+            </summary>
+        <returns />
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateFrom">
+      <MemberSignature Language="C#" Value="public static System.Management.Automation.Runspaces.InitialSessionState CreateFrom (string snapInPath, out System.Management.Automation.Runspaces.PSConsoleLoadException warnings);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Management.Automation.Runspaces.InitialSessionState CreateFrom(string snapInPath, [out] class System.Management.Automation.Runspaces.PSConsoleLoadException&amp; warnings) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Runspaces.InitialSessionState.CreateFrom(System.String,System.Management.Automation.Runspaces.PSConsoleLoadException@)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function CreateFrom (snapInPath As String, ByRef warnings As PSConsoleLoadException) As InitialSessionState" />
+      <MemberSignature Language="F#" Value="static member CreateFrom : string *  -&gt; System.Management.Automation.Runspaces.InitialSessionState" Usage="System.Management.Automation.Runspaces.InitialSessionState.CreateFrom (snapInPath, warnings)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.Runspaces.InitialSessionState</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="snapInPath" Type="System.String" />
+        <Parameter Name="warnings" Type="System.Management.Automation.Runspaces.PSConsoleLoadException&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="snapInPath"></param>
+        <param name="warnings"></param>
+        <summary />
+        <returns />
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateFrom">
+      <MemberSignature Language="C#" Value="public static System.Management.Automation.Runspaces.InitialSessionState CreateFrom (string[] snapInPathCollection, out System.Management.Automation.Runspaces.PSConsoleLoadException warnings);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Management.Automation.Runspaces.InitialSessionState CreateFrom(string[] snapInPathCollection, [out] class System.Management.Automation.Runspaces.PSConsoleLoadException&amp; warnings) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Runspaces.InitialSessionState.CreateFrom(System.String[],System.Management.Automation.Runspaces.PSConsoleLoadException@)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function CreateFrom (snapInPathCollection As String(), ByRef warnings As PSConsoleLoadException) As InitialSessionState" />
+      <MemberSignature Language="F#" Value="static member CreateFrom : string[] *  -&gt; System.Management.Automation.Runspaces.InitialSessionState" Usage="System.Management.Automation.Runspaces.InitialSessionState.CreateFrom (snapInPathCollection, warnings)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.Runspaces.InitialSessionState</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="snapInPathCollection" Type="System.String[]" />
+        <Parameter Name="warnings" Type="System.Management.Automation.Runspaces.PSConsoleLoadException&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="snapInPathCollection"></param>
+        <param name="warnings"></param>
+        <summary />
+        <returns />
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateFromSessionConfigurationFile">
+      <MemberSignature Language="C#" Value="public static System.Management.Automation.Runspaces.InitialSessionState CreateFromSessionConfigurationFile (string path);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Management.Automation.Runspaces.InitialSessionState CreateFromSessionConfigurationFile(string path) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Runspaces.InitialSessionState.CreateFromSessionConfigurationFile(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function CreateFromSessionConfigurationFile (path As String) As InitialSessionState" />
+      <MemberSignature Language="F#" Value="static member CreateFromSessionConfigurationFile : string -&gt; System.Management.Automation.Runspaces.InitialSessionState" Usage="System.Management.Automation.Runspaces.InitialSessionState.CreateFromSessionConfigurationFile path" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.Runspaces.InitialSessionState</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="path">The path to the PSSC session configuration file</param>
+        <summary>
+            Creates an initial session state from a PSSC configuration file
+            </summary>
+        <returns />
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateFromSessionConfigurationFile">
+      <MemberSignature Language="C#" Value="public static System.Management.Automation.Runspaces.InitialSessionState CreateFromSessionConfigurationFile (string path, Func&lt;string,bool&gt; roleVerifier);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Management.Automation.Runspaces.InitialSessionState CreateFromSessionConfigurationFile(string path, class System.Func`2&lt;string, bool&gt; roleVerifier) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Runspaces.InitialSessionState.CreateFromSessionConfigurationFile(System.String,System.Func{System.String,System.Boolean})" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function CreateFromSessionConfigurationFile (path As String, roleVerifier As Func(Of String, Boolean)) As InitialSessionState" />
+      <MemberSignature Language="F#" Value="static member CreateFromSessionConfigurationFile : string * Func&lt;string, bool&gt; -&gt; System.Management.Automation.Runspaces.InitialSessionState" Usage="System.Management.Automation.Runspaces.InitialSessionState.CreateFromSessionConfigurationFile (path, roleVerifier)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.Runspaces.InitialSessionState</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+        <Parameter Name="roleVerifier" Type="System.Func&lt;System.String,System.Boolean&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="path">The path to the PSSC session configuration file</param>
+        <param name="roleVerifier">
+            The verifier that PowerShell should call to determine if groups in the Role entry apply to the
+            target session. If you have a WindowsPrincipal for a user, for example, create a Function that
+            checks windowsPrincipal.IsInRole().
+            </param>
+        <summary>
+            Creates an initial session state from a PSSC configuration file
+            </summary>
+        <returns />
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateRestricted">
+      <MemberSignature Language="C#" Value="public static System.Management.Automation.Runspaces.InitialSessionState CreateRestricted (System.Management.Automation.SessionCapabilities sessionCapabilities);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Management.Automation.Runspaces.InitialSessionState CreateRestricted(valuetype System.Management.Automation.SessionCapabilities sessionCapabilities) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Runspaces.InitialSessionState.CreateRestricted(System.Management.Automation.SessionCapabilities)" />
+      <MemberSignature Language="F#" Value="static member CreateRestricted : System.Management.Automation.SessionCapabilities -&gt; System.Management.Automation.Runspaces.InitialSessionState" Usage="System.Management.Automation.Runspaces.InitialSessionState.CreateRestricted sessionCapabilities" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.Runspaces.InitialSessionState</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sessionCapabilities" Type="System.Management.Automation.SessionCapabilities" />
+      </Parameters>
+      <Docs>
+        <param name="sessionCapabilities">
+            What capabilities the session should have.
+            </param>
+        <summary>
+            Creates an <see cref="T:System.Management.Automation.Runspaces.InitialSessionState" /> instance that exposes only the minimal
+            set of commands needed by give set of <paramref name="sessionCapabilities" />
+            All commands that are not needed are made private in order to minimize the attack surface.
+            </summary>
+        <returns />
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DisableFormatUpdates">
+      <MemberSignature Language="C#" Value="public bool DisableFormatUpdates { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool DisableFormatUpdates" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.Runspaces.InitialSessionState.DisableFormatUpdates" />
+      <MemberSignature Language="VB.NET" Value="Public Property DisableFormatUpdates As Boolean" />
+      <MemberSignature Language="F#" Value="member this.DisableFormatUpdates : bool with get, set" Usage="System.Management.Automation.Runspaces.InitialSessionState.DisableFormatUpdates" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            If set to true, disables any updates to format table. This includes disabling
+            format table updates through Update-FormatData, Import-Module etc.
+            All the disabling happens silently ie., the user will not get any exception.
+            By default, this is set to False.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EnvironmentVariables">
+      <MemberSignature Language="C#" Value="public virtual System.Management.Automation.Runspaces.InitialSessionStateEntryCollection&lt;System.Management.Automation.Runspaces.SessionStateVariableEntry&gt; EnvironmentVariables { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Management.Automation.Runspaces.InitialSessionStateEntryCollection`1&lt;class System.Management.Automation.Runspaces.SessionStateVariableEntry&gt; EnvironmentVariables" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.Runspaces.InitialSessionState.EnvironmentVariables" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable ReadOnly Property EnvironmentVariables As InitialSessionStateEntryCollection(Of SessionStateVariableEntry)" />
+      <MemberSignature Language="F#" Value="member this.EnvironmentVariables : System.Management.Automation.Runspaces.InitialSessionStateEntryCollection&lt;System.Management.Automation.Runspaces.SessionStateVariableEntry&gt;" Usage="System.Management.Automation.Runspaces.InitialSessionState.EnvironmentVariables" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.Runspaces.InitialSessionStateEntryCollection&lt;System.Management.Automation.Runspaces.SessionStateVariableEntry&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary />
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ExecutionPolicy">
+      <MemberSignature Language="C#" Value="public Microsoft.PowerShell.ExecutionPolicy ExecutionPolicy { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.PowerShell.ExecutionPolicy ExecutionPolicy" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.Runspaces.InitialSessionState.ExecutionPolicy" />
+      <MemberSignature Language="VB.NET" Value="Public Property ExecutionPolicy As ExecutionPolicy" />
+      <MemberSignature Language="F#" Value="member this.ExecutionPolicy : Microsoft.PowerShell.ExecutionPolicy with get, set" Usage="System.Management.Automation.Runspaces.InitialSessionState.ExecutionPolicy" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.PowerShell.ExecutionPolicy</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Specifies the execution policy to be used for this session state instance
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Formats">
+      <MemberSignature Language="C#" Value="public virtual System.Management.Automation.Runspaces.InitialSessionStateEntryCollection&lt;System.Management.Automation.Runspaces.SessionStateFormatEntry&gt; Formats { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Management.Automation.Runspaces.InitialSessionStateEntryCollection`1&lt;class System.Management.Automation.Runspaces.SessionStateFormatEntry&gt; Formats" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.Runspaces.InitialSessionState.Formats" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable ReadOnly Property Formats As InitialSessionStateEntryCollection(Of SessionStateFormatEntry)" />
+      <MemberSignature Language="F#" Value="member this.Formats : System.Management.Automation.Runspaces.InitialSessionStateEntryCollection&lt;System.Management.Automation.Runspaces.SessionStateFormatEntry&gt;" Usage="System.Management.Automation.Runspaces.InitialSessionState.Formats" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.Runspaces.InitialSessionStateEntryCollection&lt;System.Management.Automation.Runspaces.SessionStateFormatEntry&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary />
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ImportPSModule">
+      <MemberSignature Language="C#" Value="public void ImportPSModule (System.Collections.Generic.IEnumerable&lt;Microsoft.PowerShell.Commands.ModuleSpecification&gt; modules);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void ImportPSModule(class System.Collections.Generic.IEnumerable`1&lt;class Microsoft.PowerShell.Commands.ModuleSpecification&gt; modules) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Runspaces.InitialSessionState.ImportPSModule(System.Collections.Generic.IEnumerable{Microsoft.PowerShell.Commands.ModuleSpecification})" />
+      <MemberSignature Language="VB.NET" Value="Public Sub ImportPSModule (modules As IEnumerable(Of ModuleSpecification))" />
+      <MemberSignature Language="F#" Value="member this.ImportPSModule : seq&lt;Microsoft.PowerShell.Commands.ModuleSpecification&gt; -&gt; unit" Usage="initialSessionState.ImportPSModule modules" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="modules" Type="System.Collections.Generic.IEnumerable&lt;Microsoft.PowerShell.Commands.ModuleSpecification&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="modules">
+            The modules, whose specifications are specified by <paramref name="modules" />,
+            to add.
+            </param>
+        <summary>
+            Add a list of modules to import when the runspace is created.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ImportPSModule">
+      <MemberSignature Language="C#" Value="public void ImportPSModule (string[] name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void ImportPSModule(string[] name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Runspaces.InitialSessionState.ImportPSModule(System.String[])" />
+      <MemberSignature Language="VB.NET" Value="Public Sub ImportPSModule (name As String())" />
+      <MemberSignature Language="F#" Value="member this.ImportPSModule : string[] -&gt; unit" Usage="initialSessionState.ImportPSModule name" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String[]" />
+      </Parameters>
+      <Docs>
+        <param name="name">The modules to add</param>
+        <summary>
+            Add a list of modules to import when the runspace is created.
+            </summary>
+        <returns />
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ImportPSModulesFromPath">
+      <MemberSignature Language="C#" Value="public void ImportPSModulesFromPath (string path);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void ImportPSModulesFromPath(string path) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Runspaces.InitialSessionState.ImportPSModulesFromPath(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub ImportPSModulesFromPath (path As String)" />
+      <MemberSignature Language="F#" Value="member this.ImportPSModulesFromPath : string -&gt; unit" Usage="initialSessionState.ImportPSModulesFromPath path" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="path">path from which all modules need
+            to be imported</param>
+        <summary>
+            Imports all the modules from the specified module
+            path by default
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ImportPSSnapIn">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.PSSnapInInfo ImportPSSnapIn (string name, out System.Management.Automation.Runspaces.PSSnapInException warning);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Management.Automation.PSSnapInInfo ImportPSSnapIn(string name, [out] class System.Management.Automation.Runspaces.PSSnapInException&amp; warning) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Runspaces.InitialSessionState.ImportPSSnapIn(System.String,System.Management.Automation.Runspaces.PSSnapInException@)" />
+      <MemberSignature Language="VB.NET" Value="Public Function ImportPSSnapIn (name As String, ByRef warning As PSSnapInException) As PSSnapInInfo" />
+      <MemberSignature Language="F#" Value="member this.ImportPSSnapIn : string *  -&gt; System.Management.Automation.PSSnapInInfo" Usage="initialSessionState.ImportPSSnapIn (name, warning)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.PSSnapInInfo</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="warning" Type="System.Management.Automation.Runspaces.PSSnapInException&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="name"></param>
+        <param name="warning"></param>
+        <summary>
+            Need to have SnapIn support till we move to modules
+            </summary>
+        <returns />
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LanguageMode">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.PSLanguageMode LanguageMode { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Management.Automation.PSLanguageMode LanguageMode" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.Runspaces.InitialSessionState.LanguageMode" />
+      <MemberSignature Language="VB.NET" Value="Public Property LanguageMode As PSLanguageMode" />
+      <MemberSignature Language="F#" Value="member this.LanguageMode : System.Management.Automation.PSLanguageMode with get, set" Usage="System.Management.Automation.Runspaces.InitialSessionState.LanguageMode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.PSLanguageMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Specifies the language mode to be used for this session state instance
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Modules">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.ReadOnlyCollection&lt;Microsoft.PowerShell.Commands.ModuleSpecification&gt; Modules { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ObjectModel.ReadOnlyCollection`1&lt;class Microsoft.PowerShell.Commands.ModuleSpecification&gt; Modules" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.Runspaces.InitialSessionState.Modules" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Modules As ReadOnlyCollection(Of ModuleSpecification)" />
+      <MemberSignature Language="F#" Value="member this.Modules : System.Collections.ObjectModel.ReadOnlyCollection&lt;Microsoft.PowerShell.Commands.ModuleSpecification&gt;" Usage="System.Management.Automation.Runspaces.InitialSessionState.Modules" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.ReadOnlyCollection&lt;Microsoft.PowerShell.Commands.ModuleSpecification&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Imported modules.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Providers">
+      <MemberSignature Language="C#" Value="public virtual System.Management.Automation.Runspaces.InitialSessionStateEntryCollection&lt;System.Management.Automation.Runspaces.SessionStateProviderEntry&gt; Providers { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Management.Automation.Runspaces.InitialSessionStateEntryCollection`1&lt;class System.Management.Automation.Runspaces.SessionStateProviderEntry&gt; Providers" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.Runspaces.InitialSessionState.Providers" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable ReadOnly Property Providers As InitialSessionStateEntryCollection(Of SessionStateProviderEntry)" />
+      <MemberSignature Language="F#" Value="member this.Providers : System.Management.Automation.Runspaces.InitialSessionStateEntryCollection&lt;System.Management.Automation.Runspaces.SessionStateProviderEntry&gt;" Usage="System.Management.Automation.Runspaces.InitialSessionState.Providers" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.Runspaces.InitialSessionStateEntryCollection&lt;System.Management.Automation.Runspaces.SessionStateProviderEntry&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary />
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StartupScripts">
+      <MemberSignature Language="C#" Value="public virtual System.Collections.Generic.HashSet&lt;string&gt; StartupScripts { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.HashSet`1&lt;string&gt; StartupScripts" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.Runspaces.InitialSessionState.StartupScripts" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable ReadOnly Property StartupScripts As HashSet(Of String)" />
+      <MemberSignature Language="F#" Value="member this.StartupScripts : System.Collections.Generic.HashSet&lt;string&gt;" Usage="System.Management.Automation.Runspaces.InitialSessionState.StartupScripts" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.HashSet&lt;System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary />
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ThreadOptions">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.Runspaces.PSThreadOptions ThreadOptions { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Management.Automation.Runspaces.PSThreadOptions ThreadOptions" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.Runspaces.InitialSessionState.ThreadOptions" />
+      <MemberSignature Language="VB.NET" Value="Public Property ThreadOptions As PSThreadOptions" />
+      <MemberSignature Language="F#" Value="member this.ThreadOptions : System.Management.Automation.Runspaces.PSThreadOptions with get, set" Usage="System.Management.Automation.Runspaces.InitialSessionState.ThreadOptions" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.Runspaces.PSThreadOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            This property determines whether a new thread is create for each invocation of a command
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ThrowOnRunspaceOpenError">
+      <MemberSignature Language="C#" Value="public bool ThrowOnRunspaceOpenError { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ThrowOnRunspaceOpenError" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.Runspaces.InitialSessionState.ThrowOnRunspaceOpenError" />
+      <MemberSignature Language="VB.NET" Value="Public Property ThrowOnRunspaceOpenError As Boolean" />
+      <MemberSignature Language="F#" Value="member this.ThrowOnRunspaceOpenError : bool with get, set" Usage="System.Management.Automation.Runspaces.InitialSessionState.ThrowOnRunspaceOpenError" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            If this property is set and there was a runspace creation error, then
+            throw an exception, otherwise just continue creating the runspace even though it may
+            be in an inconsistent state.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TranscriptDirectory">
+      <MemberSignature Language="C#" Value="public string TranscriptDirectory { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string TranscriptDirectory" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.Runspaces.InitialSessionState.TranscriptDirectory" />
+      <MemberSignature Language="VB.NET" Value="Public Property TranscriptDirectory As String" />
+      <MemberSignature Language="F#" Value="member this.TranscriptDirectory : string with get, set" Usage="System.Management.Automation.Runspaces.InitialSessionState.TranscriptDirectory" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Specifies the directory to be used for collection session transcripts
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Types">
+      <MemberSignature Language="C#" Value="public virtual System.Management.Automation.Runspaces.InitialSessionStateEntryCollection&lt;System.Management.Automation.Runspaces.SessionStateTypeEntry&gt; Types { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Management.Automation.Runspaces.InitialSessionStateEntryCollection`1&lt;class System.Management.Automation.Runspaces.SessionStateTypeEntry&gt; Types" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.Runspaces.InitialSessionState.Types" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable ReadOnly Property Types As InitialSessionStateEntryCollection(Of SessionStateTypeEntry)" />
+      <MemberSignature Language="F#" Value="member this.Types : System.Management.Automation.Runspaces.InitialSessionStateEntryCollection&lt;System.Management.Automation.Runspaces.SessionStateTypeEntry&gt;" Usage="System.Management.Automation.Runspaces.InitialSessionState.Types" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.Runspaces.InitialSessionStateEntryCollection&lt;System.Management.Automation.Runspaces.SessionStateTypeEntry&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            List of types to use for this session state instance...
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UseFullLanguageModeInDebugger">
+      <MemberSignature Language="C#" Value="public bool UseFullLanguageModeInDebugger { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool UseFullLanguageModeInDebugger" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.Runspaces.InitialSessionState.UseFullLanguageModeInDebugger" />
+      <MemberSignature Language="VB.NET" Value="Public Property UseFullLanguageModeInDebugger As Boolean" />
+      <MemberSignature Language="F#" Value="member this.UseFullLanguageModeInDebugger : bool with get, set" Usage="System.Management.Automation.Runspaces.InitialSessionState.UseFullLanguageModeInDebugger" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            If true the PowerShell debugger will use FullLanguage mode, otherwise it will use the current language mode
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Variables">
+      <MemberSignature Language="C#" Value="public virtual System.Management.Automation.Runspaces.InitialSessionStateEntryCollection&lt;System.Management.Automation.Runspaces.SessionStateVariableEntry&gt; Variables { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Management.Automation.Runspaces.InitialSessionStateEntryCollection`1&lt;class System.Management.Automation.Runspaces.SessionStateVariableEntry&gt; Variables" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.Runspaces.InitialSessionState.Variables" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable ReadOnly Property Variables As InitialSessionStateEntryCollection(Of SessionStateVariableEntry)" />
+      <MemberSignature Language="F#" Value="member this.Variables : System.Management.Automation.Runspaces.InitialSessionStateEntryCollection&lt;System.Management.Automation.Runspaces.SessionStateVariableEntry&gt;" Usage="System.Management.Automation.Runspaces.InitialSessionState.Variables" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.Runspaces.InitialSessionStateEntryCollection&lt;System.Management.Automation.Runspaces.SessionStateVariableEntry&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary />
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

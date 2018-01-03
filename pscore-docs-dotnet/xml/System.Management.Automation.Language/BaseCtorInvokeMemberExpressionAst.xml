@@ -1,0 +1,59 @@
+﻿<Type Name="BaseCtorInvokeMemberExpressionAst" FullName="System.Management.Automation.Language.BaseCtorInvokeMemberExpressionAst">
+  <TypeSignature Language="C#" Value="public class BaseCtorInvokeMemberExpressionAst : System.Management.Automation.Language.InvokeMemberExpressionAst" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit BaseCtorInvokeMemberExpressionAst extends System.Management.Automation.Language.InvokeMemberExpressionAst" />
+  <TypeSignature Language="DocId" Value="T:System.Management.Automation.Language.BaseCtorInvokeMemberExpressionAst" />
+  <TypeSignature Language="VB.NET" Value="Public Class BaseCtorInvokeMemberExpressionAst&#xA;Inherits InvokeMemberExpressionAst" />
+  <TypeSignature Language="F#" Value="type BaseCtorInvokeMemberExpressionAst = class&#xA;    inherit InvokeMemberExpressionAst" />
+  <AssemblyInfo>
+    <AssemblyName>System.Management.Automation</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Management.Automation.Language.InvokeMemberExpressionAst</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            The ast that represents the invocation of a base ctor method from PS class instance ctor, e.g. <c>class B : A{ B() : base() {} }</c>.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public BaseCtorInvokeMemberExpressionAst (System.Management.Automation.Language.IScriptExtent baseKeywordExtent, System.Management.Automation.Language.IScriptExtent baseCallExtent, System.Collections.Generic.IEnumerable&lt;System.Management.Automation.Language.ExpressionAst&gt; arguments);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Management.Automation.Language.IScriptExtent baseKeywordExtent, class System.Management.Automation.Language.IScriptExtent baseCallExtent, class System.Collections.Generic.IEnumerable`1&lt;class System.Management.Automation.Language.ExpressionAst&gt; arguments) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Language.BaseCtorInvokeMemberExpressionAst.#ctor(System.Management.Automation.Language.IScriptExtent,System.Management.Automation.Language.IScriptExtent,System.Collections.Generic.IEnumerable{System.Management.Automation.Language.ExpressionAst})" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (baseKeywordExtent As IScriptExtent, baseCallExtent As IScriptExtent, arguments As IEnumerable(Of ExpressionAst))" />
+      <MemberSignature Language="F#" Value="new System.Management.Automation.Language.BaseCtorInvokeMemberExpressionAst : System.Management.Automation.Language.IScriptExtent * System.Management.Automation.Language.IScriptExtent * seq&lt;System.Management.Automation.Language.ExpressionAst&gt; -&gt; System.Management.Automation.Language.BaseCtorInvokeMemberExpressionAst" Usage="new System.Management.Automation.Language.BaseCtorInvokeMemberExpressionAst (baseKeywordExtent, baseCallExtent, arguments)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="baseKeywordExtent" Type="System.Management.Automation.Language.IScriptExtent" />
+        <Parameter Name="baseCallExtent" Type="System.Management.Automation.Language.IScriptExtent" />
+        <Parameter Name="arguments" Type="System.Collections.Generic.IEnumerable&lt;System.Management.Automation.Language.ExpressionAst&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="baseKeywordExtent">
+            The extent of the base keyword, i.e. for
+            <c>class B : A { B() : base(100) {} }</c>
+            it will be "base".
+            Can be empty extent (i.e. for implicit base ctor call).
+            </param>
+        <param name="baseCallExtent">
+            The extent of the base ctor call expression, i.e. for
+            <c>class B : A { B() : base(100) {} }</c>
+            it will be "base(100)"
+            Can be empty extent (i.e. for implicit base ctor call).
+            </param>
+        <param name="arguments">The arguments to pass to the ctor.</param>
+        <summary>
+            Construct an instance of a base ctor invocation expression.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

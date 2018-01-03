@@ -1,0 +1,70 @@
+﻿<Type Name="ErrorExpressionAst" FullName="System.Management.Automation.Language.ErrorExpressionAst">
+  <TypeSignature Language="C#" Value="public class ErrorExpressionAst : System.Management.Automation.Language.ExpressionAst" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ErrorExpressionAst extends System.Management.Automation.Language.ExpressionAst" />
+  <TypeSignature Language="DocId" Value="T:System.Management.Automation.Language.ErrorExpressionAst" />
+  <TypeSignature Language="VB.NET" Value="Public Class ErrorExpressionAst&#xA;Inherits ExpressionAst" />
+  <TypeSignature Language="F#" Value="type ErrorExpressionAst = class&#xA;    inherit ExpressionAst" />
+  <AssemblyInfo>
+    <AssemblyName>System.Management.Automation</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Management.Automation.Language.ExpressionAst</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            A placeholder expression used when there are syntactic errors in the source script.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Copy">
+      <MemberSignature Language="C#" Value="public override System.Management.Automation.Language.Ast Copy ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Management.Automation.Language.Ast Copy() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Language.ErrorExpressionAst.Copy" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Function Copy () As Ast" />
+      <MemberSignature Language="F#" Value="override this.Copy : unit -&gt; System.Management.Automation.Language.Ast" Usage="errorExpressionAst.Copy " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.Language.Ast</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Copy the ErrorExpressionAst instance
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NestedAst">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.ReadOnlyCollection&lt;System.Management.Automation.Language.Ast&gt; NestedAst { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ObjectModel.ReadOnlyCollection`1&lt;class System.Management.Automation.Language.Ast&gt; NestedAst" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.Language.ErrorExpressionAst.NestedAst" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property NestedAst As ReadOnlyCollection(Of Ast)" />
+      <MemberSignature Language="F#" Value="member this.NestedAst : System.Collections.ObjectModel.ReadOnlyCollection&lt;System.Management.Automation.Language.Ast&gt;" Usage="System.Management.Automation.Language.ErrorExpressionAst.NestedAst" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.ReadOnlyCollection&lt;System.Management.Automation.Language.Ast&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Sometimes a valid ast is parsed successfully within the extent that this error expression represents.  Those
+            asts are contained in this collection.  This collection may contain other error asts.  This collection may
+            be null when no asts were successfully constructed within the extent of this error ast.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

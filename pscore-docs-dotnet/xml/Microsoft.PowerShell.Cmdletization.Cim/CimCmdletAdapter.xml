@@ -1,0 +1,198 @@
+﻿<Type Name="CimCmdletAdapter" FullName="Microsoft.PowerShell.Cmdletization.Cim.CimCmdletAdapter">
+  <TypeSignature Language="C#" Value="public sealed class CimCmdletAdapter : Microsoft.PowerShell.Cmdletization.SessionBasedCmdletAdapter&lt;Microsoft.Management.Infrastructure.CimInstance,Microsoft.Management.Infrastructure.CimSession&gt;, System.Management.Automation.IDynamicParameters" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit CimCmdletAdapter extends Microsoft.PowerShell.Cmdletization.SessionBasedCmdletAdapter`2&lt;class Microsoft.Management.Infrastructure.CimInstance, class Microsoft.Management.Infrastructure.CimSession&gt; implements class System.Management.Automation.IDynamicParameters" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.PowerShell.Cmdletization.Cim.CimCmdletAdapter" />
+  <TypeSignature Language="VB.NET" Value="Public NotInheritable Class CimCmdletAdapter&#xA;Inherits SessionBasedCmdletAdapter(Of CimInstance, CimSession)&#xA;Implements IDynamicParameters" />
+  <TypeSignature Language="F#" Value="type CimCmdletAdapter = class&#xA;    inherit SessionBasedCmdletAdapter&lt;CimInstance, CimSession&gt;&#xA;    interface IDynamicParameters" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.PowerShell.Commands.Management</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Microsoft.PowerShell.Cmdletization.SessionBasedCmdletAdapter&lt;Microsoft.Management.Infrastructure.CimInstance,Microsoft.Management.Infrastructure.CimSession&gt;</BaseTypeName>
+    <BaseTypeArguments>
+      <BaseTypeArgument TypeParamName="TObjectInstance">Microsoft.Management.Infrastructure.CimInstance</BaseTypeArgument>
+      <BaseTypeArgument TypeParamName="TSession">Microsoft.Management.Infrastructure.CimSession</BaseTypeArgument>
+    </BaseTypeArguments>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Management.Automation.IDynamicParameters</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>
+            CIM-specific ObjectModelWrapper
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CimCmdletAdapter ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Cmdletization.Cim.CimCmdletAdapter.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New ()" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Commands.Management</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CimSession">
+      <MemberSignature Language="C#" Value="public Microsoft.Management.Infrastructure.CimSession[] CimSession { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Management.Infrastructure.CimSession[] CimSession" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Cmdletization.Cim.CimCmdletAdapter.CimSession" />
+      <MemberSignature Language="VB.NET" Value="Public Property CimSession As CimSession()" />
+      <MemberSignature Language="F#" Value="member this.CimSession : Microsoft.Management.Infrastructure.CimSession[] with get, set" Usage="Microsoft.PowerShell.Cmdletization.Cim.CimCmdletAdapter.CimSession" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Commands.Management</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Alias(Mono.Cecil.CustomAttributeArgument[])</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.ValidateNotNullOrEmpty</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Microsoft.Management.Infrastructure.CimSession[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            CimSession to operate on
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultSession">
+      <MemberSignature Language="C#" Value="protected override Microsoft.Management.Infrastructure.CimSession DefaultSession { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Management.Infrastructure.CimSession DefaultSession" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Cmdletization.Cim.CimCmdletAdapter.DefaultSession" />
+      <MemberSignature Language="VB.NET" Value="Protected Overrides ReadOnly Property DefaultSession As CimSession" />
+      <MemberSignature Language="F#" Value="member this.DefaultSession : Microsoft.Management.Infrastructure.CimSession" Usage="Microsoft.PowerShell.Cmdletization.Cim.CimCmdletAdapter.DefaultSession" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Commands.Management</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Management.Infrastructure.CimSession</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Returns default sessions to use when the user doesn't specify the -Session cmdlet parameter.
+            </summary>
+        <value>Default sessions to use when the user doesn't specify the -Session cmdlet parameter</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GenerateParentJobName">
+      <MemberSignature Language="C#" Value="protected override string GenerateParentJobName ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance string GenerateParentJobName() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Cmdletization.Cim.CimCmdletAdapter.GenerateParentJobName" />
+      <MemberSignature Language="VB.NET" Value="Protected Overrides Function GenerateParentJobName () As String" />
+      <MemberSignature Language="F#" Value="override this.GenerateParentJobName : unit -&gt; string" Usage="cimCmdletAdapter.GenerateParentJobName " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Commands.Management</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Returns a new job name to use for the parent job that handles throttling of the child jobs that actually perform querying and method invocation.
+            </summary>
+        <returns>Job name</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetQueryBuilder">
+      <MemberSignature Language="C#" Value="public override Microsoft.PowerShell.Cmdletization.QueryBuilder GetQueryBuilder ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class Microsoft.PowerShell.Cmdletization.QueryBuilder GetQueryBuilder() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Cmdletization.Cim.CimCmdletAdapter.GetQueryBuilder" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Function GetQueryBuilder () As QueryBuilder" />
+      <MemberSignature Language="F#" Value="override this.GetQueryBuilder : unit -&gt; Microsoft.PowerShell.Cmdletization.QueryBuilder" Usage="cimCmdletAdapter.GetQueryBuilder " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Commands.Management</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.PowerShell.Cmdletization.QueryBuilder</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Creates a query builder for CIM OM
+            </summary>
+        <returns>Query builder for CIM OM</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Management.Automation.IDynamicParameters.GetDynamicParameters">
+      <MemberSignature Language="C#" Value="object IDynamicParameters.GetDynamicParameters ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance object System.Management.Automation.IDynamicParameters.GetDynamicParameters() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Cmdletization.Cim.CimCmdletAdapter.System#Management#Automation#IDynamicParameters#GetDynamicParameters" />
+      <MemberSignature Language="VB.NET" Value="Function GetDynamicParameters () As Object Implements IDynamicParameters.GetDynamicParameters" />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.Management.Automation.IDynamicParameters.GetDynamicParameters</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Commands.Management</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ThrottleLimit">
+      <MemberSignature Language="C#" Value="public override int ThrottleLimit { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 ThrottleLimit" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Cmdletization.Cim.CimCmdletAdapter.ThrottleLimit" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Property ThrottleLimit As Integer" />
+      <MemberSignature Language="F#" Value="member this.ThrottleLimit : int with get, set" Usage="Microsoft.PowerShell.Cmdletization.Cim.CimCmdletAdapter.ThrottleLimit" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Commands.Management</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Maximum number of remote connections that can remain active at any given time.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

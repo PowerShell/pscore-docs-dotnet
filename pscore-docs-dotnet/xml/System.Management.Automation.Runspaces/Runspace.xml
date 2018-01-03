@@ -1,0 +1,1244 @@
+﻿<Type Name="Runspace" FullName="System.Management.Automation.Runspaces.Runspace">
+  <TypeSignature Language="C#" Value="public abstract class Runspace : IDisposable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract Runspace extends System.Object implements class System.IDisposable" />
+  <TypeSignature Language="DocId" Value="T:System.Management.Automation.Runspaces.Runspace" />
+  <TypeSignature Language="VB.NET" Value="Public MustInherit Class Runspace&#xA;Implements IDisposable" />
+  <TypeSignature Language="F#" Value="type Runspace = class&#xA;    interface IDisposable" />
+  <AssemblyInfo>
+    <AssemblyName>System.Management.Automation</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>
+            Public interface to Msh Runtime. Provides APIs for creating pipelines,
+            access session state etc.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="AvailabilityChanged">
+      <MemberSignature Language="C#" Value="public abstract event EventHandler&lt;System.Management.Automation.Runspaces.RunspaceAvailabilityEventArgs&gt; AvailabilityChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class System.Management.Automation.Runspaces.RunspaceAvailabilityEventArgs&gt; AvailabilityChanged" />
+      <MemberSignature Language="DocId" Value="E:System.Management.Automation.Runspaces.Runspace.AvailabilityChanged" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Event AvailabilityChanged As EventHandler(Of RunspaceAvailabilityEventArgs) " />
+      <MemberSignature Language="F#" Value="member this.AvailabilityChanged : EventHandler&lt;System.Management.Automation.Runspaces.RunspaceAvailabilityEventArgs&gt; " Usage="member this.AvailabilityChanged : System.EventHandler&lt;System.Management.Automation.Runspaces.RunspaceAvailabilityEventArgs&gt; " />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;System.Management.Automation.Runspaces.RunspaceAvailabilityEventArgs&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Event raised when the availability of the Runspace changes.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanUseDefaultRunspace">
+      <MemberSignature Language="C#" Value="public static bool CanUseDefaultRunspace { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property bool CanUseDefaultRunspace" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.Runspaces.Runspace.CanUseDefaultRunspace" />
+      <MemberSignature Language="VB.NET" Value="Public Shared ReadOnly Property CanUseDefaultRunspace As Boolean" />
+      <MemberSignature Language="F#" Value="member this.CanUseDefaultRunspace : bool" Usage="System.Management.Automation.Runspaces.Runspace.CanUseDefaultRunspace" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Returns true if Runspace.DefaultRunspace can be used to
+            create an instance of the PowerShell class with
+            'UseCurrentRunspace = true'.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Close">
+      <MemberSignature Language="C#" Value="public abstract void Close ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Close() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Runspaces.Runspace.Close" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Sub Close ()" />
+      <MemberSignature Language="F#" Value="abstract member Close : unit -&gt; unit" Usage="runspace.Close " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Close the runspace synchronously.
+            </summary>
+        <remarks>
+            Attempts to execute pipelines after a call to close will fail.
+            </remarks>
+        <exception cref="T:System.Management.Automation.Runspaces.InvalidRunspaceStateException">
+            RunspaceState is BeforeOpen or Opening
+            </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CloseAsync">
+      <MemberSignature Language="C#" Value="public abstract void CloseAsync ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void CloseAsync() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Runspaces.Runspace.CloseAsync" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Sub CloseAsync ()" />
+      <MemberSignature Language="F#" Value="abstract member CloseAsync : unit -&gt; unit" Usage="runspace.CloseAsync " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Close the runspace Asynchronously.
+            </summary>
+        <remarks>
+            Attempts to execute pipelines after a call to
+            close will fail.
+            </remarks>
+        <exception cref="T:System.Management.Automation.Runspaces.InvalidRunspaceStateException">
+            RunspaceState is BeforeOpen or Opening
+            </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Connect">
+      <MemberSignature Language="C#" Value="public abstract void Connect ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Connect() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Runspaces.Runspace.Connect" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Sub Connect ()" />
+      <MemberSignature Language="F#" Value="abstract member Connect : unit -&gt; unit" Usage="runspace.Connect " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Connects the runspace to its remote counterpart synchronously.
+            </summary>
+        <remarks>
+            Connects the runspace object to its corresponding runspace on the target
+            server machine.  The target server machine is identified by the connection
+            object passed in during construction.  The remote runspace is identified
+            by the internal runspace Guid value.
+            </remarks>
+        <exception cref="T:System.Management.Automation.Runspaces.InvalidRunspaceStateException">
+            RunspaceState is not Disconnected.
+            </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ConnectAsync">
+      <MemberSignature Language="C#" Value="public abstract void ConnectAsync ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void ConnectAsync() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Runspaces.Runspace.ConnectAsync" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Sub ConnectAsync ()" />
+      <MemberSignature Language="F#" Value="abstract member ConnectAsync : unit -&gt; unit" Usage="runspace.ConnectAsync " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Connects a runspace to its remote counterpart asynchronously.
+            </summary>
+        <remarks>
+            Connects the runspace object to its corresponding runspace on the target
+            server machine.  The target server machine is identified by the connection
+            object passed in during construction.  The remote runspace is identified
+            by the internal runspace Guid value.
+            </remarks>
+        <exception cref="T:System.Management.Automation.Runspaces.InvalidRunspaceStateException">
+            RunspaceState is not Disconnected.
+            </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ConnectionInfo">
+      <MemberSignature Language="C#" Value="public abstract System.Management.Automation.Runspaces.RunspaceConnectionInfo ConnectionInfo { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Management.Automation.Runspaces.RunspaceConnectionInfo ConnectionInfo" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.Runspaces.Runspace.ConnectionInfo" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride ReadOnly Property ConnectionInfo As RunspaceConnectionInfo" />
+      <MemberSignature Language="F#" Value="member this.ConnectionInfo : System.Management.Automation.Runspaces.RunspaceConnectionInfo" Usage="System.Management.Automation.Runspaces.Runspace.ConnectionInfo" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.Runspaces.RunspaceConnectionInfo</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Connection information for remote Runspaces, null for local Runspaces
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateDisconnectedPipeline">
+      <MemberSignature Language="C#" Value="public abstract System.Management.Automation.Runspaces.Pipeline CreateDisconnectedPipeline ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Management.Automation.Runspaces.Pipeline CreateDisconnectedPipeline() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Runspaces.Runspace.CreateDisconnectedPipeline" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Function CreateDisconnectedPipeline () As Pipeline" />
+      <MemberSignature Language="F#" Value="abstract member CreateDisconnectedPipeline : unit -&gt; System.Management.Automation.Runspaces.Pipeline" Usage="runspace.CreateDisconnectedPipeline " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.Runspaces.Pipeline</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Creates a PipeLine object in the disconnected state for the currently disconnected
+            remote running command associated with this runspace.
+            </summary>
+        <returns>Pipeline object in disconnected state.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateDisconnectedPowerShell">
+      <MemberSignature Language="C#" Value="public abstract System.Management.Automation.PowerShell CreateDisconnectedPowerShell ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Management.Automation.PowerShell CreateDisconnectedPowerShell() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Runspaces.Runspace.CreateDisconnectedPowerShell" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Function CreateDisconnectedPowerShell () As PowerShell" />
+      <MemberSignature Language="F#" Value="abstract member CreateDisconnectedPowerShell : unit -&gt; System.Management.Automation.PowerShell" Usage="runspace.CreateDisconnectedPowerShell " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.PowerShell</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Creates a PowerShell object in the disconnected state for the currently disconnected
+            remote running command associated with this runspace.
+            </summary>
+        <returns>PowerShell object in disconnected state.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateNestedPipeline">
+      <MemberSignature Language="C#" Value="public abstract System.Management.Automation.Runspaces.Pipeline CreateNestedPipeline ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Management.Automation.Runspaces.Pipeline CreateNestedPipeline() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Runspaces.Runspace.CreateNestedPipeline" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Function CreateNestedPipeline () As Pipeline" />
+      <MemberSignature Language="F#" Value="abstract member CreateNestedPipeline : unit -&gt; System.Management.Automation.Runspaces.Pipeline" Usage="runspace.CreateNestedPipeline " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.Runspaces.Pipeline</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Creates a nested pipeline.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>
+            Nested pipelines are needed for nested prompt scenario. Nested
+            prompt requires that we execute new pipelines( child pipelines)
+            while current pipeline (lets call it parent pipeline) is blocked.
+            </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateNestedPipeline">
+      <MemberSignature Language="C#" Value="public abstract System.Management.Automation.Runspaces.Pipeline CreateNestedPipeline (string command, bool addToHistory);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Management.Automation.Runspaces.Pipeline CreateNestedPipeline(string command, bool addToHistory) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Runspaces.Runspace.CreateNestedPipeline(System.String,System.Boolean)" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Function CreateNestedPipeline (command As String, addToHistory As Boolean) As Pipeline" />
+      <MemberSignature Language="F#" Value="abstract member CreateNestedPipeline : string * bool -&gt; System.Management.Automation.Runspaces.Pipeline" Usage="runspace.CreateNestedPipeline (command, addToHistory)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.Runspaces.Pipeline</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="command" Type="System.String" />
+        <Parameter Name="addToHistory" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="command">A valid command string</param>
+        <param name="addToHistory">if true command is added to history</param>
+        <summary>
+            Creates a nested pipeline.
+            </summary>
+        <returns>
+            A pipeline pre-filled with Command specified in commandString.
+            </returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+            command is null
+            </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CreatePipeline">
+      <MemberSignature Language="C#" Value="public abstract System.Management.Automation.Runspaces.Pipeline CreatePipeline ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Management.Automation.Runspaces.Pipeline CreatePipeline() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Runspaces.Runspace.CreatePipeline" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Function CreatePipeline () As Pipeline" />
+      <MemberSignature Language="F#" Value="abstract member CreatePipeline : unit -&gt; System.Management.Automation.Runspaces.Pipeline" Usage="runspace.CreatePipeline " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.Runspaces.Pipeline</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Create an empty pipeline
+            </summary>
+        <returns>An empty pipeline</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreatePipeline">
+      <MemberSignature Language="C#" Value="public abstract System.Management.Automation.Runspaces.Pipeline CreatePipeline (string command);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Management.Automation.Runspaces.Pipeline CreatePipeline(string command) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Runspaces.Runspace.CreatePipeline(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Function CreatePipeline (command As String) As Pipeline" />
+      <MemberSignature Language="F#" Value="abstract member CreatePipeline : string -&gt; System.Management.Automation.Runspaces.Pipeline" Usage="runspace.CreatePipeline command" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.Runspaces.Pipeline</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="command" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="command">A valid command string</param>
+        <summary>
+            Creates a pipeline for specified command string
+            </summary>
+        <returns>
+            A pipeline pre-filled with a <see cref="T:System.Management.Automation.Runspaces.Command" /> object for specified command parameter.
+            </returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+            command is null
+            </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CreatePipeline">
+      <MemberSignature Language="C#" Value="public abstract System.Management.Automation.Runspaces.Pipeline CreatePipeline (string command, bool addToHistory);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Management.Automation.Runspaces.Pipeline CreatePipeline(string command, bool addToHistory) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Runspaces.Runspace.CreatePipeline(System.String,System.Boolean)" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Function CreatePipeline (command As String, addToHistory As Boolean) As Pipeline" />
+      <MemberSignature Language="F#" Value="abstract member CreatePipeline : string * bool -&gt; System.Management.Automation.Runspaces.Pipeline" Usage="runspace.CreatePipeline (command, addToHistory)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.Runspaces.Pipeline</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="command" Type="System.String" />
+        <Parameter Name="addToHistory" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="command">A valid command string</param>
+        <param name="addToHistory">if true command is added to history</param>
+        <summary>
+            Create a pipeline from a command string.
+            </summary>
+        <returns>
+            A pipeline pre-filled with a <see cref="T:System.Management.Automation.Runspaces.Command" /> object for specified command parameter.
+            </returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+            command is null
+            </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Debugger">
+      <MemberSignature Language="C#" Value="public virtual System.Management.Automation.Debugger Debugger { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Management.Automation.Debugger Debugger" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.Runspaces.Runspace.Debugger" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable ReadOnly Property Debugger As Debugger" />
+      <MemberSignature Language="F#" Value="member this.Debugger : System.Management.Automation.Debugger" Usage="System.Management.Automation.Runspaces.Runspace.Debugger" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.Debugger</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the debugger
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultRunspace">
+      <MemberSignature Language="C#" Value="public static System.Management.Automation.Runspaces.Runspace DefaultRunspace { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Management.Automation.Runspaces.Runspace DefaultRunspace" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.Runspaces.Runspace.DefaultRunspace" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Property DefaultRunspace As Runspace" />
+      <MemberSignature Language="F#" Value="member this.DefaultRunspace : System.Management.Automation.Runspaces.Runspace with get, set" Usage="System.Management.Automation.Runspaces.Runspace.DefaultRunspace" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.Runspaces.Runspace</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets and sets the default Runspace used to evaluate scripts
+            </summary>
+        <value>To be added.</value>
+        <remarks>The Runspace used to set this property should not be shared between different threads.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Disconnect">
+      <MemberSignature Language="C#" Value="public abstract void Disconnect ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Disconnect() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Runspaces.Runspace.Disconnect" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Sub Disconnect ()" />
+      <MemberSignature Language="F#" Value="abstract member Disconnect : unit -&gt; unit" Usage="runspace.Disconnect " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Disconnects the runspace synchronously.
+            </summary>
+        <remarks>
+            Disconnects the remote runspace and any running command from the server
+            machine.  Any data generated by the running command on the server is
+            cached on the server machine.  This runspace object goes to the disconnected
+            state.  This object can be reconnected to the server by calling the
+            Connect() method.
+            If the remote runspace on the server remains disconnected for the IdleTimeout
+            value (as defined in the WSManConnectionInfo object) then it is closed and
+            torn down on the server.
+            </remarks>
+        <exception cref="T:System.Management.Automation.Runspaces.InvalidRunspaceStateException">
+            RunspaceState is not Opened.
+            </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="DisconnectAsync">
+      <MemberSignature Language="C#" Value="public abstract void DisconnectAsync ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void DisconnectAsync() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Runspaces.Runspace.DisconnectAsync" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Sub DisconnectAsync ()" />
+      <MemberSignature Language="F#" Value="abstract member DisconnectAsync : unit -&gt; unit" Usage="runspace.DisconnectAsync " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Disconnects the runspace asynchronously.
+            </summary>
+        <remarks>
+            Disconnects the remote runspace and any running command from the server
+            machine.  Any data generated by the running command on the server is
+            cached on the server machine.  This runspace object goes to the disconnected
+            state.  This object can be reconnected to the server by calling the
+            Connect() method.
+            If the remote runspace on the server remains disconnected for the IdleTimeout
+            value (as defined in the WSManConnectionInfo object) then it is closed and
+            torn down on the server.
+            </remarks>
+        <exception cref="T:System.Management.Automation.Runspaces.InvalidRunspaceStateException">
+            RunspaceState is not Opened.
+            </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="DisconnectedOn">
+      <MemberSignature Language="C#" Value="public Nullable&lt;DateTime&gt; DisconnectedOn { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Nullable`1&lt;valuetype System.DateTime&gt; DisconnectedOn" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.Runspaces.Runspace.DisconnectedOn" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property DisconnectedOn As Nullable(Of DateTime)" />
+      <MemberSignature Language="F#" Value="member this.DisconnectedOn : Nullable&lt;DateTime&gt;" Usage="System.Management.Automation.Runspaces.Runspace.DisconnectedOn" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Nullable&lt;System.DateTime&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            DisconnectedOn property applies to remote runspaces that have
+            been disconnected.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="public void Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Dispose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Runspaces.Runspace.Dispose" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Dispose ()" />
+      <MemberSignature Language="F#" Value="abstract member Dispose : unit -&gt; unit&#xA;override this.Dispose : unit -&gt; unit" Usage="runspace.Dispose " />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.IDisposable.Dispose</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Disposes this runspace instance. Dispose will close the runspace if not closed already.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="protected virtual void Dispose (bool disposing);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void Dispose(bool disposing) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Runspaces.Runspace.Dispose(System.Boolean)" />
+      <MemberSignature Language="VB.NET" Value="Protected Overridable Sub Dispose (disposing As Boolean)" />
+      <MemberSignature Language="F#" Value="abstract member Dispose : bool -&gt; unit&#xA;override this.Dispose : bool -&gt; unit" Usage="runspace.Dispose disposing" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="disposing" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="disposing"></param>
+        <summary>
+            Protected dispose which can be overridden by derived classes.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Events">
+      <MemberSignature Language="C#" Value="public abstract System.Management.Automation.PSEventManager Events { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Management.Automation.PSEventManager Events" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.Runspaces.Runspace.Events" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride ReadOnly Property Events As PSEventManager" />
+      <MemberSignature Language="F#" Value="member this.Events : System.Management.Automation.PSEventManager" Usage="System.Management.Automation.Runspaces.Runspace.Events" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.PSEventManager</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the event manager
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ExpiresOn">
+      <MemberSignature Language="C#" Value="public Nullable&lt;DateTime&gt; ExpiresOn { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Nullable`1&lt;valuetype System.DateTime&gt; ExpiresOn" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.Runspaces.Runspace.ExpiresOn" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ExpiresOn As Nullable(Of DateTime)" />
+      <MemberSignature Language="F#" Value="member this.ExpiresOn : Nullable&lt;DateTime&gt;" Usage="System.Management.Automation.Runspaces.Runspace.ExpiresOn" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Nullable&lt;System.DateTime&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            ExpiresOn property applies to remote runspaces that have been
+            disconnected.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetApplicationPrivateData">
+      <MemberSignature Language="C#" Value="public abstract System.Management.Automation.PSPrimitiveDictionary GetApplicationPrivateData ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Management.Automation.PSPrimitiveDictionary GetApplicationPrivateData() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Runspaces.Runspace.GetApplicationPrivateData" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Function GetApplicationPrivateData () As PSPrimitiveDictionary" />
+      <MemberSignature Language="F#" Value="abstract member GetApplicationPrivateData : unit -&gt; System.Management.Automation.PSPrimitiveDictionary" Usage="runspace.GetApplicationPrivateData " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.PSPrimitiveDictionary</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+             Private data to be used by applications built on top of PowerShell.
+            
+             Local runspace is created with application private data set to an empty <see cref="T:System.Management.Automation.PSPrimitiveDictionary" />.
+            
+             Remote runspace gets its application private data from the server (set when creating a remote runspace pool)
+             Calling this method on a remote runspace will block until the data is received from the server.
+             The server will send application private data before reaching <see cref="F:System.Management.Automation.Runspaces.RunspacePoolState.Opened" /> state.
+            
+             Runspaces that are part of a <see cref="T:System.Management.Automation.Runspaces.RunspacePool" /> inherit application private data from the pool.
+             </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetCapabilities">
+      <MemberSignature Language="C#" Value="public abstract System.Management.Automation.Runspaces.RunspaceCapability GetCapabilities ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance valuetype System.Management.Automation.Runspaces.RunspaceCapability GetCapabilities() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Runspaces.Runspace.GetCapabilities" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Function GetCapabilities () As RunspaceCapability" />
+      <MemberSignature Language="F#" Value="abstract member GetCapabilities : unit -&gt; System.Management.Automation.Runspaces.RunspaceCapability" Usage="runspace.GetCapabilities " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.Runspaces.RunspaceCapability</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Returns Runspace capabilities.
+            </summary>
+        <returns>RunspaceCapability</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetRunspace">
+      <MemberSignature Language="C#" Value="public static System.Management.Automation.Runspaces.Runspace GetRunspace (System.Management.Automation.Runspaces.RunspaceConnectionInfo connectionInfo, Guid sessionId, Nullable&lt;Guid&gt; commandId, System.Management.Automation.Host.PSHost host, System.Management.Automation.Runspaces.TypeTable typeTable);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Management.Automation.Runspaces.Runspace GetRunspace(class System.Management.Automation.Runspaces.RunspaceConnectionInfo connectionInfo, valuetype System.Guid sessionId, valuetype System.Nullable`1&lt;valuetype System.Guid&gt; commandId, class System.Management.Automation.Host.PSHost host, class System.Management.Automation.Runspaces.TypeTable typeTable) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Runspaces.Runspace.GetRunspace(System.Management.Automation.Runspaces.RunspaceConnectionInfo,System.Guid,System.Nullable{System.Guid},System.Management.Automation.Host.PSHost,System.Management.Automation.Runspaces.TypeTable)" />
+      <MemberSignature Language="F#" Value="static member GetRunspace : System.Management.Automation.Runspaces.RunspaceConnectionInfo * Guid * Nullable&lt;Guid&gt; * System.Management.Automation.Host.PSHost * System.Management.Automation.Runspaces.TypeTable -&gt; System.Management.Automation.Runspaces.Runspace" Usage="System.Management.Automation.Runspaces.Runspace.GetRunspace (connectionInfo, sessionId, commandId, host, typeTable)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.Runspaces.Runspace</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="connectionInfo" Type="System.Management.Automation.Runspaces.RunspaceConnectionInfo" />
+        <Parameter Name="sessionId" Type="System.Guid" />
+        <Parameter Name="commandId" Type="System.Nullable&lt;System.Guid&gt;" />
+        <Parameter Name="host" Type="System.Management.Automation.Host.PSHost" />
+        <Parameter Name="typeTable" Type="System.Management.Automation.Runspaces.TypeTable" />
+      </Parameters>
+      <Docs>
+        <param name="connectionInfo">Connection object for the target server.</param>
+        <param name="sessionId">Id of a disconnected remote session on the target server.</param>
+        <param name="commandId">Optional Id of a disconnected command running in the disconnected remote session on the target server.</param>
+        <param name="host">Optional client host object.</param>
+        <param name="typeTable">Optional TypeTable object.</param>
+        <summary>
+            Returns a single disconnected Runspace object targeted to the remote computer and remote
+            session as specified by the connection, session Id, and command Id parameters.
+            </summary>
+        <returns>Disconnected runspace corresponding to the provided session Id.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetRunspaces">
+      <MemberSignature Language="C#" Value="public static System.Management.Automation.Runspaces.Runspace[] GetRunspaces (System.Management.Automation.Runspaces.RunspaceConnectionInfo connectionInfo);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Management.Automation.Runspaces.Runspace[] GetRunspaces(class System.Management.Automation.Runspaces.RunspaceConnectionInfo connectionInfo) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Runspaces.Runspace.GetRunspaces(System.Management.Automation.Runspaces.RunspaceConnectionInfo)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function GetRunspaces (connectionInfo As RunspaceConnectionInfo) As Runspace()" />
+      <MemberSignature Language="F#" Value="static member GetRunspaces : System.Management.Automation.Runspaces.RunspaceConnectionInfo -&gt; System.Management.Automation.Runspaces.Runspace[]" Usage="System.Management.Automation.Runspaces.Runspace.GetRunspaces connectionInfo" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.Runspaces.Runspace[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="connectionInfo" Type="System.Management.Automation.Runspaces.RunspaceConnectionInfo" />
+      </Parameters>
+      <Docs>
+        <param name="connectionInfo">Connection object for the target server.</param>
+        <summary>
+            Queries the server for disconnected runspaces and creates an array of runspace
+            objects associated with each disconnected runspace on the server.  Each
+            runspace object in the returned array is in the Disconnected state and can be
+            connected to the server by calling the Connect() method on the runspace.
+            </summary>
+        <returns>Array of Runspace objects each in the Disconnected state.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetRunspaces">
+      <MemberSignature Language="C#" Value="public static System.Management.Automation.Runspaces.Runspace[] GetRunspaces (System.Management.Automation.Runspaces.RunspaceConnectionInfo connectionInfo, System.Management.Automation.Host.PSHost host);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Management.Automation.Runspaces.Runspace[] GetRunspaces(class System.Management.Automation.Runspaces.RunspaceConnectionInfo connectionInfo, class System.Management.Automation.Host.PSHost host) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Runspaces.Runspace.GetRunspaces(System.Management.Automation.Runspaces.RunspaceConnectionInfo,System.Management.Automation.Host.PSHost)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function GetRunspaces (connectionInfo As RunspaceConnectionInfo, host As PSHost) As Runspace()" />
+      <MemberSignature Language="F#" Value="static member GetRunspaces : System.Management.Automation.Runspaces.RunspaceConnectionInfo * System.Management.Automation.Host.PSHost -&gt; System.Management.Automation.Runspaces.Runspace[]" Usage="System.Management.Automation.Runspaces.Runspace.GetRunspaces (connectionInfo, host)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.Runspaces.Runspace[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="connectionInfo" Type="System.Management.Automation.Runspaces.RunspaceConnectionInfo" />
+        <Parameter Name="host" Type="System.Management.Automation.Host.PSHost" />
+      </Parameters>
+      <Docs>
+        <param name="connectionInfo">Connection object for the target server.</param>
+        <param name="host">Client host object.</param>
+        <summary>
+            Queries the server for disconnected runspaces and creates an array of runspace
+            objects associated with each disconnected runspace on the server.  Each
+            runspace object in the returned array is in the Disconnected state and can be
+            connected to the server by calling the Connect() method on the runspace.
+            </summary>
+        <returns>Array of Runspace objects each in the Disconnected state.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetRunspaces">
+      <MemberSignature Language="C#" Value="public static System.Management.Automation.Runspaces.Runspace[] GetRunspaces (System.Management.Automation.Runspaces.RunspaceConnectionInfo connectionInfo, System.Management.Automation.Host.PSHost host, System.Management.Automation.Runspaces.TypeTable typeTable);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Management.Automation.Runspaces.Runspace[] GetRunspaces(class System.Management.Automation.Runspaces.RunspaceConnectionInfo connectionInfo, class System.Management.Automation.Host.PSHost host, class System.Management.Automation.Runspaces.TypeTable typeTable) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Runspaces.Runspace.GetRunspaces(System.Management.Automation.Runspaces.RunspaceConnectionInfo,System.Management.Automation.Host.PSHost,System.Management.Automation.Runspaces.TypeTable)" />
+      <MemberSignature Language="F#" Value="static member GetRunspaces : System.Management.Automation.Runspaces.RunspaceConnectionInfo * System.Management.Automation.Host.PSHost * System.Management.Automation.Runspaces.TypeTable -&gt; System.Management.Automation.Runspaces.Runspace[]" Usage="System.Management.Automation.Runspaces.Runspace.GetRunspaces (connectionInfo, host, typeTable)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.Runspaces.Runspace[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="connectionInfo" Type="System.Management.Automation.Runspaces.RunspaceConnectionInfo" />
+        <Parameter Name="host" Type="System.Management.Automation.Host.PSHost" />
+        <Parameter Name="typeTable" Type="System.Management.Automation.Runspaces.TypeTable" />
+      </Parameters>
+      <Docs>
+        <param name="connectionInfo">Connection object for the target server.</param>
+        <param name="host">Client host object.</param>
+        <param name="typeTable">TypeTable object.</param>
+        <summary>
+            Queries the server for disconnected runspaces and creates an array of runspace
+            objects associated with each disconnected runspace on the server.  Each
+            runspace object in the returned array is in the Disconnected state and can be
+            connected to the server by calling the Connect() method on the runspace.
+            </summary>
+        <returns>Array of Runspace objects each in the Disconnected state.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Id">
+      <MemberSignature Language="C#" Value="public int Id { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Id" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.Runspaces.Runspace.Id" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Id As Integer" />
+      <MemberSignature Language="F#" Value="member this.Id : int" Usage="System.Management.Automation.Runspaces.Runspace.Id" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the Runspace Id.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InitialSessionState">
+      <MemberSignature Language="C#" Value="public abstract System.Management.Automation.Runspaces.InitialSessionState InitialSessionState { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Management.Automation.Runspaces.InitialSessionState InitialSessionState" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.Runspaces.Runspace.InitialSessionState" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride ReadOnly Property InitialSessionState As InitialSessionState" />
+      <MemberSignature Language="F#" Value="member this.InitialSessionState : System.Management.Automation.Runspaces.InitialSessionState" Usage="System.Management.Automation.Runspaces.Runspace.InitialSessionState" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.Runspaces.InitialSessionState</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            InitialSessionState information for this runspace.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InstanceId">
+      <MemberSignature Language="C#" Value="public Guid InstanceId { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Guid InstanceId" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.Runspaces.Runspace.InstanceId" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property InstanceId As Guid" />
+      <MemberSignature Language="F#" Value="member this.InstanceId : Guid" Usage="System.Management.Automation.Runspaces.Runspace.InstanceId" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Guid</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Get unique id for this instance of runspace. It is primarily used
+            for logging purposes
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="JobManager">
+      <MemberSignature Language="C#" Value="public abstract System.Management.Automation.JobManager JobManager { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Management.Automation.JobManager JobManager" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.Runspaces.Runspace.JobManager" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride ReadOnly Property JobManager As JobManager" />
+      <MemberSignature Language="F#" Value="member this.JobManager : System.Management.Automation.JobManager" Usage="System.Management.Automation.Runspaces.Runspace.JobManager" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.JobManager</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Manager for JobSourceAdapters registered in this runspace.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public string Name { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.Runspaces.Runspace.Name" />
+      <MemberSignature Language="VB.NET" Value="Public Property Name As String" />
+      <MemberSignature Language="F#" Value="member this.Name : string with get, set" Usage="System.Management.Automation.Runspaces.Runspace.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets and sets a friendly name for the Runspace.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnAvailabilityChanged">
+      <MemberSignature Language="C#" Value="protected abstract void OnAvailabilityChanged (System.Management.Automation.Runspaces.RunspaceAvailabilityEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnAvailabilityChanged(class System.Management.Automation.Runspaces.RunspaceAvailabilityEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Runspaces.Runspace.OnAvailabilityChanged(System.Management.Automation.Runspaces.RunspaceAvailabilityEventArgs)" />
+      <MemberSignature Language="VB.NET" Value="Protected MustOverride Sub OnAvailabilityChanged (e As RunspaceAvailabilityEventArgs)" />
+      <MemberSignature Language="F#" Value="abstract member OnAvailabilityChanged : System.Management.Automation.Runspaces.RunspaceAvailabilityEventArgs -&gt; unit" Usage="runspace.OnAvailabilityChanged e" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Management.Automation.Runspaces.RunspaceAvailabilityEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">To be added.</param>
+        <summary>
+            Raises the AvailabilityChanged event
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Open">
+      <MemberSignature Language="C#" Value="public abstract void Open ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Open() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Runspaces.Runspace.Open" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Sub Open ()" />
+      <MemberSignature Language="F#" Value="abstract member Open : unit -&gt; unit" Usage="runspace.Open " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Opens the runspace synchronously. Runspace must be opened before it can be used.
+            </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.Management.Automation.Runspaces.InvalidRunspaceStateException">
+            RunspaceState is not BeforeOpen
+            </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="OpenAsync">
+      <MemberSignature Language="C#" Value="public abstract void OpenAsync ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void OpenAsync() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Runspaces.Runspace.OpenAsync" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Sub OpenAsync ()" />
+      <MemberSignature Language="F#" Value="abstract member OpenAsync : unit -&gt; unit" Usage="runspace.OpenAsync " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Open the runspace Asynchronously.
+            </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.Management.Automation.Runspaces.InvalidRunspaceStateException">
+            RunspaceState is not BeforeOpen
+            </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="OriginalConnectionInfo">
+      <MemberSignature Language="C#" Value="public abstract System.Management.Automation.Runspaces.RunspaceConnectionInfo OriginalConnectionInfo { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Management.Automation.Runspaces.RunspaceConnectionInfo OriginalConnectionInfo" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.Runspaces.Runspace.OriginalConnectionInfo" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride ReadOnly Property OriginalConnectionInfo As RunspaceConnectionInfo" />
+      <MemberSignature Language="F#" Value="member this.OriginalConnectionInfo : System.Management.Automation.Runspaces.RunspaceConnectionInfo" Usage="System.Management.Automation.Runspaces.Runspace.OriginalConnectionInfo" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.Runspaces.RunspaceConnectionInfo</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            ConnectionInfo originally supplied by the user
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ResetRunspaceState">
+      <MemberSignature Language="C#" Value="public virtual void ResetRunspaceState ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void ResetRunspaceState() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Runspaces.Runspace.ResetRunspaceState" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Sub ResetRunspaceState ()" />
+      <MemberSignature Language="F#" Value="abstract member ResetRunspaceState : unit -&gt; unit&#xA;override this.ResetRunspaceState : unit -&gt; unit" Usage="runspace.ResetRunspaceState " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Resets the variable table for the runspace to the default state.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RunspaceAvailability">
+      <MemberSignature Language="C#" Value="public abstract System.Management.Automation.Runspaces.RunspaceAvailability RunspaceAvailability { get; protected set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Management.Automation.Runspaces.RunspaceAvailability RunspaceAvailability" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.Runspaces.Runspace.RunspaceAvailability" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Property RunspaceAvailability As RunspaceAvailability" />
+      <MemberSignature Language="F#" Value="member this.RunspaceAvailability : System.Management.Automation.Runspaces.RunspaceAvailability with get, set" Usage="System.Management.Automation.Runspaces.Runspace.RunspaceAvailability" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.Runspaces.RunspaceAvailability</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the current availability of the Runspace
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RunspaceIsRemote">
+      <MemberSignature Language="C#" Value="public bool RunspaceIsRemote { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool RunspaceIsRemote" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.Runspaces.Runspace.RunspaceIsRemote" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property RunspaceIsRemote As Boolean" />
+      <MemberSignature Language="F#" Value="member this.RunspaceIsRemote : bool" Usage="System.Management.Automation.Runspaces.Runspace.RunspaceIsRemote" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Return whether the Runspace is Remote
+            We can determine this by whether the runspace is an implementation of LocalRunspace
+            or infer it from whether the ConnectionInfo property is null
+            If it happens to be an instance of a LocalRunspace, but has a non-null ConnectionInfo
+            we declare it to be remote
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RunspaceStateInfo">
+      <MemberSignature Language="C#" Value="public abstract System.Management.Automation.Runspaces.RunspaceStateInfo RunspaceStateInfo { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Management.Automation.Runspaces.RunspaceStateInfo RunspaceStateInfo" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.Runspaces.Runspace.RunspaceStateInfo" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride ReadOnly Property RunspaceStateInfo As RunspaceStateInfo" />
+      <MemberSignature Language="F#" Value="member this.RunspaceStateInfo : System.Management.Automation.Runspaces.RunspaceStateInfo" Usage="System.Management.Automation.Runspaces.Runspace.RunspaceStateInfo" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.Runspaces.RunspaceStateInfo</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Retrieve information about current state of the runspace
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SessionStateProxy">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.Runspaces.SessionStateProxy SessionStateProxy { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Management.Automation.Runspaces.SessionStateProxy SessionStateProxy" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.Runspaces.Runspace.SessionStateProxy" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property SessionStateProxy As SessionStateProxy" />
+      <MemberSignature Language="F#" Value="member this.SessionStateProxy : System.Management.Automation.Runspaces.SessionStateProxy" Usage="System.Management.Automation.Runspaces.Runspace.SessionStateProxy" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.Runspaces.SessionStateProxy</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets session state proxy
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StateChanged">
+      <MemberSignature Language="C#" Value="public abstract event EventHandler&lt;System.Management.Automation.Runspaces.RunspaceStateEventArgs&gt; StateChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class System.Management.Automation.Runspaces.RunspaceStateEventArgs&gt; StateChanged" />
+      <MemberSignature Language="DocId" Value="E:System.Management.Automation.Runspaces.Runspace.StateChanged" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Event StateChanged As EventHandler(Of RunspaceStateEventArgs) " />
+      <MemberSignature Language="F#" Value="member this.StateChanged : EventHandler&lt;System.Management.Automation.Runspaces.RunspaceStateEventArgs&gt; " Usage="member this.StateChanged : System.EventHandler&lt;System.Management.Automation.Runspaces.RunspaceStateEventArgs&gt; " />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;System.Management.Automation.Runspaces.RunspaceStateEventArgs&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Event raised when RunspaceState changes.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ThreadOptions">
+      <MemberSignature Language="C#" Value="public abstract System.Management.Automation.Runspaces.PSThreadOptions ThreadOptions { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Management.Automation.Runspaces.PSThreadOptions ThreadOptions" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.Runspaces.Runspace.ThreadOptions" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Property ThreadOptions As PSThreadOptions" />
+      <MemberSignature Language="F#" Value="member this.ThreadOptions : System.Management.Automation.Runspaces.PSThreadOptions with get, set" Usage="System.Management.Automation.Runspaces.Runspace.ThreadOptions" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.Runspaces.PSThreadOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            This property determines whether a new thread is create for each invocation
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+            Any updates to the value of this property must be done before the Runspace is opened
+            </remarks>
+        <exception cref="T:System.Management.Automation.Runspaces.InvalidRunspaceStateException">
+            An attempt to change this property was made after opening the Runspace
+            </exception>
+        <exception cref="T:System.InvalidOperationException">
+            The thread options cannot be changed to the requested value
+            </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="UpdateRunspaceAvailability">
+      <MemberSignature Language="C#" Value="protected void UpdateRunspaceAvailability (System.Management.Automation.Runspaces.RunspaceState runspaceState, bool raiseEvent);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void UpdateRunspaceAvailability(valuetype System.Management.Automation.Runspaces.RunspaceState runspaceState, bool raiseEvent) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Runspaces.Runspace.UpdateRunspaceAvailability(System.Management.Automation.Runspaces.RunspaceState,System.Boolean)" />
+      <MemberSignature Language="F#" Value="member this.UpdateRunspaceAvailability : System.Management.Automation.Runspaces.RunspaceState * bool -&gt; unit" Usage="runspace.UpdateRunspaceAvailability (runspaceState, raiseEvent)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="runspaceState" Type="System.Management.Automation.Runspaces.RunspaceState" />
+        <Parameter Name="raiseEvent" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="runspaceState">To be added.</param>
+        <param name="raiseEvent">To be added.</param>
+        <summary>
+            Used to update the runspace availability event when the state of the runspace changes
+            </summary>
+        <remarks>
+            The possible runspace states are:
+                BeforeOpen
+                Opening
+                Opened
+                Closed
+                Closing
+                Broken
+            </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Version">
+      <MemberSignature Language="C#" Value="public abstract Version Version { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Version Version" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.Runspaces.Runspace.Version" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride ReadOnly Property Version As Version" />
+      <MemberSignature Language="F#" Value="member this.Version : Version" Usage="System.Management.Automation.Runspaces.Runspace.Version" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Version</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Return version of this runspace
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,1538 @@
+﻿<Type Name="PSDataCollection&lt;T&gt;" FullName="System.Management.Automation.PSDataCollection&lt;T&gt;">
+  <TypeSignature Language="C#" Value="public class PSDataCollection&lt;T&gt; : IDisposable, System.Collections.Generic.ICollection&lt;T&gt;, System.Collections.Generic.IEnumerable&lt;T&gt;, System.Collections.Generic.IList&lt;T&gt;, System.Collections.IList, System.Runtime.Serialization.ISerializable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable beforefieldinit PSDataCollection`1&lt;T&gt; extends System.Object implements class System.Collections.Generic.ICollection`1&lt;!T&gt;, class System.Collections.Generic.IEnumerable`1&lt;!T&gt;, class System.Collections.Generic.IList`1&lt;!T&gt;, class System.Collections.ICollection, class System.Collections.IEnumerable, class System.Collections.IList, class System.IDisposable, class System.Runtime.Serialization.ISerializable" />
+  <TypeSignature Language="DocId" Value="T:System.Management.Automation.PSDataCollection`1" />
+  <TypeSignature Language="VB.NET" Value="Public Class PSDataCollection(Of T)&#xA;Implements ICollection(Of T), IDisposable, IEnumerable(Of T), IList, IList(Of T), ISerializable" />
+  <TypeSignature Language="F#" Value="type PSDataCollection&lt;'T&gt; = class&#xA;    interface IList&lt;'T&gt;&#xA;    interface ICollection&lt;'T&gt;&#xA;    interface seq&lt;'T&gt;&#xA;    interface IEnumerable&#xA;    interface IList&#xA;    interface ICollection&#xA;    interface IDisposable&#xA;    interface ISerializable" />
+  <AssemblyInfo>
+    <AssemblyName>System.Management.Automation</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <TypeParameters>
+    <TypeParameter Name="T" />
+  </TypeParameters>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Collections.Generic.ICollection&lt;T&gt;</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.Collections.Generic.IEnumerable&lt;T&gt;</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.Collections.Generic.IList&lt;T&gt;</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.Collections.IList</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.Runtime.Serialization.ISerializable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <typeparam name="T">To be added.</typeparam>
+    <summary>build
+            Thread Safe buffer used with PowerShell Hosting interfaces.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public PSDataCollection ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.PSDataCollection`1.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New ()" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>
+            Default Constructor
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public PSDataCollection (System.Collections.Generic.IEnumerable&lt;T&gt; items);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Collections.Generic.IEnumerable`1&lt;!T&gt; items) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.PSDataCollection`1.#ctor(System.Collections.Generic.IEnumerable{`0})" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (items As IEnumerable(Of T))" />
+      <MemberSignature Language="F#" Value="new System.Management.Automation.PSDataCollection&lt;'T&gt; : seq&lt;'T&gt; -&gt; System.Management.Automation.PSDataCollection&lt;'T&gt;" Usage="new System.Management.Automation.PSDataCollection&lt;'T&gt; items" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="items" Type="System.Collections.Generic.IEnumerable&lt;T&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="items">
+            Items used to initialize the collection
+            </param>
+        <summary>
+            Creates a PSDataCollection that includes all the items in the IEnumerable and invokes Complete().
+            </summary>
+        <remarks>
+            This constructor is useful when the user wants to use an IEnumerable as an input to one of the PowerShell.BeginInvoke overloads.
+            The invocation doesn't complete until Complete() is called on the PSDataCollection; this constructor does the Complete() on
+            behalf of the user.
+            </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public PSDataCollection (int capacity);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int32 capacity) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.PSDataCollection`1.#ctor(System.Int32)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (capacity As Integer)" />
+      <MemberSignature Language="F#" Value="new System.Management.Automation.PSDataCollection&lt;'T&gt; : int -&gt; System.Management.Automation.PSDataCollection&lt;'T&gt;" Usage="new System.Management.Automation.PSDataCollection&lt;'T&gt; capacity" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="capacity" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="capacity">
+            The number of elements that the new buffer can initially
+            store.
+            </param>
+        <summary>
+            Initializes a new instance with the specified capacity
+            <paramref name="capacity" /></summary>
+        <remarks>
+            Capacity is the number of elements that the PSDataCollection can
+            store before resizing is required.
+            </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected PSDataCollection (System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(class System.Runtime.Serialization.SerializationInfo info, valuetype System.Runtime.Serialization.StreamingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.PSDataCollection`1.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" />
+      <MemberSignature Language="VB.NET" Value="Protected Sub New (info As SerializationInfo, context As StreamingContext)" />
+      <MemberSignature Language="F#" Value="new System.Management.Automation.PSDataCollection&lt;'T&gt; : System.Runtime.Serialization.SerializationInfo * System.Runtime.Serialization.StreamingContext -&gt; System.Management.Automation.PSDataCollection&lt;'T&gt;" Usage="new System.Management.Automation.PSDataCollection&lt;'T&gt; (info, context)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="info" Type="System.Runtime.Serialization.SerializationInfo" />
+        <Parameter Name="context" Type="System.Runtime.Serialization.StreamingContext" />
+      </Parameters>
+      <Docs>
+        <param name="info">Serialization information for this instance</param>
+        <param name="context">The streaming context for this instance</param>
+        <summary>
+            Creates a PSDataCollection from an ISerializable context
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public void Add (T item);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Add(!T item) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.PSDataCollection`1.Add(`0)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Add (item As T)" />
+      <MemberSignature Language="F#" Value="abstract member Add : 'T -&gt; unit&#xA;override this.Add : 'T -&gt; unit" Usage="pSDataCollection.Add item" />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.Collections.Generic.ICollection`1.Add(`0)</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="item" Type="T" />
+      </Parameters>
+      <Docs>
+        <param name="item">
+            item to add
+            </param>
+        <summary>
+            Adds an item to the thread-safe buffer
+            </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidOperationException">
+            Objects cannot be added to a closed buffer.
+            Make sure the buffer is open for Add and Insert
+            operations to succeed.
+            </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="BlockingEnumerator">
+      <MemberSignature Language="C#" Value="public bool BlockingEnumerator { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool BlockingEnumerator" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.PSDataCollection`1.BlockingEnumerator" />
+      <MemberSignature Language="VB.NET" Value="Public Property BlockingEnumerator As Boolean" />
+      <MemberSignature Language="F#" Value="member this.BlockingEnumerator : bool with get, set" Usage="System.Management.Automation.PSDataCollection&lt;'T&gt;.BlockingEnumerator" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Indicates whether the data collection should
+            have a blocking enumerator by default. Currently
+            only when a PowerShell object is associated with
+            the data collection, a reference count is added
+            which causes the enumerator to be blocking. This
+            prevents the use of PSDataCollection without a
+            PowerShell object. This property fixes the same
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Clear">
+      <MemberSignature Language="C#" Value="public void Clear ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Clear() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.PSDataCollection`1.Clear" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Clear ()" />
+      <MemberSignature Language="F#" Value="abstract member Clear : unit -&gt; unit&#xA;override this.Clear : unit -&gt; unit" Usage="pSDataCollection.Clear " />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.Collections.Generic.ICollection`1.Clear</InterfaceMember>
+        <InterfaceMember>M:System.Collections.IList.Clear</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Removes all items from the buffer
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Complete">
+      <MemberSignature Language="C#" Value="public void Complete ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Complete() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.PSDataCollection`1.Complete" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Complete ()" />
+      <MemberSignature Language="F#" Value="member this.Complete : unit -&gt; unit" Usage="pSDataCollection.Complete " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Completes insertions to the buffer.
+            Subsequent Inserts to the buffer will result in an InvalidOperationException
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Completed">
+      <MemberSignature Language="C#" Value="public event EventHandler Completed;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler Completed" />
+      <MemberSignature Language="DocId" Value="E:System.Management.Automation.PSDataCollection`1.Completed" />
+      <MemberSignature Language="VB.NET" Value="Public Event Completed As EventHandler " />
+      <MemberSignature Language="F#" Value="member this.Completed : EventHandler " Usage="member this.Completed : System.EventHandler " />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Event fired when the buffer is completed.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Contains">
+      <MemberSignature Language="C#" Value="public bool Contains (T item);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool Contains(!T item) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.PSDataCollection`1.Contains(`0)" />
+      <MemberSignature Language="VB.NET" Value="Public Function Contains (item As T) As Boolean" />
+      <MemberSignature Language="F#" Value="abstract member Contains : 'T -&gt; bool&#xA;override this.Contains : 'T -&gt; bool" Usage="pSDataCollection.Contains item" />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.Collections.Generic.ICollection`1.Contains(`0)</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="item" Type="T" />
+      </Parameters>
+      <Docs>
+        <param name="item">
+            The object to locate in the buffer.
+            </param>
+        <summary>
+            Determines whether the buffer contains an element with a specific value.
+            </summary>
+        <returns>
+            true if the element value is found in the buffer; otherwise false.
+            </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CopyTo">
+      <MemberSignature Language="C#" Value="public void CopyTo (T[] array, int arrayIndex);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void CopyTo(!T[] array, int32 arrayIndex) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.PSDataCollection`1.CopyTo(`0[],System.Int32)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub CopyTo (array As T(), arrayIndex As Integer)" />
+      <MemberSignature Language="F#" Value="abstract member CopyTo : 'T[] * int -&gt; unit&#xA;override this.CopyTo : 'T[] * int -&gt; unit" Usage="pSDataCollection.CopyTo (array, arrayIndex)" />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.Collections.Generic.ICollection`1.CopyTo(`0[],System.Int32)</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="array" Type="T[]" />
+        <Parameter Name="arrayIndex" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="array">
+            The destination Array for the elements of type T copied from the buffer.
+            </param>
+        <param name="arrayIndex">
+            The zero-based index in the array at which copying begins.
+            </param>
+        <summary>
+            Copies the elements of the buffer to a specified array, starting at a particular index.
+            </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">
+            array is multidimensional.
+            (or)
+            arrayIndex is equal to or greater than the length of array.
+            (or)
+            The number of elements in the source buffer is greater than the
+            available space from arrayIndex to the end of the destination array.
+            (or)
+            Type T cannot be cast automatically to the type of the destination array.
+            </exception>
+        <exception cref="T:System.ArgumentNullException">
+            array is a null reference
+            </exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+            arrayIndex is less than 0.
+            </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Count">
+      <MemberSignature Language="C#" Value="public int Count { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Count" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.PSDataCollection`1.Count" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Count As Integer" />
+      <MemberSignature Language="F#" Value="member this.Count : int" Usage="System.Management.Automation.PSDataCollection&lt;'T&gt;.Count" />
+      <MemberType>Property</MemberType>
+      <Implements>
+        <InterfaceMember>P:System.Collections.Generic.ICollection`1.Count</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the number of elements contained in the buffer
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DataAdded">
+      <MemberSignature Language="C#" Value="public event EventHandler&lt;System.Management.Automation.DataAddedEventArgs&gt; DataAdded;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class System.Management.Automation.DataAddedEventArgs&gt; DataAdded" />
+      <MemberSignature Language="DocId" Value="E:System.Management.Automation.PSDataCollection`1.DataAdded" />
+      <MemberSignature Language="VB.NET" Value="Public Event DataAdded As EventHandler(Of DataAddedEventArgs) " />
+      <MemberSignature Language="F#" Value="member this.DataAdded : EventHandler&lt;System.Management.Automation.DataAddedEventArgs&gt; " Usage="member this.DataAdded : System.EventHandler&lt;System.Management.Automation.DataAddedEventArgs&gt; " />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;System.Management.Automation.DataAddedEventArgs&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Event fired when objects are done being added to the underlying buffer
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DataAddedCount">
+      <MemberSignature Language="C#" Value="public int DataAddedCount { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 DataAddedCount" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.PSDataCollection`1.DataAddedCount" />
+      <MemberSignature Language="VB.NET" Value="Public Property DataAddedCount As Integer" />
+      <MemberSignature Language="F#" Value="member this.DataAddedCount : int with get, set" Usage="System.Management.Automation.PSDataCollection&lt;'T&gt;.DataAddedCount" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            An int that tells the frequency of Data Added events fired.
+            Raises the DataAdded event only when data has been added a multiple of this many times,
+            or when collection can receive no more data, if further data is added past the last event
+            prior to completion.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DataAdding">
+      <MemberSignature Language="C#" Value="public event EventHandler&lt;System.Management.Automation.DataAddingEventArgs&gt; DataAdding;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class System.Management.Automation.DataAddingEventArgs&gt; DataAdding" />
+      <MemberSignature Language="DocId" Value="E:System.Management.Automation.PSDataCollection`1.DataAdding" />
+      <MemberSignature Language="VB.NET" Value="Public Event DataAdding As EventHandler(Of DataAddingEventArgs) " />
+      <MemberSignature Language="F#" Value="member this.DataAdding : EventHandler&lt;System.Management.Automation.DataAddingEventArgs&gt; " Usage="member this.DataAdding : System.EventHandler&lt;System.Management.Automation.DataAddingEventArgs&gt; " />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;System.Management.Automation.DataAddingEventArgs&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Event fired when objects are being added to the underlying buffer.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="public void Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Dispose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.PSDataCollection`1.Dispose" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Dispose ()" />
+      <MemberSignature Language="F#" Value="abstract member Dispose : unit -&gt; unit&#xA;override this.Dispose : unit -&gt; unit" Usage="pSDataCollection.Dispose " />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.IDisposable.Dispose</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Public dispose method
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="protected void Dispose (bool disposing);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void Dispose(bool disposing) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.PSDataCollection`1.Dispose(System.Boolean)" />
+      <MemberSignature Language="VB.NET" Value="Protected Sub Dispose (disposing As Boolean)" />
+      <MemberSignature Language="F#" Value="member this.Dispose : bool -&gt; unit" Usage="pSDataCollection.Dispose disposing" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="disposing" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="disposing">if true, release all managed resources</param>
+        <summary>
+            Release all the resources
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EnumeratorNeverBlocks">
+      <MemberSignature Language="C#" Value="public bool EnumeratorNeverBlocks { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool EnumeratorNeverBlocks" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.PSDataCollection`1.EnumeratorNeverBlocks" />
+      <MemberSignature Language="VB.NET" Value="Public Property EnumeratorNeverBlocks As Boolean" />
+      <MemberSignature Language="F#" Value="member this.EnumeratorNeverBlocks : bool with get, set" Usage="System.Management.Automation.PSDataCollection&lt;'T&gt;.EnumeratorNeverBlocks" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            If this is set to true, then the enumerator returned from
+            GetEnumerator() will never block.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetEnumerator">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IEnumerator&lt;T&gt; GetEnumerator ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Collections.Generic.IEnumerator`1&lt;!T&gt; GetEnumerator() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.PSDataCollection`1.GetEnumerator" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetEnumerator () As IEnumerator(Of T)" />
+      <MemberSignature Language="F#" Value="abstract member GetEnumerator : unit -&gt; System.Collections.Generic.IEnumerator&lt;'T&gt;&#xA;override this.GetEnumerator : unit -&gt; System.Collections.Generic.IEnumerator&lt;'T&gt;" Usage="pSDataCollection.GetEnumerator " />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.Collections.Generic.IEnumerable`1.GetEnumerator</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerator&lt;T&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Returns an enumerator that iterates through the
+            elements of the buffer.
+            </summary>
+        <returns>
+            An IEnumerator for objects of the type stored in the buffer.
+            </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetObjectData">
+      <MemberSignature Language="C#" Value="public virtual void GetObjectData (System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void GetObjectData(class System.Runtime.Serialization.SerializationInfo info, valuetype System.Runtime.Serialization.StreamingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.PSDataCollection`1.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Sub GetObjectData (info As SerializationInfo, context As StreamingContext)" />
+      <MemberSignature Language="F#" Value="abstract member GetObjectData : System.Runtime.Serialization.SerializationInfo * System.Runtime.Serialization.StreamingContext -&gt; unit&#xA;override this.GetObjectData : System.Runtime.Serialization.SerializationInfo * System.Runtime.Serialization.StreamingContext -&gt; unit" Usage="pSDataCollection.GetObjectData (info, context)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="info" Type="System.Runtime.Serialization.SerializationInfo" />
+        <Parameter Name="context" Type="System.Runtime.Serialization.StreamingContext" />
+      </Parameters>
+      <Docs>
+        <param name="info">Serialization information for this instance</param>
+        <param name="context">The streaming context for this instance</param>
+        <summary>
+            Implements the ISerializable contract for serializing a PSDataCollection
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IndexOf">
+      <MemberSignature Language="C#" Value="public int IndexOf (T item);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance int32 IndexOf(!T item) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.PSDataCollection`1.IndexOf(`0)" />
+      <MemberSignature Language="VB.NET" Value="Public Function IndexOf (item As T) As Integer" />
+      <MemberSignature Language="F#" Value="abstract member IndexOf : 'T -&gt; int&#xA;override this.IndexOf : 'T -&gt; int" Usage="pSDataCollection.IndexOf item" />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.Collections.Generic.IList`1.IndexOf(`0)</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="item" Type="T" />
+      </Parameters>
+      <Docs>
+        <param name="item">
+            The object to locate in the buffer.
+            </param>
+        <summary>
+            Determines the index of a specific item in the buffer.
+            </summary>
+        <returns>
+            The index of item if found in the buffer; otherwise, -1.
+            </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Insert">
+      <MemberSignature Language="C#" Value="public void Insert (int index, T item);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Insert(int32 index, !T item) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.PSDataCollection`1.Insert(System.Int32,`0)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Insert (index As Integer, item As T)" />
+      <MemberSignature Language="F#" Value="abstract member Insert : int * 'T -&gt; unit&#xA;override this.Insert : int * 'T -&gt; unit" Usage="pSDataCollection.Insert (index, item)" />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.Collections.Generic.IList`1.Insert(System.Int32,`0)</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="item" Type="T" />
+      </Parameters>
+      <Docs>
+        <param name="index">
+            The zero-based index at which item should be inserted.
+            </param>
+        <param name="item">
+            The object to insert into the buffer.
+            </param>
+        <summary>
+            Inserts an item to the buffer at the specified index.
+            </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidOperationException">
+            Objects cannot be added to a closed buffer.
+            Make sure the buffer is open for Add and Insert
+            operations to succeed.
+            </exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+            The index specified is less than zero or greater
+            than Count.
+            </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="InsertItem">
+      <MemberSignature Language="C#" Value="protected virtual void InsertItem (Guid psInstanceId, int index, T item);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void InsertItem(valuetype System.Guid psInstanceId, int32 index, !T item) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.PSDataCollection`1.InsertItem(System.Guid,System.Int32,`0)" />
+      <MemberSignature Language="VB.NET" Value="Protected Overridable Sub InsertItem (psInstanceId As Guid, index As Integer, item As T)" />
+      <MemberSignature Language="F#" Value="abstract member InsertItem : Guid * int * 'T -&gt; unit&#xA;override this.InsertItem : Guid * int * 'T -&gt; unit" Usage="pSDataCollection.InsertItem (psInstanceId, index, item)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="psInstanceId" Type="System.Guid" />
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="item" Type="T" />
+      </Parameters>
+      <Docs>
+        <param name="psInstanceId">
+            InstanceId of PowerShell instance adding this data.
+            Guid.Empty if not initiated by a PowerShell instance.
+            </param>
+        <param name="index">
+            The zero-based index of the buffer where the object is to be inserted
+            </param>
+        <param name="item">
+            The object to be inserted into the buffer.
+            </param>
+        <summary>
+            Inserts an item into the buffer at a specified index.
+            </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+            The index specified is less than zero or greater
+            than Count.
+            </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="IsAutoGenerated">
+      <MemberSignature Language="C#" Value="public bool IsAutoGenerated { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsAutoGenerated" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.PSDataCollection`1.IsAutoGenerated" />
+      <MemberSignature Language="VB.NET" Value="Public Property IsAutoGenerated As Boolean" />
+      <MemberSignature Language="F#" Value="member this.IsAutoGenerated : bool with get, set" Usage="System.Management.Automation.PSDataCollection&lt;'T&gt;.IsAutoGenerated" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Determines whether this PSDataCollection was created implicitly in support of
+            data collection (for example, a workflow that wants to capture output but hasn't
+            provided an instance of the PSDataCollection to capture it with.)
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsOpen">
+      <MemberSignature Language="C#" Value="public bool IsOpen { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsOpen" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.PSDataCollection`1.IsOpen" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property IsOpen As Boolean" />
+      <MemberSignature Language="F#" Value="member this.IsOpen : bool" Usage="System.Management.Automation.PSDataCollection&lt;'T&gt;.IsOpen" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            A boolean which determines if the buffer is open.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsReadOnly">
+      <MemberSignature Language="C#" Value="public bool IsReadOnly { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsReadOnly" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.PSDataCollection`1.IsReadOnly" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property IsReadOnly As Boolean" />
+      <MemberSignature Language="F#" Value="member this.IsReadOnly : bool" Usage="System.Management.Automation.PSDataCollection&lt;'T&gt;.IsReadOnly" />
+      <MemberType>Property</MemberType>
+      <Implements>
+        <InterfaceMember>P:System.Collections.Generic.ICollection`1.IsReadOnly</InterfaceMember>
+        <InterfaceMember>P:System.Collections.IList.IsReadOnly</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets a value indicating whether the buffer is read-only.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public T this[int index] { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance !T Item(int32)" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.PSDataCollection`1.Item(System.Int32)" />
+      <MemberSignature Language="VB.NET" Value="Default Public Property Item(index As Integer) As T" />
+      <MemberSignature Language="F#" Value="member this.Item(int) : 'T with get, set" Usage="System.Management.Automation.PSDataCollection&lt;'T&gt;.Item" />
+      <MemberType>Property</MemberType>
+      <Implements>
+        <InterfaceMember>P:System.Collections.Generic.IList`1.Item(System.Int32)</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>T</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">
+            The zero-based index of the element to get or set.
+            </param>
+        <summary>
+            Gets or sets the element at the specified index.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidOperationException">
+            Objects cannot be added to a closed buffer.
+            Make sure the buffer is open for Add and Insert
+            operations to succeed.
+            </exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+            index is less than 0.
+            (or)
+            index is equal to or greater than Count.
+            </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Implicit">
+      <MemberSignature Language="C#" Value="public static implicit operator System.Management.Automation.PSDataCollection&lt;T&gt; (bool valueToConvert);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname class System.Management.Automation.PSDataCollection`1&lt;!T&gt; op_Implicit(bool valueToConvert) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.PSDataCollection`1.op_Implicit(System.Boolean)~System.Management.Automation.PSDataCollection{`0}" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Widening Operator CType (valueToConvert As Boolean) As PSDataCollection(Of T)" />
+      <MemberSignature Language="F#" Value="static member op_Implicit : bool -&gt; System.Management.Automation.PSDataCollection&lt;'T&gt;" Usage="System.Management.Automation.PSDataCollection&lt;'T&gt;.op_Implicit valueToConvert" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.PSDataCollection&lt;T&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="valueToConvert" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="valueToConvert">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Implicit">
+      <MemberSignature Language="C#" Value="public static implicit operator System.Management.Automation.PSDataCollection&lt;T&gt; (byte valueToConvert);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname class System.Management.Automation.PSDataCollection`1&lt;!T&gt; op_Implicit(unsigned int8 valueToConvert) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.PSDataCollection`1.op_Implicit(System.Byte)~System.Management.Automation.PSDataCollection{`0}" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Widening Operator CType (valueToConvert As Byte) As PSDataCollection(Of T)" />
+      <MemberSignature Language="F#" Value="static member op_Implicit : byte -&gt; System.Management.Automation.PSDataCollection&lt;'T&gt;" Usage="System.Management.Automation.PSDataCollection&lt;'T&gt;.op_Implicit valueToConvert" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.PSDataCollection&lt;T&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="valueToConvert" Type="System.Byte" />
+      </Parameters>
+      <Docs>
+        <param name="valueToConvert">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Implicit">
+      <MemberSignature Language="C#" Value="public static implicit operator System.Management.Automation.PSDataCollection&lt;T&gt; (System.Collections.Hashtable valueToConvert);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname class System.Management.Automation.PSDataCollection`1&lt;!T&gt; op_Implicit(class System.Collections.Hashtable valueToConvert) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.PSDataCollection`1.op_Implicit(System.Collections.Hashtable)~System.Management.Automation.PSDataCollection{`0}" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Widening Operator CType (valueToConvert As Hashtable) As PSDataCollection(Of T)" />
+      <MemberSignature Language="F#" Value="static member op_Implicit : System.Collections.Hashtable -&gt; System.Management.Automation.PSDataCollection&lt;'T&gt;" Usage="System.Management.Automation.PSDataCollection&lt;'T&gt;.op_Implicit valueToConvert" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.PSDataCollection&lt;T&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="valueToConvert" Type="System.Collections.Hashtable" />
+      </Parameters>
+      <Docs>
+        <param name="valueToConvert">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Implicit">
+      <MemberSignature Language="C#" Value="public static implicit operator System.Management.Automation.PSDataCollection&lt;T&gt; (int valueToConvert);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname class System.Management.Automation.PSDataCollection`1&lt;!T&gt; op_Implicit(int32 valueToConvert) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.PSDataCollection`1.op_Implicit(System.Int32)~System.Management.Automation.PSDataCollection{`0}" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Widening Operator CType (valueToConvert As Integer) As PSDataCollection(Of T)" />
+      <MemberSignature Language="F#" Value="static member op_Implicit : int -&gt; System.Management.Automation.PSDataCollection&lt;'T&gt;" Usage="System.Management.Automation.PSDataCollection&lt;'T&gt;.op_Implicit valueToConvert" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.PSDataCollection&lt;T&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="valueToConvert" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="valueToConvert">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Implicit">
+      <MemberSignature Language="C#" Value="public static implicit operator System.Management.Automation.PSDataCollection&lt;T&gt; (object[] arrayToConvert);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname class System.Management.Automation.PSDataCollection`1&lt;!T&gt; op_Implicit(object[] arrayToConvert) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.PSDataCollection`1.op_Implicit(System.Object[])~System.Management.Automation.PSDataCollection{`0}" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Widening Operator CType (arrayToConvert As Object()) As PSDataCollection(Of T)" />
+      <MemberSignature Language="F#" Value="static member op_Implicit : obj[] -&gt; System.Management.Automation.PSDataCollection&lt;'T&gt;" Usage="System.Management.Automation.PSDataCollection&lt;'T&gt;.op_Implicit arrayToConvert" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.PSDataCollection&lt;T&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="arrayToConvert" Type="System.Object[]" />
+      </Parameters>
+      <Docs>
+        <param name="arrayToConvert">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Implicit">
+      <MemberSignature Language="C#" Value="public static implicit operator System.Management.Automation.PSDataCollection&lt;T&gt; (string valueToConvert);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname class System.Management.Automation.PSDataCollection`1&lt;!T&gt; op_Implicit(string valueToConvert) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.PSDataCollection`1.op_Implicit(System.String)~System.Management.Automation.PSDataCollection{`0}" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Widening Operator CType (valueToConvert As String) As PSDataCollection(Of T)" />
+      <MemberSignature Language="F#" Value="static member op_Implicit : string -&gt; System.Management.Automation.PSDataCollection&lt;'T&gt;" Usage="System.Management.Automation.PSDataCollection&lt;'T&gt;.op_Implicit valueToConvert" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.PSDataCollection&lt;T&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="valueToConvert" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="valueToConvert">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Implicit">
+      <MemberSignature Language="C#" Value="public static implicit operator System.Management.Automation.PSDataCollection&lt;T&gt; (T valueToConvert);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname class System.Management.Automation.PSDataCollection`1&lt;!T&gt; op_Implicit(!T valueToConvert) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.PSDataCollection`1.op_Implicit(`0)~System.Management.Automation.PSDataCollection{`0}" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Widening Operator CType (valueToConvert As T) As PSDataCollection(Of T)" />
+      <MemberSignature Language="F#" Value="static member op_Implicit : 'T -&gt; System.Management.Automation.PSDataCollection&lt;'T&gt;" Usage="System.Management.Automation.PSDataCollection&lt;'T&gt;.op_Implicit valueToConvert" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.PSDataCollection&lt;T&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="valueToConvert" Type="T" />
+      </Parameters>
+      <Docs>
+        <param name="valueToConvert">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReadAll">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.Collection&lt;T&gt; ReadAll ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Collections.ObjectModel.Collection`1&lt;!T&gt; ReadAll() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.PSDataCollection`1.ReadAll" />
+      <MemberSignature Language="VB.NET" Value="Public Function ReadAll () As Collection(Of T)" />
+      <MemberSignature Language="F#" Value="member this.ReadAll : unit -&gt; System.Collections.ObjectModel.Collection&lt;'T&gt;" Usage="pSDataCollection.ReadAll " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.Collection&lt;T&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+             Makes a shallow copy of all the elements currently in this collection
+             and clears them from this collection. This will not result in a blocking call.
+            
+             Calling this method might have side effects on the enumerator. When this
+             method is called, the behavior of the enumerator is not defined.
+             </summary>
+        <returns>
+             A new collection with a copy of all the elements in the current collection.
+             </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Remove">
+      <MemberSignature Language="C#" Value="public bool Remove (T item);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool Remove(!T item) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.PSDataCollection`1.Remove(`0)" />
+      <MemberSignature Language="VB.NET" Value="Public Function Remove (item As T) As Boolean" />
+      <MemberSignature Language="F#" Value="abstract member Remove : 'T -&gt; bool&#xA;override this.Remove : 'T -&gt; bool" Usage="pSDataCollection.Remove item" />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.Collections.Generic.ICollection`1.Remove(`0)</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="item" Type="T" />
+      </Parameters>
+      <Docs>
+        <param name="item">
+            The object to remove from the buffer.
+            </param>
+        <summary>
+            Removes the first occurrence of a specified item from the buffer.
+            </summary>
+        <returns>
+            true if item was successfully removed from the buffer; otherwise, false.
+            </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveAt">
+      <MemberSignature Language="C#" Value="public void RemoveAt (int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void RemoveAt(int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.PSDataCollection`1.RemoveAt(System.Int32)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub RemoveAt (index As Integer)" />
+      <MemberSignature Language="F#" Value="abstract member RemoveAt : int -&gt; unit&#xA;override this.RemoveAt : int -&gt; unit" Usage="pSDataCollection.RemoveAt index" />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.Collections.Generic.IList`1.RemoveAt(System.Int32)</InterfaceMember>
+        <InterfaceMember>M:System.Collections.IList.RemoveAt(System.Int32)</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">
+            The zero-based index of the item to remove.
+            </param>
+        <summary>
+            Removes the item at the specified index.
+            </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+            index is not a valid index in the buffer.
+            </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveItem">
+      <MemberSignature Language="C#" Value="protected virtual void RemoveItem (int index);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void RemoveItem(int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.PSDataCollection`1.RemoveItem(System.Int32)" />
+      <MemberSignature Language="VB.NET" Value="Protected Overridable Sub RemoveItem (index As Integer)" />
+      <MemberSignature Language="F#" Value="abstract member RemoveItem : int -&gt; unit&#xA;override this.RemoveItem : int -&gt; unit" Usage="pSDataCollection.RemoveItem index" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">
+            The zero-based index of the buffer where the object is to be removed.
+            </param>
+        <summary>
+            Removes the item at a specified index
+            </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+            The index specified is less than zero or greater
+            than the number of items in the buffer.
+            </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SerializeInput">
+      <MemberSignature Language="C#" Value="public bool SerializeInput { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool SerializeInput" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.PSDataCollection`1.SerializeInput" />
+      <MemberSignature Language="VB.NET" Value="Public Property SerializeInput As Boolean" />
+      <MemberSignature Language="F#" Value="member this.SerializeInput : bool with get, set" Usage="System.Management.Automation.PSDataCollection&lt;'T&gt;.SerializeInput" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Serializes all input by default.
+            This is supported only for PSDataCollections of PSObject.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.ICollection.CopyTo">
+      <MemberSignature Language="C#" Value="void ICollection.CopyTo (Array array, int index);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Collections.ICollection.CopyTo(class System.Array array, int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.PSDataCollection`1.System#Collections#ICollection#CopyTo(System.Array,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.Collections.ICollection.CopyTo(System.Array,System.Int32)</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="array" Type="System.Array" />
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="array">
+            The destination Array for the elements of type T copied
+            from the buffer.
+            </param>
+        <param name="index">
+            The zero-based index in the array at which copying begins.
+            </param>
+        <summary>
+            Copies the elements of the collection to a specified array,
+            starting at a particular index.
+            </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">
+            array is multidimensional.
+            (or)
+            arrayIndex is equal to or greater than the length of array.
+            (or)
+            The number of elements in the source buffer is greater than the
+            available space from arrayIndex to the end of the destination array.
+            </exception>
+        <exception cref="T:System.ArgumentNullException">
+            array is a null reference
+            </exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+            arrayIndex is less than 0.
+            </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.ICollection.IsSynchronized">
+      <MemberSignature Language="C#" Value="bool System.Collections.ICollection.IsSynchronized { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool System.Collections.ICollection.IsSynchronized" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.PSDataCollection`1.System#Collections#ICollection#IsSynchronized" />
+      <MemberSignature Language="VB.NET" Value=" ReadOnly Property IsSynchronized As Boolean Implements ICollection.IsSynchronized" />
+      <MemberSignature Language="F#" Usage="System.Management.Automation.PSDataCollection&lt;'T&gt;.System.Collections.ICollection.IsSynchronized" />
+      <MemberType>Property</MemberType>
+      <Implements>
+        <InterfaceMember>P:System.Collections.ICollection.IsSynchronized</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets a value that indicates whether the buffer is synchronized.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.ICollection.SyncRoot">
+      <MemberSignature Language="C#" Value="object System.Collections.ICollection.SyncRoot { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object System.Collections.ICollection.SyncRoot" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.PSDataCollection`1.System#Collections#ICollection#SyncRoot" />
+      <MemberSignature Language="VB.NET" Value=" ReadOnly Property SyncRoot As Object Implements ICollection.SyncRoot" />
+      <MemberSignature Language="F#" Usage="System.Management.Automation.PSDataCollection&lt;'T&gt;.System.Collections.ICollection.SyncRoot" />
+      <MemberType>Property</MemberType>
+      <Implements>
+        <InterfaceMember>P:System.Collections.ICollection.SyncRoot</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the object used to synchronize access to the thread-safe buffer
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IEnumerable.GetEnumerator">
+      <MemberSignature Language="C#" Value="System.Collections.IEnumerator IEnumerable.GetEnumerator ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance class System.Collections.IEnumerator System.Collections.IEnumerable.GetEnumerator() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.PSDataCollection`1.System#Collections#IEnumerable#GetEnumerator" />
+      <MemberSignature Language="VB.NET" Value="Function GetEnumerator () As IEnumerator Implements IEnumerable.GetEnumerator" />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.Collections.IEnumerable.GetEnumerator</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IEnumerator</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Returns an enumerator that iterates through the buffer.
+            </summary>
+        <returns>
+            An IEnumerator for objects of the type stored in the buffer.
+            </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IList.Add">
+      <MemberSignature Language="C#" Value="int IList.Add (object value);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance int32 System.Collections.IList.Add(object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.PSDataCollection`1.System#Collections#IList#Add(System.Object)" />
+      <MemberSignature Language="VB.NET" Value="Function Add (value As Object) As Integer Implements IList.Add" />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.Collections.IList.Add(System.Object)</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="value">
+            The object to add to the buffer.
+            </param>
+        <summary>
+            Adds an element to the buffer.
+            </summary>
+        <returns>
+            The position into which the new element was inserted.
+            </returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidOperationException">
+            Objects cannot be added to a closed buffer.
+            Make sure the buffer is open for Add and Insert
+            operations to succeed.
+            </exception>
+        <exception cref="T:System.ArgumentException">
+            value reference is null.
+            (or)
+            value is not of the correct generic type T for the buffer.
+            </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IList.Contains">
+      <MemberSignature Language="C#" Value="bool IList.Contains (object value);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance bool System.Collections.IList.Contains(object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.PSDataCollection`1.System#Collections#IList#Contains(System.Object)" />
+      <MemberSignature Language="VB.NET" Value="Function Contains (value As Object) As Boolean Implements IList.Contains" />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.Collections.IList.Contains(System.Object)</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="value">
+            The object to locate in the collection
+            </param>
+        <summary>
+            Determines whether the collection contains an
+            element with a specific value.
+            </summary>
+        <returns>
+            true if the element value is found in the collection;
+            otherwise false.
+            </returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">
+            value reference is null.
+            (or)
+            value is not of the correct generic type T for the buffer.
+            </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IList.IndexOf">
+      <MemberSignature Language="C#" Value="int IList.IndexOf (object value);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance int32 System.Collections.IList.IndexOf(object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.PSDataCollection`1.System#Collections#IList#IndexOf(System.Object)" />
+      <MemberSignature Language="VB.NET" Value="Function IndexOf (value As Object) As Integer Implements IList.IndexOf" />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.Collections.IList.IndexOf(System.Object)</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="value">
+            The element in the buffer whose index is being determined.
+            </param>
+        <summary>
+            Determines the zero-based index of an element in the buffer.
+            </summary>
+        <returns>
+            The index of the value if found in the buffer; otherwise, -1.
+            </returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">
+            value reference is null.
+            (or)
+            value is not of the correct generic type T for the buffer.
+            </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IList.Insert">
+      <MemberSignature Language="C#" Value="void IList.Insert (int index, object value);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Collections.IList.Insert(int32 index, object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.PSDataCollection`1.System#Collections#IList#Insert(System.Int32,System.Object)" />
+      <MemberSignature Language="VB.NET" Value="Sub Insert (index As Integer, value As Object) Implements IList.Insert" />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.Collections.IList.Insert(System.Int32,System.Object)</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="index">
+            The zero-based index at which value is to be inserted.
+            </param>
+        <param name="value">
+            The object to insert into the buffer.
+            </param>
+        <summary>
+            Inserts an object into the buffer at a specified index.
+            </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+            index is not a valid index in the buffer.
+            </exception>
+        <exception cref="T:System.ArgumentException">
+            value reference is null.
+            (or)
+            value is not of the correct generic type T for the buffer.
+            </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IList.IsFixedSize">
+      <MemberSignature Language="C#" Value="bool System.Collections.IList.IsFixedSize { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool System.Collections.IList.IsFixedSize" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.PSDataCollection`1.System#Collections#IList#IsFixedSize" />
+      <MemberSignature Language="VB.NET" Value=" ReadOnly Property IsFixedSize As Boolean Implements IList.IsFixedSize" />
+      <MemberSignature Language="F#" Usage="System.Management.Automation.PSDataCollection&lt;'T&gt;.System.Collections.IList.IsFixedSize" />
+      <MemberType>Property</MemberType>
+      <Implements>
+        <InterfaceMember>P:System.Collections.IList.IsFixedSize</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets a value that indicates whether the buffer is fixed in size.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IList.IsReadOnly">
+      <MemberSignature Language="C#" Value="bool System.Collections.IList.IsReadOnly { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool System.Collections.IList.IsReadOnly" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.PSDataCollection`1.System#Collections#IList#IsReadOnly" />
+      <MemberSignature Language="VB.NET" Value=" ReadOnly Property IsReadOnly As Boolean Implements IList.IsReadOnly" />
+      <MemberSignature Language="F#" Usage="System.Management.Automation.PSDataCollection&lt;'T&gt;.System.Collections.IList.IsReadOnly" />
+      <MemberType>Property</MemberType>
+      <Implements>
+        <InterfaceMember>P:System.Collections.IList.IsReadOnly</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets a value that indicates whether the buffer is read-only.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IList.Item">
+      <MemberSignature Language="C#" Value="object System.Collections.IList.Item[int index] { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object System.Collections.IList.Item(int32)" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.PSDataCollection`1.System#Collections#IList#Item(System.Int32)" />
+      <MemberSignature Language="VB.NET" Value=" Property Item(index As Integer) As Object Implements IList.Item" />
+      <MemberSignature Language="F#" Usage="System.Management.Automation.PSDataCollection&lt;'T&gt;.System.Collections.IList.Item" />
+      <MemberType>Property</MemberType>
+      <Implements>
+        <InterfaceMember>P:System.Collections.IList.Item(System.Int32)</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">
+            The zero-based index of the element to get or set.
+            </param>
+        <summary>
+            Gets or sets the element at the specified index.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.IndexOutOfRangeException">
+            index is less than 0.
+            (or)
+            index is equal to or greater than Count.
+            </exception>
+        <exception cref="T:System.ArgumentException">
+            value reference is null.
+            (or)
+            value is not of the correct generic type T for the buffer.
+            </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IList.Remove">
+      <MemberSignature Language="C#" Value="void IList.Remove (object value);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Collections.IList.Remove(object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.PSDataCollection`1.System#Collections#IList#Remove(System.Object)" />
+      <MemberSignature Language="VB.NET" Value="Sub Remove (value As Object) Implements IList.Remove" />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.Collections.IList.Remove(System.Object)</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="value">
+            The object to be removed from the buffer.
+            </param>
+        <summary>
+            Removes the first occurrence of a specified object
+            as an element from the buffer.
+            </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">
+            value reference is null.
+            (or)
+            value is not of the correct generic type T for the buffer.
+            </exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

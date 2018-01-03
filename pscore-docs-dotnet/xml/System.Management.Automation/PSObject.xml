@@ -1,0 +1,686 @@
+﻿<Type Name="PSObject" FullName="System.Management.Automation.PSObject">
+  <TypeSignature Language="C#" Value="public class PSObject : IComparable, IFormattable, System.Dynamic.IDynamicMetaObjectProvider, System.Runtime.Serialization.ISerializable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable beforefieldinit PSObject extends System.Object implements class System.Dynamic.IDynamicMetaObjectProvider, class System.IComparable, class System.IFormattable, class System.Runtime.Serialization.ISerializable" />
+  <TypeSignature Language="DocId" Value="T:System.Management.Automation.PSObject" />
+  <TypeSignature Language="VB.NET" Value="Public Class PSObject&#xA;Implements IComparable, IDynamicMetaObjectProvider, IFormattable, ISerializable" />
+  <TypeSignature Language="F#" Value="type PSObject = class&#xA;    interface IFormattable&#xA;    interface IComparable&#xA;    interface ISerializable&#xA;    interface IDynamicMetaObjectProvider" />
+  <AssemblyInfo>
+    <AssemblyName>System.Management.Automation</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Dynamic.IDynamicMetaObjectProvider</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.IComparable</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.IFormattable</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.Runtime.Serialization.ISerializable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.TypeDescriptionProvider(typeof(System.Management.Automation.PSObjectTypeDescriptionProvider))</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>
+            Wraps an object providing alternate views of the available members
+            and ways to extend them. Members can be methods, properties,
+            parameterized properties, etc.
+            </summary>
+    <remarks>
+            It is permitted to subclass <see cref="T:System.Management.Automation.PSObject" />
+            but there is no established scenario for doing this, nor has it been tested.
+            </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public PSObject ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.PSObject.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New ()" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>
+            Initializes a new instance of PSObject with an PSCustomObject BaseObject
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public PSObject (object obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(object obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.PSObject.#ctor(System.Object)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (obj As Object)" />
+      <MemberSignature Language="F#" Value="new System.Management.Automation.PSObject : obj -&gt; System.Management.Automation.PSObject" Usage="new System.Management.Automation.PSObject obj" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="obj">object we are wrapping</param>
+        <summary>
+            Initializes a new instance of PSObject wrapping obj (accessible through BaseObject).
+            </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">if <paramref name="obj" /> is null</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected PSObject (System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(class System.Runtime.Serialization.SerializationInfo info, valuetype System.Runtime.Serialization.StreamingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.PSObject.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" />
+      <MemberSignature Language="VB.NET" Value="Protected Sub New (info As SerializationInfo, context As StreamingContext)" />
+      <MemberSignature Language="F#" Value="new System.Management.Automation.PSObject : System.Runtime.Serialization.SerializationInfo * System.Runtime.Serialization.StreamingContext -&gt; System.Management.Automation.PSObject" Usage="new System.Management.Automation.PSObject (info, context)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="info" Type="System.Runtime.Serialization.SerializationInfo" />
+        <Parameter Name="context" Type="System.Runtime.Serialization.StreamingContext" />
+      </Parameters>
+      <Docs>
+        <param name="info">Serialization information for this instance</param>
+        <param name="context">The streaming context for this instance</param>
+        <summary>
+            Creates a PSObject from an ISerializable context
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AdaptedMemberSetName">
+      <MemberSignature Language="C#" Value="public const string AdaptedMemberSetName;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal string AdaptedMemberSetName" />
+      <MemberSignature Language="DocId" Value="F:System.Management.Automation.PSObject.AdaptedMemberSetName" />
+      <MemberSignature Language="VB.NET" Value="Public Const AdaptedMemberSetName As String " />
+      <MemberSignature Language="F#" Value="val mutable AdaptedMemberSetName : string" Usage="System.Management.Automation.PSObject.AdaptedMemberSetName" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The name of the member set for adapted members
+            </summary>
+        <remarks>
+            This needs to be Lower cased as it saves some comparison time elsewhere.
+            </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AsPSObject">
+      <MemberSignature Language="C#" Value="public static System.Management.Automation.PSObject AsPSObject (object obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Management.Automation.PSObject AsPSObject(object obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.PSObject.AsPSObject(System.Object)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function AsPSObject (obj As Object) As PSObject" />
+      <MemberSignature Language="F#" Value="static member AsPSObject : obj -&gt; System.Management.Automation.PSObject" Usage="System.Management.Automation.PSObject.AsPSObject obj" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.PSObject</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="obj">object to be wrapped</param>
+        <summary>
+            If obj is an PSObject it will be returned as is, otherwise
+            a new PSObject will be created based on obj.
+            </summary>
+        <returns>
+            obj or a new PSObject whose BaseObject is obj
+            </returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">if <paramref name="obj" /> is null</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="BaseObject">
+      <MemberSignature Language="C#" Value="public object BaseObject { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object BaseObject" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.PSObject.BaseObject" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property BaseObject As Object" />
+      <MemberSignature Language="F#" Value="member this.BaseObject : obj" Usage="System.Management.Automation.PSObject.BaseObject" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the object we are wrapping.
+            </summary>
+        <value>To be added.</value>
+        <remarks>If the ImmediateBaseObject is another PSObject, this property
+            will return its BaseObject.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BaseObjectMemberSetName">
+      <MemberSignature Language="C#" Value="public const string BaseObjectMemberSetName;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal string BaseObjectMemberSetName" />
+      <MemberSignature Language="DocId" Value="F:System.Management.Automation.PSObject.BaseObjectMemberSetName" />
+      <MemberSignature Language="VB.NET" Value="Public Const BaseObjectMemberSetName As String " />
+      <MemberSignature Language="F#" Value="val mutable BaseObjectMemberSetName : string" Usage="System.Management.Automation.PSObject.BaseObjectMemberSetName" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The name of the member set for the BaseObject's members
+            </summary>
+        <remarks>
+            This needs to be Lower cased as it saves some comparison time elsewhere.
+            </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CompareTo">
+      <MemberSignature Language="C#" Value="public int CompareTo (object obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance int32 CompareTo(object obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.PSObject.CompareTo(System.Object)" />
+      <MemberSignature Language="VB.NET" Value="Public Function CompareTo (obj As Object) As Integer" />
+      <MemberSignature Language="F#" Value="abstract member CompareTo : obj -&gt; int&#xA;override this.CompareTo : obj -&gt; int" Usage="pSObject.CompareTo obj" />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.IComparable.CompareTo(System.Object)</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="obj">An object to compare with this instance.</param>
+        <summary>
+            Compares the current instance with another object of the same type.
+            </summary>
+        <returns>A 32-bit signed integer that indicates the relative order of the comparands.
+            The return value has these meanings:
+                Value             Meaning
+                Less than zero    This instance is less than obj.
+                Zero              This instance is equal to obj.
+                Greater than zero This instance is greater than obj.
+            </returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.Management.Automation.ExtendedTypeSystemException"> If <paramref name="obj" /> has a different type
+            than this instance's BaseObject or if the BaseObject does not implement IComparable.
+            </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Copy">
+      <MemberSignature Language="C#" Value="public virtual System.Management.Automation.PSObject Copy ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Management.Automation.PSObject Copy() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.PSObject.Copy" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function Copy () As PSObject" />
+      <MemberSignature Language="F#" Value="abstract member Copy : unit -&gt; System.Management.Automation.PSObject&#xA;override this.Copy : unit -&gt; System.Management.Automation.PSObject" Usage="pSObject.Copy " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.PSObject</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Returns a copy of this PSObject. This will copy the BaseObject if
+            it is a value type, and use BaseObject.Clone() for the new PSObject,
+            if the BaseObject is ICloneable.
+            </summary>
+        <returns>a copy of this object</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public override bool Equals (object obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.PSObject.Equals(System.Object)" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Function Equals (obj As Object) As Boolean" />
+      <MemberSignature Language="F#" Value="override this.Equals : obj -&gt; bool" Usage="pSObject.Equals obj" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="obj">The Object to compare with the current Object.</param>
+        <summary>
+            Determines whether the specified Object is equal to the current Object.
+            </summary>
+        <returns>true if the specified Object is equal to the current Object; otherwise, false.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ExtendedMemberSetName">
+      <MemberSignature Language="C#" Value="public const string ExtendedMemberSetName;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal string ExtendedMemberSetName" />
+      <MemberSignature Language="DocId" Value="F:System.Management.Automation.PSObject.ExtendedMemberSetName" />
+      <MemberSignature Language="VB.NET" Value="Public Const ExtendedMemberSetName As String " />
+      <MemberSignature Language="F#" Value="val mutable ExtendedMemberSetName : string" Usage="System.Management.Automation.PSObject.ExtendedMemberSetName" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The name of the member set for extended members
+            </summary>
+        <remarks>
+            This needs to be Lower cased as it saves some comparison time elsewhere.
+            </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public override int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.PSObject.GetHashCode" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Function GetHashCode () As Integer" />
+      <MemberSignature Language="F#" Value="override this.GetHashCode : unit -&gt; int" Usage="pSObject.GetHashCode " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Serves as a hash function for a particular type, suitable for use in hashing algorithms and data structures like a hash table.
+            </summary>
+        <returns>A hash code for the current Object</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetObjectData">
+      <MemberSignature Language="C#" Value="public virtual void GetObjectData (System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void GetObjectData(class System.Runtime.Serialization.SerializationInfo info, valuetype System.Runtime.Serialization.StreamingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.PSObject.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Sub GetObjectData (info As SerializationInfo, context As StreamingContext)" />
+      <MemberSignature Language="F#" Value="abstract member GetObjectData : System.Runtime.Serialization.SerializationInfo * System.Runtime.Serialization.StreamingContext -&gt; unit&#xA;override this.GetObjectData : System.Runtime.Serialization.SerializationInfo * System.Runtime.Serialization.StreamingContext -&gt; unit" Usage="pSObject.GetObjectData (info, context)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="info" Type="System.Runtime.Serialization.SerializationInfo" />
+        <Parameter Name="context" Type="System.Runtime.Serialization.StreamingContext" />
+      </Parameters>
+      <Docs>
+        <param name="info">Serialization information for this instance</param>
+        <param name="context">The streaming context for this instance</param>
+        <summary>
+            Implements the ISerializable contract for serializing a PSObject
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ImmediateBaseObject">
+      <MemberSignature Language="C#" Value="public object ImmediateBaseObject { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object ImmediateBaseObject" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.PSObject.ImmediateBaseObject" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ImmediateBaseObject As Object" />
+      <MemberSignature Language="F#" Value="member this.ImmediateBaseObject : obj" Usage="System.Management.Automation.PSObject.ImmediateBaseObject" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the object we are directly wrapping.
+            </summary>
+        <value>To be added.</value>
+        <remarks>If the ImmediateBaseObject is another PSObject,
+            that PSObject will be returned.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Members">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.PSMemberInfoCollection&lt;System.Management.Automation.PSMemberInfo&gt; Members { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Management.Automation.PSMemberInfoCollection`1&lt;class System.Management.Automation.PSMemberInfo&gt; Members" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.PSObject.Members" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Members As PSMemberInfoCollection(Of PSMemberInfo)" />
+      <MemberSignature Language="F#" Value="member this.Members : System.Management.Automation.PSMemberInfoCollection&lt;System.Management.Automation.PSMemberInfo&gt;" Usage="System.Management.Automation.PSObject.Members" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.PSMemberInfoCollection&lt;System.Management.Automation.PSMemberInfo&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the member collection
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Methods">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.PSMemberInfoCollection&lt;System.Management.Automation.PSMethodInfo&gt; Methods { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Management.Automation.PSMemberInfoCollection`1&lt;class System.Management.Automation.PSMethodInfo&gt; Methods" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.PSObject.Methods" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Methods As PSMemberInfoCollection(Of PSMethodInfo)" />
+      <MemberSignature Language="F#" Value="member this.Methods : System.Management.Automation.PSMemberInfoCollection&lt;System.Management.Automation.PSMethodInfo&gt;" Usage="System.Management.Automation.PSObject.Methods" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.PSMemberInfoCollection&lt;System.Management.Automation.PSMethodInfo&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the Method collection, or the members that are actually methods.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Implicit">
+      <MemberSignature Language="C#" Value="public static implicit operator System.Management.Automation.PSObject (bool valueToConvert);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname class System.Management.Automation.PSObject op_Implicit(bool valueToConvert) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.PSObject.op_Implicit(System.Boolean)~System.Management.Automation.PSObject" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Widening Operator CType (valueToConvert As Boolean) As PSObject" />
+      <MemberSignature Language="F#" Value="static member op_Implicit : bool -&gt; System.Management.Automation.PSObject" Usage="System.Management.Automation.PSObject.op_Implicit valueToConvert" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.PSObject</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="valueToConvert" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="valueToConvert"></param>
+        <summary />
+        <returns />
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Implicit">
+      <MemberSignature Language="C#" Value="public static implicit operator System.Management.Automation.PSObject (System.Collections.Hashtable valueToConvert);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname class System.Management.Automation.PSObject op_Implicit(class System.Collections.Hashtable valueToConvert) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.PSObject.op_Implicit(System.Collections.Hashtable)~System.Management.Automation.PSObject" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Widening Operator CType (valueToConvert As Hashtable) As PSObject" />
+      <MemberSignature Language="F#" Value="static member op_Implicit : System.Collections.Hashtable -&gt; System.Management.Automation.PSObject" Usage="System.Management.Automation.PSObject.op_Implicit valueToConvert" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.PSObject</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="valueToConvert" Type="System.Collections.Hashtable" />
+      </Parameters>
+      <Docs>
+        <param name="valueToConvert"></param>
+        <summary />
+        <returns />
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Implicit">
+      <MemberSignature Language="C#" Value="public static implicit operator System.Management.Automation.PSObject (double valueToConvert);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname class System.Management.Automation.PSObject op_Implicit(float64 valueToConvert) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.PSObject.op_Implicit(System.Double)~System.Management.Automation.PSObject" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Widening Operator CType (valueToConvert As Double) As PSObject" />
+      <MemberSignature Language="F#" Value="static member op_Implicit : double -&gt; System.Management.Automation.PSObject" Usage="System.Management.Automation.PSObject.op_Implicit valueToConvert" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.PSObject</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="valueToConvert" Type="System.Double" />
+      </Parameters>
+      <Docs>
+        <param name="valueToConvert"></param>
+        <summary />
+        <returns />
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Implicit">
+      <MemberSignature Language="C#" Value="public static implicit operator System.Management.Automation.PSObject (int valueToConvert);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname class System.Management.Automation.PSObject op_Implicit(int32 valueToConvert) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.PSObject.op_Implicit(System.Int32)~System.Management.Automation.PSObject" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Widening Operator CType (valueToConvert As Integer) As PSObject" />
+      <MemberSignature Language="F#" Value="static member op_Implicit : int -&gt; System.Management.Automation.PSObject" Usage="System.Management.Automation.PSObject.op_Implicit valueToConvert" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.PSObject</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="valueToConvert" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="valueToConvert"></param>
+        <summary />
+        <returns />
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Implicit">
+      <MemberSignature Language="C#" Value="public static implicit operator System.Management.Automation.PSObject (string valueToConvert);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname class System.Management.Automation.PSObject op_Implicit(string valueToConvert) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.PSObject.op_Implicit(System.String)~System.Management.Automation.PSObject" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Widening Operator CType (valueToConvert As String) As PSObject" />
+      <MemberSignature Language="F#" Value="static member op_Implicit : string -&gt; System.Management.Automation.PSObject" Usage="System.Management.Automation.PSObject.op_Implicit valueToConvert" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.PSObject</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="valueToConvert" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="valueToConvert"></param>
+        <summary />
+        <returns />
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Properties">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.PSMemberInfoCollection&lt;System.Management.Automation.PSPropertyInfo&gt; Properties { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Management.Automation.PSMemberInfoCollection`1&lt;class System.Management.Automation.PSPropertyInfo&gt; Properties" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.PSObject.Properties" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Properties As PSMemberInfoCollection(Of PSPropertyInfo)" />
+      <MemberSignature Language="F#" Value="member this.Properties : System.Management.Automation.PSMemberInfoCollection&lt;System.Management.Automation.PSPropertyInfo&gt;" Usage="System.Management.Automation.PSObject.Properties" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.PSMemberInfoCollection&lt;System.Management.Automation.PSPropertyInfo&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the Property collection, or the members that are actually properties.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Dynamic.IDynamicMetaObjectProvider.GetMetaObject">
+      <MemberSignature Language="C#" Value="System.Dynamic.DynamicMetaObject IDynamicMetaObjectProvider.GetMetaObject (System.Linq.Expressions.Expression parameter);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance class System.Dynamic.DynamicMetaObject System.Dynamic.IDynamicMetaObjectProvider.GetMetaObject(class System.Linq.Expressions.Expression parameter) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.PSObject.System#Dynamic#IDynamicMetaObjectProvider#GetMetaObject(System.Linq.Expressions.Expression)" />
+      <MemberSignature Language="VB.NET" Value="Function GetMetaObject (parameter As Expression) As DynamicMetaObject Implements IDynamicMetaObjectProvider.GetMetaObject" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Dynamic.DynamicMetaObject</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="parameter" Type="System.Linq.Expressions.Expression" />
+      </Parameters>
+      <Docs>
+        <param name="parameter">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.PSObject.ToString" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Function ToString () As String" />
+      <MemberSignature Language="F#" Value="override this.ToString : unit -&gt; string" Usage="pSObject.ToString " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Returns the string representation for this object. A ToString
+            CodeMethod or ScriptMethod will be used, if available. Enumerations items are
+            concatenated using $ofs.
+            </summary>
+        <returns>the string representation for baseObject</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.Management.Automation.ExtendedTypeSystemException">if an exception was thrown by the BaseObject's ToString</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public string ToString (string format, IFormatProvider formatProvider);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance string ToString(string format, class System.IFormatProvider formatProvider) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.PSObject.ToString(System.String,System.IFormatProvider)" />
+      <MemberSignature Language="VB.NET" Value="Public Function ToString (format As String, formatProvider As IFormatProvider) As String" />
+      <MemberSignature Language="F#" Value="override this.ToString : string * IFormatProvider -&gt; string" Usage="pSObject.ToString (format, formatProvider)" />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.IFormattable.ToString(System.String,System.IFormatProvider)</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="format" Type="System.String" />
+        <Parameter Name="formatProvider" Type="System.IFormatProvider" />
+      </Parameters>
+      <Docs>
+        <param name="format">repassed to baseObject's IFormattable if present</param>
+        <param name="formatProvider">repassed to baseObject's IFormattable if present</param>
+        <summary>
+            Returns the string representation for this object. A ToString
+            CodeMethod or ScriptMethod will be used, if available. Enumerations items are
+            concatenated using $ofs.
+            </summary>
+        <returns>the string representation for baseObject</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.Management.Automation.ExtendedTypeSystemException">if an exception was thrown by the BaseObject's ToString</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="TypeNames">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.Collection&lt;string&gt; TypeNames { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ObjectModel.Collection`1&lt;string&gt; TypeNames" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.PSObject.TypeNames" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property TypeNames As Collection(Of String)" />
+      <MemberSignature Language="F#" Value="member this.TypeNames : System.Collections.ObjectModel.Collection&lt;string&gt;" Usage="System.Management.Automation.PSObject.TypeNames" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.Collection&lt;System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the type names collection initially containing the object type hierarchy.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

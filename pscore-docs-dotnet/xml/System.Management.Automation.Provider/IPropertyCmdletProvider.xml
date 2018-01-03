@@ -1,0 +1,308 @@
+﻿<Type Name="IPropertyCmdletProvider" FullName="System.Management.Automation.Provider.IPropertyCmdletProvider">
+  <TypeSignature Language="C#" Value="public interface IPropertyCmdletProvider" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IPropertyCmdletProvider" />
+  <TypeSignature Language="DocId" Value="T:System.Management.Automation.Provider.IPropertyCmdletProvider" />
+  <TypeSignature Language="VB.NET" Value="Public Interface IPropertyCmdletProvider" />
+  <TypeSignature Language="F#" Value="type IPropertyCmdletProvider = interface" />
+  <AssemblyInfo>
+    <AssemblyName>System.Management.Automation</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>
+             An interface that can be implemented by a Cmdlet provider to expose properties of an item.
+             </summary>
+    <remarks>
+             An IPropertyCmdletProvider provider implements a set of methods that allows
+             the use of a set of core commands against the data store that the provider
+             gives access to. By implementing this interface users can take advantage
+             the commands that expose the contents of an item.
+                 get-itemproperty
+                 set-itemproperty
+                 etc.
+             This interface should only be implemented on derived classes of
+             <see cref="T:System.Management.Automation.Provider.CmdletProvider" />, <see cref="T:System.Management.Automation.Provider.ItemCmdletProvider" />,
+             <see cref="T:System.Management.Automation.Provider.ContainerCmdletProvider" />, or <see cref="T:System.Management.Automation.Provider.NavigationCmdletProvider" />.
+            
+             A namespace provider should implemented this interface if items in the
+             namespace have properties the provide wishes to expose.
+             </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="ClearProperty">
+      <MemberSignature Language="C#" Value="public void ClearProperty (string path, System.Collections.ObjectModel.Collection&lt;string&gt; propertyToClear);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void ClearProperty(string path, class System.Collections.ObjectModel.Collection`1&lt;string&gt; propertyToClear) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Provider.IPropertyCmdletProvider.ClearProperty(System.String,System.Collections.ObjectModel.Collection{System.String})" />
+      <MemberSignature Language="VB.NET" Value="Public Sub ClearProperty (path As String, propertyToClear As Collection(Of String))" />
+      <MemberSignature Language="F#" Value="abstract member ClearProperty : string * System.Collections.ObjectModel.Collection&lt;string&gt; -&gt; unit" Usage="iPropertyCmdletProvider.ClearProperty (path, propertyToClear)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+        <Parameter Name="propertyToClear" Type="System.Collections.ObjectModel.Collection&lt;System.String&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="path">
+             The path to the item on which to clear the property.
+             </param>
+        <param name="propertyToClear">
+             The name of the property to clear.
+             </param>
+        <summary>
+             Clears a property of the item at the specified path.
+             </summary>
+        <returns>
+             Nothing.  The property that was cleared should be passed to the WritePropertyObject method.
+             </returns>
+        <remarks>
+             Providers override this method to give the user the ability to clear the value of provider object properties
+             using the clear-itemproperty cmdlet.
+            
+             Providers that declare <see cref="T:System.Management.Automation.Provider.ProviderCapabilities" />
+             of ExpandWildcards, Filter, Include, or Exclude should ensure that the path passed meets those
+             requirements by accessing the appropriate property from the base class.
+            
+             By default overrides of this method should not clear properties from objects that are generally hidden from
+             the user unless the Force property is set to true. An error should be sent to the WriteError method if
+             the path represents an item that is hidden from the user and Force is set to false.
+            
+             An <see cref="T:System.Management.Automation.PSObject" /> can be used as a property bag for the
+             properties that need to be returned if the <paramref name="providerSpecificPickList" /> contains
+             multiple properties to write.
+             </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ClearPropertyDynamicParameters">
+      <MemberSignature Language="C#" Value="public object ClearPropertyDynamicParameters (string path, System.Collections.ObjectModel.Collection&lt;string&gt; propertyToClear);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object ClearPropertyDynamicParameters(string path, class System.Collections.ObjectModel.Collection`1&lt;string&gt; propertyToClear) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Provider.IPropertyCmdletProvider.ClearPropertyDynamicParameters(System.String,System.Collections.ObjectModel.Collection{System.String})" />
+      <MemberSignature Language="VB.NET" Value="Public Function ClearPropertyDynamicParameters (path As String, propertyToClear As Collection(Of String)) As Object" />
+      <MemberSignature Language="F#" Value="abstract member ClearPropertyDynamicParameters : string * System.Collections.ObjectModel.Collection&lt;string&gt; -&gt; obj" Usage="iPropertyCmdletProvider.ClearPropertyDynamicParameters (path, propertyToClear)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+        <Parameter Name="propertyToClear" Type="System.Collections.ObjectModel.Collection&lt;System.String&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="path">
+             If the path was specified on the command line, this is the path
+             to the item to get the dynamic parameters for.
+             </param>
+        <param name="propertyToClear">
+             The name of the property to clear.
+             </param>
+        <summary>
+             Gives the provider an opportunity to attach additional parameters to the
+             clear-itemproperty cmdlet.
+             </summary>
+        <returns>
+             Overrides of this method should return an object that has properties and fields decorated with
+             parsing attributes similar to a cmdlet class or a
+             <see cref="T:System.Management.Automation.RuntimeDefinedParameterDictionary" />.
+            
+             The default implementation returns null. (no additional parameters)
+             </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetProperty">
+      <MemberSignature Language="C#" Value="public void GetProperty (string path, System.Collections.ObjectModel.Collection&lt;string&gt; providerSpecificPickList);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void GetProperty(string path, class System.Collections.ObjectModel.Collection`1&lt;string&gt; providerSpecificPickList) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Provider.IPropertyCmdletProvider.GetProperty(System.String,System.Collections.ObjectModel.Collection{System.String})" />
+      <MemberSignature Language="VB.NET" Value="Public Sub GetProperty (path As String, providerSpecificPickList As Collection(Of String))" />
+      <MemberSignature Language="F#" Value="abstract member GetProperty : string * System.Collections.ObjectModel.Collection&lt;string&gt; -&gt; unit" Usage="iPropertyCmdletProvider.GetProperty (path, providerSpecificPickList)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+        <Parameter Name="providerSpecificPickList" Type="System.Collections.ObjectModel.Collection&lt;System.String&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="path">
+             The path to the item to retrieve properties from.
+             </param>
+        <param name="providerSpecificPickList">
+             A list of properties that should be retrieved. If this parameter is null
+             or empty, all properties should be retrieved.
+             </param>
+        <summary>
+             Gets the properties of the item specified by the path.
+             </summary>
+        <returns>
+             Nothing.  The property that was retrieved should be passed to the WritePropertyObject method.
+             </returns>
+        <remarks>
+             Providers override this method to give the user the ability to add properties to provider objects
+             using the get-itemproperty cmdlet.
+            
+             Providers that declare <see cref="T:System.Management.Automation.Provider.ProviderCapabilities" />
+             of ExpandWildcards, Filter, Include, or Exclude should ensure that the path passed meets those
+             requirements by accessing the appropriate property from the base class.
+            
+             By default overrides of this method should not retrieve properties from objects that are generally hidden from
+             the user unless the Force property is set to true. An error should be sent to the WriteError method if
+             the path represents an item that is hidden from the user and Force is set to false.
+            
+             An <see cref="T:System.Management.Automation.PSObject" /> can be used as a property bag for the
+             properties that need to be returned if the <paramref name="providerSpecificPickList" /> contains
+             multiple properties to write.
+             </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetPropertyDynamicParameters">
+      <MemberSignature Language="C#" Value="public object GetPropertyDynamicParameters (string path, System.Collections.ObjectModel.Collection&lt;string&gt; providerSpecificPickList);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object GetPropertyDynamicParameters(string path, class System.Collections.ObjectModel.Collection`1&lt;string&gt; providerSpecificPickList) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Provider.IPropertyCmdletProvider.GetPropertyDynamicParameters(System.String,System.Collections.ObjectModel.Collection{System.String})" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetPropertyDynamicParameters (path As String, providerSpecificPickList As Collection(Of String)) As Object" />
+      <MemberSignature Language="F#" Value="abstract member GetPropertyDynamicParameters : string * System.Collections.ObjectModel.Collection&lt;string&gt; -&gt; obj" Usage="iPropertyCmdletProvider.GetPropertyDynamicParameters (path, providerSpecificPickList)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+        <Parameter Name="providerSpecificPickList" Type="System.Collections.ObjectModel.Collection&lt;System.String&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="path">
+             If the path was specified on the command line, this is the path
+             to the item to get the dynamic parameters for.
+             </param>
+        <param name="providerSpecificPickList">
+             A list of properties that should be retrieved. If this parameter is null
+             or empty, all properties should be retrieved.
+             </param>
+        <summary>
+             Gives the provider an opportunity to attach additional parameters to the
+             get-itemproperty cmdlet.
+             </summary>
+        <returns>
+             Overrides of this method should return an object that has properties and fields decorated with
+             parsing attributes similar to a cmdlet class or a
+             <see cref="T:System.Management.Automation.RuntimeDefinedParameterDictionary" />.
+            
+             The default implementation returns null. (no additional parameters)
+             </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetProperty">
+      <MemberSignature Language="C#" Value="public void SetProperty (string path, System.Management.Automation.PSObject propertyValue);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void SetProperty(string path, class System.Management.Automation.PSObject propertyValue) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Provider.IPropertyCmdletProvider.SetProperty(System.String,System.Management.Automation.PSObject)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub SetProperty (path As String, propertyValue As PSObject)" />
+      <MemberSignature Language="F#" Value="abstract member SetProperty : string * System.Management.Automation.PSObject -&gt; unit" Usage="iPropertyCmdletProvider.SetProperty (path, propertyValue)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+        <Parameter Name="propertyValue" Type="System.Management.Automation.PSObject" />
+      </Parameters>
+      <Docs>
+        <param name="path">
+             The path to the item to set the properties on.
+             </param>
+        <param name="propertyValue">
+             A PSObject which contains a collection of the name, type, value
+             of the properties to be set.
+             </param>
+        <summary>
+             Sets the specified properties of the item at the specified path.
+             </summary>
+        <returns>
+             Nothing.  The property that was set should be passed to the WritePropertyObject method.
+             </returns>
+        <remarks>
+             Providers override this method to give the user the ability to set the value of provider object properties
+             using the set-itemproperty cmdlet.
+            
+             Providers that declare <see cref="T:System.Management.Automation.Provider.ProviderCapabilities" />
+             of ExpandWildcards, Filter, Include, or Exclude should ensure that the path passed meets those
+             requirements by accessing the appropriate property from the base class.
+            
+             By default overrides of this method should not retrieve properties from objects that are generally hidden from
+             the user unless the Force property is set to true. An error should be sent to the WriteError method if
+             the path represents an item that is hidden from the user and Force is set to false.
+            
+             An <see cref="T:System.Management.Automation.PSObject" /> can be used as a property bag for the
+             properties that need to be returned if the <paramref name="providerSpecificPickList" /> contains
+             multiple properties to write.
+            
+             <paramref name="propertyValue" /> is a property bag containing the properties that should be set.
+             See <see cref="T:System.Management.Automation.PSObject" /> for more information.
+             </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetPropertyDynamicParameters">
+      <MemberSignature Language="C#" Value="public object SetPropertyDynamicParameters (string path, System.Management.Automation.PSObject propertyValue);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object SetPropertyDynamicParameters(string path, class System.Management.Automation.PSObject propertyValue) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Provider.IPropertyCmdletProvider.SetPropertyDynamicParameters(System.String,System.Management.Automation.PSObject)" />
+      <MemberSignature Language="VB.NET" Value="Public Function SetPropertyDynamicParameters (path As String, propertyValue As PSObject) As Object" />
+      <MemberSignature Language="F#" Value="abstract member SetPropertyDynamicParameters : string * System.Management.Automation.PSObject -&gt; obj" Usage="iPropertyCmdletProvider.SetPropertyDynamicParameters (path, propertyValue)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+        <Parameter Name="propertyValue" Type="System.Management.Automation.PSObject" />
+      </Parameters>
+      <Docs>
+        <param name="path">
+             If the path was specified on the command line, this is the path
+             to the item to get the dynamic parameters for.
+             </param>
+        <param name="propertyValue">
+             A PSObject which contains a collection of the name, type, value
+             of the properties to be set.
+             </param>
+        <summary>
+             Gives the provider an opportunity to attach additional parameters to the
+             get-itemproperty cmdlet.
+             </summary>
+        <returns>
+             Overrides of this method should return an object that has properties and fields decorated with
+             parsing attributes similar to a cmdlet class or a
+             <see cref="T:System.Management.Automation.RuntimeDefinedParameterDictionary" />.
+            
+             The default implementation returns null. (no additional parameters)
+             </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

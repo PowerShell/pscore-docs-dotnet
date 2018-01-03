@@ -1,0 +1,422 @@
+﻿<Type Name="EtwActivity" FullName="System.Management.Automation.Tracing.EtwActivity">
+  <TypeSignature Language="C#" Value="public abstract class EtwActivity" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract EtwActivity extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Management.Automation.Tracing.EtwActivity" />
+  <TypeSignature Language="VB.NET" Value="Public MustInherit Class EtwActivity" />
+  <TypeSignature Language="F#" Value="type EtwActivity = class" />
+  <AssemblyInfo>
+    <AssemblyName>System.Management.Automation</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            This the abstract base class of all activity classes that represent an end-to-end scenario.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected EtwActivity ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Tracing.EtwActivity.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Protected Sub New ()" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>
+            Constructor
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Correlate">
+      <MemberSignature Language="C#" Value="public void Correlate ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Correlate() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Tracing.EtwActivity.Correlate" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Correlate ()" />
+      <MemberSignature Language="F#" Value="member this.Correlate : unit -&gt; unit" Usage="etwActivity.Correlate " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Correlates parent activity id set in the thread with a new activity id
+            If parent activity id is not, it just sets a new activity in the current thread. And does not write the Transfer event
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Correlate">
+      <MemberSignature Language="C#" Value="public AsyncCallback Correlate (AsyncCallback callback);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.AsyncCallback Correlate(class System.AsyncCallback callback) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Tracing.EtwActivity.Correlate(System.AsyncCallback)" />
+      <MemberSignature Language="VB.NET" Value="Public Function Correlate (callback As AsyncCallback) As AsyncCallback" />
+      <MemberSignature Language="F#" Value="member this.Correlate : AsyncCallback -&gt; AsyncCallback" Usage="etwActivity.Correlate callback" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.AsyncCallback</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="callback" Type="System.AsyncCallback" />
+      </Parameters>
+      <Docs>
+        <param name="callback"></param>
+        <summary>
+            Wraps a AsyncCallback with IAsyncResult param
+            </summary>
+        <returns />
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Correlate">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.Tracing.CallbackNoParameter Correlate (System.Management.Automation.Tracing.CallbackNoParameter callback);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Management.Automation.Tracing.CallbackNoParameter Correlate(class System.Management.Automation.Tracing.CallbackNoParameter callback) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Tracing.EtwActivity.Correlate(System.Management.Automation.Tracing.CallbackNoParameter)" />
+      <MemberSignature Language="VB.NET" Value="Public Function Correlate (callback As CallbackNoParameter) As CallbackNoParameter" />
+      <MemberSignature Language="F#" Value="member this.Correlate : System.Management.Automation.Tracing.CallbackNoParameter -&gt; System.Management.Automation.Tracing.CallbackNoParameter" Usage="etwActivity.Correlate callback" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.Tracing.CallbackNoParameter</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="callback" Type="System.Management.Automation.Tracing.CallbackNoParameter" />
+      </Parameters>
+      <Docs>
+        <param name="callback"></param>
+        <summary>
+            Wraps a callback with no params
+            </summary>
+        <returns />
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Correlate">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.Tracing.CallbackWithState Correlate (System.Management.Automation.Tracing.CallbackWithState callback);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Management.Automation.Tracing.CallbackWithState Correlate(class System.Management.Automation.Tracing.CallbackWithState callback) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Tracing.EtwActivity.Correlate(System.Management.Automation.Tracing.CallbackWithState)" />
+      <MemberSignature Language="VB.NET" Value="Public Function Correlate (callback As CallbackWithState) As CallbackWithState" />
+      <MemberSignature Language="F#" Value="member this.Correlate : System.Management.Automation.Tracing.CallbackWithState -&gt; System.Management.Automation.Tracing.CallbackWithState" Usage="etwActivity.Correlate callback" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.Tracing.CallbackWithState</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="callback" Type="System.Management.Automation.Tracing.CallbackWithState" />
+      </Parameters>
+      <Docs>
+        <param name="callback"></param>
+        <summary>
+            Wraps a callback with one object param
+            </summary>
+        <returns />
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Correlate">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.Tracing.CallbackWithStateAndArgs Correlate (System.Management.Automation.Tracing.CallbackWithStateAndArgs callback);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Management.Automation.Tracing.CallbackWithStateAndArgs Correlate(class System.Management.Automation.Tracing.CallbackWithStateAndArgs callback) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Tracing.EtwActivity.Correlate(System.Management.Automation.Tracing.CallbackWithStateAndArgs)" />
+      <MemberSignature Language="VB.NET" Value="Public Function Correlate (callback As CallbackWithStateAndArgs) As CallbackWithStateAndArgs" />
+      <MemberSignature Language="F#" Value="member this.Correlate : System.Management.Automation.Tracing.CallbackWithStateAndArgs -&gt; System.Management.Automation.Tracing.CallbackWithStateAndArgs" Usage="etwActivity.Correlate callback" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.Tracing.CallbackWithStateAndArgs</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="callback" Type="System.Management.Automation.Tracing.CallbackWithStateAndArgs" />
+      </Parameters>
+      <Docs>
+        <param name="callback"></param>
+        <summary>
+            Wraps a callback with one object param and one ElapsedEventArgs object
+            This is menat to be used in System.Timers.Timer scenarios.
+            </summary>
+        <returns />
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CorrelateWithActivity">
+      <MemberSignature Language="C#" Value="public void CorrelateWithActivity (Guid parentActivityId);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void CorrelateWithActivity(valuetype System.Guid parentActivityId) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Tracing.EtwActivity.CorrelateWithActivity(System.Guid)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub CorrelateWithActivity (parentActivityId As Guid)" />
+      <MemberSignature Language="F#" Value="member this.CorrelateWithActivity : Guid -&gt; unit" Usage="etwActivity.CorrelateWithActivity parentActivityId" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="parentActivityId" Type="System.Guid" />
+      </Parameters>
+      <Docs>
+        <param name="parentActivityId">To be added.</param>
+        <summary>
+            CorrelateWithActivity (EventId: 0x1f05/7941)
+            This method also sets a new activity id in current thread.
+            And then correlates the new id with parentActivityId
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateActivityId">
+      <MemberSignature Language="C#" Value="public static Guid CreateActivityId ();" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Guid CreateActivityId() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Tracing.EtwActivity.CreateActivityId" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function CreateActivityId () As Guid" />
+      <MemberSignature Language="F#" Value="static member CreateActivityId : unit -&gt; Guid" Usage="System.Management.Automation.Tracing.EtwActivity.CreateActivityId " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Guid</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Creates a new ActivityId that can be used to set in the thread's context.
+            </summary>
+        <returns />
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EventWritten">
+      <MemberSignature Language="C#" Value="public static event EventHandler&lt;System.Management.Automation.Tracing.EtwEventArgs&gt; EventWritten;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class System.Management.Automation.Tracing.EtwEventArgs&gt; EventWritten" />
+      <MemberSignature Language="DocId" Value="E:System.Management.Automation.Tracing.EtwActivity.EventWritten" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Event EventWritten As EventHandler(Of EtwEventArgs) " />
+      <MemberSignature Language="F#" Value="member this.EventWritten : EventHandler&lt;System.Management.Automation.Tracing.EtwEventArgs&gt; " Usage="member this.EventWritten : System.EventHandler&lt;System.Management.Automation.Tracing.EtwEventArgs&gt; " />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;System.Management.Automation.Tracing.EtwEventArgs&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Event handler for the class
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetActivityId">
+      <MemberSignature Language="C#" Value="public static Guid GetActivityId ();" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Guid GetActivityId() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Tracing.EtwActivity.GetActivityId" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function GetActivityId () As Guid" />
+      <MemberSignature Language="F#" Value="static member GetActivityId : unit -&gt; Guid" Usage="System.Management.Automation.Tracing.EtwActivity.GetActivityId " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Guid</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Returns the ActivityId set in current thread
+            </summary>
+        <returns />
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsEnabled">
+      <MemberSignature Language="C#" Value="public bool IsEnabled { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsEnabled" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.Tracing.EtwActivity.IsEnabled" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property IsEnabled As Boolean" />
+      <MemberSignature Language="F#" Value="member this.IsEnabled : bool" Usage="System.Management.Automation.Tracing.EtwActivity.IsEnabled" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            IsEnabled
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsProviderEnabled">
+      <MemberSignature Language="C#" Value="public bool IsProviderEnabled (byte levels, long keywords);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool IsProviderEnabled(unsigned int8 levels, int64 keywords) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Tracing.EtwActivity.IsProviderEnabled(System.Byte,System.Int64)" />
+      <MemberSignature Language="VB.NET" Value="Public Function IsProviderEnabled (levels As Byte, keywords As Long) As Boolean" />
+      <MemberSignature Language="F#" Value="member this.IsProviderEnabled : byte * int64 -&gt; bool" Usage="etwActivity.IsProviderEnabled (levels, keywords)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="levels" Type="System.Byte" />
+        <Parameter Name="keywords" Type="System.Int64" />
+      </Parameters>
+      <Docs>
+        <param name="levels">Levels to check </param>
+        <param name="keywords">Keywords to check</param>
+        <summary>
+            Checks whether a provider matching certain levels and keyword is enabled
+            </summary>
+        <returns>True, if any ETW listener is enabled else false</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ProviderId">
+      <MemberSignature Language="C#" Value="protected virtual Guid ProviderId { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Guid ProviderId" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.Tracing.EtwActivity.ProviderId" />
+      <MemberSignature Language="VB.NET" Value="Protected Overridable ReadOnly Property ProviderId As Guid" />
+      <MemberSignature Language="F#" Value="member this.ProviderId : Guid" Usage="System.Management.Automation.Tracing.EtwActivity.ProviderId" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Guid</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The provider where the tracing messages will be written to.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetActivityId">
+      <MemberSignature Language="C#" Value="public static bool SetActivityId (Guid activityId);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool SetActivityId(valuetype System.Guid activityId) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Tracing.EtwActivity.SetActivityId(System.Guid)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function SetActivityId (activityId As Guid) As Boolean" />
+      <MemberSignature Language="F#" Value="static member SetActivityId : Guid -&gt; bool" Usage="System.Management.Automation.Tracing.EtwActivity.SetActivityId activityId" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="activityId" Type="System.Guid" />
+      </Parameters>
+      <Docs>
+        <param name="activityId"></param>
+        <summary>
+            Sets the activityId provided in the current thread.
+            If current thread already has the same activityId it does
+            nothing.
+            </summary>
+        <returns>true when provided activity was set, false if current activity
+            was found to be same and set was not needed</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TransferEvent">
+      <MemberSignature Language="C#" Value="protected virtual System.Diagnostics.Eventing.EventDescriptor TransferEvent { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Diagnostics.Eventing.EventDescriptor TransferEvent" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.Tracing.EtwActivity.TransferEvent" />
+      <MemberSignature Language="VB.NET" Value="Protected Overridable ReadOnly Property TransferEvent As EventDescriptor" />
+      <MemberSignature Language="F#" Value="member this.TransferEvent : System.Diagnostics.Eventing.EventDescriptor" Usage="System.Management.Automation.Tracing.EtwActivity.TransferEvent" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Diagnostics.Eventing.EventDescriptor</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The event that is defined to be used to log transfer event.
+            The derived class must override this property if they don't
+            want to use the PowerShell's transfer event.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteEvent">
+      <MemberSignature Language="C#" Value="protected void WriteEvent (System.Diagnostics.Eventing.EventDescriptor ed, params object[] payload);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void WriteEvent(valuetype System.Diagnostics.Eventing.EventDescriptor ed, object[] payload) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Tracing.EtwActivity.WriteEvent(System.Diagnostics.Eventing.EventDescriptor,System.Object[])" />
+      <MemberSignature Language="VB.NET" Value="Protected Sub WriteEvent (ed As EventDescriptor, ParamArray payload As Object())" />
+      <MemberSignature Language="F#" Value="member this.WriteEvent : System.Diagnostics.Eventing.EventDescriptor * obj[] -&gt; unit" Usage="etwActivity.WriteEvent (ed, payload)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="ed" Type="System.Diagnostics.Eventing.EventDescriptor" />
+        <Parameter Name="payload" Type="System.Object[]">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.ParamArray</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="ed">EventDescriptor</param>
+        <param name="payload">payload</param>
+        <summary>
+            This is the main method that write the messages to the trace.
+            All derived classes must use this method to write to the provider log.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

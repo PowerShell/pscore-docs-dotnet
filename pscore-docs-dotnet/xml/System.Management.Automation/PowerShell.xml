@@ -1,0 +1,2232 @@
+﻿<Type Name="PowerShell" FullName="System.Management.Automation.PowerShell">
+  <TypeSignature Language="C#" Value="public sealed class PowerShell : IDisposable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit PowerShell extends System.Object implements class System.IDisposable" />
+  <TypeSignature Language="DocId" Value="T:System.Management.Automation.PowerShell" />
+  <TypeSignature Language="VB.NET" Value="Public NotInheritable Class PowerShell&#xA;Implements IDisposable" />
+  <TypeSignature Language="F#" Value="type PowerShell = class&#xA;    interface IDisposable" />
+  <AssemblyInfo>
+    <AssemblyName>System.Management.Automation</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>
+             Represents a PowerShell command or script to execute against a
+             Runspace(Pool) if provided, otherwise execute using a default
+             Runspace. Provides access to different result buffers
+             like output, error, debug, verbose, progress, warning, and information.
+            
+             Provides a simple interface to execute a powershell command:
+             <code>
+                Powershell.Create("get-process").Invoke();
+             </code>
+             The above statement creates a local runspace using default
+             configuration, executes the command and then closes the runspace.
+            
+             Using RunspacePool property, the caller can provide the runspace
+             where the command / script is executed.
+             </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="AddArgument">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.PowerShell AddArgument (object value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Management.Automation.PowerShell AddArgument(object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.PowerShell.AddArgument(System.Object)" />
+      <MemberSignature Language="VB.NET" Value="Public Function AddArgument (value As Object) As PowerShell" />
+      <MemberSignature Language="F#" Value="member this.AddArgument : obj -&gt; System.Management.Automation.PowerShell" Usage="powerShell.AddArgument value" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.PowerShell</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="value">
+             Value for the parameter.
+             </param>
+        <summary>
+             Adds an argument to the last added command.
+             For example, to construct a command string "get-process | select-object name"
+                 <code>
+                     PowerShell shell = PowerShell.Create("get-process").
+                                                 AddCommand("select-object").AddParameter("name");
+                 </code>
+            
+             This will add the value "name" to the positional parameter list of "select-object"
+             cmdlet. When the command is invoked, this value will get bound to positional parameter 0
+             of the "select-object" cmdlet which is "Property".
+             </summary>
+        <returns>
+             A PSCommand instance parameter value <paramref name="value" /> added
+             to the parameter list of the last command.
+             </returns>
+        <remarks>
+             This method is not thread safe.
+             </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddCommand">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.PowerShell AddCommand (System.Management.Automation.CommandInfo commandInfo);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Management.Automation.PowerShell AddCommand(class System.Management.Automation.CommandInfo commandInfo) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.PowerShell.AddCommand(System.Management.Automation.CommandInfo)" />
+      <MemberSignature Language="F#" Value="member this.AddCommand : System.Management.Automation.CommandInfo -&gt; System.Management.Automation.PowerShell" Usage="powerShell.AddCommand commandInfo" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.PowerShell</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="commandInfo" Type="System.Management.Automation.CommandInfo" />
+      </Parameters>
+      <Docs>
+        <param name="commandInfo">The CommandInfo object for the command to add</param>
+        <summary>
+            CommandInfo object for the command to add.
+            </summary>
+        <returns>
+            A PSCommand instance with the command added.
+            </returns>
+        <remarks>
+            This method is not thread-safe.
+            </remarks>
+        <exception cref="T:System.ArgumentNullException">
+            command is null.
+            </exception>
+        <exception cref="T:System.Management.Automation.InvalidPowerShellStateException">
+            Powershell instance cannot be changed in its
+            current state.
+            </exception>
+        <exception cref="T:System.ObjectDisposedException">
+            Object is disposed.
+            </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AddCommand">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.PowerShell AddCommand (string cmdlet);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Management.Automation.PowerShell AddCommand(string cmdlet) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.PowerShell.AddCommand(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Function AddCommand (cmdlet As String) As PowerShell" />
+      <MemberSignature Language="F#" Value="member this.AddCommand : string -&gt; System.Management.Automation.PowerShell" Usage="powerShell.AddCommand cmdlet" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.PowerShell</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="cmdlet" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="cmdlet">
+            A string representing cmdlet.
+            </param>
+        <summary>
+            Add a cmdlet to construct a command pipeline.
+            For example, to construct a command string "get-process | sort-object",
+                <code>
+                    PowerShell shell = PowerShell.Create("get-process").AddCommand("sort-object");
+                </code></summary>
+        <returns>
+            A PowerShell instance with <paramref name="cmdlet" /> added.
+            </returns>
+        <remarks>
+            This method is not thread safe.
+            </remarks>
+        <exception cref="T:System.ArgumentNullException">
+            cmdlet is null.
+            </exception>
+        <exception cref="T:System.Management.Automation.InvalidPowerShellStateException">
+            Powershell instance cannot be changed in its
+            current state.
+            </exception>
+        <exception cref="T:System.ObjectDisposedException">
+            Object is disposed.
+            </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AddCommand">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.PowerShell AddCommand (string cmdlet, bool useLocalScope);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Management.Automation.PowerShell AddCommand(string cmdlet, bool useLocalScope) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.PowerShell.AddCommand(System.String,System.Boolean)" />
+      <MemberSignature Language="VB.NET" Value="Public Function AddCommand (cmdlet As String, useLocalScope As Boolean) As PowerShell" />
+      <MemberSignature Language="F#" Value="member this.AddCommand : string * bool -&gt; System.Management.Automation.PowerShell" Usage="powerShell.AddCommand (cmdlet, useLocalScope)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.PowerShell</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="cmdlet" Type="System.String" />
+        <Parameter Name="useLocalScope" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="cmdlet">
+            A string representing cmdlet.
+            </param>
+        <param name="useLocalScope">
+            if true local scope is used to run the script command.
+            </param>
+        <summary>
+            Add a cmdlet to construct a command pipeline.
+            For example, to construct a command string "get-process | sort-object",
+                <code>
+                    PowerShell shell = PowerShell.Create("get-process").AddCommand("sort-object");
+                </code></summary>
+        <returns>
+            A PowerShell instance with <paramref name="cmdlet" /> added.
+            </returns>
+        <remarks>
+            This method is not thread safe.
+            </remarks>
+        <exception cref="T:System.ArgumentNullException">
+            cmdlet is null.
+            </exception>
+        <exception cref="T:System.Management.Automation.InvalidPowerShellStateException">
+            Powershell instance cannot be changed in its
+            current state.
+            </exception>
+        <exception cref="T:System.ObjectDisposedException">
+            Object is disposed.
+            </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AddParameter">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.PowerShell AddParameter (string parameterName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Management.Automation.PowerShell AddParameter(string parameterName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.PowerShell.AddParameter(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Function AddParameter (parameterName As String) As PowerShell" />
+      <MemberSignature Language="F#" Value="member this.AddParameter : string -&gt; System.Management.Automation.PowerShell" Usage="powerShell.AddParameter parameterName" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.PowerShell</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="parameterName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="parameterName">
+            Name of the parameter.
+            </param>
+        <summary>
+            Adds a switch parameter to the last added command.
+            For example, to construct a command string "get-process | sort-object -descending"
+                <code>
+                    PSCommand command = new PSCommand("get-process").
+                                                AddCommand("sort-object").AddParameter("descending");
+                </code></summary>
+        <returns>
+            A PowerShell instance with <paramref name="parameterName" /> added
+            to the parameter list of the last command.
+            </returns>
+        <remarks>
+            This method is not thread safe.
+            </remarks>
+        <exception cref="T:System.ArgumentException">
+            Name is non null and name length is zero after trimming whitespace.
+            </exception>
+        <exception cref="T:System.Management.Automation.InvalidPowerShellStateException">
+            Powershell instance cannot be changed in its
+            current state.
+            </exception>
+        <exception cref="T:System.ObjectDisposedException">
+            Object is disposed.
+            </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AddParameter">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.PowerShell AddParameter (string parameterName, object value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Management.Automation.PowerShell AddParameter(string parameterName, object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.PowerShell.AddParameter(System.String,System.Object)" />
+      <MemberSignature Language="VB.NET" Value="Public Function AddParameter (parameterName As String, value As Object) As PowerShell" />
+      <MemberSignature Language="F#" Value="member this.AddParameter : string * obj -&gt; System.Management.Automation.PowerShell" Usage="powerShell.AddParameter (parameterName, value)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.PowerShell</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="parameterName" Type="System.String" />
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="parameterName">
+            Name of the parameter.
+            </param>
+        <param name="value">
+            Value for the parameter.
+            </param>
+        <summary>
+            Add a parameter to the last added command.
+            For example, to construct a command string "get-process | select-object -property name"
+                <code>
+                    PowerShell shell = PowerShell.Create("get-process").
+                                                AddCommand("select-object").AddParameter("property","name");
+                </code></summary>
+        <returns>
+            A PowerShell instance with <paramref name="parameterName" /> added
+            to the parameter list of the last command.
+            </returns>
+        <remarks>
+            This method is not thread safe.
+            </remarks>
+        <exception cref="T:System.ArgumentException">
+            Name is non null and name length is zero after trimming whitespace.
+            </exception>
+        <exception cref="T:System.Management.Automation.InvalidPowerShellStateException">
+            Powershell instance cannot be changed in its
+            current state.
+            </exception>
+        <exception cref="T:System.ObjectDisposedException">
+            Object is disposed.
+            </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AddParameters">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.PowerShell AddParameters (System.Collections.IDictionary parameters);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Management.Automation.PowerShell AddParameters(class System.Collections.IDictionary parameters) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.PowerShell.AddParameters(System.Collections.IDictionary)" />
+      <MemberSignature Language="VB.NET" Value="Public Function AddParameters (parameters As IDictionary) As PowerShell" />
+      <MemberSignature Language="F#" Value="member this.AddParameters : System.Collections.IDictionary -&gt; System.Management.Automation.PowerShell" Usage="powerShell.AddParameters parameters" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.PowerShell</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="parameters" Type="System.Collections.IDictionary" />
+      </Parameters>
+      <Docs>
+        <param name="parameters">
+            Dictionary of parameters. Each key-value pair corresponds to a parameter name and its value. Keys must strings.
+            </param>
+        <summary>
+            Adds a set of parameters to the last added command.
+            </summary>
+        <returns>
+            A PowerShell instance with the items in <paramref name="parameters" /> added
+            to the parameter list of the last command.
+            </returns>
+        <remarks>
+            This method is not thread safe.
+            </remarks>
+        <exception cref="T:System.Management.Automation.PSArgumentNullException">
+            The function was given a null argument.
+            </exception>
+        <exception cref="T:System.Management.Automation.InvalidPowerShellStateException">
+            Powershell instance cannot be changed in its
+            current state.
+            </exception>
+        <exception cref="T:System.Management.Automation.PSArgumentException">
+            One of the dictionary keys is not a string.
+            </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AddParameters">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.PowerShell AddParameters (System.Collections.IList parameters);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Management.Automation.PowerShell AddParameters(class System.Collections.IList parameters) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.PowerShell.AddParameters(System.Collections.IList)" />
+      <MemberSignature Language="VB.NET" Value="Public Function AddParameters (parameters As IList) As PowerShell" />
+      <MemberSignature Language="F#" Value="member this.AddParameters : System.Collections.IList -&gt; System.Management.Automation.PowerShell" Usage="powerShell.AddParameters parameters" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.PowerShell</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="parameters" Type="System.Collections.IList" />
+      </Parameters>
+      <Docs>
+        <param name="parameters">
+            List of parameters.
+            </param>
+        <summary>
+            Adds a set of parameters to the last added command.
+            </summary>
+        <returns>
+            A PowerShell instance with the items in <paramref name="parameters" /> added
+            to the parameter list of the last command.
+            </returns>
+        <remarks>
+            This method is not thread safe.
+            </remarks>
+        <exception cref="T:System.Management.Automation.PSArgumentNullException">
+            The function was given a null argument.
+            </exception>
+        <exception cref="T:System.Management.Automation.InvalidPowerShellStateException">
+            Powershell instance cannot be changed in its
+            current state.
+            </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AddScript">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.PowerShell AddScript (string script);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Management.Automation.PowerShell AddScript(string script) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.PowerShell.AddScript(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Function AddScript (script As String) As PowerShell" />
+      <MemberSignature Language="F#" Value="member this.AddScript : string -&gt; System.Management.Automation.PowerShell" Usage="powerShell.AddScript script" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.PowerShell</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="script" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="script">
+            A string representing a script.
+            </param>
+        <summary>
+            Add a piece of script to construct a command pipeline.
+            For example, to construct a command string "get-process | foreach { $_.Name }"
+                <code>
+                    PowerShell shell = PowerShell.Create("get-process").
+                                                AddCommand("foreach { $_.Name }", true);
+                </code></summary>
+        <returns>
+            A PowerShell instance with <paramref name="command" /> added.
+            </returns>
+        <remarks>
+            This method is not thread-safe.
+            </remarks>
+        <exception cref="T:System.ArgumentNullException">
+            command is null.
+            </exception>
+        <exception cref="T:System.Management.Automation.InvalidPowerShellStateException">
+            Powershell instance cannot be changed in its
+            current state.
+            </exception>
+        <exception cref="T:System.ObjectDisposedException">
+            Object is disposed.
+            </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AddScript">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.PowerShell AddScript (string script, bool useLocalScope);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Management.Automation.PowerShell AddScript(string script, bool useLocalScope) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.PowerShell.AddScript(System.String,System.Boolean)" />
+      <MemberSignature Language="VB.NET" Value="Public Function AddScript (script As String, useLocalScope As Boolean) As PowerShell" />
+      <MemberSignature Language="F#" Value="member this.AddScript : string * bool -&gt; System.Management.Automation.PowerShell" Usage="powerShell.AddScript (script, useLocalScope)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.PowerShell</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="script" Type="System.String" />
+        <Parameter Name="useLocalScope" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="script">
+            A string representing a script.
+            </param>
+        <param name="useLocalScope">
+            if true local scope is used to run the script command.
+            </param>
+        <summary>
+            Add a piece of script to construct a command pipeline.
+            For example, to construct a command string "get-process | foreach { $_.Name }"
+                <code>
+                    PowerShell shell = PowerShell.Create("get-process").
+                                                AddCommand("foreach { $_.Name }", true);
+                </code></summary>
+        <returns>
+            A PowerShell instance with <paramref name="command" /> added.
+            </returns>
+        <remarks>
+            This method is not thread-safe.
+            </remarks>
+        <exception cref="T:System.ArgumentNullException">
+            command is null.
+            </exception>
+        <exception cref="T:System.Management.Automation.InvalidPowerShellStateException">
+            Powershell instance cannot be changed in its
+            current state.
+            </exception>
+        <exception cref="T:System.ObjectDisposedException">
+            Object is disposed.
+            </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AddStatement">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.PowerShell AddStatement ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Management.Automation.PowerShell AddStatement() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.PowerShell.AddStatement" />
+      <MemberSignature Language="VB.NET" Value="Public Function AddStatement () As PowerShell" />
+      <MemberSignature Language="F#" Value="member this.AddStatement : unit -&gt; System.Management.Automation.PowerShell" Usage="powerShell.AddStatement " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.PowerShell</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+             Adds an additional statement for execution
+            
+             For example,
+                 <code>
+                     Runspace rs = RunspaceFactory.CreateRunspace();
+                     PowerShell ps = PowerShell.Create();
+            
+                     ps.Runspace = rs;
+                     ps.AddCommand("Get-Process").AddArgument("idle");
+                     ps.AddStatement().AddCommand("Get-Service").AddArgument("audiosrv");
+                     ps.Invoke();
+                 </code></summary>
+        <returns>
+             A PowerShell instance with the items in <paramref name="parameters" /> added
+             to the parameter list of the last command.
+             </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AsJobProxy">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.PSJobProxy AsJobProxy ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Management.Automation.PSJobProxy AsJobProxy() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.PowerShell.AsJobProxy" />
+      <MemberSignature Language="VB.NET" Value="Public Function AsJobProxy () As PSJobProxy" />
+      <MemberSignature Language="F#" Value="member this.AsJobProxy : unit -&gt; System.Management.Automation.PSJobProxy" Usage="powerShell.AsJobProxy " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.PSJobProxy</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Returns a job object which can be used to
+            control the invocation of the command with
+            AsJob Parameter
+            </summary>
+        <returns>Job object</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginInvoke">
+      <MemberSignature Language="C#" Value="public IAsyncResult BeginInvoke ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IAsyncResult BeginInvoke() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.PowerShell.BeginInvoke" />
+      <MemberSignature Language="VB.NET" Value="Public Function BeginInvoke () As IAsyncResult" />
+      <MemberSignature Language="F#" Value="member this.BeginInvoke : unit -&gt; IAsyncResult" Usage="powerShell.BeginInvoke " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Invoke the <see cref="T:System.Management.Automation.Runspaces.Command" /> asynchronously.
+            Use EndInvoke() to obtain the output of the command.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidOperationException">
+            Cannot perform the operation because the command is already started.
+            Stop the command and try the operation again.
+            (or)
+            No command is added.
+            </exception>
+        <exception cref="T:System.ObjectDisposedException">
+            Object is disposed.
+            </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginInvoke&lt;T&gt;">
+      <MemberSignature Language="C#" Value="public IAsyncResult BeginInvoke&lt;T&gt; (System.Management.Automation.PSDataCollection&lt;T&gt; input);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IAsyncResult BeginInvoke&lt;T&gt;(class System.Management.Automation.PSDataCollection`1&lt;!!T&gt; input) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.PowerShell.BeginInvoke``1(System.Management.Automation.PSDataCollection{``0})" />
+      <MemberSignature Language="VB.NET" Value="Public Function BeginInvoke(Of T) (input As PSDataCollection(Of T)) As IAsyncResult" />
+      <MemberSignature Language="F#" Value="member this.BeginInvoke : System.Management.Automation.PSDataCollection&lt;'T&gt; -&gt; IAsyncResult" Usage="powerShell.BeginInvoke input" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="T" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="input" Type="System.Management.Automation.PSDataCollection&lt;T&gt;" />
+      </Parameters>
+      <Docs>
+        <typeparam name="T">
+             Type of the input buffer
+             </typeparam>
+        <param name="input">
+             Input to the command. See remarks for more details.
+             </param>
+        <summary>
+             Invoke the <see cref="T:System.Management.Automation.Runspaces.Command" /> asynchronously.
+             Use EndInvoke() to obtain the output of the command.
+             </summary>
+        <returns>To be added.</returns>
+        <remarks>
+             When invoked using BeginInvoke, invocation doesn't
+             finish until Input is closed. Caller of BeginInvoke must
+             close the input buffer after all input has been written to
+             input buffer. Input buffer is closed by calling
+             Close() method.
+            
+             If you want this command to execute as a standalone cmdlet
+             (that is, using command-line parameters only),
+             be sure to call Close() before calling BeginInvoke().  Otherwise,
+             the command will be executed as though it had external input.
+             If you observe that the command isn't doing anything,
+             this may be the reason.
+             </remarks>
+        <exception cref="T:System.InvalidOperationException">
+             Cannot perform the operation because the command is already started.
+             Stop the command and try the operation again.
+             (or)
+             No command is added.
+             </exception>
+        <exception cref="T:System.ObjectDisposedException">
+             Object is disposed.
+             </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginInvoke&lt;T&gt;">
+      <MemberSignature Language="C#" Value="public IAsyncResult BeginInvoke&lt;T&gt; (System.Management.Automation.PSDataCollection&lt;T&gt; input, System.Management.Automation.PSInvocationSettings settings, AsyncCallback callback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IAsyncResult BeginInvoke&lt;T&gt;(class System.Management.Automation.PSDataCollection`1&lt;!!T&gt; input, class System.Management.Automation.PSInvocationSettings settings, class System.AsyncCallback callback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.PowerShell.BeginInvoke``1(System.Management.Automation.PSDataCollection{``0},System.Management.Automation.PSInvocationSettings,System.AsyncCallback,System.Object)" />
+      <MemberSignature Language="VB.NET" Value="Public Function BeginInvoke(Of T) (input As PSDataCollection(Of T), settings As PSInvocationSettings, callback As AsyncCallback, state As Object) As IAsyncResult" />
+      <MemberSignature Language="F#" Value="member this.BeginInvoke : System.Management.Automation.PSDataCollection&lt;'T&gt; * System.Management.Automation.PSInvocationSettings * AsyncCallback * obj -&gt; IAsyncResult" Usage="powerShell.BeginInvoke (input, settings, callback, state)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="T" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="input" Type="System.Management.Automation.PSDataCollection&lt;T&gt;" />
+        <Parameter Name="settings" Type="System.Management.Automation.PSInvocationSettings" />
+        <Parameter Name="callback" Type="System.AsyncCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <typeparam name="T">
+             Type of the input buffer
+             </typeparam>
+        <param name="input">
+             Input to the command. See remarks for more details.
+             </param>
+        <param name="settings">
+             Invocation Settings.
+             </param>
+        <param name="callback">
+             An AsyncCallback to call once the BeginInvoke completes.
+             </param>
+        <param name="state">
+             A user supplied state to call the <paramref name="callback" />
+             with.
+             </param>
+        <summary>
+             Invoke the <see cref="T:System.Management.Automation.Runspaces.Command" /> asynchronously.
+             Use EndInvoke() to obtain the output of the command.
+             </summary>
+        <returns>To be added.</returns>
+        <remarks>
+             When invoked using BeginInvoke, invocation doesn't
+             finish until Input is closed. Caller of BeginInvoke must
+             close the input buffer after all input has been written to
+             input buffer. Input buffer is closed by calling
+             Close() method.
+            
+             If you want this command to execute as a standalone cmdlet
+             (that is, using command-line parameters only),
+             be sure to call Close() before calling BeginInvoke().  Otherwise,
+             the command will be executed as though it had external input.
+             If you observe that the command isn't doing anything,
+             this may be the reason.
+             </remarks>
+        <exception cref="T:System.InvalidOperationException">
+             Cannot perform the operation because the command is already started.
+             Stop the command and try the operation again.
+             (or)
+             No command is added.
+             </exception>
+        <exception cref="T:System.ObjectDisposedException">
+             Object is disposed.
+             </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginInvoke&lt;TInput,TOutput&gt;">
+      <MemberSignature Language="C#" Value="public IAsyncResult BeginInvoke&lt;TInput,TOutput&gt; (System.Management.Automation.PSDataCollection&lt;TInput&gt; input, System.Management.Automation.PSDataCollection&lt;TOutput&gt; output);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IAsyncResult BeginInvoke&lt;TInput, TOutput&gt;(class System.Management.Automation.PSDataCollection`1&lt;!!TInput&gt; input, class System.Management.Automation.PSDataCollection`1&lt;!!TOutput&gt; output) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.PowerShell.BeginInvoke``2(System.Management.Automation.PSDataCollection{``0},System.Management.Automation.PSDataCollection{``1})" />
+      <MemberSignature Language="VB.NET" Value="Public Function BeginInvoke(Of TInput, TOutput) (input As PSDataCollection(Of TInput), output As PSDataCollection(Of TOutput)) As IAsyncResult" />
+      <MemberSignature Language="F#" Value="member this.BeginInvoke : System.Management.Automation.PSDataCollection&lt;'Input&gt; * System.Management.Automation.PSDataCollection&lt;'Output&gt; -&gt; IAsyncResult" Usage="powerShell.BeginInvoke (input, output)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TInput" />
+        <TypeParameter Name="TOutput" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="input" Type="System.Management.Automation.PSDataCollection&lt;TInput&gt;" />
+        <Parameter Name="output" Type="System.Management.Automation.PSDataCollection&lt;TOutput&gt;" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TInput">
+             Type of input object(s) for the command invocation.
+             </typeparam>
+        <typeparam name="TOutput">
+             Type of output object(s) expected from the command invocation.
+             </typeparam>
+        <param name="input">
+             Input to the command. See remarks for more details.
+             </param>
+        <param name="output">
+             A buffer supplied by the user where output is collected.
+             </param>
+        <summary>
+             Invoke the <see cref="T:System.Management.Automation.Runspaces.Command" /> asynchronously.
+             When this method is used EndInvoke() returns a null buffer.
+             </summary>
+        <returns>To be added.</returns>
+        <remarks>
+             When invoked using BeginInvoke, invocation doesn't
+             finish until Input is closed. Caller of BeginInvoke must
+             close the input buffer after all input has been written to
+             input buffer. Input buffer is closed by calling
+             Close() method.
+            
+             If you want this command to execute as a standalone cmdlet
+             (that is, using command-line parameters only),
+             be sure to call Close() before calling BeginInvoke().  Otherwise,
+             the command will be executed as though it had external input.
+             If you observe that the command isn't doing anything,
+             this may be the reason.
+             </remarks>
+        <exception cref="T:System.InvalidOperationException">
+             Cannot perform the operation because the command is already started.
+             Stop the command and try the operation again.
+             (or)
+             No command is added.
+             </exception>
+        <exception cref="T:System.ObjectDisposedException">
+             Object is disposed.
+             </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginInvoke&lt;TInput,TOutput&gt;">
+      <MemberSignature Language="C#" Value="public IAsyncResult BeginInvoke&lt;TInput,TOutput&gt; (System.Management.Automation.PSDataCollection&lt;TInput&gt; input, System.Management.Automation.PSDataCollection&lt;TOutput&gt; output, System.Management.Automation.PSInvocationSettings settings, AsyncCallback callback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IAsyncResult BeginInvoke&lt;TInput, TOutput&gt;(class System.Management.Automation.PSDataCollection`1&lt;!!TInput&gt; input, class System.Management.Automation.PSDataCollection`1&lt;!!TOutput&gt; output, class System.Management.Automation.PSInvocationSettings settings, class System.AsyncCallback callback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.PowerShell.BeginInvoke``2(System.Management.Automation.PSDataCollection{``0},System.Management.Automation.PSDataCollection{``1},System.Management.Automation.PSInvocationSettings,System.AsyncCallback,System.Object)" />
+      <MemberSignature Language="VB.NET" Value="Public Function BeginInvoke(Of TInput, TOutput) (input As PSDataCollection(Of TInput), output As PSDataCollection(Of TOutput), settings As PSInvocationSettings, callback As AsyncCallback, state As Object) As IAsyncResult" />
+      <MemberSignature Language="F#" Value="member this.BeginInvoke : System.Management.Automation.PSDataCollection&lt;'Input&gt; * System.Management.Automation.PSDataCollection&lt;'Output&gt; * System.Management.Automation.PSInvocationSettings * AsyncCallback * obj -&gt; IAsyncResult" Usage="powerShell.BeginInvoke (input, output, settings, callback, state)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TInput" />
+        <TypeParameter Name="TOutput" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="input" Type="System.Management.Automation.PSDataCollection&lt;TInput&gt;" />
+        <Parameter Name="output" Type="System.Management.Automation.PSDataCollection&lt;TOutput&gt;" />
+        <Parameter Name="settings" Type="System.Management.Automation.PSInvocationSettings" />
+        <Parameter Name="callback" Type="System.AsyncCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TInput">
+             Type of input object(s) for the command invocation.
+             </typeparam>
+        <typeparam name="TOutput">
+             Type of output object(s) expected from the command invocation.
+             </typeparam>
+        <param name="input">
+             Input to the command. See remarks for more details.
+             </param>
+        <param name="output">
+             A buffer supplied by the user where output is collected.
+             </param>
+        <param name="settings">
+             Invocation Settings.
+             </param>
+        <param name="callback">
+             An AsyncCallback to call once the BeginInvoke completes.
+             </param>
+        <param name="state">
+             A user supplied state to call the <paramref name="callback" />
+             with.
+             </param>
+        <summary>
+             Invoke the <see cref="T:System.Management.Automation.Runspaces.Command" /> asynchronously and collect
+             output data into the buffer <paramref name="output" />.
+             When this method is used EndInvoke() returns a null buffer.
+             </summary>
+        <returns>To be added.</returns>
+        <remarks>
+             When invoked using BeginInvoke, invocation doesn't
+             finish until Input is closed. Caller of BeginInvoke must
+             close the input buffer after all input has been written to
+             input buffer. Input buffer is closed by calling
+             Close() method.
+            
+             If you want this command to execute as a standalone cmdlet
+             (that is, using command-line parameters only),
+             be sure to call Close() before calling BeginInvoke().  Otherwise,
+             the command will be executed as though it had external input.
+             If you observe that the command isn't doing anything,
+             this may be the reason.
+             </remarks>
+        <exception cref="T:System.InvalidOperationException">
+             Cannot perform the operation because the command is already started.
+             Stop the command and try the operation again.
+             (or)
+             No command is added.
+             </exception>
+        <exception cref="T:System.ObjectDisposedException">
+             Object is disposed.
+             </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginStop">
+      <MemberSignature Language="C#" Value="public IAsyncResult BeginStop (AsyncCallback callback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IAsyncResult BeginStop(class System.AsyncCallback callback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.PowerShell.BeginStop(System.AsyncCallback,System.Object)" />
+      <MemberSignature Language="VB.NET" Value="Public Function BeginStop (callback As AsyncCallback, state As Object) As IAsyncResult" />
+      <MemberSignature Language="F#" Value="member this.BeginStop : AsyncCallback * obj -&gt; IAsyncResult" Usage="powerShell.BeginStop (callback, state)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="callback" Type="System.AsyncCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="callback">
+             A AsyncCallback to call once the BeginStop completes.
+             </param>
+        <param name="state">
+             A user supplied state to call the <paramref name="callback" />
+             with.
+             </param>
+        <summary>
+             Stop the currently running command asynchronously. If the command is not started,
+             the state of PowerShell instance is changed to Stopped and corresponding events
+             will be raised.
+            
+             The returned IAsyncResult object can be used to wait for the stop operation
+             to complete.
+             </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ObjectDisposedException">
+             Object is disposed.
+             </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Commands">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.PSCommand Commands { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Management.Automation.PSCommand Commands" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.PowerShell.Commands" />
+      <MemberSignature Language="VB.NET" Value="Public Property Commands As PSCommand" />
+      <MemberSignature Language="F#" Value="member this.Commands : System.Management.Automation.PSCommand with get, set" Usage="System.Management.Automation.PowerShell.Commands" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.PSCommand</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets current powershell command line.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+            Cannot set to a null value.
+            </exception>
+        <exception cref="T:System.Management.Automation.InvalidPowerShellStateException">
+            Powershell instance cannot be changed in its
+            current state.
+            </exception>
+        <exception cref="T:System.ObjectDisposedException">
+            Object is disposed.
+            </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Connect">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.Collection&lt;System.Management.Automation.PSObject&gt; Connect ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Collections.ObjectModel.Collection`1&lt;class System.Management.Automation.PSObject&gt; Connect() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.PowerShell.Connect" />
+      <MemberSignature Language="VB.NET" Value="Public Function Connect () As Collection(Of PSObject)" />
+      <MemberSignature Language="F#" Value="member this.Connect : unit -&gt; System.Collections.ObjectModel.Collection&lt;System.Management.Automation.PSObject&gt;" Usage="powerShell.Connect " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.Collection&lt;System.Management.Automation.PSObject&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Synchronously connects to a running command on a remote server.
+            </summary>
+        <returns>Command output as a PSDataCollection.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ConnectAsync">
+      <MemberSignature Language="C#" Value="public IAsyncResult ConnectAsync ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IAsyncResult ConnectAsync() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.PowerShell.ConnectAsync" />
+      <MemberSignature Language="VB.NET" Value="Public Function ConnectAsync () As IAsyncResult" />
+      <MemberSignature Language="F#" Value="member this.ConnectAsync : unit -&gt; IAsyncResult" Usage="powerShell.ConnectAsync " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Asynchronously connects to a running command on a remote server.
+            The returned IAsyncResult object can be used with EndInvoke() method
+            to wait on command and/or get command returned data.
+            </summary>
+        <returns>IAsyncResult.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ConnectAsync">
+      <MemberSignature Language="C#" Value="public IAsyncResult ConnectAsync (System.Management.Automation.PSDataCollection&lt;System.Management.Automation.PSObject&gt; output, AsyncCallback invocationCallback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IAsyncResult ConnectAsync(class System.Management.Automation.PSDataCollection`1&lt;class System.Management.Automation.PSObject&gt; output, class System.AsyncCallback invocationCallback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.PowerShell.ConnectAsync(System.Management.Automation.PSDataCollection{System.Management.Automation.PSObject},System.AsyncCallback,System.Object)" />
+      <MemberSignature Language="VB.NET" Value="Public Function ConnectAsync (output As PSDataCollection(Of PSObject), invocationCallback As AsyncCallback, state As Object) As IAsyncResult" />
+      <MemberSignature Language="F#" Value="member this.ConnectAsync : System.Management.Automation.PSDataCollection&lt;System.Management.Automation.PSObject&gt; * AsyncCallback * obj -&gt; IAsyncResult" Usage="powerShell.ConnectAsync (output, invocationCallback, state)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="output" Type="System.Management.Automation.PSDataCollection&lt;System.Management.Automation.PSObject&gt;" />
+        <Parameter Name="invocationCallback" Type="System.AsyncCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="output">The output buffer to return from EndInvoke.</param>
+        <param name="invocationCallback">An AsyncCallback to be called once the previous invocation has completed.</param>
+        <param name="state">A user supplied state to call the <paramref name="invocationCallback" /> with.</param>
+        <summary>
+            Asynchronously connects to a running command on a remote server.
+            The returned IAsyncResult object can be used with EndInvoke() method
+            to wait on command and/or get command returned data.
+            </summary>
+        <returns>IAsyncResult</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Create">
+      <MemberSignature Language="C#" Value="public static System.Management.Automation.PowerShell Create ();" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Management.Automation.PowerShell Create() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.PowerShell.Create" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function Create () As PowerShell" />
+      <MemberSignature Language="F#" Value="static member Create : unit -&gt; System.Management.Automation.PowerShell" Usage="System.Management.Automation.PowerShell.Create " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.PowerShell</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Constructs an empty PowerShell instance; a script or command must be added before invoking this instance
+            </summary>
+        <returns>
+            An instance of PowerShell.
+            </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Create">
+      <MemberSignature Language="C#" Value="public static System.Management.Automation.PowerShell Create (System.Management.Automation.RunspaceMode runspace);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Management.Automation.PowerShell Create(valuetype System.Management.Automation.RunspaceMode runspace) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.PowerShell.Create(System.Management.Automation.RunspaceMode)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function Create (runspace As RunspaceMode) As PowerShell" />
+      <MemberSignature Language="F#" Value="static member Create : System.Management.Automation.RunspaceMode -&gt; System.Management.Automation.PowerShell" Usage="System.Management.Automation.PowerShell.Create runspace" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.PowerShell</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="runspace" Type="System.Management.Automation.RunspaceMode" />
+      </Parameters>
+      <Docs>
+        <param name="runspace">runspace mode</param>
+        <summary>
+            Constructs an empty PowerShell instance; a script or command must be added before invoking this instance
+            </summary>
+        <returns>An instance of PowerShell.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Create">
+      <MemberSignature Language="C#" Value="public static System.Management.Automation.PowerShell Create (System.Management.Automation.Runspaces.InitialSessionState initialSessionState);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Management.Automation.PowerShell Create(class System.Management.Automation.Runspaces.InitialSessionState initialSessionState) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.PowerShell.Create(System.Management.Automation.Runspaces.InitialSessionState)" />
+      <MemberSignature Language="F#" Value="static member Create : System.Management.Automation.Runspaces.InitialSessionState -&gt; System.Management.Automation.PowerShell" Usage="System.Management.Automation.PowerShell.Create initialSessionState" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.PowerShell</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="initialSessionState" Type="System.Management.Automation.Runspaces.InitialSessionState" />
+      </Parameters>
+      <Docs>
+        <param name="initialSessionState">InitialSessionState with which to create the runspace</param>
+        <summary>
+            Constructs an empty PowerShell instance; a script or command must be added before invoking this instance
+            </summary>
+        <returns>An instance of PowerShell.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateNestedPowerShell">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.PowerShell CreateNestedPowerShell ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Management.Automation.PowerShell CreateNestedPowerShell() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.PowerShell.CreateNestedPowerShell" />
+      <MemberSignature Language="VB.NET" Value="Public Function CreateNestedPowerShell () As PowerShell" />
+      <MemberSignature Language="F#" Value="member this.CreateNestedPowerShell : unit -&gt; System.Management.Automation.PowerShell" Usage="powerShell.CreateNestedPowerShell " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.PowerShell</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+             Creates a nested powershell within the current instance.
+             Nested PowerShell is used to do simple operations like checking state
+             of a variable while another command is using the runspace.
+            
+             Nested PowerShell should be invoked from the same thread as the parent
+             PowerShell invocation thread. So effectively the parent Powershell
+             invocation thread is blocked until nested invoke() operation is
+             complete.
+            
+             Implement PSHost.EnterNestedPrompt to perform invoke() operation on the
+             nested powershell.
+             </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidOperationException">
+             1. State of powershell instance is not valid to create a nested powershell instance.
+             Nested PowerShell should be created only for a running powershell instance.
+             </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="public void Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Dispose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.PowerShell.Dispose" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Dispose ()" />
+      <MemberSignature Language="F#" Value="abstract member Dispose : unit -&gt; unit&#xA;override this.Dispose : unit -&gt; unit" Usage="powerShell.Dispose " />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.IDisposable.Dispose</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Dispose all managed resources. This will suppress finalizer on the object from getting called by
+            calling System.GC.SuppressFinalize(this).
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EndInvoke">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.PSDataCollection&lt;System.Management.Automation.PSObject&gt; EndInvoke (IAsyncResult asyncResult);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Management.Automation.PSDataCollection`1&lt;class System.Management.Automation.PSObject&gt; EndInvoke(class System.IAsyncResult asyncResult) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.PowerShell.EndInvoke(System.IAsyncResult)" />
+      <MemberSignature Language="VB.NET" Value="Public Function EndInvoke (asyncResult As IAsyncResult) As PSDataCollection(Of PSObject)" />
+      <MemberSignature Language="F#" Value="member this.EndInvoke : IAsyncResult -&gt; System.Management.Automation.PSDataCollection&lt;System.Management.Automation.PSObject&gt;" Usage="powerShell.EndInvoke asyncResult" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.PSDataCollection&lt;System.Management.Automation.PSObject&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="asyncResult" Type="System.IAsyncResult" />
+      </Parameters>
+      <Docs>
+        <param name="asyncResult">
+            Instance of IAsyncResult returned by BeginInvoke.
+            </param>
+        <summary>
+            Waits for the pending asynchronous BeginInvoke to complete.
+            </summary>
+        <returns>
+            The output buffer created to hold the results of the asynchronous invoke, or null if the caller provided their own buffer.
+            </returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+            asyncResult is a null reference.
+            </exception>
+        <exception cref="T:System.ArgumentException">
+            asyncResult object was not created by calling BeginInvoke
+            on this PowerShell instance.
+            </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="EndStop">
+      <MemberSignature Language="C#" Value="public void EndStop (IAsyncResult asyncResult);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void EndStop(class System.IAsyncResult asyncResult) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.PowerShell.EndStop(System.IAsyncResult)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub EndStop (asyncResult As IAsyncResult)" />
+      <MemberSignature Language="F#" Value="member this.EndStop : IAsyncResult -&gt; unit" Usage="powerShell.EndStop asyncResult" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="asyncResult" Type="System.IAsyncResult" />
+      </Parameters>
+      <Docs>
+        <param name="asyncResult">
+            Instance of IAsyncResult returned by BeginStop.
+            </param>
+        <summary>
+            Waits for the pending asynchronous BeginStop to complete.
+            </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+            asyncResult is a null reference.
+            </exception>
+        <exception cref="T:System.ArgumentException">
+            asyncResult object was not created by calling BeginStop
+            on this PowerShell instance.
+            </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="HadErrors">
+      <MemberSignature Language="C#" Value="public bool HadErrors { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool HadErrors" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.PowerShell.HadErrors" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property HadErrors As Boolean" />
+      <MemberSignature Language="F#" Value="member this.HadErrors : bool" Usage="System.Management.Automation.PowerShell.HadErrors" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            If an error occurred while executing the pipeline, this will be set to true.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HistoryString">
+      <MemberSignature Language="C#" Value="public string HistoryString { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string HistoryString" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.PowerShell.HistoryString" />
+      <MemberSignature Language="VB.NET" Value="Public Property HistoryString As String" />
+      <MemberSignature Language="F#" Value="member this.HistoryString : string with get, set" Usage="System.Management.Automation.PowerShell.HistoryString" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The history string to be used for displaying
+            the history.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InstanceId">
+      <MemberSignature Language="C#" Value="public Guid InstanceId { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Guid InstanceId" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.PowerShell.InstanceId" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property InstanceId As Guid" />
+      <MemberSignature Language="F#" Value="member this.InstanceId : Guid" Usage="System.Management.Automation.PowerShell.InstanceId" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Guid</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Get unique id for this instance of runspace pool. It is primarily used
+            for logging purposes.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InvocationStateChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler&lt;System.Management.Automation.PSInvocationStateChangedEventArgs&gt; InvocationStateChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class System.Management.Automation.PSInvocationStateChangedEventArgs&gt; InvocationStateChanged" />
+      <MemberSignature Language="DocId" Value="E:System.Management.Automation.PowerShell.InvocationStateChanged" />
+      <MemberSignature Language="VB.NET" Value="Public Event InvocationStateChanged As EventHandler(Of PSInvocationStateChangedEventArgs) " />
+      <MemberSignature Language="F#" Value="member this.InvocationStateChanged : EventHandler&lt;System.Management.Automation.PSInvocationStateChangedEventArgs&gt; " Usage="member this.InvocationStateChanged : System.EventHandler&lt;System.Management.Automation.PSInvocationStateChangedEventArgs&gt; " />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;System.Management.Automation.PSInvocationStateChangedEventArgs&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Event raised when PowerShell Execution State Changes.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InvocationStateInfo">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.PSInvocationStateInfo InvocationStateInfo { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Management.Automation.PSInvocationStateInfo InvocationStateInfo" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.PowerShell.InvocationStateInfo" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property InvocationStateInfo As PSInvocationStateInfo" />
+      <MemberSignature Language="F#" Value="member this.InvocationStateInfo : System.Management.Automation.PSInvocationStateInfo" Usage="System.Management.Automation.PowerShell.InvocationStateInfo" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.PSInvocationStateInfo</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the execution state of the current PowerShell instance.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Invoke">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.Collection&lt;System.Management.Automation.PSObject&gt; Invoke ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Collections.ObjectModel.Collection`1&lt;class System.Management.Automation.PSObject&gt; Invoke() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.PowerShell.Invoke" />
+      <MemberSignature Language="VB.NET" Value="Public Function Invoke () As Collection(Of PSObject)" />
+      <MemberSignature Language="F#" Value="member this.Invoke : unit -&gt; System.Collections.ObjectModel.Collection&lt;System.Management.Automation.PSObject&gt;" Usage="powerShell.Invoke " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.Collection&lt;System.Management.Automation.PSObject&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Invoke the <see cref="T:System.Management.Automation.Runspaces.Command" /> synchronously and return
+            the output PSObject collection.
+            </summary>
+        <returns>
+            collection of PSObjects.
+            </returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ObjectDisposedException">
+            Object is disposed.
+            </exception>
+        <exception cref="T:System.InvalidOperationException">
+            Cannot perform the operation because the command is
+            already started.Stop the command and try the operation again.
+            (or)
+            No commands are specified.
+            </exception>
+        <exception cref="T:System.Management.Automation.ScriptCallDepthException">
+            The script recursed too deeply into script functions.
+            There is a fixed limit on the depth of recursion.
+            </exception>
+        <exception cref="T:System.Security.SecurityException">
+            A CLR security violation occurred.  Typically, this happens
+            because the current CLR permissions do not allow adequate
+            reflection access to a cmdlet assembly.
+            </exception>
+        <exception cref="T:System.Threading.ThreadAbortException">
+            The thread in which the command was executing was aborted.
+            </exception>
+        <exception cref="T:System.Management.Automation.RuntimeException">
+            PowerShell.Invoke can throw a variety of exceptions derived
+            from RuntimeException. The most likely of these exceptions
+            are listed below.
+            </exception>
+        <exception cref="T:System.Management.Automation.ParameterBindingException">
+            One of more parameters or parameter values specified for
+            a cmdlet are not valid, or mandatory parameters for a cmdlet
+            were not specified.
+            </exception>
+        <exception cref="T:System.Management.Automation.CmdletInvocationException">
+            A cmdlet generated a terminating error.
+            </exception>
+        <exception cref="T:System.Management.Automation.CmdletProviderInvocationException">
+            A provider generated a terminating error.
+            </exception>
+        <exception cref="T:System.Management.Automation.ActionPreferenceStopException">
+            The ActionPreference.Stop or ActionPreference.Inquire policy
+            triggered a terminating error.
+            </exception>
+        <exception cref="T:System.Management.Automation.PipelineStoppedException">
+            The pipeline was terminated asynchronously.
+            </exception>
+        <exception cref="T:System.Management.Automation.MetadataException">
+            If there is an error generating the metadata for dynamic parameters.
+            </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Invoke">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.Collection&lt;System.Management.Automation.PSObject&gt; Invoke (System.Collections.IEnumerable input);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Collections.ObjectModel.Collection`1&lt;class System.Management.Automation.PSObject&gt; Invoke(class System.Collections.IEnumerable input) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.PowerShell.Invoke(System.Collections.IEnumerable)" />
+      <MemberSignature Language="VB.NET" Value="Public Function Invoke (input As IEnumerable) As Collection(Of PSObject)" />
+      <MemberSignature Language="F#" Value="member this.Invoke : System.Collections.IEnumerable -&gt; System.Collections.ObjectModel.Collection&lt;System.Management.Automation.PSObject&gt;" Usage="powerShell.Invoke input" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.Collection&lt;System.Management.Automation.PSObject&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="input" Type="System.Collections.IEnumerable" />
+      </Parameters>
+      <Docs>
+        <param name="input">
+            Input to the command
+            </param>
+        <summary>
+            Invoke the <see cref="T:System.Management.Automation.Runspaces.Command" /> synchronously and return
+            the output PSObject collection.
+            </summary>
+        <returns>
+            Collection of PSObjects representing output.
+            </returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ObjectDisposedException">
+            Object is disposed.
+            </exception>
+        <exception cref="T:System.InvalidOperationException">
+            Cannot perform the operation because the command is
+            already started.Stop the command and try the operation again.
+            (or)
+            No commands are specified.
+            </exception>
+        <exception cref="T:System.Management.Automation.ScriptCallDepthException">
+            The script recursed too deeply into script functions.
+            There is a fixed limit on the depth of recursion.
+            </exception>
+        <exception cref="T:System.Security.SecurityException">
+            A CLR security violation occurred.  Typically, this happens
+            because the current CLR permissions do not allow adequate
+            reflection access to a cmdlet assembly.
+            </exception>
+        <exception cref="T:System.Threading.ThreadAbortException">
+            The thread in which the command was executing was aborted.
+            </exception>
+        <exception cref="T:System.Management.Automation.RuntimeException">
+            PowerShell.Invoke can throw a variety of exceptions derived
+            from RuntimeException. The most likely of these exceptions
+            are listed below.
+            </exception>
+        <exception cref="T:System.Management.Automation.ParameterBindingException">
+            One of more parameters or parameter values specified for
+            a cmdlet are not valid, or mandatory parameters for a cmdlet
+            were not specified.
+            </exception>
+        <exception cref="T:System.Management.Automation.CmdletInvocationException">
+            A cmdlet generated a terminating error.
+            </exception>
+        <exception cref="T:System.Management.Automation.CmdletProviderInvocationException">
+            A provider generated a terminating error.
+            </exception>
+        <exception cref="T:System.Management.Automation.ActionPreferenceStopException">
+            The ActionPreference.Stop or ActionPreference.Inquire policy
+            triggered a terminating error.
+            </exception>
+        <exception cref="T:System.Management.Automation.PipelineStoppedException">
+            The pipeline was terminated asynchronously.
+            </exception>
+        <exception cref="T:System.Management.Automation.MetadataException">
+            If there is an error generating the metadata for dynamic parameters.
+            </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Invoke">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.Collection&lt;System.Management.Automation.PSObject&gt; Invoke (System.Collections.IEnumerable input, System.Management.Automation.PSInvocationSettings settings);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Collections.ObjectModel.Collection`1&lt;class System.Management.Automation.PSObject&gt; Invoke(class System.Collections.IEnumerable input, class System.Management.Automation.PSInvocationSettings settings) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.PowerShell.Invoke(System.Collections.IEnumerable,System.Management.Automation.PSInvocationSettings)" />
+      <MemberSignature Language="VB.NET" Value="Public Function Invoke (input As IEnumerable, settings As PSInvocationSettings) As Collection(Of PSObject)" />
+      <MemberSignature Language="F#" Value="member this.Invoke : System.Collections.IEnumerable * System.Management.Automation.PSInvocationSettings -&gt; System.Collections.ObjectModel.Collection&lt;System.Management.Automation.PSObject&gt;" Usage="powerShell.Invoke (input, settings)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.Collection&lt;System.Management.Automation.PSObject&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="input" Type="System.Collections.IEnumerable" />
+        <Parameter Name="settings" Type="System.Management.Automation.PSInvocationSettings" />
+      </Parameters>
+      <Docs>
+        <param name="input">
+            Input to the command
+            </param>
+        <param name="settings">
+            Invocation Settings
+            </param>
+        <summary>
+            Invoke the <see cref="T:System.Management.Automation.Runspaces.Command" /> synchronously and return
+            the output PSObject collection.
+            </summary>
+        <returns>
+            Collection of PSObjects representing output.
+            </returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ObjectDisposedException">
+            Object is disposed.
+            </exception>
+        <exception cref="T:System.InvalidOperationException">
+            Cannot perform the operation because the command is
+            already started.Stop the command and try the operation again.
+            (or)
+            No commands are specified.
+            </exception>
+        <exception cref="T:System.Management.Automation.ScriptCallDepthException">
+            The script recursed too deeply into script functions.
+            There is a fixed limit on the depth of recursion.
+            </exception>
+        <exception cref="T:System.Security.SecurityException">
+            A CLR security violation occurred.  Typically, this happens
+            because the current CLR permissions do not allow adequate
+            reflection access to a cmdlet assembly.
+            </exception>
+        <exception cref="T:System.Threading.ThreadAbortException">
+            The thread in which the command was executing was aborted.
+            </exception>
+        <exception cref="T:System.Management.Automation.RuntimeException">
+            PowerShell.Invoke can throw a variety of exceptions derived
+            from RuntimeException. The most likely of these exceptions
+            are listed below.
+            </exception>
+        <exception cref="T:System.Management.Automation.ParameterBindingException">
+            One of more parameters or parameter values specified for
+            a cmdlet are not valid, or mandatory parameters for a cmdlet
+            were not specified.
+            </exception>
+        <exception cref="T:System.Management.Automation.CmdletInvocationException">
+            A cmdlet generated a terminating error.
+            </exception>
+        <exception cref="T:System.Management.Automation.CmdletProviderInvocationException">
+            A provider generated a terminating error.
+            </exception>
+        <exception cref="T:System.Management.Automation.ActionPreferenceStopException">
+            The ActionPreference.Stop or ActionPreference.Inquire policy
+            triggered a terminating error.
+            </exception>
+        <exception cref="T:System.Management.Automation.PipelineStoppedException">
+            The pipeline was terminated asynchronously.
+            </exception>
+        <exception cref="T:System.Management.Automation.MetadataException">
+            If there is an error generating the metadata for dynamic parameters.
+            </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Invoke&lt;T&gt;">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.Collection&lt;T&gt; Invoke&lt;T&gt; ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Collections.ObjectModel.Collection`1&lt;!!T&gt; Invoke&lt;T&gt;() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.PowerShell.Invoke``1" />
+      <MemberSignature Language="VB.NET" Value="Public Function Invoke(Of T) () As Collection(Of T)" />
+      <MemberSignature Language="F#" Value="member this.Invoke : unit -&gt; System.Collections.ObjectModel.Collection&lt;'T&gt;" Usage="powerShell.Invoke " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.Collection&lt;T&gt;</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="T" />
+      </TypeParameters>
+      <Parameters />
+      <Docs>
+        <typeparam name="T">
+            Type of output object(s) expected from the command invocation.
+            </typeparam>
+        <summary>
+            Invoke the <see cref="T:System.Management.Automation.Runspaces.Command" /> synchronously and return
+            the output.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ObjectDisposedException">
+            Object is disposed.
+            </exception>
+        <exception cref="T:System.InvalidOperationException">
+            Cannot perform the operation because the command is
+            already started.Stop the command and try the operation again.
+            (or)
+            No commands are specified.
+            </exception>
+        <exception cref="T:System.Management.Automation.ScriptCallDepthException">
+            The script recursed too deeply into script functions.
+            There is a fixed limit on the depth of recursion.
+            </exception>
+        <exception cref="T:System.Security.SecurityException">
+            A CLR security violation occurred.  Typically, this happens
+            because the current CLR permissions do not allow adequate
+            reflection access to a cmdlet assembly.
+            </exception>
+        <exception cref="T:System.Threading.ThreadAbortException">
+            The thread in which the command was executing was aborted.
+            </exception>
+        <exception cref="T:System.Management.Automation.RuntimeException">
+            PowerShell.Invoke can throw a variety of exceptions derived
+            from RuntimeException. The most likely of these exceptions
+            are listed below.
+            </exception>
+        <exception cref="T:System.Management.Automation.ParameterBindingException">
+            One of more parameters or parameter values specified for
+            a cmdlet are not valid, or mandatory parameters for a cmdlet
+            were not specified.
+            </exception>
+        <exception cref="T:System.Management.Automation.CmdletInvocationException">
+            A cmdlet generated a terminating error.
+            </exception>
+        <exception cref="T:System.Management.Automation.CmdletProviderInvocationException">
+            A provider generated a terminating error.
+            </exception>
+        <exception cref="T:System.Management.Automation.ActionPreferenceStopException">
+            The ActionPreference.Stop or ActionPreference.Inquire policy
+            triggered a terminating error.
+            </exception>
+        <exception cref="T:System.Management.Automation.PipelineStoppedException">
+            The pipeline was terminated asynchronously.
+            </exception>
+        <exception cref="T:System.Management.Automation.MetadataException">
+            If there is an error generating the metadata for dynamic parameters.
+            </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Invoke&lt;T&gt;">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.Collection&lt;T&gt; Invoke&lt;T&gt; (System.Collections.IEnumerable input);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Collections.ObjectModel.Collection`1&lt;!!T&gt; Invoke&lt;T&gt;(class System.Collections.IEnumerable input) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.PowerShell.Invoke``1(System.Collections.IEnumerable)" />
+      <MemberSignature Language="VB.NET" Value="Public Function Invoke(Of T) (input As IEnumerable) As Collection(Of T)" />
+      <MemberSignature Language="F#" Value="member this.Invoke : System.Collections.IEnumerable -&gt; System.Collections.ObjectModel.Collection&lt;'T&gt;" Usage="powerShell.Invoke input" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.Collection&lt;T&gt;</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="T" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="input" Type="System.Collections.IEnumerable" />
+      </Parameters>
+      <Docs>
+        <typeparam name="T">
+            Type of output object(s) expected from the command invocation.
+            </typeparam>
+        <param name="input">
+            Input to the command
+            </param>
+        <summary>
+            Invoke the <see cref="T:System.Management.Automation.Runspaces.Command" /> synchronously and return
+            the output.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ObjectDisposedException">
+            Object is disposed.
+            </exception>
+        <exception cref="T:System.InvalidOperationException">
+            Cannot perform the operation because the command is
+            already started.Stop the command and try the operation again.
+            (or)
+            No commands are specified.
+            </exception>
+        <exception cref="T:System.Management.Automation.ScriptCallDepthException">
+            The script recursed too deeply into script functions.
+            There is a fixed limit on the depth of recursion.
+            </exception>
+        <exception cref="T:System.Security.SecurityException">
+            A CLR security violation occurred.  Typically, this happens
+            because the current CLR permissions do not allow adequate
+            reflection access to a cmdlet assembly.
+            </exception>
+        <exception cref="T:System.Threading.ThreadAbortException">
+            The thread in which the command was executing was aborted.
+            </exception>
+        <exception cref="T:System.Management.Automation.RuntimeException">
+            PowerShell.Invoke can throw a variety of exceptions derived
+            from RuntimeException. The most likely of these exceptions
+            are listed below.
+            </exception>
+        <exception cref="T:System.Management.Automation.ParameterBindingException">
+            One of more parameters or parameter values specified for
+            a cmdlet are not valid, or mandatory parameters for a cmdlet
+            were not specified.
+            </exception>
+        <exception cref="T:System.Management.Automation.CmdletInvocationException">
+            A cmdlet generated a terminating error.
+            </exception>
+        <exception cref="T:System.Management.Automation.CmdletProviderInvocationException">
+            A provider generated a terminating error.
+            </exception>
+        <exception cref="T:System.Management.Automation.ActionPreferenceStopException">
+            The ActionPreference.Stop or ActionPreference.Inquire policy
+            triggered a terminating error.
+            </exception>
+        <exception cref="T:System.Management.Automation.PipelineStoppedException">
+            The pipeline was terminated asynchronously.
+            </exception>
+        <exception cref="T:System.Management.Automation.MetadataException">
+            If there is an error generating the metadata for dynamic parameters.
+            </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Invoke&lt;T&gt;">
+      <MemberSignature Language="C#" Value="public void Invoke&lt;T&gt; (System.Collections.IEnumerable input, System.Collections.Generic.IList&lt;T&gt; output);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Invoke&lt;T&gt;(class System.Collections.IEnumerable input, class System.Collections.Generic.IList`1&lt;!!T&gt; output) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.PowerShell.Invoke``1(System.Collections.IEnumerable,System.Collections.Generic.IList{``0})" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Invoke(Of T) (input As IEnumerable, output As IList(Of T))" />
+      <MemberSignature Language="F#" Value="member this.Invoke : System.Collections.IEnumerable * System.Collections.Generic.IList&lt;'T&gt; -&gt; unit" Usage="powerShell.Invoke (input, output)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="T" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="input" Type="System.Collections.IEnumerable" />
+        <Parameter Name="output" Type="System.Collections.Generic.IList&lt;T&gt;" />
+      </Parameters>
+      <Docs>
+        <typeparam name="T">
+            Type of output object(s) expected from the command invocation.
+            </typeparam>
+        <param name="input">
+            Input to the command
+            </param>
+        <param name="output">
+            A collection supplied by the user where output is collected.
+            </param>
+        <summary>
+            Invoke the <see cref="T:System.Management.Automation.Runspaces.Command" /> synchronously and collect
+            output data into the buffer <paramref name="output" /></summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="output" /> cannot be null.
+            </exception>
+        <exception cref="T:System.ObjectDisposedException">
+            Object is disposed.
+            </exception>
+        <exception cref="T:System.InvalidOperationException">
+            Cannot perform the operation because the command is
+            already started.Stop the command and try the operation again.
+            (or)
+            No commands are specified.
+            </exception>
+        <exception cref="T:System.Management.Automation.ScriptCallDepthException">
+            The script recursed too deeply into script functions.
+            There is a fixed limit on the depth of recursion.
+            </exception>
+        <exception cref="T:System.Security.SecurityException">
+            A CLR security violation occurred.  Typically, this happens
+            because the current CLR permissions do not allow adequate
+            reflection access to a cmdlet assembly.
+            </exception>
+        <exception cref="T:System.Threading.ThreadAbortException">
+            The thread in which the command was executing was aborted.
+            </exception>
+        <exception cref="T:System.Management.Automation.RuntimeException">
+            PowerShell.Invoke can throw a variety of exceptions derived
+            from RuntimeException. The most likely of these exceptions
+            are listed below.
+            </exception>
+        <exception cref="T:System.Management.Automation.ParameterBindingException">
+            One of more parameters or parameter values specified for
+            a cmdlet are not valid, or mandatory parameters for a cmdlet
+            were not specified.
+            </exception>
+        <exception cref="T:System.Management.Automation.CmdletInvocationException">
+            A cmdlet generated a terminating error.
+            </exception>
+        <exception cref="T:System.Management.Automation.CmdletProviderInvocationException">
+            A provider generated a terminating error.
+            </exception>
+        <exception cref="T:System.Management.Automation.ActionPreferenceStopException">
+            The ActionPreference.Stop or ActionPreference.Inquire policy
+            triggered a terminating error.
+            </exception>
+        <exception cref="T:System.Management.Automation.PipelineStoppedException">
+            The pipeline was terminated asynchronously.
+            </exception>
+        <exception cref="T:System.Management.Automation.MetadataException">
+            If there is an error generating the metadata for dynamic parameters.
+            </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Invoke&lt;T&gt;">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.Collection&lt;T&gt; Invoke&lt;T&gt; (System.Collections.IEnumerable input, System.Management.Automation.PSInvocationSettings settings);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Collections.ObjectModel.Collection`1&lt;!!T&gt; Invoke&lt;T&gt;(class System.Collections.IEnumerable input, class System.Management.Automation.PSInvocationSettings settings) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.PowerShell.Invoke``1(System.Collections.IEnumerable,System.Management.Automation.PSInvocationSettings)" />
+      <MemberSignature Language="VB.NET" Value="Public Function Invoke(Of T) (input As IEnumerable, settings As PSInvocationSettings) As Collection(Of T)" />
+      <MemberSignature Language="F#" Value="member this.Invoke : System.Collections.IEnumerable * System.Management.Automation.PSInvocationSettings -&gt; System.Collections.ObjectModel.Collection&lt;'T&gt;" Usage="powerShell.Invoke (input, settings)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.Collection&lt;T&gt;</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="T" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="input" Type="System.Collections.IEnumerable" />
+        <Parameter Name="settings" Type="System.Management.Automation.PSInvocationSettings" />
+      </Parameters>
+      <Docs>
+        <typeparam name="T">
+            Type of output object(s) expected from the command invocation.
+            </typeparam>
+        <param name="input">
+            Input to the command
+            </param>
+        <param name="settings">
+            Invocation Settings
+            </param>
+        <summary>
+            Invoke the <see cref="T:System.Management.Automation.Runspaces.Command" /> synchronously and return
+            the output.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ObjectDisposedException">
+            Object is disposed.
+            </exception>
+        <exception cref="T:System.InvalidOperationException">
+            Cannot perform the operation because the command is
+            already started.Stop the command and try the operation again.
+            (or)
+            No commands are specified.
+            </exception>
+        <exception cref="T:System.Management.Automation.ScriptCallDepthException">
+            The script recursed too deeply into script functions.
+            There is a fixed limit on the depth of recursion.
+            </exception>
+        <exception cref="T:System.Security.SecurityException">
+            A CLR security violation occurred.  Typically, this happens
+            because the current CLR permissions do not allow adequate
+            reflection access to a cmdlet assembly.
+            </exception>
+        <exception cref="T:System.Threading.ThreadAbortException">
+            The thread in which the command was executing was aborted.
+            </exception>
+        <exception cref="T:System.Management.Automation.RuntimeException">
+            PowerShell.Invoke can throw a variety of exceptions derived
+            from RuntimeException. The most likely of these exceptions
+            are listed below.
+            </exception>
+        <exception cref="T:System.Management.Automation.ParameterBindingException">
+            One of more parameters or parameter values specified for
+            a cmdlet are not valid, or mandatory parameters for a cmdlet
+            were not specified.
+            </exception>
+        <exception cref="T:System.Management.Automation.CmdletInvocationException">
+            A cmdlet generated a terminating error.
+            </exception>
+        <exception cref="T:System.Management.Automation.CmdletProviderInvocationException">
+            A provider generated a terminating error.
+            </exception>
+        <exception cref="T:System.Management.Automation.ActionPreferenceStopException">
+            The ActionPreference.Stop or ActionPreference.Inquire policy
+            triggered a terminating error.
+            </exception>
+        <exception cref="T:System.Management.Automation.PipelineStoppedException">
+            The pipeline was terminated asynchronously.
+            </exception>
+        <exception cref="T:System.Management.Automation.MetadataException">
+            If there is an error generating the metadata for dynamic parameters.
+            </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Invoke&lt;T&gt;">
+      <MemberSignature Language="C#" Value="public void Invoke&lt;T&gt; (System.Collections.IEnumerable input, System.Collections.Generic.IList&lt;T&gt; output, System.Management.Automation.PSInvocationSettings settings);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Invoke&lt;T&gt;(class System.Collections.IEnumerable input, class System.Collections.Generic.IList`1&lt;!!T&gt; output, class System.Management.Automation.PSInvocationSettings settings) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.PowerShell.Invoke``1(System.Collections.IEnumerable,System.Collections.Generic.IList{``0},System.Management.Automation.PSInvocationSettings)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Invoke(Of T) (input As IEnumerable, output As IList(Of T), settings As PSInvocationSettings)" />
+      <MemberSignature Language="F#" Value="member this.Invoke : System.Collections.IEnumerable * System.Collections.Generic.IList&lt;'T&gt; * System.Management.Automation.PSInvocationSettings -&gt; unit" Usage="powerShell.Invoke (input, output, settings)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="T" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="input" Type="System.Collections.IEnumerable" />
+        <Parameter Name="output" Type="System.Collections.Generic.IList&lt;T&gt;" />
+        <Parameter Name="settings" Type="System.Management.Automation.PSInvocationSettings" />
+      </Parameters>
+      <Docs>
+        <typeparam name="T">
+            Type of output object(s) expected from the command invocation.
+            </typeparam>
+        <param name="input">
+            Input to the command
+            </param>
+        <param name="output">
+            A collection supplied by the user where output is collected.
+            </param>
+        <param name="settings">
+            Invocation Settings to use.
+            </param>
+        <summary>
+            Invoke the <see cref="T:System.Management.Automation.Runspaces.Command" /> synchronously and collect
+            output data into the buffer <paramref name="output" /></summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="output" /> cannot be null.
+            </exception>
+        <exception cref="T:System.InvalidOperationException">
+            No commands are specified.
+            </exception>
+        <exception cref="T:System.Management.Automation.ScriptCallDepthException">
+            The script recursed too deeply into script functions.
+            There is a fixed limit on the depth of recursion.
+            </exception>
+        <exception cref="T:System.Security.SecurityException">
+            A CLR security violation occurred.  Typically, this happens
+            because the current CLR permissions do not allow adequate
+            reflection access to a cmdlet assembly.
+            </exception>
+        <exception cref="T:System.Threading.ThreadAbortException">
+            The thread in which the command was executing was aborted.
+            </exception>
+        <exception cref="T:System.Management.Automation.RuntimeException">
+            PowerShell.Invoke can throw a variety of exceptions derived
+            from RuntimeException. The most likely of these exceptions
+            are listed below.
+            </exception>
+        <exception cref="T:System.Management.Automation.ParameterBindingException">
+            One of more parameters or parameter values specified for
+            a cmdlet are not valid, or mandatory parameters for a cmdlet
+            were not specified.
+            </exception>
+        <exception cref="T:System.Management.Automation.CmdletInvocationException">
+            A cmdlet generated a terminating error.
+            </exception>
+        <exception cref="T:System.Management.Automation.CmdletProviderInvocationException">
+            A provider generated a terminating error.
+            </exception>
+        <exception cref="T:System.Management.Automation.ActionPreferenceStopException">
+            The ActionPreference.Stop or ActionPreference.Inquire policy
+            triggered a terminating error.
+            </exception>
+        <exception cref="T:System.Management.Automation.PipelineStoppedException">
+            The pipeline was terminated asynchronously.
+            </exception>
+        <exception cref="T:System.Management.Automation.MetadataException">
+            If there is an error generating the metadata for dynamic parameters.
+            </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Invoke&lt;TInput,TOutput&gt;">
+      <MemberSignature Language="C#" Value="public void Invoke&lt;TInput,TOutput&gt; (System.Management.Automation.PSDataCollection&lt;TInput&gt; input, System.Management.Automation.PSDataCollection&lt;TOutput&gt; output, System.Management.Automation.PSInvocationSettings settings);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Invoke&lt;TInput, TOutput&gt;(class System.Management.Automation.PSDataCollection`1&lt;!!TInput&gt; input, class System.Management.Automation.PSDataCollection`1&lt;!!TOutput&gt; output, class System.Management.Automation.PSInvocationSettings settings) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.PowerShell.Invoke``2(System.Management.Automation.PSDataCollection{``0},System.Management.Automation.PSDataCollection{``1},System.Management.Automation.PSInvocationSettings)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Invoke(Of TInput, TOutput) (input As PSDataCollection(Of TInput), output As PSDataCollection(Of TOutput), settings As PSInvocationSettings)" />
+      <MemberSignature Language="F#" Value="member this.Invoke : System.Management.Automation.PSDataCollection&lt;'Input&gt; * System.Management.Automation.PSDataCollection&lt;'Output&gt; * System.Management.Automation.PSInvocationSettings -&gt; unit" Usage="powerShell.Invoke (input, output, settings)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TInput" />
+        <TypeParameter Name="TOutput" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="input" Type="System.Management.Automation.PSDataCollection&lt;TInput&gt;" />
+        <Parameter Name="output" Type="System.Management.Automation.PSDataCollection&lt;TOutput&gt;" />
+        <Parameter Name="settings" Type="System.Management.Automation.PSInvocationSettings" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TInput">
+            Type of input object(s) expected from the command invocation.
+            </typeparam>
+        <typeparam name="TOutput">
+            Type of output object(s) expected from the command invocation.
+            </typeparam>
+        <param name="input">
+            Input to the command
+            </param>
+        <param name="output">
+            Output of the command.
+            </param>
+        <param name="settings">
+            Invocation Settings to use.
+            </param>
+        <summary>
+            Invoke the <see cref="T:System.Management.Automation.Runspaces.Command" /> synchronously and stream
+            output data into the buffer <paramref name="output" /></summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="output" /> cannot be null.
+            </exception>
+        <exception cref="T:System.InvalidOperationException">
+            No commands are specified.
+            </exception>
+        <exception cref="T:System.Management.Automation.ScriptCallDepthException">
+            The script recursed too deeply into script functions.
+            There is a fixed limit on the depth of recursion.
+            </exception>
+        <exception cref="T:System.Security.SecurityException">
+            A CLR security violation occurred.  Typically, this happens
+            because the current CLR permissions do not allow adequate
+            reflection access to a cmdlet assembly.
+            </exception>
+        <exception cref="T:System.Threading.ThreadAbortException">
+            The thread in which the command was executing was aborted.
+            </exception>
+        <exception cref="T:System.Management.Automation.RuntimeException">
+            PowerShell.Invoke can throw a variety of exceptions derived
+            from RuntimeException. The most likely of these exceptions
+            are listed below.
+            </exception>
+        <exception cref="T:System.Management.Automation.ParameterBindingException">
+            One of more parameters or parameter values specified for
+            a cmdlet are not valid, or mandatory parameters for a cmdlet
+            were not specified.
+            </exception>
+        <exception cref="T:System.Management.Automation.CmdletInvocationException">
+            A cmdlet generated a terminating error.
+            </exception>
+        <exception cref="T:System.Management.Automation.CmdletProviderInvocationException">
+            A provider generated a terminating error.
+            </exception>
+        <exception cref="T:System.Management.Automation.ActionPreferenceStopException">
+            The ActionPreference.Stop or ActionPreference.Inquire policy
+            triggered a terminating error.
+            </exception>
+        <exception cref="T:System.Management.Automation.PipelineStoppedException">
+            The pipeline was terminated asynchronously.
+            </exception>
+        <exception cref="T:System.Management.Automation.MetadataException">
+            If there is an error generating the metadata for dynamic parameters.
+            </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="IsNested">
+      <MemberSignature Language="C#" Value="public bool IsNested { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsNested" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.PowerShell.IsNested" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property IsNested As Boolean" />
+      <MemberSignature Language="F#" Value="member this.IsNested : bool" Usage="System.Management.Automation.PowerShell.IsNested" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the property which indicates if this PowerShell instance
+            is nested.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsRunspaceOwner">
+      <MemberSignature Language="C#" Value="public bool IsRunspaceOwner { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsRunspaceOwner" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.PowerShell.IsRunspaceOwner" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property IsRunspaceOwner As Boolean" />
+      <MemberSignature Language="F#" Value="member this.IsRunspaceOwner : bool" Usage="System.Management.Automation.PowerShell.IsRunspaceOwner" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Indicates if this PowerShell object is the owner of the
+            runspace or RunspacePool assigned to this object
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Runspace">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.Runspaces.Runspace Runspace { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Management.Automation.Runspaces.Runspace Runspace" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.PowerShell.Runspace" />
+      <MemberSignature Language="VB.NET" Value="Public Property Runspace As Runspace" />
+      <MemberSignature Language="F#" Value="member this.Runspace : System.Management.Automation.Runspaces.Runspace with get, set" Usage="System.Management.Automation.PowerShell.Runspace" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.Runspaces.Runspace</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Sets an associated Runspace for this PowerShell instance.
+            This can be null in which case a new runspace is created
+            whenever Invoke* method is called.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+            This property and RunspacePool are mutually exclusive; setting one of them resets the other to null
+            </remarks>
+        <exception cref="T:System.Management.Automation.InvalidPowerShellStateException">
+            Powershell instance cannot be changed in its
+            current state.
+            </exception>
+        <exception cref="T:System.ObjectDisposedException">
+            Object is disposed.
+            </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="RunspacePool">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.Runspaces.RunspacePool RunspacePool { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Management.Automation.Runspaces.RunspacePool RunspacePool" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.PowerShell.RunspacePool" />
+      <MemberSignature Language="VB.NET" Value="Public Property RunspacePool As RunspacePool" />
+      <MemberSignature Language="F#" Value="member this.RunspacePool : System.Management.Automation.Runspaces.RunspacePool with get, set" Usage="System.Management.Automation.PowerShell.RunspacePool" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.Runspaces.RunspacePool</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+             Sets an associated RunspacePool for this PowerShell instance.
+             A Runspace from this pool is used whenever Invoke* method
+             is called.
+            
+             This can be null in which case a new runspace is created
+             whenever Invoke* method is called.
+             </summary>
+        <value>To be added.</value>
+        <remarks>
+             This property and Runspace are mutually exclusive; setting one of them resets the other to null
+             </remarks>
+        <exception cref="T:System.Management.Automation.InvalidPowerShellStateException">
+             Powershell instance cannot be changed in its
+             current state.
+             </exception>
+        <exception cref="T:System.ObjectDisposedException">
+             Object is disposed.
+             </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Stop">
+      <MemberSignature Language="C#" Value="public void Stop ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Stop() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.PowerShell.Stop" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Stop ()" />
+      <MemberSignature Language="F#" Value="member this.Stop : unit -&gt; unit" Usage="powerShell.Stop " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Stop the currently running command synchronously.
+            </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ObjectDisposedException">
+            Object is disposed.
+            </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Streams">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.PSDataStreams Streams { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Management.Automation.PSDataStreams Streams" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.PowerShell.Streams" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Streams As PSDataStreams" />
+      <MemberSignature Language="F#" Value="member this.Streams : System.Management.Automation.PSDataStreams" Usage="System.Management.Automation.PowerShell.Streams" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.PSDataStreams</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Streams generated by PowerShell invocations
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

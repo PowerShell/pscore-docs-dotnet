@@ -1,0 +1,106 @@
+﻿<Type Name="InvokeMemberExpressionAst" FullName="System.Management.Automation.Language.InvokeMemberExpressionAst">
+  <TypeSignature Language="C#" Value="public class InvokeMemberExpressionAst : System.Management.Automation.Language.MemberExpressionAst" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit InvokeMemberExpressionAst extends System.Management.Automation.Language.MemberExpressionAst" />
+  <TypeSignature Language="DocId" Value="T:System.Management.Automation.Language.InvokeMemberExpressionAst" />
+  <TypeSignature Language="VB.NET" Value="Public Class InvokeMemberExpressionAst&#xA;Inherits MemberExpressionAst" />
+  <TypeSignature Language="F#" Value="type InvokeMemberExpressionAst = class&#xA;    inherit MemberExpressionAst&#xA;    interface ISupportsAssignment" />
+  <AssemblyInfo>
+    <AssemblyName>System.Management.Automation</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Management.Automation.Language.MemberExpressionAst</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            The ast that represents the invocation of a method, e.g. <c>$sb.Append('abc')</c> or <c>[math]::Sign($i)</c>.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public InvokeMemberExpressionAst (System.Management.Automation.Language.IScriptExtent extent, System.Management.Automation.Language.ExpressionAst expression, System.Management.Automation.Language.CommandElementAst method, System.Collections.Generic.IEnumerable&lt;System.Management.Automation.Language.ExpressionAst&gt; arguments, bool static);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Management.Automation.Language.IScriptExtent extent, class System.Management.Automation.Language.ExpressionAst expression, class System.Management.Automation.Language.CommandElementAst method, class System.Collections.Generic.IEnumerable`1&lt;class System.Management.Automation.Language.ExpressionAst&gt; arguments, bool static) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Language.InvokeMemberExpressionAst.#ctor(System.Management.Automation.Language.IScriptExtent,System.Management.Automation.Language.ExpressionAst,System.Management.Automation.Language.CommandElementAst,System.Collections.Generic.IEnumerable{System.Management.Automation.Language.ExpressionAst},System.Boolean)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (extent As IScriptExtent, expression As ExpressionAst, method As CommandElementAst, arguments As IEnumerable(Of ExpressionAst), static As Boolean)" />
+      <MemberSignature Language="F#" Value="new System.Management.Automation.Language.InvokeMemberExpressionAst : System.Management.Automation.Language.IScriptExtent * System.Management.Automation.Language.ExpressionAst * System.Management.Automation.Language.CommandElementAst * seq&lt;System.Management.Automation.Language.ExpressionAst&gt; * bool -&gt; System.Management.Automation.Language.InvokeMemberExpressionAst" Usage="new System.Management.Automation.Language.InvokeMemberExpressionAst (extent, expression, method, arguments, static)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="extent" Type="System.Management.Automation.Language.IScriptExtent" />
+        <Parameter Name="expression" Type="System.Management.Automation.Language.ExpressionAst" />
+        <Parameter Name="method" Type="System.Management.Automation.Language.CommandElementAst" />
+        <Parameter Name="arguments" Type="System.Collections.Generic.IEnumerable&lt;System.Management.Automation.Language.ExpressionAst&gt;" />
+        <Parameter Name="static" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="extent">
+            The extent of the expression, starting with the expression before the invocation operator and ending with the
+            closing paren after the arguments.
+            </param>
+        <param name="expression">The expression before the invocation operator ('.' or '::').</param>
+        <param name="method">The method to invoke.</param>
+        <param name="arguments">The arguments to pass to the method.</param>
+        <param name="static">
+            True if the invocation is for a static method, using '::', false if invoking a method on an instance using '.'.
+            </param>
+        <summary>
+            Construct an instance of a method invocation expression.
+            </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.Management.Automation.PSArgumentNullException">
+            If <paramref name="extent" /> is null.
+            </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Arguments">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.ReadOnlyCollection&lt;System.Management.Automation.Language.ExpressionAst&gt; Arguments { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ObjectModel.ReadOnlyCollection`1&lt;class System.Management.Automation.Language.ExpressionAst&gt; Arguments" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.Language.InvokeMemberExpressionAst.Arguments" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Arguments As ReadOnlyCollection(Of ExpressionAst)" />
+      <MemberSignature Language="F#" Value="member this.Arguments : System.Collections.ObjectModel.ReadOnlyCollection&lt;System.Management.Automation.Language.ExpressionAst&gt;" Usage="System.Management.Automation.Language.InvokeMemberExpressionAst.Arguments" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.ReadOnlyCollection&lt;System.Management.Automation.Language.ExpressionAst&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The non-empty collection of arguments to pass when invoking the method, or null if no arguments were specified.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Copy">
+      <MemberSignature Language="C#" Value="public override System.Management.Automation.Language.Ast Copy ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Management.Automation.Language.Ast Copy() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Language.InvokeMemberExpressionAst.Copy" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Function Copy () As Ast" />
+      <MemberSignature Language="F#" Value="override this.Copy : unit -&gt; System.Management.Automation.Language.Ast" Usage="invokeMemberExpressionAst.Copy " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.Language.Ast</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Copy the InvokeMemberExpressionAst instance
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

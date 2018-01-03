@@ -1,0 +1,124 @@
+﻿<Type Name="PassThroughItemPropertyCommandBase" FullName="Microsoft.PowerShell.Commands.PassThroughItemPropertyCommandBase">
+  <TypeSignature Language="C#" Value="public class PassThroughItemPropertyCommandBase : Microsoft.PowerShell.Commands.ItemPropertyCommandBase" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit PassThroughItemPropertyCommandBase extends Microsoft.PowerShell.Commands.ItemPropertyCommandBase" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.PowerShell.Commands.PassThroughItemPropertyCommandBase" />
+  <TypeSignature Language="VB.NET" Value="Public Class PassThroughItemPropertyCommandBase&#xA;Inherits ItemPropertyCommandBase" />
+  <TypeSignature Language="F#" Value="type PassThroughItemPropertyCommandBase = class&#xA;    inherit ItemPropertyCommandBase" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.PowerShell.Commands.Management</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Microsoft.PowerShell.Commands.ItemPropertyCommandBase</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            The base class for the */property commands that also take
+            a passthrough parameter
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public PassThroughItemPropertyCommandBase ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Commands.PassThroughItemPropertyCommandBase.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New ()" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Commands.Management</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Force">
+      <MemberSignature Language="C#" Value="public override System.Management.Automation.SwitchParameter Force { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Management.Automation.SwitchParameter Force" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.PassThroughItemPropertyCommandBase.Force" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Property Force As SwitchParameter" />
+      <MemberSignature Language="F#" Value="member this.Force : System.Management.Automation.SwitchParameter with get, set" Usage="Microsoft.PowerShell.Commands.PassThroughItemPropertyCommandBase.Force" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Commands.Management</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.SwitchParameter</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+             Gets or sets the force property
+             </summary>
+        <value>To be added.</value>
+        <remarks>
+             Gives the provider guidance on how vigorous it should be about performing
+             the operation. If true, the provider should do everything possible to perform
+             the operation. If false, the provider should attempt the operation but allow
+             even simple errors to terminate the operation.
+             For example, if the user tries to copy a file to a path that already exists and
+             the destination is read-only, if force is true, the provider should copy over
+             the existing read-only file. If force is false, the provider should write an error.
+             </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PassThru">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.SwitchParameter PassThru { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Management.Automation.SwitchParameter PassThru" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.PassThroughItemPropertyCommandBase.PassThru" />
+      <MemberSignature Language="VB.NET" Value="Public Property PassThru As SwitchParameter" />
+      <MemberSignature Language="F#" Value="member this.PassThru : System.Management.Automation.SwitchParameter with get, set" Usage="Microsoft.PowerShell.Commands.PassThroughItemPropertyCommandBase.PassThru" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Commands.Management</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.SwitchParameter</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets the passthrough parameter to the command
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ProviderSupportsShouldProcess">
+      <MemberSignature Language="C#" Value="protected override bool ProviderSupportsShouldProcess { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ProviderSupportsShouldProcess" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.PassThroughItemPropertyCommandBase.ProviderSupportsShouldProcess" />
+      <MemberSignature Language="VB.NET" Value="Protected Overrides ReadOnly Property ProviderSupportsShouldProcess As Boolean" />
+      <MemberSignature Language="F#" Value="member this.ProviderSupportsShouldProcess : bool" Usage="Microsoft.PowerShell.Commands.PassThroughItemPropertyCommandBase.ProviderSupportsShouldProcess" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Commands.Management</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Determines if the provider for the specified path supports ShouldProcess
+            </summary>
+        <value />
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

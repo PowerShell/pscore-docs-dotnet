@@ -1,0 +1,88 @@
+﻿<Type Name="PSControl" FullName="System.Management.Automation.PSControl">
+  <TypeSignature Language="C#" Value="public abstract class PSControl" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit PSControl extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Management.Automation.PSControl" />
+  <TypeSignature Language="VB.NET" Value="Public MustInherit Class PSControl" />
+  <TypeSignature Language="F#" Value="type PSControl = class" />
+  <AssemblyInfo>
+    <AssemblyName>System.Management.Automation</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Defines a control for the formatting types defined by PowerShell
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected PSControl ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.PSControl.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Protected Sub New ()" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GroupBy">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.PSControlGroupBy GroupBy { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Management.Automation.PSControlGroupBy GroupBy" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.PSControl.GroupBy" />
+      <MemberSignature Language="VB.NET" Value="Public Property GroupBy As PSControlGroupBy" />
+      <MemberSignature Language="F#" Value="member this.GroupBy : System.Management.Automation.PSControlGroupBy with get, set" Usage="System.Management.Automation.PSControl.GroupBy" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.PSControlGroupBy</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Each control can group items and specify a header for the group.
+            You can group by same property value, or result of evaluating a script block.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OutOfBand">
+      <MemberSignature Language="C#" Value="public bool OutOfBand { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool OutOfBand" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.PSControl.OutOfBand" />
+      <MemberSignature Language="VB.NET" Value="Public Property OutOfBand As Boolean" />
+      <MemberSignature Language="F#" Value="member this.OutOfBand : bool with get, set" Usage="System.Management.Automation.PSControl.OutOfBand" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            When the "shape" of formatting has been determined by previous objects,
+            sometimes you want objects of different types to continue using that shape
+            (table, list, or whatever) even if they specify their own views, and sometimes
+            you want your view to take over. When OutOfBand is true, the view will apply
+            regardless of previous objects that may have selected the shape.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

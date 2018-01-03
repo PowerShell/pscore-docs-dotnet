@@ -1,0 +1,574 @@
+﻿<Type Name="PSEventManager" FullName="System.Management.Automation.PSEventManager">
+  <TypeSignature Language="C#" Value="public abstract class PSEventManager" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit PSEventManager extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Management.Automation.PSEventManager" />
+  <TypeSignature Language="VB.NET" Value="Public MustInherit Class PSEventManager" />
+  <TypeSignature Language="F#" Value="type PSEventManager = class" />
+  <AssemblyInfo>
+    <AssemblyName>System.Management.Automation</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Represents the interface to the PowerShell eventing functionality.
+             This class allows you to subscribe to, and receive events.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected PSEventManager ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.PSEventManager.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Protected Sub New ()" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateEvent">
+      <MemberSignature Language="C#" Value="protected abstract System.Management.Automation.PSEventArgs CreateEvent (string sourceIdentifier, object sender, object[] args, System.Management.Automation.PSObject extraData);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class System.Management.Automation.PSEventArgs CreateEvent(string sourceIdentifier, object sender, object[] args, class System.Management.Automation.PSObject extraData) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.PSEventManager.CreateEvent(System.String,System.Object,System.Object[],System.Management.Automation.PSObject)" />
+      <MemberSignature Language="VB.NET" Value="Protected MustOverride Function CreateEvent (sourceIdentifier As String, sender As Object, args As Object(), extraData As PSObject) As PSEventArgs" />
+      <MemberSignature Language="F#" Value="abstract member CreateEvent : string * obj * obj[] * System.Management.Automation.PSObject -&gt; System.Management.Automation.PSEventArgs" Usage="pSEventManager.CreateEvent (sourceIdentifier, sender, args, extraData)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.PSEventArgs</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sourceIdentifier" Type="System.String" />
+        <Parameter Name="sender" Type="System.Object" />
+        <Parameter Name="args" Type="System.Object[]" />
+        <Parameter Name="extraData" Type="System.Management.Automation.PSObject" />
+      </Parameters>
+      <Docs>
+        <param name="sourceIdentifier">To be added.</param>
+        <param name="sender">To be added.</param>
+        <param name="args">To be added.</param>
+        <param name="extraData">To be added.</param>
+        <summary>
+             Creates a PowerShell event.
+            
+             <param name="sourceIdentifier">
+             An optional identifier that identifies the source event
+             </param><param name="sender">
+             The object that generated this event
+             </param><param name="args">
+             Any event-specific data associated with the event.
+             </param><param name="extraData">
+             Any additional data you wish to attach to the event
+             </param></summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GenerateEvent">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.PSEventArgs GenerateEvent (string sourceIdentifier, object sender, object[] args, System.Management.Automation.PSObject extraData);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Management.Automation.PSEventArgs GenerateEvent(string sourceIdentifier, object sender, object[] args, class System.Management.Automation.PSObject extraData) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.PSEventManager.GenerateEvent(System.String,System.Object,System.Object[],System.Management.Automation.PSObject)" />
+      <MemberSignature Language="VB.NET" Value="Public Function GenerateEvent (sourceIdentifier As String, sender As Object, args As Object(), extraData As PSObject) As PSEventArgs" />
+      <MemberSignature Language="F#" Value="member this.GenerateEvent : string * obj * obj[] * System.Management.Automation.PSObject -&gt; System.Management.Automation.PSEventArgs" Usage="pSEventManager.GenerateEvent (sourceIdentifier, sender, args, extraData)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.PSEventArgs</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sourceIdentifier" Type="System.String" />
+        <Parameter Name="sender" Type="System.Object" />
+        <Parameter Name="args" Type="System.Object[]" />
+        <Parameter Name="extraData" Type="System.Management.Automation.PSObject" />
+      </Parameters>
+      <Docs>
+        <param name="sourceIdentifier">To be added.</param>
+        <param name="sender">To be added.</param>
+        <param name="args">To be added.</param>
+        <param name="extraData">To be added.</param>
+        <summary>
+             Generate a PowerShell event.
+            
+             <param name="sourceIdentifier">
+             An optional identifier that identifies the source event
+             </param><param name="sender">
+             The object that generated this event
+             </param><param name="args">
+             Any event-specific data associated with the event.
+             </param><param name="extraData">
+             Any additional data you wish to attach to the event
+             </param></summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GenerateEvent">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.PSEventArgs GenerateEvent (string sourceIdentifier, object sender, object[] args, System.Management.Automation.PSObject extraData, bool processInCurrentThread, bool waitForCompletionInCurrentThread);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Management.Automation.PSEventArgs GenerateEvent(string sourceIdentifier, object sender, object[] args, class System.Management.Automation.PSObject extraData, bool processInCurrentThread, bool waitForCompletionInCurrentThread) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.PSEventManager.GenerateEvent(System.String,System.Object,System.Object[],System.Management.Automation.PSObject,System.Boolean,System.Boolean)" />
+      <MemberSignature Language="VB.NET" Value="Public Function GenerateEvent (sourceIdentifier As String, sender As Object, args As Object(), extraData As PSObject, processInCurrentThread As Boolean, waitForCompletionInCurrentThread As Boolean) As PSEventArgs" />
+      <MemberSignature Language="F#" Value="member this.GenerateEvent : string * obj * obj[] * System.Management.Automation.PSObject * bool * bool -&gt; System.Management.Automation.PSEventArgs" Usage="pSEventManager.GenerateEvent (sourceIdentifier, sender, args, extraData, processInCurrentThread, waitForCompletionInCurrentThread)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.PSEventArgs</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sourceIdentifier" Type="System.String" />
+        <Parameter Name="sender" Type="System.Object" />
+        <Parameter Name="args" Type="System.Object[]" />
+        <Parameter Name="extraData" Type="System.Management.Automation.PSObject" />
+        <Parameter Name="processInCurrentThread" Type="System.Boolean" />
+        <Parameter Name="waitForCompletionInCurrentThread" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="sourceIdentifier">To be added.</param>
+        <param name="sender">To be added.</param>
+        <param name="args">To be added.</param>
+        <param name="extraData">To be added.</param>
+        <param name="processInCurrentThread">To be added.</param>
+        <param name="waitForCompletionInCurrentThread">To be added.</param>
+        <summary>
+             Generate a PowerShell event.
+            
+             <param name="sourceIdentifier">
+             An optional identifier that identifies the source event
+             </param><param name="sender">
+             The object that generated this event
+             </param><param name="args">
+             Any event-specific data associated with the event.
+             </param><param name="extraData">
+             Any additional data you wish to attach to the event
+             </param><param name="processInCurrentThread">
+             True if the event should be triggered in current thread. False for the event
+             to be triggered in a separate thread.
+             </param><param name="waitForCompletionInCurrentThread">
+             Wait for the event and associated action to be processed and completed.
+             </param></summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetEventSubscribers">
+      <MemberSignature Language="C#" Value="public abstract System.Collections.Generic.IEnumerable&lt;System.Management.Automation.PSEventSubscriber&gt; GetEventSubscribers (string sourceIdentifier);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Collections.Generic.IEnumerable`1&lt;class System.Management.Automation.PSEventSubscriber&gt; GetEventSubscribers(string sourceIdentifier) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.PSEventManager.GetEventSubscribers(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Function GetEventSubscribers (sourceIdentifier As String) As IEnumerable(Of PSEventSubscriber)" />
+      <MemberSignature Language="F#" Value="abstract member GetEventSubscribers : string -&gt; seq&lt;System.Management.Automation.PSEventSubscriber&gt;" Usage="pSEventManager.GetEventSubscribers sourceIdentifier" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerable&lt;System.Management.Automation.PSEventSubscriber&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sourceIdentifier" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="sourceIdentifier">To be added.</param>
+        <summary>
+             Get the event subscription that corresponds to an identifier
+            
+             <param name="sourceIdentifier">
+             The identifier that identifies the source of the events
+             </param></summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetNextEventId">
+      <MemberSignature Language="C#" Value="protected int GetNextEventId ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance int32 GetNextEventId() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.PSEventManager.GetNextEventId" />
+      <MemberSignature Language="VB.NET" Value="Protected Function GetNextEventId () As Integer" />
+      <MemberSignature Language="F#" Value="member this.GetNextEventId : unit -&gt; int" Usage="pSEventManager.GetNextEventId " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Returns a sequential event ID
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ProcessNewEvent">
+      <MemberSignature Language="C#" Value="protected abstract void ProcessNewEvent (System.Management.Automation.PSEventArgs newEvent, bool processInCurrentThread);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void ProcessNewEvent(class System.Management.Automation.PSEventArgs newEvent, bool processInCurrentThread) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.PSEventManager.ProcessNewEvent(System.Management.Automation.PSEventArgs,System.Boolean)" />
+      <MemberSignature Language="VB.NET" Value="Protected MustOverride Sub ProcessNewEvent (newEvent As PSEventArgs, processInCurrentThread As Boolean)" />
+      <MemberSignature Language="F#" Value="abstract member ProcessNewEvent : System.Management.Automation.PSEventArgs * bool -&gt; unit" Usage="pSEventManager.ProcessNewEvent (newEvent, processInCurrentThread)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="newEvent" Type="System.Management.Automation.PSEventArgs" />
+        <Parameter Name="processInCurrentThread" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="newEvent">To be added.</param>
+        <param name="processInCurrentThread">To be added.</param>
+        <summary>
+            Processes new events (which have either been generated by this instance or forwarded to it)
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ProcessNewEvent">
+      <MemberSignature Language="C#" Value="protected internal virtual void ProcessNewEvent (System.Management.Automation.PSEventArgs newEvent, bool processInCurrentThread, bool waitForCompletionWhenInCurrentThread);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig newslot virtual instance void ProcessNewEvent(class System.Management.Automation.PSEventArgs newEvent, bool processInCurrentThread, bool waitForCompletionWhenInCurrentThread) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.PSEventManager.ProcessNewEvent(System.Management.Automation.PSEventArgs,System.Boolean,System.Boolean)" />
+      <MemberSignature Language="VB.NET" Value="Protected Friend Overridable Sub ProcessNewEvent (newEvent As PSEventArgs, processInCurrentThread As Boolean, waitForCompletionWhenInCurrentThread As Boolean)" />
+      <MemberSignature Language="F#" Value="abstract member ProcessNewEvent : System.Management.Automation.PSEventArgs * bool * bool -&gt; unit&#xA;override this.ProcessNewEvent : System.Management.Automation.PSEventArgs * bool * bool -&gt; unit" Usage="pSEventManager.ProcessNewEvent (newEvent, processInCurrentThread, waitForCompletionWhenInCurrentThread)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="newEvent" Type="System.Management.Automation.PSEventArgs" />
+        <Parameter Name="processInCurrentThread" Type="System.Boolean" />
+        <Parameter Name="waitForCompletionWhenInCurrentThread" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="newEvent">To be added.</param>
+        <param name="processInCurrentThread">To be added.</param>
+        <param name="waitForCompletionWhenInCurrentThread">To be added.</param>
+        <summary>
+            Processes new events (which have either been generated by this instance or forwarded to it)
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReceivedEvents">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.PSEventArgsCollection ReceivedEvents { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Management.Automation.PSEventArgsCollection ReceivedEvents" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.PSEventManager.ReceivedEvents" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ReceivedEvents As PSEventArgsCollection" />
+      <MemberSignature Language="F#" Value="member this.ReceivedEvents : System.Management.Automation.PSEventArgsCollection" Usage="System.Management.Automation.PSEventManager.ReceivedEvents" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.PSEventArgsCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Represents the interface to the PowerShell event queue.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SubscribeEvent">
+      <MemberSignature Language="C#" Value="public abstract System.Management.Automation.PSEventSubscriber SubscribeEvent (object source, string eventName, string sourceIdentifier, System.Management.Automation.PSObject data, System.Management.Automation.PSEventReceivedEventHandler handlerDelegate, bool supportEvent, bool forwardEvent);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Management.Automation.PSEventSubscriber SubscribeEvent(object source, string eventName, string sourceIdentifier, class System.Management.Automation.PSObject data, class System.Management.Automation.PSEventReceivedEventHandler handlerDelegate, bool supportEvent, bool forwardEvent) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.PSEventManager.SubscribeEvent(System.Object,System.String,System.String,System.Management.Automation.PSObject,System.Management.Automation.PSEventReceivedEventHandler,System.Boolean,System.Boolean)" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Function SubscribeEvent (source As Object, eventName As String, sourceIdentifier As String, data As PSObject, handlerDelegate As PSEventReceivedEventHandler, supportEvent As Boolean, forwardEvent As Boolean) As PSEventSubscriber" />
+      <MemberSignature Language="F#" Value="abstract member SubscribeEvent : obj * string * string * System.Management.Automation.PSObject * System.Management.Automation.PSEventReceivedEventHandler * bool * bool -&gt; System.Management.Automation.PSEventSubscriber" Usage="pSEventManager.SubscribeEvent (source, eventName, sourceIdentifier, data, handlerDelegate, supportEvent, forwardEvent)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.PSEventSubscriber</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="source" Type="System.Object" />
+        <Parameter Name="eventName" Type="System.String" />
+        <Parameter Name="sourceIdentifier" Type="System.String" />
+        <Parameter Name="data" Type="System.Management.Automation.PSObject" />
+        <Parameter Name="handlerDelegate" Type="System.Management.Automation.PSEventReceivedEventHandler" />
+        <Parameter Name="supportEvent" Type="System.Boolean" />
+        <Parameter Name="forwardEvent" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="source">To be added.</param>
+        <param name="eventName">To be added.</param>
+        <param name="sourceIdentifier">To be added.</param>
+        <param name="data">To be added.</param>
+        <param name="handlerDelegate">To be added.</param>
+        <param name="supportEvent">To be added.</param>
+        <param name="forwardEvent">To be added.</param>
+        <summary>
+             Subscribes to an event on an object.
+            
+             <param name="source">
+             The source object that defines the event
+             </param><param name="eventName">
+             The event to subscribe
+             </param><param name="sourceIdentifier">
+             An optional subscription identifier to help identify this event subscription
+             </param><param name="data">
+             Any additional data you wish to attach to the event
+             </param><param name="handlerDelegate">
+             Any action to be invoked when the event arrives
+             </param><param name="supportEvent">
+             Any action to be invoked when the event arrives
+             </param><param name="forwardEvent">
+             Whether events in this subscriber should be forwarded to the client PowerShell during remote executions
+             </param></summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SubscribeEvent">
+      <MemberSignature Language="C#" Value="public abstract System.Management.Automation.PSEventSubscriber SubscribeEvent (object source, string eventName, string sourceIdentifier, System.Management.Automation.PSObject data, System.Management.Automation.ScriptBlock action, bool supportEvent, bool forwardEvent);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Management.Automation.PSEventSubscriber SubscribeEvent(object source, string eventName, string sourceIdentifier, class System.Management.Automation.PSObject data, class System.Management.Automation.ScriptBlock action, bool supportEvent, bool forwardEvent) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.PSEventManager.SubscribeEvent(System.Object,System.String,System.String,System.Management.Automation.PSObject,System.Management.Automation.ScriptBlock,System.Boolean,System.Boolean)" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Function SubscribeEvent (source As Object, eventName As String, sourceIdentifier As String, data As PSObject, action As ScriptBlock, supportEvent As Boolean, forwardEvent As Boolean) As PSEventSubscriber" />
+      <MemberSignature Language="F#" Value="abstract member SubscribeEvent : obj * string * string * System.Management.Automation.PSObject * System.Management.Automation.ScriptBlock * bool * bool -&gt; System.Management.Automation.PSEventSubscriber" Usage="pSEventManager.SubscribeEvent (source, eventName, sourceIdentifier, data, action, supportEvent, forwardEvent)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.PSEventSubscriber</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="source" Type="System.Object" />
+        <Parameter Name="eventName" Type="System.String" />
+        <Parameter Name="sourceIdentifier" Type="System.String" />
+        <Parameter Name="data" Type="System.Management.Automation.PSObject" />
+        <Parameter Name="action" Type="System.Management.Automation.ScriptBlock" />
+        <Parameter Name="supportEvent" Type="System.Boolean" />
+        <Parameter Name="forwardEvent" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="source">To be added.</param>
+        <param name="eventName">To be added.</param>
+        <param name="sourceIdentifier">To be added.</param>
+        <param name="data">To be added.</param>
+        <param name="action">To be added.</param>
+        <param name="supportEvent">To be added.</param>
+        <param name="forwardEvent">To be added.</param>
+        <summary>
+             Subscribes to an event on an object.
+            
+             <param name="source">
+             The source object that defines the event
+             </param><param name="eventName">
+             The event to subscribe
+             </param><param name="sourceIdentifier">
+             An optional subscription identifier to help identify this event subscription
+             </param><param name="data">
+             Any additional data you wish to attach to the event
+             </param><param name="action">
+             Any action to be invoked when the event arrives
+             </param><param name="supportEvent">
+             Any action to be invoked when the event arrives
+             </param><param name="forwardEvent">
+             Whether events in this subscriber should be forwarded to the client PowerShell during remote executions
+             </param></summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SubscribeEvent">
+      <MemberSignature Language="C#" Value="public abstract System.Management.Automation.PSEventSubscriber SubscribeEvent (object source, string eventName, string sourceIdentifier, System.Management.Automation.PSObject data, System.Management.Automation.PSEventReceivedEventHandler handlerDelegate, bool supportEvent, bool forwardEvent, int maxTriggerCount);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Management.Automation.PSEventSubscriber SubscribeEvent(object source, string eventName, string sourceIdentifier, class System.Management.Automation.PSObject data, class System.Management.Automation.PSEventReceivedEventHandler handlerDelegate, bool supportEvent, bool forwardEvent, int32 maxTriggerCount) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.PSEventManager.SubscribeEvent(System.Object,System.String,System.String,System.Management.Automation.PSObject,System.Management.Automation.PSEventReceivedEventHandler,System.Boolean,System.Boolean,System.Int32)" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Function SubscribeEvent (source As Object, eventName As String, sourceIdentifier As String, data As PSObject, handlerDelegate As PSEventReceivedEventHandler, supportEvent As Boolean, forwardEvent As Boolean, maxTriggerCount As Integer) As PSEventSubscriber" />
+      <MemberSignature Language="F#" Value="abstract member SubscribeEvent : obj * string * string * System.Management.Automation.PSObject * System.Management.Automation.PSEventReceivedEventHandler * bool * bool * int -&gt; System.Management.Automation.PSEventSubscriber" Usage="pSEventManager.SubscribeEvent (source, eventName, sourceIdentifier, data, handlerDelegate, supportEvent, forwardEvent, maxTriggerCount)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.PSEventSubscriber</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="source" Type="System.Object" />
+        <Parameter Name="eventName" Type="System.String" />
+        <Parameter Name="sourceIdentifier" Type="System.String" />
+        <Parameter Name="data" Type="System.Management.Automation.PSObject" />
+        <Parameter Name="handlerDelegate" Type="System.Management.Automation.PSEventReceivedEventHandler" />
+        <Parameter Name="supportEvent" Type="System.Boolean" />
+        <Parameter Name="forwardEvent" Type="System.Boolean" />
+        <Parameter Name="maxTriggerCount" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="source">To be added.</param>
+        <param name="eventName">To be added.</param>
+        <param name="sourceIdentifier">To be added.</param>
+        <param name="data">To be added.</param>
+        <param name="handlerDelegate">To be added.</param>
+        <param name="supportEvent">To be added.</param>
+        <param name="forwardEvent">To be added.</param>
+        <param name="maxTriggerCount">To be added.</param>
+        <summary>
+             Subscribes to an event on an object.
+            
+             <param name="source">
+             The source object that defines the event
+             </param><param name="eventName">
+             The event to subscribe
+             </param><param name="sourceIdentifier">
+             An optional subscription identifier to help identify this event subscription
+             </param><param name="data">
+             Any additional data you wish to attach to the event
+             </param><param name="handlerDelegate">
+             Any action to be invoked when the event arrives
+             </param><param name="supportEvent">
+             Any action to be invoked when the event arrives
+             </param><param name="forwardEvent">
+             Whether events in this subscriber should be forwarded to the client PowerShell during remote executions
+             </param><param name="maxTriggerCount">
+             Indicate how many times the subscriber should be triggered before auto-unregister it
+             If the value is equal or less than zero, there is no limit on the number of times the event can be triggered without being unregistered
+             </param></summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SubscribeEvent">
+      <MemberSignature Language="C#" Value="public abstract System.Management.Automation.PSEventSubscriber SubscribeEvent (object source, string eventName, string sourceIdentifier, System.Management.Automation.PSObject data, System.Management.Automation.ScriptBlock action, bool supportEvent, bool forwardEvent, int maxTriggerCount);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Management.Automation.PSEventSubscriber SubscribeEvent(object source, string eventName, string sourceIdentifier, class System.Management.Automation.PSObject data, class System.Management.Automation.ScriptBlock action, bool supportEvent, bool forwardEvent, int32 maxTriggerCount) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.PSEventManager.SubscribeEvent(System.Object,System.String,System.String,System.Management.Automation.PSObject,System.Management.Automation.ScriptBlock,System.Boolean,System.Boolean,System.Int32)" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Function SubscribeEvent (source As Object, eventName As String, sourceIdentifier As String, data As PSObject, action As ScriptBlock, supportEvent As Boolean, forwardEvent As Boolean, maxTriggerCount As Integer) As PSEventSubscriber" />
+      <MemberSignature Language="F#" Value="abstract member SubscribeEvent : obj * string * string * System.Management.Automation.PSObject * System.Management.Automation.ScriptBlock * bool * bool * int -&gt; System.Management.Automation.PSEventSubscriber" Usage="pSEventManager.SubscribeEvent (source, eventName, sourceIdentifier, data, action, supportEvent, forwardEvent, maxTriggerCount)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.PSEventSubscriber</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="source" Type="System.Object" />
+        <Parameter Name="eventName" Type="System.String" />
+        <Parameter Name="sourceIdentifier" Type="System.String" />
+        <Parameter Name="data" Type="System.Management.Automation.PSObject" />
+        <Parameter Name="action" Type="System.Management.Automation.ScriptBlock" />
+        <Parameter Name="supportEvent" Type="System.Boolean" />
+        <Parameter Name="forwardEvent" Type="System.Boolean" />
+        <Parameter Name="maxTriggerCount" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="source">To be added.</param>
+        <param name="eventName">To be added.</param>
+        <param name="sourceIdentifier">To be added.</param>
+        <param name="data">To be added.</param>
+        <param name="action">To be added.</param>
+        <param name="supportEvent">To be added.</param>
+        <param name="forwardEvent">To be added.</param>
+        <param name="maxTriggerCount">To be added.</param>
+        <summary>
+             Subscribes to an event on an object.
+            
+             <param name="source">
+             The source object that defines the event
+             </param><param name="eventName">
+             The event to subscribe
+             </param><param name="sourceIdentifier">
+             An optional subscription identifier to help identify this event subscription
+             </param><param name="data">
+             Any additional data you wish to attach to the event
+             </param><param name="action">
+             Any action to be invoked when the event arrives
+             </param><param name="supportEvent">
+             Any action to be invoked when the event arrives
+             </param><param name="forwardEvent">
+             Whether events in this subscriber should be forwarded to the client PowerShell during remote executions
+             </param><param name="maxTriggerCount">
+             Indicate how many times the subscriber should be triggered before auto-unregister it
+             If the value is equal or less than zero, there is no limit on the number of times the event can be triggered without being unregistered
+             </param></summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Subscribers">
+      <MemberSignature Language="C#" Value="public abstract System.Collections.Generic.List&lt;System.Management.Automation.PSEventSubscriber&gt; Subscribers { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.List`1&lt;class System.Management.Automation.PSEventSubscriber&gt; Subscribers" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.PSEventManager.Subscribers" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride ReadOnly Property Subscribers As List(Of PSEventSubscriber)" />
+      <MemberSignature Language="F#" Value="member this.Subscribers : System.Collections.Generic.List&lt;System.Management.Automation.PSEventSubscriber&gt;" Usage="System.Management.Automation.PSEventManager.Subscribers" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.List&lt;System.Management.Automation.PSEventSubscriber&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the list of event subscribers.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UnsubscribeEvent">
+      <MemberSignature Language="C#" Value="public abstract void UnsubscribeEvent (System.Management.Automation.PSEventSubscriber subscriber);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void UnsubscribeEvent(class System.Management.Automation.PSEventSubscriber subscriber) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.PSEventManager.UnsubscribeEvent(System.Management.Automation.PSEventSubscriber)" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Sub UnsubscribeEvent (subscriber As PSEventSubscriber)" />
+      <MemberSignature Language="F#" Value="abstract member UnsubscribeEvent : System.Management.Automation.PSEventSubscriber -&gt; unit" Usage="pSEventManager.UnsubscribeEvent subscriber" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="subscriber" Type="System.Management.Automation.PSEventSubscriber" />
+      </Parameters>
+      <Docs>
+        <param name="subscriber">To be added.</param>
+        <summary>
+             Unsubscribes from an event on an object.
+            
+             <param name="subscriber">
+             The subscriber associated with the event subscription
+             </param></summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

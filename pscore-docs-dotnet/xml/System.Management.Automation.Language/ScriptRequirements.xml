@@ -1,0 +1,205 @@
+﻿<Type Name="ScriptRequirements" FullName="System.Management.Automation.Language.ScriptRequirements">
+  <TypeSignature Language="C#" Value="public class ScriptRequirements" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ScriptRequirements extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Management.Automation.Language.ScriptRequirements" />
+  <TypeSignature Language="VB.NET" Value="Public Class ScriptRequirements" />
+  <TypeSignature Language="F#" Value="type ScriptRequirements = class" />
+  <AssemblyInfo>
+    <AssemblyName>System.Management.Automation</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary />
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ScriptRequirements ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Language.ScriptRequirements.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New ()" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsElevationRequired">
+      <MemberSignature Language="C#" Value="public bool IsElevationRequired { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsElevationRequired" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.Language.ScriptRequirements.IsElevationRequired" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property IsElevationRequired As Boolean" />
+      <MemberSignature Language="F#" Value="member this.IsElevationRequired : bool" Usage="System.Management.Automation.Language.ScriptRequirements.IsElevationRequired" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Specifies if this script requires elevated privileges, specified like:
+                <code>#requires -RunAsAdministrator</code>
+            If nothing is specified, this property is false.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RequiredApplicationId">
+      <MemberSignature Language="C#" Value="public string RequiredApplicationId { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string RequiredApplicationId" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.Language.ScriptRequirements.RequiredApplicationId" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property RequiredApplicationId As String" />
+      <MemberSignature Language="F#" Value="member this.RequiredApplicationId : string" Usage="System.Management.Automation.Language.ScriptRequirements.RequiredApplicationId" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The application id this script requires, specified like:
+                <code>#requires -Shellid Shell</code>
+            If no application id has been specified, this property is null.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RequiredAssemblies">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.ReadOnlyCollection&lt;string&gt; RequiredAssemblies { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ObjectModel.ReadOnlyCollection`1&lt;string&gt; RequiredAssemblies" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.Language.ScriptRequirements.RequiredAssemblies" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property RequiredAssemblies As ReadOnlyCollection(Of String)" />
+      <MemberSignature Language="F#" Value="member this.RequiredAssemblies : System.Collections.ObjectModel.ReadOnlyCollection&lt;string&gt;" Usage="System.Management.Automation.Language.ScriptRequirements.RequiredAssemblies" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.ReadOnlyCollection&lt;System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The assemblies this script requires, specified like:
+                <code>#requires -Assembly path\to\foo.dll</code><code>#requires -Assembly "System.Management.Automation, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35"</code>
+            If no assemblies are required, this property is an empty collection.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RequiredModules">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.ReadOnlyCollection&lt;Microsoft.PowerShell.Commands.ModuleSpecification&gt; RequiredModules { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ObjectModel.ReadOnlyCollection`1&lt;class Microsoft.PowerShell.Commands.ModuleSpecification&gt; RequiredModules" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.Language.ScriptRequirements.RequiredModules" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property RequiredModules As ReadOnlyCollection(Of ModuleSpecification)" />
+      <MemberSignature Language="F#" Value="member this.RequiredModules : System.Collections.ObjectModel.ReadOnlyCollection&lt;Microsoft.PowerShell.Commands.ModuleSpecification&gt;" Usage="System.Management.Automation.Language.ScriptRequirements.RequiredModules" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.ReadOnlyCollection&lt;Microsoft.PowerShell.Commands.ModuleSpecification&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The modules this script requires, specified like:
+                <code>#requires -Module NetAdapter</code><code>#requires -Module @{Name="NetAdapter"; Version="1.0.0.0"}</code>
+            If no modules are required, this property is an empty collection.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RequiredPSEditions">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.ReadOnlyCollection&lt;string&gt; RequiredPSEditions { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ObjectModel.ReadOnlyCollection`1&lt;string&gt; RequiredPSEditions" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.Language.ScriptRequirements.RequiredPSEditions" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property RequiredPSEditions As ReadOnlyCollection(Of String)" />
+      <MemberSignature Language="F#" Value="member this.RequiredPSEditions : System.Collections.ObjectModel.ReadOnlyCollection&lt;string&gt;" Usage="System.Management.Automation.Language.ScriptRequirements.RequiredPSEditions" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.ReadOnlyCollection&lt;System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The PowerShell Edition this script requires, specified like:
+                <code>#requires -PSEdition Desktop</code>
+            If no PSEdition has been specified, this property is an empty collection.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RequiredPSVersion">
+      <MemberSignature Language="C#" Value="public Version RequiredPSVersion { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Version RequiredPSVersion" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.Language.ScriptRequirements.RequiredPSVersion" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property RequiredPSVersion As Version" />
+      <MemberSignature Language="F#" Value="member this.RequiredPSVersion : Version" Usage="System.Management.Automation.Language.ScriptRequirements.RequiredPSVersion" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Version</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The PowerShell version this script requires, specified like:
+                <code>#requires -Version 3</code>
+            If no version has been specified, this property is null.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RequiresPSSnapIns">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.ReadOnlyCollection&lt;System.Management.Automation.PSSnapInSpecification&gt; RequiresPSSnapIns { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ObjectModel.ReadOnlyCollection`1&lt;class System.Management.Automation.PSSnapInSpecification&gt; RequiresPSSnapIns" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.Language.ScriptRequirements.RequiresPSSnapIns" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property RequiresPSSnapIns As ReadOnlyCollection(Of PSSnapInSpecification)" />
+      <MemberSignature Language="F#" Value="member this.RequiresPSSnapIns : System.Collections.ObjectModel.ReadOnlyCollection&lt;System.Management.Automation.PSSnapInSpecification&gt;" Usage="System.Management.Automation.Language.ScriptRequirements.RequiresPSSnapIns" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.ReadOnlyCollection&lt;System.Management.Automation.PSSnapInSpecification&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The snapins this script requires, specified like:
+                <code>#requires -PSSnapin Snapin</code><code>#requires -PSSnapin Snapin -Version 2</code>
+            If no snapins are required, this property is an empty collection.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

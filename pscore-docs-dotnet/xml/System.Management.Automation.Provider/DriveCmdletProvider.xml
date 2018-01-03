@@ -1,0 +1,202 @@
+﻿<Type Name="DriveCmdletProvider" FullName="System.Management.Automation.Provider.DriveCmdletProvider">
+  <TypeSignature Language="C#" Value="public abstract class DriveCmdletProvider : System.Management.Automation.Provider.CmdletProvider" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit DriveCmdletProvider extends System.Management.Automation.Provider.CmdletProvider" />
+  <TypeSignature Language="DocId" Value="T:System.Management.Automation.Provider.DriveCmdletProvider" />
+  <TypeSignature Language="VB.NET" Value="Public MustInherit Class DriveCmdletProvider&#xA;Inherits CmdletProvider" />
+  <TypeSignature Language="F#" Value="type DriveCmdletProvider = class&#xA;    inherit CmdletProvider" />
+  <AssemblyInfo>
+    <AssemblyName>System.Management.Automation</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Management.Automation.Provider.CmdletProvider</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+             The base class for Cmdlet providers that can be exposed through MSH drives.
+             </summary>
+    <remarks>
+             Although it is possible to derive from this base class to implement a Cmdlet Provider, in most
+             cases one should derive from <see cref="T:System.Management.Automation.Provider.ItemCmdletProvider" />,
+             <see cref="T:System.Management.Automation.Provider.ContainerCmdletProvider" />, or
+             <see cref="T:System.Management.Automation.Provider.NavigationCmdletProvider" /></remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected DriveCmdletProvider ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Provider.DriveCmdletProvider.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Protected Sub New ()" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InitializeDefaultDrives">
+      <MemberSignature Language="C#" Value="protected virtual System.Collections.ObjectModel.Collection&lt;System.Management.Automation.PSDriveInfo&gt; InitializeDefaultDrives ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class System.Collections.ObjectModel.Collection`1&lt;class System.Management.Automation.PSDriveInfo&gt; InitializeDefaultDrives() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Provider.DriveCmdletProvider.InitializeDefaultDrives" />
+      <MemberSignature Language="VB.NET" Value="Protected Overridable Function InitializeDefaultDrives () As Collection(Of PSDriveInfo)" />
+      <MemberSignature Language="F#" Value="abstract member InitializeDefaultDrives : unit -&gt; System.Collections.ObjectModel.Collection&lt;System.Management.Automation.PSDriveInfo&gt;&#xA;override this.InitializeDefaultDrives : unit -&gt; System.Collections.ObjectModel.Collection&lt;System.Management.Automation.PSDriveInfo&gt;" Usage="driveCmdletProvider.InitializeDefaultDrives " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.Collection&lt;System.Management.Automation.PSDriveInfo&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+             Gives the provider the ability to map drives after initialization.
+             </summary>
+        <returns>
+             A collection of the drives the provider wants to be added to the session upon initialization.
+            
+             The default implementation returns an empty <see cref="T:System.Management.Automation.PSDriveInfo" /> collection.
+             </returns>
+        <remarks>
+             After the Start method is called on a provider, the InitializeDefaultDrives
+             method is called. This is an opportunity for the provider to
+             mount drives that are important to it. For instance, the Active Directory
+             provider might mount a drive for the defaultNamingContext if the
+             machine is joined to a domain.
+            
+             All providers should mount a root drive to help the user with discoverability.
+             This root drive might contain a listing of a set of locations that would be
+             interesting as roots for other mounted drives. For instance, the Active
+             Directory provider my create a drive that lists the naming contexts found
+             in the namingContext attributes on the RootDSE. This will help users
+             discover interesting mount points for other drives.
+             </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NewDrive">
+      <MemberSignature Language="C#" Value="protected virtual System.Management.Automation.PSDriveInfo NewDrive (System.Management.Automation.PSDriveInfo drive);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class System.Management.Automation.PSDriveInfo NewDrive(class System.Management.Automation.PSDriveInfo drive) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Provider.DriveCmdletProvider.NewDrive(System.Management.Automation.PSDriveInfo)" />
+      <MemberSignature Language="VB.NET" Value="Protected Overridable Function NewDrive (drive As PSDriveInfo) As PSDriveInfo" />
+      <MemberSignature Language="F#" Value="abstract member NewDrive : System.Management.Automation.PSDriveInfo -&gt; System.Management.Automation.PSDriveInfo&#xA;override this.NewDrive : System.Management.Automation.PSDriveInfo -&gt; System.Management.Automation.PSDriveInfo" Usage="driveCmdletProvider.NewDrive drive" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.PSDriveInfo</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="drive" Type="System.Management.Automation.PSDriveInfo" />
+      </Parameters>
+      <Docs>
+        <param name="drive">
+             The proposed new drive.
+             </param>
+        <summary>
+             Gives the provider an opportunity to validate the drive
+             that is being added. It also allows the provider to modify parts
+             of the PSDriveInfo object. This may be done for performance or
+             reliability reasons or to provide extra data to all calls using
+             the Drive.
+             </summary>
+        <returns>
+             The new drive that is to be added to the MSH namespace. This
+             can either be the same <paramref name="drive" /> object that
+             was passed in or a modified version of it.
+            
+             The default implementation returns the drive that was passed.
+             </returns>
+        <remarks>
+             This method gives the provider an opportunity to associate
+             provider specific data with a drive. This is done by deriving
+             a new class from <see cref="T:System.Management.Automation.PSDriveInfo" />
+             and adding any properties, methods, or fields that are necessary.
+             When this method gets called, the override should create an instance
+             of the derived PSDriveInfo using the passed in PSDriveInfo. The derived
+             PSDriveInfo should then be returned. Each subsequent call into the provider
+             that uses this drive will have access to the derived PSDriveInfo via the
+             PSDriveInfo property provided by the base class.
+            
+             Any failures should be sent to the <see cref="M:System.Management.Automation.Provider.CmdletProvider.WriteError(System.Management.Automation.ErrorRecord)" />
+             method and null should be returned.
+             </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NewDriveDynamicParameters">
+      <MemberSignature Language="C#" Value="protected virtual object NewDriveDynamicParameters ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance object NewDriveDynamicParameters() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Provider.DriveCmdletProvider.NewDriveDynamicParameters" />
+      <MemberSignature Language="VB.NET" Value="Protected Overridable Function NewDriveDynamicParameters () As Object" />
+      <MemberSignature Language="F#" Value="abstract member NewDriveDynamicParameters : unit -&gt; obj&#xA;override this.NewDriveDynamicParameters : unit -&gt; obj" Usage="driveCmdletProvider.NewDriveDynamicParameters " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+             Gives the provider an opportunity to attach additional parameters to
+             the New-PSDrive cmdlet.
+             </summary>
+        <returns>
+             Overrides of this method should return an object that has properties and fields decorated with
+             parsing attributes similar to a cmdlet class or a
+             <see cref="T:System.Management.Automation.RuntimeDefinedParameterDictionary" />.
+            
+             The default implementation returns null. (no additional parameters)
+             </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveDrive">
+      <MemberSignature Language="C#" Value="protected virtual System.Management.Automation.PSDriveInfo RemoveDrive (System.Management.Automation.PSDriveInfo drive);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class System.Management.Automation.PSDriveInfo RemoveDrive(class System.Management.Automation.PSDriveInfo drive) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Provider.DriveCmdletProvider.RemoveDrive(System.Management.Automation.PSDriveInfo)" />
+      <MemberSignature Language="VB.NET" Value="Protected Overridable Function RemoveDrive (drive As PSDriveInfo) As PSDriveInfo" />
+      <MemberSignature Language="F#" Value="abstract member RemoveDrive : System.Management.Automation.PSDriveInfo -&gt; System.Management.Automation.PSDriveInfo&#xA;override this.RemoveDrive : System.Management.Automation.PSDriveInfo -&gt; System.Management.Automation.PSDriveInfo" Usage="driveCmdletProvider.RemoveDrive drive" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.PSDriveInfo</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="drive" Type="System.Management.Automation.PSDriveInfo" />
+      </Parameters>
+      <Docs>
+        <param name="drive">
+             The Drive object the represents the mounted drive.
+             </param>
+        <summary>
+             Gives the provider an opportunity to clean up any provider specific data
+             for the drive that is going to be removed.
+             </summary>
+        <returns>
+             If the drive can be removed it should return the drive that was passed
+             in. If the drive cannot be removed, null should be returned or an exception
+             should be thrown.
+            
+             The default implementation returns the drive that was passed.
+             </returns>
+        <remarks>
+             A provider should override this method to free any resources that may be associated with
+             the drive being removed.
+             </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

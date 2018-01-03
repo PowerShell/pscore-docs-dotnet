@@ -1,0 +1,120 @@
+﻿<Type Name="ICommandRuntime2" FullName="System.Management.Automation.ICommandRuntime2">
+  <TypeSignature Language="C#" Value="public interface ICommandRuntime2 : System.Management.Automation.ICommandRuntime" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract ICommandRuntime2 implements class System.Management.Automation.ICommandRuntime" />
+  <TypeSignature Language="DocId" Value="T:System.Management.Automation.ICommandRuntime2" />
+  <TypeSignature Language="VB.NET" Value="Public Interface ICommandRuntime2&#xA;Implements ICommandRuntime" />
+  <TypeSignature Language="F#" Value="type ICommandRuntime2 = interface&#xA;    interface ICommandRuntime" />
+  <AssemblyInfo>
+    <AssemblyName>System.Management.Automation</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Management.Automation.ICommandRuntime</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>
+            This interface defines the set of functionality that must be implemented to directly
+            execute an instance of a Cmdlet. ICommandRuntime2 extends the ICommandRuntime interface
+            by adding support for the informational data stream.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="ShouldContinue">
+      <MemberSignature Language="C#" Value="public bool ShouldContinue (string query, string caption, bool hasSecurityImpact, ref bool yesToAll, ref bool noToAll);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool ShouldContinue(string query, string caption, bool hasSecurityImpact, bool&amp; yesToAll, bool&amp; noToAll) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.ICommandRuntime2.ShouldContinue(System.String,System.String,System.Boolean,System.Boolean@,System.Boolean@)" />
+      <MemberSignature Language="VB.NET" Value="Public Function ShouldContinue (query As String, caption As String, hasSecurityImpact As Boolean, ByRef yesToAll As Boolean, ByRef noToAll As Boolean) As Boolean" />
+      <MemberSignature Language="F#" Value="abstract member ShouldContinue : string * string * bool *  *  -&gt; bool" Usage="iCommandRuntime2.ShouldContinue (query, caption, hasSecurityImpact, yesToAll, noToAll)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="query" Type="System.String" />
+        <Parameter Name="caption" Type="System.String" />
+        <Parameter Name="hasSecurityImpact" Type="System.Boolean" />
+        <Parameter Name="yesToAll" Type="System.Boolean&amp;" RefType="ref" />
+        <Parameter Name="noToAll" Type="System.Boolean&amp;" RefType="ref" />
+      </Parameters>
+      <Docs>
+        <param name="query">
+            Textual query of whether the action should be performed,
+            usually in the form of a question.
+            </param>
+        <param name="caption">
+            Caption of the window which may be displayed
+            when the user is prompted whether or not to perform the action.
+            It may be displayed by some hosts, but not all.
+            </param>
+        <param name="hasSecurityImpact">
+            true if the operation being confirmed has a security impact. If specified,
+            the default option selected in the selection menu is 'No'.
+            </param>
+        <param name="yesToAll">
+            true iff user selects YesToAll.  If this is already true,
+            ShouldContinue will bypass the prompt and return true.
+            </param>
+        <param name="noToAll">
+            true iff user selects NoToAll.  If this is already true,
+            ShouldContinue will bypass the prompt and return false.
+            </param>
+        <summary>
+            Confirm an operation or grouping of operations with the user.
+            This differs from ShouldProcess in that it is not affected by
+            preference settings or command-line parameters,
+            it always does the query.
+            This variant offers Yes, No, YesToAll and NoToAll.
+            </summary>
+        <returns>
+            If ShouldContinue returns true, the operation should be performed.
+            If ShouldContinue returns false, the operation should not be
+            performed, and the Cmdlet should move on to the next target resource.
+            </returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.Management.Automation.PipelineStoppedException">
+            The pipeline has already been terminated, or was terminated
+            during the execution of this method.
+            The Cmdlet should generally just allow PipelineStoppedException
+            to percolate up to the caller of ProcessRecord etc.
+            </exception>
+        <exception cref="T:System.InvalidOperationException">
+            Not permitted at this time or from this thread.
+            ShouldContinue may only be called during a call to this Cmdlet's
+            implementation of ProcessRecord, BeginProcessing or EndProcessing,
+            and only from that thread.
+            </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteInformation">
+      <MemberSignature Language="C#" Value="public void WriteInformation (System.Management.Automation.InformationRecord informationRecord);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void WriteInformation(class System.Management.Automation.InformationRecord informationRecord) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.ICommandRuntime2.WriteInformation(System.Management.Automation.InformationRecord)" />
+      <MemberSignature Language="F#" Value="abstract member WriteInformation : System.Management.Automation.InformationRecord -&gt; unit" Usage="iCommandRuntime2.WriteInformation informationRecord" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="informationRecord" Type="System.Management.Automation.InformationRecord" />
+      </Parameters>
+      <Docs>
+        <param name="informationRecord">The informational record that should be transmitted to the host or user.</param>
+        <summary>
+            Write an informational record to the command runtime.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

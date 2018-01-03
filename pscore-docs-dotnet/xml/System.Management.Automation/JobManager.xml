@@ -1,0 +1,136 @@
+﻿<Type Name="JobManager" FullName="System.Management.Automation.JobManager">
+  <TypeSignature Language="C#" Value="public sealed class JobManager" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit JobManager extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Management.Automation.JobManager" />
+  <TypeSignature Language="VB.NET" Value="Public NotInheritable Class JobManager" />
+  <TypeSignature Language="F#" Value="type JobManager = class" />
+  <AssemblyInfo>
+    <AssemblyName>System.Management.Automation</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Manager for JobSourceAdapters for invocation and management of specific Job types.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="IsRegistered">
+      <MemberSignature Language="C#" Value="public bool IsRegistered (string typeName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool IsRegistered(string typeName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.JobManager.IsRegistered(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Function IsRegistered (typeName As String) As Boolean" />
+      <MemberSignature Language="F#" Value="member this.IsRegistered : string -&gt; bool" Usage="jobManager.IsRegistered typeName" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="typeName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="typeName">Type to check.</param>
+        <summary>
+            Returns true if the type is already registered.
+            </summary>
+        <returns>Whether the type is registered already.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NewJob">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.Job2 NewJob (System.Management.Automation.JobDefinition definition);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Management.Automation.Job2 NewJob(class System.Management.Automation.JobDefinition definition) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.JobManager.NewJob(System.Management.Automation.JobDefinition)" />
+      <MemberSignature Language="VB.NET" Value="Public Function NewJob (definition As JobDefinition) As Job2" />
+      <MemberSignature Language="F#" Value="member this.NewJob : System.Management.Automation.JobDefinition -&gt; System.Management.Automation.Job2" Usage="jobManager.NewJob definition" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.Job2</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="definition" Type="System.Management.Automation.JobDefinition" />
+      </Parameters>
+      <Docs>
+        <param name="definition">JobDefinition defining the command.</param>
+        <summary>
+            Creates a new job of the appropriate type given by JobDefinition passed in.
+            </summary>
+        <returns>Job2 object of the appropriate type specified by the definition.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidOperationException">If JobSourceAdapter type specified
+            in definition is not registered.</exception>
+        <exception cref="T:System.Exception">JobSourceAdapter implementation exception thrown on error.
+            </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="NewJob">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.Job2 NewJob (System.Management.Automation.JobInvocationInfo specification);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Management.Automation.Job2 NewJob(class System.Management.Automation.JobInvocationInfo specification) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.JobManager.NewJob(System.Management.Automation.JobInvocationInfo)" />
+      <MemberSignature Language="VB.NET" Value="Public Function NewJob (specification As JobInvocationInfo) As Job2" />
+      <MemberSignature Language="F#" Value="member this.NewJob : System.Management.Automation.JobInvocationInfo -&gt; System.Management.Automation.Job2" Usage="jobManager.NewJob specification" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.Job2</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="specification" Type="System.Management.Automation.JobInvocationInfo" />
+      </Parameters>
+      <Docs>
+        <param name="specification">JobInvocationInfo defining the command.</param>
+        <summary>
+            Creates a new job of the appropriate type given by JobDefinition passed in.
+            </summary>
+        <returns>Job2 object of the appropriate type specified by the definition.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidOperationException">If JobSourceAdapter type specified
+            in definition is not registered.</exception>
+        <exception cref="T:System.Exception">JobSourceAdapter implementation exception thrown on error.
+            </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="PersistJob">
+      <MemberSignature Language="C#" Value="public void PersistJob (System.Management.Automation.Job2 job, System.Management.Automation.JobDefinition definition);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void PersistJob(class System.Management.Automation.Job2 job, class System.Management.Automation.JobDefinition definition) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.JobManager.PersistJob(System.Management.Automation.Job2,System.Management.Automation.JobDefinition)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub PersistJob (job As Job2, definition As JobDefinition)" />
+      <MemberSignature Language="F#" Value="member this.PersistJob : System.Management.Automation.Job2 * System.Management.Automation.JobDefinition -&gt; unit" Usage="jobManager.PersistJob (job, definition)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="job" Type="System.Management.Automation.Job2" />
+        <Parameter Name="definition" Type="System.Management.Automation.JobDefinition" />
+      </Parameters>
+      <Docs>
+        <param name="job">Job2 type job to persist</param>
+        <param name="definition">Job definition containing source adapter information</param>
+        <summary>
+            Saves the job to a persisted store.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

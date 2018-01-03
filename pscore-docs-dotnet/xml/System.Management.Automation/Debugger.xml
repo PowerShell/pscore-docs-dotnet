@@ -1,0 +1,752 @@
+﻿<Type Name="Debugger" FullName="System.Management.Automation.Debugger">
+  <TypeSignature Language="C#" Value="public abstract class Debugger" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit Debugger extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Management.Automation.Debugger" />
+  <TypeSignature Language="VB.NET" Value="Public MustInherit Class Debugger" />
+  <TypeSignature Language="F#" Value="type Debugger = class" />
+  <AssemblyInfo>
+    <AssemblyName>System.Management.Automation</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Base class for all PowerShell debuggers.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected Debugger ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Debugger.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Protected Sub New ()" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BreakpointUpdated">
+      <MemberSignature Language="C#" Value="public event EventHandler&lt;System.Management.Automation.BreakpointUpdatedEventArgs&gt; BreakpointUpdated;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class System.Management.Automation.BreakpointUpdatedEventArgs&gt; BreakpointUpdated" />
+      <MemberSignature Language="DocId" Value="E:System.Management.Automation.Debugger.BreakpointUpdated" />
+      <MemberSignature Language="VB.NET" Value="Public Event BreakpointUpdated As EventHandler(Of BreakpointUpdatedEventArgs) " />
+      <MemberSignature Language="F#" Value="member this.BreakpointUpdated : EventHandler&lt;System.Management.Automation.BreakpointUpdatedEventArgs&gt; " Usage="member this.BreakpointUpdated : System.EventHandler&lt;System.Management.Automation.BreakpointUpdatedEventArgs&gt; " />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;System.Management.Automation.BreakpointUpdatedEventArgs&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Event raised when a breakpoint is updated
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CancelDebuggerProcessing">
+      <MemberSignature Language="C#" Value="public virtual void CancelDebuggerProcessing ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void CancelDebuggerProcessing() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Debugger.CancelDebuggerProcessing" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Sub CancelDebuggerProcessing ()" />
+      <MemberSignature Language="F#" Value="abstract member CancelDebuggerProcessing : unit -&gt; unit&#xA;override this.CancelDebuggerProcessing : unit -&gt; unit" Usage="debugger.CancelDebuggerProcessing " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Causes the CancelRunspaceDebugProcessing event to be raised which notifies subscribers that current debugging
+            sessions should be cancelled.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CancelRunspaceDebugProcessing">
+      <MemberSignature Language="C#" Value="public event EventHandler&lt;EventArgs&gt; CancelRunspaceDebugProcessing;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class System.EventArgs&gt; CancelRunspaceDebugProcessing" />
+      <MemberSignature Language="DocId" Value="E:System.Management.Automation.Debugger.CancelRunspaceDebugProcessing" />
+      <MemberSignature Language="VB.NET" Value="Public Event CancelRunspaceDebugProcessing As EventHandler(Of EventArgs) " />
+      <MemberSignature Language="F#" Value="member this.CancelRunspaceDebugProcessing : EventHandler&lt;EventArgs&gt; " Usage="member this.CancelRunspaceDebugProcessing : System.EventHandler&lt;System.EventArgs&gt; " />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;System.EventArgs&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Event raised to indicate that the debugging session is over and runspace debuggers queued for 
+            processing should be released.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DebuggerStop">
+      <MemberSignature Language="C#" Value="public event EventHandler&lt;System.Management.Automation.DebuggerStopEventArgs&gt; DebuggerStop;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class System.Management.Automation.DebuggerStopEventArgs&gt; DebuggerStop" />
+      <MemberSignature Language="DocId" Value="E:System.Management.Automation.Debugger.DebuggerStop" />
+      <MemberSignature Language="VB.NET" Value="Public Event DebuggerStop As EventHandler(Of DebuggerStopEventArgs) " />
+      <MemberSignature Language="F#" Value="member this.DebuggerStop : EventHandler&lt;System.Management.Automation.DebuggerStopEventArgs&gt; " Usage="member this.DebuggerStop : System.EventHandler&lt;System.Management.Automation.DebuggerStopEventArgs&gt; " />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;System.Management.Automation.DebuggerStopEventArgs&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Event raised when the debugger hits a breakpoint or a step
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DebuggerStopped">
+      <MemberSignature Language="C#" Value="protected bool DebuggerStopped { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool DebuggerStopped" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.Debugger.DebuggerStopped" />
+      <MemberSignature Language="VB.NET" Value="Protected ReadOnly Property DebuggerStopped As Boolean" />
+      <MemberSignature Language="F#" Value="member this.DebuggerStopped : bool" Usage="System.Management.Automation.Debugger.DebuggerStopped" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            True when the debugger is stopped.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DebugMode">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.DebugModes DebugMode { get; protected set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Management.Automation.DebugModes DebugMode" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.Debugger.DebugMode" />
+      <MemberSignature Language="VB.NET" Value="Public Property DebugMode As DebugModes" />
+      <MemberSignature Language="F#" Value="member this.DebugMode : System.Management.Automation.DebugModes with get, set" Usage="System.Management.Automation.Debugger.DebugMode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.DebugModes</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            DebuggerMode
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetCallStack">
+      <MemberSignature Language="C#" Value="public virtual System.Collections.Generic.IEnumerable&lt;System.Management.Automation.CallStackFrame&gt; GetCallStack ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Collections.Generic.IEnumerable`1&lt;class System.Management.Automation.CallStackFrame&gt; GetCallStack() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Debugger.GetCallStack" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function GetCallStack () As IEnumerable(Of CallStackFrame)" />
+      <MemberSignature Language="F#" Value="abstract member GetCallStack : unit -&gt; seq&lt;System.Management.Automation.CallStackFrame&gt;&#xA;override this.GetCallStack : unit -&gt; seq&lt;System.Management.Automation.CallStackFrame&gt;" Usage="debugger.GetCallStack " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerable&lt;System.Management.Automation.CallStackFrame&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Returns IEnumerable of CallStackFrame objects.
+            </summary>
+        <returns />
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetDebuggerStopArgs">
+      <MemberSignature Language="C#" Value="public abstract System.Management.Automation.DebuggerStopEventArgs GetDebuggerStopArgs ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Management.Automation.DebuggerStopEventArgs GetDebuggerStopArgs() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Debugger.GetDebuggerStopArgs" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Function GetDebuggerStopArgs () As DebuggerStopEventArgs" />
+      <MemberSignature Language="F#" Value="abstract member GetDebuggerStopArgs : unit -&gt; System.Management.Automation.DebuggerStopEventArgs" Usage="debugger.GetDebuggerStopArgs " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.DebuggerStopEventArgs</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Returns current debugger stop event arguments if debugger is in
+            debug stop state.  Otherwise returns null.
+            </summary>
+        <returns>DebuggerStopEventArgs</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InBreakpoint">
+      <MemberSignature Language="C#" Value="public virtual bool InBreakpoint { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool InBreakpoint" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.Debugger.InBreakpoint" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable ReadOnly Property InBreakpoint As Boolean" />
+      <MemberSignature Language="F#" Value="member this.InBreakpoint : bool" Usage="System.Management.Automation.Debugger.InBreakpoint" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            True when debugger is stopped at a breakpoint.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InstanceId">
+      <MemberSignature Language="C#" Value="public virtual Guid InstanceId { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Guid InstanceId" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.Debugger.InstanceId" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable ReadOnly Property InstanceId As Guid" />
+      <MemberSignature Language="F#" Value="member this.InstanceId : Guid" Usage="System.Management.Automation.Debugger.InstanceId" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Guid</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            InstanceId
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsActive">
+      <MemberSignature Language="C#" Value="public virtual bool IsActive { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsActive" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.Debugger.IsActive" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable ReadOnly Property IsActive As Boolean" />
+      <MemberSignature Language="F#" Value="member this.IsActive : bool" Usage="System.Management.Automation.Debugger.IsActive" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Returns true if debugger has breakpoints set and
+            is currently active.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsDebuggerBreakpointUpdatedEventSubscribed">
+      <MemberSignature Language="C#" Value="protected bool IsDebuggerBreakpointUpdatedEventSubscribed ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance bool IsDebuggerBreakpointUpdatedEventSubscribed() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Debugger.IsDebuggerBreakpointUpdatedEventSubscribed" />
+      <MemberSignature Language="VB.NET" Value="Protected Function IsDebuggerBreakpointUpdatedEventSubscribed () As Boolean" />
+      <MemberSignature Language="F#" Value="member this.IsDebuggerBreakpointUpdatedEventSubscribed : unit -&gt; bool" Usage="debugger.IsDebuggerBreakpointUpdatedEventSubscribed " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            IsDebuggerBreakpointUpdatedEventSubscribed
+            </summary>
+        <returns>True if event subscription exists</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsDebuggerStopEventSubscribed">
+      <MemberSignature Language="C#" Value="protected bool IsDebuggerStopEventSubscribed ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance bool IsDebuggerStopEventSubscribed() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Debugger.IsDebuggerStopEventSubscribed" />
+      <MemberSignature Language="VB.NET" Value="Protected Function IsDebuggerStopEventSubscribed () As Boolean" />
+      <MemberSignature Language="F#" Value="member this.IsDebuggerStopEventSubscribed : unit -&gt; bool" Usage="debugger.IsDebuggerStopEventSubscribed " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            IsDebuggerStopEventSubscribed
+            </summary>
+        <returns>True if event subscription exists</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsStartRunspaceDebugProcessingEventSubscribed">
+      <MemberSignature Language="C#" Value="protected bool IsStartRunspaceDebugProcessingEventSubscribed ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance bool IsStartRunspaceDebugProcessingEventSubscribed() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Debugger.IsStartRunspaceDebugProcessingEventSubscribed" />
+      <MemberSignature Language="VB.NET" Value="Protected Function IsStartRunspaceDebugProcessingEventSubscribed () As Boolean" />
+      <MemberSignature Language="F#" Value="member this.IsStartRunspaceDebugProcessingEventSubscribed : unit -&gt; bool" Usage="debugger.IsStartRunspaceDebugProcessingEventSubscribed " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary />
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ProcessCommand">
+      <MemberSignature Language="C#" Value="public abstract System.Management.Automation.DebuggerCommandResults ProcessCommand (System.Management.Automation.PSCommand command, System.Management.Automation.PSDataCollection&lt;System.Management.Automation.PSObject&gt; output);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Management.Automation.DebuggerCommandResults ProcessCommand(class System.Management.Automation.PSCommand command, class System.Management.Automation.PSDataCollection`1&lt;class System.Management.Automation.PSObject&gt; output) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Debugger.ProcessCommand(System.Management.Automation.PSCommand,System.Management.Automation.PSDataCollection{System.Management.Automation.PSObject})" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Function ProcessCommand (command As PSCommand, output As PSDataCollection(Of PSObject)) As DebuggerCommandResults" />
+      <MemberSignature Language="F#" Value="abstract member ProcessCommand : System.Management.Automation.PSCommand * System.Management.Automation.PSDataCollection&lt;System.Management.Automation.PSObject&gt; -&gt; System.Management.Automation.DebuggerCommandResults" Usage="debugger.ProcessCommand (command, output)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.DebuggerCommandResults</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="command" Type="System.Management.Automation.PSCommand" />
+        <Parameter Name="output" Type="System.Management.Automation.PSDataCollection&lt;System.Management.Automation.PSObject&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="command">PowerShell command</param>
+        <param name="output">Output</param>
+        <summary>
+            Evaluates provided command either as a debugger specific command
+            or a PowerShell command.
+            </summary>
+        <returns>DebuggerCommandResults</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RaiseBreakpointUpdatedEvent">
+      <MemberSignature Language="C#" Value="protected void RaiseBreakpointUpdatedEvent (System.Management.Automation.BreakpointUpdatedEventArgs args);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void RaiseBreakpointUpdatedEvent(class System.Management.Automation.BreakpointUpdatedEventArgs args) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Debugger.RaiseBreakpointUpdatedEvent(System.Management.Automation.BreakpointUpdatedEventArgs)" />
+      <MemberSignature Language="VB.NET" Value="Protected Sub RaiseBreakpointUpdatedEvent (args As BreakpointUpdatedEventArgs)" />
+      <MemberSignature Language="F#" Value="member this.RaiseBreakpointUpdatedEvent : System.Management.Automation.BreakpointUpdatedEventArgs -&gt; unit" Usage="debugger.RaiseBreakpointUpdatedEvent args" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="args" Type="System.Management.Automation.BreakpointUpdatedEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="args">BreakpointUpdatedEventArgs</param>
+        <summary>
+            RaiseBreakpointUpdatedEvent
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RaiseCancelRunspaceDebugProcessingEvent">
+      <MemberSignature Language="C#" Value="protected void RaiseCancelRunspaceDebugProcessingEvent ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void RaiseCancelRunspaceDebugProcessingEvent() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Debugger.RaiseCancelRunspaceDebugProcessingEvent" />
+      <MemberSignature Language="VB.NET" Value="Protected Sub RaiseCancelRunspaceDebugProcessingEvent ()" />
+      <MemberSignature Language="F#" Value="member this.RaiseCancelRunspaceDebugProcessingEvent : unit -&gt; unit" Usage="debugger.RaiseCancelRunspaceDebugProcessingEvent " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary />
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RaiseDebuggerStopEvent">
+      <MemberSignature Language="C#" Value="protected void RaiseDebuggerStopEvent (System.Management.Automation.DebuggerStopEventArgs args);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void RaiseDebuggerStopEvent(class System.Management.Automation.DebuggerStopEventArgs args) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Debugger.RaiseDebuggerStopEvent(System.Management.Automation.DebuggerStopEventArgs)" />
+      <MemberSignature Language="VB.NET" Value="Protected Sub RaiseDebuggerStopEvent (args As DebuggerStopEventArgs)" />
+      <MemberSignature Language="F#" Value="member this.RaiseDebuggerStopEvent : System.Management.Automation.DebuggerStopEventArgs -&gt; unit" Usage="debugger.RaiseDebuggerStopEvent args" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="args" Type="System.Management.Automation.DebuggerStopEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="args">DebuggerStopEventArgs</param>
+        <summary>
+            RaiseDebuggerStopEvent
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RaiseRunspaceProcessingCompletedEvent">
+      <MemberSignature Language="C#" Value="protected void RaiseRunspaceProcessingCompletedEvent (System.Management.Automation.ProcessRunspaceDebugEndEventArgs args);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void RaiseRunspaceProcessingCompletedEvent(class System.Management.Automation.ProcessRunspaceDebugEndEventArgs args) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Debugger.RaiseRunspaceProcessingCompletedEvent(System.Management.Automation.ProcessRunspaceDebugEndEventArgs)" />
+      <MemberSignature Language="VB.NET" Value="Protected Sub RaiseRunspaceProcessingCompletedEvent (args As ProcessRunspaceDebugEndEventArgs)" />
+      <MemberSignature Language="F#" Value="member this.RaiseRunspaceProcessingCompletedEvent : System.Management.Automation.ProcessRunspaceDebugEndEventArgs -&gt; unit" Usage="debugger.RaiseRunspaceProcessingCompletedEvent args" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="args" Type="System.Management.Automation.ProcessRunspaceDebugEndEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="args">To be added.</param>
+        <summary />
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RaiseStartRunspaceDebugProcessingEvent">
+      <MemberSignature Language="C#" Value="protected void RaiseStartRunspaceDebugProcessingEvent (System.Management.Automation.StartRunspaceDebugProcessingEventArgs args);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void RaiseStartRunspaceDebugProcessingEvent(class System.Management.Automation.StartRunspaceDebugProcessingEventArgs args) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Debugger.RaiseStartRunspaceDebugProcessingEvent(System.Management.Automation.StartRunspaceDebugProcessingEventArgs)" />
+      <MemberSignature Language="VB.NET" Value="Protected Sub RaiseStartRunspaceDebugProcessingEvent (args As StartRunspaceDebugProcessingEventArgs)" />
+      <MemberSignature Language="F#" Value="member this.RaiseStartRunspaceDebugProcessingEvent : System.Management.Automation.StartRunspaceDebugProcessingEventArgs -&gt; unit" Usage="debugger.RaiseStartRunspaceDebugProcessingEvent args" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="args" Type="System.Management.Automation.StartRunspaceDebugProcessingEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="args">To be added.</param>
+        <summary />
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ResetCommandProcessorSource">
+      <MemberSignature Language="C#" Value="public virtual void ResetCommandProcessorSource ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void ResetCommandProcessorSource() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Debugger.ResetCommandProcessorSource" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Sub ResetCommandProcessorSource ()" />
+      <MemberSignature Language="F#" Value="abstract member ResetCommandProcessorSource : unit -&gt; unit&#xA;override this.ResetCommandProcessorSource : unit -&gt; unit" Usage="debugger.ResetCommandProcessorSource " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Resets the command processor source information so that it is
+            updated with latest information on the next debug stop.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RunspaceDebugProcessingCompleted">
+      <MemberSignature Language="C#" Value="public event EventHandler&lt;System.Management.Automation.ProcessRunspaceDebugEndEventArgs&gt; RunspaceDebugProcessingCompleted;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class System.Management.Automation.ProcessRunspaceDebugEndEventArgs&gt; RunspaceDebugProcessingCompleted" />
+      <MemberSignature Language="DocId" Value="E:System.Management.Automation.Debugger.RunspaceDebugProcessingCompleted" />
+      <MemberSignature Language="VB.NET" Value="Public Event RunspaceDebugProcessingCompleted As EventHandler(Of ProcessRunspaceDebugEndEventArgs) " />
+      <MemberSignature Language="F#" Value="member this.RunspaceDebugProcessingCompleted : EventHandler&lt;System.Management.Automation.ProcessRunspaceDebugEndEventArgs&gt; " Usage="member this.RunspaceDebugProcessingCompleted : System.EventHandler&lt;System.Management.Automation.ProcessRunspaceDebugEndEventArgs&gt; " />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;System.Management.Automation.ProcessRunspaceDebugEndEventArgs&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Event raised when a runspace debugger is finished being processed.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetBreakpoints">
+      <MemberSignature Language="C#" Value="public virtual void SetBreakpoints (System.Collections.Generic.IEnumerable&lt;System.Management.Automation.Breakpoint&gt; breakpoints);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void SetBreakpoints(class System.Collections.Generic.IEnumerable`1&lt;class System.Management.Automation.Breakpoint&gt; breakpoints) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Debugger.SetBreakpoints(System.Collections.Generic.IEnumerable{System.Management.Automation.Breakpoint})" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Sub SetBreakpoints (breakpoints As IEnumerable(Of Breakpoint))" />
+      <MemberSignature Language="F#" Value="abstract member SetBreakpoints : seq&lt;System.Management.Automation.Breakpoint&gt; -&gt; unit&#xA;override this.SetBreakpoints : seq&lt;System.Management.Automation.Breakpoint&gt; -&gt; unit" Usage="debugger.SetBreakpoints breakpoints" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="breakpoints" Type="System.Collections.Generic.IEnumerable&lt;System.Management.Automation.Breakpoint&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="breakpoints">Breakpoints.</param>
+        <summary>
+            Adds the provided set of breakpoints to the debugger.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetDebuggerAction">
+      <MemberSignature Language="C#" Value="public abstract void SetDebuggerAction (System.Management.Automation.DebuggerResumeAction resumeAction);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void SetDebuggerAction(valuetype System.Management.Automation.DebuggerResumeAction resumeAction) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Debugger.SetDebuggerAction(System.Management.Automation.DebuggerResumeAction)" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Sub SetDebuggerAction (resumeAction As DebuggerResumeAction)" />
+      <MemberSignature Language="F#" Value="abstract member SetDebuggerAction : System.Management.Automation.DebuggerResumeAction -&gt; unit" Usage="debugger.SetDebuggerAction resumeAction" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="resumeAction" Type="System.Management.Automation.DebuggerResumeAction" />
+      </Parameters>
+      <Docs>
+        <param name="resumeAction">DebuggerResumeAction</param>
+        <summary>
+            Sets the debugger resume action.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetDebuggerStepMode">
+      <MemberSignature Language="C#" Value="public virtual void SetDebuggerStepMode (bool enabled);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void SetDebuggerStepMode(bool enabled) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Debugger.SetDebuggerStepMode(System.Boolean)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Sub SetDebuggerStepMode (enabled As Boolean)" />
+      <MemberSignature Language="F#" Value="abstract member SetDebuggerStepMode : bool -&gt; unit&#xA;override this.SetDebuggerStepMode : bool -&gt; unit" Usage="debugger.SetDebuggerStepMode enabled" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="enabled" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="enabled">True if stepping is to be enabled</param>
+        <summary>
+            Sets debugger stepping mode.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetDebugMode">
+      <MemberSignature Language="C#" Value="public virtual void SetDebugMode (System.Management.Automation.DebugModes mode);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void SetDebugMode(valuetype System.Management.Automation.DebugModes mode) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Debugger.SetDebugMode(System.Management.Automation.DebugModes)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Sub SetDebugMode (mode As DebugModes)" />
+      <MemberSignature Language="F#" Value="abstract member SetDebugMode : System.Management.Automation.DebugModes -&gt; unit&#xA;override this.SetDebugMode : System.Management.Automation.DebugModes -&gt; unit" Usage="debugger.SetDebugMode mode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="mode" Type="System.Management.Automation.DebugModes" />
+      </Parameters>
+      <Docs>
+        <param name="mode">To be added.</param>
+        <summary>
+            Sets the debugger mode.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetParent">
+      <MemberSignature Language="C#" Value="public virtual void SetParent (System.Management.Automation.Debugger parent, System.Collections.Generic.IEnumerable&lt;System.Management.Automation.Breakpoint&gt; breakPoints, Nullable&lt;System.Management.Automation.DebuggerResumeAction&gt; startAction, System.Management.Automation.Host.PSHost host, System.Management.Automation.PathInfo path);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void SetParent(class System.Management.Automation.Debugger parent, class System.Collections.Generic.IEnumerable`1&lt;class System.Management.Automation.Breakpoint&gt; breakPoints, valuetype System.Nullable`1&lt;valuetype System.Management.Automation.DebuggerResumeAction&gt; startAction, class System.Management.Automation.Host.PSHost host, class System.Management.Automation.PathInfo path) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Debugger.SetParent(System.Management.Automation.Debugger,System.Collections.Generic.IEnumerable{System.Management.Automation.Breakpoint},System.Nullable{System.Management.Automation.DebuggerResumeAction},System.Management.Automation.Host.PSHost,System.Management.Automation.PathInfo)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Sub SetParent (parent As Debugger, breakPoints As IEnumerable(Of Breakpoint), startAction As Nullable(Of DebuggerResumeAction), host As PSHost, path As PathInfo)" />
+      <MemberSignature Language="F#" Value="abstract member SetParent : System.Management.Automation.Debugger * seq&lt;System.Management.Automation.Breakpoint&gt; * Nullable&lt;System.Management.Automation.DebuggerResumeAction&gt; * System.Management.Automation.Host.PSHost * System.Management.Automation.PathInfo -&gt; unit&#xA;override this.SetParent : System.Management.Automation.Debugger * seq&lt;System.Management.Automation.Breakpoint&gt; * Nullable&lt;System.Management.Automation.DebuggerResumeAction&gt; * System.Management.Automation.Host.PSHost * System.Management.Automation.PathInfo -&gt; unit" Usage="debugger.SetParent (parent, breakPoints, startAction, host, path)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="parent" Type="System.Management.Automation.Debugger" />
+        <Parameter Name="breakPoints" Type="System.Collections.Generic.IEnumerable&lt;System.Management.Automation.Breakpoint&gt;" />
+        <Parameter Name="startAction" Type="System.Nullable&lt;System.Management.Automation.DebuggerResumeAction&gt;" />
+        <Parameter Name="host" Type="System.Management.Automation.Host.PSHost" />
+        <Parameter Name="path" Type="System.Management.Automation.PathInfo" />
+      </Parameters>
+      <Docs>
+        <param name="parent">Parent debugger</param>
+        <param name="breakPoints">List of breakpoints</param>
+        <param name="startAction">Debugger mode</param>
+        <param name="host">host</param>
+        <param name="path">Current path</param>
+        <summary>
+            Sets the parent debugger and breakpoints.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetParent">
+      <MemberSignature Language="C#" Value="public virtual void SetParent (System.Management.Automation.Debugger parent, System.Collections.Generic.IEnumerable&lt;System.Management.Automation.Breakpoint&gt; breakPoints, Nullable&lt;System.Management.Automation.DebuggerResumeAction&gt; startAction, System.Management.Automation.Host.PSHost host, System.Management.Automation.PathInfo path, System.Collections.Generic.Dictionary&lt;string,System.Management.Automation.DebugSource&gt; functionSourceMap);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void SetParent(class System.Management.Automation.Debugger parent, class System.Collections.Generic.IEnumerable`1&lt;class System.Management.Automation.Breakpoint&gt; breakPoints, valuetype System.Nullable`1&lt;valuetype System.Management.Automation.DebuggerResumeAction&gt; startAction, class System.Management.Automation.Host.PSHost host, class System.Management.Automation.PathInfo path, class System.Collections.Generic.Dictionary`2&lt;string, class System.Management.Automation.DebugSource&gt; functionSourceMap) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Debugger.SetParent(System.Management.Automation.Debugger,System.Collections.Generic.IEnumerable{System.Management.Automation.Breakpoint},System.Nullable{System.Management.Automation.DebuggerResumeAction},System.Management.Automation.Host.PSHost,System.Management.Automation.PathInfo,System.Collections.Generic.Dictionary{System.String,System.Management.Automation.DebugSource})" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Sub SetParent (parent As Debugger, breakPoints As IEnumerable(Of Breakpoint), startAction As Nullable(Of DebuggerResumeAction), host As PSHost, path As PathInfo, functionSourceMap As Dictionary(Of String, DebugSource))" />
+      <MemberSignature Language="F#" Value="abstract member SetParent : System.Management.Automation.Debugger * seq&lt;System.Management.Automation.Breakpoint&gt; * Nullable&lt;System.Management.Automation.DebuggerResumeAction&gt; * System.Management.Automation.Host.PSHost * System.Management.Automation.PathInfo * System.Collections.Generic.Dictionary&lt;string, System.Management.Automation.DebugSource&gt; -&gt; unit&#xA;override this.SetParent : System.Management.Automation.Debugger * seq&lt;System.Management.Automation.Breakpoint&gt; * Nullable&lt;System.Management.Automation.DebuggerResumeAction&gt; * System.Management.Automation.Host.PSHost * System.Management.Automation.PathInfo * System.Collections.Generic.Dictionary&lt;string, System.Management.Automation.DebugSource&gt; -&gt; unit" Usage="debugger.SetParent (parent, breakPoints, startAction, host, path, functionSourceMap)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="parent" Type="System.Management.Automation.Debugger" />
+        <Parameter Name="breakPoints" Type="System.Collections.Generic.IEnumerable&lt;System.Management.Automation.Breakpoint&gt;" />
+        <Parameter Name="startAction" Type="System.Nullable&lt;System.Management.Automation.DebuggerResumeAction&gt;" />
+        <Parameter Name="host" Type="System.Management.Automation.Host.PSHost" />
+        <Parameter Name="path" Type="System.Management.Automation.PathInfo" />
+        <Parameter Name="functionSourceMap" Type="System.Collections.Generic.Dictionary&lt;System.String,System.Management.Automation.DebugSource&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="parent">Parent debugger</param>
+        <param name="breakPoints">List of breakpoints</param>
+        <param name="startAction">Debugger mode</param>
+        <param name="host">PowerShell host</param>
+        <param name="path">Current path</param>
+        <param name="functionSourceMap">Function to source map</param>
+        <summary>
+            Sets the parent debugger, breakpoints, function source and other
+            debugging context information.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StartRunspaceDebugProcessing">
+      <MemberSignature Language="C#" Value="public event EventHandler&lt;System.Management.Automation.StartRunspaceDebugProcessingEventArgs&gt; StartRunspaceDebugProcessing;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class System.Management.Automation.StartRunspaceDebugProcessingEventArgs&gt; StartRunspaceDebugProcessing" />
+      <MemberSignature Language="DocId" Value="E:System.Management.Automation.Debugger.StartRunspaceDebugProcessing" />
+      <MemberSignature Language="VB.NET" Value="Public Event StartRunspaceDebugProcessing As EventHandler(Of StartRunspaceDebugProcessingEventArgs) " />
+      <MemberSignature Language="F#" Value="member this.StartRunspaceDebugProcessing : EventHandler&lt;System.Management.Automation.StartRunspaceDebugProcessingEventArgs&gt; " Usage="member this.StartRunspaceDebugProcessing : System.EventHandler&lt;System.Management.Automation.StartRunspaceDebugProcessingEventArgs&gt; " />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;System.Management.Automation.StartRunspaceDebugProcessingEventArgs&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Event raised when a runspace debugger needs breakpoint processing.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StopProcessCommand">
+      <MemberSignature Language="C#" Value="public abstract void StopProcessCommand ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void StopProcessCommand() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Debugger.StopProcessCommand" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Sub StopProcessCommand ()" />
+      <MemberSignature Language="F#" Value="abstract member StopProcessCommand : unit -&gt; unit" Usage="debugger.StopProcessCommand " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Stops a running command.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

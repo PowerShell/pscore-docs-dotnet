@@ -1,0 +1,95 @@
+﻿<Type Name="BreakStatementAst" FullName="System.Management.Automation.Language.BreakStatementAst">
+  <TypeSignature Language="C#" Value="public class BreakStatementAst : System.Management.Automation.Language.StatementAst" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit BreakStatementAst extends System.Management.Automation.Language.StatementAst" />
+  <TypeSignature Language="DocId" Value="T:System.Management.Automation.Language.BreakStatementAst" />
+  <TypeSignature Language="VB.NET" Value="Public Class BreakStatementAst&#xA;Inherits StatementAst" />
+  <TypeSignature Language="F#" Value="type BreakStatementAst = class&#xA;    inherit StatementAst" />
+  <AssemblyInfo>
+    <AssemblyName>System.Management.Automation</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Management.Automation.Language.StatementAst</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            The ast representing the break statement.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public BreakStatementAst (System.Management.Automation.Language.IScriptExtent extent, System.Management.Automation.Language.ExpressionAst label);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Management.Automation.Language.IScriptExtent extent, class System.Management.Automation.Language.ExpressionAst label) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Language.BreakStatementAst.#ctor(System.Management.Automation.Language.IScriptExtent,System.Management.Automation.Language.ExpressionAst)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (extent As IScriptExtent, label As ExpressionAst)" />
+      <MemberSignature Language="F#" Value="new System.Management.Automation.Language.BreakStatementAst : System.Management.Automation.Language.IScriptExtent * System.Management.Automation.Language.ExpressionAst -&gt; System.Management.Automation.Language.BreakStatementAst" Usage="new System.Management.Automation.Language.BreakStatementAst (extent, label)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="extent" Type="System.Management.Automation.Language.IScriptExtent" />
+        <Parameter Name="label" Type="System.Management.Automation.Language.ExpressionAst" />
+      </Parameters>
+      <Docs>
+        <param name="extent">The extent of the statement, including the break keyword and the optional label.</param>
+        <param name="label">The optional label expression.</param>
+        <summary>
+            Construct a break statement ast.
+            </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.Management.Automation.PSArgumentNullException">
+            If <paramref name="extent" /> is null.
+            </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Copy">
+      <MemberSignature Language="C#" Value="public override System.Management.Automation.Language.Ast Copy ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Management.Automation.Language.Ast Copy() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Language.BreakStatementAst.Copy" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Function Copy () As Ast" />
+      <MemberSignature Language="F#" Value="override this.Copy : unit -&gt; System.Management.Automation.Language.Ast" Usage="breakStatementAst.Copy " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.Language.Ast</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Copy the BreakStatementAst instance
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Label">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.Language.ExpressionAst Label { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Management.Automation.Language.ExpressionAst Label" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.Language.BreakStatementAst.Label" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Label As ExpressionAst" />
+      <MemberSignature Language="F#" Value="member this.Label : System.Management.Automation.Language.ExpressionAst" Usage="System.Management.Automation.Language.BreakStatementAst.Label" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.Language.ExpressionAst</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The expression or label to break to, or null if no label was specified.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

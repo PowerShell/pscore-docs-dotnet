@@ -1,0 +1,602 @@
+﻿<Type Name="ReceiveJobCommand" FullName="Microsoft.PowerShell.Commands.ReceiveJobCommand">
+  <TypeSignature Language="C#" Value="public class ReceiveJobCommand : Microsoft.PowerShell.Commands.JobCmdletBase, IDisposable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ReceiveJobCommand extends Microsoft.PowerShell.Commands.JobCmdletBase implements class System.IDisposable" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.PowerShell.Commands.ReceiveJobCommand" />
+  <TypeSignature Language="VB.NET" Value="Public Class ReceiveJobCommand&#xA;Inherits JobCmdletBase&#xA;Implements IDisposable" />
+  <TypeSignature Language="F#" Value="type ReceiveJobCommand = class&#xA;    inherit JobCmdletBase&#xA;    interface IDisposable" />
+  <AssemblyInfo>
+    <AssemblyName>System.Management.Automation</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Microsoft.PowerShell.Commands.JobCmdletBase</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Management.Automation.Cmdlet("Receive", "Job", DefaultParameterSetName="Location", HelpUri="https://go.microsoft.com/fwlink/?LinkID=113372", RemotingCapability=System.Management.Automation.RemotingCapability.SupportedByCommand)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>
+             Cmdlet used for receiving results from job object.
+             This cmdlet is intended to have a slightly different behavior
+             in the following two cases:
+                      1. The job object to receive results from is a PSRemotingJob
+                           In this case, the cmdlet can use two additional
+                           parameters to filter results - ComputerName and Runspace
+                           The parameters help filter out results for a specified
+                           computer or runspace from the job object
+            
+                           $job = Start-PSJob -Command 'get-process' -ComputerName server1, server2
+                           Receive-PSJob -Job $job -ComputerName server1
+            
+                           $job = Start-PSJob -Command 'get-process' -Session $r1, $r2
+                           Receive-PSJob -Job $job -Session $r1
+            
+                     2. The job object to receive results is a PSJob (or derivative
+                        other than PSRemotingJob)
+                          In this case, the user cannot will use the location parameter
+                          to do any filtering and will not have ComputerName and Runspace
+                          parameters
+            
+                          $job = Get-WMIObject '....' -AsJob
+                          Receive-PSJob -Job $job -Location "Server2"
+            
+                          The following will result in an error:
+            
+                          $job = Get-WMIObject '....' -AsJob
+                          Receive-PSJob -Job $job -ComputerName "Server2"
+                          The parameter ComputerName cannot be used with jobs which are
+                          not PSRemotingJob
+            
+             </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ReceiveJobCommand ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Commands.ReceiveJobCommand.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New ()" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AutoRemoveJob">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.SwitchParameter AutoRemoveJob { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Management.Automation.SwitchParameter AutoRemoveJob" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.ReceiveJobCommand.AutoRemoveJob" />
+      <MemberSignature Language="VB.NET" Value="Public Property AutoRemoveJob As SwitchParameter" />
+      <MemberSignature Language="F#" Value="member this.AutoRemoveJob : System.Management.Automation.SwitchParameter with get, set" Usage="Microsoft.PowerShell.Commands.ReceiveJobCommand.AutoRemoveJob" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.SwitchParameter</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary />
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginProcessing">
+      <MemberSignature Language="C#" Value="protected override void BeginProcessing ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void BeginProcessing() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Commands.ReceiveJobCommand.BeginProcessing" />
+      <MemberSignature Language="VB.NET" Value="Protected Overrides Sub BeginProcessing ()" />
+      <MemberSignature Language="F#" Value="override this.BeginProcessing : unit -&gt; unit" Usage="receiveJobCommand.BeginProcessing " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary />
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Command">
+      <MemberSignature Language="C#" Value="public override string[] Command { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string[] Command" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.ReceiveJobCommand.Command" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides ReadOnly Property Command As String()" />
+      <MemberSignature Language="F#" Value="member this.Command : string[]" Usage="Microsoft.PowerShell.Commands.ReceiveJobCommand.Command" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary />
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ComputerName">
+      <MemberSignature Language="C#" Value="public string[] ComputerName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string[] ComputerName" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.ReceiveJobCommand.ComputerName" />
+      <MemberSignature Language="VB.NET" Value="Public Property ComputerName As String()" />
+      <MemberSignature Language="F#" Value="member this.ComputerName : string[] with get, set" Usage="Microsoft.PowerShell.Commands.ReceiveJobCommand.ComputerName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Alias(Mono.Cecil.CustomAttributeArgument[])</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="ComputerName", Position=1, ValueFromPipelineByPropertyName=true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.ValidateNotNullOrEmpty</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Name of the computer for which the results needs to be
+            returned
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="public void Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Dispose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Commands.ReceiveJobCommand.Dispose" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Dispose ()" />
+      <MemberSignature Language="F#" Value="abstract member Dispose : unit -&gt; unit&#xA;override this.Dispose : unit -&gt; unit" Usage="receiveJobCommand.Dispose " />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.IDisposable.Dispose</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary />
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="protected void Dispose (bool disposing);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void Dispose(bool disposing) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Commands.ReceiveJobCommand.Dispose(System.Boolean)" />
+      <MemberSignature Language="VB.NET" Value="Protected Sub Dispose (disposing As Boolean)" />
+      <MemberSignature Language="F#" Value="member this.Dispose : bool -&gt; unit" Usage="receiveJobCommand.Dispose disposing" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="disposing" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="disposing"></param>
+        <summary />
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EndProcessing">
+      <MemberSignature Language="C#" Value="protected override void EndProcessing ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void EndProcessing() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Commands.ReceiveJobCommand.EndProcessing" />
+      <MemberSignature Language="VB.NET" Value="Protected Overrides Sub EndProcessing ()" />
+      <MemberSignature Language="F#" Value="override this.EndProcessing : unit -&gt; unit" Usage="receiveJobCommand.EndProcessing " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            if we are not stopping, continue writing output
+            as and when they are available
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Filter">
+      <MemberSignature Language="C#" Value="public override System.Collections.Hashtable Filter { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Hashtable Filter" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.ReceiveJobCommand.Filter" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides ReadOnly Property Filter As Hashtable" />
+      <MemberSignature Language="F#" Value="member this.Filter : System.Collections.Hashtable" Usage="Microsoft.PowerShell.Commands.ReceiveJobCommand.Filter" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Hashtable</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary />
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Force">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.SwitchParameter Force { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Management.Automation.SwitchParameter Force" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.ReceiveJobCommand.Force" />
+      <MemberSignature Language="VB.NET" Value="Public Property Force As SwitchParameter" />
+      <MemberSignature Language="F#" Value="member this.Force : System.Management.Automation.SwitchParameter with get, set" Usage="Microsoft.PowerShell.Commands.ReceiveJobCommand.Force" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.SwitchParameter</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary />
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Job">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.Job[] Job { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Management.Automation.Job[] Job" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.ReceiveJobCommand.Job" />
+      <MemberSignature Language="VB.NET" Value="Public Property Job As Job()" />
+      <MemberSignature Language="F#" Value="member this.Job : System.Management.Automation.Job[] with get, set" Usage="Microsoft.PowerShell.Commands.ReceiveJobCommand.Job" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(Mandatory=true, ParameterSetName="ComputerName", Position=0, ValueFromPipeline=true, ValueFromPipelineByPropertyName=true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(Mandatory=true, ParameterSetName="Session", Position=0, ValueFromPipeline=true, ValueFromPipelineByPropertyName=true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(Mandatory=true, ParameterSetName="Location", Position=0, ValueFromPipeline=true, ValueFromPipelineByPropertyName=true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.Job[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Job object from which specific results need to
+            be extracted
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Keep">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.SwitchParameter Keep { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Management.Automation.SwitchParameter Keep" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.ReceiveJobCommand.Keep" />
+      <MemberSignature Language="VB.NET" Value="Public Property Keep As SwitchParameter" />
+      <MemberSignature Language="F#" Value="member this.Keep : System.Management.Automation.SwitchParameter with get, set" Usage="Microsoft.PowerShell.Commands.ReceiveJobCommand.Keep" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.SwitchParameter</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            If the results need to be not removed from the store
+            after being written. Default is results are removed.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Location">
+      <MemberSignature Language="C#" Value="public string[] Location { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string[] Location" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.ReceiveJobCommand.Location" />
+      <MemberSignature Language="VB.NET" Value="Public Property Location As String()" />
+      <MemberSignature Language="F#" Value="member this.Location : string[] with get, set" Usage="Microsoft.PowerShell.Commands.ReceiveJobCommand.Location" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="Location", Position=1)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.ValidateNotNullOrEmpty</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Locations for which the results needs to be returned.
+            This will cater to all kinds of jobs and not only
+            remoting jobs
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LocationParameterSet">
+      <MemberSignature Language="C#" Value="protected const string LocationParameterSet;" />
+      <MemberSignature Language="ILAsm" Value=".field family static literal string LocationParameterSet" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.PowerShell.Commands.ReceiveJobCommand.LocationParameterSet" />
+      <MemberSignature Language="VB.NET" Value="Protected Const LocationParameterSet As String " />
+      <MemberSignature Language="F#" Value="val mutable LocationParameterSet : string" Usage="Microsoft.PowerShell.Commands.ReceiveJobCommand.LocationParameterSet" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary />
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NoRecurse">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.SwitchParameter NoRecurse { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Management.Automation.SwitchParameter NoRecurse" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.ReceiveJobCommand.NoRecurse" />
+      <MemberSignature Language="VB.NET" Value="Public Property NoRecurse As SwitchParameter" />
+      <MemberSignature Language="F#" Value="member this.NoRecurse : System.Management.Automation.SwitchParameter with get, set" Usage="Microsoft.PowerShell.Commands.ReceiveJobCommand.NoRecurse" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.SwitchParameter</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary />
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ProcessRecord">
+      <MemberSignature Language="C#" Value="protected override void ProcessRecord ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void ProcessRecord() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Commands.ReceiveJobCommand.ProcessRecord" />
+      <MemberSignature Language="VB.NET" Value="Protected Overrides Sub ProcessRecord ()" />
+      <MemberSignature Language="F#" Value="override this.ProcessRecord : unit -&gt; unit" Usage="receiveJobCommand.ProcessRecord " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Retrieve the results for the specified computers or
+            runspaces
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Session">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.Runspaces.PSSession[] Session { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Management.Automation.Runspaces.PSSession[] Session" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.ReceiveJobCommand.Session" />
+      <MemberSignature Language="VB.NET" Value="Public Property Session As PSSession()" />
+      <MemberSignature Language="F#" Value="member this.Session : System.Management.Automation.Runspaces.PSSession[] with get, set" Usage="Microsoft.PowerShell.Commands.ReceiveJobCommand.Session" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="Session", Position=1, ValueFromPipelineByPropertyName=true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.ValidateNotNull</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.Runspaces.PSSession[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Runspaces for which the results needs to be
+            returned
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="State">
+      <MemberSignature Language="C#" Value="public override System.Management.Automation.JobState State { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Management.Automation.JobState State" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.ReceiveJobCommand.State" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides ReadOnly Property State As JobState" />
+      <MemberSignature Language="F#" Value="member this.State : System.Management.Automation.JobState" Usage="Microsoft.PowerShell.Commands.ReceiveJobCommand.State" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.JobState</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary />
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StopProcessing">
+      <MemberSignature Language="C#" Value="protected override void StopProcessing ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void StopProcessing() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Commands.ReceiveJobCommand.StopProcessing" />
+      <MemberSignature Language="VB.NET" Value="Protected Overrides Sub StopProcessing ()" />
+      <MemberSignature Language="F#" Value="override this.StopProcessing : unit -&gt; unit" Usage="receiveJobCommand.StopProcessing " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            StopProcessing - when the command is stopped,
+            unregister all the event handlers from the jobs
+            and decrement reference for results
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Wait">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.SwitchParameter Wait { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Management.Automation.SwitchParameter Wait" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.ReceiveJobCommand.Wait" />
+      <MemberSignature Language="VB.NET" Value="Public Property Wait As SwitchParameter" />
+      <MemberSignature Language="F#" Value="member this.Wait : System.Management.Automation.SwitchParameter with get, set" Usage="Microsoft.PowerShell.Commands.ReceiveJobCommand.Wait" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.SwitchParameter</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary />
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteEvents">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.SwitchParameter WriteEvents { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Management.Automation.SwitchParameter WriteEvents" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.ReceiveJobCommand.WriteEvents" />
+      <MemberSignature Language="VB.NET" Value="Public Property WriteEvents As SwitchParameter" />
+      <MemberSignature Language="F#" Value="member this.WriteEvents : System.Management.Automation.SwitchParameter with get, set" Usage="Microsoft.PowerShell.Commands.ReceiveJobCommand.WriteEvents" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.SwitchParameter</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary />
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteJobInResults">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.SwitchParameter WriteJobInResults { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Management.Automation.SwitchParameter WriteJobInResults" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.ReceiveJobCommand.WriteJobInResults" />
+      <MemberSignature Language="VB.NET" Value="Public Property WriteJobInResults As SwitchParameter" />
+      <MemberSignature Language="F#" Value="member this.WriteJobInResults : System.Management.Automation.SwitchParameter with get, set" Usage="Microsoft.PowerShell.Commands.ReceiveJobCommand.WriteJobInResults" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.SwitchParameter</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary />
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,225 @@
+﻿<Type Name="CallStackFrame" FullName="System.Management.Automation.CallStackFrame">
+  <TypeSignature Language="C#" Value="public sealed class CallStackFrame" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit CallStackFrame extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Management.Automation.CallStackFrame" />
+  <TypeSignature Language="VB.NET" Value="Public NotInheritable Class CallStackFrame" />
+  <TypeSignature Language="F#" Value="type CallStackFrame = class" />
+  <AssemblyInfo>
+    <AssemblyName>System.Management.Automation</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            A call stack item returned by the Get-PSCallStack cmdlet.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CallStackFrame (System.Management.Automation.InvocationInfo invocationInfo);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Management.Automation.InvocationInfo invocationInfo) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.CallStackFrame.#ctor(System.Management.Automation.InvocationInfo)" />
+      <MemberSignature Language="F#" Value="new System.Management.Automation.CallStackFrame : System.Management.Automation.InvocationInfo -&gt; System.Management.Automation.CallStackFrame" Usage="new System.Management.Automation.CallStackFrame invocationInfo" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="invocationInfo" Type="System.Management.Automation.InvocationInfo" />
+      </Parameters>
+      <Docs>
+        <param name="invocationInfo">Invocation Info</param>
+        <summary>
+            Constructor
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FunctionName">
+      <MemberSignature Language="C#" Value="public string FunctionName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string FunctionName" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.CallStackFrame.FunctionName" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property FunctionName As String" />
+      <MemberSignature Language="F#" Value="member this.FunctionName : string" Usage="System.Management.Automation.CallStackFrame.FunctionName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The name of the function associated with this frame.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetFrameVariables">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.Dictionary&lt;string,System.Management.Automation.PSVariable&gt; GetFrameVariables ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Collections.Generic.Dictionary`2&lt;string, class System.Management.Automation.PSVariable&gt; GetFrameVariables() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.CallStackFrame.GetFrameVariables" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetFrameVariables () As Dictionary(Of String, PSVariable)" />
+      <MemberSignature Language="F#" Value="member this.GetFrameVariables : unit -&gt; System.Collections.Generic.Dictionary&lt;string, System.Management.Automation.PSVariable&gt;" Usage="callStackFrame.GetFrameVariables " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.Dictionary&lt;System.String,System.Management.Automation.PSVariable&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Return a dictionary with the names and values of variables that are "local"
+            to the frame.
+            </summary>
+        <returns />
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetScriptLocation">
+      <MemberSignature Language="C#" Value="public string GetScriptLocation ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance string GetScriptLocation() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.CallStackFrame.GetScriptLocation" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetScriptLocation () As String" />
+      <MemberSignature Language="F#" Value="member this.GetScriptLocation : unit -&gt; string" Usage="callStackFrame.GetScriptLocation " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Returns a formatted string containing the ScriptName and ScriptLineNumber
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InvocationInfo">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.InvocationInfo InvocationInfo { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Management.Automation.InvocationInfo InvocationInfo" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.CallStackFrame.InvocationInfo" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property InvocationInfo As InvocationInfo" />
+      <MemberSignature Language="F#" Value="member this.InvocationInfo : System.Management.Automation.InvocationInfo" Usage="System.Management.Automation.CallStackFrame.InvocationInfo" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.InvocationInfo</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The InvocationInfo of the command
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Position">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.Language.IScriptExtent Position { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Management.Automation.Language.IScriptExtent Position" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.CallStackFrame.Position" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Position As IScriptExtent" />
+      <MemberSignature Language="F#" Value="member this.Position : System.Management.Automation.Language.IScriptExtent" Usage="System.Management.Automation.CallStackFrame.Position" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.Language.IScriptExtent</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The position information for the current position in the frame.  Null if the frame is not
+            associated with a script.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ScriptLineNumber">
+      <MemberSignature Language="C#" Value="public int ScriptLineNumber { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 ScriptLineNumber" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.CallStackFrame.ScriptLineNumber" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ScriptLineNumber As Integer" />
+      <MemberSignature Language="F#" Value="member this.ScriptLineNumber : int" Usage="System.Management.Automation.CallStackFrame.ScriptLineNumber" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Line number of the current location, or 0 if the frame is not associated to a script
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ScriptName">
+      <MemberSignature Language="C#" Value="public string ScriptName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ScriptName" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.CallStackFrame.ScriptName" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ScriptName As String" />
+      <MemberSignature Language="F#" Value="member this.ScriptName : string" Usage="System.Management.Automation.CallStackFrame.ScriptName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            File name of the current location, or null if the frame is not associated to a script
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.CallStackFrame.ToString" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Function ToString () As String" />
+      <MemberSignature Language="F#" Value="override this.ToString : unit -&gt; string" Usage="callStackFrame.ToString " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            ToString override.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,114 @@
+﻿<Type Name="MethodInvocationInfo" FullName="Microsoft.PowerShell.Cmdletization.MethodInvocationInfo">
+  <TypeSignature Language="C#" Value="public sealed class MethodInvocationInfo" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit MethodInvocationInfo extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.PowerShell.Cmdletization.MethodInvocationInfo" />
+  <TypeSignature Language="VB.NET" Value="Public NotInheritable Class MethodInvocationInfo" />
+  <TypeSignature Language="F#" Value="type MethodInvocationInfo = class" />
+  <AssemblyInfo>
+    <AssemblyName>System.Management.Automation</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Information about invocation of a method in an object model wrapped by an instance of <see cref="T:Microsoft.PowerShell.Cmdletization.CmdletAdapter`1" /></summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public MethodInvocationInfo (string name, System.Collections.Generic.IEnumerable&lt;Microsoft.PowerShell.Cmdletization.MethodParameter&gt; parameters, Microsoft.PowerShell.Cmdletization.MethodParameter returnValue);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string name, class System.Collections.Generic.IEnumerable`1&lt;class Microsoft.PowerShell.Cmdletization.MethodParameter&gt; parameters, class Microsoft.PowerShell.Cmdletization.MethodParameter returnValue) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Cmdletization.MethodInvocationInfo.#ctor(System.String,System.Collections.Generic.IEnumerable{Microsoft.PowerShell.Cmdletization.MethodParameter},Microsoft.PowerShell.Cmdletization.MethodParameter)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (name As String, parameters As IEnumerable(Of MethodParameter), returnValue As MethodParameter)" />
+      <MemberSignature Language="F#" Value="new Microsoft.PowerShell.Cmdletization.MethodInvocationInfo : string * seq&lt;Microsoft.PowerShell.Cmdletization.MethodParameter&gt; * Microsoft.PowerShell.Cmdletization.MethodParameter -&gt; Microsoft.PowerShell.Cmdletization.MethodInvocationInfo" Usage="new Microsoft.PowerShell.Cmdletization.MethodInvocationInfo (name, parameters, returnValue)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="parameters" Type="System.Collections.Generic.IEnumerable&lt;Microsoft.PowerShell.Cmdletization.MethodParameter&gt;" />
+        <Parameter Name="returnValue" Type="Microsoft.PowerShell.Cmdletization.MethodParameter" />
+      </Parameters>
+      <Docs>
+        <param name="name">Name of the method to invoke</param>
+        <param name="parameters">Method parameters</param>
+        <param name="returnValue">Return value of the method (ok to pass <c>null</c> if the method doesn't return anything)</param>
+        <summary>
+            Creates a new instance of MethodInvocationInfo
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MethodName">
+      <MemberSignature Language="C#" Value="public string MethodName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string MethodName" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Cmdletization.MethodInvocationInfo.MethodName" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property MethodName As String" />
+      <MemberSignature Language="F#" Value="member this.MethodName : string" Usage="Microsoft.PowerShell.Cmdletization.MethodInvocationInfo.MethodName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Name of the method to invoke
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Parameters">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.KeyedCollection&lt;string,Microsoft.PowerShell.Cmdletization.MethodParameter&gt; Parameters { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ObjectModel.KeyedCollection`2&lt;string, class Microsoft.PowerShell.Cmdletization.MethodParameter&gt; Parameters" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Cmdletization.MethodInvocationInfo.Parameters" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Parameters As KeyedCollection(Of String, MethodParameter)" />
+      <MemberSignature Language="F#" Value="member this.Parameters : System.Collections.ObjectModel.KeyedCollection&lt;string, Microsoft.PowerShell.Cmdletization.MethodParameter&gt;" Usage="Microsoft.PowerShell.Cmdletization.MethodInvocationInfo.Parameters" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.KeyedCollection&lt;System.String,Microsoft.PowerShell.Cmdletization.MethodParameter&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Method parameters
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReturnValue">
+      <MemberSignature Language="C#" Value="public Microsoft.PowerShell.Cmdletization.MethodParameter ReturnValue { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.PowerShell.Cmdletization.MethodParameter ReturnValue" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Cmdletization.MethodInvocationInfo.ReturnValue" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ReturnValue As MethodParameter" />
+      <MemberSignature Language="F#" Value="member this.ReturnValue : Microsoft.PowerShell.Cmdletization.MethodParameter" Usage="Microsoft.PowerShell.Cmdletization.MethodInvocationInfo.ReturnValue" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.PowerShell.Cmdletization.MethodParameter</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Return value of the method.  Can be <c>null</c> if the method doesn't return anything.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

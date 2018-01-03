@@ -1,0 +1,962 @@
+﻿<Type Name="ScriptBlock" FullName="System.Management.Automation.ScriptBlock">
+  <TypeSignature Language="C#" Value="public class ScriptBlock : System.Runtime.Serialization.ISerializable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable beforefieldinit ScriptBlock extends System.Object implements class System.Runtime.Serialization.ISerializable" />
+  <TypeSignature Language="DocId" Value="T:System.Management.Automation.ScriptBlock" />
+  <TypeSignature Language="VB.NET" Value="Public Class ScriptBlock&#xA;Implements ISerializable" />
+  <TypeSignature Language="F#" Value="type ScriptBlock = class&#xA;    interface ISerializable" />
+  <AssemblyInfo>
+    <AssemblyName>System.Management.Automation</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Runtime.Serialization.ISerializable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>
+             An object representing a pre-compiled block of powershell script.
+             </summary>
+    <remarks>
+            
+             This class track a block of script in a compiled form. It is also
+             used for direct invocation of the script block.
+            
+             1. Overview
+            
+             Script block comes in two forms,
+            
+             a. Full form (cmdlet form)
+            
+             This comes in following format
+            
+             {
+                 begin
+                 {
+                     statementlist;
+                 }
+                 process
+                 {
+                     statementlist;
+                 }
+                 end
+                 {
+                     statementlist;
+                 }
+             }
+            
+             This form is used for running the script in a pipeline like
+             a cmdlet.
+            
+             b. Simple form
+            
+             This comes in following format
+            
+             {
+                 statementlist;
+             }
+            
+             2. Script block execution
+            
+             For the full form (or cmdlet form) of script block, the script
+             block itself is part of a pipeline. Its execution is handled through
+             ScriptCommandProcessor, which involves execution of begin/process/end
+             blocks like a cmdlet. If a scriptblock in simple form is used in
+             a pipeline, its execution is done through ScriptCommandProcessor
+             also, with some of begin/process/end blocks default to be empty.
+            
+             A script block in simple form can be directly invoked (outside
+             of a pipeline context). For example,
+            
+                 {"text"}.Invoke()
+            
+             A scriptblock can be directly invoked internally or externally through
+             runspace API.
+            
+             This class will handle the logic for direct invocation of script blocks.
+            
+             </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected ScriptBlock (System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(class System.Runtime.Serialization.SerializationInfo info, valuetype System.Runtime.Serialization.StreamingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.ScriptBlock.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" />
+      <MemberSignature Language="VB.NET" Value="Protected Sub New (info As SerializationInfo, context As StreamingContext)" />
+      <MemberSignature Language="F#" Value="new System.Management.Automation.ScriptBlock : System.Runtime.Serialization.SerializationInfo * System.Runtime.Serialization.StreamingContext -&gt; System.Management.Automation.ScriptBlock" Usage="new System.Management.Automation.ScriptBlock (info, context)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="info" Type="System.Runtime.Serialization.SerializationInfo" />
+        <Parameter Name="context" Type="System.Runtime.Serialization.StreamingContext" />
+      </Parameters>
+      <Docs>
+        <param name="info">To be added.</param>
+        <param name="context">To be added.</param>
+        <summary>
+            Protected constructor to support ISerializable.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Ast">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.Language.Ast Ast { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Management.Automation.Language.Ast Ast" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.ScriptBlock.Ast" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Ast As Ast" />
+      <MemberSignature Language="F#" Value="member this.Ast : System.Management.Automation.Language.Ast" Usage="System.Management.Automation.ScriptBlock.Ast" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.Language.Ast</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Returns the AST corresponding to the script block.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Attributes">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.List&lt;Attribute&gt; Attributes { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.List`1&lt;class System.Attribute&gt; Attributes" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.ScriptBlock.Attributes" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Attributes As List(Of Attribute)" />
+      <MemberSignature Language="F#" Value="member this.Attributes : System.Collections.Generic.List&lt;Attribute&gt;" Usage="System.Management.Automation.ScriptBlock.Attributes" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.List&lt;System.Attribute&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Return all attributes on a script block.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CheckRestrictedLanguage">
+      <MemberSignature Language="C#" Value="public void CheckRestrictedLanguage (System.Collections.Generic.IEnumerable&lt;string&gt; allowedCommands, System.Collections.Generic.IEnumerable&lt;string&gt; allowedVariables, bool allowEnvironmentVariables);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void CheckRestrictedLanguage(class System.Collections.Generic.IEnumerable`1&lt;string&gt; allowedCommands, class System.Collections.Generic.IEnumerable`1&lt;string&gt; allowedVariables, bool allowEnvironmentVariables) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.ScriptBlock.CheckRestrictedLanguage(System.Collections.Generic.IEnumerable{System.String},System.Collections.Generic.IEnumerable{System.String},System.Boolean)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub CheckRestrictedLanguage (allowedCommands As IEnumerable(Of String), allowedVariables As IEnumerable(Of String), allowEnvironmentVariables As Boolean)" />
+      <MemberSignature Language="F#" Value="member this.CheckRestrictedLanguage : seq&lt;string&gt; * seq&lt;string&gt; * bool -&gt; unit" Usage="scriptBlock.CheckRestrictedLanguage (allowedCommands, allowedVariables, allowEnvironmentVariables)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="allowedCommands" Type="System.Collections.Generic.IEnumerable&lt;System.String&gt;" />
+        <Parameter Name="allowedVariables" Type="System.Collections.Generic.IEnumerable&lt;System.String&gt;" />
+        <Parameter Name="allowEnvironmentVariables" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="allowedCommands">The commands that are allowed.</param>
+        <param name="allowedVariables">
+            The variables allowed in this scriptblock. If this is null, then the default variable set
+            will be allowed. If it is an empty list, no variables will be allowed. If it is "*" then
+            any variable will be allowed.
+            </param>
+        <param name="allowEnvironmentVariables">The environment variables that are allowed.</param>
+        <summary>
+            Check the script block to see if it uses any language constructs not allowed in restricted language mode.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Create">
+      <MemberSignature Language="C#" Value="public static System.Management.Automation.ScriptBlock Create (string script);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Management.Automation.ScriptBlock Create(string script) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.ScriptBlock.Create(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function Create (script As String) As ScriptBlock" />
+      <MemberSignature Language="F#" Value="static member Create : string -&gt; System.Management.Automation.ScriptBlock" Usage="System.Management.Automation.ScriptBlock.Create script" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.ScriptBlock</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="script" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="script">The string to compile.</param>
+        <summary>
+            Create a script block based on a script to be parsed when execution
+            context is provided.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DebuggerHidden">
+      <MemberSignature Language="C#" Value="public bool DebuggerHidden { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool DebuggerHidden" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.ScriptBlock.DebuggerHidden" />
+      <MemberSignature Language="VB.NET" Value="Public Property DebuggerHidden As Boolean" />
+      <MemberSignature Language="F#" Value="member this.DebuggerHidden : bool with get, set" Usage="System.Management.Automation.ScriptBlock.DebuggerHidden" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            DebuggerHidden
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="File">
+      <MemberSignature Language="C#" Value="public string File { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string File" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.ScriptBlock.File" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property File As String" />
+      <MemberSignature Language="F#" Value="member this.File : string" Usage="System.Management.Automation.ScriptBlock.File" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The script file that defined this script block...
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetNewClosure">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.ScriptBlock GetNewClosure ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Management.Automation.ScriptBlock GetNewClosure() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.ScriptBlock.GetNewClosure" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetNewClosure () As ScriptBlock" />
+      <MemberSignature Language="F#" Value="member this.GetNewClosure : unit -&gt; System.Management.Automation.ScriptBlock" Usage="scriptBlock.GetNewClosure " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.ScriptBlock</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Returns a new scriptblock bound to a module. Any local variables in the
+            callers context will be copied into the module.
+            </summary>
+        <returns />
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetObjectData">
+      <MemberSignature Language="C#" Value="public virtual void GetObjectData (System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void GetObjectData(class System.Runtime.Serialization.SerializationInfo info, valuetype System.Runtime.Serialization.StreamingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.ScriptBlock.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Sub GetObjectData (info As SerializationInfo, context As StreamingContext)" />
+      <MemberSignature Language="F#" Value="abstract member GetObjectData : System.Runtime.Serialization.SerializationInfo * System.Runtime.Serialization.StreamingContext -&gt; unit&#xA;override this.GetObjectData : System.Runtime.Serialization.SerializationInfo * System.Runtime.Serialization.StreamingContext -&gt; unit" Usage="scriptBlock.GetObjectData (info, context)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="info" Type="System.Runtime.Serialization.SerializationInfo" />
+        <Parameter Name="context" Type="System.Runtime.Serialization.StreamingContext" />
+      </Parameters>
+      <Docs>
+        <param name="info">To be added.</param>
+        <param name="context">To be added.</param>
+        <summary>
+            Support for <see cref="T:System.Runtime.Serialization.ISerializable" />.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetPowerShell">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.PowerShell GetPowerShell (params object[] args);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Management.Automation.PowerShell GetPowerShell(object[] args) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.ScriptBlock.GetPowerShell(System.Object[])" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetPowerShell (ParamArray args As Object()) As PowerShell" />
+      <MemberSignature Language="F#" Value="member this.GetPowerShell : obj[] -&gt; System.Management.Automation.PowerShell" Usage="scriptBlock.GetPowerShell args" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.PowerShell</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="args" Type="System.Object[]">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.ParamArray</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="args">
+             arguments for the ScriptBlock (providing values for variables used within the ScriptBlock);
+             can be null
+             </param>
+        <summary>
+             Returns PowerShell object representing the pipeline contained in this ScriptBlock
+             </summary>
+        <returns>
+             PowerShell object representing the pipeline contained in this ScriptBlock
+             </returns>
+        <remarks>
+             Some ScriptBlocks are too complicated to be converted into a PowerShell object.
+             For those ScriptBlocks a <see cref="T:System.Management.Automation.ScriptBlockToPowerShellNotSupportedException" /> is thrown.
+            
+             ScriptBlock cannot be converted into a PowerShell object if
+             - It contains more than one statement
+             - It references variables undeclared in <c>param(...)</c> block
+             - It uses redirection to a file
+             - It uses dot sourcing
+             - Command names can't be resolved (i.e. if an element of a pipeline is another scriptblock)
+            
+             Declaration of variables in a <c>param(...)</c> block is enforced,
+             because undeclared variables are assumed to be variables from a remoting server.
+             Since we need to fully evaluate parameters of commands of a PowerShell object's
+             we reject all variables references that refer to a variable from a remoting server.
+             </remarks>
+        <exception cref="T:System.Management.Automation.ScriptBlockToPowerShellNotSupportedException">
+             Thrown when this ScriptBlock cannot be expressed as a PowerShell object.
+             For example thrown when there is more than one statement, if there
+             are undeclared variables, if redirection to a file is used.
+             </exception>
+        <exception cref="T:System.Management.Automation.RuntimeException">
+             Thrown when evaluation of command arguments results in an exception.
+             Might depend on the value of $errorActionPreference variable.
+             For example trying to translate the following ScriptBlock will result in this exception:
+             <c>$errorActionPreference = "stop"; $sb = { get-foo $( throw ) }; $sb.GetPowerShell()</c></exception>
+        <exception cref="T:System.InvalidOperationException">
+             Thrown when there is no ExecutionContext associated with this ScriptBlock object.
+             </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetPowerShell">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.PowerShell GetPowerShell (bool isTrustedInput, params object[] args);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Management.Automation.PowerShell GetPowerShell(bool isTrustedInput, object[] args) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.ScriptBlock.GetPowerShell(System.Boolean,System.Object[])" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetPowerShell (isTrustedInput As Boolean, ParamArray args As Object()) As PowerShell" />
+      <MemberSignature Language="F#" Value="member this.GetPowerShell : bool * obj[] -&gt; System.Management.Automation.PowerShell" Usage="scriptBlock.GetPowerShell (isTrustedInput, args)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.PowerShell</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="isTrustedInput" Type="System.Boolean" />
+        <Parameter Name="args" Type="System.Object[]">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.ParamArray</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="isTrustedInput">
+            Specifies whether the scriptblock being converted comes from a trusted source.
+            The default is False.
+            </param>
+        <param name="args">
+            arguments for the ScriptBlock (providing values for variables used within the ScriptBlock);
+            can be null
+            </param>
+        <summary>
+            Returns PowerShell object representing the pipeline contained in this ScriptBlock,
+            similar to the GetPowerShell() method. If the 'isTrustedInput' flag parameter is set
+            to True, then the GetPowerShell() implementation supports extended conversion operations
+            (such as replacing variable values with their current values) that might otherwise
+            be unsafe if applied to untrusted input.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetPowerShell">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.PowerShell GetPowerShell (System.Collections.Generic.Dictionary&lt;string,object&gt; variables, params object[] args);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Management.Automation.PowerShell GetPowerShell(class System.Collections.Generic.Dictionary`2&lt;string, object&gt; variables, object[] args) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.ScriptBlock.GetPowerShell(System.Collections.Generic.Dictionary{System.String,System.Object},System.Object[])" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetPowerShell (variables As Dictionary(Of String, Object), ParamArray args As Object()) As PowerShell" />
+      <MemberSignature Language="F#" Value="member this.GetPowerShell : System.Collections.Generic.Dictionary&lt;string, obj&gt; * obj[] -&gt; System.Management.Automation.PowerShell" Usage="scriptBlock.GetPowerShell (variables, args)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.PowerShell</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="variables" Type="System.Collections.Generic.Dictionary&lt;System.String,System.Object&gt;" />
+        <Parameter Name="args" Type="System.Object[]">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.ParamArray</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="variables">
+            variables to be supplied as context to the ScriptBlock (providing values for variables explicitly
+            requested by the 'using:' prefix.
+            </param>
+        <param name="args">
+            arguments for the ScriptBlock (providing values for variables used within the ScriptBlock);
+            can be null
+            </param>
+        <summary>
+            Returns PowerShell object representing the pipeline contained in this ScriptBlock, using variables
+            supplied in the dictionary.
+            </summary>
+        <returns>
+            PowerShell object representing the pipeline contained in this ScriptBlock
+            </returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.Management.Automation.ScriptBlockToPowerShellNotSupportedException">
+            Thrown when this ScriptBlock cannot be expressed as a PowerShell object.
+            For example thrown when there is more than one statement, if there
+            are undeclared variables, if redirection to a file is used.
+            </exception>
+        <exception cref="T:System.Management.Automation.RuntimeException">
+            Thrown when evaluation of command arguments results in an exception.
+            Might depend on the value of $errorActionPreference variable.
+            For example trying to translate the following ScriptBlock will result in this exception:
+            <c>$errorActionPreference = "stop"; $sb = { get-foo $( throw ) }; $sb.GetPowerShell()</c></exception>
+        <exception cref="T:System.InvalidOperationException">
+            Thrown when there is no ExecutionContext associated with this ScriptBlock object and no
+            variables are supplied.
+            </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetPowerShell">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.PowerShell GetPowerShell (System.Collections.Generic.Dictionary&lt;string,object&gt; variables, out System.Collections.Generic.Dictionary&lt;string,object&gt; usingVariables, params object[] args);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Management.Automation.PowerShell GetPowerShell(class System.Collections.Generic.Dictionary`2&lt;string, object&gt; variables, [out] class System.Collections.Generic.Dictionary`2&lt;string, object&gt;&amp; usingVariables, object[] args) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.ScriptBlock.GetPowerShell(System.Collections.Generic.Dictionary{System.String,System.Object},System.Collections.Generic.Dictionary{System.String,System.Object}@,System.Object[])" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetPowerShell (variables As Dictionary(Of String, Object), ByRef usingVariables As Dictionary(Of String, Object), ParamArray args As Object()) As PowerShell" />
+      <MemberSignature Language="F#" Value="member this.GetPowerShell : System.Collections.Generic.Dictionary&lt;string, obj&gt; *  * obj[] -&gt; System.Management.Automation.PowerShell" Usage="scriptBlock.GetPowerShell (variables, usingVariables, args)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.PowerShell</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="variables" Type="System.Collections.Generic.Dictionary&lt;System.String,System.Object&gt;" />
+        <Parameter Name="usingVariables" Type="System.Collections.Generic.Dictionary&lt;System.String,System.Object&gt;&amp;" RefType="out" />
+        <Parameter Name="args" Type="System.Object[]">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.ParamArray</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="variables">
+            variables to be supplied as context to the ScriptBlock (providing values for variables explicitly
+            requested by the 'using:' prefix.
+            </param>
+        <param name="usingVariables">
+            key-value pairs from the <para>variables</para> that actually get used by the 'using:' prefix variables
+            </param>
+        <param name="args">
+            arguments for the ScriptBlock (providing values for variables used within the ScriptBlock);
+            can be null
+            </param>
+        <summary>
+            Returns PowerShell object representing the pipeline contained in this ScriptBlock, using variables
+            supplied in the dictionary.
+            </summary>
+        <returns>
+            PowerShell object representing the pipeline contained in this ScriptBlock
+            </returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.Management.Automation.ScriptBlockToPowerShellNotSupportedException">
+            Thrown when this ScriptBlock cannot be expressed as a PowerShell object.
+            For example thrown when there is more than one statement, if there
+            are undeclared variables, if redirection to a file is used.
+            </exception>
+        <exception cref="T:System.Management.Automation.RuntimeException">
+            Thrown when evaluation of command arguments results in an exception.
+            Might depend on the value of $errorActionPreference variable.
+            For example trying to translate the following ScriptBlock will result in this exception:
+            <c>$errorActionPreference = "stop"; $sb = { get-foo $( throw ) }; $sb.GetPowerShell()</c></exception>
+        <exception cref="T:System.InvalidOperationException">
+            Thrown when there is no ExecutionContext associated with this ScriptBlock object and no
+            variables are supplied.
+            </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetPowerShell">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.PowerShell GetPowerShell (System.Collections.Generic.Dictionary&lt;string,object&gt; variables, out System.Collections.Generic.Dictionary&lt;string,object&gt; usingVariables, bool isTrustedInput, params object[] args);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Management.Automation.PowerShell GetPowerShell(class System.Collections.Generic.Dictionary`2&lt;string, object&gt; variables, [out] class System.Collections.Generic.Dictionary`2&lt;string, object&gt;&amp; usingVariables, bool isTrustedInput, object[] args) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.ScriptBlock.GetPowerShell(System.Collections.Generic.Dictionary{System.String,System.Object},System.Collections.Generic.Dictionary{System.String,System.Object}@,System.Boolean,System.Object[])" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetPowerShell (variables As Dictionary(Of String, Object), ByRef usingVariables As Dictionary(Of String, Object), isTrustedInput As Boolean, ParamArray args As Object()) As PowerShell" />
+      <MemberSignature Language="F#" Value="member this.GetPowerShell : System.Collections.Generic.Dictionary&lt;string, obj&gt; *  * bool * obj[] -&gt; System.Management.Automation.PowerShell" Usage="scriptBlock.GetPowerShell (variables, usingVariables, isTrustedInput, args)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.PowerShell</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="variables" Type="System.Collections.Generic.Dictionary&lt;System.String,System.Object&gt;" />
+        <Parameter Name="usingVariables" Type="System.Collections.Generic.Dictionary&lt;System.String,System.Object&gt;&amp;" RefType="out" />
+        <Parameter Name="isTrustedInput" Type="System.Boolean" />
+        <Parameter Name="args" Type="System.Object[]">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.ParamArray</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="variables">
+            variables to be supplied as context to the ScriptBlock (providing values for variables explicitly
+            requested by the 'using:' prefix.
+            </param>
+        <param name="usingVariables">
+            key-value pairs from the <para>variables</para> that actually get used by the 'using:' prefix variables
+            </param>
+        <param name="isTrustedInput">
+            Specifies whether the scriptblock being converted comes from a trusted source.
+            The default is False.
+            </param>
+        <param name="args">
+            arguments for the ScriptBlock (providing values for variables used within the ScriptBlock);
+            can be null
+            </param>
+        <summary>
+            Returns PowerShell object representing the pipeline contained in this ScriptBlock, using variables
+            supplied in the dictionary.
+            </summary>
+        <returns>
+            PowerShell object representing the pipeline contained in this ScriptBlock
+            </returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.Management.Automation.ScriptBlockToPowerShellNotSupportedException">
+            Thrown when this ScriptBlock cannot be expressed as a PowerShell object.
+            For example thrown when there is more than one statement, if there
+            are undeclared variables, if redirection to a file is used.
+            </exception>
+        <exception cref="T:System.Management.Automation.RuntimeException">
+            Thrown when evaluation of command arguments results in an exception.
+            Might depend on the value of $errorActionPreference variable.
+            For example trying to translate the following ScriptBlock will result in this exception:
+            <c>$errorActionPreference = "stop"; $sb = { get-foo $( throw ) }; $sb.GetPowerShell()</c></exception>
+        <exception cref="T:System.InvalidOperationException">
+            Thrown when there is no ExecutionContext associated with this ScriptBlock object and no
+            variables are supplied.
+            </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetSteppablePipeline">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.SteppablePipeline GetSteppablePipeline ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Management.Automation.SteppablePipeline GetSteppablePipeline() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.ScriptBlock.GetSteppablePipeline" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetSteppablePipeline () As SteppablePipeline" />
+      <MemberSignature Language="F#" Value="member this.GetSteppablePipeline : unit -&gt; System.Management.Automation.SteppablePipeline" Usage="scriptBlock.GetSteppablePipeline " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.SteppablePipeline</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Get a steppable pipeline object.
+            </summary>
+        <returns>A steppable pipeline object</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetSteppablePipeline">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.SteppablePipeline GetSteppablePipeline (System.Management.Automation.CommandOrigin commandOrigin);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Management.Automation.SteppablePipeline GetSteppablePipeline(valuetype System.Management.Automation.CommandOrigin commandOrigin) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.ScriptBlock.GetSteppablePipeline(System.Management.Automation.CommandOrigin)" />
+      <MemberSignature Language="F#" Value="member this.GetSteppablePipeline : System.Management.Automation.CommandOrigin -&gt; System.Management.Automation.SteppablePipeline" Usage="scriptBlock.GetSteppablePipeline commandOrigin" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.SteppablePipeline</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="commandOrigin" Type="System.Management.Automation.CommandOrigin" />
+      </Parameters>
+      <Docs>
+        <param name="commandOrigin">To be added.</param>
+        <summary>
+            Get a steppable pipeline object.
+            </summary>
+        <returns>A steppable pipeline object</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetSteppablePipeline">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.SteppablePipeline GetSteppablePipeline (System.Management.Automation.CommandOrigin commandOrigin, object[] args);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Management.Automation.SteppablePipeline GetSteppablePipeline(valuetype System.Management.Automation.CommandOrigin commandOrigin, object[] args) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.ScriptBlock.GetSteppablePipeline(System.Management.Automation.CommandOrigin,System.Object[])" />
+      <MemberSignature Language="F#" Value="member this.GetSteppablePipeline : System.Management.Automation.CommandOrigin * obj[] -&gt; System.Management.Automation.SteppablePipeline" Usage="scriptBlock.GetSteppablePipeline (commandOrigin, args)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.SteppablePipeline</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="commandOrigin" Type="System.Management.Automation.CommandOrigin" />
+        <Parameter Name="args" Type="System.Object[]" />
+      </Parameters>
+      <Docs>
+        <param name="commandOrigin">To be added.</param>
+        <param name="args">To be added.</param>
+        <summary>
+            Get a steppable pipeline object.
+            </summary>
+        <returns>A steppable pipeline object</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Id">
+      <MemberSignature Language="C#" Value="public Guid Id { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Guid Id" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.ScriptBlock.Id" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Id As Guid" />
+      <MemberSignature Language="F#" Value="member this.Id : Guid" Usage="System.Management.Automation.ScriptBlock.Id" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Guid</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The unique ID of this script block.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Invoke">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.Collection&lt;System.Management.Automation.PSObject&gt; Invoke (params object[] args);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Collections.ObjectModel.Collection`1&lt;class System.Management.Automation.PSObject&gt; Invoke(object[] args) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.ScriptBlock.Invoke(System.Object[])" />
+      <MemberSignature Language="VB.NET" Value="Public Function Invoke (ParamArray args As Object()) As Collection(Of PSObject)" />
+      <MemberSignature Language="F#" Value="member this.Invoke : obj[] -&gt; System.Collections.ObjectModel.Collection&lt;System.Management.Automation.PSObject&gt;" Usage="scriptBlock.Invoke args" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.Collection&lt;System.Management.Automation.PSObject&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="args" Type="System.Object[]">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.ParamArray</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="args">The arguments to this script.</param>
+        <summary>
+             Execute this node with the specified arguments. The arguments show
+             up in the script as $args with $_ being the first argument.
+             </summary>
+        <returns>The object(s) generated during the execution of
+             the script block returned as a collection of PSObjects</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.Management.Automation.RuntimeException">Thrown if a script runtime exceptionexception occurred</exception>
+        <exception cref="T:System.Management.Automation.FlowControlException">An internal (non-public) exception from a flow control statement</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="InvokeReturnAsIs">
+      <MemberSignature Language="C#" Value="public object InvokeReturnAsIs (params object[] args);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance object InvokeReturnAsIs(object[] args) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.ScriptBlock.InvokeReturnAsIs(System.Object[])" />
+      <MemberSignature Language="VB.NET" Value="Public Function InvokeReturnAsIs (ParamArray args As Object()) As Object" />
+      <MemberSignature Language="F#" Value="member this.InvokeReturnAsIs : obj[] -&gt; obj" Usage="scriptBlock.InvokeReturnAsIs args" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="args" Type="System.Object[]">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.ParamArray</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="args">The arguments to pass to this scriptblock.</param>
+        <summary>
+            Execute this node with the specified arguments. The arguments show
+            up in the script as $args. This overload return the raw (unwrapped) result
+            so it can be more efficient.
+            </summary>
+        <returns>The object(s) generated during the execution of the
+            script block. They may or may not be wrapped in PSObject. It's up to the caller to check.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.Management.Automation.RuntimeException">Thrown if a script runtime exceptionexception occurred</exception>
+        <exception cref="T:System.Management.Automation.FlowControlException">An internal (non-public) exception from a flow control statement</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="InvokeWithContext">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.Collection&lt;System.Management.Automation.PSObject&gt; InvokeWithContext (System.Collections.Generic.Dictionary&lt;string,System.Management.Automation.ScriptBlock&gt; functionsToDefine, System.Collections.Generic.List&lt;System.Management.Automation.PSVariable&gt; variablesToDefine, params object[] args);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Collections.ObjectModel.Collection`1&lt;class System.Management.Automation.PSObject&gt; InvokeWithContext(class System.Collections.Generic.Dictionary`2&lt;string, class System.Management.Automation.ScriptBlock&gt; functionsToDefine, class System.Collections.Generic.List`1&lt;class System.Management.Automation.PSVariable&gt; variablesToDefine, object[] args) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.ScriptBlock.InvokeWithContext(System.Collections.Generic.Dictionary{System.String,System.Management.Automation.ScriptBlock},System.Collections.Generic.List{System.Management.Automation.PSVariable},System.Object[])" />
+      <MemberSignature Language="VB.NET" Value="Public Function InvokeWithContext (functionsToDefine As Dictionary(Of String, ScriptBlock), variablesToDefine As List(Of PSVariable), ParamArray args As Object()) As Collection(Of PSObject)" />
+      <MemberSignature Language="F#" Value="member this.InvokeWithContext : System.Collections.Generic.Dictionary&lt;string, System.Management.Automation.ScriptBlock&gt; * System.Collections.Generic.List&lt;System.Management.Automation.PSVariable&gt; * obj[] -&gt; System.Collections.ObjectModel.Collection&lt;System.Management.Automation.PSObject&gt;" Usage="scriptBlock.InvokeWithContext (functionsToDefine, variablesToDefine, args)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.Collection&lt;System.Management.Automation.PSObject&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="functionsToDefine" Type="System.Collections.Generic.Dictionary&lt;System.String,System.Management.Automation.ScriptBlock&gt;" />
+        <Parameter Name="variablesToDefine" Type="System.Collections.Generic.List&lt;System.Management.Automation.PSVariable&gt;" />
+        <Parameter Name="args" Type="System.Object[]">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.ParamArray</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="functionsToDefine">A dictionary of functions to define</param>
+        <param name="variablesToDefine">A list of variables to define</param>
+        <param name="args">The arguments to the actual scriptblock</param>
+        <summary>
+            A method that allows a scriptblock to be invoked with additional context in the form of a
+            set of local functions and variables to be defined in the scriptblock's scope. The list of
+            variables may include the special variables $input, $_ and $this.
+            </summary>
+        <returns />
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InvokeWithContext">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.Collection&lt;System.Management.Automation.PSObject&gt; InvokeWithContext (System.Collections.IDictionary functionsToDefine, System.Collections.Generic.List&lt;System.Management.Automation.PSVariable&gt; variablesToDefine, params object[] args);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Collections.ObjectModel.Collection`1&lt;class System.Management.Automation.PSObject&gt; InvokeWithContext(class System.Collections.IDictionary functionsToDefine, class System.Collections.Generic.List`1&lt;class System.Management.Automation.PSVariable&gt; variablesToDefine, object[] args) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.ScriptBlock.InvokeWithContext(System.Collections.IDictionary,System.Collections.Generic.List{System.Management.Automation.PSVariable},System.Object[])" />
+      <MemberSignature Language="VB.NET" Value="Public Function InvokeWithContext (functionsToDefine As IDictionary, variablesToDefine As List(Of PSVariable), ParamArray args As Object()) As Collection(Of PSObject)" />
+      <MemberSignature Language="F#" Value="member this.InvokeWithContext : System.Collections.IDictionary * System.Collections.Generic.List&lt;System.Management.Automation.PSVariable&gt; * obj[] -&gt; System.Collections.ObjectModel.Collection&lt;System.Management.Automation.PSObject&gt;" Usage="scriptBlock.InvokeWithContext (functionsToDefine, variablesToDefine, args)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.Collection&lt;System.Management.Automation.PSObject&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="functionsToDefine" Type="System.Collections.IDictionary" />
+        <Parameter Name="variablesToDefine" Type="System.Collections.Generic.List&lt;System.Management.Automation.PSVariable&gt;" />
+        <Parameter Name="args" Type="System.Object[]">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.ParamArray</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="functionsToDefine">A dictionary of functions to define</param>
+        <param name="variablesToDefine">A list of variables to define</param>
+        <param name="args">The arguments to the actual scriptblock</param>
+        <summary>
+             A method that allows a scriptblock to be invoked with additional context in the form of a
+             set of local functions and variables to be defined in the scriptblock's scope. The list of
+             variables may include the special variables $input, $_ and $this.
+            
+             This overload of the function takes a hashtable and converts it to the
+             required dictionary which makes the API easier to use from within a PowerShell script.
+             </summary>
+        <returns />
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsConfiguration">
+      <MemberSignature Language="C#" Value="public bool IsConfiguration { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsConfiguration" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.ScriptBlock.IsConfiguration" />
+      <MemberSignature Language="VB.NET" Value="Public Property IsConfiguration As Boolean" />
+      <MemberSignature Language="F#" Value="member this.IsConfiguration : bool with get, set" Usage="System.Management.Automation.ScriptBlock.IsConfiguration" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Get/set whether this scriptblock is a Configuration.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsFilter">
+      <MemberSignature Language="C#" Value="public bool IsFilter { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsFilter" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.ScriptBlock.IsFilter" />
+      <MemberSignature Language="VB.NET" Value="Public Property IsFilter As Boolean" />
+      <MemberSignature Language="F#" Value="member this.IsFilter : bool with get, set" Usage="System.Management.Automation.ScriptBlock.IsFilter" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Get/set whether this scriptblock is a filter.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Module">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.PSModuleInfo Module { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Management.Automation.PSModuleInfo Module" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.ScriptBlock.Module" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Module As PSModuleInfo" />
+      <MemberSignature Language="F#" Value="member this.Module : System.Management.Automation.PSModuleInfo" Usage="System.Management.Automation.ScriptBlock.Module" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.PSModuleInfo</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Get the PSModuleInfo object for the module that defined this
+            scriptblock.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StartPosition">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.PSToken StartPosition { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Management.Automation.PSToken StartPosition" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.ScriptBlock.StartPosition" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property StartPosition As PSToken" />
+      <MemberSignature Language="F#" Value="member this.StartPosition : System.Management.Automation.PSToken" Usage="System.Management.Automation.ScriptBlock.StartPosition" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.PSToken</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Return the PSToken object for this function definition...
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.ScriptBlock.ToString" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Function ToString () As String" />
+      <MemberSignature Language="F#" Value="override this.ToString : unit -&gt; string" Usage="scriptBlock.ToString " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Returns the text of the script block.  The return value might not match the original text exactly.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

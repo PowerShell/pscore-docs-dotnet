@@ -1,0 +1,99 @@
+﻿<Type Name="BehaviorOnNoMatch" FullName="Microsoft.PowerShell.Cmdletization.BehaviorOnNoMatch">
+  <TypeSignature Language="C#" Value="public enum BehaviorOnNoMatch" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed BehaviorOnNoMatch extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.PowerShell.Cmdletization.BehaviorOnNoMatch" />
+  <TypeSignature Language="VB.NET" Value="Public Enum BehaviorOnNoMatch" />
+  <TypeSignature Language="F#" Value="type BehaviorOnNoMatch = " />
+  <AssemblyInfo>
+    <AssemblyName>System.Management.Automation</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>
+            Describes whether to report errors when a given filter doesnt match any objects
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Default">
+      <MemberSignature Language="C#" Value="Default" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.PowerShell.Cmdletization.BehaviorOnNoMatch Default = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.PowerShell.Cmdletization.BehaviorOnNoMatch.Default" />
+      <MemberSignature Language="VB.NET" Value="Default" />
+      <MemberSignature Language="F#" Value="Default = 0" Usage="Microsoft.PowerShell.Cmdletization.BehaviorOnNoMatch.Default" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.PowerShell.Cmdletization.BehaviorOnNoMatch</ReturnType>
+      </ReturnValue>
+      <MemberValue>0</MemberValue>
+      <Docs>
+        <summary>
+             Default behavior is to be consistent with the built-in cmdlets:
+             - When a wildcard is specified, then no errors are reported (i.e. Get-Process -Name noSuchProcess*)
+             - When no wildcard is specified, then errors are reported (i.e. Get-Process -Name noSuchProcess)
+            
+             Note that the following conventions are adopted:
+             - Min/max queries
+               (<see cref="M:Microsoft.PowerShell.Cmdletization.QueryBuilder.FilterByMinPropertyValue(System.String,System.Object,Microsoft.PowerShell.Cmdletization.BehaviorOnNoMatch)" /> and
+                <see cref="M:Microsoft.PowerShell.Cmdletization.QueryBuilder.FilterByMaxPropertyValue(System.String,System.Object,Microsoft.PowerShell.Cmdletization.BehaviorOnNoMatch)" />)
+               are treated as wildcards
+             - Exclusions
+               (<see cref="M:Microsoft.PowerShell.Cmdletization.QueryBuilder.ExcludeByProperty(System.String,System.Collections.IEnumerable,System.Boolean,Microsoft.PowerShell.Cmdletization.BehaviorOnNoMatch)" />)
+               are treated as wildcards
+             - Associations
+               (<see cref="M:Microsoft.PowerShell.Cmdletization.QueryBuilder.FilterByAssociatedInstance(System.Object,System.String,System.String,System.String,Microsoft.PowerShell.Cmdletization.BehaviorOnNoMatch)" />)
+               are treated as not a wildcard
+             </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ReportErrors">
+      <MemberSignature Language="C#" Value="ReportErrors" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.PowerShell.Cmdletization.BehaviorOnNoMatch ReportErrors = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.PowerShell.Cmdletization.BehaviorOnNoMatch.ReportErrors" />
+      <MemberSignature Language="VB.NET" Value="ReportErrors" />
+      <MemberSignature Language="F#" Value="ReportErrors = 1" Usage="Microsoft.PowerShell.Cmdletization.BehaviorOnNoMatch.ReportErrors" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.PowerShell.Cmdletization.BehaviorOnNoMatch</ReturnType>
+      </ReturnValue>
+      <MemberValue>1</MemberValue>
+      <Docs>
+        <summary>
+          <c>ReportErrors</c> forces reporting of errors that in other circumstances would be reported if no objects matched the filters
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="SilentlyContinue">
+      <MemberSignature Language="C#" Value="SilentlyContinue" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.PowerShell.Cmdletization.BehaviorOnNoMatch SilentlyContinue = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.PowerShell.Cmdletization.BehaviorOnNoMatch.SilentlyContinue" />
+      <MemberSignature Language="VB.NET" Value="SilentlyContinue" />
+      <MemberSignature Language="F#" Value="SilentlyContinue = 2" Usage="Microsoft.PowerShell.Cmdletization.BehaviorOnNoMatch.SilentlyContinue" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.PowerShell.Cmdletization.BehaviorOnNoMatch</ReturnType>
+      </ReturnValue>
+      <MemberValue>2</MemberValue>
+      <Docs>
+        <summary>
+          <c>SilentlyContinue</c> suppresses errors that in other circumstances would be reported if no objects matched the filters
+            </summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

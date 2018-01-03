@@ -1,0 +1,74 @@
+﻿<Type Name="SessionCapabilities" FullName="System.Management.Automation.SessionCapabilities">
+  <TypeSignature Language="C#" Value="public enum SessionCapabilities" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed SessionCapabilities extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Management.Automation.SessionCapabilities" />
+  <TypeSignature Language="VB.NET" Value="Public Enum SessionCapabilities" />
+  <TypeSignature Language="F#" Value="type SessionCapabilities = " />
+  <AssemblyInfo>
+    <AssemblyName>System.Management.Automation</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Flags</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>
+            Defines session capabilities provided by a PowerShell session
+            </summary>
+    <remarks>To be added.</remarks>
+    <altmember cref="M:System.Management.Automation.Runspaces.InitialSessionState.CreateRestricted(System.Management.Automation.SessionCapabilities)" />
+    <altmember cref="M:System.Management.Automation.CommandMetadata.GetRestrictedCommands(System.Management.Automation.SessionCapabilities)" />
+  </Docs>
+  <Members>
+    <Member MemberName="Language">
+      <MemberSignature Language="C#" Value="Language" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Management.Automation.SessionCapabilities Language = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:System.Management.Automation.SessionCapabilities.Language" />
+      <MemberSignature Language="VB.NET" Value="Language" />
+      <MemberSignature Language="F#" Value="Language = 4" Usage="System.Management.Automation.SessionCapabilities.Language" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.SessionCapabilities</ReturnType>
+      </ReturnValue>
+      <MemberValue>4</MemberValue>
+      <Docs>
+        <summary>
+            Include language capabilities
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoteServer">
+      <MemberSignature Language="C#" Value="RemoteServer" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Management.Automation.SessionCapabilities RemoteServer = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Management.Automation.SessionCapabilities.RemoteServer" />
+      <MemberSignature Language="VB.NET" Value="RemoteServer" />
+      <MemberSignature Language="F#" Value="RemoteServer = 1" Usage="System.Management.Automation.SessionCapabilities.RemoteServer" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.SessionCapabilities</ReturnType>
+      </ReturnValue>
+      <MemberValue>1</MemberValue>
+      <Docs>
+        <summary>
+            Session with <see cref="F:System.Management.Automation.SessionCapabilities.RemoteServer" /> capabilities can be made available on a server
+            that wants to provide a full user experience to PowerShell clients.
+            Clients connecting to the server will be able to use implicit remoting
+            (Import-PSSession, Export-PSSession) as well as interactive remoting (Enter-PSSession, Exit-PSSession).
+            </summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,56 @@
+﻿<Type Name="ICmdletProviderSupportsHelp" FullName="System.Management.Automation.Provider.ICmdletProviderSupportsHelp">
+  <TypeSignature Language="C#" Value="public interface ICmdletProviderSupportsHelp" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract ICmdletProviderSupportsHelp" />
+  <TypeSignature Language="DocId" Value="T:System.Management.Automation.Provider.ICmdletProviderSupportsHelp" />
+  <TypeSignature Language="VB.NET" Value="Public Interface ICmdletProviderSupportsHelp" />
+  <TypeSignature Language="F#" Value="type ICmdletProviderSupportsHelp = interface" />
+  <AssemblyInfo>
+    <AssemblyName>System.Management.Automation</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>
+            This interface needs to be implemented by providers that want users to see
+            provider-specific help.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="GetHelpMaml">
+      <MemberSignature Language="C#" Value="public string GetHelpMaml (string helpItemName, string path);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance string GetHelpMaml(string helpItemName, string path) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Provider.ICmdletProviderSupportsHelp.GetHelpMaml(System.String,System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetHelpMaml (helpItemName As String, path As String) As String" />
+      <MemberSignature Language="F#" Value="abstract member GetHelpMaml : string * string -&gt; string" Usage="iCmdletProviderSupportsHelp.GetHelpMaml (helpItemName, path)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="helpItemName" Type="System.String" />
+        <Parameter Name="path" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="helpItemName">
+            Name of command that the help is requested for.
+            </param>
+        <param name="path">
+            Full path to the current location of the user or the full path to
+            the location of the property that the user needs help about.
+            </param>
+        <summary>
+            Called by the help system to get provider-specific help from the provider.
+            </summary>
+        <returns>
+            The MAML help XML that should be presented to the user.
+            </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

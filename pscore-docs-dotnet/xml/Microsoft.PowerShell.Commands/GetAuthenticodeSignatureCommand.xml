@@ -1,0 +1,112 @@
+﻿<Type Name="GetAuthenticodeSignatureCommand" FullName="Microsoft.PowerShell.Commands.GetAuthenticodeSignatureCommand">
+  <TypeSignature Language="C#" Value="public sealed class GetAuthenticodeSignatureCommand : Microsoft.PowerShell.Commands.SignatureCommandsBase" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit GetAuthenticodeSignatureCommand extends Microsoft.PowerShell.Commands.SignatureCommandsBase" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.PowerShell.Commands.GetAuthenticodeSignatureCommand" />
+  <TypeSignature Language="VB.NET" Value="Public NotInheritable Class GetAuthenticodeSignatureCommand&#xA;Inherits SignatureCommandsBase" />
+  <TypeSignature Language="F#" Value="type GetAuthenticodeSignatureCommand = class&#xA;    inherit SignatureCommandsBase" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.PowerShell.Security</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Microsoft.PowerShell.Commands.SignatureCommandsBase</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Management.Automation.Cmdlet("Get", "AuthenticodeSignature", DefaultParameterSetName="ByPath", HelpUri="https://go.microsoft.com/fwlink/?LinkID=113307")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Management.Automation.OutputType(typeof(System.Management.Automation.Signature))</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>
+            Defines the implementation of the 'get-AuthenticodeSignature' cmdlet.
+            This cmdlet extracts the digital signature from the given file.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public GetAuthenticodeSignatureCommand ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Commands.GetAuthenticodeSignatureCommand.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New ()" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Security</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>
+            Initializes a new instance of the GetSignatureCommand class.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PerformAction">
+      <MemberSignature Language="C#" Value="protected override System.Management.Automation.Signature PerformAction (string filePath);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Management.Automation.Signature PerformAction(string filePath) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Commands.GetAuthenticodeSignatureCommand.PerformAction(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Protected Overrides Function PerformAction (filePath As String) As Signature" />
+      <MemberSignature Language="F#" Value="override this.PerformAction : string -&gt; System.Management.Automation.Signature" Usage="getAuthenticodeSignatureCommand.PerformAction filePath" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Security</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.Signature</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="filePath" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="filePath">
+            The name of the file on which to perform the action.
+            </param>
+        <summary>
+            Gets the signature from the specified file.
+            </summary>
+        <returns>
+            The signature on the specified file.
+            </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PerformAction">
+      <MemberSignature Language="C#" Value="protected override System.Management.Automation.Signature PerformAction (string sourcePathOrExtension, byte[] content);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Management.Automation.Signature PerformAction(string sourcePathOrExtension, unsigned int8[] content) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Commands.GetAuthenticodeSignatureCommand.PerformAction(System.String,System.Byte[])" />
+      <MemberSignature Language="VB.NET" Value="Protected Overrides Function PerformAction (sourcePathOrExtension As String, content As Byte()) As Signature" />
+      <MemberSignature Language="F#" Value="override this.PerformAction : string * byte[] -&gt; System.Management.Automation.Signature" Usage="getAuthenticodeSignatureCommand.PerformAction (sourcePathOrExtension, content)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Security</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.Signature</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sourcePathOrExtension" Type="System.String" />
+        <Parameter Name="content" Type="System.Byte[]" />
+      </Parameters>
+      <Docs>
+        <param name="sourcePathOrExtension">The file type associated with the contents</param>
+        <param name="content">
+            The contents of the file on which to perform the action.
+            </param>
+        <summary>
+            Gets the signature from the specified file contents.
+            </summary>
+        <returns>
+            The signature on the specified file contents.
+            </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

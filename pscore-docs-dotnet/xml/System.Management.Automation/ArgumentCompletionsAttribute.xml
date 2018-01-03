@@ -1,0 +1,101 @@
+﻿<Type Name="ArgumentCompletionsAttribute" FullName="System.Management.Automation.ArgumentCompletionsAttribute">
+  <TypeSignature Language="C#" Value="public class ArgumentCompletionsAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ArgumentCompletionsAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.Management.Automation.ArgumentCompletionsAttribute" />
+  <TypeSignature Language="VB.NET" Value="Public Class ArgumentCompletionsAttribute&#xA;Inherits Attribute" />
+  <TypeSignature Language="F#" Value="type ArgumentCompletionsAttribute = class&#xA;    inherit Attribute" />
+  <AssemblyInfo>
+    <AssemblyName>System.Management.Automation</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Property | System.AttributeTargets.Field)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>
+            This attribute is used to specify an argument completions for a parameter of a cmdlet or function
+            based on string array.
+            <example>
+                [Parameter()]
+                [ArgumentCompletions("Option1","Option2","Option3")]
+                public string Noun { get; set; }
+            </example></summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ArgumentCompletionsAttribute (params string[] completions);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string[] completions) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.ArgumentCompletionsAttribute.#ctor(System.String[])" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (ParamArray completions As String())" />
+      <MemberSignature Language="F#" Value="new System.Management.Automation.ArgumentCompletionsAttribute : string[] -&gt; System.Management.Automation.ArgumentCompletionsAttribute" Usage="new System.Management.Automation.ArgumentCompletionsAttribute completions" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="completions" Type="System.String[]">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.ParamArray</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="completions">list of complete values</param>
+        <summary>
+            Initializes a new instance of the ArgumentCompletionsAttribute class
+            </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">for null arguments</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">for invalid arguments</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CompleteArgument">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IEnumerable&lt;System.Management.Automation.CompletionResult&gt; CompleteArgument (string commandName, string parameterName, string wordToComplete, System.Management.Automation.Language.CommandAst commandAst, System.Collections.IDictionary fakeBoundParameters);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Collections.Generic.IEnumerable`1&lt;class System.Management.Automation.CompletionResult&gt; CompleteArgument(string commandName, string parameterName, string wordToComplete, class System.Management.Automation.Language.CommandAst commandAst, class System.Collections.IDictionary fakeBoundParameters) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.ArgumentCompletionsAttribute.CompleteArgument(System.String,System.String,System.String,System.Management.Automation.Language.CommandAst,System.Collections.IDictionary)" />
+      <MemberSignature Language="F#" Value="member this.CompleteArgument : string * string * string * System.Management.Automation.Language.CommandAst * System.Collections.IDictionary -&gt; seq&lt;System.Management.Automation.CompletionResult&gt;" Usage="argumentCompletionsAttribute.CompleteArgument (commandName, parameterName, wordToComplete, commandAst, fakeBoundParameters)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.CompilerServices.IteratorStateMachine(typeof(System.Management.Automation.ArgumentCompletionsAttribute/&lt;CompleteArgument&gt;d__2))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerable&lt;System.Management.Automation.CompletionResult&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="commandName" Type="System.String" />
+        <Parameter Name="parameterName" Type="System.String" />
+        <Parameter Name="wordToComplete" Type="System.String" />
+        <Parameter Name="commandAst" Type="System.Management.Automation.Language.CommandAst" />
+        <Parameter Name="fakeBoundParameters" Type="System.Collections.IDictionary" />
+      </Parameters>
+      <Docs>
+        <param name="commandName">To be added.</param>
+        <param name="parameterName">To be added.</param>
+        <param name="wordToComplete">To be added.</param>
+        <param name="commandAst">To be added.</param>
+        <param name="fakeBoundParameters">To be added.</param>
+        <summary>
+            The function returns completions for arguments.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,119 @@
+﻿<Type Name="ParamBlockAst" FullName="System.Management.Automation.Language.ParamBlockAst">
+  <TypeSignature Language="C#" Value="public class ParamBlockAst : System.Management.Automation.Language.Ast" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ParamBlockAst extends System.Management.Automation.Language.Ast" />
+  <TypeSignature Language="DocId" Value="T:System.Management.Automation.Language.ParamBlockAst" />
+  <TypeSignature Language="VB.NET" Value="Public Class ParamBlockAst&#xA;Inherits Ast" />
+  <TypeSignature Language="F#" Value="type ParamBlockAst = class&#xA;    inherit Ast" />
+  <AssemblyInfo>
+    <AssemblyName>System.Management.Automation</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Management.Automation.Language.Ast</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            The ast representing the param statement in a script block.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ParamBlockAst (System.Management.Automation.Language.IScriptExtent extent, System.Collections.Generic.IEnumerable&lt;System.Management.Automation.Language.AttributeAst&gt; attributes, System.Collections.Generic.IEnumerable&lt;System.Management.Automation.Language.ParameterAst&gt; parameters);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Management.Automation.Language.IScriptExtent extent, class System.Collections.Generic.IEnumerable`1&lt;class System.Management.Automation.Language.AttributeAst&gt; attributes, class System.Collections.Generic.IEnumerable`1&lt;class System.Management.Automation.Language.ParameterAst&gt; parameters) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Language.ParamBlockAst.#ctor(System.Management.Automation.Language.IScriptExtent,System.Collections.Generic.IEnumerable{System.Management.Automation.Language.AttributeAst},System.Collections.Generic.IEnumerable{System.Management.Automation.Language.ParameterAst})" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (extent As IScriptExtent, attributes As IEnumerable(Of AttributeAst), parameters As IEnumerable(Of ParameterAst))" />
+      <MemberSignature Language="F#" Value="new System.Management.Automation.Language.ParamBlockAst : System.Management.Automation.Language.IScriptExtent * seq&lt;System.Management.Automation.Language.AttributeAst&gt; * seq&lt;System.Management.Automation.Language.ParameterAst&gt; -&gt; System.Management.Automation.Language.ParamBlockAst" Usage="new System.Management.Automation.Language.ParamBlockAst (extent, attributes, parameters)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="extent" Type="System.Management.Automation.Language.IScriptExtent" />
+        <Parameter Name="attributes" Type="System.Collections.Generic.IEnumerable&lt;System.Management.Automation.Language.AttributeAst&gt;" />
+        <Parameter Name="parameters" Type="System.Collections.Generic.IEnumerable&lt;System.Management.Automation.Language.ParameterAst&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="extent">The extent of the param statement, from any possible attributes to the closing paren.</param>
+        <param name="attributes">The attributes (such as [cmdletbinding()]) specified on the param statement.  May be null.</param>
+        <param name="parameters">The parameters to the script block.  May be null.</param>
+        <summary>
+            Construct the ast for a param statement of a script block.
+            </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.Management.Automation.PSArgumentNullException">
+            If <paramref name="extent" /> is null.
+            </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Attributes">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.ReadOnlyCollection&lt;System.Management.Automation.Language.AttributeAst&gt; Attributes { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ObjectModel.ReadOnlyCollection`1&lt;class System.Management.Automation.Language.AttributeAst&gt; Attributes" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.Language.ParamBlockAst.Attributes" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Attributes As ReadOnlyCollection(Of AttributeAst)" />
+      <MemberSignature Language="F#" Value="member this.Attributes : System.Collections.ObjectModel.ReadOnlyCollection&lt;System.Management.Automation.Language.AttributeAst&gt;" Usage="System.Management.Automation.Language.ParamBlockAst.Attributes" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.ReadOnlyCollection&lt;System.Management.Automation.Language.AttributeAst&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The asts for attributes (such as [cmdletbinding()]) used before the param keyword.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Copy">
+      <MemberSignature Language="C#" Value="public override System.Management.Automation.Language.Ast Copy ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Management.Automation.Language.Ast Copy() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Language.ParamBlockAst.Copy" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Function Copy () As Ast" />
+      <MemberSignature Language="F#" Value="override this.Copy : unit -&gt; System.Management.Automation.Language.Ast" Usage="paramBlockAst.Copy " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.Language.Ast</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Copy the ParamBlockAst instance
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Parameters">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.ReadOnlyCollection&lt;System.Management.Automation.Language.ParameterAst&gt; Parameters { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ObjectModel.ReadOnlyCollection`1&lt;class System.Management.Automation.Language.ParameterAst&gt; Parameters" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.Language.ParamBlockAst.Parameters" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Parameters As ReadOnlyCollection(Of ParameterAst)" />
+      <MemberSignature Language="F#" Value="member this.Parameters : System.Collections.ObjectModel.ReadOnlyCollection&lt;System.Management.Automation.Language.ParameterAst&gt;" Usage="System.Management.Automation.Language.ParamBlockAst.Parameters" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.ReadOnlyCollection&lt;System.Management.Automation.Language.ParameterAst&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The asts for the parameters of the param statement.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

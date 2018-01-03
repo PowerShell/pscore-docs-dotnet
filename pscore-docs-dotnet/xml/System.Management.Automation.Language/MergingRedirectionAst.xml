@@ -1,0 +1,94 @@
+﻿<Type Name="MergingRedirectionAst" FullName="System.Management.Automation.Language.MergingRedirectionAst">
+  <TypeSignature Language="C#" Value="public class MergingRedirectionAst : System.Management.Automation.Language.RedirectionAst" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit MergingRedirectionAst extends System.Management.Automation.Language.RedirectionAst" />
+  <TypeSignature Language="DocId" Value="T:System.Management.Automation.Language.MergingRedirectionAst" />
+  <TypeSignature Language="VB.NET" Value="Public Class MergingRedirectionAst&#xA;Inherits RedirectionAst" />
+  <TypeSignature Language="F#" Value="type MergingRedirectionAst = class&#xA;    inherit RedirectionAst" />
+  <AssemblyInfo>
+    <AssemblyName>System.Management.Automation</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Management.Automation.Language.RedirectionAst</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            The ast representing a redirection that merges 2 streams, e.g. <c>dir 2&gt;&amp;1</c></summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public MergingRedirectionAst (System.Management.Automation.Language.IScriptExtent extent, System.Management.Automation.Language.RedirectionStream from, System.Management.Automation.Language.RedirectionStream to);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Management.Automation.Language.IScriptExtent extent, valuetype System.Management.Automation.Language.RedirectionStream from, valuetype System.Management.Automation.Language.RedirectionStream to) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Language.MergingRedirectionAst.#ctor(System.Management.Automation.Language.IScriptExtent,System.Management.Automation.Language.RedirectionStream,System.Management.Automation.Language.RedirectionStream)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (extent As IScriptExtent, from As RedirectionStream, to As RedirectionStream)" />
+      <MemberSignature Language="F#" Value="new System.Management.Automation.Language.MergingRedirectionAst : System.Management.Automation.Language.IScriptExtent * System.Management.Automation.Language.RedirectionStream * System.Management.Automation.Language.RedirectionStream -&gt; System.Management.Automation.Language.MergingRedirectionAst" Usage="new System.Management.Automation.Language.MergingRedirectionAst (extent, from, to)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="extent" Type="System.Management.Automation.Language.IScriptExtent" />
+        <Parameter Name="from" Type="System.Management.Automation.Language.RedirectionStream" />
+        <Parameter Name="to" Type="System.Management.Automation.Language.RedirectionStream" />
+      </Parameters>
+      <Docs>
+        <param name="extent">The extent of the redirection.</param>
+        <param name="from">The stream to read from.</param>
+        <param name="to">The stream to write to - must always be <see cref="F:System.Management.Automation.Language.RedirectionStream.Output" /></param>
+        <summary>
+            Construct a merging redirection.
+            </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.Management.Automation.PSArgumentNullException">If <paramref name="extent" /> is null.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Copy">
+      <MemberSignature Language="C#" Value="public override System.Management.Automation.Language.Ast Copy ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Management.Automation.Language.Ast Copy() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Language.MergingRedirectionAst.Copy" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Function Copy () As Ast" />
+      <MemberSignature Language="F#" Value="override this.Copy : unit -&gt; System.Management.Automation.Language.Ast" Usage="mergingRedirectionAst.Copy " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.Language.Ast</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Copy the MergingRedirectionAst instance
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToStream">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.Language.RedirectionStream ToStream { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Management.Automation.Language.RedirectionStream ToStream" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.Language.MergingRedirectionAst.ToStream" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ToStream As RedirectionStream" />
+      <MemberSignature Language="F#" Value="member this.ToStream : System.Management.Automation.Language.RedirectionStream" Usage="System.Management.Automation.Language.MergingRedirectionAst.ToStream" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.Language.RedirectionStream</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The stream that results will be written to.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

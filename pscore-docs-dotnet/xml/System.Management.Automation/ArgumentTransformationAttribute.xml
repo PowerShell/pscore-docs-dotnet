@@ -1,0 +1,136 @@
+﻿<Type Name="ArgumentTransformationAttribute" FullName="System.Management.Automation.ArgumentTransformationAttribute">
+  <TypeSignature Language="C#" Value="public abstract class ArgumentTransformationAttribute : System.Management.Automation.Internal.CmdletMetadataAttribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit ArgumentTransformationAttribute extends System.Management.Automation.Internal.CmdletMetadataAttribute" />
+  <TypeSignature Language="DocId" Value="T:System.Management.Automation.ArgumentTransformationAttribute" />
+  <TypeSignature Language="VB.NET" Value="Public MustInherit Class ArgumentTransformationAttribute&#xA;Inherits CmdletMetadataAttribute" />
+  <TypeSignature Language="F#" Value="type ArgumentTransformationAttribute = class&#xA;    inherit CmdletMetadataAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System.Management.Automation</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Management.Automation.Internal.CmdletMetadataAttribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Property | System.AttributeTargets.Field)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>
+             Serves as the base class for attributes that perform argument transformation.
+             </summary>
+    <remarks>
+             Argument transformation attributes can be attached to
+             <see cref="T:System.Management.Automation.Cmdlet" /> and <see cref="T:System.Management.Automation.Provider.CmdletProvider" />
+             parameters to automatically transform the argument value in
+             some fashion.  The transformation might change the object,
+             convert the type, or even load a file or AD object based on
+             the name.
+             Existing argument transformation attributes include
+             <see cref="T:System.Management.Automation.ArgumentTypeConverterAttribute" />.
+            
+             PSSnapins wishing to create custom argument transformation attributes
+             should derive from
+             <seealso cref="T:System.Management.Automation.ArgumentTransformationAttribute" />
+             and override the
+             <seealso cref="M:System.Management.Automation.ArgumentTransformationAttribute.Transform(System.Management.Automation.EngineIntrinsics,System.Object)" />
+             abstract method, after which they can apply the
+             attribute to their parameters.
+            
+             It is also recommended to override
+             <see cref="M:System.Object.ToString" /> to return a readable string
+             similar to the attribute declaration, for example
+             "[ValidateRangeAttribute(5,10)]".
+            
+             If multiple transformations are defined on a parameter,
+             they will be invoked in series, each getting the output
+             of the previous transformation.
+             </remarks>
+    <altmember cref="T:System.Management.Automation.ArgumentTypeConverterAttribute" />
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected ArgumentTransformationAttribute ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.ArgumentTransformationAttribute.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Protected Sub New ()" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>
+            Initializes a new instance of the ArgumentTransformationAttribute class
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Transform">
+      <MemberSignature Language="C#" Value="public abstract object Transform (System.Management.Automation.EngineIntrinsics engineIntrinsics, object inputData);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object Transform(class System.Management.Automation.EngineIntrinsics engineIntrinsics, object inputData) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.ArgumentTransformationAttribute.Transform(System.Management.Automation.EngineIntrinsics,System.Object)" />
+      <MemberSignature Language="F#" Value="abstract member Transform : System.Management.Automation.EngineIntrinsics * obj -&gt; obj" Usage="argumentTransformationAttribute.Transform (engineIntrinsics, inputData)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="engineIntrinsics" Type="System.Management.Automation.EngineIntrinsics" />
+        <Parameter Name="inputData" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="engineIntrinsics">
+            The engine APIs for the context under which the transformation is being
+            made.
+            </param>
+        <param name="inputData"> parameter argument to mutate </param>
+        <summary>
+            Method that will be overridden by the subclasses to transform the inputData parameter
+            argument into some other object that will be used for the parameter's value.
+            </summary>
+        <returns> mutated object(s) </returns>
+        <remarks>
+            Return the transformed value of <paramref name="inputData" />.
+            Throw <see cref="T:System.ArgumentException" />
+            if the value of <paramref name="inputData" /> is invalid,
+            and throw <see cref="T:System.Management.Automation.ArgumentTransformationMetadataException" />
+            for other recoverable errors.
+            </remarks>
+        <exception cref="T:System.ArgumentException">should be thrown for invalid arguments</exception>
+        <exception cref="T:System.Management.Automation.ArgumentTransformationMetadataException">should be thrown for any problems during transformation</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="TransformNullOptionalParameters">
+      <MemberSignature Language="C#" Value="public virtual bool TransformNullOptionalParameters { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool TransformNullOptionalParameters" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.ArgumentTransformationAttribute.TransformNullOptionalParameters" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable ReadOnly Property TransformNullOptionalParameters As Boolean" />
+      <MemberSignature Language="F#" Value="member this.TransformNullOptionalParameters : bool" Usage="System.Management.Automation.ArgumentTransformationAttribute.TransformNullOptionalParameters" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The property is only checked when:
+              a) The parameter is not mandatory
+              b) The argument is null
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

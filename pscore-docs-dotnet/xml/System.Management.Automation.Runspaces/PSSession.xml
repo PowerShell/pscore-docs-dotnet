@@ -1,0 +1,323 @@
+﻿<Type Name="PSSession" FullName="System.Management.Automation.Runspaces.PSSession">
+  <TypeSignature Language="C#" Value="public sealed class PSSession" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit PSSession extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Management.Automation.Runspaces.PSSession" />
+  <TypeSignature Language="VB.NET" Value="Public NotInheritable Class PSSession" />
+  <TypeSignature Language="F#" Value="type PSSession = class" />
+  <AssemblyInfo>
+    <AssemblyName>System.Management.Automation</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Class that exposes read only properties and which conveys information
+            about a remote runspace object to the user. The class serves the
+            following purpose:
+                1. Exposes useful information to the user as properties
+                2. Shields the remote runspace object from directly being exposed
+                   to the user. This way, the user will not be able to directly
+                   act upon the object, but instead will have to use the remoting
+                   cmdlets. This will prevent any unpredictable behavior.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="ApplicationPrivateData">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.PSPrimitiveDictionary ApplicationPrivateData { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Management.Automation.PSPrimitiveDictionary ApplicationPrivateData" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.Runspaces.PSSession.ApplicationPrivateData" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ApplicationPrivateData As PSPrimitiveDictionary" />
+      <MemberSignature Language="F#" Value="member this.ApplicationPrivateData : System.Management.Automation.PSPrimitiveDictionary" Usage="System.Management.Automation.Runspaces.PSSession.ApplicationPrivateData" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.PSPrimitiveDictionary</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Private data to be used by applications built on top of PowerShell.
+            Optionally sent by the remote server when creating a new session / runspace.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Availability">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.Runspaces.RunspaceAvailability Availability { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Management.Automation.Runspaces.RunspaceAvailability Availability" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.Runspaces.PSSession.Availability" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Availability As RunspaceAvailability" />
+      <MemberSignature Language="F#" Value="member this.Availability : System.Management.Automation.Runspaces.RunspaceAvailability" Usage="System.Management.Automation.Runspaces.PSSession.Availability" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.Runspaces.RunspaceAvailability</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Indicates whether the specified runspace is available
+            for executing commands
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ComputerName">
+      <MemberSignature Language="C#" Value="public string ComputerName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ComputerName" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.Runspaces.PSSession.ComputerName" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ComputerName As String" />
+      <MemberSignature Language="F#" Value="member this.ComputerName : string" Usage="System.Management.Automation.Runspaces.PSSession.ComputerName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Name of the computer target
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ComputerType">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.Runspaces.TargetMachineType ComputerType { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Management.Automation.Runspaces.TargetMachineType ComputerType" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.Runspaces.PSSession.ComputerType" />
+      <MemberSignature Language="VB.NET" Value="Public Property ComputerType As TargetMachineType" />
+      <MemberSignature Language="F#" Value="member this.ComputerType : System.Management.Automation.Runspaces.TargetMachineType with get, set" Usage="System.Management.Automation.Runspaces.PSSession.ComputerType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.Runspaces.TargetMachineType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Type of the computer target
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ConfigurationName">
+      <MemberSignature Language="C#" Value="public string ConfigurationName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ConfigurationName" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.Runspaces.PSSession.ConfigurationName" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ConfigurationName As String" />
+      <MemberSignature Language="F#" Value="member this.ConfigurationName : string" Usage="System.Management.Automation.Runspaces.PSSession.ConfigurationName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Shell which is executed in the remote machine
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContainerId">
+      <MemberSignature Language="C#" Value="public string ContainerId { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ContainerId" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.Runspaces.PSSession.ContainerId" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ContainerId As String" />
+      <MemberSignature Language="F#" Value="member this.ContainerId : string" Usage="System.Management.Automation.Runspaces.PSSession.ContainerId" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Id of the container target
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Id">
+      <MemberSignature Language="C#" Value="public int Id { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Id" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.Runspaces.PSSession.Id" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Id As Integer" />
+      <MemberSignature Language="F#" Value="member this.Id : int" Usage="System.Management.Automation.Runspaces.PSSession.Id" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            SessionId of this runspace. This is unique only across
+            a session
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InstanceId">
+      <MemberSignature Language="C#" Value="public Guid InstanceId { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Guid InstanceId" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.Runspaces.PSSession.InstanceId" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property InstanceId As Guid" />
+      <MemberSignature Language="F#" Value="member this.InstanceId : Guid" Usage="System.Management.Automation.Runspaces.PSSession.InstanceId" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Guid</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            InstanceID that identifies this runspace
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public string Name { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.Runspaces.PSSession.Name" />
+      <MemberSignature Language="VB.NET" Value="Public Property Name As String" />
+      <MemberSignature Language="F#" Value="member this.Name : string with get, set" Usage="System.Management.Automation.Runspaces.PSSession.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Friendly name for identifying this runspace
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Runspace">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.Runspaces.Runspace Runspace { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Management.Automation.Runspaces.Runspace Runspace" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.Runspaces.PSSession.Runspace" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Runspace As Runspace" />
+      <MemberSignature Language="F#" Value="member this.Runspace : System.Management.Automation.Runspaces.Runspace" Usage="System.Management.Automation.Runspaces.PSSession.Runspace" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.Runspaces.Runspace</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The remote runspace object based on which this information object
+            is derived
+            </summary>
+        <value>To be added.</value>
+        <remarks>This property is marked internal to allow other cmdlets
+            to get access to the RemoteRunspace object and operate on it like
+            for instance test-runspace, close-runspace etc</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Runspaces.PSSession.ToString" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Function ToString () As String" />
+      <MemberSignature Language="F#" Value="override this.ToString : unit -&gt; string" Usage="pSSession.ToString " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            ToString method override
+            </summary>
+        <returns>string</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="VMId">
+      <MemberSignature Language="C#" Value="public Nullable&lt;Guid&gt; VMId { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Nullable`1&lt;valuetype System.Guid&gt; VMId" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.Runspaces.PSSession.VMId" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property VMId As Nullable(Of Guid)" />
+      <MemberSignature Language="F#" Value="member this.VMId : Nullable&lt;Guid&gt;" Usage="System.Management.Automation.Runspaces.PSSession.VMId" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Nullable&lt;System.Guid&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Guid of the virtual machine target
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="VMName">
+      <MemberSignature Language="C#" Value="public string VMName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string VMName" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.Runspaces.PSSession.VMName" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property VMName As String" />
+      <MemberSignature Language="F#" Value="member this.VMName : string" Usage="System.Management.Automation.Runspaces.PSSession.VMName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Name of the virtual machine target
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

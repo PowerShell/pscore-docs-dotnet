@@ -1,0 +1,168 @@
+﻿<Type Name="MultipleServiceCommandBase" FullName="Microsoft.PowerShell.Commands.MultipleServiceCommandBase">
+  <TypeSignature Language="C#" Value="public abstract class MultipleServiceCommandBase : Microsoft.PowerShell.Commands.ServiceBaseCommand" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit MultipleServiceCommandBase extends Microsoft.PowerShell.Commands.ServiceBaseCommand" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.PowerShell.Commands.MultipleServiceCommandBase" />
+  <TypeSignature Language="VB.NET" Value="Public MustInherit Class MultipleServiceCommandBase&#xA;Inherits ServiceBaseCommand" />
+  <TypeSignature Language="F#" Value="type MultipleServiceCommandBase = class&#xA;    inherit ServiceBaseCommand" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.PowerShell.Commands.Management</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Microsoft.PowerShell.Commands.ServiceBaseCommand</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            This class implements the base for service commands which can
+            operate on multiple services
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected MultipleServiceCommandBase ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Commands.MultipleServiceCommandBase.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Protected Sub New ()" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Commands.Management</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DisplayName">
+      <MemberSignature Language="C#" Value="public string[] DisplayName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string[] DisplayName" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.MultipleServiceCommandBase.DisplayName" />
+      <MemberSignature Language="VB.NET" Value="Public Property DisplayName As String()" />
+      <MemberSignature Language="F#" Value="member this.DisplayName : string[] with get, set" Usage="Microsoft.PowerShell.Commands.MultipleServiceCommandBase.DisplayName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Commands.Management</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(Mandatory=true, ParameterSetName="DisplayName")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            gets/sets an array of display names for services
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Exclude">
+      <MemberSignature Language="C#" Value="public string[] Exclude { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string[] Exclude" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.MultipleServiceCommandBase.Exclude" />
+      <MemberSignature Language="VB.NET" Value="Public Property Exclude As String()" />
+      <MemberSignature Language="F#" Value="member this.Exclude : string[] with get, set" Usage="Microsoft.PowerShell.Commands.MultipleServiceCommandBase.Exclude" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Commands.Management</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.ValidateNotNullOrEmpty</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Lets you exclude particular services.  Services matching
+            one of these (if specified) are excluded.
+            These are interpreted as either ServiceNames or DisplayNames
+            according to the parameter set.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Include">
+      <MemberSignature Language="C#" Value="public string[] Include { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string[] Include" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.MultipleServiceCommandBase.Include" />
+      <MemberSignature Language="VB.NET" Value="Public Property Include As String()" />
+      <MemberSignature Language="F#" Value="member this.Include : string[] with get, set" Usage="Microsoft.PowerShell.Commands.MultipleServiceCommandBase.Include" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Commands.Management</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.ValidateNotNullOrEmpty</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Lets you include particular services.  Services not matching
+            one of these (if specified) are excluded.
+            These are interpreted as either ServiceNames or DisplayNames
+            according to the parameter set.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InputObject">
+      <MemberSignature Language="C#" Value="public System.ServiceProcess.ServiceController[] InputObject { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ServiceProcess.ServiceController[] InputObject" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.MultipleServiceCommandBase.InputObject" />
+      <MemberSignature Language="VB.NET" Value="Public Property InputObject As ServiceController()" />
+      <MemberSignature Language="F#" Value="member this.InputObject : System.ServiceProcess.ServiceController[] with get, set" Usage="Microsoft.PowerShell.Commands.MultipleServiceCommandBase.InputObject" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Commands.Management</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="InputObject", ValueFromPipeline=true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.ValidateNotNullOrEmpty</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.ServiceProcess.ServiceController[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            If the input is a stream of [collections of]
+            ServiceController objects, we bypass the ServiceName and
+            DisplayName parameters and read the ServiceControllers
+            directly.  This allows us to deal with services which
+            have wildcard characters in their name (servicename or
+            displayname).
+            </summary>
+        <value>ServiceController objects</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

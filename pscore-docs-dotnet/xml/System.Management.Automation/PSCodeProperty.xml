@@ -1,0 +1,288 @@
+﻿<Type Name="PSCodeProperty" FullName="System.Management.Automation.PSCodeProperty">
+  <TypeSignature Language="C#" Value="public class PSCodeProperty : System.Management.Automation.PSPropertyInfo" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit PSCodeProperty extends System.Management.Automation.PSPropertyInfo" />
+  <TypeSignature Language="DocId" Value="T:System.Management.Automation.PSCodeProperty" />
+  <TypeSignature Language="VB.NET" Value="Public Class PSCodeProperty&#xA;Inherits PSPropertyInfo" />
+  <TypeSignature Language="F#" Value="type PSCodeProperty = class&#xA;    inherit PSPropertyInfo" />
+  <AssemblyInfo>
+    <AssemblyName>System.Management.Automation</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Management.Automation.PSPropertyInfo</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Serves as a property implemented with references to methods for getter and setter.
+            </summary>
+    <remarks>
+            It is permitted to subclass <see cref="T:System.Management.Automation.PSCodeProperty" />
+            but there is no established scenario for doing this, nor has it been tested.
+            </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public PSCodeProperty (string name, System.Reflection.MethodInfo getterCodeReference);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string name, class System.Reflection.MethodInfo getterCodeReference) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.PSCodeProperty.#ctor(System.String,System.Reflection.MethodInfo)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (name As String, getterCodeReference As MethodInfo)" />
+      <MemberSignature Language="F#" Value="new System.Management.Automation.PSCodeProperty : string * System.Reflection.MethodInfo -&gt; System.Management.Automation.PSCodeProperty" Usage="new System.Management.Automation.PSCodeProperty (name, getterCodeReference)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="getterCodeReference" Type="System.Reflection.MethodInfo" />
+      </Parameters>
+      <Docs>
+        <param name="name">name of the property</param>
+        <param name="getterCodeReference">This should be a public static non void method taking one PSObject parameter.</param>
+        <summary>
+            Initializes a new instance of the PSCodeProperty class as a read only property.
+            </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">if name is null or empty or getterCodeReference is null</exception>
+        <exception cref="T:System.Management.Automation.ExtendedTypeSystemException">if getterCodeReference doesn't have the right format.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public PSCodeProperty (string name, System.Reflection.MethodInfo getterCodeReference, System.Reflection.MethodInfo setterCodeReference);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string name, class System.Reflection.MethodInfo getterCodeReference, class System.Reflection.MethodInfo setterCodeReference) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.PSCodeProperty.#ctor(System.String,System.Reflection.MethodInfo,System.Reflection.MethodInfo)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (name As String, getterCodeReference As MethodInfo, setterCodeReference As MethodInfo)" />
+      <MemberSignature Language="F#" Value="new System.Management.Automation.PSCodeProperty : string * System.Reflection.MethodInfo * System.Reflection.MethodInfo -&gt; System.Management.Automation.PSCodeProperty" Usage="new System.Management.Automation.PSCodeProperty (name, getterCodeReference, setterCodeReference)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="getterCodeReference" Type="System.Reflection.MethodInfo" />
+        <Parameter Name="setterCodeReference" Type="System.Reflection.MethodInfo" />
+      </Parameters>
+      <Docs>
+        <param name="name">name of the property</param>
+        <param name="getterCodeReference">This should be a public static non void method taking one PSObject parameter.</param>
+        <param name="setterCodeReference">This should be a public static void method taking 2 parameters, where the first is an PSObject.</param>
+        <summary>
+            Initializes a new instance of the PSCodeProperty class. Setter or getter can be null, but both cannot be null.
+            </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">when methodForGet and methodForSet are null</exception>
+        <exception cref="T:System.Management.Automation.ExtendedTypeSystemException">
+            if:
+                - getterCodeReference doesn't have the right format,
+                - setterCodeReference doesn't have the right format,
+                - both getterCodeReference and setterCodeReference are null.
+            </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Copy">
+      <MemberSignature Language="C#" Value="public override System.Management.Automation.PSMemberInfo Copy ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Management.Automation.PSMemberInfo Copy() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.PSCodeProperty.Copy" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Function Copy () As PSMemberInfo" />
+      <MemberSignature Language="F#" Value="override this.Copy : unit -&gt; System.Management.Automation.PSMemberInfo" Usage="pSCodeProperty.Copy " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.PSMemberInfo</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            returns a new PSMemberInfo that is a copy of this PSMemberInfo
+            </summary>
+        <returns>a new PSMemberInfo that is a copy of this PSMemberInfo</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetterCodeReference">
+      <MemberSignature Language="C#" Value="public System.Reflection.MethodInfo GetterCodeReference { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Reflection.MethodInfo GetterCodeReference" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.PSCodeProperty.GetterCodeReference" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property GetterCodeReference As MethodInfo" />
+      <MemberSignature Language="F#" Value="member this.GetterCodeReference : System.Reflection.MethodInfo" Usage="System.Management.Automation.PSCodeProperty.GetterCodeReference" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.MethodInfo</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the method used for the properties' getter. It might be null.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsGettable">
+      <MemberSignature Language="C#" Value="public override bool IsGettable { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsGettable" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.PSCodeProperty.IsGettable" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides ReadOnly Property IsGettable As Boolean" />
+      <MemberSignature Language="F#" Value="member this.IsGettable : bool" Usage="System.Management.Automation.PSCodeProperty.IsGettable" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets true if this property can be read
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsSettable">
+      <MemberSignature Language="C#" Value="public override bool IsSettable { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsSettable" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.PSCodeProperty.IsSettable" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides ReadOnly Property IsSettable As Boolean" />
+      <MemberSignature Language="F#" Value="member this.IsSettable : bool" Usage="System.Management.Automation.PSCodeProperty.IsSettable" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets true if this property can be set
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MemberType">
+      <MemberSignature Language="C#" Value="public override System.Management.Automation.PSMemberTypes MemberType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Management.Automation.PSMemberTypes MemberType" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.PSCodeProperty.MemberType" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides ReadOnly Property MemberType As PSMemberTypes" />
+      <MemberSignature Language="F#" Value="member this.MemberType : System.Management.Automation.PSMemberTypes" Usage="System.Management.Automation.PSCodeProperty.MemberType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.PSMemberTypes</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the member type
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetterCodeReference">
+      <MemberSignature Language="C#" Value="public System.Reflection.MethodInfo SetterCodeReference { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Reflection.MethodInfo SetterCodeReference" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.PSCodeProperty.SetterCodeReference" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property SetterCodeReference As MethodInfo" />
+      <MemberSignature Language="F#" Value="member this.SetterCodeReference : System.Reflection.MethodInfo" Usage="System.Management.Automation.PSCodeProperty.SetterCodeReference" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.MethodInfo</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the method used for the properties' setter. It might be null.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.PSCodeProperty.ToString" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Function ToString () As String" />
+      <MemberSignature Language="F#" Value="override this.ToString : unit -&gt; string" Usage="pSCodeProperty.ToString " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Returns the string representation of this property
+            </summary>
+        <returns>This property as a string</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TypeNameOfValue">
+      <MemberSignature Language="C#" Value="public override string TypeNameOfValue { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string TypeNameOfValue" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.PSCodeProperty.TypeNameOfValue" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides ReadOnly Property TypeNameOfValue As String" />
+      <MemberSignature Language="F#" Value="member this.TypeNameOfValue : string" Usage="System.Management.Automation.PSCodeProperty.TypeNameOfValue" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the type of the value for this member
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.Management.Automation.GetValueException">If there is no property getter</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Value">
+      <MemberSignature Language="C#" Value="public override object Value { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object Value" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.PSCodeProperty.Value" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Property Value As Object" />
+      <MemberSignature Language="F#" Value="member this.Value : obj with get, set" Usage="System.Management.Automation.PSCodeProperty.Value" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets and Sets the value of this member
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.Management.Automation.GetValueException">When getting and there is no getter or when the getter throws an exception</exception>
+        <exception cref="T:System.Management.Automation.SetValueException">When setting and there is no setter or when the setter throws an exception</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

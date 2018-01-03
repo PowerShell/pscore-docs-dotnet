@@ -1,0 +1,1238 @@
+﻿<Type Name="ItemCmdletProviderIntrinsics" FullName="System.Management.Automation.ItemCmdletProviderIntrinsics">
+  <TypeSignature Language="C#" Value="public sealed class ItemCmdletProviderIntrinsics" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit ItemCmdletProviderIntrinsics extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Management.Automation.ItemCmdletProviderIntrinsics" />
+  <TypeSignature Language="VB.NET" Value="Public NotInheritable Class ItemCmdletProviderIntrinsics" />
+  <TypeSignature Language="F#" Value="type ItemCmdletProviderIntrinsics = class" />
+  <AssemblyInfo>
+    <AssemblyName>System.Management.Automation</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Exposes the Item noun of the Cmdlet Providers to the Cmdlet base class. The methods of this class
+            use the providers to perform operations.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Clear">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.Collection&lt;System.Management.Automation.PSObject&gt; Clear (string path);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Collections.ObjectModel.Collection`1&lt;class System.Management.Automation.PSObject&gt; Clear(string path) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.ItemCmdletProviderIntrinsics.Clear(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Function Clear (path As String) As Collection(Of PSObject)" />
+      <MemberSignature Language="F#" Value="member this.Clear : string -&gt; System.Collections.ObjectModel.Collection&lt;System.Management.Automation.PSObject&gt;" Usage="itemCmdletProviderIntrinsics.Clear path" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.Collection&lt;System.Management.Automation.PSObject&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="path">
+             The path to the item to clear. It may be a drive or provider-qualified path and may include
+             glob characters.
+             </param>
+        <summary>
+             Clears the item at the specified path.
+             </summary>
+        <returns>
+             The object(s) cleared at the specified path.
+             </returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+             If <paramref name="path" /> is null.
+             </exception>
+        <exception cref="T:System.Management.Automation.ProviderNotFoundException">
+             If the <paramref name="path" /> refers to a provider that could not be found.
+             </exception>
+        <exception cref="T:System.Management.Automation.DriveNotFoundException">
+             If the <paramref name="path" /> refers to a drive that could not be found.
+             </exception>
+        <exception cref="T:System.Management.Automation.ItemNotFoundException">
+             If <paramref name="path" /> does not contain glob characters and
+             could not be found.
+             </exception>
+        <exception cref="T:System.NotSupportedException">
+             If the provider that the <paramref name="path" /> refers to does
+             not support this operation.
+             </exception>
+        <exception cref="T:System.Management.Automation.ProviderInvocationException">
+             If the provider threw an exception.
+             </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Clear">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.Collection&lt;System.Management.Automation.PSObject&gt; Clear (string[] path, bool force, bool literalPath);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Collections.ObjectModel.Collection`1&lt;class System.Management.Automation.PSObject&gt; Clear(string[] path, bool force, bool literalPath) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.ItemCmdletProviderIntrinsics.Clear(System.String[],System.Boolean,System.Boolean)" />
+      <MemberSignature Language="VB.NET" Value="Public Function Clear (path As String(), force As Boolean, literalPath As Boolean) As Collection(Of PSObject)" />
+      <MemberSignature Language="F#" Value="member this.Clear : string[] * bool * bool -&gt; System.Collections.ObjectModel.Collection&lt;System.Management.Automation.PSObject&gt;" Usage="itemCmdletProviderIntrinsics.Clear (path, force, literalPath)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.Collection&lt;System.Management.Automation.PSObject&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="path" Type="System.String[]" />
+        <Parameter Name="force" Type="System.Boolean" />
+        <Parameter Name="literalPath" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="path">
+             The path(s) to the item to clear. It may be a drive or provider-qualified path and may include
+             glob characters.
+             </param>
+        <param name="force">
+             Passed on to providers to force operations.
+             </param>
+        <param name="literalPath">
+             If true, globbing is not done on paths.
+             </param>
+        <summary>
+             Clears the item at the specified path.
+             </summary>
+        <returns>
+             The object(s) cleared at the specified path.
+             </returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+             If <paramref name="path" /> is null.
+             </exception>
+        <exception cref="T:System.Management.Automation.ProviderNotFoundException">
+             If the <paramref name="path" /> refers to a provider that could not be found.
+             </exception>
+        <exception cref="T:System.Management.Automation.DriveNotFoundException">
+             If the <paramref name="path" /> refers to a drive that could not be found.
+             </exception>
+        <exception cref="T:System.Management.Automation.ItemNotFoundException">
+             If <paramref name="path" /> does not contain glob characters and
+             could not be found.
+             </exception>
+        <exception cref="T:System.NotSupportedException">
+             If the provider that the <paramref name="path" /> refers to does
+             not support this operation.
+             </exception>
+        <exception cref="T:System.Management.Automation.ProviderInvocationException">
+             If the provider threw an exception.
+             </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Copy">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.Collection&lt;System.Management.Automation.PSObject&gt; Copy (string path, string destinationPath, bool recurse, System.Management.Automation.CopyContainers copyContainers);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Collections.ObjectModel.Collection`1&lt;class System.Management.Automation.PSObject&gt; Copy(string path, string destinationPath, bool recurse, valuetype System.Management.Automation.CopyContainers copyContainers) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.ItemCmdletProviderIntrinsics.Copy(System.String,System.String,System.Boolean,System.Management.Automation.CopyContainers)" />
+      <MemberSignature Language="F#" Value="member this.Copy : string * string * bool * System.Management.Automation.CopyContainers -&gt; System.Collections.ObjectModel.Collection&lt;System.Management.Automation.PSObject&gt;" Usage="itemCmdletProviderIntrinsics.Copy (path, destinationPath, recurse, copyContainers)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.Collection&lt;System.Management.Automation.PSObject&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+        <Parameter Name="destinationPath" Type="System.String" />
+        <Parameter Name="recurse" Type="System.Boolean" />
+        <Parameter Name="copyContainers" Type="System.Management.Automation.CopyContainers" />
+      </Parameters>
+      <Docs>
+        <param name="path">
+             The path to the item to copy. It may be a drive or provider-qualified path and may include
+             glob characters.
+             </param>
+        <param name="destinationPath">
+             The path to copy the item to.
+             </param>
+        <param name="recurse">
+             If true, copies all the children in all the sub-containers of the specified
+             container. If false, only copies the specified item.
+             </param>
+        <param name="copyContainers">
+             Determines how the source container is used in the copy operation.
+             </param>
+        <summary>
+             Copy item at the specified path
+             </summary>
+        <returns>
+             The item(s) that were copied.
+             </returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+             If <paramref name="path" /> is null.
+             </exception>
+        <exception cref="T:System.Management.Automation.ProviderNotFoundException">
+             If the <paramref name="path" /> refers to a provider that could not be found.
+             </exception>
+        <exception cref="T:System.Management.Automation.DriveNotFoundException">
+             If the <paramref name="path" /> refers to a drive that could not be found.
+             </exception>
+        <exception cref="T:System.Management.Automation.ItemNotFoundException">
+             If <paramref name="path" /> does not contain glob characters and
+             could not be found.
+             </exception>
+        <exception cref="T:System.NotSupportedException">
+             If the provider that the <paramref name="path" /> refers to does
+             not support this operation.
+             </exception>
+        <exception cref="T:System.Management.Automation.ProviderInvocationException">
+             If the provider threw an exception.
+             </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Copy">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.Collection&lt;System.Management.Automation.PSObject&gt; Copy (string[] path, string destinationPath, bool recurse, System.Management.Automation.CopyContainers copyContainers, bool force, bool literalPath);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Collections.ObjectModel.Collection`1&lt;class System.Management.Automation.PSObject&gt; Copy(string[] path, string destinationPath, bool recurse, valuetype System.Management.Automation.CopyContainers copyContainers, bool force, bool literalPath) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.ItemCmdletProviderIntrinsics.Copy(System.String[],System.String,System.Boolean,System.Management.Automation.CopyContainers,System.Boolean,System.Boolean)" />
+      <MemberSignature Language="F#" Value="member this.Copy : string[] * string * bool * System.Management.Automation.CopyContainers * bool * bool -&gt; System.Collections.ObjectModel.Collection&lt;System.Management.Automation.PSObject&gt;" Usage="itemCmdletProviderIntrinsics.Copy (path, destinationPath, recurse, copyContainers, force, literalPath)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.Collection&lt;System.Management.Automation.PSObject&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="path" Type="System.String[]" />
+        <Parameter Name="destinationPath" Type="System.String" />
+        <Parameter Name="recurse" Type="System.Boolean" />
+        <Parameter Name="copyContainers" Type="System.Management.Automation.CopyContainers" />
+        <Parameter Name="force" Type="System.Boolean" />
+        <Parameter Name="literalPath" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="path">
+             The path(s) to the item(s) to copy. They may be a drive or provider-qualified path and may include
+             glob characters.
+             </param>
+        <param name="destinationPath">
+             The path to copy the item to.
+             </param>
+        <param name="recurse">
+             If true, copies all the children in all the sub-containers of the specified
+             container. If false, only copies the specified item.
+             </param>
+        <param name="copyContainers">
+             Determines how the source container is used in the copy operation.
+             </param>
+        <param name="force">
+             Passed on to providers to force operations.
+             </param>
+        <param name="literalPath">
+             If true, globbing is not done on paths.
+             </param>
+        <summary>
+             Copy item at the specified path
+             </summary>
+        <returns>
+             The item(s) that were copied.
+             </returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+             If <paramref name="path" /> is null.
+             </exception>
+        <exception cref="T:System.Management.Automation.ProviderNotFoundException">
+             If the <paramref name="path" /> refers to a provider that could not be found.
+             </exception>
+        <exception cref="T:System.Management.Automation.DriveNotFoundException">
+             If the <paramref name="path" /> refers to a drive that could not be found.
+             </exception>
+        <exception cref="T:System.Management.Automation.ItemNotFoundException">
+             If <paramref name="path" /> does not contain glob characters and
+             could not be found.
+             </exception>
+        <exception cref="T:System.NotSupportedException">
+             If the provider that the <paramref name="path" /> refers to does
+             not support this operation.
+             </exception>
+        <exception cref="T:System.Management.Automation.ProviderInvocationException">
+             If the provider threw an exception.
+             </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Exists">
+      <MemberSignature Language="C#" Value="public bool Exists (string path);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool Exists(string path) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.ItemCmdletProviderIntrinsics.Exists(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Function Exists (path As String) As Boolean" />
+      <MemberSignature Language="F#" Value="member this.Exists : string -&gt; bool" Usage="itemCmdletProviderIntrinsics.Exists path" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="path">
+             The path to the item to determine if it exists. It may be a drive or provider-qualified path and may include
+             glob characters.
+             </param>
+        <summary>
+             Determines if an item at the given path exits.
+             </summary>
+        <returns>
+             True if the item at the specified path exists. False otherwise.
+             </returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+             If <paramref name="path" /> is null.
+             </exception>
+        <exception cref="T:System.Management.Automation.ProviderNotFoundException">
+             If the <paramref name="path" /> refers to a provider that could not be found.
+             </exception>
+        <exception cref="T:System.Management.Automation.DriveNotFoundException">
+             If the <paramref name="path" /> refers to a drive that could not be found.
+             </exception>
+        <exception cref="T:System.NotSupportedException">
+             If the provider that the <paramref name="path" /> refers to does
+             not support this operation.
+             </exception>
+        <exception cref="T:System.Management.Automation.ProviderInvocationException">
+             If the provider threw an exception.
+             </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Exists">
+      <MemberSignature Language="C#" Value="public bool Exists (string path, bool force, bool literalPath);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool Exists(string path, bool force, bool literalPath) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.ItemCmdletProviderIntrinsics.Exists(System.String,System.Boolean,System.Boolean)" />
+      <MemberSignature Language="VB.NET" Value="Public Function Exists (path As String, force As Boolean, literalPath As Boolean) As Boolean" />
+      <MemberSignature Language="F#" Value="member this.Exists : string * bool * bool -&gt; bool" Usage="itemCmdletProviderIntrinsics.Exists (path, force, literalPath)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+        <Parameter Name="force" Type="System.Boolean" />
+        <Parameter Name="literalPath" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="path">
+             The path to the item to determine if it exists. It may be a drive or provider-qualified path and may include
+             glob characters.
+             </param>
+        <param name="force">
+             Passed on to providers to force operations.
+             </param>
+        <param name="literalPath">
+             If true, globbing is not done on paths.
+             </param>
+        <summary>
+             Determines if an item at the given path exits.
+             </summary>
+        <returns>
+             True if the item at the specified path exists. False otherwise.
+             </returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+             If <paramref name="path" /> is null.
+             </exception>
+        <exception cref="T:System.Management.Automation.ProviderNotFoundException">
+             If the <paramref name="path" /> refers to a provider that could not be found.
+             </exception>
+        <exception cref="T:System.Management.Automation.DriveNotFoundException">
+             If the <paramref name="path" /> refers to a drive that could not be found.
+             </exception>
+        <exception cref="T:System.NotSupportedException">
+             If the provider that the <paramref name="path" /> refers to does
+             not support this operation.
+             </exception>
+        <exception cref="T:System.Management.Automation.ProviderInvocationException">
+             If the provider threw an exception.
+             </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Get">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.Collection&lt;System.Management.Automation.PSObject&gt; Get (string path);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Collections.ObjectModel.Collection`1&lt;class System.Management.Automation.PSObject&gt; Get(string path) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.ItemCmdletProviderIntrinsics.Get(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Function Get (path As String) As Collection(Of PSObject)" />
+      <MemberSignature Language="F#" Value="member this.Get : string -&gt; System.Collections.ObjectModel.Collection&lt;System.Management.Automation.PSObject&gt;" Usage="itemCmdletProviderIntrinsics.Get path" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.Collection&lt;System.Management.Automation.PSObject&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="path">
+             The path to the item to retrieve. It may be a drive or provider-qualified path and may include
+             glob characters.
+             </param>
+        <summary>
+             Gets the item at the specified path.
+             </summary>
+        <returns>
+             The object(s) at the specified path.
+             </returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+             If <paramref name="path" /> is null.
+             </exception>
+        <exception cref="T:System.Management.Automation.ProviderNotFoundException">
+             If the <paramref name="path" /> refers to a provider that could not be found.
+             </exception>
+        <exception cref="T:System.Management.Automation.DriveNotFoundException">
+             If the <paramref name="path" /> refers to a drive that could not be found.
+             </exception>
+        <exception cref="T:System.Management.Automation.ItemNotFoundException">
+             If <paramref name="path" /> does not contain glob characters and
+             could not be found.
+             </exception>
+        <exception cref="T:System.NotSupportedException">
+             If the provider that the <paramref name="path" /> refers to does
+             not support this operation.
+             </exception>
+        <exception cref="T:System.Management.Automation.ProviderInvocationException">
+             If the provider threw an exception.
+             </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Get">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.Collection&lt;System.Management.Automation.PSObject&gt; Get (string[] path, bool force, bool literalPath);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Collections.ObjectModel.Collection`1&lt;class System.Management.Automation.PSObject&gt; Get(string[] path, bool force, bool literalPath) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.ItemCmdletProviderIntrinsics.Get(System.String[],System.Boolean,System.Boolean)" />
+      <MemberSignature Language="VB.NET" Value="Public Function Get (path As String(), force As Boolean, literalPath As Boolean) As Collection(Of PSObject)" />
+      <MemberSignature Language="F#" Value="member this.Get : string[] * bool * bool -&gt; System.Collections.ObjectModel.Collection&lt;System.Management.Automation.PSObject&gt;" Usage="itemCmdletProviderIntrinsics.Get (path, force, literalPath)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.Collection&lt;System.Management.Automation.PSObject&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="path" Type="System.String[]" />
+        <Parameter Name="force" Type="System.Boolean" />
+        <Parameter Name="literalPath" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="path">
+             The path(s) to the item(s) to retrieve. They may be a drive or provider-qualified path(s) and may include
+             glob characters.
+             </param>
+        <param name="force">
+             Passed on to providers to force operations.
+             </param>
+        <param name="literalPath">
+             If true, globbing is not done on paths.
+             </param>
+        <summary>
+             Gets the item at the specified path.
+             </summary>
+        <returns>
+             The object(s) at the specified path.
+             </returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+             If <paramref name="path" /> is null.
+             </exception>
+        <exception cref="T:System.Management.Automation.ProviderNotFoundException">
+             If the <paramref name="path" /> refers to a provider that could not be found.
+             </exception>
+        <exception cref="T:System.Management.Automation.DriveNotFoundException">
+             If the <paramref name="path" /> refers to a drive that could not be found.
+             </exception>
+        <exception cref="T:System.Management.Automation.ItemNotFoundException">
+             If <paramref name="path" /> does not contain glob characters and
+             could not be found.
+             </exception>
+        <exception cref="T:System.NotSupportedException">
+             If the provider that the <paramref name="path" /> refers to does
+             not support this operation.
+             </exception>
+        <exception cref="T:System.Management.Automation.ProviderInvocationException">
+             If the provider threw an exception.
+             </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Invoke">
+      <MemberSignature Language="C#" Value="public void Invoke (string path);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Invoke(string path) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.ItemCmdletProviderIntrinsics.Invoke(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Invoke (path As String)" />
+      <MemberSignature Language="F#" Value="member this.Invoke : string -&gt; unit" Usage="itemCmdletProviderIntrinsics.Invoke path" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="path">
+             The path to the item to invoke. It may be a drive or provider-qualified path and may include
+             glob characters.
+             </param>
+        <summary>
+             Invokes the default action of the item at the specified path.
+             </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+             If <paramref name="path" /> is null.
+             </exception>
+        <exception cref="T:System.Management.Automation.ProviderNotFoundException">
+             If the <paramref name="path" /> refers to a provider that could not be found.
+             </exception>
+        <exception cref="T:System.Management.Automation.DriveNotFoundException">
+             If the <paramref name="path" /> refers to a drive that could not be found.
+             </exception>
+        <exception cref="T:System.Management.Automation.ItemNotFoundException">
+             If <paramref name="path" /> does not contain glob characters and
+             could not be found.
+             </exception>
+        <exception cref="T:System.NotSupportedException">
+             If the provider that the <paramref name="path" /> refers to does
+             not support this operation.
+             </exception>
+        <exception cref="T:System.Management.Automation.ProviderInvocationException">
+             If the provider threw an exception.
+             </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Invoke">
+      <MemberSignature Language="C#" Value="public void Invoke (string[] path, bool literalPath);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Invoke(string[] path, bool literalPath) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.ItemCmdletProviderIntrinsics.Invoke(System.String[],System.Boolean)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Invoke (path As String(), literalPath As Boolean)" />
+      <MemberSignature Language="F#" Value="member this.Invoke : string[] * bool -&gt; unit" Usage="itemCmdletProviderIntrinsics.Invoke (path, literalPath)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="path" Type="System.String[]" />
+        <Parameter Name="literalPath" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="path">
+             The path(s) to the item(s) to invoke. They may be drive or provider-qualified paths and may include
+             glob characters.
+             </param>
+        <param name="literalPath">
+             If true, globbing is not done on paths.
+             </param>
+        <summary>
+             Invokes the default action of the item(s) at the specified path(s).
+             </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+             If <paramref name="path" /> is null.
+             </exception>
+        <exception cref="T:System.Management.Automation.ProviderNotFoundException">
+             If the <paramref name="path" /> refers to a provider that could not be found.
+             </exception>
+        <exception cref="T:System.Management.Automation.DriveNotFoundException">
+             If the <paramref name="path" /> refers to a drive that could not be found.
+             </exception>
+        <exception cref="T:System.Management.Automation.ItemNotFoundException">
+             If <paramref name="path" /> does not contain glob characters and
+             could not be found.
+             </exception>
+        <exception cref="T:System.NotSupportedException">
+             If the provider that the <paramref name="path" /> refers to does
+             not support this operation.
+             </exception>
+        <exception cref="T:System.Management.Automation.ProviderInvocationException">
+             If the provider threw an exception.
+             </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="IsContainer">
+      <MemberSignature Language="C#" Value="public bool IsContainer (string path);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool IsContainer(string path) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.ItemCmdletProviderIntrinsics.IsContainer(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Function IsContainer (path As String) As Boolean" />
+      <MemberSignature Language="F#" Value="member this.IsContainer : string -&gt; bool" Usage="itemCmdletProviderIntrinsics.IsContainer path" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="path">
+             The path to the item to determine if it is a container.
+             </param>
+        <summary>
+             Determines if the specified path is to an item that is a container.
+             </summary>
+        <returns>
+             True if the path is to an item that is a container. False otherwise.
+             </returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+             If <paramref name="path" /> is null.
+             </exception>
+        <exception cref="T:System.Management.Automation.ProviderNotFoundException">
+             If the <paramref name="path" /> refers to a provider that could not be found.
+             </exception>
+        <exception cref="T:System.Management.Automation.DriveNotFoundException">
+             If the <paramref name="path" /> refers to a drive that could not be found.
+             </exception>
+        <exception cref="T:System.NotSupportedException">
+             If the provider that the <paramref name="path" /> refers to does
+             not support this operation.
+             </exception>
+        <exception cref="T:System.Management.Automation.ProviderInvocationException">
+             If the provider threw an exception.
+             </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Move">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.Collection&lt;System.Management.Automation.PSObject&gt; Move (string path, string destination);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Collections.ObjectModel.Collection`1&lt;class System.Management.Automation.PSObject&gt; Move(string path, string destination) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.ItemCmdletProviderIntrinsics.Move(System.String,System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Function Move (path As String, destination As String) As Collection(Of PSObject)" />
+      <MemberSignature Language="F#" Value="member this.Move : string * string -&gt; System.Collections.ObjectModel.Collection&lt;System.Management.Automation.PSObject&gt;" Usage="itemCmdletProviderIntrinsics.Move (path, destination)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.Collection&lt;System.Management.Automation.PSObject&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+        <Parameter Name="destination" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="path">
+             The path to the item to move.
+             </param>
+        <param name="destination">
+             The path to the location that the item will be moved.
+             </param>
+        <summary>
+             Moves the item at the specified path to the specified destination.
+             </summary>
+        <returns>
+             The item(s) that were moved.
+             </returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+             If <paramref name="path" /> is null.
+             </exception>
+        <exception cref="T:System.ArgumentException">
+             If <paramref name="destination" /> resolves to multiple paths.
+             or
+             If <paramref name="destination" /> and <paramref name="path" /> don't resolve
+             to the same provider.
+             or
+             If <paramref name="path" /> resolves to multiple paths and <paramref name="destination" />
+             is not a container.
+             </exception>
+        <exception cref="T:System.Management.Automation.ProviderNotFoundException">
+             If the <paramref name="path" /> refers to a provider that could not be found.
+             </exception>
+        <exception cref="T:System.Management.Automation.DriveNotFoundException">
+             If the <paramref name="path" /> refers to a drive that could not be found.
+             </exception>
+        <exception cref="T:System.Management.Automation.ItemNotFoundException">
+             If <paramref name="path" /> does not contain glob characters and
+             could not be found.
+             </exception>
+        <exception cref="T:System.NotSupportedException">
+             If the provider that the <paramref name="path" /> refers to does
+             not support this operation.
+             </exception>
+        <exception cref="T:System.Management.Automation.ProviderInvocationException">
+             If the provider threw an exception.
+             </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Move">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.Collection&lt;System.Management.Automation.PSObject&gt; Move (string[] path, string destination, bool force, bool literalPath);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Collections.ObjectModel.Collection`1&lt;class System.Management.Automation.PSObject&gt; Move(string[] path, string destination, bool force, bool literalPath) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.ItemCmdletProviderIntrinsics.Move(System.String[],System.String,System.Boolean,System.Boolean)" />
+      <MemberSignature Language="VB.NET" Value="Public Function Move (path As String(), destination As String, force As Boolean, literalPath As Boolean) As Collection(Of PSObject)" />
+      <MemberSignature Language="F#" Value="member this.Move : string[] * string * bool * bool -&gt; System.Collections.ObjectModel.Collection&lt;System.Management.Automation.PSObject&gt;" Usage="itemCmdletProviderIntrinsics.Move (path, destination, force, literalPath)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.Collection&lt;System.Management.Automation.PSObject&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="path" Type="System.String[]" />
+        <Parameter Name="destination" Type="System.String" />
+        <Parameter Name="force" Type="System.Boolean" />
+        <Parameter Name="literalPath" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="path">
+             The path(s) to the item to move.
+             </param>
+        <param name="destination">
+             The path to the location that the item will be moved.
+             </param>
+        <param name="force">
+             Passed on to providers to force operations.
+             </param>
+        <param name="literalPath">
+             If true, globbing is not done on paths.
+             </param>
+        <summary>
+             Moves the item at the specified path to the specified destination.
+             </summary>
+        <returns>
+             The item(s) that were moved.
+             </returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+             If <paramref name="path" /> is null.
+             </exception>
+        <exception cref="T:System.ArgumentException">
+             If <paramref name="destination" /> resolves to multiple paths.
+             or
+             If <paramref name="destination" /> and <paramref name="path" /> don't resolve
+             to the same provider.
+             or
+             If <paramref name="path" /> resolves to multiple paths and <paramref name="destination" />
+             is not a container.
+             </exception>
+        <exception cref="T:System.Management.Automation.ProviderNotFoundException">
+             If the <paramref name="path" /> refers to a provider that could not be found.
+             </exception>
+        <exception cref="T:System.Management.Automation.DriveNotFoundException">
+             If the <paramref name="path" /> refers to a drive that could not be found.
+             </exception>
+        <exception cref="T:System.Management.Automation.ItemNotFoundException">
+             If <paramref name="path" /> does not contain glob characters and
+             could not be found.
+             </exception>
+        <exception cref="T:System.NotSupportedException">
+             If the provider that the <paramref name="path" /> refers to does
+             not support this operation.
+             </exception>
+        <exception cref="T:System.Management.Automation.ProviderInvocationException">
+             If the provider threw an exception.
+             </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="New">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.Collection&lt;System.Management.Automation.PSObject&gt; New (string path, string name, string itemTypeName, object content);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Collections.ObjectModel.Collection`1&lt;class System.Management.Automation.PSObject&gt; New(string path, string name, string itemTypeName, object content) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.ItemCmdletProviderIntrinsics.New(System.String,System.String,System.String,System.Object)" />
+      <MemberSignature Language="VB.NET" Value="Public Function New (path As String, name As String, itemTypeName As String, content As Object) As Collection(Of PSObject)" />
+      <MemberSignature Language="F#" Value="member this.New : string * string * string * obj -&gt; System.Collections.ObjectModel.Collection&lt;System.Management.Automation.PSObject&gt;" Usage="itemCmdletProviderIntrinsics.New (path, name, itemTypeName, content)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.Collection&lt;System.Management.Automation.PSObject&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="itemTypeName" Type="System.String" />
+        <Parameter Name="content" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="path">
+             The path to the container to create item in. It may be a drive or provider-qualified path and may include
+             glob characters.
+             </param>
+        <param name="name">
+             The name of the new item to create.
+             </param>
+        <param name="itemTypeName">
+             The type of the new item to create.
+             </param>
+        <param name="content">
+             The content of the new item to create.
+             </param>
+        <summary>
+             Creates a new item at the given path.
+             </summary>
+        <returns>
+             The item that was created.
+             </returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+             If <paramref name="path" /> or <paramref name="propertyToClear" /> is null.
+             </exception>
+        <exception cref="T:System.Management.Automation.ProviderNotFoundException">
+             If the <paramref name="path" /> refers to a provider that could not be found.
+             </exception>
+        <exception cref="T:System.Management.Automation.DriveNotFoundException">
+             If the <paramref name="path" /> refers to a drive that could not be found.
+             </exception>
+        <exception cref="T:System.Management.Automation.ItemNotFoundException">
+             If <paramref name="path" /> does not contain glob characters and
+             could not be found.
+             </exception>
+        <exception cref="T:System.NotSupportedException">
+             If the provider that the <paramref name="path" /> refers to does
+             not support this operation.
+             </exception>
+        <exception cref="T:System.Management.Automation.ProviderInvocationException">
+             If the provider threw an exception.
+             </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="New">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.Collection&lt;System.Management.Automation.PSObject&gt; New (string[] path, string name, string itemTypeName, object content, bool force);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Collections.ObjectModel.Collection`1&lt;class System.Management.Automation.PSObject&gt; New(string[] path, string name, string itemTypeName, object content, bool force) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.ItemCmdletProviderIntrinsics.New(System.String[],System.String,System.String,System.Object,System.Boolean)" />
+      <MemberSignature Language="VB.NET" Value="Public Function New (path As String(), name As String, itemTypeName As String, content As Object, force As Boolean) As Collection(Of PSObject)" />
+      <MemberSignature Language="F#" Value="member this.New : string[] * string * string * obj * bool -&gt; System.Collections.ObjectModel.Collection&lt;System.Management.Automation.PSObject&gt;" Usage="itemCmdletProviderIntrinsics.New (path, name, itemTypeName, content, force)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.Collection&lt;System.Management.Automation.PSObject&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="path" Type="System.String[]" />
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="itemTypeName" Type="System.String" />
+        <Parameter Name="content" Type="System.Object" />
+        <Parameter Name="force" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="path">
+             The path(s) to the container to create item in. They may be drive or provider-qualified path and may include
+             glob characters.
+             </param>
+        <param name="name">
+             The name of the new item to create.
+             </param>
+        <param name="itemTypeName">
+             The type of the new item to create.
+             </param>
+        <param name="content">
+             The content of the new item to create.
+             </param>
+        <param name="force">
+             Passed on to providers to force operations.
+             </param>
+        <summary>
+             Creates a new item at the given path.
+             </summary>
+        <returns>
+             The item(s) that was created.
+             </returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+             If <paramref name="path" /> or <paramref name="propertyToClear" /> is null.
+             </exception>
+        <exception cref="T:System.Management.Automation.ProviderNotFoundException">
+             If the <paramref name="path" /> refers to a provider that could not be found.
+             </exception>
+        <exception cref="T:System.Management.Automation.DriveNotFoundException">
+             If the <paramref name="path" /> refers to a drive that could not be found.
+             </exception>
+        <exception cref="T:System.Management.Automation.ItemNotFoundException">
+             If <paramref name="path" /> does not contain glob characters and
+             could not be found.
+             </exception>
+        <exception cref="T:System.NotSupportedException">
+             If the provider that the <paramref name="path" /> refers to does
+             not support this operation.
+             </exception>
+        <exception cref="T:System.Management.Automation.ProviderInvocationException">
+             If the provider threw an exception.
+             </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Remove">
+      <MemberSignature Language="C#" Value="public void Remove (string path, bool recurse);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Remove(string path, bool recurse) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.ItemCmdletProviderIntrinsics.Remove(System.String,System.Boolean)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Remove (path As String, recurse As Boolean)" />
+      <MemberSignature Language="F#" Value="member this.Remove : string * bool -&gt; unit" Usage="itemCmdletProviderIntrinsics.Remove (path, recurse)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+        <Parameter Name="recurse" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="path">
+             The path to the item to remove. It may be a drive or provider-qualified path and may include
+             glob characters.
+             </param>
+        <param name="recurse">
+             If true, removes all the children in all the sub-containers of the specified
+             container. If false, only removes the immediate children of the specified
+             container.
+             </param>
+        <summary>
+             Removes the items at the given path.
+             </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+             If <paramref name="path" /> is null.
+             </exception>
+        <exception cref="T:System.Management.Automation.ProviderNotFoundException">
+             If the <paramref name="path" /> refers to a provider that could not be found.
+             </exception>
+        <exception cref="T:System.Management.Automation.DriveNotFoundException">
+             If the <paramref name="path" /> refers to a drive that could not be found.
+             </exception>
+        <exception cref="T:System.Management.Automation.ItemNotFoundException">
+             If <paramref name="path" /> does not contain glob characters and
+             could not be found.
+             </exception>
+        <exception cref="T:System.NotSupportedException">
+             If the provider that the <paramref name="path" /> refers to does
+             not support this operation.
+             </exception>
+        <exception cref="T:System.Management.Automation.ProviderInvocationException">
+             If the provider threw an exception.
+             </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Remove">
+      <MemberSignature Language="C#" Value="public void Remove (string[] path, bool recurse, bool force, bool literalPath);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Remove(string[] path, bool recurse, bool force, bool literalPath) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.ItemCmdletProviderIntrinsics.Remove(System.String[],System.Boolean,System.Boolean,System.Boolean)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Remove (path As String(), recurse As Boolean, force As Boolean, literalPath As Boolean)" />
+      <MemberSignature Language="F#" Value="member this.Remove : string[] * bool * bool * bool -&gt; unit" Usage="itemCmdletProviderIntrinsics.Remove (path, recurse, force, literalPath)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="path" Type="System.String[]" />
+        <Parameter Name="recurse" Type="System.Boolean" />
+        <Parameter Name="force" Type="System.Boolean" />
+        <Parameter Name="literalPath" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="path">
+             The path(s) to the item(s) to remove. They may be drive or provider-qualified paths and may include
+             glob characters.
+             </param>
+        <param name="recurse">
+             If true, removes all the children in all the sub-containers of the specified
+             container. If false, only removes the immediate children of the specified
+             container.
+             </param>
+        <param name="force">
+             Passed on to providers to force operations.
+             </param>
+        <param name="literalPath">
+             If true, globbing is not done on paths.
+             </param>
+        <summary>
+             Removes the items at the given path.
+             </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+             If <paramref name="path" /> is null.
+             </exception>
+        <exception cref="T:System.Management.Automation.ProviderNotFoundException">
+             If the <paramref name="path" /> refers to a provider that could not be found.
+             </exception>
+        <exception cref="T:System.Management.Automation.DriveNotFoundException">
+             If the <paramref name="path" /> refers to a drive that could not be found.
+             </exception>
+        <exception cref="T:System.Management.Automation.ItemNotFoundException">
+             If <paramref name="path" /> does not contain glob characters and
+             could not be found.
+             </exception>
+        <exception cref="T:System.NotSupportedException">
+             If the provider that the <paramref name="path" /> refers to does
+             not support this operation.
+             </exception>
+        <exception cref="T:System.Management.Automation.ProviderInvocationException">
+             If the provider threw an exception.
+             </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Rename">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.Collection&lt;System.Management.Automation.PSObject&gt; Rename (string path, string newName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Collections.ObjectModel.Collection`1&lt;class System.Management.Automation.PSObject&gt; Rename(string path, string newName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.ItemCmdletProviderIntrinsics.Rename(System.String,System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Function Rename (path As String, newName As String) As Collection(Of PSObject)" />
+      <MemberSignature Language="F#" Value="member this.Rename : string * string -&gt; System.Collections.ObjectModel.Collection&lt;System.Management.Automation.PSObject&gt;" Usage="itemCmdletProviderIntrinsics.Rename (path, newName)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.Collection&lt;System.Management.Automation.PSObject&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+        <Parameter Name="newName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="path">
+             The path to the item to rename. It may be a drive or provider-qualified path and may include
+             glob characters.
+             </param>
+        <param name="newName">
+             The new name of the item.
+             </param>
+        <summary>
+             Renames the item at the given path.
+             </summary>
+        <returns>
+             The item(s) that were renamed.
+             </returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+             If <paramref name="path" /> or <paramref name="propertyToClear" /> is null.
+             </exception>
+        <exception cref="T:System.Management.Automation.ProviderNotFoundException">
+             If the <paramref name="path" /> refers to a provider that could not be found.
+             </exception>
+        <exception cref="T:System.Management.Automation.DriveNotFoundException">
+             If the <paramref name="path" /> refers to a drive that could not be found.
+             </exception>
+        <exception cref="T:System.Management.Automation.ItemNotFoundException">
+             If <paramref name="path" /> does not contain glob characters and
+             could not be found.
+             </exception>
+        <exception cref="T:System.NotSupportedException">
+             If the provider that the <paramref name="path" /> refers to does
+             not support this operation.
+             </exception>
+        <exception cref="T:System.Management.Automation.ProviderInvocationException">
+             If the provider threw an exception.
+             </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Rename">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.Collection&lt;System.Management.Automation.PSObject&gt; Rename (string path, string newName, bool force);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Collections.ObjectModel.Collection`1&lt;class System.Management.Automation.PSObject&gt; Rename(string path, string newName, bool force) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.ItemCmdletProviderIntrinsics.Rename(System.String,System.String,System.Boolean)" />
+      <MemberSignature Language="VB.NET" Value="Public Function Rename (path As String, newName As String, force As Boolean) As Collection(Of PSObject)" />
+      <MemberSignature Language="F#" Value="member this.Rename : string * string * bool -&gt; System.Collections.ObjectModel.Collection&lt;System.Management.Automation.PSObject&gt;" Usage="itemCmdletProviderIntrinsics.Rename (path, newName, force)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.Collection&lt;System.Management.Automation.PSObject&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+        <Parameter Name="newName" Type="System.String" />
+        <Parameter Name="force" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="path">
+             The path to the item to rename. It may be a drive or provider-qualified path and may include
+             glob characters.
+             </param>
+        <param name="newName">
+             The new name of the item.
+             </param>
+        <param name="force">
+             Passed on to providers to force operations.
+             </param>
+        <summary>
+             Renames the item at the given path.
+             </summary>
+        <returns>
+             The item(s) that were renamed.
+             </returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+             If <paramref name="path" /> or <paramref name="propertyToClear" /> is null.
+             </exception>
+        <exception cref="T:System.Management.Automation.ProviderNotFoundException">
+             If the <paramref name="path" /> refers to a provider that could not be found.
+             </exception>
+        <exception cref="T:System.Management.Automation.DriveNotFoundException">
+             If the <paramref name="path" /> refers to a drive that could not be found.
+             </exception>
+        <exception cref="T:System.Management.Automation.ItemNotFoundException">
+             If <paramref name="path" /> does not contain glob characters and
+             could not be found.
+             </exception>
+        <exception cref="T:System.NotSupportedException">
+             If the provider that the <paramref name="path" /> refers to does
+             not support this operation.
+             </exception>
+        <exception cref="T:System.Management.Automation.ProviderInvocationException">
+             If the provider threw an exception.
+             </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Set">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.Collection&lt;System.Management.Automation.PSObject&gt; Set (string path, object value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Collections.ObjectModel.Collection`1&lt;class System.Management.Automation.PSObject&gt; Set(string path, object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.ItemCmdletProviderIntrinsics.Set(System.String,System.Object)" />
+      <MemberSignature Language="VB.NET" Value="Public Function Set (path As String, value As Object) As Collection(Of PSObject)" />
+      <MemberSignature Language="F#" Value="member this.Set : string * obj -&gt; System.Collections.ObjectModel.Collection&lt;System.Management.Automation.PSObject&gt;" Usage="itemCmdletProviderIntrinsics.Set (path, value)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.Collection&lt;System.Management.Automation.PSObject&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="path">
+             The path to the item to set. It may be a drive or provider-qualified path and may include
+             glob characters.
+             </param>
+        <param name="value">
+             The new value to set the item to.
+             </param>
+        <summary>
+             Sets the item at the specified path.
+             </summary>
+        <returns>
+             The object(s) set at the specified path.
+             </returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+             If <paramref name="path" /> is null.
+             </exception>
+        <exception cref="T:System.Management.Automation.ProviderNotFoundException">
+             If the <paramref name="path" /> refers to a provider that could not be found.
+             </exception>
+        <exception cref="T:System.Management.Automation.DriveNotFoundException">
+             If the <paramref name="path" /> refers to a drive that could not be found.
+             </exception>
+        <exception cref="T:System.Management.Automation.ItemNotFoundException">
+             If <paramref name="path" /> does not contain glob characters and
+             could not be found.
+             </exception>
+        <exception cref="T:System.NotSupportedException">
+             If the provider that the <paramref name="path" /> refers to does
+             not support this operation.
+             </exception>
+        <exception cref="T:System.Management.Automation.ProviderInvocationException">
+             If the provider threw an exception.
+             </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Set">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.Collection&lt;System.Management.Automation.PSObject&gt; Set (string[] path, object value, bool force, bool literalPath);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Collections.ObjectModel.Collection`1&lt;class System.Management.Automation.PSObject&gt; Set(string[] path, object value, bool force, bool literalPath) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.ItemCmdletProviderIntrinsics.Set(System.String[],System.Object,System.Boolean,System.Boolean)" />
+      <MemberSignature Language="VB.NET" Value="Public Function Set (path As String(), value As Object, force As Boolean, literalPath As Boolean) As Collection(Of PSObject)" />
+      <MemberSignature Language="F#" Value="member this.Set : string[] * obj * bool * bool -&gt; System.Collections.ObjectModel.Collection&lt;System.Management.Automation.PSObject&gt;" Usage="itemCmdletProviderIntrinsics.Set (path, value, force, literalPath)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.Collection&lt;System.Management.Automation.PSObject&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="path" Type="System.String[]" />
+        <Parameter Name="value" Type="System.Object" />
+        <Parameter Name="force" Type="System.Boolean" />
+        <Parameter Name="literalPath" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="path">
+             The path(s) to the item(s) to set. They may be drive or provider-qualified paths and may include
+             glob characters.
+             </param>
+        <param name="value">
+             The new value to set the item to.
+             </param>
+        <param name="force">
+             Passed on to providers to force operations.
+             </param>
+        <param name="literalPath">
+             If true, globbing is not done on paths.
+             </param>
+        <summary>
+             Sets the item at the specified path.
+             </summary>
+        <returns>
+             The object(s) set at the specified path.
+             </returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+             If <paramref name="path" /> is null.
+             </exception>
+        <exception cref="T:System.Management.Automation.ProviderNotFoundException">
+             If the <paramref name="path" /> refers to a provider that could not be found.
+             </exception>
+        <exception cref="T:System.Management.Automation.DriveNotFoundException">
+             If the <paramref name="path" /> refers to a drive that could not be found.
+             </exception>
+        <exception cref="T:System.Management.Automation.ItemNotFoundException">
+             If <paramref name="path" /> does not contain glob characters and
+             could not be found.
+             </exception>
+        <exception cref="T:System.NotSupportedException">
+             If the provider that the <paramref name="path" /> refers to does
+             not support this operation.
+             </exception>
+        <exception cref="T:System.Management.Automation.ProviderInvocationException">
+             If the provider threw an exception.
+             </exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,135 @@
+﻿<Type Name="CodeGeneration" FullName="System.Management.Automation.Language.CodeGeneration">
+  <TypeSignature Language="C#" Value="public static class CodeGeneration" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract sealed beforefieldinit CodeGeneration extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Management.Automation.Language.CodeGeneration" />
+  <TypeSignature Language="VB.NET" Value="Public Class CodeGeneration" />
+  <TypeSignature Language="F#" Value="type CodeGeneration = class" />
+  <AssemblyInfo>
+    <AssemblyName>System.Management.Automation</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Contains utility methods for use in applications that generate PowerShell code.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="EscapeBlockCommentContent">
+      <MemberSignature Language="C#" Value="public static string EscapeBlockCommentContent (string value);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string EscapeBlockCommentContent(string value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Language.CodeGeneration.EscapeBlockCommentContent(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function EscapeBlockCommentContent (value As String) As String" />
+      <MemberSignature Language="F#" Value="static member EscapeBlockCommentContent : string -&gt; string" Usage="System.Management.Automation.Language.CodeGeneration.EscapeBlockCommentContent value" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="value">The content to be included in a block comment.</param>
+        <summary>
+            Escapes content so that it is safe for inclusion in a block comment.
+            For example: "&lt;#" + EscapeBlockCommentContent(userContent) + "#&gt;"
+            </summary>
+        <returns>Content with all block comment characters escaped.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EscapeFormatStringContent">
+      <MemberSignature Language="C#" Value="public static string EscapeFormatStringContent (string value);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string EscapeFormatStringContent(string value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Language.CodeGeneration.EscapeFormatStringContent(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function EscapeFormatStringContent (value As String) As String" />
+      <MemberSignature Language="F#" Value="static member EscapeFormatStringContent : string -&gt; string" Usage="System.Management.Automation.Language.CodeGeneration.EscapeFormatStringContent value" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="value">The content to be included in a format string.</param>
+        <summary>
+            Escapes content so that it is safe for inclusion in a string that will later be used as a
+            format string. If this is to be embedded inside of a single-quoted string, be sure to also
+            call EscapeSingleQuotedStringContent.
+            For example: "'" + EscapeSingleQuotedStringContent(EscapeFormatStringContent(userContent)) + "'" -f $args
+            </summary>
+        <returns>Content with all curly braces escaped.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EscapeSingleQuotedStringContent">
+      <MemberSignature Language="C#" Value="public static string EscapeSingleQuotedStringContent (string value);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string EscapeSingleQuotedStringContent(string value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Language.CodeGeneration.EscapeSingleQuotedStringContent(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function EscapeSingleQuotedStringContent (value As String) As String" />
+      <MemberSignature Language="F#" Value="static member EscapeSingleQuotedStringContent : string -&gt; string" Usage="System.Management.Automation.Language.CodeGeneration.EscapeSingleQuotedStringContent value" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="value">The content to be included in a single-quoted string.</param>
+        <summary>
+            Escapes content so that it is safe for inclusion in a single-quoted string.
+            For example: "'" + EscapeSingleQuotedStringContent(userContent) + "'"
+            </summary>
+        <returns>Content with all single-quotes escaped.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EscapeVariableName">
+      <MemberSignature Language="C#" Value="public static string EscapeVariableName (string value);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string EscapeVariableName(string value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Language.CodeGeneration.EscapeVariableName(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function EscapeVariableName (value As String) As String" />
+      <MemberSignature Language="F#" Value="static member EscapeVariableName : string -&gt; string" Usage="System.Management.Automation.Language.CodeGeneration.EscapeVariableName value" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="value">The content to be included as a variable name.</param>
+        <summary>
+             Escapes content so that it is safe for inclusion in a string that will later be used in a variable
+             name reference. This is only valid when used within PowerShell's curly brace naming syntax.
+            
+             For example: '${' + EscapeVariableName('value') + '}'
+             </summary>
+        <returns>Content with all curly braces and back-ticks escaped.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

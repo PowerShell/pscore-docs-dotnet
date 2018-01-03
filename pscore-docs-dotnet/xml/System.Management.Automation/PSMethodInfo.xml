@@ -1,0 +1,125 @@
+﻿<Type Name="PSMethodInfo" FullName="System.Management.Automation.PSMethodInfo">
+  <TypeSignature Language="C#" Value="public abstract class PSMethodInfo : System.Management.Automation.PSMemberInfo" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit PSMethodInfo extends System.Management.Automation.PSMemberInfo" />
+  <TypeSignature Language="DocId" Value="T:System.Management.Automation.PSMethodInfo" />
+  <TypeSignature Language="VB.NET" Value="Public MustInherit Class PSMethodInfo&#xA;Inherits PSMemberInfo" />
+  <TypeSignature Language="F#" Value="type PSMethodInfo = class&#xA;    inherit PSMemberInfo" />
+  <AssemblyInfo>
+    <AssemblyName>System.Management.Automation</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Management.Automation.PSMemberInfo</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Serves as a base class for all members that behave like methods.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected PSMethodInfo ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.PSMethodInfo.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Protected Sub New ()" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>
+            Initializes a new instance of a class derived from PSMethodInfo.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Invoke">
+      <MemberSignature Language="C#" Value="public abstract object Invoke (params object[] arguments);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object Invoke(object[] arguments) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.PSMethodInfo.Invoke(System.Object[])" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Function Invoke (ParamArray arguments As Object()) As Object" />
+      <MemberSignature Language="F#" Value="abstract member Invoke : obj[] -&gt; obj" Usage="pSMethodInfo.Invoke arguments" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="arguments" Type="System.Object[]">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.ParamArray</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="arguments">arguments to the method</param>
+        <summary>
+            Invokes the appropriate method overload for the given arguments and returns its result.
+            </summary>
+        <returns>return value from the method</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">if arguments is null</exception>
+        <exception cref="T:System.Management.Automation.MethodException">For problems finding an appropriate method for the arguments</exception>
+        <exception cref="T:System.Management.Automation.MethodInvocationException">For exceptions invoking the method.
+            This exception is also thrown for an <see cref="T:System.Management.Automation.PSScriptMethod" /> when there is no Runspace to run the script.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="OverloadDefinitions">
+      <MemberSignature Language="C#" Value="public abstract System.Collections.ObjectModel.Collection&lt;string&gt; OverloadDefinitions { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ObjectModel.Collection`1&lt;string&gt; OverloadDefinitions" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.PSMethodInfo.OverloadDefinitions" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride ReadOnly Property OverloadDefinitions As Collection(Of String)" />
+      <MemberSignature Language="F#" Value="member this.OverloadDefinitions : System.Collections.ObjectModel.Collection&lt;string&gt;" Usage="System.Management.Automation.PSMethodInfo.OverloadDefinitions" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.Collection&lt;System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets a list of all the overloads for this method
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Value">
+      <MemberSignature Language="C#" Value="public override sealed object Value { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object Value" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.PSMethodInfo.Value" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides NotOverridable Property Value As Object" />
+      <MemberSignature Language="F#" Value="member this.Value : obj with get, set" Usage="System.Management.Automation.PSMethodInfo.Value" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the value of this member. The getter returns the PSMethodInfo itself.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+            This is not the returned value of the method even for Methods with no arguments.
+            The getter returns this (the PSMethodInfo itself). The setter is not supported.
+            </remarks>
+        <exception cref="T:System.Management.Automation.ExtendedTypeSystemException">When setting the member</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

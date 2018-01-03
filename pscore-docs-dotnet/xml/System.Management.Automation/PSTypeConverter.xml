@@ -1,0 +1,296 @@
+﻿<Type Name="PSTypeConverter" FullName="System.Management.Automation.PSTypeConverter">
+  <TypeSignature Language="C#" Value="public abstract class PSTypeConverter" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit PSTypeConverter extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Management.Automation.PSTypeConverter" />
+  <TypeSignature Language="VB.NET" Value="Public MustInherit Class PSTypeConverter" />
+  <TypeSignature Language="F#" Value="type PSTypeConverter = class" />
+  <AssemblyInfo>
+    <AssemblyName>System.Management.Automation</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+             Defines a base class implemented when you need to customize the type conversion for a target class.
+             </summary>
+    <remarks>
+             There are two ways of associating the PSTypeConverter with its target class:
+                 - Through the type configuration file.
+                 - By applying a TypeConverterAttribute to the target class.
+            
+             Unlike System.ComponentModel.TypeConverter, PSTypeConverter can be applied to a family of types (like all types derived from System.Enum).
+             PSTypeConverter has two main differences from TypeConverter:
+                 - It can be applied to a family of types and not only the one type as in TypeConverter. In order to do that
+             ConvertFrom and CanConvertFrom receive destinationType to know to which type specifically we are converting sourceValue.
+                 - ConvertTo and ConvertFrom receive formatProvider and ignoreCase.
+             Other differences to System.ComponentModel.TypeConverter:
+                 - There is no ITypeDescriptorContext.
+                 - This class is abstract
+             </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected PSTypeConverter ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.PSTypeConverter.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Protected Sub New ()" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanConvertFrom">
+      <MemberSignature Language="C#" Value="public virtual bool CanConvertFrom (System.Management.Automation.PSObject sourceValue, Type destinationType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool CanConvertFrom(class System.Management.Automation.PSObject sourceValue, class System.Type destinationType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.PSTypeConverter.CanConvertFrom(System.Management.Automation.PSObject,System.Type)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function CanConvertFrom (sourceValue As PSObject, destinationType As Type) As Boolean" />
+      <MemberSignature Language="F#" Value="abstract member CanConvertFrom : System.Management.Automation.PSObject * Type -&gt; bool&#xA;override this.CanConvertFrom : System.Management.Automation.PSObject * Type -&gt; bool" Usage="pSTypeConverter.CanConvertFrom (sourceValue, destinationType)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sourceValue" Type="System.Management.Automation.PSObject" />
+        <Parameter Name="destinationType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="sourceValue">value supposedly *not* of the types supported by this converted to be converted to the <paramref name="destinationType" /> parameter</param>
+        <param name="destinationType">one of the types supported by this converter to which the <paramref name="sourceValue" /> parameter should be converted</param>
+        <summary>
+            Determines if the converter can convert the <paramref name="sourceValue" /> parameter to the <paramref name="destinationType" /> parameter.
+            </summary>
+        <returns>True if the converter can convert the <paramref name="sourceValue" /> parameter to the <paramref name="destinationType" /> parameter, otherwise false.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanConvertFrom">
+      <MemberSignature Language="C#" Value="public abstract bool CanConvertFrom (object sourceValue, Type destinationType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool CanConvertFrom(object sourceValue, class System.Type destinationType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.PSTypeConverter.CanConvertFrom(System.Object,System.Type)" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Function CanConvertFrom (sourceValue As Object, destinationType As Type) As Boolean" />
+      <MemberSignature Language="F#" Value="abstract member CanConvertFrom : obj * Type -&gt; bool" Usage="pSTypeConverter.CanConvertFrom (sourceValue, destinationType)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sourceValue" Type="System.Object" />
+        <Parameter Name="destinationType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="sourceValue">value supposedly *not* of the types supported by this converted to be converted to the <paramref name="destinationType" /> parameter</param>
+        <param name="destinationType">one of the types supported by this converter to which the <paramref name="sourceValue" /> parameter should be converted</param>
+        <summary>
+            Determines if the converter can convert the <paramref name="sourceValue" /> parameter to the <paramref name="destinationType" /> parameter.
+            </summary>
+        <returns>True if the converter can convert the <paramref name="sourceValue" /> parameter to the <paramref name="destinationType" /> parameter, otherwise false.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanConvertTo">
+      <MemberSignature Language="C#" Value="public virtual bool CanConvertTo (System.Management.Automation.PSObject sourceValue, Type destinationType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool CanConvertTo(class System.Management.Automation.PSObject sourceValue, class System.Type destinationType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.PSTypeConverter.CanConvertTo(System.Management.Automation.PSObject,System.Type)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function CanConvertTo (sourceValue As PSObject, destinationType As Type) As Boolean" />
+      <MemberSignature Language="F#" Value="abstract member CanConvertTo : System.Management.Automation.PSObject * Type -&gt; bool&#xA;override this.CanConvertTo : System.Management.Automation.PSObject * Type -&gt; bool" Usage="pSTypeConverter.CanConvertTo (sourceValue, destinationType)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sourceValue" Type="System.Management.Automation.PSObject" />
+        <Parameter Name="destinationType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="sourceValue">value supposedly from one of the types supported by this converter to be converted to the <paramref name="destinationType" /> parameter</param>
+        <param name="destinationType">type to convert the <paramref name="sourceValue" /> parameter, supposedly not one of the types supported by the converter</param>
+        <summary>
+            Returns true if the converter can convert the <paramref name="sourceValue" /> parameter to the <paramref name="destinationType" /> parameter
+            </summary>
+        <returns>True if the converter can convert the <paramref name="sourceValue" /> parameter to the <paramref name="destinationType" /> parameter, otherwise false.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanConvertTo">
+      <MemberSignature Language="C#" Value="public abstract bool CanConvertTo (object sourceValue, Type destinationType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool CanConvertTo(object sourceValue, class System.Type destinationType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.PSTypeConverter.CanConvertTo(System.Object,System.Type)" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Function CanConvertTo (sourceValue As Object, destinationType As Type) As Boolean" />
+      <MemberSignature Language="F#" Value="abstract member CanConvertTo : obj * Type -&gt; bool" Usage="pSTypeConverter.CanConvertTo (sourceValue, destinationType)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sourceValue" Type="System.Object" />
+        <Parameter Name="destinationType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="sourceValue">value supposedly from one of the types supported by this converter to be converted to the <paramref name="destinationType" /> parameter</param>
+        <param name="destinationType">type to convert the <paramref name="sourceValue" /> parameter, supposedly not one of the types supported by the converter</param>
+        <summary>
+            Returns true if the converter can convert the <paramref name="sourceValue" /> parameter to the <paramref name="destinationType" /> parameter
+            </summary>
+        <returns>True if the converter can convert the <paramref name="sourceValue" /> parameter to the <paramref name="destinationType" /> parameter, otherwise false.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ConvertFrom">
+      <MemberSignature Language="C#" Value="public virtual object ConvertFrom (System.Management.Automation.PSObject sourceValue, Type destinationType, IFormatProvider formatProvider, bool ignoreCase);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object ConvertFrom(class System.Management.Automation.PSObject sourceValue, class System.Type destinationType, class System.IFormatProvider formatProvider, bool ignoreCase) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.PSTypeConverter.ConvertFrom(System.Management.Automation.PSObject,System.Type,System.IFormatProvider,System.Boolean)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function ConvertFrom (sourceValue As PSObject, destinationType As Type, formatProvider As IFormatProvider, ignoreCase As Boolean) As Object" />
+      <MemberSignature Language="F#" Value="abstract member ConvertFrom : System.Management.Automation.PSObject * Type * IFormatProvider * bool -&gt; obj&#xA;override this.ConvertFrom : System.Management.Automation.PSObject * Type * IFormatProvider * bool -&gt; obj" Usage="pSTypeConverter.ConvertFrom (sourceValue, destinationType, formatProvider, ignoreCase)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sourceValue" Type="System.Management.Automation.PSObject" />
+        <Parameter Name="destinationType" Type="System.Type" />
+        <Parameter Name="formatProvider" Type="System.IFormatProvider" />
+        <Parameter Name="ignoreCase" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="sourceValue">value supposedly *not* of the types supported by this converted to be converted to the <paramref name="destinationType" /> parameter</param>
+        <param name="destinationType">one of the types supported by this converter to which the <paramref name="sourceValue" /> parameter should be converted to</param>
+        <param name="formatProvider">The format provider to use like in IFormattable's ToString</param>
+        <param name="ignoreCase">true if case should be ignored</param>
+        <summary>
+            Converts the <paramref name="sourceValue" /> parameter to the <paramref name="destinationType" /> parameter using formatProvider and ignoreCase
+            </summary>
+        <returns>the <paramref name="sourceValue" /> parameter converted to the <paramref name="destinationType" /> parameter using formatProvider and ignoreCase</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidCastException">if no conversion was possible</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ConvertFrom">
+      <MemberSignature Language="C#" Value="public abstract object ConvertFrom (object sourceValue, Type destinationType, IFormatProvider formatProvider, bool ignoreCase);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object ConvertFrom(object sourceValue, class System.Type destinationType, class System.IFormatProvider formatProvider, bool ignoreCase) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.PSTypeConverter.ConvertFrom(System.Object,System.Type,System.IFormatProvider,System.Boolean)" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Function ConvertFrom (sourceValue As Object, destinationType As Type, formatProvider As IFormatProvider, ignoreCase As Boolean) As Object" />
+      <MemberSignature Language="F#" Value="abstract member ConvertFrom : obj * Type * IFormatProvider * bool -&gt; obj" Usage="pSTypeConverter.ConvertFrom (sourceValue, destinationType, formatProvider, ignoreCase)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sourceValue" Type="System.Object" />
+        <Parameter Name="destinationType" Type="System.Type" />
+        <Parameter Name="formatProvider" Type="System.IFormatProvider" />
+        <Parameter Name="ignoreCase" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="sourceValue">value supposedly *not* of the types supported by this converted to be converted to the <paramref name="destinationType" /> parameter</param>
+        <param name="destinationType">one of the types supported by this converter to which the <paramref name="sourceValue" /> parameter should be converted to</param>
+        <param name="formatProvider">The format provider to use like in IFormattable's ToString</param>
+        <param name="ignoreCase">true if case should be ignored</param>
+        <summary>
+            Converts the <paramref name="sourceValue" /> parameter to the <paramref name="destinationType" /> parameter using formatProvider and ignoreCase
+            </summary>
+        <returns>the <paramref name="sourceValue" /> parameter converted to the <paramref name="destinationType" /> parameter using formatProvider and ignoreCase</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidCastException">if no conversion was possible</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ConvertTo">
+      <MemberSignature Language="C#" Value="public virtual object ConvertTo (System.Management.Automation.PSObject sourceValue, Type destinationType, IFormatProvider formatProvider, bool ignoreCase);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object ConvertTo(class System.Management.Automation.PSObject sourceValue, class System.Type destinationType, class System.IFormatProvider formatProvider, bool ignoreCase) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.PSTypeConverter.ConvertTo(System.Management.Automation.PSObject,System.Type,System.IFormatProvider,System.Boolean)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function ConvertTo (sourceValue As PSObject, destinationType As Type, formatProvider As IFormatProvider, ignoreCase As Boolean) As Object" />
+      <MemberSignature Language="F#" Value="abstract member ConvertTo : System.Management.Automation.PSObject * Type * IFormatProvider * bool -&gt; obj&#xA;override this.ConvertTo : System.Management.Automation.PSObject * Type * IFormatProvider * bool -&gt; obj" Usage="pSTypeConverter.ConvertTo (sourceValue, destinationType, formatProvider, ignoreCase)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sourceValue" Type="System.Management.Automation.PSObject" />
+        <Parameter Name="destinationType" Type="System.Type" />
+        <Parameter Name="formatProvider" Type="System.IFormatProvider" />
+        <Parameter Name="ignoreCase" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="sourceValue">value supposedly from one of the types supported by this converter to be converted to the <paramref name="destinationType" /> parameter</param>
+        <param name="destinationType">type to convert the <paramref name="sourceValue" /> parameter, supposedly not one of the types supported by the converter</param>
+        <param name="formatProvider">The format provider to use like in IFormattable's ToString</param>
+        <param name="ignoreCase">true if case should be ignored</param>
+        <summary>
+            Converts the <paramref name="sourceValue" /> parameter to the <paramref name="destinationType" /> parameter using formatProvider and ignoreCase
+            </summary>
+        <returns>sourceValue converted to the <paramref name="destinationType" /> parameter using formatProvider and ignoreCase</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidCastException">if no conversion was possible</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ConvertTo">
+      <MemberSignature Language="C#" Value="public abstract object ConvertTo (object sourceValue, Type destinationType, IFormatProvider formatProvider, bool ignoreCase);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object ConvertTo(object sourceValue, class System.Type destinationType, class System.IFormatProvider formatProvider, bool ignoreCase) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.PSTypeConverter.ConvertTo(System.Object,System.Type,System.IFormatProvider,System.Boolean)" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Function ConvertTo (sourceValue As Object, destinationType As Type, formatProvider As IFormatProvider, ignoreCase As Boolean) As Object" />
+      <MemberSignature Language="F#" Value="abstract member ConvertTo : obj * Type * IFormatProvider * bool -&gt; obj" Usage="pSTypeConverter.ConvertTo (sourceValue, destinationType, formatProvider, ignoreCase)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sourceValue" Type="System.Object" />
+        <Parameter Name="destinationType" Type="System.Type" />
+        <Parameter Name="formatProvider" Type="System.IFormatProvider" />
+        <Parameter Name="ignoreCase" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="sourceValue">value supposedly from one of the types supported by this converter to be converted to the <paramref name="destinationType" /> parameter</param>
+        <param name="destinationType">type to convert the <paramref name="sourceValue" /> parameter, supposedly not one of the types supported by the converter</param>
+        <param name="formatProvider">The format provider to use like in IFormattable's ToString</param>
+        <param name="ignoreCase">true if case should be ignored</param>
+        <summary>
+            Converts the <paramref name="sourceValue" /> parameter to the <paramref name="destinationType" /> parameter using formatProvider and ignoreCase
+            </summary>
+        <returns>sourceValue converted to the <paramref name="destinationType" /> parameter using formatProvider and ignoreCase</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidCastException">if no conversion was possible</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

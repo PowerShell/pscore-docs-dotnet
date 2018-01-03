@@ -1,0 +1,901 @@
+﻿<Type Name="Job" FullName="System.Management.Automation.Job">
+  <TypeSignature Language="C#" Value="public abstract class Job : IDisposable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit Job extends System.Object implements class System.IDisposable" />
+  <TypeSignature Language="DocId" Value="T:System.Management.Automation.Job" />
+  <TypeSignature Language="VB.NET" Value="Public MustInherit Class Job&#xA;Implements IDisposable" />
+  <TypeSignature Language="F#" Value="type Job = class&#xA;    interface IDisposable" />
+  <AssemblyInfo>
+    <AssemblyName>System.Management.Automation</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>
+            Represents a command running in background. A job object can internally
+            contain many child job objects.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected Job ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Job.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Protected Sub New ()" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>
+            Default constructor
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected Job (string command);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(string command) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Job.#ctor(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Protected Sub New (command As String)" />
+      <MemberSignature Language="F#" Value="new System.Management.Automation.Job : string -&gt; System.Management.Automation.Job" Usage="new System.Management.Automation.Job command" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="command" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="command">Command invoked by this job object</param>
+        <summary>
+            Creates an instance of this class
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected Job (string command, string name);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(string command, string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Job.#ctor(System.String,System.String)" />
+      <MemberSignature Language="VB.NET" Value="Protected Sub New (command As String, name As String)" />
+      <MemberSignature Language="F#" Value="new System.Management.Automation.Job : string * string -&gt; System.Management.Automation.Job" Usage="new System.Management.Automation.Job (command, name)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="command" Type="System.String" />
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="command">Command invoked by this job object</param>
+        <param name="name">Friendly name for the job object</param>
+        <summary>
+            Creates an instance of this class
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected Job (string command, string name, System.Collections.Generic.IList&lt;System.Management.Automation.Job&gt; childJobs);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(string command, string name, class System.Collections.Generic.IList`1&lt;class System.Management.Automation.Job&gt; childJobs) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Job.#ctor(System.String,System.String,System.Collections.Generic.IList{System.Management.Automation.Job})" />
+      <MemberSignature Language="VB.NET" Value="Protected Sub New (command As String, name As String, childJobs As IList(Of Job))" />
+      <MemberSignature Language="F#" Value="new System.Management.Automation.Job : string * string * System.Collections.Generic.IList&lt;System.Management.Automation.Job&gt; -&gt; System.Management.Automation.Job" Usage="new System.Management.Automation.Job (command, name, childJobs)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="command" Type="System.String" />
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="childJobs" Type="System.Collections.Generic.IList&lt;System.Management.Automation.Job&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="command">Command invoked by this job object</param>
+        <param name="name">Friendly name for the job object</param>
+        <param name="childJobs">Child jobs of this job object</param>
+        <summary>
+            Creates an instance of this class
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected Job (string command, string name, Guid instanceId);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(string command, string name, valuetype System.Guid instanceId) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Job.#ctor(System.String,System.String,System.Guid)" />
+      <MemberSignature Language="VB.NET" Value="Protected Sub New (command As String, name As String, instanceId As Guid)" />
+      <MemberSignature Language="F#" Value="new System.Management.Automation.Job : string * string * Guid -&gt; System.Management.Automation.Job" Usage="new System.Management.Automation.Job (command, name, instanceId)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="command" Type="System.String" />
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="instanceId" Type="System.Guid" />
+      </Parameters>
+      <Docs>
+        <param name="command">Command invoked by this job object</param>
+        <param name="name">Friendly name for the job object</param>
+        <param name="instanceId">InstanceId to be used for this job object</param>
+        <summary>
+            Creates an instance of this class
+            </summary>
+        <remarks>The InstanceId may need to be set to maintain job identity across
+            instances of the process.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected Job (string command, string name, System.Management.Automation.JobIdentifier token);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(string command, string name, class System.Management.Automation.JobIdentifier token) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Job.#ctor(System.String,System.String,System.Management.Automation.JobIdentifier)" />
+      <MemberSignature Language="VB.NET" Value="Protected Sub New (command As String, name As String, token As JobIdentifier)" />
+      <MemberSignature Language="F#" Value="new System.Management.Automation.Job : string * string * System.Management.Automation.JobIdentifier -&gt; System.Management.Automation.Job" Usage="new System.Management.Automation.Job (command, name, token)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="command" Type="System.String" />
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="token" Type="System.Management.Automation.JobIdentifier" />
+      </Parameters>
+      <Docs>
+        <param name="command">Command invoked by this job object</param>
+        <param name="name">Friendly name for the job object</param>
+        <param name="token">Id and InstanceId pair to be used for this job object</param>
+        <summary>
+            Creates an instance of this class
+            </summary>
+        <remarks>The JobIdentifier is a token that must be issued by PowerShell to allow
+            reuse of the Id. This is the only way to set either Id or instance Id.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AutoGenerateJobName">
+      <MemberSignature Language="C#" Value="protected string AutoGenerateJobName ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance string AutoGenerateJobName() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Job.AutoGenerateJobName" />
+      <MemberSignature Language="VB.NET" Value="Protected Function AutoGenerateJobName () As String" />
+      <MemberSignature Language="F#" Value="member this.AutoGenerateJobName : unit -&gt; string" Usage="job.AutoGenerateJobName " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Automatically generate a job name if the user
+            does not supply one
+            </summary>
+        <returns>auto generated job name</returns>
+        <remarks>Since the user can script/program against the
+            job name, the auto generated name will not be
+            localizable</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ChildJobs">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IList&lt;System.Management.Automation.Job&gt; ChildJobs { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IList`1&lt;class System.Management.Automation.Job&gt; ChildJobs" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.Job.ChildJobs" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ChildJobs As IList(Of Job)" />
+      <MemberSignature Language="F#" Value="member this.ChildJobs : System.Collections.Generic.IList&lt;System.Management.Automation.Job&gt;" Usage="System.Management.Automation.Job.ChildJobs" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IList&lt;System.Management.Automation.Job&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            List of child jobs contained within this job
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Command">
+      <MemberSignature Language="C#" Value="public string Command { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Command" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.Job.Command" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Command As String" />
+      <MemberSignature Language="F#" Value="member this.Command : string" Usage="System.Management.Automation.Job.Command" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Command Invoked by this Job
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Debug">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.PSDataCollection&lt;System.Management.Automation.DebugRecord&gt; Debug { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Management.Automation.PSDataCollection`1&lt;class System.Management.Automation.DebugRecord&gt; Debug" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.Job.Debug" />
+      <MemberSignature Language="VB.NET" Value="Public Property Debug As PSDataCollection(Of DebugRecord)" />
+      <MemberSignature Language="F#" Value="member this.Debug : System.Management.Automation.PSDataCollection&lt;System.Management.Automation.DebugRecord&gt; with get, set" Usage="System.Management.Automation.Job.Debug" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.PSDataCollection&lt;System.Management.Automation.DebugRecord&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets the debug buffer. Debug output of Job is written
+            to this buffer.
+            <exception cref="T:System.ArgumentNullException">
+            Cannot set to a null value.
+            </exception></summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ObjectDisposedException">
+            Object is disposed.
+            </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="public void Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Dispose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Job.Dispose" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Dispose ()" />
+      <MemberSignature Language="F#" Value="abstract member Dispose : unit -&gt; unit&#xA;override this.Dispose : unit -&gt; unit" Usage="job.Dispose " />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.IDisposable.Dispose</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Dispose all managed resources. This will suppress finalizer on the object from getting called by
+            calling System.GC.SuppressFinalize(this).
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="protected virtual void Dispose (bool disposing);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void Dispose(bool disposing) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Job.Dispose(System.Boolean)" />
+      <MemberSignature Language="VB.NET" Value="Protected Overridable Sub Dispose (disposing As Boolean)" />
+      <MemberSignature Language="F#" Value="abstract member Dispose : bool -&gt; unit&#xA;override this.Dispose : bool -&gt; unit" Usage="job.Dispose disposing" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="disposing" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="disposing">
+            if true, release all the managed objects.
+            </param>
+        <summary>
+            Release all the resources.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DoLoadJobStreams">
+      <MemberSignature Language="C#" Value="protected virtual void DoLoadJobStreams ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void DoLoadJobStreams() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Job.DoLoadJobStreams" />
+      <MemberSignature Language="VB.NET" Value="Protected Overridable Sub DoLoadJobStreams ()" />
+      <MemberSignature Language="F#" Value="abstract member DoLoadJobStreams : unit -&gt; unit&#xA;override this.DoLoadJobStreams : unit -&gt; unit" Usage="job.DoLoadJobStreams " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            This method is introduce for delaying the loading of streams
+            for a particular job.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DoUnloadJobStreams">
+      <MemberSignature Language="C#" Value="protected virtual void DoUnloadJobStreams ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void DoUnloadJobStreams() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Job.DoUnloadJobStreams" />
+      <MemberSignature Language="VB.NET" Value="Protected Overridable Sub DoUnloadJobStreams ()" />
+      <MemberSignature Language="F#" Value="abstract member DoUnloadJobStreams : unit -&gt; unit&#xA;override this.DoUnloadJobStreams : unit -&gt; unit" Usage="job.DoUnloadJobStreams " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Unloads job streams information. Enables jobs to
+            clear stream information from memory
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Error">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.PSDataCollection&lt;System.Management.Automation.ErrorRecord&gt; Error { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Management.Automation.PSDataCollection`1&lt;class System.Management.Automation.ErrorRecord&gt; Error" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.Job.Error" />
+      <MemberSignature Language="VB.NET" Value="Public Property Error As PSDataCollection(Of ErrorRecord)" />
+      <MemberSignature Language="F#" Value="member this.Error : System.Management.Automation.PSDataCollection&lt;System.Management.Automation.ErrorRecord&gt; with get, set" Usage="System.Management.Automation.Job.Error" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.PSDataCollection&lt;System.Management.Automation.ErrorRecord&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets the error buffer. Errors of job are written
+            into this buffer.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+            Cannot set to a null value.
+            </exception>
+        <exception cref="T:System.ObjectDisposedException">
+            Object is disposed.
+            </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Finished">
+      <MemberSignature Language="C#" Value="public System.Threading.WaitHandle Finished { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Threading.WaitHandle Finished" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.Job.Finished" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Finished As WaitHandle" />
+      <MemberSignature Language="F#" Value="member this.Finished : System.Threading.WaitHandle" Usage="System.Management.Automation.Job.Finished" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.WaitHandle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Wait Handle which is signaled when job is finished.
+            This is set when state of the job is set to Completed,
+            Stopped or Failed.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HasMoreData">
+      <MemberSignature Language="C#" Value="public abstract bool HasMoreData { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool HasMoreData" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.Job.HasMoreData" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride ReadOnly Property HasMoreData As Boolean" />
+      <MemberSignature Language="F#" Value="member this.HasMoreData : bool" Usage="System.Management.Automation.Job.HasMoreData" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Indicates that more data is available in this
+            result object for reading.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Id">
+      <MemberSignature Language="C#" Value="public int Id { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Id" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.Job.Id" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Id As Integer" />
+      <MemberSignature Language="F#" Value="member this.Id : int" Usage="System.Management.Automation.Job.Id" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Short identifier for this result which will be
+            recycled and used within a process
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Information">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.PSDataCollection&lt;System.Management.Automation.InformationRecord&gt; Information { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Management.Automation.PSDataCollection`1&lt;class System.Management.Automation.InformationRecord&gt; Information" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.Job.Information" />
+      <MemberSignature Language="VB.NET" Value="Public Property Information As PSDataCollection(Of InformationRecord)" />
+      <MemberSignature Language="F#" Value="member this.Information : System.Management.Automation.PSDataCollection&lt;System.Management.Automation.InformationRecord&gt; with get, set" Usage="System.Management.Automation.Job.Information" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.PSDataCollection&lt;System.Management.Automation.InformationRecord&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets the information buffer. Information records of job are written to
+            this buffer
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+            Cannot set to a null value.
+            </exception>
+        <exception cref="T:System.ObjectDisposedException">
+            Object is disposed.
+            </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="InstanceId">
+      <MemberSignature Language="C#" Value="public Guid InstanceId { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Guid InstanceId" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.Job.InstanceId" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property InstanceId As Guid" />
+      <MemberSignature Language="F#" Value="member this.InstanceId : Guid" Usage="System.Management.Automation.Job.InstanceId" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Guid</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            unique identifier for this job
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="JobStateInfo">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.JobStateInfo JobStateInfo { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Management.Automation.JobStateInfo JobStateInfo" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.Job.JobStateInfo" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property JobStateInfo As JobStateInfo" />
+      <MemberSignature Language="F#" Value="member this.JobStateInfo : System.Management.Automation.JobStateInfo" Usage="System.Management.Automation.Job.JobStateInfo" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.JobStateInfo</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Status of the command execution.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LoadJobStreams">
+      <MemberSignature Language="C#" Value="public void LoadJobStreams ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void LoadJobStreams() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Job.LoadJobStreams" />
+      <MemberSignature Language="VB.NET" Value="Public Sub LoadJobStreams ()" />
+      <MemberSignature Language="F#" Value="member this.LoadJobStreams : unit -&gt; unit" Usage="job.LoadJobStreams " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Load the required job streams
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Location">
+      <MemberSignature Language="C#" Value="public abstract string Location { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Location" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.Job.Location" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride ReadOnly Property Location As String" />
+      <MemberSignature Language="F#" Value="member this.Location : string" Usage="System.Management.Automation.Job.Location" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Indicates a location where this job is running
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public string Name { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.Job.Name" />
+      <MemberSignature Language="VB.NET" Value="Public Property Name As String" />
+      <MemberSignature Language="F#" Value="member this.Name : string with get, set" Usage="System.Management.Automation.Job.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Name for identifying this job object
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Output">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.PSDataCollection&lt;System.Management.Automation.PSObject&gt; Output { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Management.Automation.PSDataCollection`1&lt;class System.Management.Automation.PSObject&gt; Output" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.Job.Output" />
+      <MemberSignature Language="VB.NET" Value="Public Property Output As PSDataCollection(Of PSObject)" />
+      <MemberSignature Language="F#" Value="member this.Output : System.Management.Automation.PSDataCollection&lt;System.Management.Automation.PSObject&gt; with get, set" Usage="System.Management.Automation.Job.Output" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.PSDataCollection&lt;System.Management.Automation.PSObject&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets the output buffer. Output of job is written
+            into this buffer.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+            Cannot set to a null value.
+            </exception>
+        <exception cref="T:System.ObjectDisposedException">
+            Object is disposed.
+            </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Progress">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.PSDataCollection&lt;System.Management.Automation.ProgressRecord&gt; Progress { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Management.Automation.PSDataCollection`1&lt;class System.Management.Automation.ProgressRecord&gt; Progress" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.Job.Progress" />
+      <MemberSignature Language="VB.NET" Value="Public Property Progress As PSDataCollection(Of ProgressRecord)" />
+      <MemberSignature Language="F#" Value="member this.Progress : System.Management.Automation.PSDataCollection&lt;System.Management.Automation.ProgressRecord&gt; with get, set" Usage="System.Management.Automation.Job.Progress" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.PSDataCollection&lt;System.Management.Automation.ProgressRecord&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets the progress buffer. Progress of job is written
+            into this buffer.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+            Cannot set to a null value.
+            </exception>
+        <exception cref="T:System.ObjectDisposedException">
+            Object is disposed.
+            </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="PSBeginTime">
+      <MemberSignature Language="C#" Value="public Nullable&lt;DateTime&gt; PSBeginTime { get; protected set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Nullable`1&lt;valuetype System.DateTime&gt; PSBeginTime" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.Job.PSBeginTime" />
+      <MemberSignature Language="VB.NET" Value="Public Property PSBeginTime As Nullable(Of DateTime)" />
+      <MemberSignature Language="F#" Value="member this.PSBeginTime : Nullable&lt;DateTime&gt; with get, set" Usage="System.Management.Automation.Job.PSBeginTime" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Nullable&lt;System.DateTime&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Time job was started.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PSEndTime">
+      <MemberSignature Language="C#" Value="public Nullable&lt;DateTime&gt; PSEndTime { get; protected set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Nullable`1&lt;valuetype System.DateTime&gt; PSEndTime" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.Job.PSEndTime" />
+      <MemberSignature Language="VB.NET" Value="Public Property PSEndTime As Nullable(Of DateTime)" />
+      <MemberSignature Language="F#" Value="member this.PSEndTime : Nullable&lt;DateTime&gt; with get, set" Usage="System.Management.Automation.Job.PSEndTime" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Nullable&lt;System.DateTime&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Time job stopped.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PSJobTypeName">
+      <MemberSignature Language="C#" Value="public string PSJobTypeName { get; protected internal set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string PSJobTypeName" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.Job.PSJobTypeName" />
+      <MemberSignature Language="VB.NET" Value="Public Property PSJobTypeName As String" />
+      <MemberSignature Language="F#" Value="member this.PSJobTypeName : string with get, set" Usage="System.Management.Automation.Job.PSJobTypeName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Job type name.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetJobState">
+      <MemberSignature Language="C#" Value="protected void SetJobState (System.Management.Automation.JobState state);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void SetJobState(valuetype System.Management.Automation.JobState state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Job.SetJobState(System.Management.Automation.JobState)" />
+      <MemberSignature Language="VB.NET" Value="Protected Sub SetJobState (state As JobState)" />
+      <MemberSignature Language="F#" Value="member this.SetJobState : System.Management.Automation.JobState -&gt; unit" Usage="job.SetJobState state" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="state" Type="System.Management.Automation.JobState" />
+      </Parameters>
+      <Docs>
+        <param name="state">
+            New State of Job
+            </param>
+        <summary>
+            Sets Job State.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StateChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler&lt;System.Management.Automation.JobStateEventArgs&gt; StateChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class System.Management.Automation.JobStateEventArgs&gt; StateChanged" />
+      <MemberSignature Language="DocId" Value="E:System.Management.Automation.Job.StateChanged" />
+      <MemberSignature Language="VB.NET" Value="Public Event StateChanged As EventHandler(Of JobStateEventArgs) " />
+      <MemberSignature Language="F#" Value="member this.StateChanged : EventHandler&lt;System.Management.Automation.JobStateEventArgs&gt; " Usage="member this.StateChanged : System.EventHandler&lt;System.Management.Automation.JobStateEventArgs&gt; " />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;System.Management.Automation.JobStateEventArgs&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Event raised when state of the job changes
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StatusMessage">
+      <MemberSignature Language="C#" Value="public abstract string StatusMessage { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string StatusMessage" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.Job.StatusMessage" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride ReadOnly Property StatusMessage As String" />
+      <MemberSignature Language="F#" Value="member this.StatusMessage : string" Usage="System.Management.Automation.Job.StatusMessage" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+             Success status of the command execution.
+             </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StopJob">
+      <MemberSignature Language="C#" Value="public abstract void StopJob ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void StopJob() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Job.StopJob" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Sub StopJob ()" />
+      <MemberSignature Language="F#" Value="abstract member StopJob : unit -&gt; unit" Usage="job.StopJob " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Stop this job object. If job contains child job, this should
+            stop child job objects also.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UnloadJobStreams">
+      <MemberSignature Language="C#" Value="public void UnloadJobStreams ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void UnloadJobStreams() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Job.UnloadJobStreams" />
+      <MemberSignature Language="VB.NET" Value="Public Sub UnloadJobStreams ()" />
+      <MemberSignature Language="F#" Value="member this.UnloadJobStreams : unit -&gt; unit" Usage="job.UnloadJobStreams " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Unload the required job streams
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Verbose">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.PSDataCollection&lt;System.Management.Automation.VerboseRecord&gt; Verbose { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Management.Automation.PSDataCollection`1&lt;class System.Management.Automation.VerboseRecord&gt; Verbose" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.Job.Verbose" />
+      <MemberSignature Language="VB.NET" Value="Public Property Verbose As PSDataCollection(Of VerboseRecord)" />
+      <MemberSignature Language="F#" Value="member this.Verbose : System.Management.Automation.PSDataCollection&lt;System.Management.Automation.VerboseRecord&gt; with get, set" Usage="System.Management.Automation.Job.Verbose" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.PSDataCollection&lt;System.Management.Automation.VerboseRecord&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets the verbose buffer. Verbose output of job is written to
+            this stream.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ObjectDisposedException">
+            Object is disposed.
+            </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Warning">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.PSDataCollection&lt;System.Management.Automation.WarningRecord&gt; Warning { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Management.Automation.PSDataCollection`1&lt;class System.Management.Automation.WarningRecord&gt; Warning" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.Job.Warning" />
+      <MemberSignature Language="VB.NET" Value="Public Property Warning As PSDataCollection(Of WarningRecord)" />
+      <MemberSignature Language="F#" Value="member this.Warning : System.Management.Automation.PSDataCollection&lt;System.Management.Automation.WarningRecord&gt; with get, set" Usage="System.Management.Automation.Job.Warning" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.PSDataCollection&lt;System.Management.Automation.WarningRecord&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets the warning buffer. Warnings of job are written to
+            this buffer
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+            Cannot set to a null value.
+            </exception>
+        <exception cref="T:System.ObjectDisposedException">
+            Object is disposed.
+            </exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

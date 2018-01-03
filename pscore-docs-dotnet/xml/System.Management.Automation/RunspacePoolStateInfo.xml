@@ -1,0 +1,95 @@
+﻿<Type Name="RunspacePoolStateInfo" FullName="System.Management.Automation.RunspacePoolStateInfo">
+  <TypeSignature Language="C#" Value="public sealed class RunspacePoolStateInfo" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit RunspacePoolStateInfo extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Management.Automation.RunspacePoolStateInfo" />
+  <TypeSignature Language="VB.NET" Value="Public NotInheritable Class RunspacePoolStateInfo" />
+  <TypeSignature Language="F#" Value="type RunspacePoolStateInfo = class" />
+  <AssemblyInfo>
+    <AssemblyName>System.Management.Automation</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Defines type which has information about RunspacePoolState
+            and exception associated with that state
+            </summary>
+    <remarks>This class is created so that a state change along
+            with its reason can be transported from the server to the
+            client in case of RemoteRunspacePool</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public RunspacePoolStateInfo (System.Management.Automation.Runspaces.RunspacePoolState state, Exception reason);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Management.Automation.Runspaces.RunspacePoolState state, class System.Exception reason) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.RunspacePoolStateInfo.#ctor(System.Management.Automation.Runspaces.RunspacePoolState,System.Exception)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (state As RunspacePoolState, reason As Exception)" />
+      <MemberSignature Language="F#" Value="new System.Management.Automation.RunspacePoolStateInfo : System.Management.Automation.Runspaces.RunspacePoolState * Exception -&gt; System.Management.Automation.RunspacePoolStateInfo" Usage="new System.Management.Automation.RunspacePoolStateInfo (state, reason)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="state" Type="System.Management.Automation.Runspaces.RunspacePoolState" />
+        <Parameter Name="reason" Type="System.Exception" />
+      </Parameters>
+      <Docs>
+        <param name="state">state</param>
+        <param name="reason">exception that resulted in this
+            state change. Can be null</param>
+        <summary>
+            Constructor for creating the state info
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Reason">
+      <MemberSignature Language="C#" Value="public Exception Reason { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Exception Reason" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.RunspacePoolStateInfo.Reason" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Reason As Exception" />
+      <MemberSignature Language="F#" Value="member this.Reason : Exception" Usage="System.Management.Automation.RunspacePoolStateInfo.Reason" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Exception</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Exception associated with that state
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="State">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.Runspaces.RunspacePoolState State { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Management.Automation.Runspaces.RunspacePoolState State" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.RunspacePoolStateInfo.State" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property State As RunspacePoolState" />
+      <MemberSignature Language="F#" Value="member this.State : System.Management.Automation.Runspaces.RunspacePoolState" Usage="System.Management.Automation.RunspacePoolStateInfo.State" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.Runspaces.RunspacePoolState</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            State of the runspace pool when this event occured
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

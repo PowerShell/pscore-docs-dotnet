@@ -1,0 +1,118 @@
+﻿<Type Name="PSObjectTypeDescriptionProvider" FullName="System.Management.Automation.PSObjectTypeDescriptionProvider">
+  <TypeSignature Language="C#" Value="public class PSObjectTypeDescriptionProvider : System.ComponentModel.TypeDescriptionProvider" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit PSObjectTypeDescriptionProvider extends System.ComponentModel.TypeDescriptionProvider" />
+  <TypeSignature Language="DocId" Value="T:System.Management.Automation.PSObjectTypeDescriptionProvider" />
+  <TypeSignature Language="VB.NET" Value="Public Class PSObjectTypeDescriptionProvider&#xA;Inherits TypeDescriptionProvider" />
+  <TypeSignature Language="F#" Value="type PSObjectTypeDescriptionProvider = class&#xA;    inherit TypeDescriptionProvider" />
+  <AssemblyInfo>
+    <AssemblyName>System.Management.Automation</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ComponentModel.TypeDescriptionProvider</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Retrieves a <see cref="T:System.Management.Automation.PSObjectTypeDescriptor" /> to provides information about the properties for an object of the type <see cref="T:System.Management.Automation.PSObject" />.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public PSObjectTypeDescriptionProvider ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.PSObjectTypeDescriptionProvider.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New ()" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>
+            Initializes a new instance of <see cref="T:System.Management.Automation.PSObjectTypeDescriptionProvider" /></summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GettingValueException">
+      <MemberSignature Language="C#" Value="public event EventHandler&lt;System.Management.Automation.GettingValueExceptionEventArgs&gt; GettingValueException;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class System.Management.Automation.GettingValueExceptionEventArgs&gt; GettingValueException" />
+      <MemberSignature Language="DocId" Value="E:System.Management.Automation.PSObjectTypeDescriptionProvider.GettingValueException" />
+      <MemberSignature Language="VB.NET" Value="Public Event GettingValueException As EventHandler(Of GettingValueExceptionEventArgs) " />
+      <MemberSignature Language="F#" Value="member this.GettingValueException : EventHandler&lt;System.Management.Automation.GettingValueExceptionEventArgs&gt; " Usage="member this.GettingValueException : System.EventHandler&lt;System.Management.Automation.GettingValueExceptionEventArgs&gt; " />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;System.Management.Automation.GettingValueExceptionEventArgs&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Occurs when there was an exception getting the value of a property.
+            </summary>
+        <remarks>
+            The ShouldThrow property of the <see cref="T:System.Management.Automation.GettingValueExceptionEventArgs" /> allows
+            subscribers to prevent the exception from being thrown.
+            </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetTypeDescriptor">
+      <MemberSignature Language="C#" Value="public override System.ComponentModel.ICustomTypeDescriptor GetTypeDescriptor (Type objectType, object instance);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.ComponentModel.ICustomTypeDescriptor GetTypeDescriptor(class System.Type objectType, object instance) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.PSObjectTypeDescriptionProvider.GetTypeDescriptor(System.Type,System.Object)" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Function GetTypeDescriptor (objectType As Type, instance As Object) As ICustomTypeDescriptor" />
+      <MemberSignature Language="F#" Value="override this.GetTypeDescriptor : Type * obj -&gt; System.ComponentModel.ICustomTypeDescriptor" Usage="pSObjectTypeDescriptionProvider.GetTypeDescriptor (objectType, instance)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.ICustomTypeDescriptor</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="objectType" Type="System.Type" />
+        <Parameter Name="instance" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="objectType">The type of object for which to retrieve the type descriptor. If this parameter is not noll and is not the <see cref="T:System.Management.Automation.PSObject" />, the return of this method will be null.</param>
+        <param name="instance">An instance of the type. If instance is null or has a type other than <see cref="T:System.Management.Automation.PSObject" />, this method returns null.</param>
+        <summary>
+            Retrieves a <see cref="T:System.Management.Automation.PSObjectTypeDescriptor" /> to provide information about the properties for an object of the type <see cref="T:System.Management.Automation.PSObject" />.
+            </summary>
+        <returns>An <see cref="T:System.ComponentModel.ICustomTypeDescriptor" /> that can provide property information for the
+            type <see cref="T:System.Management.Automation.PSObject" />, or null if <paramref name="objectType" /> is not null,
+            but has a type other than <see cref="T:System.Management.Automation.PSObject" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SettingValueException">
+      <MemberSignature Language="C#" Value="public event EventHandler&lt;System.Management.Automation.SettingValueExceptionEventArgs&gt; SettingValueException;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class System.Management.Automation.SettingValueExceptionEventArgs&gt; SettingValueException" />
+      <MemberSignature Language="DocId" Value="E:System.Management.Automation.PSObjectTypeDescriptionProvider.SettingValueException" />
+      <MemberSignature Language="VB.NET" Value="Public Event SettingValueException As EventHandler(Of SettingValueExceptionEventArgs) " />
+      <MemberSignature Language="F#" Value="member this.SettingValueException : EventHandler&lt;System.Management.Automation.SettingValueExceptionEventArgs&gt; " Usage="member this.SettingValueException : System.EventHandler&lt;System.Management.Automation.SettingValueExceptionEventArgs&gt; " />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;System.Management.Automation.SettingValueExceptionEventArgs&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Occurs when there was an exception setting the value of a property.
+            </summary>
+        <remarks>
+            The ShouldThrow property of the <see cref="T:System.Management.Automation.SettingValueExceptionEventArgs" /> allows
+            subscribers to prevent the exception from being thrown.
+            </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

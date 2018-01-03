@@ -1,0 +1,383 @@
+﻿<Type Name="SessionStateProxy" FullName="System.Management.Automation.Runspaces.SessionStateProxy">
+  <TypeSignature Language="C#" Value="public class SessionStateProxy" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit SessionStateProxy extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Management.Automation.Runspaces.SessionStateProxy" />
+  <TypeSignature Language="VB.NET" Value="Public Class SessionStateProxy" />
+  <TypeSignature Language="F#" Value="type SessionStateProxy = class" />
+  <AssemblyInfo>
+    <AssemblyName>System.Management.Automation</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            This class provides subset of functionality provided by
+            session state.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Applications">
+      <MemberSignature Language="C#" Value="public virtual System.Collections.Generic.List&lt;string&gt; Applications { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.List`1&lt;string&gt; Applications" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.Runspaces.SessionStateProxy.Applications" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable ReadOnly Property Applications As List(Of String)" />
+      <MemberSignature Language="F#" Value="member this.Applications : System.Collections.Generic.List&lt;string&gt;" Usage="System.Management.Automation.Runspaces.SessionStateProxy.Applications" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.List&lt;System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+             Get the list of applications out of session state.
+             </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.Management.Automation.Runspaces.InvalidRunspaceStateException">
+             Runspace is not open.
+             </exception>
+        <exception cref="T:System.InvalidOperationException">
+             Another SessionStateProxy call or another pipeline is in progress.
+             </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Drive">
+      <MemberSignature Language="C#" Value="public virtual System.Management.Automation.DriveManagementIntrinsics Drive { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Management.Automation.DriveManagementIntrinsics Drive" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.Runspaces.SessionStateProxy.Drive" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable ReadOnly Property Drive As DriveManagementIntrinsics" />
+      <MemberSignature Language="F#" Value="member this.Drive : System.Management.Automation.DriveManagementIntrinsics" Usage="System.Management.Automation.Runspaces.SessionStateProxy.Drive" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.DriveManagementIntrinsics</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+             Get the APIs to access drives out of session state
+             </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.Management.Automation.Runspaces.InvalidRunspaceStateException">
+             Runspace is not open.
+             </exception>
+        <exception cref="T:System.InvalidOperationException">
+             Another SessionStateProxy call or another pipeline is in progress.
+             </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetVariable">
+      <MemberSignature Language="C#" Value="public virtual object GetVariable (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object GetVariable(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Runspaces.SessionStateProxy.GetVariable(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function GetVariable (name As String) As Object" />
+      <MemberSignature Language="F#" Value="abstract member GetVariable : string -&gt; obj&#xA;override this.GetVariable : string -&gt; obj" Usage="sessionStateProxy.GetVariable name" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">
+             name of variable to look up
+             </param>
+        <summary>
+             Get a variable out of session state.
+             </summary>
+        <returns>
+             The value of the specified variable.
+             </returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+             name is null
+             </exception>
+        <exception cref="T:System.Management.Automation.Runspaces.InvalidRunspaceStateException">
+             Runspace is not open.
+             </exception>
+        <exception cref="T:System.InvalidOperationException">
+             Another SessionStateProxy call or another pipeline is in progress.
+             </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="InvokeCommand">
+      <MemberSignature Language="C#" Value="public virtual System.Management.Automation.CommandInvocationIntrinsics InvokeCommand { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Management.Automation.CommandInvocationIntrinsics InvokeCommand" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.Runspaces.SessionStateProxy.InvokeCommand" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable ReadOnly Property InvokeCommand As CommandInvocationIntrinsics" />
+      <MemberSignature Language="F#" Value="member this.InvokeCommand : System.Management.Automation.CommandInvocationIntrinsics" Usage="System.Management.Automation.Runspaces.SessionStateProxy.InvokeCommand" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.CommandInvocationIntrinsics</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+             Get the APIs to build script blocks and execute script out of session state.
+             </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.Management.Automation.Runspaces.InvalidRunspaceStateException">
+             Runspace is not open.
+             </exception>
+        <exception cref="T:System.InvalidOperationException">
+             Another SessionStateProxy call or another pipeline is in progress.
+             </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="InvokeProvider">
+      <MemberSignature Language="C#" Value="public virtual System.Management.Automation.ProviderIntrinsics InvokeProvider { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Management.Automation.ProviderIntrinsics InvokeProvider" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.Runspaces.SessionStateProxy.InvokeProvider" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable ReadOnly Property InvokeProvider As ProviderIntrinsics" />
+      <MemberSignature Language="F#" Value="member this.InvokeProvider : System.Management.Automation.ProviderIntrinsics" Usage="System.Management.Automation.Runspaces.SessionStateProxy.InvokeProvider" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.ProviderIntrinsics</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+             Gets the instance of the provider interface APIs out of session state.
+             </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.Management.Automation.Runspaces.InvalidRunspaceStateException">
+             Runspace is not open.
+             </exception>
+        <exception cref="T:System.InvalidOperationException">
+             Another SessionStateProxy call or another pipeline is in progress.
+             </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="LanguageMode">
+      <MemberSignature Language="C#" Value="public virtual System.Management.Automation.PSLanguageMode LanguageMode { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Management.Automation.PSLanguageMode LanguageMode" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.Runspaces.SessionStateProxy.LanguageMode" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Property LanguageMode As PSLanguageMode" />
+      <MemberSignature Language="F#" Value="member this.LanguageMode : System.Management.Automation.PSLanguageMode with get, set" Usage="System.Management.Automation.Runspaces.SessionStateProxy.LanguageMode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.PSLanguageMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+             Get/Set the language mode out of session state.
+             </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.Management.Automation.Runspaces.InvalidRunspaceStateException">
+             Runspace is not open.
+             </exception>
+        <exception cref="T:System.InvalidOperationException">
+             Another SessionStateProxy call or another pipeline is in progress.
+             </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Module">
+      <MemberSignature Language="C#" Value="public virtual System.Management.Automation.PSModuleInfo Module { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Management.Automation.PSModuleInfo Module" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.Runspaces.SessionStateProxy.Module" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable ReadOnly Property Module As PSModuleInfo" />
+      <MemberSignature Language="F#" Value="member this.Module : System.Management.Automation.PSModuleInfo" Usage="System.Management.Automation.Runspaces.SessionStateProxy.Module" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.PSModuleInfo</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+             Get the module info out of session state.
+             </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.Management.Automation.Runspaces.InvalidRunspaceStateException">
+             Runspace is not open.
+             </exception>
+        <exception cref="T:System.InvalidOperationException">
+             Another SessionStateProxy call or another pipeline is in progress.
+             </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Path">
+      <MemberSignature Language="C#" Value="public virtual System.Management.Automation.PathIntrinsics Path { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Management.Automation.PathIntrinsics Path" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.Runspaces.SessionStateProxy.Path" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable ReadOnly Property Path As PathIntrinsics" />
+      <MemberSignature Language="F#" Value="member this.Path : System.Management.Automation.PathIntrinsics" Usage="System.Management.Automation.Runspaces.SessionStateProxy.Path" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.PathIntrinsics</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+             Get the APIs to access paths and locations out of session state.
+             </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.Management.Automation.Runspaces.InvalidRunspaceStateException">
+             Runspace is not open.
+             </exception>
+        <exception cref="T:System.InvalidOperationException">
+             Another SessionStateProxy call or another pipeline is in progress.
+             </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Provider">
+      <MemberSignature Language="C#" Value="public virtual System.Management.Automation.CmdletProviderManagementIntrinsics Provider { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Management.Automation.CmdletProviderManagementIntrinsics Provider" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.Runspaces.SessionStateProxy.Provider" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable ReadOnly Property Provider As CmdletProviderManagementIntrinsics" />
+      <MemberSignature Language="F#" Value="member this.Provider : System.Management.Automation.CmdletProviderManagementIntrinsics" Usage="System.Management.Automation.Runspaces.SessionStateProxy.Provider" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.CmdletProviderManagementIntrinsics</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+             Get the APIs to access a provider out of session state.
+             </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.Management.Automation.Runspaces.InvalidRunspaceStateException">
+             Runspace is not open.
+             </exception>
+        <exception cref="T:System.InvalidOperationException">
+             Another SessionStateProxy call or another pipeline is in progress.
+             </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="PSVariable">
+      <MemberSignature Language="C#" Value="public virtual System.Management.Automation.PSVariableIntrinsics PSVariable { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Management.Automation.PSVariableIntrinsics PSVariable" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.Runspaces.SessionStateProxy.PSVariable" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable ReadOnly Property PSVariable As PSVariableIntrinsics" />
+      <MemberSignature Language="F#" Value="member this.PSVariable : System.Management.Automation.PSVariableIntrinsics" Usage="System.Management.Automation.Runspaces.SessionStateProxy.PSVariable" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.PSVariableIntrinsics</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+             Get the APIs to access variables out of session state.
+             </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.Management.Automation.Runspaces.InvalidRunspaceStateException">
+             Runspace is not open.
+             </exception>
+        <exception cref="T:System.InvalidOperationException">
+             Another SessionStateProxy call or another pipeline is in progress.
+             </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Scripts">
+      <MemberSignature Language="C#" Value="public virtual System.Collections.Generic.List&lt;string&gt; Scripts { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.List`1&lt;string&gt; Scripts" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.Runspaces.SessionStateProxy.Scripts" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable ReadOnly Property Scripts As List(Of String)" />
+      <MemberSignature Language="F#" Value="member this.Scripts : System.Collections.Generic.List&lt;string&gt;" Usage="System.Management.Automation.Runspaces.SessionStateProxy.Scripts" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.List&lt;System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+             Get the list of scripts out of session state.
+             </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.Management.Automation.Runspaces.InvalidRunspaceStateException">
+             Runspace is not open.
+             </exception>
+        <exception cref="T:System.InvalidOperationException">
+             Another SessionStateProxy call or another pipeline is in progress.
+             </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SetVariable">
+      <MemberSignature Language="C#" Value="public virtual void SetVariable (string name, object value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void SetVariable(string name, object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Runspaces.SessionStateProxy.SetVariable(System.String,System.Object)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Sub SetVariable (name As String, value As Object)" />
+      <MemberSignature Language="F#" Value="abstract member SetVariable : string * obj -&gt; unit&#xA;override this.SetVariable : string * obj -&gt; unit" Usage="sessionStateProxy.SetVariable (name, value)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="name">
+             The name of the item to set.
+             </param>
+        <param name="value">
+             The new value of the item being set.
+             </param>
+        <summary>
+             Set a variable in session state.
+             </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+             name is null
+             </exception>
+        <exception cref="T:System.Management.Automation.Runspaces.InvalidRunspaceStateException">
+             Runspace is not open.
+             </exception>
+        <exception cref="T:System.InvalidOperationException">
+             Another SessionStateProxy call or another pipeline is in progress.
+             </exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

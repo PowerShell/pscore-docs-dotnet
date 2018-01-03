@@ -1,0 +1,455 @@
+﻿<Type Name="CommandMetadata" FullName="System.Management.Automation.CommandMetadata">
+  <TypeSignature Language="C#" Value="public sealed class CommandMetadata" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit CommandMetadata extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Management.Automation.CommandMetadata" />
+  <TypeSignature Language="VB.NET" Value="Public NotInheritable Class CommandMetadata" />
+  <TypeSignature Language="F#" Value="type CommandMetadata = class" />
+  <AssemblyInfo>
+    <AssemblyName>System.Management.Automation</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Diagnostics.DebuggerDisplay("CommandName = {Name}; Type = {CommandType}")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>
+            This class represents the compiled metadata for a command type.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CommandMetadata (System.Management.Automation.CommandInfo commandInfo);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Management.Automation.CommandInfo commandInfo) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.CommandMetadata.#ctor(System.Management.Automation.CommandInfo)" />
+      <MemberSignature Language="F#" Value="new System.Management.Automation.CommandMetadata : System.Management.Automation.CommandInfo -&gt; System.Management.Automation.CommandMetadata" Usage="new System.Management.Automation.CommandMetadata commandInfo" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="commandInfo" Type="System.Management.Automation.CommandInfo" />
+      </Parameters>
+      <Docs>
+        <param name="commandInfo">
+            The commandInfo object to construct CommandMetadata for
+            </param>
+        <summary>
+            Construct a CommandMetadata object for the given commandInfo
+            </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+            commandInfo is null.
+            </exception>
+        <exception cref="T:System.Management.Automation.PSNotSupportedException">
+            If the commandInfo is an alias to an unknown command, or if the commandInfo
+            is an unsupported command type.
+            </exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CommandMetadata (System.Management.Automation.CommandMetadata other);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Management.Automation.CommandMetadata other) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.CommandMetadata.#ctor(System.Management.Automation.CommandMetadata)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (other As CommandMetadata)" />
+      <MemberSignature Language="F#" Value="new System.Management.Automation.CommandMetadata : System.Management.Automation.CommandMetadata -&gt; System.Management.Automation.CommandMetadata" Usage="new System.Management.Automation.CommandMetadata other" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="other" Type="System.Management.Automation.CommandMetadata" />
+      </Parameters>
+      <Docs>
+        <param name="other">object to copy</param>
+        <summary>
+            A copy constructor that creates a deep copy of the <paramref name="other" /> CommandMetadata object.
+            Instances of Attribute and Type classes are copied by reference.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CommandMetadata (string path);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string path) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.CommandMetadata.#ctor(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (path As String)" />
+      <MemberSignature Language="F#" Value="new System.Management.Automation.CommandMetadata : string -&gt; System.Management.Automation.CommandMetadata" Usage="new System.Management.Automation.CommandMetadata path" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="path">The path to the script file.</param>
+        <summary>
+            Construct a CommandMetadata object for a script file.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CommandMetadata (Type commandType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Type commandType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.CommandMetadata.#ctor(System.Type)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (commandType As Type)" />
+      <MemberSignature Language="F#" Value="new System.Management.Automation.CommandMetadata : Type -&gt; System.Management.Automation.CommandMetadata" Usage="new System.Management.Automation.CommandMetadata commandType" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="commandType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="commandType">
+            CLS complaint type to inspect for Cmdlet metadata.
+            </param>
+        <summary>
+            Constructs a CommandMetadata object for the given CLS complaint type
+            <paramref name="commandType" />.
+            </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+            commandType is null.
+            </exception>
+        <exception cref="T:System.Management.Automation.MetadataException">
+            If a parameter defines the same parameter-set name multiple times.
+            If the attributes could not be read from a property or field.
+            </exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CommandMetadata (System.Management.Automation.CommandInfo commandInfo, bool shouldGenerateCommonParameters);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Management.Automation.CommandInfo commandInfo, bool shouldGenerateCommonParameters) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.CommandMetadata.#ctor(System.Management.Automation.CommandInfo,System.Boolean)" />
+      <MemberSignature Language="F#" Value="new System.Management.Automation.CommandMetadata : System.Management.Automation.CommandInfo * bool -&gt; System.Management.Automation.CommandMetadata" Usage="new System.Management.Automation.CommandMetadata (commandInfo, shouldGenerateCommonParameters)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="commandInfo" Type="System.Management.Automation.CommandInfo" />
+        <Parameter Name="shouldGenerateCommonParameters" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="commandInfo">
+            The commandInfo object to construct CommandMetadata for
+            </param>
+        <param name="shouldGenerateCommonParameters">
+            Should common parameters be included in the metadata?
+            </param>
+        <summary>
+            Construct a CommandMetadata object for the given commandInfo
+            </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+            commandInfo is null.
+            </exception>
+        <exception cref="T:System.Management.Automation.PSNotSupportedException">
+            If the commandInfo is an alias to an unknown command, or if the commandInfo
+            is an unsupported command type.
+            </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CommandType">
+      <MemberSignature Language="C#" Value="public Type CommandType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type CommandType" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.CommandMetadata.CommandType" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property CommandType As Type" />
+      <MemberSignature Language="F#" Value="member this.CommandType : Type" Usage="System.Management.Automation.CommandMetadata.CommandType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The Type which this CommandMetadata represents.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ConfirmImpact">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.ConfirmImpact ConfirmImpact { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Management.Automation.ConfirmImpact ConfirmImpact" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.CommandMetadata.ConfirmImpact" />
+      <MemberSignature Language="VB.NET" Value="Public Property ConfirmImpact As ConfirmImpact" />
+      <MemberSignature Language="F#" Value="member this.ConfirmImpact : System.Management.Automation.ConfirmImpact with get, set" Usage="System.Management.Automation.CommandMetadata.ConfirmImpact" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.ConfirmImpact</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Indicates the "destructiveness" of the command operation and
+            when it should be confirmed.  This is only effective when
+            the command calls ShouldProcess, which should only occur when
+            SupportsShouldProcess is specified.
+            </summary>
+        <value />
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultParameterSetName">
+      <MemberSignature Language="C#" Value="public string DefaultParameterSetName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string DefaultParameterSetName" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.CommandMetadata.DefaultParameterSetName" />
+      <MemberSignature Language="VB.NET" Value="Public Property DefaultParameterSetName As String" />
+      <MemberSignature Language="F#" Value="member this.DefaultParameterSetName : string with get, set" Usage="System.Management.Automation.CommandMetadata.DefaultParameterSetName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets/Sets the default parameter set name
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetRestrictedCommands">
+      <MemberSignature Language="C#" Value="public static System.Collections.Generic.Dictionary&lt;string,System.Management.Automation.CommandMetadata&gt; GetRestrictedCommands (System.Management.Automation.SessionCapabilities sessionCapabilities);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Collections.Generic.Dictionary`2&lt;string, class System.Management.Automation.CommandMetadata&gt; GetRestrictedCommands(valuetype System.Management.Automation.SessionCapabilities sessionCapabilities) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.CommandMetadata.GetRestrictedCommands(System.Management.Automation.SessionCapabilities)" />
+      <MemberSignature Language="F#" Value="static member GetRestrictedCommands : System.Management.Automation.SessionCapabilities -&gt; System.Collections.Generic.Dictionary&lt;string, System.Management.Automation.CommandMetadata&gt;" Usage="System.Management.Automation.CommandMetadata.GetRestrictedCommands sessionCapabilities" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.Dictionary&lt;System.String,System.Management.Automation.CommandMetadata&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sessionCapabilities" Type="System.Management.Automation.SessionCapabilities" />
+      </Parameters>
+      <Docs>
+        <param name="sessionCapabilities">To be added.</param>
+        <summary>
+             Returns a dictionary from a command name to <see cref="T:System.Management.Automation.CommandMetadata" /> describing
+             how that command can be restricted to limit attack surface while still being usable
+             by features included in <paramref name="sessionCapabilities" />.
+            
+             For example the implicit remoting feature
+             (included in <see cref="F:System.Management.Automation.SessionCapabilities.RemoteServer" />)
+             doesn't use all parameters of Get-Help
+             and uses only a limited set of argument values for the parameters it does use.
+            
+             <see cref="T:System.Management.Automation.CommandMetadata" /> can be passed to <see cref="M:System.Management.Automation.ProxyCommand.Create(System.Management.Automation.CommandMetadata)" /> method to generate
+             a body of a proxy function that forwards calls to the actual cmdlet, while exposing only the parameters
+             listed in <see cref="T:System.Management.Automation.CommandMetadata" />.  Exposing only the restricted proxy function while making
+             the actual cmdlet and its aliases private can help in reducing attack surface of the remoting server.
+             </summary>
+        <returns />
+        <remarks>To be added.</remarks>
+        <altmember cref="M:System.Management.Automation.Runspaces.InitialSessionState.CreateRestricted(System.Management.Automation.SessionCapabilities)" />
+      </Docs>
+    </Member>
+    <Member MemberName="HelpUri">
+      <MemberSignature Language="C#" Value="public string HelpUri { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string HelpUri" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.CommandMetadata.HelpUri" />
+      <MemberSignature Language="VB.NET" Value="Public Property HelpUri As String" />
+      <MemberSignature Language="F#" Value="member this.HelpUri : string with get, set" Usage="System.Management.Automation.CommandMetadata.HelpUri" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Related link URI for Get-Help -Online
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public string Name { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.CommandMetadata.Name" />
+      <MemberSignature Language="VB.NET" Value="Public Property Name As String" />
+      <MemberSignature Language="F#" Value="member this.Name : string with get, set" Usage="System.Management.Automation.CommandMetadata.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the name of the command this metadata represents
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Parameters">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.Dictionary&lt;string,System.Management.Automation.ParameterMetadata&gt; Parameters { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.Dictionary`2&lt;string, class System.Management.Automation.ParameterMetadata&gt; Parameters" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.CommandMetadata.Parameters" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Parameters As Dictionary(Of String, ParameterMetadata)" />
+      <MemberSignature Language="F#" Value="member this.Parameters : System.Collections.Generic.Dictionary&lt;string, System.Management.Automation.ParameterMetadata&gt;" Usage="System.Management.Automation.CommandMetadata.Parameters" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.Dictionary&lt;System.String,System.Management.Automation.ParameterMetadata&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the parameter data for this command
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PositionalBinding">
+      <MemberSignature Language="C#" Value="public bool PositionalBinding { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool PositionalBinding" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.CommandMetadata.PositionalBinding" />
+      <MemberSignature Language="VB.NET" Value="Public Property PositionalBinding As Boolean" />
+      <MemberSignature Language="F#" Value="member this.PositionalBinding : bool with get, set" Usage="System.Management.Automation.CommandMetadata.PositionalBinding" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            When true, the command will auto-generate appropriate parameter metadata to support positional
+            parameters if the script hasn't already specified multiple parameter sets or specified positions
+            explicitly via the <see cref="T:System.Management.Automation.ParameterAttribute" />.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemotingCapability">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.RemotingCapability RemotingCapability { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Management.Automation.RemotingCapability RemotingCapability" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.CommandMetadata.RemotingCapability" />
+      <MemberSignature Language="VB.NET" Value="Public Property RemotingCapability As RemotingCapability" />
+      <MemberSignature Language="F#" Value="member this.RemotingCapability : System.Management.Automation.RemotingCapability with get, set" Usage="System.Management.Automation.CommandMetadata.RemotingCapability" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.RemotingCapability</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The remoting capabilities of this cmdlet, when exposed in a context
+            with ambient remoting.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SupportsPaging">
+      <MemberSignature Language="C#" Value="public bool SupportsPaging { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool SupportsPaging" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.CommandMetadata.SupportsPaging" />
+      <MemberSignature Language="VB.NET" Value="Public Property SupportsPaging As Boolean" />
+      <MemberSignature Language="F#" Value="member this.SupportsPaging : bool with get, set" Usage="System.Management.Automation.CommandMetadata.SupportsPaging" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            True if the cmdlet declared that it supports Paging, false otherwise.
+            </summary>
+        <value />
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SupportsShouldProcess">
+      <MemberSignature Language="C#" Value="public bool SupportsShouldProcess { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool SupportsShouldProcess" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.CommandMetadata.SupportsShouldProcess" />
+      <MemberSignature Language="VB.NET" Value="Public Property SupportsShouldProcess As Boolean" />
+      <MemberSignature Language="F#" Value="member this.SupportsShouldProcess : bool with get, set" Usage="System.Management.Automation.CommandMetadata.SupportsShouldProcess" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            True if the cmdlet declared that it supports ShouldProcess, false otherwise.
+            </summary>
+        <value />
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SupportsTransactions">
+      <MemberSignature Language="C#" Value="public bool SupportsTransactions { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool SupportsTransactions" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.CommandMetadata.SupportsTransactions" />
+      <MemberSignature Language="VB.NET" Value="Public Property SupportsTransactions As Boolean" />
+      <MemberSignature Language="F#" Value="member this.SupportsTransactions : bool with get, set" Usage="System.Management.Automation.CommandMetadata.SupportsTransactions" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            True if the cmdlet declared that it supports transactions, false otherwise.
+            </summary>
+        <value />
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

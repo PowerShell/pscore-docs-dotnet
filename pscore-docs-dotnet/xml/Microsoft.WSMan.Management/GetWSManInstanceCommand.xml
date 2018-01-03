@@ -1,0 +1,705 @@
+﻿<Type Name="GetWSManInstanceCommand" FullName="Microsoft.WSMan.Management.GetWSManInstanceCommand">
+  <TypeSignature Language="C#" Value="public class GetWSManInstanceCommand : Microsoft.WSMan.Management.AuthenticatingWSManCommand, IDisposable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit GetWSManInstanceCommand extends Microsoft.WSMan.Management.AuthenticatingWSManCommand implements class System.IDisposable" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.WSMan.Management.GetWSManInstanceCommand" />
+  <TypeSignature Language="VB.NET" Value="Public Class GetWSManInstanceCommand&#xA;Inherits AuthenticatingWSManCommand&#xA;Implements IDisposable" />
+  <TypeSignature Language="F#" Value="type GetWSManInstanceCommand = class&#xA;    inherit AuthenticatingWSManCommand&#xA;    interface IDisposable" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.WSMan.Management</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Microsoft.WSMan.Management.AuthenticatingWSManCommand</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Management.Automation.Cmdlet("Get", "WSManInstance", DefaultParameterSetName="GetInstance", HelpUri="https://go.microsoft.com/fwlink/?LinkId=141444")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>
+            Executes action on a target object specified by RESOURCE_URI, where
+            parameters are specified by key value pairs.
+            eg., Call StartService method on the spooler service
+            Invoke-WSManAction -Action StartService -ResourceURI wmicimv2/Win32_Service
+            -SelectorSet {Name=Spooler}
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public GetWSManInstanceCommand ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.WSMan.Management.GetWSManInstanceCommand.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New ()" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.WSMan.Management</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ApplicationName">
+      <MemberSignature Language="C#" Value="public string ApplicationName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ApplicationName" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.WSMan.Management.GetWSManInstanceCommand.ApplicationName" />
+      <MemberSignature Language="VB.NET" Value="Public Property ApplicationName As String" />
+      <MemberSignature Language="F#" Value="member this.ApplicationName : string with get, set" Usage="Microsoft.WSMan.Management.GetWSManInstanceCommand.ApplicationName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.WSMan.Management</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="GetInstance")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="Enumerate")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The following is the definition of the input parameter "ApplicationName".
+            ApplicationName identifies the remote endpoint.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Associations">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.SwitchParameter Associations { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Management.Automation.SwitchParameter Associations" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.WSMan.Management.GetWSManInstanceCommand.Associations" />
+      <MemberSignature Language="VB.NET" Value="Public Property Associations As SwitchParameter" />
+      <MemberSignature Language="F#" Value="member this.Associations : System.Management.Automation.SwitchParameter with get, set" Usage="Microsoft.WSMan.Management.GetWSManInstanceCommand.Associations" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.WSMan.Management</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="Enumerate")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.SwitchParameter</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The following is the definition of the input parameter "Associations".
+            Associations indicates retrieval of association instances as opposed to
+            associated instances. This can only be used when specifying the Dialect as
+            Association
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BasePropertiesOnly">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.SwitchParameter BasePropertiesOnly { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Management.Automation.SwitchParameter BasePropertiesOnly" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.WSMan.Management.GetWSManInstanceCommand.BasePropertiesOnly" />
+      <MemberSignature Language="VB.NET" Value="Public Property BasePropertiesOnly As SwitchParameter" />
+      <MemberSignature Language="F#" Value="member this.BasePropertiesOnly : System.Management.Automation.SwitchParameter with get, set" Usage="Microsoft.WSMan.Management.GetWSManInstanceCommand.BasePropertiesOnly" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.WSMan.Management</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Alias(Mono.Cecil.CustomAttributeArgument[])</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="Enumerate")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.SwitchParameter</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The following is the definition of the input parameter "BasePropertiesOnly".
+            Enumerate only those properties that are part of the base class
+            specification in the Resource URI. When
+            Shallow is specified then this flag has no effect
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ComputerName">
+      <MemberSignature Language="C#" Value="public string ComputerName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ComputerName" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.WSMan.Management.GetWSManInstanceCommand.ComputerName" />
+      <MemberSignature Language="VB.NET" Value="Public Property ComputerName As String" />
+      <MemberSignature Language="F#" Value="member this.ComputerName : string with get, set" Usage="Microsoft.WSMan.Management.GetWSManInstanceCommand.ComputerName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.WSMan.Management</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Alias(Mono.Cecil.CustomAttributeArgument[])</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="GetInstance")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="Enumerate")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The following is the definition of the input parameter "ComputerName".
+            Executes the management operation on the specified computer(s). The default
+            is the local computer. Type the fully qualified domain name, NETBIOS name or
+            IP address to indicate the remote host(s)
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ConnectionURI">
+      <MemberSignature Language="C#" Value="public Uri ConnectionURI { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Uri ConnectionURI" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.WSMan.Management.GetWSManInstanceCommand.ConnectionURI" />
+      <MemberSignature Language="VB.NET" Value="Public Property ConnectionURI As Uri" />
+      <MemberSignature Language="F#" Value="member this.ConnectionURI : Uri with get, set" Usage="Microsoft.WSMan.Management.GetWSManInstanceCommand.ConnectionURI" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.WSMan.Management</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Alias(Mono.Cecil.CustomAttributeArgument[])</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="GetInstance")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="Enumerate")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Uri</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The following is the definition of the input parameter "ConnectionURI".
+            Specifies the transport, server, port, and Prefix, needed to connect to the
+            remote machine. The format of this string is:
+            transport://server:port/Prefix.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dialect">
+      <MemberSignature Language="C#" Value="public Uri Dialect { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Uri Dialect" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.WSMan.Management.GetWSManInstanceCommand.Dialect" />
+      <MemberSignature Language="VB.NET" Value="Public Property Dialect As Uri" />
+      <MemberSignature Language="F#" Value="member this.Dialect : Uri with get, set" Usage="Microsoft.WSMan.Management.GetWSManInstanceCommand.Dialect" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.WSMan.Management</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Uri</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The following is the definition of the input parameter "Dialect".
+            Defines the dialect for the filter predicate
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="public void Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Dispose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.WSMan.Management.GetWSManInstanceCommand.Dispose" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Dispose ()" />
+      <MemberSignature Language="F#" Value="abstract member Dispose : unit -&gt; unit&#xA;override this.Dispose : unit -&gt; unit" Usage="getWSManInstanceCommand.Dispose " />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.IDisposable.Dispose</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.WSMan.Management</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            public dispose method
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="public void Dispose (Microsoft.WSMan.Management.IWSManSession sessionObject);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Dispose(class Microsoft.WSMan.Management.IWSManSession sessionObject) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.WSMan.Management.GetWSManInstanceCommand.Dispose(Microsoft.WSMan.Management.IWSManSession)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Dispose (sessionObject As IWSManSession)" />
+      <MemberSignature Language="F#" Value="member this.Dispose : Microsoft.WSMan.Management.IWSManSession -&gt; unit" Usage="getWSManInstanceCommand.Dispose sessionObject" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.WSMan.Management</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sessionObject" Type="Microsoft.WSMan.Management.IWSManSession" />
+      </Parameters>
+      <Docs>
+        <param name="sessionObject">To be added.</param>
+        <summary>
+            public dispose method
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EndProcessing">
+      <MemberSignature Language="C#" Value="protected override void EndProcessing ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void EndProcessing() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.WSMan.Management.GetWSManInstanceCommand.EndProcessing" />
+      <MemberSignature Language="VB.NET" Value="Protected Overrides Sub EndProcessing ()" />
+      <MemberSignature Language="F#" Value="override this.EndProcessing : unit -&gt; unit" Usage="getWSManInstanceCommand.EndProcessing " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.WSMan.Management</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            BeginProcessing method.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Enumerate">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.SwitchParameter Enumerate { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Management.Automation.SwitchParameter Enumerate" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.WSMan.Management.GetWSManInstanceCommand.Enumerate" />
+      <MemberSignature Language="VB.NET" Value="Public Property Enumerate As SwitchParameter" />
+      <MemberSignature Language="F#" Value="member this.Enumerate : System.Management.Automation.SwitchParameter with get, set" Usage="Microsoft.WSMan.Management.GetWSManInstanceCommand.Enumerate" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.WSMan.Management</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(Mandatory=true, ParameterSetName="Enumerate")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.SwitchParameter</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The following is the definition of the input parameter "Enumerate".
+            Switch indicates list all instances of a management resource. Equivalent to
+            WSManagement Enumerate
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Filter">
+      <MemberSignature Language="C#" Value="public string Filter { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Filter" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.WSMan.Management.GetWSManInstanceCommand.Filter" />
+      <MemberSignature Language="VB.NET" Value="Public Property Filter As String" />
+      <MemberSignature Language="F#" Value="member this.Filter : string with get, set" Usage="Microsoft.WSMan.Management.GetWSManInstanceCommand.Filter" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.WSMan.Management</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="Enumerate")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.ValidateNotNullOrEmpty</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The following is the definition of the input parameter "Filter".
+            Indicates the filter expression for the enumeration
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Fragment">
+      <MemberSignature Language="C#" Value="public string Fragment { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Fragment" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.WSMan.Management.GetWSManInstanceCommand.Fragment" />
+      <MemberSignature Language="VB.NET" Value="Public Property Fragment As String" />
+      <MemberSignature Language="F#" Value="member this.Fragment : string with get, set" Usage="Microsoft.WSMan.Management.GetWSManInstanceCommand.Fragment" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.WSMan.Management</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="GetInstance")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.ValidateNotNullOrEmpty</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The following is the definition of the input parameter "Fragment".
+            Specifies a section inside the instance that is to be updated or retrieved
+            for the given operation
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OptionSet">
+      <MemberSignature Language="C#" Value="public System.Collections.Hashtable OptionSet { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Hashtable OptionSet" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.WSMan.Management.GetWSManInstanceCommand.OptionSet" />
+      <MemberSignature Language="VB.NET" Value="Public Property OptionSet As Hashtable" />
+      <MemberSignature Language="F#" Value="member this.OptionSet : System.Collections.Hashtable with get, set" Usage="Microsoft.WSMan.Management.GetWSManInstanceCommand.OptionSet" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.WSMan.Management</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Alias(Mono.Cecil.CustomAttributeArgument[])</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ValueFromPipeline=true, ValueFromPipelineByPropertyName=true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.ValidateNotNullOrEmpty</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Collections.Hashtable</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The following is the definition of the input parameter "OptionSet".
+            OptionSet is a hashtable and is used to pass a set of switches to the
+            service to modify or refine the nature of the request.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Port">
+      <MemberSignature Language="C#" Value="public int Port { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Port" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.WSMan.Management.GetWSManInstanceCommand.Port" />
+      <MemberSignature Language="VB.NET" Value="Public Property Port As Integer" />
+      <MemberSignature Language="F#" Value="member this.Port : int with get, set" Usage="Microsoft.WSMan.Management.GetWSManInstanceCommand.Port" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.WSMan.Management</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="Enumerate")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="GetInstance")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The following is the definition of the input parameter "Port".
+            Specifies the port to be used when connecting to the ws management service.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ProcessRecord">
+      <MemberSignature Language="C#" Value="protected override void ProcessRecord ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void ProcessRecord() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.WSMan.Management.GetWSManInstanceCommand.ProcessRecord" />
+      <MemberSignature Language="VB.NET" Value="Protected Overrides Sub ProcessRecord ()" />
+      <MemberSignature Language="F#" Value="override this.ProcessRecord : unit -&gt; unit" Usage="getWSManInstanceCommand.ProcessRecord " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.WSMan.Management</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            ProcessRecord method.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ResourceURI">
+      <MemberSignature Language="C#" Value="public Uri ResourceURI { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Uri ResourceURI" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.WSMan.Management.GetWSManInstanceCommand.ResourceURI" />
+      <MemberSignature Language="VB.NET" Value="Public Property ResourceURI As Uri" />
+      <MemberSignature Language="F#" Value="member this.ResourceURI : Uri with get, set" Usage="Microsoft.WSMan.Management.GetWSManInstanceCommand.ResourceURI" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.WSMan.Management</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Alias(Mono.Cecil.CustomAttributeArgument[])</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(Mandatory=true, Position=0, ValueFromPipeline=true, ValueFromPipelineByPropertyName=true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Uri</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The following is the definition of the input parameter "ResourceURI".
+            URI of the resource class/instance representation
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReturnType">
+      <MemberSignature Language="C#" Value="public string ReturnType { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ReturnType" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.WSMan.Management.GetWSManInstanceCommand.ReturnType" />
+      <MemberSignature Language="VB.NET" Value="Public Property ReturnType As String" />
+      <MemberSignature Language="F#" Value="member this.ReturnType : string with get, set" Usage="Microsoft.WSMan.Management.GetWSManInstanceCommand.ReturnType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.WSMan.Management</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Alias(Mono.Cecil.CustomAttributeArgument[])</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="Enumerate")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.ValidateNotNullOrEmpty</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.ValidateSet(Mono.Cecil.CustomAttributeArgument[])</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The following is the definition of the input parameter "ReturnType".
+            Indicates the type of data returned. Possible options are 'Object', 'EPR',
+            and 'ObjectAndEPR'. Default is Object.
+            If Object is specified or if this parameter is absent then only the objects
+            are returned
+            If EPR is specified then only the EPRs of the objects
+            are returned. EPRs contain information about the Resource URI and selectors
+            for the instance
+            If ObjectAndEPR is specified, then both the object and the associated EPRs
+            are returned
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SelectorSet">
+      <MemberSignature Language="C#" Value="public System.Collections.Hashtable SelectorSet { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Hashtable SelectorSet" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.WSMan.Management.GetWSManInstanceCommand.SelectorSet" />
+      <MemberSignature Language="VB.NET" Value="Public Property SelectorSet As Hashtable" />
+      <MemberSignature Language="F#" Value="member this.SelectorSet : System.Collections.Hashtable with get, set" Usage="Microsoft.WSMan.Management.GetWSManInstanceCommand.SelectorSet" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.WSMan.Management</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="GetInstance")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Collections.Hashtable</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The following is the definition of the input parameter "SelectorSet".
+            SelectorSet is a hash table which helps in identify an instance of the
+            management resource if there are are more than 1 instance of the resource
+            class
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SessionOption">
+      <MemberSignature Language="C#" Value="public Microsoft.WSMan.Management.SessionOption SessionOption { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.WSMan.Management.SessionOption SessionOption" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.WSMan.Management.GetWSManInstanceCommand.SessionOption" />
+      <MemberSignature Language="VB.NET" Value="Public Property SessionOption As SessionOption" />
+      <MemberSignature Language="F#" Value="member this.SessionOption : Microsoft.WSMan.Management.SessionOption with get, set" Usage="Microsoft.WSMan.Management.GetWSManInstanceCommand.SessionOption" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.WSMan.Management</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Alias(Mono.Cecil.CustomAttributeArgument[])</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.ValidateNotNullOrEmpty</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Microsoft.WSMan.Management.SessionOption</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The following is the definition of the input parameter "SessionOption".
+            Defines a set of extended options for the WSMan session.  This can be
+            created by using the cmdlet New-WSManSessionOption
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Shallow">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.SwitchParameter Shallow { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Management.Automation.SwitchParameter Shallow" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.WSMan.Management.GetWSManInstanceCommand.Shallow" />
+      <MemberSignature Language="VB.NET" Value="Public Property Shallow As SwitchParameter" />
+      <MemberSignature Language="F#" Value="member this.Shallow : System.Management.Automation.SwitchParameter with get, set" Usage="Microsoft.WSMan.Management.GetWSManInstanceCommand.Shallow" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.WSMan.Management</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="Enumerate")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.SwitchParameter</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The following is the definition of the input parameter "Shallow".
+            Enumerate only instances of the base class specified in the resource URI. If
+            this flag is not specified, instances of the base class specified in the URI
+            and all its derived classes are returned
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UseSSL">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.SwitchParameter UseSSL { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Management.Automation.SwitchParameter UseSSL" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.WSMan.Management.GetWSManInstanceCommand.UseSSL" />
+      <MemberSignature Language="VB.NET" Value="Public Property UseSSL As SwitchParameter" />
+      <MemberSignature Language="F#" Value="member this.UseSSL : System.Management.Automation.SwitchParameter with get, set" Usage="Microsoft.WSMan.Management.GetWSManInstanceCommand.UseSSL" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.WSMan.Management</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Alias(Mono.Cecil.CustomAttributeArgument[])</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="GetInstance")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="Enumerate")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.SwitchParameter</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The following is the definition of the input parameter "UseSSL".
+            Uses the Secure Sockets Layer (SSL) protocol to establish a connection to
+            the remote computer. If SSL is not available on the port specified by the
+            Port parameter, the command fails.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,83 @@
+﻿<Type Name="ValidateNotNullAttribute" FullName="System.Management.Automation.ValidateNotNullAttribute">
+  <TypeSignature Language="C#" Value="public sealed class ValidateNotNullAttribute : System.Management.Automation.ValidateArgumentsAttribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit ValidateNotNullAttribute extends System.Management.Automation.ValidateArgumentsAttribute" />
+  <TypeSignature Language="DocId" Value="T:System.Management.Automation.ValidateNotNullAttribute" />
+  <TypeSignature Language="VB.NET" Value="Public NotInheritable Class ValidateNotNullAttribute&#xA;Inherits ValidateArgumentsAttribute" />
+  <TypeSignature Language="F#" Value="type ValidateNotNullAttribute = class&#xA;    inherit ValidateArgumentsAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System.Management.Automation</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Management.Automation.ValidateArgumentsAttribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Property | System.AttributeTargets.Field)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>
+            Validates that the parameters's argument is not null
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ValidateNotNullAttribute ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.ValidateNotNullAttribute.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New ()" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Validate">
+      <MemberSignature Language="C#" Value="protected override void Validate (object arguments, System.Management.Automation.EngineIntrinsics engineIntrinsics);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void Validate(object arguments, class System.Management.Automation.EngineIntrinsics engineIntrinsics) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.ValidateNotNullAttribute.Validate(System.Object,System.Management.Automation.EngineIntrinsics)" />
+      <MemberSignature Language="F#" Value="override this.Validate : obj * System.Management.Automation.EngineIntrinsics -&gt; unit" Usage="validateNotNullAttribute.Validate (arguments, engineIntrinsics)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="arguments" Type="System.Object" />
+        <Parameter Name="engineIntrinsics" Type="System.Management.Automation.EngineIntrinsics" />
+      </Parameters>
+      <Docs>
+        <param name="arguments">
+            The arguments to verify.
+            </param>
+        <param name="engineIntrinsics">
+            The engine APIs for the context under which the validation is being
+            evaluated.
+            </param>
+        <summary>
+            Verifies the argument is not null and if it is a collection, that each
+            element in the collection is not null.
+            If the argument is a collection then each element is validated.
+            </summary>
+        <returns>
+            true if the argument is valid.
+            </returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.Management.Automation.ValidationMetadataException">
+            if element is null or a collection with a null element
+            </exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

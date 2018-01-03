@@ -1,0 +1,670 @@
+﻿<Type Name="Pipeline" FullName="System.Management.Automation.Runspaces.Pipeline">
+  <TypeSignature Language="C#" Value="public abstract class Pipeline : IDisposable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit Pipeline extends System.Object implements class System.IDisposable" />
+  <TypeSignature Language="DocId" Value="T:System.Management.Automation.Runspaces.Pipeline" />
+  <TypeSignature Language="VB.NET" Value="Public MustInherit Class Pipeline&#xA;Implements IDisposable" />
+  <TypeSignature Language="F#" Value="type Pipeline = class&#xA;    interface IDisposable" />
+  <AssemblyInfo>
+    <AssemblyName>System.Management.Automation</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>
+            Defines a class which can be used to invoke a pipeline of commands.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Commands">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.Runspaces.CommandCollection Commands { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Management.Automation.Runspaces.CommandCollection Commands" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.Runspaces.Pipeline.Commands" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Commands As CommandCollection" />
+      <MemberSignature Language="F#" Value="member this.Commands : System.Management.Automation.Runspaces.CommandCollection" Usage="System.Management.Automation.Runspaces.Pipeline.Commands" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.Runspaces.CommandCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            gets the collection of commands for this pipeline.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Connect">
+      <MemberSignature Language="C#" Value="public abstract System.Collections.ObjectModel.Collection&lt;System.Management.Automation.PSObject&gt; Connect ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Collections.ObjectModel.Collection`1&lt;class System.Management.Automation.PSObject&gt; Connect() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Runspaces.Pipeline.Connect" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Function Connect () As Collection(Of PSObject)" />
+      <MemberSignature Language="F#" Value="abstract member Connect : unit -&gt; System.Collections.ObjectModel.Collection&lt;System.Management.Automation.PSObject&gt;" Usage="pipeline.Connect " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.Collection&lt;System.Management.Automation.PSObject&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Connects synchronously to a running command on a remote server.
+            The pipeline object must be in the disconnected state.
+            </summary>
+        <returns>A collection of result objects.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ConnectAsync">
+      <MemberSignature Language="C#" Value="public abstract void ConnectAsync ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void ConnectAsync() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Runspaces.Pipeline.ConnectAsync" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Sub ConnectAsync ()" />
+      <MemberSignature Language="F#" Value="abstract member ConnectAsync : unit -&gt; unit" Usage="pipeline.ConnectAsync " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Connects asynchronously to a running command on a remote server.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Copy">
+      <MemberSignature Language="C#" Value="public abstract System.Management.Automation.Runspaces.Pipeline Copy ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Management.Automation.Runspaces.Pipeline Copy() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Runspaces.Pipeline.Copy" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Function Copy () As Pipeline" />
+      <MemberSignature Language="F#" Value="abstract member Copy : unit -&gt; System.Management.Automation.Runspaces.Pipeline" Usage="pipeline.Copy " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.Runspaces.Pipeline</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Creates a new <see cref="T:System.Management.Automation.Runspaces.Pipeline" /> that is a copy of the current instance.
+            </summary>
+        <returns>A new <see cref="T:System.Management.Automation.Runspaces.Pipeline" /> that is a copy of this instance.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="public void Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Dispose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Runspaces.Pipeline.Dispose" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Dispose ()" />
+      <MemberSignature Language="F#" Value="abstract member Dispose : unit -&gt; unit&#xA;override this.Dispose : unit -&gt; unit" Usage="pipeline.Dispose " />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.IDisposable.Dispose</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Disposes the pipeline. If pipeline is running, dispose first
+            stops the pipeline.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="protected virtual void Dispose (bool disposing);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void Dispose(bool disposing) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Runspaces.Pipeline.Dispose(System.Boolean)" />
+      <MemberSignature Language="VB.NET" Value="Protected Overridable Sub Dispose (disposing As Boolean)" />
+      <MemberSignature Language="F#" Value="abstract member Dispose : bool -&gt; unit&#xA;override this.Dispose : bool -&gt; unit" Usage="pipeline.Dispose disposing" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="disposing" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="disposing"></param>
+        <summary>
+            Protected dispose which can be overridden by derived classes.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Error">
+      <MemberSignature Language="C#" Value="public abstract System.Management.Automation.Runspaces.PipelineReader&lt;object&gt; Error { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Management.Automation.Runspaces.PipelineReader`1&lt;object&gt; Error" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.Runspaces.Pipeline.Error" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride ReadOnly Property Error As PipelineReader(Of Object)" />
+      <MemberSignature Language="F#" Value="member this.Error : System.Management.Automation.Runspaces.PipelineReader&lt;obj&gt;" Usage="System.Management.Automation.Runspaces.Pipeline.Error" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.Runspaces.PipelineReader&lt;System.Object&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+             gets the error output reader for this pipeline.
+             </summary>
+        <value>To be added.</value>
+        <remarks>
+             When the caller calls Error.Read(), the caller reads from the
+             output of the pipeline.  Thus, <paramref name="Error" />
+             is a PipelineReader or "thing which can be read from".
+            
+             This is the non-terminating error stream from the command.
+             In this release, the objects read from this PipelineReader
+             are PSObjects wrapping ErrorRecords.
+             </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HadErrors">
+      <MemberSignature Language="C#" Value="public virtual bool HadErrors { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool HadErrors" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.Runspaces.Pipeline.HadErrors" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable ReadOnly Property HadErrors As Boolean" />
+      <MemberSignature Language="F#" Value="member this.HadErrors : bool" Usage="System.Management.Automation.Runspaces.Pipeline.HadErrors" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            True if pipeline execution encountered and error.
+            It will always be true if _reason is non-null
+            since an exception occurred. For other error types,
+            It has to be set manually.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Input">
+      <MemberSignature Language="C#" Value="public abstract System.Management.Automation.Runspaces.PipelineWriter Input { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Management.Automation.Runspaces.PipelineWriter Input" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.Runspaces.Pipeline.Input" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride ReadOnly Property Input As PipelineWriter" />
+      <MemberSignature Language="F#" Value="member this.Input : System.Management.Automation.Runspaces.PipelineWriter" Usage="System.Management.Automation.Runspaces.Pipeline.Input" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.Runspaces.PipelineWriter</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            gets input writer for this pipeline.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+            When the caller calls Input.Write(), the caller writes to the
+            input of the pipeline.  Thus, <paramref name="Input" />
+            is a PipelineWriter or "thing which can be written to".
+            Note:Input must be closed after Pipeline.InvokeAsync for InvokeAsync to
+            finish.
+            </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InstanceId">
+      <MemberSignature Language="C#" Value="public long InstanceId { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int64 InstanceId" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.Runspaces.Pipeline.InstanceId" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property InstanceId As Long" />
+      <MemberSignature Language="F#" Value="member this.InstanceId : int64" Usage="System.Management.Automation.Runspaces.Pipeline.InstanceId" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            gets the unique identifier for this pipeline. This identifier is unique with in
+            the scope of Runspace.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Invoke">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.Collection&lt;System.Management.Automation.PSObject&gt; Invoke ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Collections.ObjectModel.Collection`1&lt;class System.Management.Automation.PSObject&gt; Invoke() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Runspaces.Pipeline.Invoke" />
+      <MemberSignature Language="VB.NET" Value="Public Function Invoke () As Collection(Of PSObject)" />
+      <MemberSignature Language="F#" Value="member this.Invoke : unit -&gt; System.Collections.ObjectModel.Collection&lt;System.Management.Automation.PSObject&gt;" Usage="pipeline.Invoke " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.Collection&lt;System.Management.Automation.PSObject&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Invoke the pipeline, synchronously, returning the results as an array of
+            objects.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>If using synchronous invoke, do not close
+            input objectWriter. Synchronous invoke will always close the input
+            objectWriter.
+            </remarks>
+        <exception cref="T:System.InvalidOperationException">
+            1) A pipeline is already executing. Pipeline cannot execute
+            concurrently.
+            2) Attempt is made to invoke a nested pipeline directly. Nested
+            pipeline must be invoked from a running pipeline.
+            </exception>
+        <exception cref="T:System.Management.Automation.Runspaces.InvalidPipelineStateException">
+            PipelineState is not NotStarted.
+            </exception>
+        <exception cref="T:System.Management.Automation.Runspaces.InvalidRunspaceStateException">
+            RunspaceState is not Open
+            </exception>
+        <exception cref="T:System.ObjectDisposedException">
+            Pipeline already disposed
+            </exception>
+        <exception cref="T:System.Management.Automation.ScriptCallDepthException">
+            The script recursed too deeply into script functions.
+            There is a fixed limit on the depth of recursion.
+            </exception>
+        <exception cref="T:System.Security.SecurityException">
+            A CLR security violation occurred.  Typically, this happens
+            because the current CLR permissions do not allow adequate
+            reflection access to a cmdlet assembly.
+            </exception>
+        <exception cref="T:System.Threading.ThreadAbortException">
+            The thread in which the pipeline was executing was aborted.
+            </exception>
+        <exception cref="T:System.Management.Automation.RuntimeException">
+            Pipeline.Invoke can throw a variety of exceptions derived
+            from RuntimeException. The most likely of these exceptions
+            are listed below.
+            </exception>
+        <exception cref="T:System.Management.Automation.ParameterBindingException">
+            One of more parameters or parameter values specified for
+            a cmdlet are not valid, or mandatory parameters for a cmdlet
+            were not specified.
+            </exception>
+        <exception cref="T:System.Management.Automation.CmdletInvocationException">
+            A cmdlet generated a terminating error.
+            </exception>
+        <exception cref="T:System.Management.Automation.CmdletProviderInvocationException">
+            A provider generated a terminating error.
+            </exception>
+        <exception cref="T:System.Management.Automation.ActionPreferenceStopException">
+            The ActionPreference.Stop or ActionPreference.Inquire policy
+            triggered a terminating error.
+            </exception>
+        <exception cref="T:System.Management.Automation.PipelineStoppedException">
+            The pipeline was terminated asynchronously.
+            </exception>
+        <exception cref="T:System.Management.Automation.MetadataException">
+            If there is an error generating the metadata for dynamic parameters.
+            </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Invoke">
+      <MemberSignature Language="C#" Value="public abstract System.Collections.ObjectModel.Collection&lt;System.Management.Automation.PSObject&gt; Invoke (System.Collections.IEnumerable input);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Collections.ObjectModel.Collection`1&lt;class System.Management.Automation.PSObject&gt; Invoke(class System.Collections.IEnumerable input) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Runspaces.Pipeline.Invoke(System.Collections.IEnumerable)" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Function Invoke (input As IEnumerable) As Collection(Of PSObject)" />
+      <MemberSignature Language="F#" Value="abstract member Invoke : System.Collections.IEnumerable -&gt; System.Collections.ObjectModel.Collection&lt;System.Management.Automation.PSObject&gt;" Usage="pipeline.Invoke input" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.Collection&lt;System.Management.Automation.PSObject&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="input" Type="System.Collections.IEnumerable" />
+      </Parameters>
+      <Docs>
+        <param name="input">an array of input objects to pass to the pipeline.
+            Array may be empty but may not be null</param>
+        <summary>
+            Invoke the pipeline, synchronously, returning the results as an array of objects.
+            </summary>
+        <returns>An array of zero or more result objects</returns>
+        <remarks>If using synchronous exectute, do not close
+            input objectWriter. Synchronous invoke will always close the input
+            objectWriter.
+            </remarks>
+        <exception cref="T:System.InvalidOperationException">
+            1) A pipeline is already executing. Pipeline cannot execute
+            concurrently.
+            2) Attempt is made to invoke a nested pipeline directly. Nested
+            pipeline must be invoked from a running pipeline.
+            </exception>
+        <exception cref="T:System.Management.Automation.Runspaces.InvalidPipelineStateException">
+            PipelineState is not NotStarted.
+            </exception>
+        <exception cref="T:System.Management.Automation.Runspaces.InvalidRunspaceStateException">
+            RunspaceState is not Open
+            </exception>
+        <exception cref="T:System.ObjectDisposedException">
+            Pipeline already disposed
+            </exception>
+        <exception cref="T:System.Management.Automation.ScriptCallDepthException">
+            The script recursed too deeply into script functions.
+            There is a fixed limit on the depth of recursion.
+            </exception>
+        <exception cref="T:System.Security.SecurityException">
+            A CLR security violation occurred.  Typically, this happens
+            because the current CLR permissions do not allow adequate
+            reflection access to a cmdlet assembly.
+            </exception>
+        <exception cref="T:System.Threading.ThreadAbortException">
+            The thread in which the pipeline was executing was aborted.
+            </exception>
+        <exception cref="T:System.Management.Automation.RuntimeException">
+            Pipeline.Invoke can throw a variety of exceptions derived
+            from RuntimeException. The most likely of these exceptions
+            are listed below.
+            </exception>
+        <exception cref="T:System.Management.Automation.ParameterBindingException">
+            One of more parameters or parameter values specified for
+            a cmdlet are not valid, or mandatory parameters for a cmdlet
+            were not specified.
+            </exception>
+        <exception cref="T:System.Management.Automation.CmdletInvocationException">
+            A cmdlet generated a terminating error.
+            </exception>
+        <exception cref="T:System.Management.Automation.CmdletProviderInvocationException">
+            A provider generated a terminating error.
+            </exception>
+        <exception cref="T:System.Management.Automation.ActionPreferenceStopException">
+            The ActionPreference.Stop or ActionPreference.Inquire policy
+            triggered a terminating error.
+            </exception>
+        <exception cref="T:System.Management.Automation.PipelineStoppedException">
+            The pipeline was terminated asynchronously.
+            </exception>
+        <exception cref="T:System.Management.Automation.MetadataException">
+            If there is an error generating the metadata for dynamic parameters.
+            </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="InvokeAsync">
+      <MemberSignature Language="C#" Value="public abstract void InvokeAsync ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void InvokeAsync() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Runspaces.Pipeline.InvokeAsync" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Sub InvokeAsync ()" />
+      <MemberSignature Language="F#" Value="abstract member InvokeAsync : unit -&gt; unit" Usage="pipeline.InvokeAsync " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+             Invoke the pipeline asynchronously
+             </summary>
+        <remarks>
+             1) Results are returned through the <see cref="P:System.Management.Automation.Runspaces.Pipeline.Output" /> reader.
+             2) When pipeline is invoked using InvokeAsync, invocation doesn't
+             finish until Input to pipeline is closed. Caller of InvokeAsync must close
+             the input pipe after all input has been written to input pipe. Input pipe
+             is closed by calling Pipeline.Input.Close();
+            
+             If you want this pipeline to execute as a standalone command
+             (that is, using command-line parameters only),
+             be sure to call Pipeline.Input.Close() before calling
+             InvokeAsync().  Otherwise, the command will be executed
+             as though it had external input.  If you observe that the
+             command isn't doing anything, this may be the reason.
+             </remarks>
+        <exception cref="T:System.InvalidOperationException">
+             1) A pipeline is already executing. Pipeline cannot execute
+             concurrently.
+             2) InvokeAsync is called on nested pipeline. Nested pipeline
+             cannot be executed Asynchronously.
+             </exception>
+        <exception cref="T:System.Management.Automation.Runspaces.InvalidPipelineStateException">
+             PipelineState is not NotStarted.
+             </exception>
+        <exception cref="T:System.Management.Automation.Runspaces.InvalidRunspaceStateException">
+             RunspaceState is not Open
+             </exception>
+        <exception cref="T:System.ObjectDisposedException">
+             Pipeline already disposed
+             </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="IsNested">
+      <MemberSignature Language="C#" Value="public abstract bool IsNested { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsNested" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.Runspaces.Pipeline.IsNested" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride ReadOnly Property IsNested As Boolean" />
+      <MemberSignature Language="F#" Value="member this.IsNested : bool" Usage="System.Management.Automation.Runspaces.Pipeline.IsNested" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the property which indicates if this pipeline is nested.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Output">
+      <MemberSignature Language="C#" Value="public abstract System.Management.Automation.Runspaces.PipelineReader&lt;System.Management.Automation.PSObject&gt; Output { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Management.Automation.Runspaces.PipelineReader`1&lt;class System.Management.Automation.PSObject&gt; Output" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.Runspaces.Pipeline.Output" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride ReadOnly Property Output As PipelineReader(Of PSObject)" />
+      <MemberSignature Language="F#" Value="member this.Output : System.Management.Automation.Runspaces.PipelineReader&lt;System.Management.Automation.PSObject&gt;" Usage="System.Management.Automation.Runspaces.Pipeline.Output" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.Runspaces.PipelineReader&lt;System.Management.Automation.PSObject&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the output reader for this pipeline.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+            When the caller calls Output.Read(), the caller reads from the
+            output of the pipeline.  Thus, <paramref name="Output" />
+            is a PipelineReader or "thing which can be read from".
+            </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PipelineStateInfo">
+      <MemberSignature Language="C#" Value="public abstract System.Management.Automation.Runspaces.PipelineStateInfo PipelineStateInfo { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Management.Automation.Runspaces.PipelineStateInfo PipelineStateInfo" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.Runspaces.Pipeline.PipelineStateInfo" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride ReadOnly Property PipelineStateInfo As PipelineStateInfo" />
+      <MemberSignature Language="F#" Value="member this.PipelineStateInfo : System.Management.Automation.Runspaces.PipelineStateInfo" Usage="System.Management.Automation.Runspaces.Pipeline.PipelineStateInfo" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.Runspaces.PipelineStateInfo</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets Info about current state of the pipeline.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+            This value indicates the state of the pipeline after the change.
+            </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Runspace">
+      <MemberSignature Language="C#" Value="public abstract System.Management.Automation.Runspaces.Runspace Runspace { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Management.Automation.Runspaces.Runspace Runspace" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.Runspaces.Pipeline.Runspace" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride ReadOnly Property Runspace As Runspace" />
+      <MemberSignature Language="F#" Value="member this.Runspace : System.Management.Automation.Runspaces.Runspace" Usage="System.Management.Automation.Runspaces.Pipeline.Runspace" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.Runspaces.Runspace</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            gets the runspace this pipeline is created on.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetPipelineSessionState">
+      <MemberSignature Language="C#" Value="public bool SetPipelineSessionState { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool SetPipelineSessionState" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.Runspaces.Pipeline.SetPipelineSessionState" />
+      <MemberSignature Language="VB.NET" Value="Public Property SetPipelineSessionState As Boolean" />
+      <MemberSignature Language="F#" Value="member this.SetPipelineSessionState : bool with get, set" Usage="System.Management.Automation.Runspaces.Pipeline.SetPipelineSessionState" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            If this property is true, SessionState is updated for this
+            pipeline state.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StateChanged">
+      <MemberSignature Language="C#" Value="public abstract event EventHandler&lt;System.Management.Automation.Runspaces.PipelineStateEventArgs&gt; StateChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class System.Management.Automation.Runspaces.PipelineStateEventArgs&gt; StateChanged" />
+      <MemberSignature Language="DocId" Value="E:System.Management.Automation.Runspaces.Pipeline.StateChanged" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Event StateChanged As EventHandler(Of PipelineStateEventArgs) " />
+      <MemberSignature Language="F#" Value="member this.StateChanged : EventHandler&lt;System.Management.Automation.Runspaces.PipelineStateEventArgs&gt; " Usage="member this.StateChanged : System.EventHandler&lt;System.Management.Automation.Runspaces.PipelineStateEventArgs&gt; " />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;System.Management.Automation.Runspaces.PipelineStateEventArgs&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Event raised when Pipeline's state changes.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Stop">
+      <MemberSignature Language="C#" Value="public abstract void Stop ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Stop() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Runspaces.Pipeline.Stop" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Sub Stop ()" />
+      <MemberSignature Language="F#" Value="abstract member Stop : unit -&gt; unit" Usage="pipeline.Stop " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Synchronous call to stop the running pipeline.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StopAsync">
+      <MemberSignature Language="C#" Value="public abstract void StopAsync ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void StopAsync() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Runspaces.Pipeline.StopAsync" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Sub StopAsync ()" />
+      <MemberSignature Language="F#" Value="abstract member StopAsync : unit -&gt; unit" Usage="pipeline.StopAsync " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Asynchronous call to stop the running pipeline.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

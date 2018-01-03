@@ -1,0 +1,78 @@
+﻿<Type Name="IResourceSupplier" FullName="System.Management.Automation.IResourceSupplier">
+  <TypeSignature Language="C#" Value="public interface IResourceSupplier" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IResourceSupplier" />
+  <TypeSignature Language="DocId" Value="T:System.Management.Automation.IResourceSupplier" />
+  <TypeSignature Language="VB.NET" Value="Public Interface IResourceSupplier" />
+  <TypeSignature Language="F#" Value="type IResourceSupplier = interface" />
+  <AssemblyInfo>
+    <AssemblyName>System.Management.Automation</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>
+             Objects implementing this interface can be used by
+             <see cref="M:System.Management.Automation.ErrorDetails.#ctor(System.Management.Automation.IResourceSupplier,System.String,System.String,System.Object[])" /></summary>
+    <remarks>
+      <see cref="T:System.Management.Automation.Provider.CmdletProvider" />
+             implements this interface.  PSSnapins can implement
+             <see cref="T:System.Management.Automation.IResourceSupplier" />
+             on their custom classes, but the only purpose would be to permit
+             the custom class to be used in the
+             <see cref="M:System.Management.Automation.ErrorDetails.#ctor(System.Management.Automation.IResourceSupplier,System.String,System.String,System.Object[])" />.
+             constructor.
+            
+             <see cref="T:System.Management.Automation.ErrorDetails" /> contains special constructor
+             <see cref="M:System.Management.Automation.ErrorDetails.#ctor(System.Management.Automation.IResourceSupplier,System.String,System.String,System.Object[])" />
+             reducing the steps which localizable code generally has to duplicate when it
+             generates a localizable string.  This variant is preferred over
+             <see cref="M:System.Management.Automation.ErrorDetails.#ctor(System.String)" />,
+             since the improved
+             information about the error may help enable future scenarios.
+             </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="GetResourceString">
+      <MemberSignature Language="C#" Value="public string GetResourceString (string baseName, string resourceId);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance string GetResourceString(string baseName, string resourceId) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.IResourceSupplier.GetResourceString(System.String,System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetResourceString (baseName As String, resourceId As String) As String" />
+      <MemberSignature Language="F#" Value="abstract member GetResourceString : string * string -&gt; string" Usage="iResourceSupplier.GetResourceString (baseName, resourceId)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="baseName" Type="System.String" />
+        <Parameter Name="resourceId" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="baseName">the base resource name</param>
+        <param name="resourceId">the resource id</param>
+        <summary>
+             Gets the error message template string corresponding to
+             <paramref name="baseName" /> and <paramref name="resourceId" />.
+             </summary>
+        <returns>the error message template string corresponding to baseName and resourceId</returns>
+        <remarks>
+             If the desired behavior is simple string lookup
+             in your assembly, you can use the
+             <see cref="M:System.Management.Automation.ErrorDetails.#ctor(System.Reflection.Assembly,System.String,System.String,System.Object[])" />
+             constructor instead and not bother implementing
+             <see cref="T:System.Management.Automation.IResourceSupplier" />.
+             Consider implementing <see cref="T:System.Management.Automation.IResourceSupplier" />
+             if you want more complex behavior.
+            
+             Insertions will be inserted into the string with
+             <see cref="M:System.String.Format(System.IFormatProvider,System.String,System.Object[])" />
+             to generate the final error message in
+             <see cref="P:System.Management.Automation.ErrorDetails.Message" />.
+             </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

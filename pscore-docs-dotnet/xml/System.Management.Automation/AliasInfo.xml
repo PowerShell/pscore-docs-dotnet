@@ -1,0 +1,168 @@
+﻿<Type Name="AliasInfo" FullName="System.Management.Automation.AliasInfo">
+  <TypeSignature Language="C#" Value="public class AliasInfo : System.Management.Automation.CommandInfo" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit AliasInfo extends System.Management.Automation.CommandInfo" />
+  <TypeSignature Language="DocId" Value="T:System.Management.Automation.AliasInfo" />
+  <TypeSignature Language="VB.NET" Value="Public Class AliasInfo&#xA;Inherits CommandInfo" />
+  <TypeSignature Language="F#" Value="type AliasInfo = class&#xA;    inherit CommandInfo" />
+  <AssemblyInfo>
+    <AssemblyName>System.Management.Automation</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Management.Automation.CommandInfo</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Provides information about a mapping between a command name and a real command.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Definition">
+      <MemberSignature Language="C#" Value="public override string Definition { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Definition" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.AliasInfo.Definition" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides ReadOnly Property Definition As String" />
+      <MemberSignature Language="F#" Value="member this.Definition : string" Usage="System.Management.Automation.AliasInfo.Definition" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the name of the command to which the alias refers.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Description">
+      <MemberSignature Language="C#" Value="public string Description { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Description" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.AliasInfo.Description" />
+      <MemberSignature Language="VB.NET" Value="Public Property Description As String" />
+      <MemberSignature Language="F#" Value="member this.Description : string with get, set" Usage="System.Management.Automation.AliasInfo.Description" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets the description for the alias
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Options">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.ScopedItemOptions Options { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Management.Automation.ScopedItemOptions Options" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.AliasInfo.Options" />
+      <MemberSignature Language="VB.NET" Value="Public Property Options As ScopedItemOptions" />
+      <MemberSignature Language="F#" Value="member this.Options : System.Management.Automation.ScopedItemOptions with get, set" Usage="System.Management.Automation.AliasInfo.Options" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.ScopedItemOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+             Gets or sets the scope options for the alias
+             </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.Management.Automation.SessionStateUnauthorizedAccessException">
+             If the trying to set an alias that is constant or
+                 if the value trying to be set is ScopedItemOptions.Constant
+             </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="OutputType">
+      <MemberSignature Language="C#" Value="public override System.Collections.ObjectModel.ReadOnlyCollection&lt;System.Management.Automation.PSTypeName&gt; OutputType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ObjectModel.ReadOnlyCollection`1&lt;class System.Management.Automation.PSTypeName&gt; OutputType" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.AliasInfo.OutputType" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides ReadOnly Property OutputType As ReadOnlyCollection(Of PSTypeName)" />
+      <MemberSignature Language="F#" Value="member this.OutputType : System.Collections.ObjectModel.ReadOnlyCollection&lt;System.Management.Automation.PSTypeName&gt;" Usage="System.Management.Automation.AliasInfo.OutputType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.ReadOnlyCollection&lt;System.Management.Automation.PSTypeName&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The objects output from an alias are the objects output from the resolved
+            command.  If we can't resolve the command, assume nothing is output - so use void.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReferencedCommand">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.CommandInfo ReferencedCommand { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Management.Automation.CommandInfo ReferencedCommand" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.AliasInfo.ReferencedCommand" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ReferencedCommand As CommandInfo" />
+      <MemberSignature Language="F#" Value="member this.ReferencedCommand : System.Management.Automation.CommandInfo" Usage="System.Management.Automation.AliasInfo.ReferencedCommand" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.CommandInfo</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the command information for the command that is immediately referenced by this alias.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ResolvedCommand">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.CommandInfo ResolvedCommand { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Management.Automation.CommandInfo ResolvedCommand" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.AliasInfo.ResolvedCommand" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ResolvedCommand As CommandInfo" />
+      <MemberSignature Language="F#" Value="member this.ResolvedCommand : System.Management.Automation.CommandInfo" Usage="System.Management.Automation.AliasInfo.ResolvedCommand" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.CommandInfo</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+             Gets the command information for the command that
+             the alias eventually resolves to.
+             </summary>
+        <value>To be added.</value>
+        <remarks>
+             An alias may reference another alias. This property follows the reference
+             chain of aliases to its end.
+             </remarks>
+        <!--
+             If the command didn't resolve to anything but aliases, the UnresolvedCommandName
+             property contains the last name the resolution succeeded in finding.
+             -->
+      </Docs>
+    </Member>
+  </Members>
+</Type>

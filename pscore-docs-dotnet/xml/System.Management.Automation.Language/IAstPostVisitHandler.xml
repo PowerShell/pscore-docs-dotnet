@@ -1,0 +1,46 @@
+﻿<Type Name="IAstPostVisitHandler" FullName="System.Management.Automation.Language.IAstPostVisitHandler">
+  <TypeSignature Language="C#" Value="public interface IAstPostVisitHandler" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IAstPostVisitHandler" />
+  <TypeSignature Language="DocId" Value="T:System.Management.Automation.Language.IAstPostVisitHandler" />
+  <TypeSignature Language="VB.NET" Value="Public Interface IAstPostVisitHandler" />
+  <TypeSignature Language="F#" Value="type IAstPostVisitHandler = interface" />
+  <AssemblyInfo>
+    <AssemblyName>System.Management.Automation</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Implement this interface when you implement <see cref="T:System.Management.Automation.Language.AstVisitor" /> or <see cref="T:System.Management.Automation.Language.AstVisitor2" /> when
+            you want to do something after possibly visiting the children of the ast.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="PostVisit">
+      <MemberSignature Language="C#" Value="public void PostVisit (System.Management.Automation.Language.Ast ast);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void PostVisit(class System.Management.Automation.Language.Ast ast) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Language.IAstPostVisitHandler.PostVisit(System.Management.Automation.Language.Ast)" />
+      <MemberSignature Language="F#" Value="abstract member PostVisit : System.Management.Automation.Language.Ast -&gt; unit" Usage="iAstPostVisitHandler.PostVisit ast" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="ast" Type="System.Management.Automation.Language.Ast" />
+      </Parameters>
+      <Docs>
+        <param name="ast">The ast whose children have all been processed and whose siblings
+            and parents are about to be processed.</param>
+        <summary>
+            The function called on each ast node after processing it's children.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

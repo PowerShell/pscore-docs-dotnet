@@ -1,0 +1,304 @@
+﻿<Type Name="MatchInfo" FullName="Microsoft.PowerShell.Commands.MatchInfo">
+  <TypeSignature Language="C#" Value="public class MatchInfo" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit MatchInfo extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.PowerShell.Commands.MatchInfo" />
+  <TypeSignature Language="VB.NET" Value="Public Class MatchInfo" />
+  <TypeSignature Language="F#" Value="type MatchInfo = class" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.PowerShell.Commands.Utility</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            The object returned by select-string representing the result of a match.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public MatchInfo ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Commands.MatchInfo.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New ()" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Commands.Utility</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Context">
+      <MemberSignature Language="C#" Value="public Microsoft.PowerShell.Commands.MatchInfoContext Context { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.PowerShell.Commands.MatchInfoContext Context" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.MatchInfo.Context" />
+      <MemberSignature Language="VB.NET" Value="Public Property Context As MatchInfoContext" />
+      <MemberSignature Language="F#" Value="member this.Context : Microsoft.PowerShell.Commands.MatchInfoContext with get, set" Usage="Microsoft.PowerShell.Commands.MatchInfo.Context" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Commands.Utility</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.PowerShell.Commands.MatchInfoContext</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The context for the match, or null if -context was not
+            specified.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Filename">
+      <MemberSignature Language="C#" Value="public string Filename { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Filename" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.MatchInfo.Filename" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Filename As String" />
+      <MemberSignature Language="F#" Value="member this.Filename : string" Usage="Microsoft.PowerShell.Commands.MatchInfo.Filename" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Commands.Utility</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Returns the base name of the file containing the matching line.
+            <remarks>
+            It will be the string "InputStream" if the object came from the input stream.
+            This is a readonly property calculated from the path. <see cref="P:Microsoft.PowerShell.Commands.MatchInfo.Path" /></remarks></summary>
+        <value>The file name</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IgnoreCase">
+      <MemberSignature Language="C#" Value="public bool IgnoreCase { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IgnoreCase" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.MatchInfo.IgnoreCase" />
+      <MemberSignature Language="VB.NET" Value="Public Property IgnoreCase As Boolean" />
+      <MemberSignature Language="F#" Value="member this.IgnoreCase : bool with get, set" Usage="Microsoft.PowerShell.Commands.MatchInfo.IgnoreCase" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Commands.Utility</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Indicates if the match was done ignoring case.
+            </summary>
+        <value>True if case was ignored.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Line">
+      <MemberSignature Language="C#" Value="public string Line { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Line" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.MatchInfo.Line" />
+      <MemberSignature Language="VB.NET" Value="Public Property Line As String" />
+      <MemberSignature Language="F#" Value="member this.Line : string with get, set" Usage="Microsoft.PowerShell.Commands.MatchInfo.Line" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Commands.Utility</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Returns the text of the matching line.
+            </summary>
+        <value>The text of the matching line.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LineNumber">
+      <MemberSignature Language="C#" Value="public int LineNumber { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 LineNumber" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.MatchInfo.LineNumber" />
+      <MemberSignature Language="VB.NET" Value="Public Property LineNumber As Integer" />
+      <MemberSignature Language="F#" Value="member this.LineNumber : int with get, set" Usage="Microsoft.PowerShell.Commands.MatchInfo.LineNumber" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Commands.Utility</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Returns the number of the matching line.
+            </summary>
+        <value>The number of the matching line.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Matches">
+      <MemberSignature Language="C#" Value="public System.Text.RegularExpressions.Match[] Matches { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Text.RegularExpressions.Match[] Matches" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.MatchInfo.Matches" />
+      <MemberSignature Language="VB.NET" Value="Public Property Matches As Match()" />
+      <MemberSignature Language="F#" Value="member this.Matches : System.Text.RegularExpressions.Match[] with get, set" Usage="Microsoft.PowerShell.Commands.MatchInfo.Matches" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Commands.Utility</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Text.RegularExpressions.Match[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            A list of all Regex matches on the matching line.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Path">
+      <MemberSignature Language="C#" Value="public string Path { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Path" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.MatchInfo.Path" />
+      <MemberSignature Language="VB.NET" Value="Public Property Path As String" />
+      <MemberSignature Language="F#" Value="member this.Path : string with get, set" Usage="Microsoft.PowerShell.Commands.MatchInfo.Path" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Commands.Utility</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The full path of the file containing the matching line.
+            <remarks>
+            It will be "InputStream" if the object came from the input stream.
+            </remarks></summary>
+        <value>The path name</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Pattern">
+      <MemberSignature Language="C#" Value="public string Pattern { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Pattern" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.MatchInfo.Pattern" />
+      <MemberSignature Language="VB.NET" Value="Public Property Pattern As String" />
+      <MemberSignature Language="F#" Value="member this.Pattern : string with get, set" Usage="Microsoft.PowerShell.Commands.MatchInfo.Pattern" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Commands.Utility</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Returns the pattern that was used in the match.
+            </summary>
+        <value>The pattern string</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RelativePath">
+      <MemberSignature Language="C#" Value="public string RelativePath (string directory);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance string RelativePath(string directory) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Commands.MatchInfo.RelativePath(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Function RelativePath (directory As String) As String" />
+      <MemberSignature Language="F#" Value="member this.RelativePath : string -&gt; string" Usage="matchInfo.RelativePath directory" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Commands.Utility</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="directory" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="directory">The directory base the truncation on.</param>
+        <summary>
+            Returns the path of the matching file truncated relative to the <paramref name="directory" /> parameter.
+            <remarks>
+            For example, if the matching path was c:\foo\bar\baz.c and the directory argument was c:\foo
+            the routine would return bar\baz.c
+            </remarks></summary>
+        <returns>The relative path that was produced.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Commands.MatchInfo.ToString" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Function ToString () As String" />
+      <MemberSignature Language="F#" Value="override this.ToString : unit -&gt; string" Usage="matchInfo.ToString " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Commands.Utility</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Returns the string representation of this object. The format
+            depends on whether a path has been set for this object or not.
+            <remarks>
+            If the path component is set, as would be the case when matching
+            in a file, ToString() would return the path, line number and line text.
+            If path is not set, then just the line text is presented.
+            </remarks></summary>
+        <returns>The string representation of the match object</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public string ToString (string directory);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance string ToString(string directory) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Commands.MatchInfo.ToString(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Function ToString (directory As String) As String" />
+      <MemberSignature Language="F#" Value="override this.ToString : string -&gt; string" Usage="matchInfo.ToString directory" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Commands.Utility</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="directory" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="directory">Directory to use as the root when calculating the relative path</param>
+        <summary>
+            Returns the string representation of the match object same format as ToString()
+            but trims the path to be relative to the <paramref name="directory" /> argument.
+            </summary>
+        <returns>The string representation of the match object</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

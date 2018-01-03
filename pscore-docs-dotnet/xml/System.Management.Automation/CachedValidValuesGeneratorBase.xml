@@ -1,0 +1,98 @@
+﻿<Type Name="CachedValidValuesGeneratorBase" FullName="System.Management.Automation.CachedValidValuesGeneratorBase">
+  <TypeSignature Language="C#" Value="public abstract class CachedValidValuesGeneratorBase : System.Management.Automation.IValidateSetValuesGenerator" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit CachedValidValuesGeneratorBase extends System.Object implements class System.Management.Automation.IValidateSetValuesGenerator" />
+  <TypeSignature Language="DocId" Value="T:System.Management.Automation.CachedValidValuesGeneratorBase" />
+  <TypeSignature Language="VB.NET" Value="Public MustInherit Class CachedValidValuesGeneratorBase&#xA;Implements IValidateSetValuesGenerator" />
+  <TypeSignature Language="F#" Value="type CachedValidValuesGeneratorBase = class&#xA;    interface IValidateSetValuesGenerator" />
+  <AssemblyInfo>
+    <AssemblyName>System.Management.Automation</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Management.Automation.IValidateSetValuesGenerator</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>
+            Optional base class for <see cref="T:System.Management.Automation.IValidateSetValuesGenerator" /> implementations that want a default implementation to cache valid values.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected CachedValidValuesGeneratorBase (int cacheExpirationInSeconds);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(int32 cacheExpirationInSeconds) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.CachedValidValuesGeneratorBase.#ctor(System.Int32)" />
+      <MemberSignature Language="VB.NET" Value="Protected Sub New (cacheExpirationInSeconds As Integer)" />
+      <MemberSignature Language="F#" Value="new System.Management.Automation.CachedValidValuesGeneratorBase : int -&gt; System.Management.Automation.CachedValidValuesGeneratorBase" Usage="new System.Management.Automation.CachedValidValuesGeneratorBase cacheExpirationInSeconds" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="cacheExpirationInSeconds" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="cacheExpirationInSeconds">Sets a time interval in seconds to reset the '_validValues' dynamic valid values cache.</param>
+        <summary>
+            Initializes a new instance of the CachedValidValuesGeneratorBase class.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GenerateValidValues">
+      <MemberSignature Language="C#" Value="public abstract string[] GenerateValidValues ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance string[] GenerateValidValues() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.CachedValidValuesGeneratorBase.GenerateValidValues" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Function GenerateValidValues () As String()" />
+      <MemberSignature Language="F#" Value="abstract member GenerateValidValues : unit -&gt; string[]" Usage="cachedValidValuesGeneratorBase.GenerateValidValues " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String[]</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Abstract method to generate a valid values.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetValidValues">
+      <MemberSignature Language="C#" Value="public string[] GetValidValues ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance string[] GetValidValues() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.CachedValidValuesGeneratorBase.GetValidValues" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetValidValues () As String()" />
+      <MemberSignature Language="F#" Value="abstract member GetValidValues : unit -&gt; string[]&#xA;override this.GetValidValues : unit -&gt; string[]" Usage="cachedValidValuesGeneratorBase.GetValidValues " />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.Management.Automation.IValidateSetValuesGenerator.GetValidValues</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String[]</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Get a valid values.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,102 @@
+﻿<Type Name="IContainsErrorRecord" FullName="System.Management.Automation.IContainsErrorRecord">
+  <TypeSignature Language="C#" Value="public interface IContainsErrorRecord" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IContainsErrorRecord" />
+  <TypeSignature Language="DocId" Value="T:System.Management.Automation.IContainsErrorRecord" />
+  <TypeSignature Language="VB.NET" Value="Public Interface IContainsErrorRecord" />
+  <TypeSignature Language="F#" Value="type IContainsErrorRecord = interface" />
+  <AssemblyInfo>
+    <AssemblyName>System.Management.Automation</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>
+             Implemented by exception classes which contain additional
+             <see cref="T:System.Management.Automation.ErrorRecord" />
+             information.
+             </summary>
+    <remarks>
+             MSH defines certain exception classes which implement this interface.
+             This includes wrapper exceptions such as
+             <see cref="T:System.Management.Automation.CmdletInvocationException" />,
+             and also MSH engine errors such as
+             <see cref="T:System.Management.Automation.GetValueException" />.
+             Cmdlets and providers should not define this interface;
+             instead, they should use the
+             WriteError(ErrorRecord) or
+             ThrowTerminatingError(ErrorRecord) methods.
+             The ErrorRecord property will contain an ErrorRecord
+             which contains an instance of
+             <see cref="T:System.Management.Automation.ParentContainsErrorRecordException" />
+             rather than the actual exception.
+            
+             Do not call WriteError(e.ErrorRecord).
+             The ErrorRecord contained in the ErrorRecord property of
+             an exception which implements IContainsErrorRecord
+             should not be passed directly to WriteError, since it contains
+             a ParentContainsErrorRecordException rather than the real exception.
+            
+             It is permitted for PSSnapins to implement custom Exception classes which implement
+             <see cref="T:System.Management.Automation.IContainsErrorRecord" />,
+             but it is generally preferable for Cmdlets and CmdletProviders to communicate
+             <see cref="P:System.Management.Automation.IContainsErrorRecord.ErrorRecord" />
+             information using
+             <see cref="M:System.Management.Automation.Cmdlet.ThrowTerminatingError(System.Management.Automation.ErrorRecord)" />
+             or
+             <see cref="M:System.Management.Automation.Provider.CmdletProvider.ThrowTerminatingError(System.Management.Automation.ErrorRecord)" />
+             rather than by throwing an exception which implements
+             <see cref="T:System.Management.Automation.IContainsErrorRecord" />.
+             Consider implementing
+             <seealso cref="T:System.Management.Automation.IContainsErrorRecord" />
+             in your custom exception only if you throw it from a context
+             where a reference to the active
+             <seealso cref="T:System.Management.Automation.Cmdlet" /> or
+             <seealso cref="T:System.Management.Automation.Provider.CmdletProvider" />
+             is no longer available.
+             </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="ErrorRecord">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.ErrorRecord ErrorRecord { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Management.Automation.ErrorRecord ErrorRecord" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.IContainsErrorRecord.ErrorRecord" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ErrorRecord As ErrorRecord" />
+      <MemberSignature Language="F#" Value="member this.ErrorRecord : System.Management.Automation.ErrorRecord" Usage="System.Management.Automation.IContainsErrorRecord.ErrorRecord" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.ErrorRecord</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            This is the
+            <see cref="P:System.Management.Automation.IContainsErrorRecord.ErrorRecord" />
+            which provides additional information about the error.
+            </summary>
+        <value />
+        <remarks>
+            The <see cref="P:System.Management.Automation.IContainsErrorRecord.ErrorRecord" /> instance returned by
+            <see cref="P:System.Management.Automation.IContainsErrorRecord.ErrorRecord" />
+            should contain in its
+            <see cref="P:System.Management.Automation.ErrorRecord.Exception" />
+            property an instance of
+            <see cref="T:System.Management.Automation.ParentContainsErrorRecordException" />
+            rather than a reference to the root exception.  This prevents
+            a recursive reference between the exception implementing
+            <see cref="T:System.Management.Automation.IContainsErrorRecord" /> and the
+            <see cref="P:System.Management.Automation.IContainsErrorRecord.ErrorRecord" />.
+            Use the
+            <see cref="M:System.Management.Automation.ParentContainsErrorRecordException.#ctor(System.Exception)" />
+            constructor so that the
+            <see cref="T:System.Management.Automation.ParentContainsErrorRecordException" />
+            will have the same
+            <see cref="P:System.Exception.Message" />
+            as the root exception.
+            </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

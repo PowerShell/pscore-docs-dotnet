@@ -1,0 +1,104 @@
+﻿<Type Name="ValidateDriveAttribute" FullName="System.Management.Automation.ValidateDriveAttribute">
+  <TypeSignature Language="C#" Value="public class ValidateDriveAttribute : System.Management.Automation.ValidateArgumentsAttribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ValidateDriveAttribute extends System.Management.Automation.ValidateArgumentsAttribute" />
+  <TypeSignature Language="DocId" Value="T:System.Management.Automation.ValidateDriveAttribute" />
+  <TypeSignature Language="VB.NET" Value="Public Class ValidateDriveAttribute&#xA;Inherits ValidateArgumentsAttribute" />
+  <TypeSignature Language="F#" Value="type ValidateDriveAttribute = class&#xA;    inherit ValidateArgumentsAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System.Management.Automation</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Management.Automation.ValidateArgumentsAttribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Property | System.AttributeTargets.Field)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>
+            Validates that the path has an approved root drive
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ValidateDriveAttribute (params string[] validRootDrives);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string[] validRootDrives) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.ValidateDriveAttribute.#ctor(System.String[])" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (ParamArray validRootDrives As String())" />
+      <MemberSignature Language="F#" Value="new System.Management.Automation.ValidateDriveAttribute : string[] -&gt; System.Management.Automation.ValidateDriveAttribute" Usage="new System.Management.Automation.ValidateDriveAttribute validRootDrives" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="validRootDrives" Type="System.String[]">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.ParamArray</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="validRootDrives">List of approved root drives for path</param>
+        <summary>
+            Initializes a new instance of the ValidateDrivePath class
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Validate">
+      <MemberSignature Language="C#" Value="protected override void Validate (object arguments, System.Management.Automation.EngineIntrinsics engineIntrinsics);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void Validate(object arguments, class System.Management.Automation.EngineIntrinsics engineIntrinsics) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.ValidateDriveAttribute.Validate(System.Object,System.Management.Automation.EngineIntrinsics)" />
+      <MemberSignature Language="F#" Value="override this.Validate : obj * System.Management.Automation.EngineIntrinsics -&gt; unit" Usage="validateDriveAttribute.Validate (arguments, engineIntrinsics)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="arguments" Type="System.Object" />
+        <Parameter Name="engineIntrinsics" Type="System.Management.Automation.EngineIntrinsics" />
+      </Parameters>
+      <Docs>
+        <param name="arguments">Object to validate</param>
+        <param name="engineIntrinsics">Engine intrinsics</param>
+        <summary>
+            Validates path argument
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ValidRootDrives">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IList&lt;string&gt; ValidRootDrives { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IList`1&lt;string&gt; ValidRootDrives" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.ValidateDriveAttribute.ValidRootDrives" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ValidRootDrives As IList(Of String)" />
+      <MemberSignature Language="F#" Value="member this.ValidRootDrives : System.Collections.Generic.IList&lt;string&gt;" Usage="System.Management.Automation.ValidateDriveAttribute.ValidRootDrives" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IList&lt;System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the values in the set
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

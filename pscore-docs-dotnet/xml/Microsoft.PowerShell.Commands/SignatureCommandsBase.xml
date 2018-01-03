@@ -1,0 +1,276 @@
+﻿<Type Name="SignatureCommandsBase" FullName="Microsoft.PowerShell.Commands.SignatureCommandsBase">
+  <TypeSignature Language="C#" Value="public abstract class SignatureCommandsBase : System.Management.Automation.PSCmdlet" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit SignatureCommandsBase extends System.Management.Automation.PSCmdlet" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.PowerShell.Commands.SignatureCommandsBase" />
+  <TypeSignature Language="VB.NET" Value="Public MustInherit Class SignatureCommandsBase&#xA;Inherits PSCmdlet" />
+  <TypeSignature Language="F#" Value="type SignatureCommandsBase = class&#xA;    inherit PSCmdlet" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.PowerShell.Security</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Management.Automation.PSCmdlet</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Defines the base class from which all signature commands
+            are derived.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected SignatureCommandsBase (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Commands.SignatureCommandsBase.#ctor(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Protected Sub New (name As String)" />
+      <MemberSignature Language="F#" Value="new Microsoft.PowerShell.Commands.SignatureCommandsBase : string -&gt; Microsoft.PowerShell.Commands.SignatureCommandsBase" Usage="new Microsoft.PowerShell.Commands.SignatureCommandsBase name" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Security</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">
+             The name of the command.
+             </param>
+        <summary>
+             Initializes a new instance of the SignatureCommandsBase class,
+             using the given command name.
+             </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Content">
+      <MemberSignature Language="C#" Value="public byte[] Content { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance unsigned int8[] Content" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.SignatureCommandsBase.Content" />
+      <MemberSignature Language="VB.NET" Value="Public Property Content As Byte()" />
+      <MemberSignature Language="F#" Value="member this.Content : byte[] with get, set" Usage="Microsoft.PowerShell.Commands.SignatureCommandsBase.Content" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Security</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(Mandatory=true, ParameterSetName="ByContent", ValueFromPipelineByPropertyName=true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.ValidateNotNullOrEmpty</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            File contents as a byte array
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FilePath">
+      <MemberSignature Language="C#" Value="public string[] FilePath { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string[] FilePath" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.SignatureCommandsBase.FilePath" />
+      <MemberSignature Language="VB.NET" Value="Public Property FilePath As String()" />
+      <MemberSignature Language="F#" Value="member this.FilePath : string[] with get, set" Usage="Microsoft.PowerShell.Commands.SignatureCommandsBase.FilePath" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Security</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(Mandatory=true, ParameterSetName="ByPath", Position=0, ValueFromPipeline=true, ValueFromPipelineByPropertyName=true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets the path to the file for which to get or set the
+            digital signature.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LiteralPath">
+      <MemberSignature Language="C#" Value="public string[] LiteralPath { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string[] LiteralPath" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.SignatureCommandsBase.LiteralPath" />
+      <MemberSignature Language="VB.NET" Value="Public Property LiteralPath As String()" />
+      <MemberSignature Language="F#" Value="member this.LiteralPath : string[] with get, set" Usage="Microsoft.PowerShell.Commands.SignatureCommandsBase.LiteralPath" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Security</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Alias(Mono.Cecil.CustomAttributeArgument[])</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(Mandatory=true, ParameterSetName="ByLiteralPath", ValueFromPipelineByPropertyName=true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets the literal path to the file for which to get or set the
+            digital signature.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PerformAction">
+      <MemberSignature Language="C#" Value="protected abstract System.Management.Automation.Signature PerformAction (string filePath);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class System.Management.Automation.Signature PerformAction(string filePath) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Commands.SignatureCommandsBase.PerformAction(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Protected MustOverride Function PerformAction (filePath As String) As Signature" />
+      <MemberSignature Language="F#" Value="abstract member PerformAction : string -&gt; System.Management.Automation.Signature" Usage="signatureCommandsBase.PerformAction filePath" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Security</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.Signature</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="filePath" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="filePath">
+            The name of the file on which to perform the action.
+            </param>
+        <summary>
+            Performs the action (ie: get signature, or set signature)
+            on the specified file.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PerformAction">
+      <MemberSignature Language="C#" Value="protected abstract System.Management.Automation.Signature PerformAction (string fileName, byte[] content);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class System.Management.Automation.Signature PerformAction(string fileName, unsigned int8[] content) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Commands.SignatureCommandsBase.PerformAction(System.String,System.Byte[])" />
+      <MemberSignature Language="VB.NET" Value="Protected MustOverride Function PerformAction (fileName As String, content As Byte()) As Signature" />
+      <MemberSignature Language="F#" Value="abstract member PerformAction : string * byte[] -&gt; System.Management.Automation.Signature" Usage="signatureCommandsBase.PerformAction (fileName, content)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Security</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.Signature</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="fileName" Type="System.String" />
+        <Parameter Name="content" Type="System.Byte[]" />
+      </Parameters>
+      <Docs>
+        <param name="fileName">
+            The filename used for type if content is specified.
+            </param>
+        <param name="content">
+            The file contents on which to perform the action.
+            </param>
+        <summary>
+            Performs the action (ie: get signature, or set signature)
+            on the specified contents.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ProcessRecord">
+      <MemberSignature Language="C#" Value="protected override void ProcessRecord ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void ProcessRecord() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Commands.SignatureCommandsBase.ProcessRecord" />
+      <MemberSignature Language="VB.NET" Value="Protected Overrides Sub ProcessRecord ()" />
+      <MemberSignature Language="F#" Value="override this.ProcessRecord : unit -&gt; unit" Usage="signatureCommandsBase.ProcessRecord " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Security</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Processes records from the input pipeline.
+            For each input object, the command gets or
+            sets the digital signature on the object, and
+            and exports the object.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Signature">
+      <MemberSignature Language="C#" Value="protected System.Management.Automation.Signature Signature { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Management.Automation.Signature Signature" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.SignatureCommandsBase.Signature" />
+      <MemberSignature Language="VB.NET" Value="Protected Property Signature As Signature" />
+      <MemberSignature Language="F#" Value="member this.Signature : System.Management.Automation.Signature with get, set" Usage="Microsoft.PowerShell.Commands.SignatureCommandsBase.Signature" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Security</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.Signature</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets the digital signature to be written to
+            the output pipeline.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SourcePathOrExtension">
+      <MemberSignature Language="C#" Value="public string[] SourcePathOrExtension { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string[] SourcePathOrExtension" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.SignatureCommandsBase.SourcePathOrExtension" />
+      <MemberSignature Language="VB.NET" Value="Public Property SourcePathOrExtension As String()" />
+      <MemberSignature Language="F#" Value="member this.SourcePathOrExtension : string[] with get, set" Usage="Microsoft.PowerShell.Commands.SignatureCommandsBase.SourcePathOrExtension" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Security</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(Mandatory=true, ParameterSetName="ByContent", ValueFromPipeline=true, ValueFromPipelineByPropertyName=true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets the file type of the byte array containing the content with
+            digital signature.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

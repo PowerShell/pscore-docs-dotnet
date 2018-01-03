@@ -1,0 +1,601 @@
+﻿<Type Name="PSSessionOption" FullName="System.Management.Automation.Remoting.PSSessionOption">
+  <TypeSignature Language="C#" Value="public sealed class PSSessionOption" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit PSSessionOption extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Management.Automation.Remoting.PSSessionOption" />
+  <TypeSignature Language="VB.NET" Value="Public NotInheritable Class PSSessionOption" />
+  <TypeSignature Language="F#" Value="type PSSessionOption = class" />
+  <AssemblyInfo>
+    <AssemblyName>System.Management.Automation</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Options for a remote PSSession
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public PSSessionOption ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Remoting.PSSessionOption.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New ()" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>
+            Creates a new instance of <see cref="T:System.Management.Automation.Remoting.PSSessionOption" /></summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ApplicationArguments">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.PSPrimitiveDictionary ApplicationArguments { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Management.Automation.PSPrimitiveDictionary ApplicationArguments" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.Remoting.PSSessionOption.ApplicationArguments" />
+      <MemberSignature Language="VB.NET" Value="Public Property ApplicationArguments As PSPrimitiveDictionary" />
+      <MemberSignature Language="F#" Value="member this.ApplicationArguments : System.Management.Automation.PSPrimitiveDictionary with get, set" Usage="System.Management.Automation.Remoting.PSSessionOption.ApplicationArguments" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.PSPrimitiveDictionary</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Application arguments the server can see in <see cref="P:System.Management.Automation.Remoting.PSSenderInfo.ApplicationArguments" /></summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CancelTimeout">
+      <MemberSignature Language="C#" Value="public TimeSpan CancelTimeout { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.TimeSpan CancelTimeout" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.Remoting.PSSessionOption.CancelTimeout" />
+      <MemberSignature Language="VB.NET" Value="Public Property CancelTimeout As TimeSpan" />
+      <MemberSignature Language="F#" Value="member this.CancelTimeout : TimeSpan with get, set" Usage="System.Management.Automation.Remoting.PSSessionOption.CancelTimeout" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.TimeSpan</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The duration for which PowerShell should wait before it times out on cancel operations 
+            (close runspace or stop powershell). For instance, when the user hits ctrl-C, 
+            New-PSSession cmdlet tries to call a stop on all remote runspaces which are in the Opening state. 
+            The user wouldn’t mind waiting for 15 seconds, but this should be time bound and of a shorter duration. 
+            A high timeout here like 3 minutes will give the user a feeling that the PowerShell client has hung.
+            
+            Default: 60 * 1000 = 1 minute
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Culture">
+      <MemberSignature Language="C#" Value="public System.Globalization.CultureInfo Culture { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Globalization.CultureInfo Culture" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.Remoting.PSSessionOption.Culture" />
+      <MemberSignature Language="VB.NET" Value="Public Property Culture As CultureInfo" />
+      <MemberSignature Language="F#" Value="member this.Culture : System.Globalization.CultureInfo with get, set" Usage="System.Management.Automation.Remoting.PSSessionOption.Culture" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Globalization.CultureInfo</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Culture that the remote session should use
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IdleTimeout">
+      <MemberSignature Language="C#" Value="public TimeSpan IdleTimeout { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.TimeSpan IdleTimeout" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.Remoting.PSSessionOption.IdleTimeout" />
+      <MemberSignature Language="VB.NET" Value="Public Property IdleTimeout As TimeSpan" />
+      <MemberSignature Language="F#" Value="member this.IdleTimeout : TimeSpan with get, set" Usage="System.Management.Automation.Remoting.PSSessionOption.IdleTimeout" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.TimeSpan</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The duration for which a Runspace on server needs to wait before it declares the client dead and closes itself down. 
+            This is especially important as these values may have to be configured differently for enterprise administration 
+            and exchange scenarios.
+            
+            Default: -1 -&gt; Use current server value for IdleTimeout.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IncludePortInSPN">
+      <MemberSignature Language="C#" Value="public bool IncludePortInSPN { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IncludePortInSPN" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.Remoting.PSSessionOption.IncludePortInSPN" />
+      <MemberSignature Language="VB.NET" Value="Public Property IncludePortInSPN As Boolean" />
+      <MemberSignature Language="F#" Value="member this.IncludePortInSPN : bool with get, set" Usage="System.Management.Automation.Remoting.PSSessionOption.IncludePortInSPN" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Uses Service Principal Name (SPN) along with the Port number during authentication.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MaxConnectionRetryCount">
+      <MemberSignature Language="C#" Value="public int MaxConnectionRetryCount { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 MaxConnectionRetryCount" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.Remoting.PSSessionOption.MaxConnectionRetryCount" />
+      <MemberSignature Language="VB.NET" Value="Public Property MaxConnectionRetryCount As Integer" />
+      <MemberSignature Language="F#" Value="member this.MaxConnectionRetryCount : int with get, set" Usage="System.Management.Automation.Remoting.PSSessionOption.MaxConnectionRetryCount" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Number of times a connection will be re-attempted when a connection fails due to network
+            issues.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MaximumConnectionRedirectionCount">
+      <MemberSignature Language="C#" Value="public int MaximumConnectionRedirectionCount { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 MaximumConnectionRedirectionCount" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.Remoting.PSSessionOption.MaximumConnectionRedirectionCount" />
+      <MemberSignature Language="VB.NET" Value="Public Property MaximumConnectionRedirectionCount As Integer" />
+      <MemberSignature Language="F#" Value="member this.MaximumConnectionRedirectionCount : int with get, set" Usage="System.Management.Automation.Remoting.PSSessionOption.MaximumConnectionRedirectionCount" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The MaximumConnectionRedirectionCount parameter enables the implicit redirection functionality.
+            -1 = no limit
+             0 = no redirection
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MaximumReceivedDataSizePerCommand">
+      <MemberSignature Language="C#" Value="public Nullable&lt;int&gt; MaximumReceivedDataSizePerCommand { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Nullable`1&lt;int32&gt; MaximumReceivedDataSizePerCommand" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.Remoting.PSSessionOption.MaximumReceivedDataSizePerCommand" />
+      <MemberSignature Language="VB.NET" Value="Public Property MaximumReceivedDataSizePerCommand As Nullable(Of Integer)" />
+      <MemberSignature Language="F#" Value="member this.MaximumReceivedDataSizePerCommand : Nullable&lt;int&gt; with get, set" Usage="System.Management.Automation.Remoting.PSSessionOption.MaximumReceivedDataSizePerCommand" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Nullable&lt;System.Int32&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Total data (in bytes) that can be received from a remote machine
+            targeted towards a command. If null, then the size is unlimited.
+            Default is unlimited data.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MaximumReceivedObjectSize">
+      <MemberSignature Language="C#" Value="public Nullable&lt;int&gt; MaximumReceivedObjectSize { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Nullable`1&lt;int32&gt; MaximumReceivedObjectSize" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.Remoting.PSSessionOption.MaximumReceivedObjectSize" />
+      <MemberSignature Language="VB.NET" Value="Public Property MaximumReceivedObjectSize As Nullable(Of Integer)" />
+      <MemberSignature Language="F#" Value="member this.MaximumReceivedObjectSize : Nullable&lt;int&gt; with get, set" Usage="System.Management.Automation.Remoting.PSSessionOption.MaximumReceivedObjectSize" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Nullable&lt;System.Int32&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Maximum size (in bytes) of a deserialized object received from a remote machine.
+            If null, then the size is unlimited. Default is 200MB object size.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NoCompression">
+      <MemberSignature Language="C#" Value="public bool NoCompression { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool NoCompression" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.Remoting.PSSessionOption.NoCompression" />
+      <MemberSignature Language="VB.NET" Value="Public Property NoCompression As Boolean" />
+      <MemberSignature Language="F#" Value="member this.NoCompression : bool with get, set" Usage="System.Management.Automation.Remoting.PSSessionOption.NoCompression" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            If false, underlying WSMan infrastructure will compress data sent on the network.
+            If true, data will not be compressed. Compression improves performance by 
+            reducing the amount of data sent on the network. Compression my require extra
+            memory consumption and CPU usage. In cases where available memory / CPU is less, 
+            set this property to "true".
+            By default the value of this property is "false".
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NoEncryption">
+      <MemberSignature Language="C#" Value="public bool NoEncryption { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool NoEncryption" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.Remoting.PSSessionOption.NoEncryption" />
+      <MemberSignature Language="VB.NET" Value="Public Property NoEncryption As Boolean" />
+      <MemberSignature Language="F#" Value="member this.NoEncryption : bool with get, set" Usage="System.Management.Automation.Remoting.PSSessionOption.NoEncryption" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Specifies that no encryption will be used when doing remote operations over 
+            http. Unencrypted traffic is not allowed by default and must be enabled in 
+            the local configuration
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NoMachineProfile">
+      <MemberSignature Language="C#" Value="public bool NoMachineProfile { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool NoMachineProfile" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.Remoting.PSSessionOption.NoMachineProfile" />
+      <MemberSignature Language="VB.NET" Value="Public Property NoMachineProfile As Boolean" />
+      <MemberSignature Language="F#" Value="member this.NoMachineProfile : bool with get, set" Usage="System.Management.Automation.Remoting.PSSessionOption.NoMachineProfile" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            If <c>true</c> then Operating System won't load the user profile (i.e. registry keys under HKCU) on the remote server
+            which can result in a faster session creation time.  This option won't have any effect if the remote machine has
+            already loaded the profile (i.e. in another session). 
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OpenTimeout">
+      <MemberSignature Language="C#" Value="public TimeSpan OpenTimeout { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.TimeSpan OpenTimeout" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.Remoting.PSSessionOption.OpenTimeout" />
+      <MemberSignature Language="VB.NET" Value="Public Property OpenTimeout As TimeSpan" />
+      <MemberSignature Language="F#" Value="member this.OpenTimeout : TimeSpan with get, set" Usage="System.Management.Automation.Remoting.PSSessionOption.OpenTimeout" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.TimeSpan</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The duration for which PowerShell remoting waits before timing out on a connection to a remote machine. 
+            Simply put, the timeout for a remote runspace creation. 
+            The user would like to tweak this timeout depending on whether 
+            he/she is connecting to a machine in the data center or across a slow WAN.
+            
+            Default: 3 * 60 * 1000 = 3 minutes
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OperationTimeout">
+      <MemberSignature Language="C#" Value="public TimeSpan OperationTimeout { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.TimeSpan OperationTimeout" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.Remoting.PSSessionOption.OperationTimeout" />
+      <MemberSignature Language="VB.NET" Value="Public Property OperationTimeout As TimeSpan" />
+      <MemberSignature Language="F#" Value="member this.OperationTimeout : TimeSpan with get, set" Usage="System.Management.Automation.Remoting.PSSessionOption.OperationTimeout" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.TimeSpan</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The duration for which PowerShell remoting waits before timing out 
+            for any operation. The user would like to tweak this timeout 
+            depending on whether he/she is connecting to a machine in the data
+            center or across a slow WAN.
+            
+            Default: 3*60*1000 == 3minutes
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OutputBufferingMode">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.Runspaces.OutputBufferingMode OutputBufferingMode { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Management.Automation.Runspaces.OutputBufferingMode OutputBufferingMode" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.Remoting.PSSessionOption.OutputBufferingMode" />
+      <MemberSignature Language="VB.NET" Value="Public Property OutputBufferingMode As OutputBufferingMode" />
+      <MemberSignature Language="F#" Value="member this.OutputBufferingMode : System.Management.Automation.Runspaces.OutputBufferingMode with get, set" Usage="System.Management.Automation.Remoting.PSSessionOption.OutputBufferingMode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.Runspaces.OutputBufferingMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Determines how server in disconnected state deals with cached output
+            data when the cache becomes filled.
+            Default value is 'block mode' where command execution is blocked after
+            the server side data cache becomes filled.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ProxyAccessType">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.Remoting.ProxyAccessType ProxyAccessType { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Management.Automation.Remoting.ProxyAccessType ProxyAccessType" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.Remoting.PSSessionOption.ProxyAccessType" />
+      <MemberSignature Language="VB.NET" Value="Public Property ProxyAccessType As ProxyAccessType" />
+      <MemberSignature Language="F#" Value="member this.ProxyAccessType : System.Management.Automation.Remoting.ProxyAccessType with get, set" Usage="System.Management.Automation.Remoting.PSSessionOption.ProxyAccessType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.Remoting.ProxyAccessType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            By default, ProxyAccessType is None, that means Proxy information (ProxyAccessType, 
+            ProxyAuthenticationMechanism and ProxyCredential)is not passed to WSMan at all.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ProxyAuthentication">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.Runspaces.AuthenticationMechanism ProxyAuthentication { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Management.Automation.Runspaces.AuthenticationMechanism ProxyAuthentication" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.Remoting.PSSessionOption.ProxyAuthentication" />
+      <MemberSignature Language="VB.NET" Value="Public Property ProxyAuthentication As AuthenticationMechanism" />
+      <MemberSignature Language="F#" Value="member this.ProxyAuthentication : System.Management.Automation.Runspaces.AuthenticationMechanism with get, set" Usage="System.Management.Automation.Remoting.PSSessionOption.ProxyAuthentication" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.Runspaces.AuthenticationMechanism</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The following is the definition of the input parameter "ProxyAuthentication".
+            This parameter takes a set of authentication methods the user can select 
+            from.  The available options should be as follows:
+            - Negotiate: Use the default authentication (as defined by the underlying 
+            protocol) for establishing a remote connection.
+            - Basic:  Use basic authentication for establishing a remote connection
+            - Digest: Use Digest authentication for establishing a remote connection
+            
+            Default is Negotiate.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ProxyCredential">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.PSCredential ProxyCredential { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Management.Automation.PSCredential ProxyCredential" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.Remoting.PSSessionOption.ProxyCredential" />
+      <MemberSignature Language="VB.NET" Value="Public Property ProxyCredential As PSCredential" />
+      <MemberSignature Language="F#" Value="member this.ProxyCredential : System.Management.Automation.PSCredential with get, set" Usage="System.Management.Automation.Remoting.PSSessionOption.ProxyCredential" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.PSCredential</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The following is the definition of the input parameter "ProxyCredential".
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SkipCACheck">
+      <MemberSignature Language="C#" Value="public bool SkipCACheck { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool SkipCACheck" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.Remoting.PSSessionOption.SkipCACheck" />
+      <MemberSignature Language="VB.NET" Value="Public Property SkipCACheck As Boolean" />
+      <MemberSignature Language="F#" Value="member this.SkipCACheck : bool with get, set" Usage="System.Management.Automation.Remoting.PSSessionOption.SkipCACheck" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            When connecting over HTTPS, the client does not validate that the server 
+            certificate is signed by a trusted certificate authority (CA). Use only when 
+            the remote computer is trusted by other means, for example, if the remote 
+            computer is part of a network that is physically secure and isolated or the 
+            remote computer is listed as a trusted host in WinRM configuration
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SkipCNCheck">
+      <MemberSignature Language="C#" Value="public bool SkipCNCheck { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool SkipCNCheck" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.Remoting.PSSessionOption.SkipCNCheck" />
+      <MemberSignature Language="VB.NET" Value="Public Property SkipCNCheck As Boolean" />
+      <MemberSignature Language="F#" Value="member this.SkipCNCheck : bool with get, set" Usage="System.Management.Automation.Remoting.PSSessionOption.SkipCNCheck" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Indicates that certificate common name (CN) of the server need not match the 
+            hostname of the server. Used only in remote operations using https. This 
+            option should only be used for trusted machines.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SkipRevocationCheck">
+      <MemberSignature Language="C#" Value="public bool SkipRevocationCheck { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool SkipRevocationCheck" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.Remoting.PSSessionOption.SkipRevocationCheck" />
+      <MemberSignature Language="VB.NET" Value="Public Property SkipRevocationCheck As Boolean" />
+      <MemberSignature Language="F#" Value="member this.SkipRevocationCheck : bool with get, set" Usage="System.Management.Automation.Remoting.PSSessionOption.SkipRevocationCheck" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Indicates that certificate common name (CN) of the server need not match the 
+            hostname of the server. Used only in remote operations using https. This 
+            option should only be used for trusted machines
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UICulture">
+      <MemberSignature Language="C#" Value="public System.Globalization.CultureInfo UICulture { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Globalization.CultureInfo UICulture" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.Remoting.PSSessionOption.UICulture" />
+      <MemberSignature Language="VB.NET" Value="Public Property UICulture As CultureInfo" />
+      <MemberSignature Language="F#" Value="member this.UICulture : System.Globalization.CultureInfo with get, set" Usage="System.Management.Automation.Remoting.PSSessionOption.UICulture" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Globalization.CultureInfo</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            UI culture that the remote session should use
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UseUTF16">
+      <MemberSignature Language="C#" Value="public bool UseUTF16 { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool UseUTF16" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.Remoting.PSSessionOption.UseUTF16" />
+      <MemberSignature Language="VB.NET" Value="Public Property UseUTF16 As Boolean" />
+      <MemberSignature Language="F#" Value="member this.UseUTF16 : bool with get, set" Usage="System.Management.Automation.Remoting.PSSessionOption.UseUTF16" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Indicates the request is encoded in UTF16 format rather than UTF8 format; 
+            UTF8 is the default.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

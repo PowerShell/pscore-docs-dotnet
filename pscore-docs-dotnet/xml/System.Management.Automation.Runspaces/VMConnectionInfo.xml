@@ -1,0 +1,160 @@
+﻿<Type Name="VMConnectionInfo" FullName="System.Management.Automation.Runspaces.VMConnectionInfo">
+  <TypeSignature Language="C#" Value="public sealed class VMConnectionInfo : System.Management.Automation.Runspaces.RunspaceConnectionInfo" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit VMConnectionInfo extends System.Management.Automation.Runspaces.RunspaceConnectionInfo" />
+  <TypeSignature Language="DocId" Value="T:System.Management.Automation.Runspaces.VMConnectionInfo" />
+  <TypeSignature Language="VB.NET" Value="Public NotInheritable Class VMConnectionInfo&#xA;Inherits RunspaceConnectionInfo" />
+  <TypeSignature Language="F#" Value="type VMConnectionInfo = class&#xA;    inherit RunspaceConnectionInfo" />
+  <AssemblyInfo>
+    <AssemblyName>System.Management.Automation</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Management.Automation.Runspaces.RunspaceConnectionInfo</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            The class that contains connection information for a remote session between a local host
+            and VM. The local host can be a VM in nested scenario.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="AuthenticationMechanism">
+      <MemberSignature Language="C#" Value="public override System.Management.Automation.Runspaces.AuthenticationMechanism AuthenticationMechanism { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Management.Automation.Runspaces.AuthenticationMechanism AuthenticationMechanism" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.Runspaces.VMConnectionInfo.AuthenticationMechanism" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Property AuthenticationMechanism As AuthenticationMechanism" />
+      <MemberSignature Language="F#" Value="member this.AuthenticationMechanism : System.Management.Automation.Runspaces.AuthenticationMechanism with get, set" Usage="System.Management.Automation.Runspaces.VMConnectionInfo.AuthenticationMechanism" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.Runspaces.AuthenticationMechanism</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Authentication mechanism to use while connecting to the server.
+            Only Default is supported.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CertificateThumbprint">
+      <MemberSignature Language="C#" Value="public override string CertificateThumbprint { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string CertificateThumbprint" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.Runspaces.VMConnectionInfo.CertificateThumbprint" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Property CertificateThumbprint As String" />
+      <MemberSignature Language="F#" Value="member this.CertificateThumbprint : string with get, set" Usage="System.Management.Automation.Runspaces.VMConnectionInfo.CertificateThumbprint" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            ThumbPrint of a certificate used for connecting to a remote machine.
+            When this is specified, you dont need to supply credential and authentication
+            mechanism.
+            Will always be null to signify that this is not supported.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ComputerName">
+      <MemberSignature Language="C#" Value="public override string ComputerName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ComputerName" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.Runspaces.VMConnectionInfo.ComputerName" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Property ComputerName As String" />
+      <MemberSignature Language="F#" Value="member this.ComputerName : string with get, set" Usage="System.Management.Automation.Runspaces.VMConnectionInfo.ComputerName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Name of the target VM.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ConfigurationName">
+      <MemberSignature Language="C#" Value="public string ConfigurationName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ConfigurationName" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.Runspaces.VMConnectionInfo.ConfigurationName" />
+      <MemberSignature Language="VB.NET" Value="Public Property ConfigurationName As String" />
+      <MemberSignature Language="F#" Value="member this.ConfigurationName : string with get, set" Usage="System.Management.Automation.Runspaces.VMConnectionInfo.ConfigurationName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Configuration name of the VM session.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Credential">
+      <MemberSignature Language="C#" Value="public override System.Management.Automation.PSCredential Credential { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Management.Automation.PSCredential Credential" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.Runspaces.VMConnectionInfo.Credential" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Property Credential As PSCredential" />
+      <MemberSignature Language="F#" Value="member this.Credential : System.Management.Automation.PSCredential with get, set" Usage="System.Management.Automation.Runspaces.VMConnectionInfo.Credential" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.PSCredential</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Credential used for the connection.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="VMGuid">
+      <MemberSignature Language="C#" Value="public Guid VMGuid { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Guid VMGuid" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.Runspaces.VMConnectionInfo.VMGuid" />
+      <MemberSignature Language="VB.NET" Value="Public Property VMGuid As Guid" />
+      <MemberSignature Language="F#" Value="member this.VMGuid : Guid with get, set" Usage="System.Management.Automation.Runspaces.VMConnectionInfo.VMGuid" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Guid</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            GUID of the target VM.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,308 @@
+﻿<Type Name="PSAliasProperty" FullName="System.Management.Automation.PSAliasProperty">
+  <TypeSignature Language="C#" Value="public class PSAliasProperty : System.Management.Automation.PSPropertyInfo" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit PSAliasProperty extends System.Management.Automation.PSPropertyInfo" />
+  <TypeSignature Language="DocId" Value="T:System.Management.Automation.PSAliasProperty" />
+  <TypeSignature Language="VB.NET" Value="Public Class PSAliasProperty&#xA;Inherits PSPropertyInfo" />
+  <TypeSignature Language="F#" Value="type PSAliasProperty = class&#xA;    inherit PSPropertyInfo" />
+  <AssemblyInfo>
+    <AssemblyName>System.Management.Automation</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Management.Automation.PSPropertyInfo</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Serves as an alias to another member
+            </summary>
+    <remarks>
+            It is permitted to subclass <see cref="T:System.Management.Automation.PSAliasProperty" />
+            but there is no established scenario for doing this, nor has it been tested.
+            </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public PSAliasProperty (string name, string referencedMemberName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string name, string referencedMemberName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.PSAliasProperty.#ctor(System.String,System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (name As String, referencedMemberName As String)" />
+      <MemberSignature Language="F#" Value="new System.Management.Automation.PSAliasProperty : string * string -&gt; System.Management.Automation.PSAliasProperty" Usage="new System.Management.Automation.PSAliasProperty (name, referencedMemberName)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="referencedMemberName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">name of the alias</param>
+        <param name="referencedMemberName">name of the member this alias refers to</param>
+        <summary>
+            Initializes a new instance of PSAliasProperty setting the name of the alias
+            and the name of the member this alias refers to.
+            </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">for invalid arguments</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public PSAliasProperty (string name, string referencedMemberName, Type conversionType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string name, string referencedMemberName, class System.Type conversionType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.PSAliasProperty.#ctor(System.String,System.String,System.Type)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (name As String, referencedMemberName As String, conversionType As Type)" />
+      <MemberSignature Language="F#" Value="new System.Management.Automation.PSAliasProperty : string * string * Type -&gt; System.Management.Automation.PSAliasProperty" Usage="new System.Management.Automation.PSAliasProperty (name, referencedMemberName, conversionType)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="referencedMemberName" Type="System.String" />
+        <Parameter Name="conversionType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="name">name of the alias</param>
+        <param name="referencedMemberName">name of the member this alias refers to</param>
+        <param name="conversionType">the type to convert the referenced member's value</param>
+        <summary>
+            Initializes a new instance of PSAliasProperty setting the name of the alias,
+            the name of the member this alias refers to and the type to convert the referenced
+            member's value.
+            </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">for invalid arguments</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ConversionType">
+      <MemberSignature Language="C#" Value="public Type ConversionType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type ConversionType" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.PSAliasProperty.ConversionType" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ConversionType As Type" />
+      <MemberSignature Language="F#" Value="member this.ConversionType : Type" Usage="System.Management.Automation.PSAliasProperty.ConversionType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the the type to convert the referenced member's value. It might be
+            null when no conversion is done.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Copy">
+      <MemberSignature Language="C#" Value="public override System.Management.Automation.PSMemberInfo Copy ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Management.Automation.PSMemberInfo Copy() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.PSAliasProperty.Copy" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Function Copy () As PSMemberInfo" />
+      <MemberSignature Language="F#" Value="override this.Copy : unit -&gt; System.Management.Automation.PSMemberInfo" Usage="pSAliasProperty.Copy " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.PSMemberInfo</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            returns a new PSMemberInfo that is a copy of this PSMemberInfo
+            </summary>
+        <returns>a new PSMemberInfo that is a copy of this PSMemberInfo</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsGettable">
+      <MemberSignature Language="C#" Value="public override bool IsGettable { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsGettable" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.PSAliasProperty.IsGettable" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides ReadOnly Property IsGettable As Boolean" />
+      <MemberSignature Language="F#" Value="member this.IsGettable : bool" Usage="System.Management.Automation.PSAliasProperty.IsGettable" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets true if this property can be read
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.Management.Automation.ExtendedTypeSystemException">
+                When
+                    the alias has not been added to an PSObject or
+                    the alias has a cycle or
+                    an aliased member is not present
+            </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="IsSettable">
+      <MemberSignature Language="C#" Value="public override bool IsSettable { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsSettable" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.PSAliasProperty.IsSettable" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides ReadOnly Property IsSettable As Boolean" />
+      <MemberSignature Language="F#" Value="member this.IsSettable : bool" Usage="System.Management.Automation.PSAliasProperty.IsSettable" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets true if this property can be set
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.Management.Automation.ExtendedTypeSystemException">
+            When
+                the alias has not been added to an PSObject or
+                the alias has a cycle or
+                an aliased member is not present
+            </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="MemberType">
+      <MemberSignature Language="C#" Value="public override System.Management.Automation.PSMemberTypes MemberType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Management.Automation.PSMemberTypes MemberType" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.PSAliasProperty.MemberType" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides ReadOnly Property MemberType As PSMemberTypes" />
+      <MemberSignature Language="F#" Value="member this.MemberType : System.Management.Automation.PSMemberTypes" Usage="System.Management.Automation.PSAliasProperty.MemberType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.PSMemberTypes</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the member type
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReferencedMemberName">
+      <MemberSignature Language="C#" Value="public string ReferencedMemberName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ReferencedMemberName" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.PSAliasProperty.ReferencedMemberName" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ReferencedMemberName As String" />
+      <MemberSignature Language="F#" Value="member this.ReferencedMemberName : string" Usage="System.Management.Automation.PSAliasProperty.ReferencedMemberName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the name of the member this alias refers to
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.PSAliasProperty.ToString" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Function ToString () As String" />
+      <MemberSignature Language="F#" Value="override this.ToString : unit -&gt; string" Usage="pSAliasProperty.ToString " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Returns the string representation of this property
+            </summary>
+        <returns>This property as a string</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TypeNameOfValue">
+      <MemberSignature Language="C#" Value="public override string TypeNameOfValue { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string TypeNameOfValue" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.PSAliasProperty.TypeNameOfValue" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides ReadOnly Property TypeNameOfValue As String" />
+      <MemberSignature Language="F#" Value="member this.TypeNameOfValue : string" Usage="System.Management.Automation.PSAliasProperty.TypeNameOfValue" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the type of the value for this member
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.Management.Automation.ExtendedTypeSystemException">
+            When
+                the alias has not been added to an PSObject or
+                the alias has a cycle or
+                an aliased member is not present
+            </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Value">
+      <MemberSignature Language="C#" Value="public override object Value { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object Value" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.PSAliasProperty.Value" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Property Value As Object" />
+      <MemberSignature Language="F#" Value="member this.Value : obj with get, set" Usage="System.Management.Automation.PSAliasProperty.Value" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets and Sets the value of this member
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.Management.Automation.ExtendedTypeSystemException">
+            When
+                the alias has not been added to an PSObject or
+                the alias has a cycle or
+                an aliased member is not present
+            </exception>
+        <exception cref="T:System.Management.Automation.GetValueException">When getting the value of a property throws an exception</exception>
+        <exception cref="T:System.Management.Automation.SetValueException">When setting the value of a property throws an exception</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

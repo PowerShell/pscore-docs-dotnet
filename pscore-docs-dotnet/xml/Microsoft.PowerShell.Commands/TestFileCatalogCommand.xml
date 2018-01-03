@@ -1,0 +1,139 @@
+﻿<Type Name="TestFileCatalogCommand" FullName="Microsoft.PowerShell.Commands.TestFileCatalogCommand">
+  <TypeSignature Language="C#" Value="public sealed class TestFileCatalogCommand : Microsoft.PowerShell.Commands.CatalogCommandsBase" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit TestFileCatalogCommand extends Microsoft.PowerShell.Commands.CatalogCommandsBase" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.PowerShell.Commands.TestFileCatalogCommand" />
+  <TypeSignature Language="VB.NET" Value="Public NotInheritable Class TestFileCatalogCommand&#xA;Inherits CatalogCommandsBase" />
+  <TypeSignature Language="F#" Value="type TestFileCatalogCommand = class&#xA;    inherit CatalogCommandsBase" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.PowerShell.Security</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Microsoft.PowerShell.Commands.CatalogCommandsBase</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Management.Automation.Cmdlet("Test", "FileCatalog", DefaultParameterSetName="ByPath", HelpUri="https://go.microsoft.com/fwlink/?LinkId=786750", SupportsShouldProcess=true)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Management.Automation.OutputType(typeof(System.Management.Automation.CatalogValidationStatus))</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Management.Automation.OutputType(typeof(System.Management.Automation.CatalogInformation))</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>
+            Defines the implementation of the 'Test-FileCatalog' cmdlet.
+            This cmdlet validates the Integrity of catalog
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TestFileCatalogCommand ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Commands.TestFileCatalogCommand.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New ()" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Security</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>
+            Initializes a new instance of the New-FileCatalog class.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Detailed">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.SwitchParameter Detailed { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Management.Automation.SwitchParameter Detailed" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.TestFileCatalogCommand.Detailed" />
+      <MemberSignature Language="VB.NET" Value="Public Property Detailed As SwitchParameter" />
+      <MemberSignature Language="F#" Value="member this.Detailed : System.Management.Automation.SwitchParameter with get, set" Usage="Microsoft.PowerShell.Commands.TestFileCatalogCommand.Detailed" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Security</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.SwitchParameter</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary />
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FilesToSkip">
+      <MemberSignature Language="C#" Value="public string[] FilesToSkip { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string[] FilesToSkip" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.TestFileCatalogCommand.FilesToSkip" />
+      <MemberSignature Language="VB.NET" Value="Public Property FilesToSkip As String()" />
+      <MemberSignature Language="F#" Value="member this.FilesToSkip : string[] with get, set" Usage="Microsoft.PowerShell.Commands.TestFileCatalogCommand.FilesToSkip" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Security</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Patterns used to exclude files from DiskPaths and Catalog
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PerformAction">
+      <MemberSignature Language="C#" Value="protected override void PerformAction (System.Collections.ObjectModel.Collection&lt;string&gt; path, string catalogFilePath);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void PerformAction(class System.Collections.ObjectModel.Collection`1&lt;string&gt; path, string catalogFilePath) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Commands.TestFileCatalogCommand.PerformAction(System.Collections.ObjectModel.Collection{System.String},System.String)" />
+      <MemberSignature Language="VB.NET" Value="Protected Overrides Sub PerformAction (path As Collection(Of String), catalogFilePath As String)" />
+      <MemberSignature Language="F#" Value="override this.PerformAction : System.Collections.ObjectModel.Collection&lt;string&gt; * string -&gt; unit" Usage="testFileCatalogCommand.PerformAction (path, catalogFilePath)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Security</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="path" Type="System.Collections.ObjectModel.Collection&lt;System.String&gt;" />
+        <Parameter Name="catalogFilePath" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="path">
+            File or Folder Path
+            </param>
+        <param name="catalogFilePath">
+            Path to Catalog
+            </param>
+        <summary>
+            Validate the Integrity of given Catalog
+            </summary>
+        <returns>
+            True if able to Validate the Catalog and its not tampered or else False
+            </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

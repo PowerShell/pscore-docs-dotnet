@@ -1,0 +1,652 @@
+﻿<Type Name="UpdateTypeDataCommand" FullName="Microsoft.PowerShell.Commands.UpdateTypeDataCommand">
+  <TypeSignature Language="C#" Value="public class UpdateTypeDataCommand : Microsoft.PowerShell.Commands.UpdateData" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit UpdateTypeDataCommand extends Microsoft.PowerShell.Commands.UpdateData" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.PowerShell.Commands.UpdateTypeDataCommand" />
+  <TypeSignature Language="VB.NET" Value="Public Class UpdateTypeDataCommand&#xA;Inherits UpdateData" />
+  <TypeSignature Language="F#" Value="type UpdateTypeDataCommand = class&#xA;    inherit UpdateData" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.PowerShell.Commands.Utility</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Microsoft.PowerShell.Commands.UpdateData</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Management.Automation.Cmdlet("Update", "TypeData", DefaultParameterSetName="FileSet", HelpUri="https://go.microsoft.com/fwlink/?LinkID=113421", SupportsShouldProcess=true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>
+            This class implements update-typeData command.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public UpdateTypeDataCommand ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Commands.UpdateTypeDataCommand.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New ()" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Commands.Utility</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginProcessing">
+      <MemberSignature Language="C#" Value="protected override void BeginProcessing ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void BeginProcessing() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Commands.UpdateTypeDataCommand.BeginProcessing" />
+      <MemberSignature Language="VB.NET" Value="Protected Overrides Sub BeginProcessing ()" />
+      <MemberSignature Language="F#" Value="override this.BeginProcessing : unit -&gt; unit" Usage="updateTypeDataCommand.BeginProcessing " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Commands.Utility</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            This method verify if the Type Table is shared and cannot be updated
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultDisplayProperty">
+      <MemberSignature Language="C#" Value="public string DefaultDisplayProperty { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string DefaultDisplayProperty" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.UpdateTypeDataCommand.DefaultDisplayProperty" />
+      <MemberSignature Language="VB.NET" Value="Public Property DefaultDisplayProperty As String" />
+      <MemberSignature Language="F#" Value="member this.DefaultDisplayProperty : string with get, set" Usage="Microsoft.PowerShell.Commands.UpdateTypeDataCommand.DefaultDisplayProperty" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Commands.Utility</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="DynamicTypeSet")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.ValidateNotNullOrEmpty</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            DefaultDisplayProperty
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultDisplayPropertySet">
+      <MemberSignature Language="C#" Value="public string[] DefaultDisplayPropertySet { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string[] DefaultDisplayPropertySet" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.UpdateTypeDataCommand.DefaultDisplayPropertySet" />
+      <MemberSignature Language="VB.NET" Value="Public Property DefaultDisplayPropertySet As String()" />
+      <MemberSignature Language="F#" Value="member this.DefaultDisplayPropertySet : string[] with get, set" Usage="Microsoft.PowerShell.Commands.UpdateTypeDataCommand.DefaultDisplayPropertySet" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Commands.Utility</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="DynamicTypeSet")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.ValidateNotNullOrEmpty</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            DefaultDisplayPropertySet
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultKeyPropertySet">
+      <MemberSignature Language="C#" Value="public string[] DefaultKeyPropertySet { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string[] DefaultKeyPropertySet" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.UpdateTypeDataCommand.DefaultKeyPropertySet" />
+      <MemberSignature Language="VB.NET" Value="Public Property DefaultKeyPropertySet As String()" />
+      <MemberSignature Language="F#" Value="member this.DefaultKeyPropertySet : string[] with get, set" Usage="Microsoft.PowerShell.Commands.UpdateTypeDataCommand.DefaultKeyPropertySet" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Commands.Utility</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="DynamicTypeSet")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.ValidateNotNullOrEmpty</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            DefaultKeyPropertySet
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EndProcessing">
+      <MemberSignature Language="C#" Value="protected override void EndProcessing ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void EndProcessing() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Commands.UpdateTypeDataCommand.EndProcessing" />
+      <MemberSignature Language="VB.NET" Value="Protected Overrides Sub EndProcessing ()" />
+      <MemberSignature Language="F#" Value="override this.EndProcessing : unit -&gt; unit" Usage="updateTypeDataCommand.EndProcessing " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Commands.Utility</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            This method implements the EndProcessing method for update-typeData command
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Force">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.SwitchParameter Force { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Management.Automation.SwitchParameter Force" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.UpdateTypeDataCommand.Force" />
+      <MemberSignature Language="VB.NET" Value="Public Property Force As SwitchParameter" />
+      <MemberSignature Language="F#" Value="member this.Force : System.Management.Automation.SwitchParameter with get, set" Usage="Microsoft.PowerShell.Commands.UpdateTypeDataCommand.Force" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Commands.Utility</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="DynamicTypeSet")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="TypeDataSet")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.SwitchParameter</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            True if we should overwrite a possibly existing member
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InheritPropertySerializationSet">
+      <MemberSignature Language="C#" Value="public Nullable&lt;bool&gt; InheritPropertySerializationSet { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Nullable`1&lt;bool&gt; InheritPropertySerializationSet" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.UpdateTypeDataCommand.InheritPropertySerializationSet" />
+      <MemberSignature Language="VB.NET" Value="Public Property InheritPropertySerializationSet As Nullable(Of Boolean)" />
+      <MemberSignature Language="F#" Value="member this.InheritPropertySerializationSet : Nullable&lt;bool&gt; with get, set" Usage="Microsoft.PowerShell.Commands.UpdateTypeDataCommand.InheritPropertySerializationSet" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Commands.Utility</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="DynamicTypeSet")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.ValidateNotNull</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Nullable&lt;System.Boolean&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            InheritPropertySerializationSet
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MemberName">
+      <MemberSignature Language="C#" Value="public string MemberName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string MemberName" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.UpdateTypeDataCommand.MemberName" />
+      <MemberSignature Language="VB.NET" Value="Public Property MemberName As String" />
+      <MemberSignature Language="F#" Value="member this.MemberName : string with get, set" Usage="Microsoft.PowerShell.Commands.UpdateTypeDataCommand.MemberName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Commands.Utility</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="DynamicTypeSet")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.ValidateNotNullOrEmpty</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The name of the new member
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MemberType">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.PSMemberTypes MemberType { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Management.Automation.PSMemberTypes MemberType" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.UpdateTypeDataCommand.MemberType" />
+      <MemberSignature Language="VB.NET" Value="Public Property MemberType As PSMemberTypes" />
+      <MemberSignature Language="F#" Value="member this.MemberType : System.Management.Automation.PSMemberTypes with get, set" Usage="Microsoft.PowerShell.Commands.UpdateTypeDataCommand.MemberType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Commands.Utility</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="DynamicTypeSet")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.ValidateNotNullOrEmpty</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.ValidateSet(Mono.Cecil.CustomAttributeArgument[], IgnoreCase=true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.PSMemberTypes</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The member type of to be added
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ProcessRecord">
+      <MemberSignature Language="C#" Value="protected override void ProcessRecord ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void ProcessRecord() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Commands.UpdateTypeDataCommand.ProcessRecord" />
+      <MemberSignature Language="VB.NET" Value="Protected Overrides Sub ProcessRecord ()" />
+      <MemberSignature Language="F#" Value="override this.ProcessRecord : unit -&gt; unit" Usage="updateTypeDataCommand.ProcessRecord " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Commands.Utility</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            This method implements the ProcessRecord method for update-typeData command
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PropertySerializationSet">
+      <MemberSignature Language="C#" Value="public string[] PropertySerializationSet { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string[] PropertySerializationSet" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.UpdateTypeDataCommand.PropertySerializationSet" />
+      <MemberSignature Language="VB.NET" Value="Public Property PropertySerializationSet As String()" />
+      <MemberSignature Language="F#" Value="member this.PropertySerializationSet : string[] with get, set" Usage="Microsoft.PowerShell.Commands.UpdateTypeDataCommand.PropertySerializationSet" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Commands.Utility</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="DynamicTypeSet")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.ValidateNotNullOrEmpty</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            PropertySerializationSet
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SecondValue">
+      <MemberSignature Language="C#" Value="public object SecondValue { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object SecondValue" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.UpdateTypeDataCommand.SecondValue" />
+      <MemberSignature Language="VB.NET" Value="Public Property SecondValue As Object" />
+      <MemberSignature Language="F#" Value="member this.SecondValue : obj with get, set" Usage="Microsoft.PowerShell.Commands.UpdateTypeDataCommand.SecondValue" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Commands.Utility</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="DynamicTypeSet")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.ValidateNotNull</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Second value of the new member. The meaning of this value
+            changes according to the member type.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SerializationDepth">
+      <MemberSignature Language="C#" Value="public int SerializationDepth { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 SerializationDepth" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.UpdateTypeDataCommand.SerializationDepth" />
+      <MemberSignature Language="VB.NET" Value="Public Property SerializationDepth As Integer" />
+      <MemberSignature Language="F#" Value="member this.SerializationDepth : int with get, set" Usage="Microsoft.PowerShell.Commands.UpdateTypeDataCommand.SerializationDepth" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Commands.Utility</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="DynamicTypeSet")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.ValidateNotNull</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.ValidateRange(Mono.Cecil.CustomAttributeArgument, Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            SerializationDepth
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SerializationMethod">
+      <MemberSignature Language="C#" Value="public string SerializationMethod { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string SerializationMethod" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.UpdateTypeDataCommand.SerializationMethod" />
+      <MemberSignature Language="VB.NET" Value="Public Property SerializationMethod As String" />
+      <MemberSignature Language="F#" Value="member this.SerializationMethod : string with get, set" Usage="Microsoft.PowerShell.Commands.UpdateTypeDataCommand.SerializationMethod" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Commands.Utility</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="DynamicTypeSet")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.ValidateNotNullOrEmpty</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            SerializationMethod
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StringSerializationSource">
+      <MemberSignature Language="C#" Value="public string StringSerializationSource { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string StringSerializationSource" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.UpdateTypeDataCommand.StringSerializationSource" />
+      <MemberSignature Language="VB.NET" Value="Public Property StringSerializationSource As String" />
+      <MemberSignature Language="F#" Value="member this.StringSerializationSource : string with get, set" Usage="Microsoft.PowerShell.Commands.UpdateTypeDataCommand.StringSerializationSource" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Commands.Utility</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="DynamicTypeSet")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.ValidateNotNullOrEmpty</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            StringSerializationSource
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TargetTypeForDeserialization">
+      <MemberSignature Language="C#" Value="public Type TargetTypeForDeserialization { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type TargetTypeForDeserialization" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.UpdateTypeDataCommand.TargetTypeForDeserialization" />
+      <MemberSignature Language="VB.NET" Value="Public Property TargetTypeForDeserialization As Type" />
+      <MemberSignature Language="F#" Value="member this.TargetTypeForDeserialization : Type with get, set" Usage="Microsoft.PowerShell.Commands.UpdateTypeDataCommand.TargetTypeForDeserialization" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Commands.Utility</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="DynamicTypeSet")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.ValidateNotNull</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            TargetTypeForDeserialization
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TypeAdapter">
+      <MemberSignature Language="C#" Value="public Type TypeAdapter { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type TypeAdapter" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.UpdateTypeDataCommand.TypeAdapter" />
+      <MemberSignature Language="VB.NET" Value="Public Property TypeAdapter As Type" />
+      <MemberSignature Language="F#" Value="member this.TypeAdapter : Type with get, set" Usage="Microsoft.PowerShell.Commands.UpdateTypeDataCommand.TypeAdapter" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Commands.Utility</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="DynamicTypeSet")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.ValidateNotNull</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The type adapter to be added
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TypeConverter">
+      <MemberSignature Language="C#" Value="public Type TypeConverter { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type TypeConverter" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.UpdateTypeDataCommand.TypeConverter" />
+      <MemberSignature Language="VB.NET" Value="Public Property TypeConverter As Type" />
+      <MemberSignature Language="F#" Value="member this.TypeConverter : Type with get, set" Usage="Microsoft.PowerShell.Commands.UpdateTypeDataCommand.TypeConverter" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Commands.Utility</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="DynamicTypeSet")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.ValidateNotNull</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The type converter to be added
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TypeData">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.Runspaces.TypeData[] TypeData { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Management.Automation.Runspaces.TypeData[] TypeData" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.UpdateTypeDataCommand.TypeData" />
+      <MemberSignature Language="VB.NET" Value="Public Property TypeData As TypeData()" />
+      <MemberSignature Language="F#" Value="member this.TypeData : System.Management.Automation.Runspaces.TypeData[] with get, set" Usage="Microsoft.PowerShell.Commands.UpdateTypeDataCommand.TypeData" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Commands.Utility</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(Mandatory=true, ParameterSetName="TypeDataSet", Position=0, ValueFromPipeline=true, ValueFromPipelineByPropertyName=true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.Runspaces.TypeData[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The TypeData instances
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TypeName">
+      <MemberSignature Language="C#" Value="public string TypeName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string TypeName" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.UpdateTypeDataCommand.TypeName" />
+      <MemberSignature Language="VB.NET" Value="Public Property TypeName As String" />
+      <MemberSignature Language="F#" Value="member this.TypeName : string with get, set" Usage="Microsoft.PowerShell.Commands.UpdateTypeDataCommand.TypeName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Commands.Utility</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(Mandatory=true, ParameterSetName="DynamicTypeSet", ValueFromPipeline=true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Management.Automation.ValidateNotNullOrEmpty</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The type name we want to update on
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Value">
+      <MemberSignature Language="C#" Value="public object Value { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object Value" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.UpdateTypeDataCommand.Value" />
+      <MemberSignature Language="VB.NET" Value="Public Property Value As Object" />
+      <MemberSignature Language="F#" Value="member this.Value : obj with get, set" Usage="Microsoft.PowerShell.Commands.UpdateTypeDataCommand.Value" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Commands.Utility</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(ParameterSetName="DynamicTypeSet")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            First value of the new member. The meaning of this value
+            changes according to the member type.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

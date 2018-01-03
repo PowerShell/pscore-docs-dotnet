@@ -1,0 +1,186 @@
+﻿<Type Name="PSPropertySet" FullName="System.Management.Automation.PSPropertySet">
+  <TypeSignature Language="C#" Value="public class PSPropertySet : System.Management.Automation.PSMemberInfo" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit PSPropertySet extends System.Management.Automation.PSMemberInfo" />
+  <TypeSignature Language="DocId" Value="T:System.Management.Automation.PSPropertySet" />
+  <TypeSignature Language="VB.NET" Value="Public Class PSPropertySet&#xA;Inherits PSMemberInfo" />
+  <TypeSignature Language="F#" Value="type PSPropertySet = class&#xA;    inherit PSMemberInfo" />
+  <AssemblyInfo>
+    <AssemblyName>System.Management.Automation</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Management.Automation.PSMemberInfo</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Serves as a list of property names
+            </summary>
+    <remarks>
+            It is permitted to subclass <see cref="T:System.Management.Automation.PSPropertySet" />
+            but there is no established scenario for doing this, nor has it been tested.
+            </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public PSPropertySet (string name, System.Collections.Generic.IEnumerable&lt;string&gt; referencedPropertyNames);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string name, class System.Collections.Generic.IEnumerable`1&lt;string&gt; referencedPropertyNames) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.PSPropertySet.#ctor(System.String,System.Collections.Generic.IEnumerable{System.String})" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (name As String, referencedPropertyNames As IEnumerable(Of String))" />
+      <MemberSignature Language="F#" Value="new System.Management.Automation.PSPropertySet : string * seq&lt;string&gt; -&gt; System.Management.Automation.PSPropertySet" Usage="new System.Management.Automation.PSPropertySet (name, referencedPropertyNames)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="referencedPropertyNames" Type="System.Collections.Generic.IEnumerable&lt;System.String&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="name">name of the set</param>
+        <param name="referencedPropertyNames">name of the properties in the set</param>
+        <summary>
+            Initializes a new instance of PSPropertySet with a name and list of property names
+            </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">for invalid arguments</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Copy">
+      <MemberSignature Language="C#" Value="public override System.Management.Automation.PSMemberInfo Copy ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Management.Automation.PSMemberInfo Copy() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.PSPropertySet.Copy" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Function Copy () As PSMemberInfo" />
+      <MemberSignature Language="F#" Value="override this.Copy : unit -&gt; System.Management.Automation.PSMemberInfo" Usage="pSPropertySet.Copy " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.PSMemberInfo</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            returns a new PSMemberInfo that is a copy of this PSMemberInfo
+            </summary>
+        <returns>a new PSMemberInfo that is a copy of this PSMemberInfo</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MemberType">
+      <MemberSignature Language="C#" Value="public override System.Management.Automation.PSMemberTypes MemberType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Management.Automation.PSMemberTypes MemberType" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.PSPropertySet.MemberType" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides ReadOnly Property MemberType As PSMemberTypes" />
+      <MemberSignature Language="F#" Value="member this.MemberType : System.Management.Automation.PSMemberTypes" Usage="System.Management.Automation.PSPropertySet.MemberType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.PSMemberTypes</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the member type
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReferencedPropertyNames">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.Collection&lt;string&gt; ReferencedPropertyNames { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ObjectModel.Collection`1&lt;string&gt; ReferencedPropertyNames" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.PSPropertySet.ReferencedPropertyNames" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ReferencedPropertyNames As Collection(Of String)" />
+      <MemberSignature Language="F#" Value="member this.ReferencedPropertyNames : System.Collections.ObjectModel.Collection&lt;string&gt;" Usage="System.Management.Automation.PSPropertySet.ReferencedPropertyNames" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.Collection&lt;System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the property names in this property set
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.PSPropertySet.ToString" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Function ToString () As String" />
+      <MemberSignature Language="F#" Value="override this.ToString : unit -&gt; string" Usage="pSPropertySet.ToString " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Returns the string representation of this member
+            </summary>
+        <returns>This property as a string</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TypeNameOfValue">
+      <MemberSignature Language="C#" Value="public override string TypeNameOfValue { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string TypeNameOfValue" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.PSPropertySet.TypeNameOfValue" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides ReadOnly Property TypeNameOfValue As String" />
+      <MemberSignature Language="F#" Value="member this.TypeNameOfValue : string" Usage="System.Management.Automation.PSPropertySet.TypeNameOfValue" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the type of the value for this member. This returns typeof(PSPropertySet).FullName.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Value">
+      <MemberSignature Language="C#" Value="public override object Value { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object Value" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.PSPropertySet.Value" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Property Value As Object" />
+      <MemberSignature Language="F#" Value="member this.Value : obj with get, set" Usage="System.Management.Automation.PSPropertySet.Value" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the PSPropertySet itself.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.Management.Automation.ExtendedTypeSystemException">When setting the member</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

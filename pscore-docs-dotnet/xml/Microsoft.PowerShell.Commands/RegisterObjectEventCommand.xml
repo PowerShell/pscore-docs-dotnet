@@ -1,0 +1,147 @@
+﻿<Type Name="RegisterObjectEventCommand" FullName="Microsoft.PowerShell.Commands.RegisterObjectEventCommand">
+  <TypeSignature Language="C#" Value="public class RegisterObjectEventCommand : Microsoft.PowerShell.Commands.ObjectEventRegistrationBase" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit RegisterObjectEventCommand extends Microsoft.PowerShell.Commands.ObjectEventRegistrationBase" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.PowerShell.Commands.RegisterObjectEventCommand" />
+  <TypeSignature Language="VB.NET" Value="Public Class RegisterObjectEventCommand&#xA;Inherits ObjectEventRegistrationBase" />
+  <TypeSignature Language="F#" Value="type RegisterObjectEventCommand = class&#xA;    inherit ObjectEventRegistrationBase" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.PowerShell.Commands.Utility</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Microsoft.PowerShell.Commands.ObjectEventRegistrationBase</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Management.Automation.Cmdlet("Register", "ObjectEvent", HelpUri="https://go.microsoft.com/fwlink/?LinkID=135244")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Management.Automation.OutputType(typeof(System.Management.Automation.PSEventJob))</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>
+            Registers for an event on an object.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public RegisterObjectEventCommand ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Commands.RegisterObjectEventCommand.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New ()" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Commands.Utility</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EventName">
+      <MemberSignature Language="C#" Value="public string EventName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string EventName" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.RegisterObjectEventCommand.EventName" />
+      <MemberSignature Language="VB.NET" Value="Public Property EventName As String" />
+      <MemberSignature Language="F#" Value="member this.EventName : string with get, set" Usage="Microsoft.PowerShell.Commands.RegisterObjectEventCommand.EventName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Commands.Utility</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(Mandatory=true, Position=1)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The event name to subscribe
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetSourceObject">
+      <MemberSignature Language="C#" Value="protected override object GetSourceObject ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance object GetSourceObject() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Commands.RegisterObjectEventCommand.GetSourceObject" />
+      <MemberSignature Language="VB.NET" Value="Protected Overrides Function GetSourceObject () As Object" />
+      <MemberSignature Language="F#" Value="override this.GetSourceObject : unit -&gt; obj" Usage="registerObjectEventCommand.GetSourceObject " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Commands.Utility</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Returns the object that generates events to be monitored
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetSourceObjectEventName">
+      <MemberSignature Language="C#" Value="protected override string GetSourceObjectEventName ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance string GetSourceObjectEventName() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Commands.RegisterObjectEventCommand.GetSourceObjectEventName" />
+      <MemberSignature Language="VB.NET" Value="Protected Overrides Function GetSourceObjectEventName () As String" />
+      <MemberSignature Language="F#" Value="override this.GetSourceObjectEventName : unit -&gt; string" Usage="registerObjectEventCommand.GetSourceObjectEventName " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Commands.Utility</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Returns the event name to be monitored on the input object
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InputObject">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.PSObject InputObject { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Management.Automation.PSObject InputObject" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.RegisterObjectEventCommand.InputObject" />
+      <MemberSignature Language="VB.NET" Value="Public Property InputObject As PSObject" />
+      <MemberSignature Language="F#" Value="member this.InputObject : System.Management.Automation.PSObject with get, set" Usage="Microsoft.PowerShell.Commands.RegisterObjectEventCommand.InputObject" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Commands.Utility</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter(Mandatory=true, Position=0)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.PSObject</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The object on which to subscribe
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

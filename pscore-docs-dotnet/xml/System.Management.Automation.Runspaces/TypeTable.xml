@@ -1,0 +1,188 @@
+﻿<Type Name="TypeTable" FullName="System.Management.Automation.Runspaces.TypeTable">
+  <TypeSignature Language="C#" Value="public sealed class TypeTable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed TypeTable extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Management.Automation.Runspaces.TypeTable" />
+  <TypeSignature Language="VB.NET" Value="Public NotInheritable Class TypeTable" />
+  <TypeSignature Language="F#" Value="type TypeTable = class" />
+  <AssemblyInfo>
+    <AssemblyName>System.Management.Automation</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            A class that keeps the information from types.ps1xml files in a cache table
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TypeTable (System.Collections.Generic.IEnumerable&lt;string&gt; typeFiles);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Collections.Generic.IEnumerable`1&lt;string&gt; typeFiles) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Runspaces.TypeTable.#ctor(System.Collections.Generic.IEnumerable{System.String})" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (typeFiles As IEnumerable(Of String))" />
+      <MemberSignature Language="F#" Value="new System.Management.Automation.Runspaces.TypeTable : seq&lt;string&gt; -&gt; System.Management.Automation.Runspaces.TypeTable" Usage="new System.Management.Automation.Runspaces.TypeTable typeFiles" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="typeFiles" Type="System.Collections.Generic.IEnumerable&lt;System.String&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="typeFiles">
+            Type files to load for type information.
+            </param>
+        <summary>
+            Constructor that creates a TypeTable from a set of type files.
+            </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">
+            1. Path {0} is not fully qualified. Specify a fully qualified type file path.
+            </exception>
+        <exception cref="T:System.Management.Automation.Runspaces.TypeTableLoadException">
+            1. There were errors loading TypeTable. Look in the Errors property to get
+            detailed error messages.
+            </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AddType">
+      <MemberSignature Language="C#" Value="public void AddType (System.Management.Automation.Runspaces.TypeData typeData);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AddType(class System.Management.Automation.Runspaces.TypeData typeData) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Runspaces.TypeTable.AddType(System.Management.Automation.Runspaces.TypeData)" />
+      <MemberSignature Language="F#" Value="member this.AddType : System.Management.Automation.Runspaces.TypeData -&gt; unit" Usage="typeTable.AddType typeData" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="typeData" Type="System.Management.Automation.Runspaces.TypeData" />
+      </Parameters>
+      <Docs>
+        <param name="typeData">a TypeData instance to update the TypeTable</param>
+        <summary>
+            Update the TypeTable by adding a TypeData instance.
+            </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.Management.Automation.PSArgumentNullException">throw when the argument is null</exception>
+        <exception cref="T:System.Management.Automation.RuntimeException">throw when there were failures during the update</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Clone">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.Runspaces.TypeTable Clone (bool unshared);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Management.Automation.Runspaces.TypeTable Clone(bool unshared) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Runspaces.TypeTable.Clone(System.Boolean)" />
+      <MemberSignature Language="VB.NET" Value="Public Function Clone (unshared As Boolean) As TypeTable" />
+      <MemberSignature Language="F#" Value="member this.Clone : bool -&gt; System.Management.Automation.Runspaces.TypeTable" Usage="typeTable.Clone unshared" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.Runspaces.TypeTable</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="unshared" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="unshared">
+            Indicate that the clone of this TypeTable instance should not be marked as "Shared", even if
+            this TypeTable instance itself is a shared TypeTable.
+            </param>
+        <summary>
+            Clone the TypeTable by doing a shallow copy of all the members.
+            </summary>
+        <returns>
+            If <para>unshared</para> is True, return an unshared clone of this TypeTable instance
+            If <para>unshared</para> is False, return a clone that is exactly the same as this TypeTable instance.
+            </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetDefaultTypeFiles">
+      <MemberSignature Language="C#" Value="public static System.Collections.Generic.List&lt;string&gt; GetDefaultTypeFiles ();" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Collections.Generic.List`1&lt;string&gt; GetDefaultTypeFiles() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Runspaces.TypeTable.GetDefaultTypeFiles" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function GetDefaultTypeFiles () As List(Of String)" />
+      <MemberSignature Language="F#" Value="static member GetDefaultTypeFiles : unit -&gt; System.Collections.Generic.List&lt;string&gt;" Usage="System.Management.Automation.Runspaces.TypeTable.GetDefaultTypeFiles " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.List&lt;System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Gets the default types files available in PowerShell
+            </summary>
+        <returns>list of type files</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LoadDefaultTypeFiles">
+      <MemberSignature Language="C#" Value="public static System.Management.Automation.Runspaces.TypeTable LoadDefaultTypeFiles ();" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Management.Automation.Runspaces.TypeTable LoadDefaultTypeFiles() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Runspaces.TypeTable.LoadDefaultTypeFiles" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function LoadDefaultTypeFiles () As TypeTable" />
+      <MemberSignature Language="F#" Value="static member LoadDefaultTypeFiles : unit -&gt; System.Management.Automation.Runspaces.TypeTable" Usage="System.Management.Automation.Runspaces.TypeTable.LoadDefaultTypeFiles " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.Runspaces.TypeTable</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Load types.ps1xml, typesv3.ps1xml into the typetable
+            </summary>
+        <returns>TypeTable</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.Security.SecurityException">
+            if caller doesn't have permission to read the PowerShell registry key
+            </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveType">
+      <MemberSignature Language="C#" Value="public void RemoveType (string typeName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void RemoveType(string typeName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Runspaces.TypeTable.RemoveType(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub RemoveType (typeName As String)" />
+      <MemberSignature Language="F#" Value="member this.RemoveType : string -&gt; unit" Usage="typeTable.RemoveType typeName" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="typeName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="typeName">the name of the type to remove from TypeTable</param>
+        <summary>
+            Remove all type information related to the type name.
+            </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.Management.Automation.PSArgumentNullException">throw when the argument is null or empty</exception>
+        <exception cref="T:System.Management.Automation.RuntimeException">throw if there were failures when remove the type</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

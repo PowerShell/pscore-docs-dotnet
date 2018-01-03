@@ -1,0 +1,109 @@
+﻿<Type Name="CmdletProviderAttribute" FullName="System.Management.Automation.Provider.CmdletProviderAttribute">
+  <TypeSignature Language="C#" Value="public sealed class CmdletProviderAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit CmdletProviderAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.Management.Automation.Provider.CmdletProviderAttribute" />
+  <TypeSignature Language="VB.NET" Value="Public NotInheritable Class CmdletProviderAttribute&#xA;Inherits Attribute" />
+  <TypeSignature Language="F#" Value="type CmdletProviderAttribute = class&#xA;    inherit Attribute" />
+  <AssemblyInfo>
+    <AssemblyName>System.Management.Automation</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Class, AllowMultiple=false, Inherited=false)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>
+             Declares a class as a Cmdlet provider.
+             </summary>
+    <remarks>
+             The class must be derived from System.Management.Automation.Provider.CmdletProvider to
+             be recognized by the runspace.
+             </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CmdletProviderAttribute (string providerName, System.Management.Automation.Provider.ProviderCapabilities providerCapabilities);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string providerName, valuetype System.Management.Automation.Provider.ProviderCapabilities providerCapabilities) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Provider.CmdletProviderAttribute.#ctor(System.String,System.Management.Automation.Provider.ProviderCapabilities)" />
+      <MemberSignature Language="F#" Value="new System.Management.Automation.Provider.CmdletProviderAttribute : string * System.Management.Automation.Provider.ProviderCapabilities -&gt; System.Management.Automation.Provider.CmdletProviderAttribute" Usage="new System.Management.Automation.Provider.CmdletProviderAttribute (providerName, providerCapabilities)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="providerName" Type="System.String" />
+        <Parameter Name="providerCapabilities" Type="System.Management.Automation.Provider.ProviderCapabilities" />
+      </Parameters>
+      <Docs>
+        <param name="providerName">
+             The provider name.
+             </param>
+        <param name="providerCapabilities">
+             An enumeration of the capabilities that the provider implements beyond the
+             default capabilities that are required.
+             </param>
+        <summary>
+             Constructor for the attribute.
+             </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+             If <paramref name="providerName" /> is null or empty.
+             </exception>
+        <exception cref="T:System.Management.Automation.PSArgumentException">
+             If <paramref name="providerName" /> contains any of the following characters: \ [ ] ? * :
+             </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ProviderCapabilities">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.Provider.ProviderCapabilities ProviderCapabilities { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Management.Automation.Provider.ProviderCapabilities ProviderCapabilities" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.Provider.CmdletProviderAttribute.ProviderCapabilities" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ProviderCapabilities As ProviderCapabilities" />
+      <MemberSignature Language="F#" Value="member this.ProviderCapabilities : System.Management.Automation.Provider.ProviderCapabilities" Usage="System.Management.Automation.Provider.CmdletProviderAttribute.ProviderCapabilities" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.Provider.ProviderCapabilities</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the flags that represent the capabilities of the provider.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ProviderName">
+      <MemberSignature Language="C#" Value="public string ProviderName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ProviderName" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.Provider.CmdletProviderAttribute.ProviderName" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ProviderName As String" />
+      <MemberSignature Language="F#" Value="member this.ProviderName : string" Usage="System.Management.Automation.Provider.CmdletProviderAttribute.ProviderName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the name of the provider.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,239 @@
+﻿<Type Name="WorkflowInfo" FullName="System.Management.Automation.WorkflowInfo">
+  <TypeSignature Language="C#" Value="public class WorkflowInfo : System.Management.Automation.FunctionInfo" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit WorkflowInfo extends System.Management.Automation.FunctionInfo" />
+  <TypeSignature Language="DocId" Value="T:System.Management.Automation.WorkflowInfo" />
+  <TypeSignature Language="VB.NET" Value="Public Class WorkflowInfo&#xA;Inherits FunctionInfo" />
+  <TypeSignature Language="F#" Value="type WorkflowInfo = class&#xA;    inherit FunctionInfo" />
+  <AssemblyInfo>
+    <AssemblyName>System.Management.Automation</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Management.Automation.FunctionInfo</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Provides information about a workflow that is stored in session state.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WorkflowInfo (string name, string definition, System.Management.Automation.ScriptBlock workflow, string xamlDefinition, System.Management.Automation.WorkflowInfo[] workflowsCalled);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string name, string definition, class System.Management.Automation.ScriptBlock workflow, string xamlDefinition, class System.Management.Automation.WorkflowInfo[] workflowsCalled) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.WorkflowInfo.#ctor(System.String,System.String,System.Management.Automation.ScriptBlock,System.String,System.Management.Automation.WorkflowInfo[])" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (name As String, definition As String, workflow As ScriptBlock, xamlDefinition As String, workflowsCalled As WorkflowInfo())" />
+      <MemberSignature Language="F#" Value="new System.Management.Automation.WorkflowInfo : string * string * System.Management.Automation.ScriptBlock * string * System.Management.Automation.WorkflowInfo[] -&gt; System.Management.Automation.WorkflowInfo" Usage="new System.Management.Automation.WorkflowInfo (name, definition, workflow, xamlDefinition, workflowsCalled)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="definition" Type="System.String" />
+        <Parameter Name="workflow" Type="System.Management.Automation.ScriptBlock" />
+        <Parameter Name="xamlDefinition" Type="System.String" />
+        <Parameter Name="workflowsCalled" Type="System.Management.Automation.WorkflowInfo[]" />
+      </Parameters>
+      <Docs>
+        <param name="name">
+             The name of the workflow.
+             </param>
+        <param name="definition">
+             The script body defining the workflow.
+             </param>
+        <param name="workflow">
+             The ScriptBlock for the workflow
+             </param>
+        <param name="xamlDefinition">
+             The XAML used to define the workflow
+             </param>
+        <param name="workflowsCalled">
+             The workflows referenced within <paramref name="xamlDefinition" />.
+             </param>
+        <summary>
+             Creates an instance of the workflowInfo class with the specified name and ScriptBlock
+             </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+             If <paramref name="workflow" /> is null.
+             </exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WorkflowInfo (string name, string definition, System.Management.Automation.ScriptBlock workflow, string xamlDefinition, System.Management.Automation.WorkflowInfo[] workflowsCalled, System.Management.Automation.PSModuleInfo module);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string name, string definition, class System.Management.Automation.ScriptBlock workflow, string xamlDefinition, class System.Management.Automation.WorkflowInfo[] workflowsCalled, class System.Management.Automation.PSModuleInfo module) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.WorkflowInfo.#ctor(System.String,System.String,System.Management.Automation.ScriptBlock,System.String,System.Management.Automation.WorkflowInfo[],System.Management.Automation.PSModuleInfo)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (name As String, definition As String, workflow As ScriptBlock, xamlDefinition As String, workflowsCalled As WorkflowInfo(), module As PSModuleInfo)" />
+      <MemberSignature Language="F#" Value="new System.Management.Automation.WorkflowInfo : string * string * System.Management.Automation.ScriptBlock * string * System.Management.Automation.WorkflowInfo[] * System.Management.Automation.PSModuleInfo -&gt; System.Management.Automation.WorkflowInfo" Usage="new System.Management.Automation.WorkflowInfo (name, definition, workflow, xamlDefinition, workflowsCalled, module)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="definition" Type="System.String" />
+        <Parameter Name="workflow" Type="System.Management.Automation.ScriptBlock" />
+        <Parameter Name="xamlDefinition" Type="System.String" />
+        <Parameter Name="workflowsCalled" Type="System.Management.Automation.WorkflowInfo[]" />
+        <Parameter Name="module" Type="System.Management.Automation.PSModuleInfo" />
+      </Parameters>
+      <Docs>
+        <param name="name">
+            The name of the workflow.
+            </param>
+        <param name="definition">
+            The script body defining the workflow.
+            </param>
+        <param name="workflow">
+            The ScriptBlock for the workflow
+            </param>
+        <param name="xamlDefinition">
+            The XAML used to define the workflow
+            </param>
+        <param name="workflowsCalled">
+            The workflows referenced within <paramref name="xamlDefinition" />.
+            </param>
+        <param name="module">module</param>
+        <summary>
+            Creates an instance of the workflowInfo class with the specified name and ScriptBlock
+            </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+            If <paramref name="workflow" /> is null.
+            </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Definition">
+      <MemberSignature Language="C#" Value="public override string Definition { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Definition" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.WorkflowInfo.Definition" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides ReadOnly Property Definition As String" />
+      <MemberSignature Language="F#" Value="member this.Definition : string" Usage="System.Management.Automation.WorkflowInfo.Definition" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Returns the definition of the workflow.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NestedXamlDefinition">
+      <MemberSignature Language="C#" Value="public string NestedXamlDefinition { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string NestedXamlDefinition" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.WorkflowInfo.NestedXamlDefinition" />
+      <MemberSignature Language="VB.NET" Value="Public Property NestedXamlDefinition As String" />
+      <MemberSignature Language="F#" Value="member this.NestedXamlDefinition : string with get, set" Usage="System.Management.Automation.WorkflowInfo.NestedXamlDefinition" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets the XAML that represents the definition of the workflow
+            when called from another workflow.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Update">
+      <MemberSignature Language="C#" Value="protected internal override void Update (System.Management.Automation.FunctionInfo function, bool force, System.Management.Automation.ScopedItemOptions options, string helpFile);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance void Update(class System.Management.Automation.FunctionInfo function, bool force, valuetype System.Management.Automation.ScopedItemOptions options, string helpFile) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.WorkflowInfo.Update(System.Management.Automation.FunctionInfo,System.Boolean,System.Management.Automation.ScopedItemOptions,System.String)" />
+      <MemberSignature Language="VB.NET" Value="Protected Friend Overrides Sub Update (function As FunctionInfo, force As Boolean, options As ScopedItemOptions, helpFile As String)" />
+      <MemberSignature Language="F#" Value="override this.Update : System.Management.Automation.FunctionInfo * bool * System.Management.Automation.ScopedItemOptions * string -&gt; unit" Usage="workflowInfo.Update (function, force, options, helpFile)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="function" Type="System.Management.Automation.FunctionInfo" />
+        <Parameter Name="force" Type="System.Boolean" />
+        <Parameter Name="options" Type="System.Management.Automation.ScopedItemOptions" />
+        <Parameter Name="helpFile" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="function">
+             The script block that the function should represent.
+             </param>
+        <param name="force">
+             If true, the script block will be applied even if the filter is ReadOnly.
+             </param>
+        <param name="options">
+             Any options to set on the new function, null if none.
+             </param>
+        <param name="helpFile">
+             Helpfile for this function
+             </param>
+        <summary>
+             Update a workflow
+             </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WorkflowsCalled">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.ReadOnlyCollection&lt;System.Management.Automation.WorkflowInfo&gt; WorkflowsCalled { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ObjectModel.ReadOnlyCollection`1&lt;class System.Management.Automation.WorkflowInfo&gt; WorkflowsCalled" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.WorkflowInfo.WorkflowsCalled" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property WorkflowsCalled As ReadOnlyCollection(Of WorkflowInfo)" />
+      <MemberSignature Language="F#" Value="member this.WorkflowsCalled : System.Collections.ObjectModel.ReadOnlyCollection&lt;System.Management.Automation.WorkflowInfo&gt;" Usage="System.Management.Automation.WorkflowInfo.WorkflowsCalled" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.ReadOnlyCollection&lt;System.Management.Automation.WorkflowInfo&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the XAML for workflows called by this workflow.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="XamlDefinition">
+      <MemberSignature Language="C#" Value="public string XamlDefinition { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string XamlDefinition" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.WorkflowInfo.XamlDefinition" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property XamlDefinition As String" />
+      <MemberSignature Language="F#" Value="member this.XamlDefinition : string" Usage="System.Management.Automation.WorkflowInfo.XamlDefinition" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the XAML that represents the definition of the workflow.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

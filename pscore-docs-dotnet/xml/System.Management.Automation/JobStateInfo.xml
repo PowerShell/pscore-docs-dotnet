@@ -1,0 +1,145 @@
+﻿<Type Name="JobStateInfo" FullName="System.Management.Automation.JobStateInfo">
+  <TypeSignature Language="C#" Value="public sealed class JobStateInfo" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit JobStateInfo extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Management.Automation.JobStateInfo" />
+  <TypeSignature Language="VB.NET" Value="Public NotInheritable Class JobStateInfo" />
+  <TypeSignature Language="F#" Value="type JobStateInfo = class" />
+  <AssemblyInfo>
+    <AssemblyName>System.Management.Automation</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Type which has information about JobState and Exception
+            ,if any, associated with JobState
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public JobStateInfo (System.Management.Automation.JobState state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Management.Automation.JobState state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.JobStateInfo.#ctor(System.Management.Automation.JobState)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (state As JobState)" />
+      <MemberSignature Language="F#" Value="new System.Management.Automation.JobStateInfo : System.Management.Automation.JobState -&gt; System.Management.Automation.JobStateInfo" Usage="new System.Management.Automation.JobStateInfo state" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="state" Type="System.Management.Automation.JobState" />
+      </Parameters>
+      <Docs>
+        <param name="state">Execution state</param>
+        <summary>
+            Constructor for state changes not resulting from an error.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public JobStateInfo (System.Management.Automation.JobState state, Exception reason);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Management.Automation.JobState state, class System.Exception reason) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.JobStateInfo.#ctor(System.Management.Automation.JobState,System.Exception)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (state As JobState, reason As Exception)" />
+      <MemberSignature Language="F#" Value="new System.Management.Automation.JobStateInfo : System.Management.Automation.JobState * Exception -&gt; System.Management.Automation.JobStateInfo" Usage="new System.Management.Automation.JobStateInfo (state, reason)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="state" Type="System.Management.Automation.JobState" />
+        <Parameter Name="reason" Type="System.Exception" />
+      </Parameters>
+      <Docs>
+        <param name="state">The new state.</param>
+        <param name="reason">A non-null exception if the state change was
+            caused by an error,otherwise; null.
+            </param>
+        <summary>
+            Constructor for state changes with an optional error.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Reason">
+      <MemberSignature Language="C#" Value="public Exception Reason { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Exception Reason" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.JobStateInfo.Reason" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Reason As Exception" />
+      <MemberSignature Language="F#" Value="member this.Reason : Exception" Usage="System.Management.Automation.JobStateInfo.Reason" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Exception</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The reason for the state change, if caused by an error.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+            The value of this property is non-null if the state
+            changed due to an error. Otherwise, the value of this
+            property is null.
+            </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="State">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.JobState State { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Management.Automation.JobState State" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.JobStateInfo.State" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property State As JobState" />
+      <MemberSignature Language="F#" Value="member this.State : System.Management.Automation.JobState" Usage="System.Management.Automation.JobStateInfo.State" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.JobState</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The state of the job.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+            This value indicates the state of the job .
+            </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.JobStateInfo.ToString" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Function ToString () As String" />
+      <MemberSignature Language="F#" Value="override this.ToString : unit -&gt; string" Usage="jobStateInfo.ToString " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            override for ToString()
+            </summary>
+        <returns />
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

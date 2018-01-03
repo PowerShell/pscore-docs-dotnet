@@ -1,0 +1,249 @@
+﻿<Type Name="NamedPipeConnectionInfo" FullName="System.Management.Automation.Runspaces.NamedPipeConnectionInfo">
+  <TypeSignature Language="C#" Value="public sealed class NamedPipeConnectionInfo : System.Management.Automation.Runspaces.RunspaceConnectionInfo" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit NamedPipeConnectionInfo extends System.Management.Automation.Runspaces.RunspaceConnectionInfo" />
+  <TypeSignature Language="DocId" Value="T:System.Management.Automation.Runspaces.NamedPipeConnectionInfo" />
+  <TypeSignature Language="VB.NET" Value="Public NotInheritable Class NamedPipeConnectionInfo&#xA;Inherits RunspaceConnectionInfo" />
+  <TypeSignature Language="F#" Value="type NamedPipeConnectionInfo = class&#xA;    inherit RunspaceConnectionInfo" />
+  <AssemblyInfo>
+    <AssemblyName>System.Management.Automation</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Management.Automation.Runspaces.RunspaceConnectionInfo</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Class used to create an Out-Of-Process Runspace/RunspacePool between
+            two local processes using a named pipe for IPC.
+            This class does not have a dependency on WSMan and is used to implement
+            the PowerShell attach-to-process feature.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public NamedPipeConnectionInfo ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Runspaces.NamedPipeConnectionInfo.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New ()" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>
+            Constructor
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public NamedPipeConnectionInfo (int processId);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int32 processId) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Runspaces.NamedPipeConnectionInfo.#ctor(System.Int32)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (processId As Integer)" />
+      <MemberSignature Language="F#" Value="new System.Management.Automation.Runspaces.NamedPipeConnectionInfo : int -&gt; System.Management.Automation.Runspaces.NamedPipeConnectionInfo" Usage="new System.Management.Automation.Runspaces.NamedPipeConnectionInfo processId" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="processId" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="processId">Process Id to connect to.</param>
+        <summary>
+            Constructor
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public NamedPipeConnectionInfo (int processId, string appDomainName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int32 processId, string appDomainName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Runspaces.NamedPipeConnectionInfo.#ctor(System.Int32,System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (processId As Integer, appDomainName As String)" />
+      <MemberSignature Language="F#" Value="new System.Management.Automation.Runspaces.NamedPipeConnectionInfo : int * string -&gt; System.Management.Automation.Runspaces.NamedPipeConnectionInfo" Usage="new System.Management.Automation.Runspaces.NamedPipeConnectionInfo (processId, appDomainName)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="processId" Type="System.Int32" />
+        <Parameter Name="appDomainName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="processId">Process Id to connect to</param>
+        <param name="appDomainName">Application domain name to connect to, or default AppDomain if blank.</param>
+        <summary>
+            Constructor
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public NamedPipeConnectionInfo (int processId, string appDomainName, int openTimeout);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int32 processId, string appDomainName, int32 openTimeout) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Runspaces.NamedPipeConnectionInfo.#ctor(System.Int32,System.String,System.Int32)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (processId As Integer, appDomainName As String, openTimeout As Integer)" />
+      <MemberSignature Language="F#" Value="new System.Management.Automation.Runspaces.NamedPipeConnectionInfo : int * string * int -&gt; System.Management.Automation.Runspaces.NamedPipeConnectionInfo" Usage="new System.Management.Automation.Runspaces.NamedPipeConnectionInfo (processId, appDomainName, openTimeout)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="processId" Type="System.Int32" />
+        <Parameter Name="appDomainName" Type="System.String" />
+        <Parameter Name="openTimeout" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="processId">Process Id to connect to</param>
+        <param name="appDomainName">Name of application domain to connect to.  Connection is to default application domain if blank.</param>
+        <param name="openTimeout">Open time out in Milliseconds</param>
+        <summary>
+            Constructor
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AppDomainName">
+      <MemberSignature Language="C#" Value="public string AppDomainName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string AppDomainName" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.Runspaces.NamedPipeConnectionInfo.AppDomainName" />
+      <MemberSignature Language="VB.NET" Value="Public Property AppDomainName As String" />
+      <MemberSignature Language="F#" Value="member this.AppDomainName : string with get, set" Usage="System.Management.Automation.Runspaces.NamedPipeConnectionInfo.AppDomainName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Optional application domain name.  If not specified then the 
+            default application domain is used.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AuthenticationMechanism">
+      <MemberSignature Language="C#" Value="public override System.Management.Automation.Runspaces.AuthenticationMechanism AuthenticationMechanism { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Management.Automation.Runspaces.AuthenticationMechanism AuthenticationMechanism" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.Runspaces.NamedPipeConnectionInfo.AuthenticationMechanism" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Property AuthenticationMechanism As AuthenticationMechanism" />
+      <MemberSignature Language="F#" Value="member this.AuthenticationMechanism : System.Management.Automation.Runspaces.AuthenticationMechanism with get, set" Usage="System.Management.Automation.Runspaces.NamedPipeConnectionInfo.AuthenticationMechanism" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.Runspaces.AuthenticationMechanism</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Authentication
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CertificateThumbprint">
+      <MemberSignature Language="C#" Value="public override string CertificateThumbprint { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string CertificateThumbprint" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.Runspaces.NamedPipeConnectionInfo.CertificateThumbprint" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Property CertificateThumbprint As String" />
+      <MemberSignature Language="F#" Value="member this.CertificateThumbprint : string with get, set" Usage="System.Management.Automation.Runspaces.NamedPipeConnectionInfo.CertificateThumbprint" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            CertificateThumbprint
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ComputerName">
+      <MemberSignature Language="C#" Value="public override string ComputerName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ComputerName" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.Runspaces.NamedPipeConnectionInfo.ComputerName" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Property ComputerName As String" />
+      <MemberSignature Language="F#" Value="member this.ComputerName : string with get, set" Usage="System.Management.Automation.Runspaces.NamedPipeConnectionInfo.ComputerName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Computer is always localhost.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Credential">
+      <MemberSignature Language="C#" Value="public override System.Management.Automation.PSCredential Credential { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Management.Automation.PSCredential Credential" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.Runspaces.NamedPipeConnectionInfo.Credential" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Property Credential As PSCredential" />
+      <MemberSignature Language="F#" Value="member this.Credential : System.Management.Automation.PSCredential with get, set" Usage="System.Management.Automation.Runspaces.NamedPipeConnectionInfo.Credential" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.PSCredential</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Credential
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ProcessId">
+      <MemberSignature Language="C#" Value="public int ProcessId { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 ProcessId" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.Runspaces.NamedPipeConnectionInfo.ProcessId" />
+      <MemberSignature Language="VB.NET" Value="Public Property ProcessId As Integer" />
+      <MemberSignature Language="F#" Value="member this.ProcessId : int with get, set" Usage="System.Management.Automation.Runspaces.NamedPipeConnectionInfo.ProcessId" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Process Id of process to attach to.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

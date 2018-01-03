@@ -1,0 +1,133 @@
+﻿<Type Name="PowerShellProcessInstance" FullName="System.Management.Automation.Runspaces.PowerShellProcessInstance">
+  <TypeSignature Language="C#" Value="public sealed class PowerShellProcessInstance : IDisposable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed PowerShellProcessInstance extends System.Object implements class System.IDisposable" />
+  <TypeSignature Language="DocId" Value="T:System.Management.Automation.Runspaces.PowerShellProcessInstance" />
+  <TypeSignature Language="VB.NET" Value="Public NotInheritable Class PowerShellProcessInstance&#xA;Implements IDisposable" />
+  <TypeSignature Language="F#" Value="type PowerShellProcessInstance = class&#xA;    interface IDisposable" />
+  <AssemblyInfo>
+    <AssemblyName>System.Management.Automation</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary />
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public PowerShellProcessInstance ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Runspaces.PowerShellProcessInstance.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New ()" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary />
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public PowerShellProcessInstance (Version powerShellVersion, System.Management.Automation.PSCredential credential, System.Management.Automation.ScriptBlock initializationScript, bool useWow64);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Version powerShellVersion, class System.Management.Automation.PSCredential credential, class System.Management.Automation.ScriptBlock initializationScript, bool useWow64) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Runspaces.PowerShellProcessInstance.#ctor(System.Version,System.Management.Automation.PSCredential,System.Management.Automation.ScriptBlock,System.Boolean)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (powerShellVersion As Version, credential As PSCredential, initializationScript As ScriptBlock, useWow64 As Boolean)" />
+      <MemberSignature Language="F#" Value="new System.Management.Automation.Runspaces.PowerShellProcessInstance : Version * System.Management.Automation.PSCredential * System.Management.Automation.ScriptBlock * bool -&gt; System.Management.Automation.Runspaces.PowerShellProcessInstance" Usage="new System.Management.Automation.Runspaces.PowerShellProcessInstance (powerShellVersion, credential, initializationScript, useWow64)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="powerShellVersion" Type="System.Version" />
+        <Parameter Name="credential" Type="System.Management.Automation.PSCredential" />
+        <Parameter Name="initializationScript" Type="System.Management.Automation.ScriptBlock" />
+        <Parameter Name="useWow64" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="powerShellVersion"></param>
+        <param name="credential"></param>
+        <param name="initializationScript"></param>
+        <param name="useWow64"></param>
+        <summary />
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="public void Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Dispose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Runspaces.PowerShellProcessInstance.Dispose" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Dispose ()" />
+      <MemberSignature Language="F#" Value="abstract member Dispose : unit -&gt; unit&#xA;override this.Dispose : unit -&gt; unit" Usage="powerShellProcessInstance.Dispose " />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.IDisposable.Dispose</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary />
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HasExited">
+      <MemberSignature Language="C#" Value="public bool HasExited { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool HasExited" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.Runspaces.PowerShellProcessInstance.HasExited" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property HasExited As Boolean" />
+      <MemberSignature Language="F#" Value="member this.HasExited : bool" Usage="System.Management.Automation.Runspaces.PowerShellProcessInstance.HasExited" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets a value indicating whether the associated process has been terminated.
+            true if the operating system process referenced by the Process component has terminated; otherwise, false.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Process">
+      <MemberSignature Language="C#" Value="public System.Diagnostics.Process Process { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Diagnostics.Process Process" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.Runspaces.PowerShellProcessInstance.Process" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Process As Process" />
+      <MemberSignature Language="F#" Value="member this.Process : System.Diagnostics.Process" Usage="System.Management.Automation.Runspaces.PowerShellProcessInstance.Process" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Diagnostics.Process</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary />
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

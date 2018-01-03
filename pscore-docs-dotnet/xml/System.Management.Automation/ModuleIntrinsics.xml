@@ -1,0 +1,55 @@
+﻿<Type Name="ModuleIntrinsics" FullName="System.Management.Automation.ModuleIntrinsics">
+  <TypeSignature Language="C#" Value="public class ModuleIntrinsics" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ModuleIntrinsics extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Management.Automation.ModuleIntrinsics" />
+  <TypeSignature Language="VB.NET" Value="Public Class ModuleIntrinsics" />
+  <TypeSignature Language="F#" Value="type ModuleIntrinsics = class" />
+  <AssemblyInfo>
+    <AssemblyName>System.Management.Automation</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Encapsulates the basic module operations for a PowerShell engine instance...
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="GetModulePath">
+      <MemberSignature Language="C#" Value="public static string GetModulePath (string currentProcessModulePath, string hklmMachineModulePath, string hkcuUserModulePath);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string GetModulePath(string currentProcessModulePath, string hklmMachineModulePath, string hkcuUserModulePath) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.ModuleIntrinsics.GetModulePath(System.String,System.String,System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function GetModulePath (currentProcessModulePath As String, hklmMachineModulePath As String, hkcuUserModulePath As String) As String" />
+      <MemberSignature Language="F#" Value="static member GetModulePath : string * string * string -&gt; string" Usage="System.Management.Automation.ModuleIntrinsics.GetModulePath (currentProcessModulePath, hklmMachineModulePath, hkcuUserModulePath)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="currentProcessModulePath" Type="System.String" />
+        <Parameter Name="hklmMachineModulePath" Type="System.String" />
+        <Parameter Name="hkcuUserModulePath" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="currentProcessModulePath">To be added.</param>
+        <param name="hklmMachineModulePath">To be added.</param>
+        <param name="hkcuUserModulePath">To be added.</param>
+        <summary>
+            Checks the various PSModulePath environment string and returns PSModulePath string as appropriate. Note - because these
+            strings go through the provider, we need to escape any wildcards before passing them
+            along.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

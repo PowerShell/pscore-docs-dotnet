@@ -1,0 +1,397 @@
+﻿<Type Name="SessionState" FullName="System.Management.Automation.SessionState">
+  <TypeSignature Language="C#" Value="public sealed class SessionState" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit SessionState extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Management.Automation.SessionState" />
+  <TypeSignature Language="VB.NET" Value="Public NotInheritable Class SessionState" />
+  <TypeSignature Language="F#" Value="type SessionState = class" />
+  <AssemblyInfo>
+    <AssemblyName>System.Management.Automation</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Exposes the APIs to manipulate the providers, Runspace data, and location to the Cmdlet base class.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SessionState ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.SessionState.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New ()" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>
+            Construct a new session state object...
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Applications">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.List&lt;string&gt; Applications { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.List`1&lt;string&gt; Applications" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.SessionState.Applications" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Applications As List(Of String)" />
+      <MemberSignature Language="F#" Value="member this.Applications : System.Collections.Generic.List&lt;string&gt;" Usage="System.Management.Automation.SessionState.Applications" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.List&lt;System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Public proxy for the list of applications that are allowed to be run. If the name "*"
+            is in the list, then all applications can be run. (This is the default.)
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Drive">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.DriveManagementIntrinsics Drive { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Management.Automation.DriveManagementIntrinsics Drive" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.SessionState.Drive" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Drive As DriveManagementIntrinsics" />
+      <MemberSignature Language="F#" Value="member this.Drive : System.Management.Automation.DriveManagementIntrinsics" Usage="System.Management.Automation.SessionState.Drive" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.DriveManagementIntrinsics</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the APIs to access drives
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InvokeCommand">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.CommandInvocationIntrinsics InvokeCommand { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Management.Automation.CommandInvocationIntrinsics InvokeCommand" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.SessionState.InvokeCommand" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property InvokeCommand As CommandInvocationIntrinsics" />
+      <MemberSignature Language="F#" Value="member this.InvokeCommand : System.Management.Automation.CommandInvocationIntrinsics" Usage="System.Management.Automation.SessionState.InvokeCommand" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.CommandInvocationIntrinsics</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The command invocation intrinsics for this session state instance.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InvokeProvider">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.ProviderIntrinsics InvokeProvider { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Management.Automation.ProviderIntrinsics InvokeProvider" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.SessionState.InvokeProvider" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property InvokeProvider As ProviderIntrinsics" />
+      <MemberSignature Language="F#" Value="member this.InvokeProvider : System.Management.Automation.ProviderIntrinsics" Usage="System.Management.Automation.SessionState.InvokeProvider" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.ProviderIntrinsics</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The provider intrinsics for this session state instance.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsVisible">
+      <MemberSignature Language="C#" Value="public static bool IsVisible (System.Management.Automation.CommandOrigin origin, System.Management.Automation.CommandInfo commandInfo);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool IsVisible(valuetype System.Management.Automation.CommandOrigin origin, class System.Management.Automation.CommandInfo commandInfo) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.SessionState.IsVisible(System.Management.Automation.CommandOrigin,System.Management.Automation.CommandInfo)" />
+      <MemberSignature Language="F#" Value="static member IsVisible : System.Management.Automation.CommandOrigin * System.Management.Automation.CommandInfo -&gt; bool" Usage="System.Management.Automation.SessionState.IsVisible (origin, commandInfo)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="origin" Type="System.Management.Automation.CommandOrigin" />
+        <Parameter Name="commandInfo" Type="System.Management.Automation.CommandInfo" />
+      </Parameters>
+      <Docs>
+        <param name="origin">The origin to check against</param>
+        <param name="commandInfo">The command to check</param>
+        <summary>
+            Checks the visibility of an object based on the command origin argument.
+            </summary>
+        <returns>Returns true if the object is visible, false otherwise</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsVisible">
+      <MemberSignature Language="C#" Value="public static bool IsVisible (System.Management.Automation.CommandOrigin origin, System.Management.Automation.PSVariable variable);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool IsVisible(valuetype System.Management.Automation.CommandOrigin origin, class System.Management.Automation.PSVariable variable) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.SessionState.IsVisible(System.Management.Automation.CommandOrigin,System.Management.Automation.PSVariable)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function IsVisible (origin As CommandOrigin, variable As PSVariable) As Boolean" />
+      <MemberSignature Language="F#" Value="static member IsVisible : System.Management.Automation.CommandOrigin * System.Management.Automation.PSVariable -&gt; bool" Usage="System.Management.Automation.SessionState.IsVisible (origin, variable)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="origin" Type="System.Management.Automation.CommandOrigin" />
+        <Parameter Name="variable" Type="System.Management.Automation.PSVariable" />
+      </Parameters>
+      <Docs>
+        <param name="origin">The origin to check against</param>
+        <param name="variable">The variable to check</param>
+        <summary>
+            Checks the visibility of an object based on the command origin argument.
+            </summary>
+        <returns>Returns true if the object is visible, false otherwise</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsVisible">
+      <MemberSignature Language="C#" Value="public static bool IsVisible (System.Management.Automation.CommandOrigin origin, object valueToCheck);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool IsVisible(valuetype System.Management.Automation.CommandOrigin origin, object valueToCheck) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.SessionState.IsVisible(System.Management.Automation.CommandOrigin,System.Object)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function IsVisible (origin As CommandOrigin, valueToCheck As Object) As Boolean" />
+      <MemberSignature Language="F#" Value="static member IsVisible : System.Management.Automation.CommandOrigin * obj -&gt; bool" Usage="System.Management.Automation.SessionState.IsVisible (origin, valueToCheck)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="origin" Type="System.Management.Automation.CommandOrigin" />
+        <Parameter Name="valueToCheck" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="origin">The origin to check against</param>
+        <param name="valueToCheck">The object to check</param>
+        <summary>
+            Checks the visibility of an object based on the command origin argument.
+            </summary>
+        <returns>Returns true if the object is visible, false otherwise</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LanguageMode">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.PSLanguageMode LanguageMode { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Management.Automation.PSLanguageMode LanguageMode" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.SessionState.LanguageMode" />
+      <MemberSignature Language="VB.NET" Value="Public Property LanguageMode As PSLanguageMode" />
+      <MemberSignature Language="F#" Value="member this.LanguageMode : System.Management.Automation.PSLanguageMode with get, set" Usage="System.Management.Automation.SessionState.LanguageMode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.PSLanguageMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Get/set constraints for this execution environment
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Module">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.PSModuleInfo Module { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Management.Automation.PSModuleInfo Module" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.SessionState.Module" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Module As PSModuleInfo" />
+      <MemberSignature Language="F#" Value="member this.Module : System.Management.Automation.PSModuleInfo" Usage="System.Management.Automation.SessionState.Module" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.PSModuleInfo</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The module associated with this session state instance...
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Path">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.PathIntrinsics Path { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Management.Automation.PathIntrinsics Path" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.SessionState.Path" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Path As PathIntrinsics" />
+      <MemberSignature Language="F#" Value="member this.Path : System.Management.Automation.PathIntrinsics" Usage="System.Management.Automation.SessionState.Path" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.PathIntrinsics</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the APIs to access paths and location
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Provider">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.CmdletProviderManagementIntrinsics Provider { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Management.Automation.CmdletProviderManagementIntrinsics Provider" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.SessionState.Provider" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Provider As CmdletProviderManagementIntrinsics" />
+      <MemberSignature Language="F#" Value="member this.Provider : System.Management.Automation.CmdletProviderManagementIntrinsics" Usage="System.Management.Automation.SessionState.Provider" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.CmdletProviderManagementIntrinsics</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the APIs to access providers
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PSVariable">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.PSVariableIntrinsics PSVariable { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Management.Automation.PSVariableIntrinsics PSVariable" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.SessionState.PSVariable" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property PSVariable As PSVariableIntrinsics" />
+      <MemberSignature Language="F#" Value="member this.PSVariable : System.Management.Automation.PSVariableIntrinsics" Usage="System.Management.Automation.SessionState.PSVariable" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.PSVariableIntrinsics</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the APIs to access variables in session state.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Scripts">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.List&lt;string&gt; Scripts { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.List`1&lt;string&gt; Scripts" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.SessionState.Scripts" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Scripts As List(Of String)" />
+      <MemberSignature Language="F#" Value="member this.Scripts : System.Collections.Generic.List&lt;string&gt;" Usage="System.Management.Automation.SessionState.Scripts" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.List&lt;System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Public proxy for the list of scripts that are allowed to be run. If the name "*"
+            is in the list, then all scripts can be run. (This is the default.)
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ThrowIfNotVisible">
+      <MemberSignature Language="C#" Value="public static void ThrowIfNotVisible (System.Management.Automation.CommandOrigin origin, object valueToCheck);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void ThrowIfNotVisible(valuetype System.Management.Automation.CommandOrigin origin, object valueToCheck) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.SessionState.ThrowIfNotVisible(System.Management.Automation.CommandOrigin,System.Object)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Sub ThrowIfNotVisible (origin As CommandOrigin, valueToCheck As Object)" />
+      <MemberSignature Language="F#" Value="static member ThrowIfNotVisible : System.Management.Automation.CommandOrigin * obj -&gt; unit" Usage="System.Management.Automation.SessionState.ThrowIfNotVisible (origin, valueToCheck)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="origin" Type="System.Management.Automation.CommandOrigin" />
+        <Parameter Name="valueToCheck" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="origin">The command origin value to check against...</param>
+        <param name="valueToCheck">The object to check</param>
+        <summary>
+            Utility to check the visibility of an object based on the current
+            command origin. If the object implements IHasSessionStateEntryVisibility
+            then the check will be made. If the check fails, then an exception will be thrown...
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UseFullLanguageModeInDebugger">
+      <MemberSignature Language="C#" Value="public bool UseFullLanguageModeInDebugger { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool UseFullLanguageModeInDebugger" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.SessionState.UseFullLanguageModeInDebugger" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property UseFullLanguageModeInDebugger As Boolean" />
+      <MemberSignature Language="F#" Value="member this.UseFullLanguageModeInDebugger : bool" Usage="System.Management.Automation.SessionState.UseFullLanguageModeInDebugger" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            If true the PowerShell debugger will use FullLanguage mode, otherwise it will use the current language mode
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

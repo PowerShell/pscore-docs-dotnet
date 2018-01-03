@@ -1,0 +1,167 @@
+﻿<Type Name="ParameterAst" FullName="System.Management.Automation.Language.ParameterAst">
+  <TypeSignature Language="C#" Value="public class ParameterAst : System.Management.Automation.Language.Ast" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ParameterAst extends System.Management.Automation.Language.Ast" />
+  <TypeSignature Language="DocId" Value="T:System.Management.Automation.Language.ParameterAst" />
+  <TypeSignature Language="VB.NET" Value="Public Class ParameterAst&#xA;Inherits Ast" />
+  <TypeSignature Language="F#" Value="type ParameterAst = class&#xA;    inherit Ast" />
+  <AssemblyInfo>
+    <AssemblyName>System.Management.Automation</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Management.Automation.Language.Ast</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            The ast representing a parameter to a script.  Parameters may appear in one of 2 places, either just after the
+            name of the function, e.g. <c>function foo($a){}</c> or in a param statement, e.g. <c>param($a)</c>.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ParameterAst (System.Management.Automation.Language.IScriptExtent extent, System.Management.Automation.Language.VariableExpressionAst name, System.Collections.Generic.IEnumerable&lt;System.Management.Automation.Language.AttributeBaseAst&gt; attributes, System.Management.Automation.Language.ExpressionAst defaultValue);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Management.Automation.Language.IScriptExtent extent, class System.Management.Automation.Language.VariableExpressionAst name, class System.Collections.Generic.IEnumerable`1&lt;class System.Management.Automation.Language.AttributeBaseAst&gt; attributes, class System.Management.Automation.Language.ExpressionAst defaultValue) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Language.ParameterAst.#ctor(System.Management.Automation.Language.IScriptExtent,System.Management.Automation.Language.VariableExpressionAst,System.Collections.Generic.IEnumerable{System.Management.Automation.Language.AttributeBaseAst},System.Management.Automation.Language.ExpressionAst)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (extent As IScriptExtent, name As VariableExpressionAst, attributes As IEnumerable(Of AttributeBaseAst), defaultValue As ExpressionAst)" />
+      <MemberSignature Language="F#" Value="new System.Management.Automation.Language.ParameterAst : System.Management.Automation.Language.IScriptExtent * System.Management.Automation.Language.VariableExpressionAst * seq&lt;System.Management.Automation.Language.AttributeBaseAst&gt; * System.Management.Automation.Language.ExpressionAst -&gt; System.Management.Automation.Language.ParameterAst" Usage="new System.Management.Automation.Language.ParameterAst (extent, name, attributes, defaultValue)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="extent" Type="System.Management.Automation.Language.IScriptExtent" />
+        <Parameter Name="name" Type="System.Management.Automation.Language.VariableExpressionAst" />
+        <Parameter Name="attributes" Type="System.Collections.Generic.IEnumerable&lt;System.Management.Automation.Language.AttributeBaseAst&gt;" />
+        <Parameter Name="defaultValue" Type="System.Management.Automation.Language.ExpressionAst" />
+      </Parameters>
+      <Docs>
+        <param name="extent">The extent of the parameter, including the attributes and default if specified.</param>
+        <param name="name">The name of the variable.</param>
+        <param name="attributes">The attributes, or null if no attributes were specified.</param>
+        <param name="defaultValue">The default value of the parameter, or null if no default value was specified.</param>
+        <summary>
+            Construct a parameter ast from the name, attributes, and default value.
+            </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.Management.Automation.PSArgumentNullException">
+            If <paramref name="extent" /> or <paramref name="name" /> is null.
+            </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Attributes">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.ReadOnlyCollection&lt;System.Management.Automation.Language.AttributeBaseAst&gt; Attributes { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ObjectModel.ReadOnlyCollection`1&lt;class System.Management.Automation.Language.AttributeBaseAst&gt; Attributes" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.Language.ParameterAst.Attributes" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Attributes As ReadOnlyCollection(Of AttributeBaseAst)" />
+      <MemberSignature Language="F#" Value="member this.Attributes : System.Collections.ObjectModel.ReadOnlyCollection&lt;System.Management.Automation.Language.AttributeBaseAst&gt;" Usage="System.Management.Automation.Language.ParameterAst.Attributes" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.ReadOnlyCollection&lt;System.Management.Automation.Language.AttributeBaseAst&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The asts for any attributes or type constraints specified on the parameter.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Copy">
+      <MemberSignature Language="C#" Value="public override System.Management.Automation.Language.Ast Copy ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Management.Automation.Language.Ast Copy() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Language.ParameterAst.Copy" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Function Copy () As Ast" />
+      <MemberSignature Language="F#" Value="override this.Copy : unit -&gt; System.Management.Automation.Language.Ast" Usage="parameterAst.Copy " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.Language.Ast</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Copy the ParameterAst instance
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultValue">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.Language.ExpressionAst DefaultValue { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Management.Automation.Language.ExpressionAst DefaultValue" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.Language.ParameterAst.DefaultValue" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property DefaultValue As ExpressionAst" />
+      <MemberSignature Language="F#" Value="member this.DefaultValue : System.Management.Automation.Language.ExpressionAst" Usage="System.Management.Automation.Language.ParameterAst.DefaultValue" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.Language.ExpressionAst</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The ast for the default value of the parameter, or null if no default value was specified.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.Language.VariableExpressionAst Name { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Management.Automation.Language.VariableExpressionAst Name" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.Language.ParameterAst.Name" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Name As VariableExpressionAst" />
+      <MemberSignature Language="F#" Value="member this.Name : System.Management.Automation.Language.VariableExpressionAst" Usage="System.Management.Automation.Language.ParameterAst.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.Language.VariableExpressionAst</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The variable path for the parameter.  This property is never null.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StaticType">
+      <MemberSignature Language="C#" Value="public Type StaticType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type StaticType" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.Language.ParameterAst.StaticType" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property StaticType As Type" />
+      <MemberSignature Language="F#" Value="member this.StaticType : Type" Usage="System.Management.Automation.Language.ParameterAst.StaticType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Returns the type of the parameter.  If the parameter is constrained to be a specific type, that type is returned,
+            otherwise <c>typeof(object)</c> is returned.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

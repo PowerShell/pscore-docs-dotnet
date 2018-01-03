@@ -1,0 +1,176 @@
+﻿<Type Name="Repository&lt;T&gt;" FullName="System.Management.Automation.Repository&lt;T&gt;">
+  <TypeSignature Language="C#" Value="public abstract class Repository&lt;T&gt; where T : class" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit Repository`1&lt;class T&gt; extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Management.Automation.Repository`1" />
+  <TypeSignature Language="VB.NET" Value="Public MustInherit Class Repository(Of T)" />
+  <TypeSignature Language="F#" Value="type Repository&lt;'T (requires 'T : null)&gt; = class" />
+  <AssemblyInfo>
+    <AssemblyName>System.Management.Automation</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <TypeParameters>
+    <TypeParameter Name="T">
+      <Constraints>
+        <ParameterAttribute>ReferenceTypeConstraint</ParameterAttribute>
+      </Constraints>
+    </TypeParameter>
+  </TypeParameters>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <typeparam name="T">To be added.</typeparam>
+    <summary>
+            class which has list of job objects currently active in the system.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected Repository (string identifier);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(string identifier) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Repository`1.#ctor(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Protected Sub New (identifier As String)" />
+      <MemberSignature Language="F#" Value="new System.Management.Automation.Repository&lt;'T (requires 'T : null)&gt; : string -&gt; System.Management.Automation.Repository&lt;'T (requires 'T : null)&gt;" Usage="new System.Management.Automation.Repository&lt;'T (requires 'T : null)&gt; identifier" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="identifier" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="identifier">To be added.</param>
+        <summary>
+            internal constructor
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public void Add (T item);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Add(!T item) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Repository`1.Add(`0)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Add (item As T)" />
+      <MemberSignature Language="F#" Value="member this.Add : 'T -&gt; unit" Usage="repository.Add item" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="item" Type="T" />
+      </Parameters>
+      <Docs>
+        <param name="item">object to add</param>
+        <summary>
+            Add an item to the repository
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetItem">
+      <MemberSignature Language="C#" Value="public T GetItem (Guid instanceId);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance !T GetItem(valuetype System.Guid instanceId) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Repository`1.GetItem(System.Guid)" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetItem (instanceId As Guid) As T" />
+      <MemberSignature Language="F#" Value="member this.GetItem : Guid -&gt; 'T" Usage="repository.GetItem instanceId" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>T</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="instanceId" Type="System.Guid" />
+      </Parameters>
+      <Docs>
+        <param name="instanceId"></param>
+        <summary>
+            Gets the specified Item
+            </summary>
+        <returns />
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetItems">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.List&lt;T&gt; GetItems ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Collections.Generic.List`1&lt;!T&gt; GetItems() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Repository`1.GetItems" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetItems () As List(Of T)" />
+      <MemberSignature Language="F#" Value="member this.GetItems : unit -&gt; System.Collections.Generic.List&lt;'T (requires 'T : null)&gt;" Usage="repository.GetItems " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.List&lt;T&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary />
+        <returns />
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetKey">
+      <MemberSignature Language="C#" Value="protected abstract Guid GetKey (T item);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance valuetype System.Guid GetKey(!T item) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Repository`1.GetKey(`0)" />
+      <MemberSignature Language="VB.NET" Value="Protected MustOverride Function GetKey (item As T) As Guid" />
+      <MemberSignature Language="F#" Value="abstract member GetKey : 'T -&gt; Guid" Usage="repository.GetKey item" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Guid</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="item" Type="T" />
+      </Parameters>
+      <Docs>
+        <param name="item">item for which the key is required</param>
+        <summary>
+            Get a key for the specified item
+            </summary>
+        <returns>returns a key</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Remove">
+      <MemberSignature Language="C#" Value="public void Remove (T item);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Remove(!T item) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Repository`1.Remove(`0)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Remove (item As T)" />
+      <MemberSignature Language="F#" Value="member this.Remove : 'T -&gt; unit" Usage="repository.Remove item" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="item" Type="T" />
+      </Parameters>
+      <Docs>
+        <param name="item">object to remove</param>
+        <summary>
+            Remove the specified item from the repository
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

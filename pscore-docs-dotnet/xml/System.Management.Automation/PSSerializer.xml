@@ -1,0 +1,129 @@
+﻿<Type Name="PSSerializer" FullName="System.Management.Automation.PSSerializer">
+  <TypeSignature Language="C#" Value="public class PSSerializer" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit PSSerializer extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Management.Automation.PSSerializer" />
+  <TypeSignature Language="VB.NET" Value="Public Class PSSerializer" />
+  <TypeSignature Language="F#" Value="type PSSerializer = class" />
+  <AssemblyInfo>
+    <AssemblyName>System.Management.Automation</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            This class provides public functionality for serializing a PSObject
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Deserialize">
+      <MemberSignature Language="C#" Value="public static object Deserialize (string source);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig object Deserialize(string source) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.PSSerializer.Deserialize(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function Deserialize (source As String) As Object" />
+      <MemberSignature Language="F#" Value="static member Deserialize : string -&gt; obj" Usage="System.Management.Automation.PSSerializer.Deserialize source" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="source" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="source">The CliXml the represents the object to deserialize.</param>
+        <summary>
+            Deserializes PowerShell CliXml into an object.
+            </summary>
+        <returns>An object that represents the serialized content</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DeserializeAsList">
+      <MemberSignature Language="C#" Value="public static object[] DeserializeAsList (string source);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig object[] DeserializeAsList(string source) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.PSSerializer.DeserializeAsList(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function DeserializeAsList (source As String) As Object()" />
+      <MemberSignature Language="F#" Value="static member DeserializeAsList : string -&gt; obj[]" Usage="System.Management.Automation.PSSerializer.DeserializeAsList source" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="source" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="source">The CliXml the represents the object to deserialize.</param>
+        <summary>
+            Deserializes PowerShell CliXml into a list of objects.
+            </summary>
+        <returns>An object array represents the serialized content</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Serialize">
+      <MemberSignature Language="C#" Value="public static string Serialize (object source);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string Serialize(object source) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.PSSerializer.Serialize(System.Object)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function Serialize (source As Object) As String" />
+      <MemberSignature Language="F#" Value="static member Serialize : obj -&gt; string" Usage="System.Management.Automation.PSSerializer.Serialize source" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="source" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="source">The input object to serialize. Serializes to a default depth of 1</param>
+        <summary>
+            Serializes an object into PowerShell CliXml
+            </summary>
+        <returns>The serialized object, as CliXml</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Serialize">
+      <MemberSignature Language="C#" Value="public static string Serialize (object source, int depth);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string Serialize(object source, int32 depth) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.PSSerializer.Serialize(System.Object,System.Int32)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function Serialize (source As Object, depth As Integer) As String" />
+      <MemberSignature Language="F#" Value="static member Serialize : obj * int -&gt; string" Usage="System.Management.Automation.PSSerializer.Serialize (source, depth)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="source" Type="System.Object" />
+        <Parameter Name="depth" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="source">The input object to serialize</param>
+        <param name="depth">The depth of the members to serialize</param>
+        <summary>
+            Serializes an object into PowerShell CliXml
+            </summary>
+        <returns>The serialized object, as CliXml</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

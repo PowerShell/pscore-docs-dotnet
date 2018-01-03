@@ -1,0 +1,93 @@
+﻿<Type Name="ServiceBaseCommand" FullName="Microsoft.PowerShell.Commands.ServiceBaseCommand">
+  <TypeSignature Language="C#" Value="public abstract class ServiceBaseCommand : System.Management.Automation.Cmdlet" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit ServiceBaseCommand extends System.Management.Automation.Cmdlet" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.PowerShell.Commands.ServiceBaseCommand" />
+  <TypeSignature Language="VB.NET" Value="Public MustInherit Class ServiceBaseCommand&#xA;Inherits Cmdlet" />
+  <TypeSignature Language="F#" Value="type ServiceBaseCommand = class&#xA;    inherit Cmdlet" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.PowerShell.Commands.Management</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Management.Automation.Cmdlet</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            This class implements the base for service commands
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected ServiceBaseCommand ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Commands.ServiceBaseCommand.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Protected Sub New ()" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Commands.Management</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ShouldProcessServiceOperation">
+      <MemberSignature Language="C#" Value="protected bool ShouldProcessServiceOperation (System.ServiceProcess.ServiceController service);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance bool ShouldProcessServiceOperation(class System.ServiceProcess.ServiceController service) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Commands.ServiceBaseCommand.ShouldProcessServiceOperation(System.ServiceProcess.ServiceController)" />
+      <MemberSignature Language="VB.NET" Value="Protected Function ShouldProcessServiceOperation (service As ServiceController) As Boolean" />
+      <MemberSignature Language="F#" Value="member this.ShouldProcessServiceOperation : System.ServiceProcess.ServiceController -&gt; bool" Usage="serviceBaseCommand.ShouldProcessServiceOperation service" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Commands.Management</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="service" Type="System.ServiceProcess.ServiceController" />
+      </Parameters>
+      <Docs>
+        <param name="service">service object to be acted on</param>
+        <summary>
+            Confirm that the operation should proceed
+            </summary>
+        <returns> true if operation should continue, false otherwise </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ShouldProcessServiceOperation">
+      <MemberSignature Language="C#" Value="protected bool ShouldProcessServiceOperation (string displayName, string serviceName);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance bool ShouldProcessServiceOperation(string displayName, string serviceName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Commands.ServiceBaseCommand.ShouldProcessServiceOperation(System.String,System.String)" />
+      <MemberSignature Language="VB.NET" Value="Protected Function ShouldProcessServiceOperation (displayName As String, serviceName As String) As Boolean" />
+      <MemberSignature Language="F#" Value="member this.ShouldProcessServiceOperation : string * string -&gt; bool" Usage="serviceBaseCommand.ShouldProcessServiceOperation (displayName, serviceName)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Commands.Management</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="displayName" Type="System.String" />
+        <Parameter Name="serviceName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="displayName">display name of service to be acted on</param>
+        <param name="serviceName">service name of service to be acted on</param>
+        <summary>
+            Confirm that the operation should proceed
+            </summary>
+        <returns> true if operation should continue, false otherwise </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

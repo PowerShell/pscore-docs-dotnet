@@ -1,0 +1,383 @@
+﻿<Type Name="WSManPluginManagedEntryWrapper" FullName="System.Management.Automation.Remoting.WSManPluginManagedEntryWrapper">
+  <TypeSignature Language="C#" Value="public sealed class WSManPluginManagedEntryWrapper" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit WSManPluginManagedEntryWrapper extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Management.Automation.Remoting.WSManPluginManagedEntryWrapper" />
+  <TypeSignature Language="VB.NET" Value="Public NotInheritable Class WSManPluginManagedEntryWrapper" />
+  <TypeSignature Language="F#" Value="type WSManPluginManagedEntryWrapper = class" />
+  <AssemblyInfo>
+    <AssemblyName>System.Management.Automation</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Class containing the public static managed entry functions that are callable from outside
+            the module.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="InitPlugin">
+      <MemberSignature Language="C#" Value="public static int InitPlugin (IntPtr wkrPtrs);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig int32 InitPlugin(native int wkrPtrs) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Remoting.WSManPluginManagedEntryWrapper.InitPlugin(System.IntPtr)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function InitPlugin (wkrPtrs As IntPtr) As Integer" />
+      <MemberSignature Language="F#" Value="static member InitPlugin : nativeint -&gt; int" Usage="System.Management.Automation.Remoting.WSManPluginManagedEntryWrapper.InitPlugin wkrPtrs" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="wkrPtrs" Type="System.IntPtr" />
+      </Parameters>
+      <Docs>
+        <param name="wkrPtrs">IntPtr to WSManPluginEntryDelegates.WSManPluginEntryDelegatesInternal</param>
+        <summary>
+            Called only once after the assembly is loaded..This is used to perform
+            various initializations.
+            </summary>
+        <returns>0 = Success, 1 = Failure</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PSPluginOperationShutdownCallback">
+      <MemberSignature Language="C#" Value="public static void PSPluginOperationShutdownCallback (object operationContext, bool timedOut);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void PSPluginOperationShutdownCallback(object operationContext, bool timedOut) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Remoting.WSManPluginManagedEntryWrapper.PSPluginOperationShutdownCallback(System.Object,System.Boolean)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Sub PSPluginOperationShutdownCallback (operationContext As Object, timedOut As Boolean)" />
+      <MemberSignature Language="F#" Value="static member PSPluginOperationShutdownCallback : obj * bool -&gt; unit" Usage="System.Management.Automation.Remoting.WSManPluginManagedEntryWrapper.PSPluginOperationShutdownCallback (operationContext, timedOut)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="operationContext" Type="System.Object" />
+        <Parameter Name="timedOut" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="operationContext">PVOID</param>
+        <param name="timedOut">BOOLEAN</param>
+        <summary>
+            Callback used to register with thread pool to notify when a plugin operation shuts down.
+            Conforms to:
+                public delegate void WaitOrTimerCallback( Object state, bool timedOut )
+            </summary>
+        <returns />
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ShutdownPlugin">
+      <MemberSignature Language="C#" Value="public static void ShutdownPlugin (IntPtr pluginContext);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void ShutdownPlugin(native int pluginContext) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Remoting.WSManPluginManagedEntryWrapper.ShutdownPlugin(System.IntPtr)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Sub ShutdownPlugin (pluginContext As IntPtr)" />
+      <MemberSignature Language="F#" Value="static member ShutdownPlugin : nativeint -&gt; unit" Usage="System.Management.Automation.Remoting.WSManPluginManagedEntryWrapper.ShutdownPlugin pluginContext" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pluginContext" Type="System.IntPtr" />
+      </Parameters>
+      <Docs>
+        <param name="pluginContext">PVOID</param>
+        <summary>
+            Called only once during shutdown. This is used to perform various deinitializations.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WSManPluginCommand">
+      <MemberSignature Language="C#" Value="public static void WSManPluginCommand (IntPtr pluginContext, IntPtr requestDetails, int flags, IntPtr shellContext, string commandLine, IntPtr arguments);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void WSManPluginCommand(native int pluginContext, native int requestDetails, int32 flags, native int shellContext, string commandLine, native int arguments) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Remoting.WSManPluginManagedEntryWrapper.WSManPluginCommand(System.IntPtr,System.IntPtr,System.Int32,System.IntPtr,System.String,System.IntPtr)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Sub WSManPluginCommand (pluginContext As IntPtr, requestDetails As IntPtr, flags As Integer, shellContext As IntPtr, commandLine As String, arguments As IntPtr)" />
+      <MemberSignature Language="F#" Value="static member WSManPluginCommand : nativeint * nativeint * int * nativeint * string * nativeint -&gt; unit" Usage="System.Management.Automation.Remoting.WSManPluginManagedEntryWrapper.WSManPluginCommand (pluginContext, requestDetails, flags, shellContext, commandLine, arguments)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pluginContext" Type="System.IntPtr" />
+        <Parameter Name="requestDetails" Type="System.IntPtr" />
+        <Parameter Name="flags" Type="System.Int32" />
+        <Parameter Name="shellContext" Type="System.IntPtr" />
+        <Parameter Name="commandLine" Type="System.String" />
+        <Parameter Name="arguments" Type="System.IntPtr" />
+      </Parameters>
+      <Docs>
+        <param name="pluginContext">PVOID</param>
+        <param name="requestDetails">WSMAN_PLUGIN_REQUEST*</param>
+        <param name="flags">DWORD</param>
+        <param name="shellContext">PVOID</param>
+        <param name="commandLine">PCWSTR</param>
+        <param name="arguments">WSMAN_COMMAND_ARG_SET* optional</param>
+        <summary />
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WSManPluginConnect">
+      <MemberSignature Language="C#" Value="public static void WSManPluginConnect (IntPtr pluginContext, IntPtr requestDetails, int flags, IntPtr shellContext, IntPtr commandContext, IntPtr inboundConnectInformation);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void WSManPluginConnect(native int pluginContext, native int requestDetails, int32 flags, native int shellContext, native int commandContext, native int inboundConnectInformation) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Remoting.WSManPluginManagedEntryWrapper.WSManPluginConnect(System.IntPtr,System.IntPtr,System.Int32,System.IntPtr,System.IntPtr,System.IntPtr)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Sub WSManPluginConnect (pluginContext As IntPtr, requestDetails As IntPtr, flags As Integer, shellContext As IntPtr, commandContext As IntPtr, inboundConnectInformation As IntPtr)" />
+      <MemberSignature Language="F#" Value="static member WSManPluginConnect : nativeint * nativeint * int * nativeint * nativeint * nativeint -&gt; unit" Usage="System.Management.Automation.Remoting.WSManPluginManagedEntryWrapper.WSManPluginConnect (pluginContext, requestDetails, flags, shellContext, commandContext, inboundConnectInformation)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pluginContext" Type="System.IntPtr" />
+        <Parameter Name="requestDetails" Type="System.IntPtr" />
+        <Parameter Name="flags" Type="System.Int32" />
+        <Parameter Name="shellContext" Type="System.IntPtr" />
+        <Parameter Name="commandContext" Type="System.IntPtr" />
+        <Parameter Name="inboundConnectInformation" Type="System.IntPtr" />
+      </Parameters>
+      <Docs>
+        <param name="pluginContext">PVOID</param>
+        <param name="requestDetails">WSMAN_PLUGIN_REQUEST*</param>
+        <param name="flags">DWORD</param>
+        <param name="shellContext">PVOID</param>
+        <param name="commandContext">PVOID optional</param>
+        <param name="inboundConnectInformation">WSMAN_DATA* optional</param>
+        <summary />
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WSManPluginReceive">
+      <MemberSignature Language="C#" Value="public static void WSManPluginReceive (IntPtr pluginContext, IntPtr requestDetails, int flags, IntPtr shellContext, IntPtr commandContext, IntPtr streamSet);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void WSManPluginReceive(native int pluginContext, native int requestDetails, int32 flags, native int shellContext, native int commandContext, native int streamSet) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Remoting.WSManPluginManagedEntryWrapper.WSManPluginReceive(System.IntPtr,System.IntPtr,System.Int32,System.IntPtr,System.IntPtr,System.IntPtr)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Sub WSManPluginReceive (pluginContext As IntPtr, requestDetails As IntPtr, flags As Integer, shellContext As IntPtr, commandContext As IntPtr, streamSet As IntPtr)" />
+      <MemberSignature Language="F#" Value="static member WSManPluginReceive : nativeint * nativeint * int * nativeint * nativeint * nativeint -&gt; unit" Usage="System.Management.Automation.Remoting.WSManPluginManagedEntryWrapper.WSManPluginReceive (pluginContext, requestDetails, flags, shellContext, commandContext, streamSet)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pluginContext" Type="System.IntPtr" />
+        <Parameter Name="requestDetails" Type="System.IntPtr" />
+        <Parameter Name="flags" Type="System.Int32" />
+        <Parameter Name="shellContext" Type="System.IntPtr" />
+        <Parameter Name="commandContext" Type="System.IntPtr" />
+        <Parameter Name="streamSet" Type="System.IntPtr" />
+      </Parameters>
+      <Docs>
+        <param name="pluginContext">PVOID</param>
+        <param name="requestDetails">WSMAN_PLUGIN_REQUEST*</param>
+        <param name="flags">DWORD</param>
+        <param name="shellContext">PVOID</param>
+        <param name="commandContext">PVOID optional</param>
+        <param name="streamSet">WSMAN_STREAM_ID_SET* optional</param>
+        <summary />
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WSManPluginReleaseCommandContext">
+      <MemberSignature Language="C#" Value="public static void WSManPluginReleaseCommandContext (IntPtr pluginContext, IntPtr shellContext, IntPtr commandContext);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void WSManPluginReleaseCommandContext(native int pluginContext, native int shellContext, native int commandContext) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Remoting.WSManPluginManagedEntryWrapper.WSManPluginReleaseCommandContext(System.IntPtr,System.IntPtr,System.IntPtr)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Sub WSManPluginReleaseCommandContext (pluginContext As IntPtr, shellContext As IntPtr, commandContext As IntPtr)" />
+      <MemberSignature Language="F#" Value="static member WSManPluginReleaseCommandContext : nativeint * nativeint * nativeint -&gt; unit" Usage="System.Management.Automation.Remoting.WSManPluginManagedEntryWrapper.WSManPluginReleaseCommandContext (pluginContext, shellContext, commandContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pluginContext" Type="System.IntPtr" />
+        <Parameter Name="shellContext" Type="System.IntPtr" />
+        <Parameter Name="commandContext" Type="System.IntPtr" />
+      </Parameters>
+      <Docs>
+        <param name="pluginContext">PVOID</param>
+        <param name="shellContext">PVOID</param>
+        <param name="commandContext">PVOID</param>
+        <summary />
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WSManPluginReleaseShellContext">
+      <MemberSignature Language="C#" Value="public static void WSManPluginReleaseShellContext (IntPtr pluginContext, IntPtr shellContext);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void WSManPluginReleaseShellContext(native int pluginContext, native int shellContext) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Remoting.WSManPluginManagedEntryWrapper.WSManPluginReleaseShellContext(System.IntPtr,System.IntPtr)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Sub WSManPluginReleaseShellContext (pluginContext As IntPtr, shellContext As IntPtr)" />
+      <MemberSignature Language="F#" Value="static member WSManPluginReleaseShellContext : nativeint * nativeint -&gt; unit" Usage="System.Management.Automation.Remoting.WSManPluginManagedEntryWrapper.WSManPluginReleaseShellContext (pluginContext, shellContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pluginContext" Type="System.IntPtr" />
+        <Parameter Name="shellContext" Type="System.IntPtr" />
+      </Parameters>
+      <Docs>
+        <param name="pluginContext">PVOID</param>
+        <param name="shellContext">PVOID</param>
+        <summary />
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WSManPluginSend">
+      <MemberSignature Language="C#" Value="public static void WSManPluginSend (IntPtr pluginContext, IntPtr requestDetails, int flags, IntPtr shellContext, IntPtr commandContext, string stream, IntPtr inboundData);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void WSManPluginSend(native int pluginContext, native int requestDetails, int32 flags, native int shellContext, native int commandContext, string stream, native int inboundData) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Remoting.WSManPluginManagedEntryWrapper.WSManPluginSend(System.IntPtr,System.IntPtr,System.Int32,System.IntPtr,System.IntPtr,System.String,System.IntPtr)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Sub WSManPluginSend (pluginContext As IntPtr, requestDetails As IntPtr, flags As Integer, shellContext As IntPtr, commandContext As IntPtr, stream As String, inboundData As IntPtr)" />
+      <MemberSignature Language="F#" Value="static member WSManPluginSend : nativeint * nativeint * int * nativeint * nativeint * string * nativeint -&gt; unit" Usage="System.Management.Automation.Remoting.WSManPluginManagedEntryWrapper.WSManPluginSend (pluginContext, requestDetails, flags, shellContext, commandContext, stream, inboundData)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pluginContext" Type="System.IntPtr" />
+        <Parameter Name="requestDetails" Type="System.IntPtr" />
+        <Parameter Name="flags" Type="System.Int32" />
+        <Parameter Name="shellContext" Type="System.IntPtr" />
+        <Parameter Name="commandContext" Type="System.IntPtr" />
+        <Parameter Name="stream" Type="System.String" />
+        <Parameter Name="inboundData" Type="System.IntPtr" />
+      </Parameters>
+      <Docs>
+        <param name="pluginContext">PVOID</param>
+        <param name="requestDetails">WSMAN_PLUGIN_REQUEST*</param>
+        <param name="flags">DWORD</param>
+        <param name="shellContext">PVOID</param>
+        <param name="commandContext">PVOID</param>
+        <param name="stream">PCWSTR</param>
+        <param name="inboundData">WSMAN_DATA*</param>
+        <summary />
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WSManPluginShell">
+      <MemberSignature Language="C#" Value="public static void WSManPluginShell (IntPtr pluginContext, IntPtr requestDetails, int flags, string extraInfo, IntPtr startupInfo, IntPtr inboundShellInformation);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void WSManPluginShell(native int pluginContext, native int requestDetails, int32 flags, string extraInfo, native int startupInfo, native int inboundShellInformation) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Remoting.WSManPluginManagedEntryWrapper.WSManPluginShell(System.IntPtr,System.IntPtr,System.Int32,System.String,System.IntPtr,System.IntPtr)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Sub WSManPluginShell (pluginContext As IntPtr, requestDetails As IntPtr, flags As Integer, extraInfo As String, startupInfo As IntPtr, inboundShellInformation As IntPtr)" />
+      <MemberSignature Language="F#" Value="static member WSManPluginShell : nativeint * nativeint * int * string * nativeint * nativeint -&gt; unit" Usage="System.Management.Automation.Remoting.WSManPluginManagedEntryWrapper.WSManPluginShell (pluginContext, requestDetails, flags, extraInfo, startupInfo, inboundShellInformation)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pluginContext" Type="System.IntPtr" />
+        <Parameter Name="requestDetails" Type="System.IntPtr" />
+        <Parameter Name="flags" Type="System.Int32" />
+        <Parameter Name="extraInfo" Type="System.String" />
+        <Parameter Name="startupInfo" Type="System.IntPtr" />
+        <Parameter Name="inboundShellInformation" Type="System.IntPtr" />
+      </Parameters>
+      <Docs>
+        <param name="pluginContext">PVOID</param>
+        <param name="requestDetails">WSMAN_PLUGIN_REQUEST*</param>
+        <param name="flags">DWORD</param>
+        <param name="extraInfo">PCWSTR</param>
+        <param name="startupInfo">WSMAN_SHELL_STARTUP_INFO*</param>
+        <param name="inboundShellInformation">WSMAN_DATA*</param>
+        <summary />
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WSManPluginSignal">
+      <MemberSignature Language="C#" Value="public static void WSManPluginSignal (IntPtr pluginContext, IntPtr requestDetails, int flags, IntPtr shellContext, IntPtr commandContext, string code);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void WSManPluginSignal(native int pluginContext, native int requestDetails, int32 flags, native int shellContext, native int commandContext, string code) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Remoting.WSManPluginManagedEntryWrapper.WSManPluginSignal(System.IntPtr,System.IntPtr,System.Int32,System.IntPtr,System.IntPtr,System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Sub WSManPluginSignal (pluginContext As IntPtr, requestDetails As IntPtr, flags As Integer, shellContext As IntPtr, commandContext As IntPtr, code As String)" />
+      <MemberSignature Language="F#" Value="static member WSManPluginSignal : nativeint * nativeint * int * nativeint * nativeint * string -&gt; unit" Usage="System.Management.Automation.Remoting.WSManPluginManagedEntryWrapper.WSManPluginSignal (pluginContext, requestDetails, flags, shellContext, commandContext, code)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pluginContext" Type="System.IntPtr" />
+        <Parameter Name="requestDetails" Type="System.IntPtr" />
+        <Parameter Name="flags" Type="System.Int32" />
+        <Parameter Name="shellContext" Type="System.IntPtr" />
+        <Parameter Name="commandContext" Type="System.IntPtr" />
+        <Parameter Name="code" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="pluginContext">PVOID</param>
+        <param name="requestDetails">WSMAN_PLUGIN_REQUEST*</param>
+        <param name="flags">DWORD</param>
+        <param name="shellContext">PVOID</param>
+        <param name="commandContext">PVOID optional</param>
+        <param name="code">PCWSTR</param>
+        <summary />
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WSManPSShutdown">
+      <MemberSignature Language="C#" Value="public static void WSManPSShutdown (IntPtr shutdownContext);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void WSManPSShutdown(native int shutdownContext) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Remoting.WSManPluginManagedEntryWrapper.WSManPSShutdown(System.IntPtr)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Sub WSManPSShutdown (shutdownContext As IntPtr)" />
+      <MemberSignature Language="F#" Value="static member WSManPSShutdown : nativeint -&gt; unit" Usage="System.Management.Automation.Remoting.WSManPluginManagedEntryWrapper.WSManPSShutdown shutdownContext" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="shutdownContext" Type="System.IntPtr" />
+      </Parameters>
+      <Docs>
+        <param name="shutdownContext">IntPtr</param>
+        <summary>
+            Operation shutdown notification that was registered with the native layer for each of the shellCreate operations.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

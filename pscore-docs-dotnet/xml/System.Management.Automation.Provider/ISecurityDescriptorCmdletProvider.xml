@@ -1,0 +1,183 @@
+﻿<Type Name="ISecurityDescriptorCmdletProvider" FullName="System.Management.Automation.Provider.ISecurityDescriptorCmdletProvider">
+  <TypeSignature Language="C#" Value="public interface ISecurityDescriptorCmdletProvider" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract ISecurityDescriptorCmdletProvider" />
+  <TypeSignature Language="DocId" Value="T:System.Management.Automation.Provider.ISecurityDescriptorCmdletProvider" />
+  <TypeSignature Language="VB.NET" Value="Public Interface ISecurityDescriptorCmdletProvider" />
+  <TypeSignature Language="F#" Value="type ISecurityDescriptorCmdletProvider = interface" />
+  <AssemblyInfo>
+    <AssemblyName>System.Management.Automation</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>
+             Provides an interface that allows simplified interaction
+             with namespaces that support security descriptors. The methods
+             on this interface allow a common set of commands to manage the security
+             on any namespace that supports this interface.
+             This interface should only be implemented on derived classes of
+             <see cref="T:System.Management.Automation.Provider.CmdletProvider" />, <see cref="T:System.Management.Automation.Provider.ItemCmdletProvider" />,
+             <see cref="T:System.Management.Automation.Provider.ContainerCmdletProvider" />, or <see cref="T:System.Management.Automation.Provider.NavigationCmdletProvider" />.
+             </summary>
+    <remarks>
+             A namespace provider should implement this interface if items in the
+             namespace are protected by Security Descriptors.
+             </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="GetSecurityDescriptor">
+      <MemberSignature Language="C#" Value="public void GetSecurityDescriptor (string path, System.Security.AccessControl.AccessControlSections includeSections);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void GetSecurityDescriptor(string path, valuetype System.Security.AccessControl.AccessControlSections includeSections) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Provider.ISecurityDescriptorCmdletProvider.GetSecurityDescriptor(System.String,System.Security.AccessControl.AccessControlSections)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub GetSecurityDescriptor (path As String, includeSections As AccessControlSections)" />
+      <MemberSignature Language="F#" Value="abstract member GetSecurityDescriptor : string * System.Security.AccessControl.AccessControlSections -&gt; unit" Usage="iSecurityDescriptorCmdletProvider.GetSecurityDescriptor (path, includeSections)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+        <Parameter Name="includeSections" Type="System.Security.AccessControl.AccessControlSections" />
+      </Parameters>
+      <Docs>
+        <param name="path">
+             The path of the item to from which to retrieve the security descriptor.
+             </param>
+        <param name="includeSections">
+             The sections of the security descriptor to retrieve, if your provider
+             supports them.
+             </param>
+        <summary>
+             Gets the security descriptor for the item at the specified path.
+             </summary>
+        <returns>
+             Nothing.   Write the security descriptor to the context's pipeline for
+             the item specified by the path using the WriteSecurityDescriptorObject
+             method.
+             </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NewSecurityDescriptorFromPath">
+      <MemberSignature Language="C#" Value="public System.Security.AccessControl.ObjectSecurity NewSecurityDescriptorFromPath (string path, System.Security.AccessControl.AccessControlSections includeSections);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Security.AccessControl.ObjectSecurity NewSecurityDescriptorFromPath(string path, valuetype System.Security.AccessControl.AccessControlSections includeSections) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Provider.ISecurityDescriptorCmdletProvider.NewSecurityDescriptorFromPath(System.String,System.Security.AccessControl.AccessControlSections)" />
+      <MemberSignature Language="VB.NET" Value="Public Function NewSecurityDescriptorFromPath (path As String, includeSections As AccessControlSections) As ObjectSecurity" />
+      <MemberSignature Language="F#" Value="abstract member NewSecurityDescriptorFromPath : string * System.Security.AccessControl.AccessControlSections -&gt; System.Security.AccessControl.ObjectSecurity" Usage="iSecurityDescriptorCmdletProvider.NewSecurityDescriptorFromPath (path, includeSections)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.AccessControl.ObjectSecurity</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+        <Parameter Name="includeSections" Type="System.Security.AccessControl.AccessControlSections" />
+      </Parameters>
+      <Docs>
+        <param name="path">
+             Path of the item to use to determine the type of resulting
+             SecurityDescriptor.
+             </param>
+        <param name="includeSections">
+             The sections of the security descriptor to create.
+             </param>
+        <summary>
+             Creates a new empty security descriptor of the same type as
+             the item specified by the path.  For example, if "path" points
+             to a file system directory, the descriptor returned will be
+             of type DirectorySecurity.
+             </summary>
+        <returns>
+             A new ObjectSecurity object of the same type as
+             the item specified by the path.
+             </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NewSecurityDescriptorOfType">
+      <MemberSignature Language="C#" Value="public System.Security.AccessControl.ObjectSecurity NewSecurityDescriptorOfType (string type, System.Security.AccessControl.AccessControlSections includeSections);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Security.AccessControl.ObjectSecurity NewSecurityDescriptorOfType(string type, valuetype System.Security.AccessControl.AccessControlSections includeSections) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Provider.ISecurityDescriptorCmdletProvider.NewSecurityDescriptorOfType(System.String,System.Security.AccessControl.AccessControlSections)" />
+      <MemberSignature Language="VB.NET" Value="Public Function NewSecurityDescriptorOfType (type As String, includeSections As AccessControlSections) As ObjectSecurity" />
+      <MemberSignature Language="F#" Value="abstract member NewSecurityDescriptorOfType : string * System.Security.AccessControl.AccessControlSections -&gt; System.Security.AccessControl.ObjectSecurity" Usage="iSecurityDescriptorCmdletProvider.NewSecurityDescriptorOfType (type, includeSections)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.AccessControl.ObjectSecurity</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="type" Type="System.String" />
+        <Parameter Name="includeSections" Type="System.Security.AccessControl.AccessControlSections" />
+      </Parameters>
+      <Docs>
+        <param name="type">
+             The type of Security Descriptor to create.  Your provider should
+             understand a string representation for each of the types of
+             SecurityDescriptors that it supports.  For example, the File System
+             provider performs a case-insensitive comparison against "file" for a
+             FileSecurity descriptor, and "directory" or "container" for a
+             DirectorySecurity descriptor.
+             </param>
+        <param name="includeSections">
+             The sections of the security descriptor to create.
+             </param>
+        <summary>
+             Creates a new empty security descriptor of the specified type.
+             This method is used as a convenience function for consumers of
+             your provider.
+             </summary>
+        <returns>
+             A new ObjectSecurity object of the specified type.
+             </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetSecurityDescriptor">
+      <MemberSignature Language="C#" Value="public void SetSecurityDescriptor (string path, System.Security.AccessControl.ObjectSecurity securityDescriptor);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void SetSecurityDescriptor(string path, class System.Security.AccessControl.ObjectSecurity securityDescriptor) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Provider.ISecurityDescriptorCmdletProvider.SetSecurityDescriptor(System.String,System.Security.AccessControl.ObjectSecurity)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub SetSecurityDescriptor (path As String, securityDescriptor As ObjectSecurity)" />
+      <MemberSignature Language="F#" Value="abstract member SetSecurityDescriptor : string * System.Security.AccessControl.ObjectSecurity -&gt; unit" Usage="iSecurityDescriptorCmdletProvider.SetSecurityDescriptor (path, securityDescriptor)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+        <Parameter Name="securityDescriptor" Type="System.Security.AccessControl.ObjectSecurity" />
+      </Parameters>
+      <Docs>
+        <param name="path">
+             The path of the item to for which to set the security descriptor.
+             </param>
+        <param name="securityDescriptor">
+             The new security descriptor for the item.  This should replace the
+             previously existing security descriptor.
+             </param>
+        <summary>
+             Sets the security descriptor for the item at the specified path.
+             </summary>
+        <returns>
+             Nothing.   After setting the security descriptor to the value passed in,
+             write the new security descriptor to the context's pipeline for the
+             item specified by the path using the WriteSecurityDescriptorObject method.
+             </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

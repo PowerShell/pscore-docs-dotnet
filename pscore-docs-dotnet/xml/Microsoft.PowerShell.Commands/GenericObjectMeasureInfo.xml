@@ -1,0 +1,167 @@
+﻿<Type Name="GenericObjectMeasureInfo" FullName="Microsoft.PowerShell.Commands.GenericObjectMeasureInfo">
+  <TypeSignature Language="C#" Value="public sealed class GenericObjectMeasureInfo : Microsoft.PowerShell.Commands.MeasureInfo" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit GenericObjectMeasureInfo extends Microsoft.PowerShell.Commands.MeasureInfo" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.PowerShell.Commands.GenericObjectMeasureInfo" />
+  <TypeSignature Language="VB.NET" Value="Public NotInheritable Class GenericObjectMeasureInfo&#xA;Inherits MeasureInfo" />
+  <TypeSignature Language="F#" Value="type GenericObjectMeasureInfo = class&#xA;    inherit MeasureInfo" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.PowerShell.Commands.Utility</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Microsoft.PowerShell.Commands.MeasureInfo</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Class output by Measure-Object.
+            </summary>
+    <remarks>
+            This class is created for fixing "Measure-Object -MAX -MIN should work with ANYTHING that supports CompareTo"
+            bug (Win8:343911).
+            GenericMeasureInfo class is shipped with PowerShell V2. Fixing this bug requires, changing the type of
+            Maximum and Minimum properties which would be a breaking change. Hence created a new class to not
+            have an appcompat issues with PS V2.
+            </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public GenericObjectMeasureInfo ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Commands.GenericObjectMeasureInfo.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New ()" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Commands.Utility</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>
+            default ctor
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Average">
+      <MemberSignature Language="C#" Value="public Nullable&lt;double&gt; Average { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Nullable`1&lt;float64&gt; Average" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.GenericObjectMeasureInfo.Average" />
+      <MemberSignature Language="VB.NET" Value="Public Property Average As Nullable(Of Double)" />
+      <MemberSignature Language="F#" Value="member this.Average : Nullable&lt;double&gt; with get, set" Usage="Microsoft.PowerShell.Commands.GenericObjectMeasureInfo.Average" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Commands.Utility</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Nullable&lt;System.Double&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            
+             The average of property values
+            
+             </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Count">
+      <MemberSignature Language="C#" Value="public int Count { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Count" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.GenericObjectMeasureInfo.Count" />
+      <MemberSignature Language="VB.NET" Value="Public Property Count As Integer" />
+      <MemberSignature Language="F#" Value="member this.Count : int with get, set" Usage="Microsoft.PowerShell.Commands.GenericObjectMeasureInfo.Count" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Commands.Utility</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            
+             Keeping track of number of objects with a certain property
+            
+             </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Maximum">
+      <MemberSignature Language="C#" Value="public object Maximum { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object Maximum" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.GenericObjectMeasureInfo.Maximum" />
+      <MemberSignature Language="VB.NET" Value="Public Property Maximum As Object" />
+      <MemberSignature Language="F#" Value="member this.Maximum : obj with get, set" Usage="Microsoft.PowerShell.Commands.GenericObjectMeasureInfo.Maximum" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Commands.Utility</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            
+             The max of property values
+            
+             </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Minimum">
+      <MemberSignature Language="C#" Value="public object Minimum { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object Minimum" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.GenericObjectMeasureInfo.Minimum" />
+      <MemberSignature Language="VB.NET" Value="Public Property Minimum As Object" />
+      <MemberSignature Language="F#" Value="member this.Minimum : obj with get, set" Usage="Microsoft.PowerShell.Commands.GenericObjectMeasureInfo.Minimum" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Commands.Utility</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            
+             The min of property values
+            
+             </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Sum">
+      <MemberSignature Language="C#" Value="public Nullable&lt;double&gt; Sum { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Nullable`1&lt;float64&gt; Sum" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.GenericObjectMeasureInfo.Sum" />
+      <MemberSignature Language="VB.NET" Value="Public Property Sum As Nullable(Of Double)" />
+      <MemberSignature Language="F#" Value="member this.Sum : Nullable&lt;double&gt; with get, set" Usage="Microsoft.PowerShell.Commands.GenericObjectMeasureInfo.Sum" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.PowerShell.Commands.Utility</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Nullable&lt;System.Double&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            
+             The sum of property values
+            
+             </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,81 @@
+﻿<Type Name="IDynamicParameters" FullName="System.Management.Automation.IDynamicParameters">
+  <TypeSignature Language="C#" Value="public interface IDynamicParameters" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IDynamicParameters" />
+  <TypeSignature Language="DocId" Value="T:System.Management.Automation.IDynamicParameters" />
+  <TypeSignature Language="VB.NET" Value="Public Interface IDynamicParameters" />
+  <TypeSignature Language="F#" Value="type IDynamicParameters = interface" />
+  <AssemblyInfo>
+    <AssemblyName>System.Management.Automation</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>
+            An interface that a
+            <see cref="T:System.Management.Automation.Cmdlet" /> or <see cref="T:System.Management.Automation.Provider.CmdletProvider" />
+            must implement to indicate that it has dynamic parameters.
+            </summary>
+    <remarks>
+            Dynamic parameters allow a
+            <see cref="T:System.Management.Automation.Cmdlet" /> or <see cref="T:System.Management.Automation.Provider.CmdletProvider" />
+            to define additional parameters based on the value of
+            the formal arguments.  For example, the parameters of
+            "set-itemproperty" for the file system provider vary
+            depending on whether the target object is a file or directory.
+            </remarks>
+    <altmember cref="T:System.Management.Automation.Cmdlet" />
+    <altmember cref="T:System.Management.Automation.PSCmdlet" />
+    <altmember cref="T:System.Management.Automation.RuntimeDefinedParameter" />
+    <altmember cref="T:System.Management.Automation.RuntimeDefinedParameterDictionary" />
+  </Docs>
+  <Members>
+    <Member MemberName="GetDynamicParameters">
+      <MemberSignature Language="C#" Value="public object GetDynamicParameters ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object GetDynamicParameters() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.IDynamicParameters.GetDynamicParameters" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetDynamicParameters () As Object" />
+      <MemberSignature Language="F#" Value="abstract member GetDynamicParameters : unit -&gt; obj" Usage="iDynamicParameters.GetDynamicParameters " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+             Returns an instance of an object that defines the
+             dynamic parameters for this
+             <see cref="T:System.Management.Automation.Cmdlet" /> or <see cref="T:System.Management.Automation.Provider.CmdletProvider" />.
+             </summary>
+        <returns>
+             This method should return an object that has properties and fields
+             decorated with parameter attributes similar to a
+             <see cref="T:System.Management.Automation.Cmdlet" /> or <see cref="T:System.Management.Automation.Provider.CmdletProvider" />.
+             These attributes include <see cref="T:System.Management.Automation.ParameterAttribute" />,
+             <see cref="T:System.Management.Automation.AliasAttribute" />, argument transformation and
+             validation attributes, etc.
+            
+             Alternately, it can return a
+             <see cref="T:System.Management.Automation.RuntimeDefinedParameterDictionary" />
+             instead.
+            
+             The <see cref="T:System.Management.Automation.Cmdlet" /> or <see cref="T:System.Management.Automation.Provider.CmdletProvider" />
+             should hold on to a reference to the object which it returns from
+             this method, since the argument values for the dynamic parameters
+             specified by that object will be set in that object.
+            
+             This method will be called after all formal (command-line)
+             parameters are set, but before <see cref="M:System.Management.Automation.Cmdlet.BeginProcessing" />
+             is called and before any incoming pipeline objects are read.
+             Therefore, parameters which allow input from the pipeline
+             may not be set at the time this method is called,
+             even if the parameters are mandatory.
+             </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

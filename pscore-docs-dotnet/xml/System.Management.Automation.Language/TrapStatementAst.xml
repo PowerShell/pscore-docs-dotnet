@@ -1,0 +1,121 @@
+﻿<Type Name="TrapStatementAst" FullName="System.Management.Automation.Language.TrapStatementAst">
+  <TypeSignature Language="C#" Value="public class TrapStatementAst : System.Management.Automation.Language.StatementAst" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit TrapStatementAst extends System.Management.Automation.Language.StatementAst" />
+  <TypeSignature Language="DocId" Value="T:System.Management.Automation.Language.TrapStatementAst" />
+  <TypeSignature Language="VB.NET" Value="Public Class TrapStatementAst&#xA;Inherits StatementAst" />
+  <TypeSignature Language="F#" Value="type TrapStatementAst = class&#xA;    inherit StatementAst" />
+  <AssemblyInfo>
+    <AssemblyName>System.Management.Automation</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Management.Automation.Language.StatementAst</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            The ast that represents the trap statement.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TrapStatementAst (System.Management.Automation.Language.IScriptExtent extent, System.Management.Automation.Language.TypeConstraintAst trapType, System.Management.Automation.Language.StatementBlockAst body);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Management.Automation.Language.IScriptExtent extent, class System.Management.Automation.Language.TypeConstraintAst trapType, class System.Management.Automation.Language.StatementBlockAst body) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Language.TrapStatementAst.#ctor(System.Management.Automation.Language.IScriptExtent,System.Management.Automation.Language.TypeConstraintAst,System.Management.Automation.Language.StatementBlockAst)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (extent As IScriptExtent, trapType As TypeConstraintAst, body As StatementBlockAst)" />
+      <MemberSignature Language="F#" Value="new System.Management.Automation.Language.TrapStatementAst : System.Management.Automation.Language.IScriptExtent * System.Management.Automation.Language.TypeConstraintAst * System.Management.Automation.Language.StatementBlockAst -&gt; System.Management.Automation.Language.TrapStatementAst" Usage="new System.Management.Automation.Language.TrapStatementAst (extent, trapType, body)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="extent" Type="System.Management.Automation.Language.IScriptExtent" />
+        <Parameter Name="trapType" Type="System.Management.Automation.Language.TypeConstraintAst" />
+        <Parameter Name="body" Type="System.Management.Automation.Language.StatementBlockAst" />
+      </Parameters>
+      <Docs>
+        <param name="extent">
+            The extent of the trap statement, starting with the trap keyword and ending with the closing curly of the body.
+            </param>
+        <param name="trapType">The type handled by the trap statement, may be null if all exceptions are trapped.</param>
+        <param name="body">The handler for the error.</param>
+        <summary>
+            Construct a trap statement.
+            </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.Management.Automation.PSArgumentNullException">
+            If <paramref name="extent" /> or <paramref name="body" /> is null.
+            </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Body">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.Language.StatementBlockAst Body { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Management.Automation.Language.StatementBlockAst Body" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.Language.TrapStatementAst.Body" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Body As StatementBlockAst" />
+      <MemberSignature Language="F#" Value="member this.Body : System.Management.Automation.Language.StatementBlockAst" Usage="System.Management.Automation.Language.TrapStatementAst.Body" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.Language.StatementBlockAst</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The body for the trap block.  This property is never null.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Copy">
+      <MemberSignature Language="C#" Value="public override System.Management.Automation.Language.Ast Copy ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Management.Automation.Language.Ast Copy() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Language.TrapStatementAst.Copy" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Function Copy () As Ast" />
+      <MemberSignature Language="F#" Value="override this.Copy : unit -&gt; System.Management.Automation.Language.Ast" Usage="trapStatementAst.Copy " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.Language.Ast</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Copy the TrapStatementAst instance
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TrapType">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.Language.TypeConstraintAst TrapType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Management.Automation.Language.TypeConstraintAst TrapType" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.Language.TrapStatementAst.TrapType" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property TrapType As TypeConstraintAst" />
+      <MemberSignature Language="F#" Value="member this.TrapType : System.Management.Automation.Language.TypeConstraintAst" Usage="System.Management.Automation.Language.TrapStatementAst.TrapType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.Language.TypeConstraintAst</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The ast for the type trapped by this trap block, or null if no type was specified.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

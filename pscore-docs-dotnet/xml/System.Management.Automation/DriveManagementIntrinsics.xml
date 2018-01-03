@@ -1,0 +1,315 @@
+﻿<Type Name="DriveManagementIntrinsics" FullName="System.Management.Automation.DriveManagementIntrinsics">
+  <TypeSignature Language="C#" Value="public sealed class DriveManagementIntrinsics" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit DriveManagementIntrinsics extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Management.Automation.DriveManagementIntrinsics" />
+  <TypeSignature Language="VB.NET" Value="Public NotInheritable Class DriveManagementIntrinsics" />
+  <TypeSignature Language="F#" Value="type DriveManagementIntrinsics = class" />
+  <AssemblyInfo>
+    <AssemblyName>System.Management.Automation</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Exposes the Cmdlet Family Provider's drives to the Cmdlet base class. The methods of this class
+            get and set provider data in session state.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Current">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.PSDriveInfo Current { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Management.Automation.PSDriveInfo Current" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.DriveManagementIntrinsics.Current" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Current As PSDriveInfo" />
+      <MemberSignature Language="F#" Value="member this.Current : System.Management.Automation.PSDriveInfo" Usage="System.Management.Automation.DriveManagementIntrinsics.Current" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.PSDriveInfo</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+             Gets the drive information for the current working drive.
+             </summary>
+        <value>To be added.</value>
+        <remarks>
+             This property is readonly. To set the current drive use the
+             SetLocation method.
+             </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Get">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.PSDriveInfo Get (string driveName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Management.Automation.PSDriveInfo Get(string driveName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.DriveManagementIntrinsics.Get(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Function Get (driveName As String) As PSDriveInfo" />
+      <MemberSignature Language="F#" Value="member this.Get : string -&gt; System.Management.Automation.PSDriveInfo" Usage="driveManagementIntrinsics.Get driveName" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.PSDriveInfo</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="driveName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="driveName">
+             The name of the drive to get the drive information for.
+             </param>
+        <summary>
+             Gets the drive information for the drive specified by name.
+             </summary>
+        <returns>
+             The drive information that represents the drive of the specified name.
+             </returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+             If <paramref name="driveName" /> is null.
+             </exception>
+        <exception cref="T:System.Management.Automation.DriveNotFoundException">
+             If there is no drive with <paramref name="driveName" />.
+             </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetAll">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.Collection&lt;System.Management.Automation.PSDriveInfo&gt; GetAll ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Collections.ObjectModel.Collection`1&lt;class System.Management.Automation.PSDriveInfo&gt; GetAll() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.DriveManagementIntrinsics.GetAll" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetAll () As Collection(Of PSDriveInfo)" />
+      <MemberSignature Language="F#" Value="member this.GetAll : unit -&gt; System.Collections.ObjectModel.Collection&lt;System.Management.Automation.PSDriveInfo&gt;" Usage="driveManagementIntrinsics.GetAll " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.Collection&lt;System.Management.Automation.PSDriveInfo&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Retrieves all the drives in the specified scope
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetAllAtScope">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.Collection&lt;System.Management.Automation.PSDriveInfo&gt; GetAllAtScope (string scope);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Collections.ObjectModel.Collection`1&lt;class System.Management.Automation.PSDriveInfo&gt; GetAllAtScope(string scope) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.DriveManagementIntrinsics.GetAllAtScope(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetAllAtScope (scope As String) As Collection(Of PSDriveInfo)" />
+      <MemberSignature Language="F#" Value="member this.GetAllAtScope : string -&gt; System.Collections.ObjectModel.Collection&lt;System.Management.Automation.PSDriveInfo&gt;" Usage="driveManagementIntrinsics.GetAllAtScope scope" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.Collection&lt;System.Management.Automation.PSDriveInfo&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="scope" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="scope">
+             The scope to retrieve the drives from. If null, the
+             drives in all the scopes will be returned.
+             </param>
+        <summary>
+             Retrieves all the drives in the specified scope
+             </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">
+             If <paramref name="scope" /> is less than zero, or not
+             a number and not "script", "global", "local", or "private"
+             </exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+             If <paramref name="scopeID" /> is less than zero or greater than the number of currently
+             active scopes.
+             </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetAllForProvider">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.Collection&lt;System.Management.Automation.PSDriveInfo&gt; GetAllForProvider (string providerName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Collections.ObjectModel.Collection`1&lt;class System.Management.Automation.PSDriveInfo&gt; GetAllForProvider(string providerName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.DriveManagementIntrinsics.GetAllForProvider(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetAllForProvider (providerName As String) As Collection(Of PSDriveInfo)" />
+      <MemberSignature Language="F#" Value="member this.GetAllForProvider : string -&gt; System.Collections.ObjectModel.Collection&lt;System.Management.Automation.PSDriveInfo&gt;" Usage="driveManagementIntrinsics.GetAllForProvider providerName" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.Collection&lt;System.Management.Automation.PSDriveInfo&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="providerName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="providerName">
+             The name of the provider to get the drives for.
+             </param>
+        <summary>
+             Gets all the drives for the specified provider
+             </summary>
+        <returns>
+             All the drives in all the scopes for the given provider.
+             </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetAtScope">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.PSDriveInfo GetAtScope (string driveName, string scope);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Management.Automation.PSDriveInfo GetAtScope(string driveName, string scope) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.DriveManagementIntrinsics.GetAtScope(System.String,System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetAtScope (driveName As String, scope As String) As PSDriveInfo" />
+      <MemberSignature Language="F#" Value="member this.GetAtScope : string * string -&gt; System.Management.Automation.PSDriveInfo" Usage="driveManagementIntrinsics.GetAtScope (driveName, scope)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.PSDriveInfo</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="driveName" Type="System.String" />
+        <Parameter Name="scope" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="driveName">
+             The name of the drive to get the drive information for.
+             </param>
+        <param name="scope">
+             The ID of the scope to get the drive from. This may be one of the scope
+             keywords like global or local, or it may be an numeric offset of the scope
+             generation relative to the current scope.
+             If the scopeID is null or empty the local scope is used.
+             </param>
+        <summary>
+             Gets the drive information for the drive specified by name.
+             </summary>
+        <returns>
+             The drive information that represents the drive of the specified name.
+             </returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+             If <paramref name="driveName" /> is null.
+             </exception>
+        <exception cref="T:System.ArgumentException">
+             If <paramref name="scope" /> is less than zero, or not
+             a number and not "script", "global", "local", or "private"
+             </exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+             If <paramref name="scopeID" /> is less than zero or greater than the number of currently
+             active scopes.
+             </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="New">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.PSDriveInfo New (System.Management.Automation.PSDriveInfo drive, string scope);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Management.Automation.PSDriveInfo New(class System.Management.Automation.PSDriveInfo drive, string scope) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.DriveManagementIntrinsics.New(System.Management.Automation.PSDriveInfo,System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Function New (drive As PSDriveInfo, scope As String) As PSDriveInfo" />
+      <MemberSignature Language="F#" Value="member this.New : System.Management.Automation.PSDriveInfo * string -&gt; System.Management.Automation.PSDriveInfo" Usage="driveManagementIntrinsics.New (drive, scope)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.PSDriveInfo</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="drive" Type="System.Management.Automation.PSDriveInfo" />
+        <Parameter Name="scope" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="drive">
+             The drive to be created.
+             </param>
+        <param name="scope">
+             The ID of the scope to create the drive in. This may be one of the scope
+             keywords like global or local, or it may be an numeric offset of the scope
+             generation relative to the current scope.
+             If the scopeID is null or empty the local scope is used.
+             </param>
+        <summary>
+             Creates a new MSH drive in session state
+             </summary>
+        <returns>
+             The drive that was created.
+             </returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+             If <paramref name="drive" /> is null.
+             </exception>
+        <exception cref="T:System.ArgumentException">
+             If the drive already exists,
+             or
+             If <paramref name="drive" />.Name contains one or more invalid characters; ~ / \\ . :
+             </exception>
+        <exception cref="T:System.NotSupportedException">
+             If the provider is not a DriveCmdletProvider.
+             </exception>
+        <exception cref="T:System.Management.Automation.ProviderNotFoundException">
+             The provider for the <paramref name="drive" /> could not be found.
+             </exception>
+        <exception cref="T:System.Management.Automation.ProviderInvocationException">
+             If the provider threw an exception or returned null.
+             </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Remove">
+      <MemberSignature Language="C#" Value="public void Remove (string driveName, bool force, string scope);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Remove(string driveName, bool force, string scope) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.DriveManagementIntrinsics.Remove(System.String,System.Boolean,System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Remove (driveName As String, force As Boolean, scope As String)" />
+      <MemberSignature Language="F#" Value="member this.Remove : string * bool * string -&gt; unit" Usage="driveManagementIntrinsics.Remove (driveName, force, scope)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="driveName" Type="System.String" />
+        <Parameter Name="force" Type="System.Boolean" />
+        <Parameter Name="scope" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="driveName">
+             The name of the drive to be removed.
+             </param>
+        <param name="force">
+             Determines whether drive should be forcefully removed even if there was errors.
+             </param>
+        <param name="scope">
+             The ID of the scope to remove the drive from. This may be one of the scope
+             keywords like global or local, or it may be an numeric offset of the scope
+             generation relative to the current scope.
+             If the scopeID is null or empty the local scope is used.
+             </param>
+        <summary>
+             Removes the specified drive.
+             </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

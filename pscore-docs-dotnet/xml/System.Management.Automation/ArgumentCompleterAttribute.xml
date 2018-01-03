@@ -1,0 +1,112 @@
+﻿<Type Name="ArgumentCompleterAttribute" FullName="System.Management.Automation.ArgumentCompleterAttribute">
+  <TypeSignature Language="C#" Value="public class ArgumentCompleterAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ArgumentCompleterAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.Management.Automation.ArgumentCompleterAttribute" />
+  <TypeSignature Language="VB.NET" Value="Public Class ArgumentCompleterAttribute&#xA;Inherits Attribute" />
+  <TypeSignature Language="F#" Value="type ArgumentCompleterAttribute = class&#xA;    inherit Attribute" />
+  <AssemblyInfo>
+    <AssemblyName>System.Management.Automation</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Property | System.AttributeTargets.Field)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>
+            This attribute is used to specify an argument completer for a parameter to a cmdlet or function.
+            <example>
+                [Parameter()]
+                [ArgumentCompleter(typeof(NounArgumentCompleter))]
+                public string Noun { get; set; }
+            </example></summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ArgumentCompleterAttribute (System.Management.Automation.ScriptBlock scriptBlock);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Management.Automation.ScriptBlock scriptBlock) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.ArgumentCompleterAttribute.#ctor(System.Management.Automation.ScriptBlock)" />
+      <MemberSignature Language="F#" Value="new System.Management.Automation.ArgumentCompleterAttribute : System.Management.Automation.ScriptBlock -&gt; System.Management.Automation.ArgumentCompleterAttribute" Usage="new System.Management.Automation.ArgumentCompleterAttribute scriptBlock" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="scriptBlock" Type="System.Management.Automation.ScriptBlock" />
+      </Parameters>
+      <Docs>
+        <param name="scriptBlock"></param>
+        <summary>
+            This constructor is used primarily via PowerShell scripts.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ArgumentCompleterAttribute (Type type);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Type type) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.ArgumentCompleterAttribute.#ctor(System.Type)" />
+      <MemberSignature Language="F#" Value="new System.Management.Automation.ArgumentCompleterAttribute : Type -&gt; System.Management.Automation.ArgumentCompleterAttribute" Usage="new System.Management.Automation.ArgumentCompleterAttribute type" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="type" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="type">The type must implement <see cref="T:System.Management.Automation.IArgumentCompleter" /> and have a default constructor.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ScriptBlock">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.ScriptBlock ScriptBlock { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Management.Automation.ScriptBlock ScriptBlock" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.ArgumentCompleterAttribute.ScriptBlock" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ScriptBlock As ScriptBlock" />
+      <MemberSignature Language="F#" Value="member this.ScriptBlock : System.Management.Automation.ScriptBlock" Usage="System.Management.Automation.ArgumentCompleterAttribute.ScriptBlock" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.ScriptBlock</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary />
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Type">
+      <MemberSignature Language="C#" Value="public Type Type { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type Type" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Automation.ArgumentCompleterAttribute.Type" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Type As Type" />
+      <MemberSignature Language="F#" Value="member this.Type : Type" Usage="System.Management.Automation.ArgumentCompleterAttribute.Type" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary />
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

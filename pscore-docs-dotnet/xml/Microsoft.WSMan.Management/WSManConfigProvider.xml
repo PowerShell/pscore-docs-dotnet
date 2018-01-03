@@ -1,0 +1,568 @@
+﻿<Type Name="WSManConfigProvider" FullName="Microsoft.WSMan.Management.WSManConfigProvider">
+  <TypeSignature Language="C#" Value="public sealed class WSManConfigProvider : System.Management.Automation.Provider.NavigationCmdletProvider, System.Management.Automation.Provider.ICmdletProviderSupportsHelp" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit WSManConfigProvider extends System.Management.Automation.Provider.NavigationCmdletProvider implements class System.Management.Automation.Provider.ICmdletProviderSupportsHelp" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.WSMan.Management.WSManConfigProvider" />
+  <TypeSignature Language="VB.NET" Value="Public NotInheritable Class WSManConfigProvider&#xA;Inherits NavigationCmdletProvider&#xA;Implements ICmdletProviderSupportsHelp" />
+  <TypeSignature Language="F#" Value="type WSManConfigProvider = class&#xA;    inherit NavigationCmdletProvider&#xA;    interface ICmdletProviderSupportsHelp" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.WSMan.Management</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Management.Automation.Provider.NavigationCmdletProvider</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Management.Automation.Provider.ICmdletProviderSupportsHelp</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Management.Automation.Provider.CmdletProvider("WSMan", System.Management.Automation.Provider.ProviderCapabilities.Credentials)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>
+            WsMan Provider.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WSManConfigProvider ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.WSMan.Management.WSManConfigProvider.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New ()" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.WSMan.Management</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ClearItem">
+      <MemberSignature Language="C#" Value="protected override void ClearItem (string path);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void ClearItem(string path) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.WSMan.Management.WSManConfigProvider.ClearItem(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Protected Overrides Sub ClearItem (path As String)" />
+      <MemberSignature Language="F#" Value="override this.ClearItem : string -&gt; unit" Usage="wSManConfigProvider.ClearItem path" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.WSMan.Management</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="path"></param>
+        <summary>
+            This command is used to clear the value of a item.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetChildItems">
+      <MemberSignature Language="C#" Value="protected override void GetChildItems (string path, bool recurse);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void GetChildItems(string path, bool recurse) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.WSMan.Management.WSManConfigProvider.GetChildItems(System.String,System.Boolean)" />
+      <MemberSignature Language="VB.NET" Value="Protected Overrides Sub GetChildItems (path As String, recurse As Boolean)" />
+      <MemberSignature Language="F#" Value="override this.GetChildItems : string * bool -&gt; unit" Usage="wSManConfigProvider.GetChildItems (path, recurse)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.WSMan.Management</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+        <Parameter Name="recurse" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="path"></param>
+        <param name="recurse"></param>
+        <summary>
+            Gets the Child items. dir functionality
+            wsman:\localhost\client&gt; dir
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetChildName">
+      <MemberSignature Language="C#" Value="protected override string GetChildName (string path);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance string GetChildName(string path) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.WSMan.Management.WSManConfigProvider.GetChildName(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Protected Overrides Function GetChildName (path As String) As String" />
+      <MemberSignature Language="F#" Value="override this.GetChildName : string -&gt; string" Usage="wSManConfigProvider.GetChildName path" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.WSMan.Management</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="path"></param>
+        <summary>
+            Get a Child Name. This method is called from MakePath method.
+            This Method helps in getting the correct case of particular element in the provider path.
+            XML is case sensitive but Powershell is not.
+            </summary>
+        <returns />
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetChildNames">
+      <MemberSignature Language="C#" Value="protected override void GetChildNames (string path, System.Management.Automation.ReturnContainers returnContainers);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void GetChildNames(string path, valuetype System.Management.Automation.ReturnContainers returnContainers) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.WSMan.Management.WSManConfigProvider.GetChildNames(System.String,System.Management.Automation.ReturnContainers)" />
+      <MemberSignature Language="F#" Value="override this.GetChildNames : string * System.Management.Automation.ReturnContainers -&gt; unit" Usage="wSManConfigProvider.GetChildNames (path, returnContainers)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.WSMan.Management</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+        <Parameter Name="returnContainers" Type="System.Management.Automation.ReturnContainers" />
+      </Parameters>
+      <Docs>
+        <param name="path"></param>
+        <param name="returnContainers"></param>
+        <summary>
+            This method gives the names of child items. this is used for Tab completion.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetItem">
+      <MemberSignature Language="C#" Value="protected override void GetItem (string path);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void GetItem(string path) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.WSMan.Management.WSManConfigProvider.GetItem(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Protected Overrides Sub GetItem (path As String)" />
+      <MemberSignature Language="F#" Value="override this.GetItem : string -&gt; unit" Usage="wSManConfigProvider.GetItem path" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.WSMan.Management</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="path"></param>
+        <summary>
+            This cmdlet is used to get a particular item.
+            cd wsman:\localhost\client&gt; Get-Item .\Auth
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HasChildItems">
+      <MemberSignature Language="C#" Value="protected override bool HasChildItems (string path);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance bool HasChildItems(string path) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.WSMan.Management.WSManConfigProvider.HasChildItems(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Protected Overrides Function HasChildItems (path As String) As Boolean" />
+      <MemberSignature Language="F#" Value="override this.HasChildItems : string -&gt; bool" Usage="wSManConfigProvider.HasChildItems path" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.WSMan.Management</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="path"></param>
+        <summary>
+            Checks whether the given path has got child items.
+            e.g: This is called by Provider infrastructure when we do a Remove-Item and prompts user
+            if child items are present.
+            </summary>
+        <returns />
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InitializeDefaultDrives">
+      <MemberSignature Language="C#" Value="protected override System.Collections.ObjectModel.Collection&lt;System.Management.Automation.PSDriveInfo&gt; InitializeDefaultDrives ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Collections.ObjectModel.Collection`1&lt;class System.Management.Automation.PSDriveInfo&gt; InitializeDefaultDrives() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.WSMan.Management.WSManConfigProvider.InitializeDefaultDrives" />
+      <MemberSignature Language="VB.NET" Value="Protected Overrides Function InitializeDefaultDrives () As Collection(Of PSDriveInfo)" />
+      <MemberSignature Language="F#" Value="override this.InitializeDefaultDrives : unit -&gt; System.Collections.ObjectModel.Collection&lt;System.Management.Automation.PSDriveInfo&gt;" Usage="wSManConfigProvider.InitializeDefaultDrives " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.WSMan.Management</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.Collection&lt;System.Management.Automation.PSDriveInfo&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Adds the required drive
+            </summary>
+        <returns />
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsItemContainer">
+      <MemberSignature Language="C#" Value="protected override bool IsItemContainer (string path);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance bool IsItemContainer(string path) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.WSMan.Management.WSManConfigProvider.IsItemContainer(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Protected Overrides Function IsItemContainer (path As String) As Boolean" />
+      <MemberSignature Language="F#" Value="override this.IsItemContainer : string -&gt; bool" Usage="wSManConfigProvider.IsItemContainer path" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.WSMan.Management</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="path"></param>
+        <summary>
+            Checks whether the specified path is a container path
+            </summary>
+        <returns />
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsValidPath">
+      <MemberSignature Language="C#" Value="protected override bool IsValidPath (string path);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance bool IsValidPath(string path) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.WSMan.Management.WSManConfigProvider.IsValidPath(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Protected Overrides Function IsValidPath (path As String) As Boolean" />
+      <MemberSignature Language="F#" Value="override this.IsValidPath : string -&gt; bool" Usage="wSManConfigProvider.IsValidPath path" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.WSMan.Management</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="path"></param>
+        <summary>
+            Checks whether the path is Valid.
+            eg. winrm/config/client
+            </summary>
+        <returns />
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ItemExists">
+      <MemberSignature Language="C#" Value="protected override bool ItemExists (string path);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance bool ItemExists(string path) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.WSMan.Management.WSManConfigProvider.ItemExists(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Protected Overrides Function ItemExists (path As String) As Boolean" />
+      <MemberSignature Language="F#" Value="override this.ItemExists : string -&gt; bool" Usage="wSManConfigProvider.ItemExists path" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.WSMan.Management</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="path"></param>
+        <summary>
+            Check whether an Item Exist in the winrm configuration
+            </summary>
+        <returns />
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MakePath">
+      <MemberSignature Language="C#" Value="protected override string MakePath (string parent, string child);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance string MakePath(string parent, string child) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.WSMan.Management.WSManConfigProvider.MakePath(System.String,System.String)" />
+      <MemberSignature Language="VB.NET" Value="Protected Overrides Function MakePath (parent As String, child As String) As String" />
+      <MemberSignature Language="F#" Value="override this.MakePath : string * string -&gt; string" Usage="wSManConfigProvider.MakePath (parent, child)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.WSMan.Management</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="parent" Type="System.String" />
+        <Parameter Name="child" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="parent"></param>
+        <param name="child"></param>
+        <summary>
+            This method is provided by the Provider infrastructure. This method is called in all actions done
+            by the provider to get the resolved path. Internally Resolve-Path is called.
+            Since Root is empty for WsMan Provider the default path generated by Makepath is not correct.
+            So we have made the tweaks in this method to return the correct resolved path.
+            </summary>
+        <returns />
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NewDrive">
+      <MemberSignature Language="C#" Value="protected override System.Management.Automation.PSDriveInfo NewDrive (System.Management.Automation.PSDriveInfo drive);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Management.Automation.PSDriveInfo NewDrive(class System.Management.Automation.PSDriveInfo drive) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.WSMan.Management.WSManConfigProvider.NewDrive(System.Management.Automation.PSDriveInfo)" />
+      <MemberSignature Language="VB.NET" Value="Protected Overrides Function NewDrive (drive As PSDriveInfo) As PSDriveInfo" />
+      <MemberSignature Language="F#" Value="override this.NewDrive : System.Management.Automation.PSDriveInfo -&gt; System.Management.Automation.PSDriveInfo" Usage="wSManConfigProvider.NewDrive drive" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.WSMan.Management</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.PSDriveInfo</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="drive" Type="System.Management.Automation.PSDriveInfo" />
+      </Parameters>
+      <Docs>
+        <param name="drive"></param>
+        <summary />
+        <returns />
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NewItem">
+      <MemberSignature Language="C#" Value="protected override void NewItem (string path, string itemTypeName, object newItemValue);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void NewItem(string path, string itemTypeName, object newItemValue) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.WSMan.Management.WSManConfigProvider.NewItem(System.String,System.String,System.Object)" />
+      <MemberSignature Language="VB.NET" Value="Protected Overrides Sub NewItem (path As String, itemTypeName As String, newItemValue As Object)" />
+      <MemberSignature Language="F#" Value="override this.NewItem : string * string * obj -&gt; unit" Usage="wSManConfigProvider.NewItem (path, itemTypeName, newItemValue)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.WSMan.Management</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+        <Parameter Name="itemTypeName" Type="System.String" />
+        <Parameter Name="newItemValue" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="path"></param>
+        <param name="itemTypeName"></param>
+        <param name="newItemValue"></param>
+        <summary>
+            This method creates a new item of listener,clientcertificate etc.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NewItemDynamicParameters">
+      <MemberSignature Language="C#" Value="protected override object NewItemDynamicParameters (string path, string itemTypeName, object newItemValue);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance object NewItemDynamicParameters(string path, string itemTypeName, object newItemValue) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.WSMan.Management.WSManConfigProvider.NewItemDynamicParameters(System.String,System.String,System.Object)" />
+      <MemberSignature Language="VB.NET" Value="Protected Overrides Function NewItemDynamicParameters (path As String, itemTypeName As String, newItemValue As Object) As Object" />
+      <MemberSignature Language="F#" Value="override this.NewItemDynamicParameters : string * string * obj -&gt; obj" Usage="wSManConfigProvider.NewItemDynamicParameters (path, itemTypeName, newItemValue)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.WSMan.Management</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+        <Parameter Name="itemTypeName" Type="System.String" />
+        <Parameter Name="newItemValue" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="path"></param>
+        <param name="itemTypeName"></param>
+        <param name="newItemValue"></param>
+        <summary>
+            Dynamic parameter used by New-Item. According to different path. This method return the
+            required dynamic parameters
+            </summary>
+        <returns />
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveDrive">
+      <MemberSignature Language="C#" Value="protected override System.Management.Automation.PSDriveInfo RemoveDrive (System.Management.Automation.PSDriveInfo drive);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Management.Automation.PSDriveInfo RemoveDrive(class System.Management.Automation.PSDriveInfo drive) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.WSMan.Management.WSManConfigProvider.RemoveDrive(System.Management.Automation.PSDriveInfo)" />
+      <MemberSignature Language="VB.NET" Value="Protected Overrides Function RemoveDrive (drive As PSDriveInfo) As PSDriveInfo" />
+      <MemberSignature Language="F#" Value="override this.RemoveDrive : System.Management.Automation.PSDriveInfo -&gt; System.Management.Automation.PSDriveInfo" Usage="wSManConfigProvider.RemoveDrive drive" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.WSMan.Management</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.PSDriveInfo</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="drive" Type="System.Management.Automation.PSDriveInfo" />
+      </Parameters>
+      <Docs>
+        <param name="drive">To be added.</param>
+        <summary>
+            Removes the required drive
+            </summary>
+        <returns />
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveItem">
+      <MemberSignature Language="C#" Value="protected override void RemoveItem (string path, bool recurse);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void RemoveItem(string path, bool recurse) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.WSMan.Management.WSManConfigProvider.RemoveItem(System.String,System.Boolean)" />
+      <MemberSignature Language="VB.NET" Value="Protected Overrides Sub RemoveItem (path As String, recurse As Boolean)" />
+      <MemberSignature Language="F#" Value="override this.RemoveItem : string * bool -&gt; unit" Usage="wSManConfigProvider.RemoveItem (path, recurse)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.WSMan.Management</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+        <Parameter Name="recurse" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="path"></param>
+        <param name="recurse"></param>
+        <summary>
+            Removes a particular item.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetItem">
+      <MemberSignature Language="C#" Value="protected override void SetItem (string path, object value);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void SetItem(string path, object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.WSMan.Management.WSManConfigProvider.SetItem(System.String,System.Object)" />
+      <MemberSignature Language="VB.NET" Value="Protected Overrides Sub SetItem (path As String, value As Object)" />
+      <MemberSignature Language="F#" Value="override this.SetItem : string * obj -&gt; unit" Usage="wSManConfigProvider.SetItem (path, value)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.WSMan.Management</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="path"></param>
+        <param name="value"></param>
+        <summary>
+            This cmdlet is used to set the value of a particular item.
+            cd wsman:\localhost\client&gt; Set-Item .\TrustedHosts -value "*"
+            This has one dynamic parameter. It is used with TrustedHost only.
+            The parameter is -Concatenate.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetItemDynamicParameters">
+      <MemberSignature Language="C#" Value="protected override object SetItemDynamicParameters (string path, object value);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance object SetItemDynamicParameters(string path, object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.WSMan.Management.WSManConfigProvider.SetItemDynamicParameters(System.String,System.Object)" />
+      <MemberSignature Language="VB.NET" Value="Protected Overrides Function SetItemDynamicParameters (path As String, value As Object) As Object" />
+      <MemberSignature Language="F#" Value="override this.SetItemDynamicParameters : string * obj -&gt; obj" Usage="wSManConfigProvider.SetItemDynamicParameters (path, value)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.WSMan.Management</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="path"></param>
+        <param name="value"></param>
+        <summary>
+            This is method which create the dynamic or runtime parameter for set-item
+            </summary>
+        <returns />
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Management.Automation.Provider.ICmdletProviderSupportsHelp.GetHelpMaml">
+      <MemberSignature Language="C#" Value="string ICmdletProviderSupportsHelp.GetHelpMaml (string helpItemName, string path);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance string System.Management.Automation.Provider.ICmdletProviderSupportsHelp.GetHelpMaml(string helpItemName, string path) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.WSMan.Management.WSManConfigProvider.System#Management#Automation#Provider#ICmdletProviderSupportsHelp#GetHelpMaml(System.String,System.String)" />
+      <MemberSignature Language="VB.NET" Value="Function GetHelpMaml (helpItemName As String, path As String) As String Implements ICmdletProviderSupportsHelp.GetHelpMaml" />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.Management.Automation.Provider.ICmdletProviderSupportsHelp.GetHelpMaml(System.String,System.String)</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.WSMan.Management</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="helpItemName" Type="System.String" />
+        <Parameter Name="path" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="helpItemName"></param>
+        <param name="path"></param>
+        <summary>
+              This implements Get-Help for config provider custom path.
+              When user calls "Get-Help new-item" in our config provider path, this function will get called.
+            </summary>
+        <returns />
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

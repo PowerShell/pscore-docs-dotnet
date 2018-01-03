@@ -1,0 +1,147 @@
+﻿<Type Name="FileSystemContentReaderDynamicParameters" FullName="Microsoft.PowerShell.Commands.FileSystemContentReaderDynamicParameters">
+  <TypeSignature Language="C#" Value="public class FileSystemContentReaderDynamicParameters : Microsoft.PowerShell.Commands.FileSystemContentDynamicParametersBase" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit FileSystemContentReaderDynamicParameters extends Microsoft.PowerShell.Commands.FileSystemContentDynamicParametersBase" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.PowerShell.Commands.FileSystemContentReaderDynamicParameters" />
+  <TypeSignature Language="VB.NET" Value="Public Class FileSystemContentReaderDynamicParameters&#xA;Inherits FileSystemContentDynamicParametersBase" />
+  <TypeSignature Language="F#" Value="type FileSystemContentReaderDynamicParameters = class&#xA;    inherit FileSystemContentDynamicParametersBase" />
+  <AssemblyInfo>
+    <AssemblyName>System.Management.Automation</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Microsoft.PowerShell.Commands.FileSystemContentDynamicParametersBase</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Defines the dynamic parameters used by the get-content cmdlet.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public FileSystemContentReaderDynamicParameters ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.PowerShell.Commands.FileSystemContentReaderDynamicParameters.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New ()" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Delimiter">
+      <MemberSignature Language="C#" Value="public string Delimiter { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Delimiter" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.FileSystemContentReaderDynamicParameters.Delimiter" />
+      <MemberSignature Language="VB.NET" Value="Public Property Delimiter As String" />
+      <MemberSignature Language="F#" Value="member this.Delimiter : string with get, set" Usage="Microsoft.PowerShell.Commands.FileSystemContentReaderDynamicParameters.Delimiter" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets the delimiter to use when reading the file.  Custom delimiters
+            may not be used when the file is opened with a "Byte" encoding.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DelimiterSpecified">
+      <MemberSignature Language="C#" Value="public bool DelimiterSpecified { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool DelimiterSpecified" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.FileSystemContentReaderDynamicParameters.DelimiterSpecified" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property DelimiterSpecified As Boolean" />
+      <MemberSignature Language="F#" Value="member this.DelimiterSpecified : bool" Usage="Microsoft.PowerShell.Commands.FileSystemContentReaderDynamicParameters.DelimiterSpecified" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the status of the delimiter parameter.  Returns true
+            if the delimiter was explicitly specified by the user, false otherwise.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Raw">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.SwitchParameter Raw { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Management.Automation.SwitchParameter Raw" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.FileSystemContentReaderDynamicParameters.Raw" />
+      <MemberSignature Language="VB.NET" Value="Public Property Raw As SwitchParameter" />
+      <MemberSignature Language="F#" Value="member this.Raw : System.Management.Automation.SwitchParameter with get, set" Usage="Microsoft.PowerShell.Commands.FileSystemContentReaderDynamicParameters.Raw" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.SwitchParameter</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            When the Raw switch is present, we don't do any breaks on newlines,
+            and only emit one object to the pipeline: all of the content.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Wait">
+      <MemberSignature Language="C#" Value="public System.Management.Automation.SwitchParameter Wait { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Management.Automation.SwitchParameter Wait" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.PowerShell.Commands.FileSystemContentReaderDynamicParameters.Wait" />
+      <MemberSignature Language="VB.NET" Value="Public Property Wait As SwitchParameter" />
+      <MemberSignature Language="F#" Value="member this.Wait : System.Management.Automation.SwitchParameter with get, set" Usage="Microsoft.PowerShell.Commands.FileSystemContentReaderDynamicParameters.Wait" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Automation.Parameter</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.SwitchParameter</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets the Wait flag.  The wait flag determines if we want
+            the read-content call to poll (and wait) for changes to the file,
+            rather than exit after the content has been read.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

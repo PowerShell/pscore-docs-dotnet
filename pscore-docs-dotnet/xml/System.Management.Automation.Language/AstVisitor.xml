@@ -1,0 +1,1287 @@
+﻿<Type Name="AstVisitor" FullName="System.Management.Automation.Language.AstVisitor">
+  <TypeSignature Language="C#" Value="public abstract class AstVisitor" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit AstVisitor extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Management.Automation.Language.AstVisitor" />
+  <TypeSignature Language="VB.NET" Value="Public MustInherit Class AstVisitor" />
+  <TypeSignature Language="F#" Value="type AstVisitor = class" />
+  <AssemblyInfo>
+    <AssemblyName>System.Management.Automation</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            AstVisitor is used for basic scenarios requiring traversal of the nodes in an Ast.
+            An implementation of AstVisitor does not explicitly traverse the Ast, instead,
+            the engine traverses all nodes in the Ast and calls the appropriate method on each node.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected AstVisitor ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Language.AstVisitor.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Protected Sub New ()" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="VisitArrayExpression">
+      <MemberSignature Language="C#" Value="public virtual System.Management.Automation.Language.AstVisitAction VisitArrayExpression (System.Management.Automation.Language.ArrayExpressionAst arrayExpressionAst);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance valuetype System.Management.Automation.Language.AstVisitAction VisitArrayExpression(class System.Management.Automation.Language.ArrayExpressionAst arrayExpressionAst) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Language.AstVisitor.VisitArrayExpression(System.Management.Automation.Language.ArrayExpressionAst)" />
+      <MemberSignature Language="F#" Value="abstract member VisitArrayExpression : System.Management.Automation.Language.ArrayExpressionAst -&gt; System.Management.Automation.Language.AstVisitAction&#xA;override this.VisitArrayExpression : System.Management.Automation.Language.ArrayExpressionAst -&gt; System.Management.Automation.Language.AstVisitAction" Usage="astVisitor.VisitArrayExpression arrayExpressionAst" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.Language.AstVisitAction</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="arrayExpressionAst" Type="System.Management.Automation.Language.ArrayExpressionAst" />
+      </Parameters>
+      <Docs>
+        <param name="arrayExpressionAst">To be added.</param>
+        <summary />
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="VisitArrayLiteral">
+      <MemberSignature Language="C#" Value="public virtual System.Management.Automation.Language.AstVisitAction VisitArrayLiteral (System.Management.Automation.Language.ArrayLiteralAst arrayLiteralAst);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance valuetype System.Management.Automation.Language.AstVisitAction VisitArrayLiteral(class System.Management.Automation.Language.ArrayLiteralAst arrayLiteralAst) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Language.AstVisitor.VisitArrayLiteral(System.Management.Automation.Language.ArrayLiteralAst)" />
+      <MemberSignature Language="F#" Value="abstract member VisitArrayLiteral : System.Management.Automation.Language.ArrayLiteralAst -&gt; System.Management.Automation.Language.AstVisitAction&#xA;override this.VisitArrayLiteral : System.Management.Automation.Language.ArrayLiteralAst -&gt; System.Management.Automation.Language.AstVisitAction" Usage="astVisitor.VisitArrayLiteral arrayLiteralAst" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.Language.AstVisitAction</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="arrayLiteralAst" Type="System.Management.Automation.Language.ArrayLiteralAst" />
+      </Parameters>
+      <Docs>
+        <param name="arrayLiteralAst">To be added.</param>
+        <summary />
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="VisitAssignmentStatement">
+      <MemberSignature Language="C#" Value="public virtual System.Management.Automation.Language.AstVisitAction VisitAssignmentStatement (System.Management.Automation.Language.AssignmentStatementAst assignmentStatementAst);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance valuetype System.Management.Automation.Language.AstVisitAction VisitAssignmentStatement(class System.Management.Automation.Language.AssignmentStatementAst assignmentStatementAst) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Language.AstVisitor.VisitAssignmentStatement(System.Management.Automation.Language.AssignmentStatementAst)" />
+      <MemberSignature Language="F#" Value="abstract member VisitAssignmentStatement : System.Management.Automation.Language.AssignmentStatementAst -&gt; System.Management.Automation.Language.AstVisitAction&#xA;override this.VisitAssignmentStatement : System.Management.Automation.Language.AssignmentStatementAst -&gt; System.Management.Automation.Language.AstVisitAction" Usage="astVisitor.VisitAssignmentStatement assignmentStatementAst" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.Language.AstVisitAction</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="assignmentStatementAst" Type="System.Management.Automation.Language.AssignmentStatementAst" />
+      </Parameters>
+      <Docs>
+        <param name="assignmentStatementAst">To be added.</param>
+        <summary />
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="VisitAttribute">
+      <MemberSignature Language="C#" Value="public virtual System.Management.Automation.Language.AstVisitAction VisitAttribute (System.Management.Automation.Language.AttributeAst attributeAst);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance valuetype System.Management.Automation.Language.AstVisitAction VisitAttribute(class System.Management.Automation.Language.AttributeAst attributeAst) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Language.AstVisitor.VisitAttribute(System.Management.Automation.Language.AttributeAst)" />
+      <MemberSignature Language="F#" Value="abstract member VisitAttribute : System.Management.Automation.Language.AttributeAst -&gt; System.Management.Automation.Language.AstVisitAction&#xA;override this.VisitAttribute : System.Management.Automation.Language.AttributeAst -&gt; System.Management.Automation.Language.AstVisitAction" Usage="astVisitor.VisitAttribute attributeAst" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.Language.AstVisitAction</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="attributeAst" Type="System.Management.Automation.Language.AttributeAst" />
+      </Parameters>
+      <Docs>
+        <param name="attributeAst">To be added.</param>
+        <summary />
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="VisitAttributedExpression">
+      <MemberSignature Language="C#" Value="public virtual System.Management.Automation.Language.AstVisitAction VisitAttributedExpression (System.Management.Automation.Language.AttributedExpressionAst attributedExpressionAst);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance valuetype System.Management.Automation.Language.AstVisitAction VisitAttributedExpression(class System.Management.Automation.Language.AttributedExpressionAst attributedExpressionAst) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Language.AstVisitor.VisitAttributedExpression(System.Management.Automation.Language.AttributedExpressionAst)" />
+      <MemberSignature Language="F#" Value="abstract member VisitAttributedExpression : System.Management.Automation.Language.AttributedExpressionAst -&gt; System.Management.Automation.Language.AstVisitAction&#xA;override this.VisitAttributedExpression : System.Management.Automation.Language.AttributedExpressionAst -&gt; System.Management.Automation.Language.AstVisitAction" Usage="astVisitor.VisitAttributedExpression attributedExpressionAst" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.Language.AstVisitAction</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="attributedExpressionAst" Type="System.Management.Automation.Language.AttributedExpressionAst" />
+      </Parameters>
+      <Docs>
+        <param name="attributedExpressionAst">To be added.</param>
+        <summary />
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="VisitBinaryExpression">
+      <MemberSignature Language="C#" Value="public virtual System.Management.Automation.Language.AstVisitAction VisitBinaryExpression (System.Management.Automation.Language.BinaryExpressionAst binaryExpressionAst);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance valuetype System.Management.Automation.Language.AstVisitAction VisitBinaryExpression(class System.Management.Automation.Language.BinaryExpressionAst binaryExpressionAst) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Language.AstVisitor.VisitBinaryExpression(System.Management.Automation.Language.BinaryExpressionAst)" />
+      <MemberSignature Language="F#" Value="abstract member VisitBinaryExpression : System.Management.Automation.Language.BinaryExpressionAst -&gt; System.Management.Automation.Language.AstVisitAction&#xA;override this.VisitBinaryExpression : System.Management.Automation.Language.BinaryExpressionAst -&gt; System.Management.Automation.Language.AstVisitAction" Usage="astVisitor.VisitBinaryExpression binaryExpressionAst" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.Language.AstVisitAction</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="binaryExpressionAst" Type="System.Management.Automation.Language.BinaryExpressionAst" />
+      </Parameters>
+      <Docs>
+        <param name="binaryExpressionAst">To be added.</param>
+        <summary />
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="VisitBlockStatement">
+      <MemberSignature Language="C#" Value="public virtual System.Management.Automation.Language.AstVisitAction VisitBlockStatement (System.Management.Automation.Language.BlockStatementAst blockStatementAst);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance valuetype System.Management.Automation.Language.AstVisitAction VisitBlockStatement(class System.Management.Automation.Language.BlockStatementAst blockStatementAst) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Language.AstVisitor.VisitBlockStatement(System.Management.Automation.Language.BlockStatementAst)" />
+      <MemberSignature Language="F#" Value="abstract member VisitBlockStatement : System.Management.Automation.Language.BlockStatementAst -&gt; System.Management.Automation.Language.AstVisitAction&#xA;override this.VisitBlockStatement : System.Management.Automation.Language.BlockStatementAst -&gt; System.Management.Automation.Language.AstVisitAction" Usage="astVisitor.VisitBlockStatement blockStatementAst" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.Language.AstVisitAction</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="blockStatementAst" Type="System.Management.Automation.Language.BlockStatementAst" />
+      </Parameters>
+      <Docs>
+        <param name="blockStatementAst">To be added.</param>
+        <summary />
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="VisitBreakStatement">
+      <MemberSignature Language="C#" Value="public virtual System.Management.Automation.Language.AstVisitAction VisitBreakStatement (System.Management.Automation.Language.BreakStatementAst breakStatementAst);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance valuetype System.Management.Automation.Language.AstVisitAction VisitBreakStatement(class System.Management.Automation.Language.BreakStatementAst breakStatementAst) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Language.AstVisitor.VisitBreakStatement(System.Management.Automation.Language.BreakStatementAst)" />
+      <MemberSignature Language="F#" Value="abstract member VisitBreakStatement : System.Management.Automation.Language.BreakStatementAst -&gt; System.Management.Automation.Language.AstVisitAction&#xA;override this.VisitBreakStatement : System.Management.Automation.Language.BreakStatementAst -&gt; System.Management.Automation.Language.AstVisitAction" Usage="astVisitor.VisitBreakStatement breakStatementAst" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.Language.AstVisitAction</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="breakStatementAst" Type="System.Management.Automation.Language.BreakStatementAst" />
+      </Parameters>
+      <Docs>
+        <param name="breakStatementAst">To be added.</param>
+        <summary />
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="VisitCatchClause">
+      <MemberSignature Language="C#" Value="public virtual System.Management.Automation.Language.AstVisitAction VisitCatchClause (System.Management.Automation.Language.CatchClauseAst catchClauseAst);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance valuetype System.Management.Automation.Language.AstVisitAction VisitCatchClause(class System.Management.Automation.Language.CatchClauseAst catchClauseAst) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Language.AstVisitor.VisitCatchClause(System.Management.Automation.Language.CatchClauseAst)" />
+      <MemberSignature Language="F#" Value="abstract member VisitCatchClause : System.Management.Automation.Language.CatchClauseAst -&gt; System.Management.Automation.Language.AstVisitAction&#xA;override this.VisitCatchClause : System.Management.Automation.Language.CatchClauseAst -&gt; System.Management.Automation.Language.AstVisitAction" Usage="astVisitor.VisitCatchClause catchClauseAst" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.Language.AstVisitAction</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="catchClauseAst" Type="System.Management.Automation.Language.CatchClauseAst" />
+      </Parameters>
+      <Docs>
+        <param name="catchClauseAst">To be added.</param>
+        <summary />
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="VisitCommand">
+      <MemberSignature Language="C#" Value="public virtual System.Management.Automation.Language.AstVisitAction VisitCommand (System.Management.Automation.Language.CommandAst commandAst);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance valuetype System.Management.Automation.Language.AstVisitAction VisitCommand(class System.Management.Automation.Language.CommandAst commandAst) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Language.AstVisitor.VisitCommand(System.Management.Automation.Language.CommandAst)" />
+      <MemberSignature Language="F#" Value="abstract member VisitCommand : System.Management.Automation.Language.CommandAst -&gt; System.Management.Automation.Language.AstVisitAction&#xA;override this.VisitCommand : System.Management.Automation.Language.CommandAst -&gt; System.Management.Automation.Language.AstVisitAction" Usage="astVisitor.VisitCommand commandAst" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.Language.AstVisitAction</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="commandAst" Type="System.Management.Automation.Language.CommandAst" />
+      </Parameters>
+      <Docs>
+        <param name="commandAst">To be added.</param>
+        <summary />
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="VisitCommandExpression">
+      <MemberSignature Language="C#" Value="public virtual System.Management.Automation.Language.AstVisitAction VisitCommandExpression (System.Management.Automation.Language.CommandExpressionAst commandExpressionAst);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance valuetype System.Management.Automation.Language.AstVisitAction VisitCommandExpression(class System.Management.Automation.Language.CommandExpressionAst commandExpressionAst) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Language.AstVisitor.VisitCommandExpression(System.Management.Automation.Language.CommandExpressionAst)" />
+      <MemberSignature Language="F#" Value="abstract member VisitCommandExpression : System.Management.Automation.Language.CommandExpressionAst -&gt; System.Management.Automation.Language.AstVisitAction&#xA;override this.VisitCommandExpression : System.Management.Automation.Language.CommandExpressionAst -&gt; System.Management.Automation.Language.AstVisitAction" Usage="astVisitor.VisitCommandExpression commandExpressionAst" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.Language.AstVisitAction</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="commandExpressionAst" Type="System.Management.Automation.Language.CommandExpressionAst" />
+      </Parameters>
+      <Docs>
+        <param name="commandExpressionAst">To be added.</param>
+        <summary />
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="VisitCommandParameter">
+      <MemberSignature Language="C#" Value="public virtual System.Management.Automation.Language.AstVisitAction VisitCommandParameter (System.Management.Automation.Language.CommandParameterAst commandParameterAst);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance valuetype System.Management.Automation.Language.AstVisitAction VisitCommandParameter(class System.Management.Automation.Language.CommandParameterAst commandParameterAst) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Language.AstVisitor.VisitCommandParameter(System.Management.Automation.Language.CommandParameterAst)" />
+      <MemberSignature Language="F#" Value="abstract member VisitCommandParameter : System.Management.Automation.Language.CommandParameterAst -&gt; System.Management.Automation.Language.AstVisitAction&#xA;override this.VisitCommandParameter : System.Management.Automation.Language.CommandParameterAst -&gt; System.Management.Automation.Language.AstVisitAction" Usage="astVisitor.VisitCommandParameter commandParameterAst" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.Language.AstVisitAction</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="commandParameterAst" Type="System.Management.Automation.Language.CommandParameterAst" />
+      </Parameters>
+      <Docs>
+        <param name="commandParameterAst">To be added.</param>
+        <summary />
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="VisitConstantExpression">
+      <MemberSignature Language="C#" Value="public virtual System.Management.Automation.Language.AstVisitAction VisitConstantExpression (System.Management.Automation.Language.ConstantExpressionAst constantExpressionAst);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance valuetype System.Management.Automation.Language.AstVisitAction VisitConstantExpression(class System.Management.Automation.Language.ConstantExpressionAst constantExpressionAst) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Language.AstVisitor.VisitConstantExpression(System.Management.Automation.Language.ConstantExpressionAst)" />
+      <MemberSignature Language="F#" Value="abstract member VisitConstantExpression : System.Management.Automation.Language.ConstantExpressionAst -&gt; System.Management.Automation.Language.AstVisitAction&#xA;override this.VisitConstantExpression : System.Management.Automation.Language.ConstantExpressionAst -&gt; System.Management.Automation.Language.AstVisitAction" Usage="astVisitor.VisitConstantExpression constantExpressionAst" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.Language.AstVisitAction</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="constantExpressionAst" Type="System.Management.Automation.Language.ConstantExpressionAst" />
+      </Parameters>
+      <Docs>
+        <param name="constantExpressionAst">To be added.</param>
+        <summary />
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="VisitContinueStatement">
+      <MemberSignature Language="C#" Value="public virtual System.Management.Automation.Language.AstVisitAction VisitContinueStatement (System.Management.Automation.Language.ContinueStatementAst continueStatementAst);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance valuetype System.Management.Automation.Language.AstVisitAction VisitContinueStatement(class System.Management.Automation.Language.ContinueStatementAst continueStatementAst) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Language.AstVisitor.VisitContinueStatement(System.Management.Automation.Language.ContinueStatementAst)" />
+      <MemberSignature Language="F#" Value="abstract member VisitContinueStatement : System.Management.Automation.Language.ContinueStatementAst -&gt; System.Management.Automation.Language.AstVisitAction&#xA;override this.VisitContinueStatement : System.Management.Automation.Language.ContinueStatementAst -&gt; System.Management.Automation.Language.AstVisitAction" Usage="astVisitor.VisitContinueStatement continueStatementAst" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.Language.AstVisitAction</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="continueStatementAst" Type="System.Management.Automation.Language.ContinueStatementAst" />
+      </Parameters>
+      <Docs>
+        <param name="continueStatementAst">To be added.</param>
+        <summary />
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="VisitConvertExpression">
+      <MemberSignature Language="C#" Value="public virtual System.Management.Automation.Language.AstVisitAction VisitConvertExpression (System.Management.Automation.Language.ConvertExpressionAst convertExpressionAst);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance valuetype System.Management.Automation.Language.AstVisitAction VisitConvertExpression(class System.Management.Automation.Language.ConvertExpressionAst convertExpressionAst) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Language.AstVisitor.VisitConvertExpression(System.Management.Automation.Language.ConvertExpressionAst)" />
+      <MemberSignature Language="F#" Value="abstract member VisitConvertExpression : System.Management.Automation.Language.ConvertExpressionAst -&gt; System.Management.Automation.Language.AstVisitAction&#xA;override this.VisitConvertExpression : System.Management.Automation.Language.ConvertExpressionAst -&gt; System.Management.Automation.Language.AstVisitAction" Usage="astVisitor.VisitConvertExpression convertExpressionAst" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.Language.AstVisitAction</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="convertExpressionAst" Type="System.Management.Automation.Language.ConvertExpressionAst" />
+      </Parameters>
+      <Docs>
+        <param name="convertExpressionAst">To be added.</param>
+        <summary />
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="VisitDataStatement">
+      <MemberSignature Language="C#" Value="public virtual System.Management.Automation.Language.AstVisitAction VisitDataStatement (System.Management.Automation.Language.DataStatementAst dataStatementAst);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance valuetype System.Management.Automation.Language.AstVisitAction VisitDataStatement(class System.Management.Automation.Language.DataStatementAst dataStatementAst) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Language.AstVisitor.VisitDataStatement(System.Management.Automation.Language.DataStatementAst)" />
+      <MemberSignature Language="F#" Value="abstract member VisitDataStatement : System.Management.Automation.Language.DataStatementAst -&gt; System.Management.Automation.Language.AstVisitAction&#xA;override this.VisitDataStatement : System.Management.Automation.Language.DataStatementAst -&gt; System.Management.Automation.Language.AstVisitAction" Usage="astVisitor.VisitDataStatement dataStatementAst" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.Language.AstVisitAction</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dataStatementAst" Type="System.Management.Automation.Language.DataStatementAst" />
+      </Parameters>
+      <Docs>
+        <param name="dataStatementAst">To be added.</param>
+        <summary />
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="VisitDoUntilStatement">
+      <MemberSignature Language="C#" Value="public virtual System.Management.Automation.Language.AstVisitAction VisitDoUntilStatement (System.Management.Automation.Language.DoUntilStatementAst doUntilStatementAst);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance valuetype System.Management.Automation.Language.AstVisitAction VisitDoUntilStatement(class System.Management.Automation.Language.DoUntilStatementAst doUntilStatementAst) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Language.AstVisitor.VisitDoUntilStatement(System.Management.Automation.Language.DoUntilStatementAst)" />
+      <MemberSignature Language="F#" Value="abstract member VisitDoUntilStatement : System.Management.Automation.Language.DoUntilStatementAst -&gt; System.Management.Automation.Language.AstVisitAction&#xA;override this.VisitDoUntilStatement : System.Management.Automation.Language.DoUntilStatementAst -&gt; System.Management.Automation.Language.AstVisitAction" Usage="astVisitor.VisitDoUntilStatement doUntilStatementAst" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.Language.AstVisitAction</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="doUntilStatementAst" Type="System.Management.Automation.Language.DoUntilStatementAst" />
+      </Parameters>
+      <Docs>
+        <param name="doUntilStatementAst">To be added.</param>
+        <summary />
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="VisitDoWhileStatement">
+      <MemberSignature Language="C#" Value="public virtual System.Management.Automation.Language.AstVisitAction VisitDoWhileStatement (System.Management.Automation.Language.DoWhileStatementAst doWhileStatementAst);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance valuetype System.Management.Automation.Language.AstVisitAction VisitDoWhileStatement(class System.Management.Automation.Language.DoWhileStatementAst doWhileStatementAst) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Language.AstVisitor.VisitDoWhileStatement(System.Management.Automation.Language.DoWhileStatementAst)" />
+      <MemberSignature Language="F#" Value="abstract member VisitDoWhileStatement : System.Management.Automation.Language.DoWhileStatementAst -&gt; System.Management.Automation.Language.AstVisitAction&#xA;override this.VisitDoWhileStatement : System.Management.Automation.Language.DoWhileStatementAst -&gt; System.Management.Automation.Language.AstVisitAction" Usage="astVisitor.VisitDoWhileStatement doWhileStatementAst" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.Language.AstVisitAction</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="doWhileStatementAst" Type="System.Management.Automation.Language.DoWhileStatementAst" />
+      </Parameters>
+      <Docs>
+        <param name="doWhileStatementAst">To be added.</param>
+        <summary />
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="VisitErrorExpression">
+      <MemberSignature Language="C#" Value="public virtual System.Management.Automation.Language.AstVisitAction VisitErrorExpression (System.Management.Automation.Language.ErrorExpressionAst errorExpressionAst);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance valuetype System.Management.Automation.Language.AstVisitAction VisitErrorExpression(class System.Management.Automation.Language.ErrorExpressionAst errorExpressionAst) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Language.AstVisitor.VisitErrorExpression(System.Management.Automation.Language.ErrorExpressionAst)" />
+      <MemberSignature Language="F#" Value="abstract member VisitErrorExpression : System.Management.Automation.Language.ErrorExpressionAst -&gt; System.Management.Automation.Language.AstVisitAction&#xA;override this.VisitErrorExpression : System.Management.Automation.Language.ErrorExpressionAst -&gt; System.Management.Automation.Language.AstVisitAction" Usage="astVisitor.VisitErrorExpression errorExpressionAst" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.Language.AstVisitAction</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="errorExpressionAst" Type="System.Management.Automation.Language.ErrorExpressionAst" />
+      </Parameters>
+      <Docs>
+        <param name="errorExpressionAst">To be added.</param>
+        <summary />
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="VisitErrorStatement">
+      <MemberSignature Language="C#" Value="public virtual System.Management.Automation.Language.AstVisitAction VisitErrorStatement (System.Management.Automation.Language.ErrorStatementAst errorStatementAst);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance valuetype System.Management.Automation.Language.AstVisitAction VisitErrorStatement(class System.Management.Automation.Language.ErrorStatementAst errorStatementAst) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Language.AstVisitor.VisitErrorStatement(System.Management.Automation.Language.ErrorStatementAst)" />
+      <MemberSignature Language="F#" Value="abstract member VisitErrorStatement : System.Management.Automation.Language.ErrorStatementAst -&gt; System.Management.Automation.Language.AstVisitAction&#xA;override this.VisitErrorStatement : System.Management.Automation.Language.ErrorStatementAst -&gt; System.Management.Automation.Language.AstVisitAction" Usage="astVisitor.VisitErrorStatement errorStatementAst" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.Language.AstVisitAction</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="errorStatementAst" Type="System.Management.Automation.Language.ErrorStatementAst" />
+      </Parameters>
+      <Docs>
+        <param name="errorStatementAst">To be added.</param>
+        <summary />
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="VisitExitStatement">
+      <MemberSignature Language="C#" Value="public virtual System.Management.Automation.Language.AstVisitAction VisitExitStatement (System.Management.Automation.Language.ExitStatementAst exitStatementAst);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance valuetype System.Management.Automation.Language.AstVisitAction VisitExitStatement(class System.Management.Automation.Language.ExitStatementAst exitStatementAst) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Language.AstVisitor.VisitExitStatement(System.Management.Automation.Language.ExitStatementAst)" />
+      <MemberSignature Language="F#" Value="abstract member VisitExitStatement : System.Management.Automation.Language.ExitStatementAst -&gt; System.Management.Automation.Language.AstVisitAction&#xA;override this.VisitExitStatement : System.Management.Automation.Language.ExitStatementAst -&gt; System.Management.Automation.Language.AstVisitAction" Usage="astVisitor.VisitExitStatement exitStatementAst" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.Language.AstVisitAction</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="exitStatementAst" Type="System.Management.Automation.Language.ExitStatementAst" />
+      </Parameters>
+      <Docs>
+        <param name="exitStatementAst">To be added.</param>
+        <summary />
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="VisitExpandableStringExpression">
+      <MemberSignature Language="C#" Value="public virtual System.Management.Automation.Language.AstVisitAction VisitExpandableStringExpression (System.Management.Automation.Language.ExpandableStringExpressionAst expandableStringExpressionAst);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance valuetype System.Management.Automation.Language.AstVisitAction VisitExpandableStringExpression(class System.Management.Automation.Language.ExpandableStringExpressionAst expandableStringExpressionAst) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Language.AstVisitor.VisitExpandableStringExpression(System.Management.Automation.Language.ExpandableStringExpressionAst)" />
+      <MemberSignature Language="F#" Value="abstract member VisitExpandableStringExpression : System.Management.Automation.Language.ExpandableStringExpressionAst -&gt; System.Management.Automation.Language.AstVisitAction&#xA;override this.VisitExpandableStringExpression : System.Management.Automation.Language.ExpandableStringExpressionAst -&gt; System.Management.Automation.Language.AstVisitAction" Usage="astVisitor.VisitExpandableStringExpression expandableStringExpressionAst" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.Language.AstVisitAction</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="expandableStringExpressionAst" Type="System.Management.Automation.Language.ExpandableStringExpressionAst" />
+      </Parameters>
+      <Docs>
+        <param name="expandableStringExpressionAst">To be added.</param>
+        <summary />
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="VisitFileRedirection">
+      <MemberSignature Language="C#" Value="public virtual System.Management.Automation.Language.AstVisitAction VisitFileRedirection (System.Management.Automation.Language.FileRedirectionAst redirectionAst);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance valuetype System.Management.Automation.Language.AstVisitAction VisitFileRedirection(class System.Management.Automation.Language.FileRedirectionAst redirectionAst) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Language.AstVisitor.VisitFileRedirection(System.Management.Automation.Language.FileRedirectionAst)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function VisitFileRedirection (redirectionAst As FileRedirectionAst) As AstVisitAction" />
+      <MemberSignature Language="F#" Value="abstract member VisitFileRedirection : System.Management.Automation.Language.FileRedirectionAst -&gt; System.Management.Automation.Language.AstVisitAction&#xA;override this.VisitFileRedirection : System.Management.Automation.Language.FileRedirectionAst -&gt; System.Management.Automation.Language.AstVisitAction" Usage="astVisitor.VisitFileRedirection redirectionAst" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.Language.AstVisitAction</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="redirectionAst" Type="System.Management.Automation.Language.FileRedirectionAst" />
+      </Parameters>
+      <Docs>
+        <param name="redirectionAst">To be added.</param>
+        <summary />
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="VisitForEachStatement">
+      <MemberSignature Language="C#" Value="public virtual System.Management.Automation.Language.AstVisitAction VisitForEachStatement (System.Management.Automation.Language.ForEachStatementAst forEachStatementAst);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance valuetype System.Management.Automation.Language.AstVisitAction VisitForEachStatement(class System.Management.Automation.Language.ForEachStatementAst forEachStatementAst) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Language.AstVisitor.VisitForEachStatement(System.Management.Automation.Language.ForEachStatementAst)" />
+      <MemberSignature Language="F#" Value="abstract member VisitForEachStatement : System.Management.Automation.Language.ForEachStatementAst -&gt; System.Management.Automation.Language.AstVisitAction&#xA;override this.VisitForEachStatement : System.Management.Automation.Language.ForEachStatementAst -&gt; System.Management.Automation.Language.AstVisitAction" Usage="astVisitor.VisitForEachStatement forEachStatementAst" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.Language.AstVisitAction</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="forEachStatementAst" Type="System.Management.Automation.Language.ForEachStatementAst" />
+      </Parameters>
+      <Docs>
+        <param name="forEachStatementAst">To be added.</param>
+        <summary />
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="VisitForStatement">
+      <MemberSignature Language="C#" Value="public virtual System.Management.Automation.Language.AstVisitAction VisitForStatement (System.Management.Automation.Language.ForStatementAst forStatementAst);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance valuetype System.Management.Automation.Language.AstVisitAction VisitForStatement(class System.Management.Automation.Language.ForStatementAst forStatementAst) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Language.AstVisitor.VisitForStatement(System.Management.Automation.Language.ForStatementAst)" />
+      <MemberSignature Language="F#" Value="abstract member VisitForStatement : System.Management.Automation.Language.ForStatementAst -&gt; System.Management.Automation.Language.AstVisitAction&#xA;override this.VisitForStatement : System.Management.Automation.Language.ForStatementAst -&gt; System.Management.Automation.Language.AstVisitAction" Usage="astVisitor.VisitForStatement forStatementAst" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.Language.AstVisitAction</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="forStatementAst" Type="System.Management.Automation.Language.ForStatementAst" />
+      </Parameters>
+      <Docs>
+        <param name="forStatementAst">To be added.</param>
+        <summary />
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="VisitFunctionDefinition">
+      <MemberSignature Language="C#" Value="public virtual System.Management.Automation.Language.AstVisitAction VisitFunctionDefinition (System.Management.Automation.Language.FunctionDefinitionAst functionDefinitionAst);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance valuetype System.Management.Automation.Language.AstVisitAction VisitFunctionDefinition(class System.Management.Automation.Language.FunctionDefinitionAst functionDefinitionAst) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Language.AstVisitor.VisitFunctionDefinition(System.Management.Automation.Language.FunctionDefinitionAst)" />
+      <MemberSignature Language="F#" Value="abstract member VisitFunctionDefinition : System.Management.Automation.Language.FunctionDefinitionAst -&gt; System.Management.Automation.Language.AstVisitAction&#xA;override this.VisitFunctionDefinition : System.Management.Automation.Language.FunctionDefinitionAst -&gt; System.Management.Automation.Language.AstVisitAction" Usage="astVisitor.VisitFunctionDefinition functionDefinitionAst" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.Language.AstVisitAction</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="functionDefinitionAst" Type="System.Management.Automation.Language.FunctionDefinitionAst" />
+      </Parameters>
+      <Docs>
+        <param name="functionDefinitionAst">To be added.</param>
+        <summary />
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="VisitHashtable">
+      <MemberSignature Language="C#" Value="public virtual System.Management.Automation.Language.AstVisitAction VisitHashtable (System.Management.Automation.Language.HashtableAst hashtableAst);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance valuetype System.Management.Automation.Language.AstVisitAction VisitHashtable(class System.Management.Automation.Language.HashtableAst hashtableAst) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Language.AstVisitor.VisitHashtable(System.Management.Automation.Language.HashtableAst)" />
+      <MemberSignature Language="F#" Value="abstract member VisitHashtable : System.Management.Automation.Language.HashtableAst -&gt; System.Management.Automation.Language.AstVisitAction&#xA;override this.VisitHashtable : System.Management.Automation.Language.HashtableAst -&gt; System.Management.Automation.Language.AstVisitAction" Usage="astVisitor.VisitHashtable hashtableAst" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.Language.AstVisitAction</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="hashtableAst" Type="System.Management.Automation.Language.HashtableAst" />
+      </Parameters>
+      <Docs>
+        <param name="hashtableAst">To be added.</param>
+        <summary />
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="VisitIfStatement">
+      <MemberSignature Language="C#" Value="public virtual System.Management.Automation.Language.AstVisitAction VisitIfStatement (System.Management.Automation.Language.IfStatementAst ifStmtAst);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance valuetype System.Management.Automation.Language.AstVisitAction VisitIfStatement(class System.Management.Automation.Language.IfStatementAst ifStmtAst) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Language.AstVisitor.VisitIfStatement(System.Management.Automation.Language.IfStatementAst)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function VisitIfStatement (ifStmtAst As IfStatementAst) As AstVisitAction" />
+      <MemberSignature Language="F#" Value="abstract member VisitIfStatement : System.Management.Automation.Language.IfStatementAst -&gt; System.Management.Automation.Language.AstVisitAction&#xA;override this.VisitIfStatement : System.Management.Automation.Language.IfStatementAst -&gt; System.Management.Automation.Language.AstVisitAction" Usage="astVisitor.VisitIfStatement ifStmtAst" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.Language.AstVisitAction</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="ifStmtAst" Type="System.Management.Automation.Language.IfStatementAst" />
+      </Parameters>
+      <Docs>
+        <param name="ifStmtAst">To be added.</param>
+        <summary />
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="VisitIndexExpression">
+      <MemberSignature Language="C#" Value="public virtual System.Management.Automation.Language.AstVisitAction VisitIndexExpression (System.Management.Automation.Language.IndexExpressionAst indexExpressionAst);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance valuetype System.Management.Automation.Language.AstVisitAction VisitIndexExpression(class System.Management.Automation.Language.IndexExpressionAst indexExpressionAst) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Language.AstVisitor.VisitIndexExpression(System.Management.Automation.Language.IndexExpressionAst)" />
+      <MemberSignature Language="F#" Value="abstract member VisitIndexExpression : System.Management.Automation.Language.IndexExpressionAst -&gt; System.Management.Automation.Language.AstVisitAction&#xA;override this.VisitIndexExpression : System.Management.Automation.Language.IndexExpressionAst -&gt; System.Management.Automation.Language.AstVisitAction" Usage="astVisitor.VisitIndexExpression indexExpressionAst" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.Language.AstVisitAction</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="indexExpressionAst" Type="System.Management.Automation.Language.IndexExpressionAst" />
+      </Parameters>
+      <Docs>
+        <param name="indexExpressionAst">To be added.</param>
+        <summary />
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="VisitInvokeMemberExpression">
+      <MemberSignature Language="C#" Value="public virtual System.Management.Automation.Language.AstVisitAction VisitInvokeMemberExpression (System.Management.Automation.Language.InvokeMemberExpressionAst methodCallAst);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance valuetype System.Management.Automation.Language.AstVisitAction VisitInvokeMemberExpression(class System.Management.Automation.Language.InvokeMemberExpressionAst methodCallAst) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Language.AstVisitor.VisitInvokeMemberExpression(System.Management.Automation.Language.InvokeMemberExpressionAst)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function VisitInvokeMemberExpression (methodCallAst As InvokeMemberExpressionAst) As AstVisitAction" />
+      <MemberSignature Language="F#" Value="abstract member VisitInvokeMemberExpression : System.Management.Automation.Language.InvokeMemberExpressionAst -&gt; System.Management.Automation.Language.AstVisitAction&#xA;override this.VisitInvokeMemberExpression : System.Management.Automation.Language.InvokeMemberExpressionAst -&gt; System.Management.Automation.Language.AstVisitAction" Usage="astVisitor.VisitInvokeMemberExpression methodCallAst" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.Language.AstVisitAction</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="methodCallAst" Type="System.Management.Automation.Language.InvokeMemberExpressionAst" />
+      </Parameters>
+      <Docs>
+        <param name="methodCallAst">To be added.</param>
+        <summary />
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="VisitMemberExpression">
+      <MemberSignature Language="C#" Value="public virtual System.Management.Automation.Language.AstVisitAction VisitMemberExpression (System.Management.Automation.Language.MemberExpressionAst memberExpressionAst);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance valuetype System.Management.Automation.Language.AstVisitAction VisitMemberExpression(class System.Management.Automation.Language.MemberExpressionAst memberExpressionAst) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Language.AstVisitor.VisitMemberExpression(System.Management.Automation.Language.MemberExpressionAst)" />
+      <MemberSignature Language="F#" Value="abstract member VisitMemberExpression : System.Management.Automation.Language.MemberExpressionAst -&gt; System.Management.Automation.Language.AstVisitAction&#xA;override this.VisitMemberExpression : System.Management.Automation.Language.MemberExpressionAst -&gt; System.Management.Automation.Language.AstVisitAction" Usage="astVisitor.VisitMemberExpression memberExpressionAst" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.Language.AstVisitAction</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="memberExpressionAst" Type="System.Management.Automation.Language.MemberExpressionAst" />
+      </Parameters>
+      <Docs>
+        <param name="memberExpressionAst">To be added.</param>
+        <summary />
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="VisitMergingRedirection">
+      <MemberSignature Language="C#" Value="public virtual System.Management.Automation.Language.AstVisitAction VisitMergingRedirection (System.Management.Automation.Language.MergingRedirectionAst redirectionAst);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance valuetype System.Management.Automation.Language.AstVisitAction VisitMergingRedirection(class System.Management.Automation.Language.MergingRedirectionAst redirectionAst) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Language.AstVisitor.VisitMergingRedirection(System.Management.Automation.Language.MergingRedirectionAst)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function VisitMergingRedirection (redirectionAst As MergingRedirectionAst) As AstVisitAction" />
+      <MemberSignature Language="F#" Value="abstract member VisitMergingRedirection : System.Management.Automation.Language.MergingRedirectionAst -&gt; System.Management.Automation.Language.AstVisitAction&#xA;override this.VisitMergingRedirection : System.Management.Automation.Language.MergingRedirectionAst -&gt; System.Management.Automation.Language.AstVisitAction" Usage="astVisitor.VisitMergingRedirection redirectionAst" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.Language.AstVisitAction</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="redirectionAst" Type="System.Management.Automation.Language.MergingRedirectionAst" />
+      </Parameters>
+      <Docs>
+        <param name="redirectionAst">To be added.</param>
+        <summary />
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="VisitNamedAttributeArgument">
+      <MemberSignature Language="C#" Value="public virtual System.Management.Automation.Language.AstVisitAction VisitNamedAttributeArgument (System.Management.Automation.Language.NamedAttributeArgumentAst namedAttributeArgumentAst);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance valuetype System.Management.Automation.Language.AstVisitAction VisitNamedAttributeArgument(class System.Management.Automation.Language.NamedAttributeArgumentAst namedAttributeArgumentAst) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Language.AstVisitor.VisitNamedAttributeArgument(System.Management.Automation.Language.NamedAttributeArgumentAst)" />
+      <MemberSignature Language="F#" Value="abstract member VisitNamedAttributeArgument : System.Management.Automation.Language.NamedAttributeArgumentAst -&gt; System.Management.Automation.Language.AstVisitAction&#xA;override this.VisitNamedAttributeArgument : System.Management.Automation.Language.NamedAttributeArgumentAst -&gt; System.Management.Automation.Language.AstVisitAction" Usage="astVisitor.VisitNamedAttributeArgument namedAttributeArgumentAst" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.Language.AstVisitAction</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="namedAttributeArgumentAst" Type="System.Management.Automation.Language.NamedAttributeArgumentAst" />
+      </Parameters>
+      <Docs>
+        <param name="namedAttributeArgumentAst">To be added.</param>
+        <summary />
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="VisitNamedBlock">
+      <MemberSignature Language="C#" Value="public virtual System.Management.Automation.Language.AstVisitAction VisitNamedBlock (System.Management.Automation.Language.NamedBlockAst namedBlockAst);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance valuetype System.Management.Automation.Language.AstVisitAction VisitNamedBlock(class System.Management.Automation.Language.NamedBlockAst namedBlockAst) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Language.AstVisitor.VisitNamedBlock(System.Management.Automation.Language.NamedBlockAst)" />
+      <MemberSignature Language="F#" Value="abstract member VisitNamedBlock : System.Management.Automation.Language.NamedBlockAst -&gt; System.Management.Automation.Language.AstVisitAction&#xA;override this.VisitNamedBlock : System.Management.Automation.Language.NamedBlockAst -&gt; System.Management.Automation.Language.AstVisitAction" Usage="astVisitor.VisitNamedBlock namedBlockAst" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.Language.AstVisitAction</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="namedBlockAst" Type="System.Management.Automation.Language.NamedBlockAst" />
+      </Parameters>
+      <Docs>
+        <param name="namedBlockAst">To be added.</param>
+        <summary />
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="VisitParamBlock">
+      <MemberSignature Language="C#" Value="public virtual System.Management.Automation.Language.AstVisitAction VisitParamBlock (System.Management.Automation.Language.ParamBlockAst paramBlockAst);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance valuetype System.Management.Automation.Language.AstVisitAction VisitParamBlock(class System.Management.Automation.Language.ParamBlockAst paramBlockAst) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Language.AstVisitor.VisitParamBlock(System.Management.Automation.Language.ParamBlockAst)" />
+      <MemberSignature Language="F#" Value="abstract member VisitParamBlock : System.Management.Automation.Language.ParamBlockAst -&gt; System.Management.Automation.Language.AstVisitAction&#xA;override this.VisitParamBlock : System.Management.Automation.Language.ParamBlockAst -&gt; System.Management.Automation.Language.AstVisitAction" Usage="astVisitor.VisitParamBlock paramBlockAst" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.Language.AstVisitAction</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="paramBlockAst" Type="System.Management.Automation.Language.ParamBlockAst" />
+      </Parameters>
+      <Docs>
+        <param name="paramBlockAst">To be added.</param>
+        <summary />
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="VisitParameter">
+      <MemberSignature Language="C#" Value="public virtual System.Management.Automation.Language.AstVisitAction VisitParameter (System.Management.Automation.Language.ParameterAst parameterAst);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance valuetype System.Management.Automation.Language.AstVisitAction VisitParameter(class System.Management.Automation.Language.ParameterAst parameterAst) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Language.AstVisitor.VisitParameter(System.Management.Automation.Language.ParameterAst)" />
+      <MemberSignature Language="F#" Value="abstract member VisitParameter : System.Management.Automation.Language.ParameterAst -&gt; System.Management.Automation.Language.AstVisitAction&#xA;override this.VisitParameter : System.Management.Automation.Language.ParameterAst -&gt; System.Management.Automation.Language.AstVisitAction" Usage="astVisitor.VisitParameter parameterAst" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.Language.AstVisitAction</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="parameterAst" Type="System.Management.Automation.Language.ParameterAst" />
+      </Parameters>
+      <Docs>
+        <param name="parameterAst">To be added.</param>
+        <summary />
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="VisitParenExpression">
+      <MemberSignature Language="C#" Value="public virtual System.Management.Automation.Language.AstVisitAction VisitParenExpression (System.Management.Automation.Language.ParenExpressionAst parenExpressionAst);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance valuetype System.Management.Automation.Language.AstVisitAction VisitParenExpression(class System.Management.Automation.Language.ParenExpressionAst parenExpressionAst) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Language.AstVisitor.VisitParenExpression(System.Management.Automation.Language.ParenExpressionAst)" />
+      <MemberSignature Language="F#" Value="abstract member VisitParenExpression : System.Management.Automation.Language.ParenExpressionAst -&gt; System.Management.Automation.Language.AstVisitAction&#xA;override this.VisitParenExpression : System.Management.Automation.Language.ParenExpressionAst -&gt; System.Management.Automation.Language.AstVisitAction" Usage="astVisitor.VisitParenExpression parenExpressionAst" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.Language.AstVisitAction</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="parenExpressionAst" Type="System.Management.Automation.Language.ParenExpressionAst" />
+      </Parameters>
+      <Docs>
+        <param name="parenExpressionAst">To be added.</param>
+        <summary />
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="VisitPipeline">
+      <MemberSignature Language="C#" Value="public virtual System.Management.Automation.Language.AstVisitAction VisitPipeline (System.Management.Automation.Language.PipelineAst pipelineAst);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance valuetype System.Management.Automation.Language.AstVisitAction VisitPipeline(class System.Management.Automation.Language.PipelineAst pipelineAst) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Language.AstVisitor.VisitPipeline(System.Management.Automation.Language.PipelineAst)" />
+      <MemberSignature Language="F#" Value="abstract member VisitPipeline : System.Management.Automation.Language.PipelineAst -&gt; System.Management.Automation.Language.AstVisitAction&#xA;override this.VisitPipeline : System.Management.Automation.Language.PipelineAst -&gt; System.Management.Automation.Language.AstVisitAction" Usage="astVisitor.VisitPipeline pipelineAst" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.Language.AstVisitAction</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pipelineAst" Type="System.Management.Automation.Language.PipelineAst" />
+      </Parameters>
+      <Docs>
+        <param name="pipelineAst">To be added.</param>
+        <summary />
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="VisitReturnStatement">
+      <MemberSignature Language="C#" Value="public virtual System.Management.Automation.Language.AstVisitAction VisitReturnStatement (System.Management.Automation.Language.ReturnStatementAst returnStatementAst);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance valuetype System.Management.Automation.Language.AstVisitAction VisitReturnStatement(class System.Management.Automation.Language.ReturnStatementAst returnStatementAst) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Language.AstVisitor.VisitReturnStatement(System.Management.Automation.Language.ReturnStatementAst)" />
+      <MemberSignature Language="F#" Value="abstract member VisitReturnStatement : System.Management.Automation.Language.ReturnStatementAst -&gt; System.Management.Automation.Language.AstVisitAction&#xA;override this.VisitReturnStatement : System.Management.Automation.Language.ReturnStatementAst -&gt; System.Management.Automation.Language.AstVisitAction" Usage="astVisitor.VisitReturnStatement returnStatementAst" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.Language.AstVisitAction</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="returnStatementAst" Type="System.Management.Automation.Language.ReturnStatementAst" />
+      </Parameters>
+      <Docs>
+        <param name="returnStatementAst">To be added.</param>
+        <summary />
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="VisitScriptBlock">
+      <MemberSignature Language="C#" Value="public virtual System.Management.Automation.Language.AstVisitAction VisitScriptBlock (System.Management.Automation.Language.ScriptBlockAst scriptBlockAst);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance valuetype System.Management.Automation.Language.AstVisitAction VisitScriptBlock(class System.Management.Automation.Language.ScriptBlockAst scriptBlockAst) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Language.AstVisitor.VisitScriptBlock(System.Management.Automation.Language.ScriptBlockAst)" />
+      <MemberSignature Language="F#" Value="abstract member VisitScriptBlock : System.Management.Automation.Language.ScriptBlockAst -&gt; System.Management.Automation.Language.AstVisitAction&#xA;override this.VisitScriptBlock : System.Management.Automation.Language.ScriptBlockAst -&gt; System.Management.Automation.Language.AstVisitAction" Usage="astVisitor.VisitScriptBlock scriptBlockAst" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.Language.AstVisitAction</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="scriptBlockAst" Type="System.Management.Automation.Language.ScriptBlockAst" />
+      </Parameters>
+      <Docs>
+        <param name="scriptBlockAst">To be added.</param>
+        <summary />
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="VisitScriptBlockExpression">
+      <MemberSignature Language="C#" Value="public virtual System.Management.Automation.Language.AstVisitAction VisitScriptBlockExpression (System.Management.Automation.Language.ScriptBlockExpressionAst scriptBlockExpressionAst);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance valuetype System.Management.Automation.Language.AstVisitAction VisitScriptBlockExpression(class System.Management.Automation.Language.ScriptBlockExpressionAst scriptBlockExpressionAst) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Language.AstVisitor.VisitScriptBlockExpression(System.Management.Automation.Language.ScriptBlockExpressionAst)" />
+      <MemberSignature Language="F#" Value="abstract member VisitScriptBlockExpression : System.Management.Automation.Language.ScriptBlockExpressionAst -&gt; System.Management.Automation.Language.AstVisitAction&#xA;override this.VisitScriptBlockExpression : System.Management.Automation.Language.ScriptBlockExpressionAst -&gt; System.Management.Automation.Language.AstVisitAction" Usage="astVisitor.VisitScriptBlockExpression scriptBlockExpressionAst" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.Language.AstVisitAction</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="scriptBlockExpressionAst" Type="System.Management.Automation.Language.ScriptBlockExpressionAst" />
+      </Parameters>
+      <Docs>
+        <param name="scriptBlockExpressionAst">To be added.</param>
+        <summary />
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="VisitStatementBlock">
+      <MemberSignature Language="C#" Value="public virtual System.Management.Automation.Language.AstVisitAction VisitStatementBlock (System.Management.Automation.Language.StatementBlockAst statementBlockAst);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance valuetype System.Management.Automation.Language.AstVisitAction VisitStatementBlock(class System.Management.Automation.Language.StatementBlockAst statementBlockAst) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Language.AstVisitor.VisitStatementBlock(System.Management.Automation.Language.StatementBlockAst)" />
+      <MemberSignature Language="F#" Value="abstract member VisitStatementBlock : System.Management.Automation.Language.StatementBlockAst -&gt; System.Management.Automation.Language.AstVisitAction&#xA;override this.VisitStatementBlock : System.Management.Automation.Language.StatementBlockAst -&gt; System.Management.Automation.Language.AstVisitAction" Usage="astVisitor.VisitStatementBlock statementBlockAst" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.Language.AstVisitAction</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="statementBlockAst" Type="System.Management.Automation.Language.StatementBlockAst" />
+      </Parameters>
+      <Docs>
+        <param name="statementBlockAst">To be added.</param>
+        <summary />
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="VisitStringConstantExpression">
+      <MemberSignature Language="C#" Value="public virtual System.Management.Automation.Language.AstVisitAction VisitStringConstantExpression (System.Management.Automation.Language.StringConstantExpressionAst stringConstantExpressionAst);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance valuetype System.Management.Automation.Language.AstVisitAction VisitStringConstantExpression(class System.Management.Automation.Language.StringConstantExpressionAst stringConstantExpressionAst) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Language.AstVisitor.VisitStringConstantExpression(System.Management.Automation.Language.StringConstantExpressionAst)" />
+      <MemberSignature Language="F#" Value="abstract member VisitStringConstantExpression : System.Management.Automation.Language.StringConstantExpressionAst -&gt; System.Management.Automation.Language.AstVisitAction&#xA;override this.VisitStringConstantExpression : System.Management.Automation.Language.StringConstantExpressionAst -&gt; System.Management.Automation.Language.AstVisitAction" Usage="astVisitor.VisitStringConstantExpression stringConstantExpressionAst" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.Language.AstVisitAction</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="stringConstantExpressionAst" Type="System.Management.Automation.Language.StringConstantExpressionAst" />
+      </Parameters>
+      <Docs>
+        <param name="stringConstantExpressionAst">To be added.</param>
+        <summary />
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="VisitSubExpression">
+      <MemberSignature Language="C#" Value="public virtual System.Management.Automation.Language.AstVisitAction VisitSubExpression (System.Management.Automation.Language.SubExpressionAst subExpressionAst);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance valuetype System.Management.Automation.Language.AstVisitAction VisitSubExpression(class System.Management.Automation.Language.SubExpressionAst subExpressionAst) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Language.AstVisitor.VisitSubExpression(System.Management.Automation.Language.SubExpressionAst)" />
+      <MemberSignature Language="F#" Value="abstract member VisitSubExpression : System.Management.Automation.Language.SubExpressionAst -&gt; System.Management.Automation.Language.AstVisitAction&#xA;override this.VisitSubExpression : System.Management.Automation.Language.SubExpressionAst -&gt; System.Management.Automation.Language.AstVisitAction" Usage="astVisitor.VisitSubExpression subExpressionAst" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.Language.AstVisitAction</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="subExpressionAst" Type="System.Management.Automation.Language.SubExpressionAst" />
+      </Parameters>
+      <Docs>
+        <param name="subExpressionAst">To be added.</param>
+        <summary />
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="VisitSwitchStatement">
+      <MemberSignature Language="C#" Value="public virtual System.Management.Automation.Language.AstVisitAction VisitSwitchStatement (System.Management.Automation.Language.SwitchStatementAst switchStatementAst);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance valuetype System.Management.Automation.Language.AstVisitAction VisitSwitchStatement(class System.Management.Automation.Language.SwitchStatementAst switchStatementAst) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Language.AstVisitor.VisitSwitchStatement(System.Management.Automation.Language.SwitchStatementAst)" />
+      <MemberSignature Language="F#" Value="abstract member VisitSwitchStatement : System.Management.Automation.Language.SwitchStatementAst -&gt; System.Management.Automation.Language.AstVisitAction&#xA;override this.VisitSwitchStatement : System.Management.Automation.Language.SwitchStatementAst -&gt; System.Management.Automation.Language.AstVisitAction" Usage="astVisitor.VisitSwitchStatement switchStatementAst" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.Language.AstVisitAction</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="switchStatementAst" Type="System.Management.Automation.Language.SwitchStatementAst" />
+      </Parameters>
+      <Docs>
+        <param name="switchStatementAst">To be added.</param>
+        <summary />
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="VisitThrowStatement">
+      <MemberSignature Language="C#" Value="public virtual System.Management.Automation.Language.AstVisitAction VisitThrowStatement (System.Management.Automation.Language.ThrowStatementAst throwStatementAst);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance valuetype System.Management.Automation.Language.AstVisitAction VisitThrowStatement(class System.Management.Automation.Language.ThrowStatementAst throwStatementAst) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Language.AstVisitor.VisitThrowStatement(System.Management.Automation.Language.ThrowStatementAst)" />
+      <MemberSignature Language="F#" Value="abstract member VisitThrowStatement : System.Management.Automation.Language.ThrowStatementAst -&gt; System.Management.Automation.Language.AstVisitAction&#xA;override this.VisitThrowStatement : System.Management.Automation.Language.ThrowStatementAst -&gt; System.Management.Automation.Language.AstVisitAction" Usage="astVisitor.VisitThrowStatement throwStatementAst" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.Language.AstVisitAction</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="throwStatementAst" Type="System.Management.Automation.Language.ThrowStatementAst" />
+      </Parameters>
+      <Docs>
+        <param name="throwStatementAst">To be added.</param>
+        <summary />
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="VisitTrap">
+      <MemberSignature Language="C#" Value="public virtual System.Management.Automation.Language.AstVisitAction VisitTrap (System.Management.Automation.Language.TrapStatementAst trapStatementAst);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance valuetype System.Management.Automation.Language.AstVisitAction VisitTrap(class System.Management.Automation.Language.TrapStatementAst trapStatementAst) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Language.AstVisitor.VisitTrap(System.Management.Automation.Language.TrapStatementAst)" />
+      <MemberSignature Language="F#" Value="abstract member VisitTrap : System.Management.Automation.Language.TrapStatementAst -&gt; System.Management.Automation.Language.AstVisitAction&#xA;override this.VisitTrap : System.Management.Automation.Language.TrapStatementAst -&gt; System.Management.Automation.Language.AstVisitAction" Usage="astVisitor.VisitTrap trapStatementAst" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.Language.AstVisitAction</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="trapStatementAst" Type="System.Management.Automation.Language.TrapStatementAst" />
+      </Parameters>
+      <Docs>
+        <param name="trapStatementAst">To be added.</param>
+        <summary />
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="VisitTryStatement">
+      <MemberSignature Language="C#" Value="public virtual System.Management.Automation.Language.AstVisitAction VisitTryStatement (System.Management.Automation.Language.TryStatementAst tryStatementAst);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance valuetype System.Management.Automation.Language.AstVisitAction VisitTryStatement(class System.Management.Automation.Language.TryStatementAst tryStatementAst) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Language.AstVisitor.VisitTryStatement(System.Management.Automation.Language.TryStatementAst)" />
+      <MemberSignature Language="F#" Value="abstract member VisitTryStatement : System.Management.Automation.Language.TryStatementAst -&gt; System.Management.Automation.Language.AstVisitAction&#xA;override this.VisitTryStatement : System.Management.Automation.Language.TryStatementAst -&gt; System.Management.Automation.Language.AstVisitAction" Usage="astVisitor.VisitTryStatement tryStatementAst" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.Language.AstVisitAction</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="tryStatementAst" Type="System.Management.Automation.Language.TryStatementAst" />
+      </Parameters>
+      <Docs>
+        <param name="tryStatementAst">To be added.</param>
+        <summary />
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="VisitTypeConstraint">
+      <MemberSignature Language="C#" Value="public virtual System.Management.Automation.Language.AstVisitAction VisitTypeConstraint (System.Management.Automation.Language.TypeConstraintAst typeConstraintAst);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance valuetype System.Management.Automation.Language.AstVisitAction VisitTypeConstraint(class System.Management.Automation.Language.TypeConstraintAst typeConstraintAst) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Language.AstVisitor.VisitTypeConstraint(System.Management.Automation.Language.TypeConstraintAst)" />
+      <MemberSignature Language="F#" Value="abstract member VisitTypeConstraint : System.Management.Automation.Language.TypeConstraintAst -&gt; System.Management.Automation.Language.AstVisitAction&#xA;override this.VisitTypeConstraint : System.Management.Automation.Language.TypeConstraintAst -&gt; System.Management.Automation.Language.AstVisitAction" Usage="astVisitor.VisitTypeConstraint typeConstraintAst" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.Language.AstVisitAction</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="typeConstraintAst" Type="System.Management.Automation.Language.TypeConstraintAst" />
+      </Parameters>
+      <Docs>
+        <param name="typeConstraintAst">To be added.</param>
+        <summary />
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="VisitTypeExpression">
+      <MemberSignature Language="C#" Value="public virtual System.Management.Automation.Language.AstVisitAction VisitTypeExpression (System.Management.Automation.Language.TypeExpressionAst typeExpressionAst);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance valuetype System.Management.Automation.Language.AstVisitAction VisitTypeExpression(class System.Management.Automation.Language.TypeExpressionAst typeExpressionAst) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Language.AstVisitor.VisitTypeExpression(System.Management.Automation.Language.TypeExpressionAst)" />
+      <MemberSignature Language="F#" Value="abstract member VisitTypeExpression : System.Management.Automation.Language.TypeExpressionAst -&gt; System.Management.Automation.Language.AstVisitAction&#xA;override this.VisitTypeExpression : System.Management.Automation.Language.TypeExpressionAst -&gt; System.Management.Automation.Language.AstVisitAction" Usage="astVisitor.VisitTypeExpression typeExpressionAst" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.Language.AstVisitAction</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="typeExpressionAst" Type="System.Management.Automation.Language.TypeExpressionAst" />
+      </Parameters>
+      <Docs>
+        <param name="typeExpressionAst">To be added.</param>
+        <summary />
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="VisitUnaryExpression">
+      <MemberSignature Language="C#" Value="public virtual System.Management.Automation.Language.AstVisitAction VisitUnaryExpression (System.Management.Automation.Language.UnaryExpressionAst unaryExpressionAst);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance valuetype System.Management.Automation.Language.AstVisitAction VisitUnaryExpression(class System.Management.Automation.Language.UnaryExpressionAst unaryExpressionAst) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Language.AstVisitor.VisitUnaryExpression(System.Management.Automation.Language.UnaryExpressionAst)" />
+      <MemberSignature Language="F#" Value="abstract member VisitUnaryExpression : System.Management.Automation.Language.UnaryExpressionAst -&gt; System.Management.Automation.Language.AstVisitAction&#xA;override this.VisitUnaryExpression : System.Management.Automation.Language.UnaryExpressionAst -&gt; System.Management.Automation.Language.AstVisitAction" Usage="astVisitor.VisitUnaryExpression unaryExpressionAst" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.Language.AstVisitAction</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="unaryExpressionAst" Type="System.Management.Automation.Language.UnaryExpressionAst" />
+      </Parameters>
+      <Docs>
+        <param name="unaryExpressionAst">To be added.</param>
+        <summary />
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="VisitUsingExpression">
+      <MemberSignature Language="C#" Value="public virtual System.Management.Automation.Language.AstVisitAction VisitUsingExpression (System.Management.Automation.Language.UsingExpressionAst usingExpressionAst);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance valuetype System.Management.Automation.Language.AstVisitAction VisitUsingExpression(class System.Management.Automation.Language.UsingExpressionAst usingExpressionAst) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Language.AstVisitor.VisitUsingExpression(System.Management.Automation.Language.UsingExpressionAst)" />
+      <MemberSignature Language="F#" Value="abstract member VisitUsingExpression : System.Management.Automation.Language.UsingExpressionAst -&gt; System.Management.Automation.Language.AstVisitAction&#xA;override this.VisitUsingExpression : System.Management.Automation.Language.UsingExpressionAst -&gt; System.Management.Automation.Language.AstVisitAction" Usage="astVisitor.VisitUsingExpression usingExpressionAst" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.Language.AstVisitAction</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="usingExpressionAst" Type="System.Management.Automation.Language.UsingExpressionAst" />
+      </Parameters>
+      <Docs>
+        <param name="usingExpressionAst">To be added.</param>
+        <summary />
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="VisitVariableExpression">
+      <MemberSignature Language="C#" Value="public virtual System.Management.Automation.Language.AstVisitAction VisitVariableExpression (System.Management.Automation.Language.VariableExpressionAst variableExpressionAst);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance valuetype System.Management.Automation.Language.AstVisitAction VisitVariableExpression(class System.Management.Automation.Language.VariableExpressionAst variableExpressionAst) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Language.AstVisitor.VisitVariableExpression(System.Management.Automation.Language.VariableExpressionAst)" />
+      <MemberSignature Language="F#" Value="abstract member VisitVariableExpression : System.Management.Automation.Language.VariableExpressionAst -&gt; System.Management.Automation.Language.AstVisitAction&#xA;override this.VisitVariableExpression : System.Management.Automation.Language.VariableExpressionAst -&gt; System.Management.Automation.Language.AstVisitAction" Usage="astVisitor.VisitVariableExpression variableExpressionAst" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.Language.AstVisitAction</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="variableExpressionAst" Type="System.Management.Automation.Language.VariableExpressionAst" />
+      </Parameters>
+      <Docs>
+        <param name="variableExpressionAst">To be added.</param>
+        <summary />
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="VisitWhileStatement">
+      <MemberSignature Language="C#" Value="public virtual System.Management.Automation.Language.AstVisitAction VisitWhileStatement (System.Management.Automation.Language.WhileStatementAst whileStatementAst);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance valuetype System.Management.Automation.Language.AstVisitAction VisitWhileStatement(class System.Management.Automation.Language.WhileStatementAst whileStatementAst) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Automation.Language.AstVisitor.VisitWhileStatement(System.Management.Automation.Language.WhileStatementAst)" />
+      <MemberSignature Language="F#" Value="abstract member VisitWhileStatement : System.Management.Automation.Language.WhileStatementAst -&gt; System.Management.Automation.Language.AstVisitAction&#xA;override this.VisitWhileStatement : System.Management.Automation.Language.WhileStatementAst -&gt; System.Management.Automation.Language.AstVisitAction" Usage="astVisitor.VisitWhileStatement whileStatementAst" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Automation</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Automation.Language.AstVisitAction</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="whileStatementAst" Type="System.Management.Automation.Language.WhileStatementAst" />
+      </Parameters>
+      <Docs>
+        <param name="whileStatementAst">To be added.</param>
+        <summary />
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>
