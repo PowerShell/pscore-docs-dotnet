@@ -415,10 +415,10 @@
             </param>
         <summary>
             Add a piece of script to construct a command pipeline.
-            For example, to construct a command string "get-process | foreach { $_.Name }"
+            For example, to construct a command string "get-process | foreach { $\_.Name }"
                 <code>
                     PowerShell shell = PowerShell.Create("get-process").
-                                                AddCommand("foreach { $_.Name }", true);
+                                                AddCommand("foreach { $\_.Name }", true);
                 </code></summary>
         <returns>
             A PowerShell instance with <paramref name="command" /> added.
@@ -511,7 +511,7 @@
                  <code>
                      Runspace rs = RunspaceFactory.CreateRunspace();
                      PowerShell ps = PowerShell.Create();
-            
+
                      ps.Runspace = rs;
                      ps.AddCommand("Get-Process").AddArgument("idle");
                      ps.AddStatement().AddCommand("Get-Service").AddArgument("audiosrv");
